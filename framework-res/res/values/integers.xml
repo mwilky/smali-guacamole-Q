@@ -35,9 +35,9 @@
     <integer name="config_brightness_ramp_rate_fast">180</integer>
     <integer name="config_brightness_ramp_rate_fast_1023">400</integer>
     <integer name="config_brightness_ramp_rate_slow">60</integer>
-    <integer name="config_burnInProtectionMaxHorizontalOffset">0</integer>
+    <integer name="config_burnInProtectionMaxHorizontalOffset">3</integer>
     <integer name="config_burnInProtectionMaxRadius">-1</integer>
-    <integer name="config_burnInProtectionMaxVerticalOffset">0</integer>
+    <integer name="config_burnInProtectionMaxVerticalOffset">3</integer>
     <integer name="config_burnInProtectionMinHorizontalOffset">0</integer>
     <integer name="config_burnInProtectionMinVerticalOffset">0</integer>
     <integer name="config_cameraLaunchGestureSensorType">-1</integer>
