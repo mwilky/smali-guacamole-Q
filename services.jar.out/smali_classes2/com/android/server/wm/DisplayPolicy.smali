@@ -13,6 +13,10 @@
 
 
 # static fields
+.field public static mAllowCustomNavBarHeight:Z
+
+.field public static mCustomNavBarHeight:I
+
 .field private static final ALTERNATE_CAR_MODE_NAV_SIZE:Z = false
 
 .field private static final DEBUG:Z = false
@@ -1662,7 +1666,16 @@
 
 .method private getNavigationBarFrameHeight(II)I
     .locals 1
-
+    
+    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
+    
+    if-eqz v0, :cond_stock
+    
+    sget v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
+    
+    return v0
+    
+    :cond_stock
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarFrameHeightForRotationDefault:[I
 
     aget v0, v0, p1
@@ -1672,7 +1685,16 @@
 
 .method private getNavigationBarHeight(II)I
     .locals 1
-
+    
+    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
+    
+    if-eqz v0, :cond_stock
+    
+    sget v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
+    
+    return v0
+    
+    :cond_stock
     const/4 v0, 0x3
 
     if-le p1, v0, :cond_0
@@ -1689,7 +1711,16 @@
 
 .method private getNavigationBarWidth(II)I
     .locals 1
-
+    
+    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
+    
+    if-eqz v0, :cond_stock
+    
+    sget v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
+    
+    return v0
+    
+    :cond_stock
     const/4 v0, 0x3
 
     if-le p1, v0, :cond_0
