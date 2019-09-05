@@ -331,7 +331,7 @@
     move v1, v2
 
     :goto_4
-    const v7, 0x7f080339
+    const v7, 0x7f08033a
 
     const v8, 0x7f120430
 
@@ -723,7 +723,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080339
+    const v3, 0x7f08033a
 
     invoke-virtual {v2, v3}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton1Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -1185,7 +1185,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f080339
+    const v2, 0x7f08033a
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 

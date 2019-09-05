@@ -151,7 +151,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0d0358
+    const v5, 0x7f0d0359
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getLayout(I)Landroid/content/res/XmlResourceParser;
 

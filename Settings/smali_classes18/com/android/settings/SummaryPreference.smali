@@ -35,7 +35,7 @@
 
     iput-boolean v0, p0, Lcom/android/settings/SummaryPreference;->mChartEnabled:Z
 
-    const v0, 0x7f0d02b8
+    const v0, 0x7f0d02b9
 
     invoke-virtual {p0, v0}, Lcom/android/settings/SummaryPreference;->setLayoutResource(I)V
 

@@ -47,7 +47,7 @@
 
     iput-boolean v0, p0, Lcom/android/settings/RestrictedListPreference;->mRequiresActiveUnlockedProfile:Z
 
-    const v0, 0x7f0d0292
+    const v0, 0x7f0d0293
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RestrictedListPreference;->setWidgetLayoutResource(I)V
 

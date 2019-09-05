@@ -21,11 +21,11 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setLayoutResource(I)V
 
-    const v0, 0x7f0d0343
+    const v0, 0x7f0d0344
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setWidgetLayoutResource(I)V
 
-    const v0, 0x7f080237
+    const v0, 0x7f080238
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setIcon(I)V
 
@@ -33,7 +33,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setTitle(I)V
 
-    const v0, 0x7f080320
+    const v0, 0x7f080321
 
     invoke-direct {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

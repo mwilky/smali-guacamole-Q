@@ -31,7 +31,7 @@
 
     if-nez p1, :cond_0
 
-    const v0, 0x7f0d024a
+    const v0, 0x7f0d024b
 
     const/4 v1, 0x0
 

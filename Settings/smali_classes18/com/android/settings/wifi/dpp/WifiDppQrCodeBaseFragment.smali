@@ -91,7 +91,7 @@
 
     const/16 v1, 0x8
 
-    const v2, 0x7f0801c8
+    const v2, 0x7f0801c9
 
     if-ne p1, v2, :cond_0
 

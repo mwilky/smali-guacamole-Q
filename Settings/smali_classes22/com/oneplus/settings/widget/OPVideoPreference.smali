@@ -126,7 +126,7 @@
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/widget/OPVideoPreference;->setVisible(Z)V
 
-    const v4, 0x7f0d0239
+    const v4, 0x7f0d023a
 
     invoke-virtual {p0, v4}, Lcom/oneplus/settings/widget/OPVideoPreference;->setLayoutResource(I)V
 

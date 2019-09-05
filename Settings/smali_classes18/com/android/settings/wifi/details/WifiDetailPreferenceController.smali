@@ -2369,7 +2369,7 @@
 .method private updateConnectedButton(I)V
     .locals 5
 
-    const v0, 0x7f08035c
+    const v0, 0x7f08035d
 
     const v1, 0x7f12179c
 
@@ -2923,7 +2923,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080339
+    const v1, 0x7f08033a
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton1Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2943,7 +2943,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080354
+    const v1, 0x7f080355
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2963,7 +2963,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08035c
+    const v1, 0x7f08035d
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton3Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2989,7 +2989,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f08031a
+    const v2, 0x7f08031b
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton4Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 

@@ -468,7 +468,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
 
-    const v1, 0x7f0d0224
+    const v1, 0x7f0d0225
 
     const/4 v2, 0x0
 
@@ -496,7 +496,7 @@
 
     new-instance v4, Landroid/widget/ArrayAdapter;
 
-    const v5, 0x7f0d0222
+    const v5, 0x7f0d0223
 
     const v6, 0x1020014
 

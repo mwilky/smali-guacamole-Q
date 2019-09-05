@@ -63,7 +63,7 @@
 
     new-instance v1, Landroid/app/Notification$Action$Builder;
 
-    const v2, 0x7f0804e4
+    const v2, 0x7f0804e5
 
     invoke-static {p1, v2}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -117,7 +117,7 @@
 
     new-instance v1, Landroid/app/Notification$Action$Builder;
 
-    const v2, 0x7f080347
+    const v2, 0x7f080348
 
     invoke-static {p1, v2}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -866,7 +866,7 @@
 
     invoke-virtual {v13, v4}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
-    const v0, 0x7f0804c4
+    const v0, 0x7f0804c5
 
     invoke-virtual {v13, v0}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 

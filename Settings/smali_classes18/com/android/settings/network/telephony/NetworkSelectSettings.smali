@@ -900,7 +900,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f0d0283
+    const v1, 0x7f0d0284
 
     invoke-virtual {p0, v1}, Lcom/android/settings/network/telephony/NetworkSelectSettings;->setPinnedHeaderView(I)Landroid/view/View;
 

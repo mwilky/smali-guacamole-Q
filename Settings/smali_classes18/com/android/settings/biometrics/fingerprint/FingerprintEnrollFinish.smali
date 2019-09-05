@@ -423,7 +423,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f1301c7
+    const v0, 0x7f1301c8
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFinish;->setTheme(I)V
 

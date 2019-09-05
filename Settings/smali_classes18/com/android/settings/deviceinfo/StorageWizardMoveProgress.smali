@@ -133,7 +133,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0d02d1
+    const v0, 0x7f0d02d2
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setContentView(I)V
 
@@ -169,7 +169,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080375
+    const v2, 0x7f080376
 
     invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setIcon(I)V
 

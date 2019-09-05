@@ -135,7 +135,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080339
+    const v1, 0x7f08033a
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 

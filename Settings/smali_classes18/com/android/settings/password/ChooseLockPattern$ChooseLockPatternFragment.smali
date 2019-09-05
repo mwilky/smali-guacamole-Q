@@ -1020,7 +1020,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080300
+    const v2, 0x7f080301
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1039,7 +1039,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0804c5
+    const v2, 0x7f0804c6
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

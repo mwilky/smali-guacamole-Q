@@ -126,7 +126,7 @@
     goto :goto_0
 
     :cond_1
-    const v5, 0x7f0d02b6
+    const v5, 0x7f0d02b7
 
     invoke-virtual {p0, v5}, Lcom/android/settings/panel/SettingsPanelActivity;->setContentView(I)V
 

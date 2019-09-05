@@ -122,7 +122,7 @@
 .method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 2
 
-    const v0, 0x7f1303ab
+    const v0, 0x7f1303ac
 
     const/4 v1, 0x1
 
@@ -289,7 +289,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1301ce
+    const v1, 0x7f1301cf
 
     invoke-virtual {v0, p0, v1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 

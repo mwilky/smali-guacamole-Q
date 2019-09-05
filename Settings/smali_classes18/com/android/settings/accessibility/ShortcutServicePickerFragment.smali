@@ -111,7 +111,7 @@
 
     if-eqz v8, :cond_0
 
-    const v8, 0x7f0801bf
+    const v8, 0x7f0801c0
 
     goto :goto_1
 
@@ -124,7 +124,7 @@
 
     if-eqz v8, :cond_1
 
-    const v8, 0x7f0801c4
+    const v8, 0x7f0801c5
 
     goto :goto_1
 

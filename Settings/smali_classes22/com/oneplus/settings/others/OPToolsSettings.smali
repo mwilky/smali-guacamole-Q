@@ -126,7 +126,7 @@
 .end method
 
 .method private static isNeedShowGameSpace(Landroid/content/Context;)Z
-    .locals 4
+    .locals 9
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -142,29 +142,51 @@
 
     move-result v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "com.oneplus.gamespace"
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, "com.oneplus.gamespace.ui.main.MainActivity"
 
-    const-string v3, "isNeedShowGameSpace value:"
+    new-instance v4, Landroid/content/ComponentName;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v4, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v2
+    invoke-virtual {v5, v4}, Landroid/content/pm/PackageManager;->getComponentEnabledSetting(Landroid/content/ComponentName;)I
 
-    const-string v3, "OPOthersSettings"
+    move-result v6
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-ne v0, v2, :cond_0
+    const-string v8, "isNeedShowGameSpace value:"
 
-    move v1, v2
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, " status:"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "OPOthersSettings"
+
+    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v7, 0x2
+
+    if-ne v6, v7, :cond_0
+
+    const/4 v1, 0x1
 
     :cond_0
     return v1

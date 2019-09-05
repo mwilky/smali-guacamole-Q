@@ -77,7 +77,7 @@
 
     fill-array-data v5, :array_0
 
-    const v2, 0x7f0d0335
+    const v2, 0x7f0d0336
 
     move-object v0, v6
 
@@ -442,7 +442,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080194
+    const v1, 0x7f080195
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 

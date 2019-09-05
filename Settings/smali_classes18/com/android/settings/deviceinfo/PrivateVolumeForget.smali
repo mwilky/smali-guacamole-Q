@@ -128,7 +128,7 @@
     return-object v2
 
     :cond_1
-    const v2, 0x7f0d02c7
+    const v2, 0x7f0d02c8
 
     const/4 v3, 0x0
 

@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f13040b
+    const v2, 0x7f13040c
 
     invoke-direct {p0, p1, v1, v0, v2}, Landroidx/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
@@ -51,7 +51,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f13040b
+    const v1, 0x7f13040c
 
     invoke-direct {p0, p1, p2, v0, v1}, Landroidx/preference/SwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 

@@ -139,7 +139,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/sim/SimListDialogFragment$SelectSubscriptionAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d02a6
+    const v1, 0x7f0d02a7
 
     const/4 v2, 0x0
 
@@ -188,7 +188,7 @@
 
     iget-object v4, p0, Lcom/android/settings/sim/SimListDialogFragment$SelectSubscriptionAdapter;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0801db
+    const v5, 0x7f0801dc
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

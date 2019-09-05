@@ -311,7 +311,7 @@
 
     if-eqz v7, :cond_4
 
-    const v8, 0x7f08034e
+    const v8, 0x7f08034f
 
     invoke-virtual {v4, v8}, Lcom/android/settings/widget/AppPreference;->setIcon(I)V
 

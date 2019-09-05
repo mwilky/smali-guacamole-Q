@@ -42,7 +42,7 @@
 
     invoke-virtual {p0, v0}, Landroidx/preference/ExpandButton;->setLayoutResource(I)V
 
-    const v0, 0x7f08019e
+    const v0, 0x7f08019f
 
     invoke-virtual {p0, v0}, Landroidx/preference/ExpandButton;->setIcon(I)V
 

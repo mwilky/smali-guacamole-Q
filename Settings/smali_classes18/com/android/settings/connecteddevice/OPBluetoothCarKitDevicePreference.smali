@@ -238,7 +238,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0804fd
+    const v0, 0x7f0804fe
 
     invoke-virtual {p0, v0}, Lcom/android/settings/connecteddevice/OPBluetoothCarKitDevicePreference;->setIcon(I)V
 

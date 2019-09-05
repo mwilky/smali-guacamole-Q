@@ -55,64 +55,33 @@
 .end method
 
 .method private setNightMode(Z)V
-    .locals 4
-
-    const-string v0, "op_force_dark_entire_world"
-
-    const/4 v1, 0x1
+    .locals 3
 
     if-eqz p1, :cond_0
 
-    iget-object v2, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
+    iget-object v0, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    invoke-virtual {v2, v3}, Landroid/app/UiModeManager;->setNightMode(I)V
-
-    iget-object v2, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    invoke-static {v2, v0, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    iget-object v0, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPThemeUtils;->setCurrentBasicColorMode(Landroid/content/Context;I)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v2, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mUiModeManager:Landroid/app/UiModeManager;
-
-    invoke-virtual {v2, v1}, Landroid/app/UiModeManager;->setNightMode(I)V
-
-    iget-object v1, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v0, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-virtual {v0, v1}, Landroid/app/UiModeManager;->setNightMode(I)V
 
     iget-object v0, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v3, "origin_oem_black_mode"
+    const/4 v1, 0x1
 
-    invoke-static {v1, v3, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    const-string v2, "op_force_dark_entire_world"
 
-    move-result v1
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    iget-object v0, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPThemeUtils;->setCurrentBasicColorMode(Landroid/content/Context;I)V
 
-    :goto_0
+    :cond_0
     return-void
 .end method
 
@@ -153,7 +122,7 @@
 .end method
 
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
-    .locals 6
+    .locals 7
 
     move-object v0, p2
 
@@ -175,17 +144,13 @@
 
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    const-string v2, "origin_oem_black_mode"
+    const/4 v2, 0x0
+
+    const-string v3, "origin_oem_black_mode"
 
     if-eqz v0, :cond_0
-
-    iget-object v3, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
 
     iget-object v4, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
 
@@ -193,48 +158,57 @@
 
     move-result-object v4
 
-    const-string v5, "oem_black_mode"
+    iget-object v5, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
 
-    invoke-static {v4, v5, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result v1
+    move-result-object v5
 
-    invoke-static {v3, v2, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    const-string v6, "oem_black_mode"
+
+    invoke-static {v5, v6, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    invoke-static {v4, v3, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     goto :goto_0
 
     :cond_0
+    iget-object v4, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    invoke-static {v4, v3, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
     iget-object v3, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v3}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableLightThemes(Landroid/content/Context;)V
 
-    move-result-object v3
-
-    invoke-static {v3, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    const-string v3, "oneplus_basiccolor"
-
-    const-string v4, "white"
-
-    invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v3, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mOpTheme:Lcom/oneplus/sdk/utils/OpTheme;
-
-    invoke-virtual {v3, v2}, Lcom/oneplus/sdk/utils/OpTheme;->enableTheme(Ljava/util/HashMap;)I
+    goto :goto_0
 
     :cond_1
+    if-ne v2, v1, :cond_2
+
+    iget-object v3, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableDarkThemes(Landroid/content/Context;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v3, p0, Lcom/android/settings/development/ForceDarkPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableColorfulThemes(Landroid/content/Context;)V
+
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/settings/development/ForceDarkPreferenceController;->setNightMode(Z)V
-
-    const/4 v1, 0x1
 
     return v1
 .end method

@@ -25,7 +25,7 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const v0, 0x7f0d022b
+    const v0, 0x7f0d022c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/ui/OPThemePreference;->setLayoutResource(I)V
 
@@ -111,22 +111,22 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f08053b
+    const v1, 0x7f08053c
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080535
+    const v1, 0x7f080536
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f080538
+    const v1, 0x7f080539
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f08053b
+    const v1, 0x7f08053c
 
     nop
 

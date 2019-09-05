@@ -212,7 +212,7 @@
 
     iget-object v4, p0, Lcom/android/settings/wifi/WifiConnectionPreferenceController;->mBadgeCache:Lcom/android/settingslib/wifi/AccessPointPreference$UserBadgeCache;
 
-    const v5, 0x7f080397
+    const v5, 0x7f080398
 
     const/4 v6, 0x0
 

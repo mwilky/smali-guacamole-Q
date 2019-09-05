@@ -30,7 +30,7 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const v0, 0x7f0d022a
+    const v0, 0x7f0d022b
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->setLayoutResource(I)V
 
@@ -168,32 +168,32 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f080530
-
-    goto :goto_0
-
-    :cond_0
-    const v1, 0x7f080533
-
-    goto :goto_0
-
-    :cond_1
-    const v1, 0x7f080534
-
-    goto :goto_0
-
-    :cond_2
-    const v1, 0x7f080532
-
-    goto :goto_0
-
-    :cond_3
     const v1, 0x7f080531
 
     goto :goto_0
 
+    :cond_0
+    const v1, 0x7f080534
+
+    goto :goto_0
+
+    :cond_1
+    const v1, 0x7f080535
+
+    goto :goto_0
+
+    :cond_2
+    const v1, 0x7f080533
+
+    goto :goto_0
+
+    :cond_3
+    const v1, 0x7f080532
+
+    goto :goto_0
+
     :cond_4
-    const v1, 0x7f080530
+    const v1, 0x7f080531
 
     nop
 
@@ -238,32 +238,32 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f08046a
-
-    goto :goto_0
-
-    :cond_0
-    const v1, 0x7f08046c
-
-    goto :goto_0
-
-    :cond_1
-    const v1, 0x7f08046d
-
-    goto :goto_0
-
-    :cond_2
     const v1, 0x7f08046b
 
     goto :goto_0
 
-    :cond_3
+    :cond_0
+    const v1, 0x7f08046d
+
+    goto :goto_0
+
+    :cond_1
     const v1, 0x7f08046e
 
     goto :goto_0
 
+    :cond_2
+    const v1, 0x7f08046c
+
+    goto :goto_0
+
+    :cond_3
+    const v1, 0x7f08046f
+
+    goto :goto_0
+
     :cond_4
-    const v1, 0x7f08046a
+    const v1, 0x7f08046b
 
     nop
 

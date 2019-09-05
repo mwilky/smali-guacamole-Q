@@ -65,7 +65,7 @@
 
     iput-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mDividerDecoration:Landroidx/preference/PreferenceFragmentCompat$DividerDecoration;
 
-    const v0, 0x7f0d025d
+    const v0, 0x7f0d025e
 
     iput v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mLayoutResId:I
 
@@ -352,7 +352,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f13037d
+    const v1, 0x7f13037e
 
     :cond_0
     invoke-virtual {p0}, Landroidx/preference/PreferenceFragmentCompat;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -467,7 +467,7 @@
     return-object v0
 
     :cond_0
-    const v0, 0x7f0d0263
+    const v0, 0x7f0d0264
 
     const/4 v1, 0x0
 

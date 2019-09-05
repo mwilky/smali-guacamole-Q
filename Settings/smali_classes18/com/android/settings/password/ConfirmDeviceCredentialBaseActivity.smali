@@ -210,7 +210,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f1304d4
+    const v1, 0x7f1304d5
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->setTheme(I)V
 
@@ -233,7 +233,7 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f1304d3
+    const v1, 0x7f1304d4
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->setTheme(I)V
 
@@ -244,7 +244,7 @@
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f1301cb
+    const v1, 0x7f1301cc
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->setTheme(I)V
 
@@ -599,7 +599,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f1301c9
+    const v0, 0x7f1301ca
 
     invoke-virtual {p0, v0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->setTheme(I)V
 

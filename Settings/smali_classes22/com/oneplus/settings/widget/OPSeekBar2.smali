@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0805ae
+    const v1, 0x7f0805af
 
     invoke-virtual {p0}, Lcom/oneplus/settings/widget/OPSeekBar2;->getContext()Landroid/content/Context;
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0805a1
+    const v1, 0x7f0805a2
 
     invoke-virtual {p0}, Lcom/oneplus/settings/widget/OPSeekBar2;->getContext()Landroid/content/Context;
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0805af
+    const v1, 0x7f0805b0
 
     invoke-virtual {p0}, Lcom/oneplus/settings/widget/OPSeekBar2;->getContext()Landroid/content/Context;
 
@@ -118,7 +118,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0805a2
+    const v1, 0x7f0805a3
 
     invoke-virtual {p0}, Lcom/oneplus/settings/widget/OPSeekBar2;->getContext()Landroid/content/Context;
 

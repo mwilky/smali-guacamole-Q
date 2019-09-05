@@ -52,7 +52,7 @@
 .method protected getWidgetLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0270
+    const v0, 0x7f0d0271
 
     return v0
 .end method

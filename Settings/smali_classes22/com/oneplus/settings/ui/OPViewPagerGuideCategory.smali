@@ -91,7 +91,7 @@
 
     invoke-direct {p0, p1}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0d023a
+    const v0, 0x7f0d023b
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutResId:I
 
@@ -111,7 +111,7 @@
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mCurrentType:I
 
-    const v0, 0x7f0d023c
+    const v0, 0x7f0d023d
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutItemID:I
 
@@ -125,7 +125,7 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const v0, 0x7f0d023a
+    const v0, 0x7f0d023b
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutResId:I
 
@@ -145,7 +145,7 @@
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mCurrentType:I
 
-    const v0, 0x7f0d023c
+    const v0, 0x7f0d023d
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutItemID:I
 
@@ -159,7 +159,7 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const v0, 0x7f0d023a
+    const v0, 0x7f0d023b
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutResId:I
 
@@ -179,7 +179,7 @@
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mCurrentType:I
 
-    const v0, 0x7f0d023c
+    const v0, 0x7f0d023d
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutItemID:I
 
@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080564
+    const v1, 0x7f080565
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -269,7 +269,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080563
+    const v1, 0x7f080564
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -658,14 +658,14 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0d023b
+    const v0, 0x7f0d023c
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutItemID:I
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f0d023c
+    const v0, 0x7f0d023d
 
     iput v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mLayoutItemID:I
 

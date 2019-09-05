@@ -166,7 +166,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/BackgroundDataConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f0801c5
+    const v2, 0x7f0801c6
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

@@ -632,7 +632,7 @@
 
     new-instance v8, Lcom/android/settings/wifi/NetworkRequestDialogFragment$AccessPointAdapter;
 
-    const v9, 0x7f0d0249
+    const v9, 0x7f0d024a
 
     invoke-virtual {p0}, Lcom/android/settings/wifi/NetworkRequestDialogFragment;->getAccessPointList()Ljava/util/List;
 

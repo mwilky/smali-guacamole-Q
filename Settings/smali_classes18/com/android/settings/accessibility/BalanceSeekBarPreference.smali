@@ -33,7 +33,7 @@
 
     iput-object p1, p0, Lcom/android/settings/accessibility/BalanceSeekBarPreference;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0d024c
+    const v0, 0x7f0d024d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/BalanceSeekBarPreference;->setLayoutResource(I)V
 

@@ -74,7 +74,7 @@
 
     iput-object v0, p0, Lcom/android/settings/notification/ZenRulePreference;->mOnCheckBoxClickListener:Landroid/view/View$OnClickListener;
 
-    const v0, 0x7f0d0252
+    const v0, 0x7f0d0253
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenRulePreference;->setLayoutResource(I)V
 
@@ -253,7 +253,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0d0363
+    const v0, 0x7f0d0364
 
     return v0
 

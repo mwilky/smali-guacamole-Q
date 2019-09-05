@@ -498,7 +498,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f080397
+    const v5, 0x7f080398
 
     move-object v0, v7
 
@@ -1716,7 +1716,7 @@
 
     iget-object v3, p0, Lcom/android/settings/wifi/WifiSettings;->mUserBadgeCache:Lcom/android/settingslib/wifi/AccessPointPreference$UserBadgeCache;
 
-    const v4, 0x7f080397
+    const v4, 0x7f080398
 
     const/4 v5, 0x0
 
@@ -3090,7 +3090,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f0d0283
+    const v1, 0x7f0d0284
 
     invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiSettings;->setPinnedHeaderView(I)Landroid/view/View;
 

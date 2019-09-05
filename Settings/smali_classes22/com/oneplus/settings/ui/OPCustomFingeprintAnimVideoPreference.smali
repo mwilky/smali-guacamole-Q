@@ -478,7 +478,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080534
+    const v4, 0x7f080535
 
     invoke-direct {v1, p0, v3, v4, v2}, Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference;Ljava/lang/String;II)V
 
@@ -493,13 +493,13 @@
 
     const/16 v4, 0x9
 
-    const v5, 0x7f080532
+    const v5, 0x7f080533
 
     const v6, 0x7f120f1b
 
-    const v7, 0x7f080531
+    const v7, 0x7f080532
 
-    const v8, 0x7f080530
+    const v8, 0x7f080531
 
     const v9, 0x7f120f19
 
@@ -557,7 +557,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f080533
+    const v9, 0x7f080534
 
     invoke-direct {v6, p0, v8, v9, v4}, Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference;Ljava/lang/String;II)V
 

@@ -338,7 +338,7 @@
 .method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 2
 
-    const v0, 0x7f1303ab
+    const v0, 0x7f1303ac
 
     const/4 v1, 0x1
 
@@ -497,7 +497,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d02ce
+    const v3, 0x7f0d02cf
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -647,7 +647,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1303e2
+    const v2, 0x7f1303e3
 
     invoke-virtual {v1, v2}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setTheme(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
@@ -685,7 +685,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1303e1
+    const v2, 0x7f1303e2
 
     invoke-virtual {v1, v2}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setTheme(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
 

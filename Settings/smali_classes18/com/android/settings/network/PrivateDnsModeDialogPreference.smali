@@ -288,7 +288,7 @@
 .method private initialize()V
     .locals 1
 
-    const v0, 0x7f0d0292
+    const v0, 0x7f0d0293
 
     invoke-virtual {p0, v0}, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->setWidgetLayoutResource(I)V
 

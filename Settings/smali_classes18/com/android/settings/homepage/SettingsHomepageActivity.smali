@@ -100,7 +100,7 @@
 
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0d02b4
+    const v0, 0x7f0d02b5
 
     invoke-virtual {p0, v0}, Lcom/android/settings/homepage/SettingsHomepageActivity;->setContentView(I)V
 

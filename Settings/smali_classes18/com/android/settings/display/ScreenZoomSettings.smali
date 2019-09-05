@@ -81,7 +81,7 @@
 .method protected getActivityLayoutResId()I
     .locals 1
 
-    const v0, 0x7f0d02a0
+    const v0, 0x7f0d02a1
 
     return v0
 .end method
@@ -136,7 +136,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d02a1
+    const v2, 0x7f0d02a2
 
     aput v2, v0, v1
 
@@ -145,8 +145,8 @@
 
     :array_0
     .array-data 4
-        0x7f0d02a1
-        0x7f0d02a4
+        0x7f0d02a2
+        0x7f0d02a5
     .end array-data
 .end method
 

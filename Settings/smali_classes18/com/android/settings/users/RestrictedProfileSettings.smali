@@ -96,7 +96,7 @@
 .method public onActivityCreated(Landroid/os/Bundle;)V
     .locals 2
 
-    const v0, 0x7f0d0336
+    const v0, 0x7f0d0337
 
     invoke-virtual {p0, v0}, Lcom/android/settings/users/RestrictedProfileSettings;->setPinnedHeaderView(I)Landroid/view/View;
 

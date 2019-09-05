@@ -45,6 +45,8 @@
 # instance fields
 .field private mAlwaysShowNavigationBar:Lcom/android/settings/ui/RadioButtonPreference;
 
+.field private mAm:Landroid/app/ActivityManager;
+
 .field private mContext:Landroid/content/Context;
 
 .field private mCustomSettingsCategory:Landroidx/preference/PreferenceCategory;
@@ -397,6 +399,16 @@
     const v0, 0x7f1600a3
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->addPreferencesFromResource(I)V
+
+    const-string v0, "activity"
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager;
+
+    iput-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mAm:Landroid/app/ActivityManager;
 
     sget-object v0, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
 
@@ -1118,6 +1130,10 @@
 
 .method public onRadioButtonClicked(Lcom/android/settings/ui/RadioButtonPreference;)V
     .locals 7
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mAm:Landroid/app/ActivityManager;
+
+    invoke-static {v0}, Lcom/oneplus/settings/utils/OPApplicationUtils;->killProcess(Landroid/app/ActivityManager;)V
 
     iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mAlwaysShowNavigationBar:Lcom/android/settings/ui/RadioButtonPreference;
 

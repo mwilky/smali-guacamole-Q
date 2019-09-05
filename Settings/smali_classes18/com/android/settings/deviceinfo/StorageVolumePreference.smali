@@ -75,7 +75,7 @@
 
     iput-object v4, v1, Lcom/android/settings/deviceinfo/StorageVolumePreference;->mColorTintList:Landroid/content/res/ColorStateList;
 
-    const v4, 0x7f0d02cd
+    const v4, 0x7f0d02ce
 
     invoke-virtual {v1, v4}, Lcom/android/settings/deviceinfo/StorageVolumePreference;->setLayoutResource(I)V
 
@@ -105,7 +105,7 @@
 
     if-eqz v4, :cond_0
 
-    const v4, 0x7f080368
+    const v4, 0x7f080369
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -114,7 +114,7 @@
     goto :goto_0
 
     :cond_0
-    const v4, 0x7f080365
+    const v4, 0x7f080366
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -288,7 +288,7 @@
 
     iput-object v10, v1, Lcom/android/settings/deviceinfo/StorageVolumePreference;->mColorTintList:Landroid/content/res/ColorStateList;
 
-    const v10, 0x7f080391
+    const v10, 0x7f080392
 
     invoke-virtual {v2, v10}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -329,7 +329,7 @@
 
     if-eqz v0, :cond_6
 
-    const v0, 0x7f0d0265
+    const v0, 0x7f0d0266
 
     invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/StorageVolumePreference;->setWidgetLayoutResource(I)V
 

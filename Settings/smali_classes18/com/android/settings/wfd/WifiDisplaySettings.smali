@@ -441,7 +441,7 @@
 
     iget-object v3, v0, Lcom/android/settings/wfd/WifiDisplaySettings;->mCertCategory:Landroidx/preference/PreferenceGroup;
 
-    const v4, 0x7f0d0328
+    const v4, 0x7f0d0329
 
     invoke-virtual {v3, v4}, Landroidx/preference/PreferenceGroup;->setLayoutResource(I)V
 
@@ -965,7 +965,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0349
+    const v1, 0x7f0d034a
 
     const/4 v2, 0x0
 

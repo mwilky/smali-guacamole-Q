@@ -430,7 +430,7 @@
 
     invoke-virtual {v4, v5}, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintPreference;->setPersistent(Z)V
 
-    const v6, 0x7f08048d
+    const v6, 0x7f08048e
 
     invoke-virtual {v4, v6}, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintPreference;->setIcon(I)V
 
@@ -509,7 +509,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setTitle(I)V
 
-    const v3, 0x7f080237
+    const v3, 0x7f080238
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setIcon(I)V
 
@@ -691,7 +691,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f08061f
+    const v1, 0x7f080620
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

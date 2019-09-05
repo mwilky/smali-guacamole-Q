@@ -158,7 +158,7 @@
 .method private highlightUserChoose(I)V
     .locals 5
 
-    const v0, 0x7f0804e9
+    const v0, 0x7f0804ea
 
     const v1, 0x7f0602f3
 
@@ -194,7 +194,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mLikeImageButton:Landroid/widget/ImageButton;
 
-    const v2, 0x7f0804ec
+    const v2, 0x7f0804ed
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -207,7 +207,7 @@
     :cond_0
     const/4 v3, -0x1
 
-    const v4, 0x7f0804eb
+    const v4, 0x7f0804ec
 
     if-ne p1, v3, :cond_1
 
@@ -241,7 +241,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDislikeImageButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0804ea
+    const v1, 0x7f0804eb
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -674,13 +674,13 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mLikeImageButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0804eb
+    const v1, 0x7f0804ec
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/laboratory/OPLabFeatureDetailActivity;->mDislikeImageButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0804e9
+    const v1, 0x7f0804ea
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 

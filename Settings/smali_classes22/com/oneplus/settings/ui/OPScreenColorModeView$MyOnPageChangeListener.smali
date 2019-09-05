@@ -49,9 +49,9 @@
 .method public onPageSelected(I)V
     .locals 4
 
-    const v0, 0x7f080564
+    const v0, 0x7f080565
 
-    const v1, 0x7f080563
+    const v1, 0x7f080564
 
     if-eqz p1, :cond_2
 

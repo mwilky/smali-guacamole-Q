@@ -93,7 +93,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0804ac
+    const v1, 0x7f0804ad
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
@@ -155,9 +155,9 @@
 
     move-result v0
 
-    const v1, 0x7f080662
+    const v1, 0x7f080663
 
-    const v2, 0x7f080665
+    const v2, 0x7f080666
 
     const v3, 0x7f0a0447
 
@@ -511,9 +511,9 @@
 
     iget v2, p0, Lcom/oneplus/settings/OPFontStyleActivity;->mFontValue:I
 
-    const v3, 0x7f080662
+    const v3, 0x7f080663
 
-    const v4, 0x7f080665
+    const v4, 0x7f080666
 
     if-ne v2, v1, :cond_0
 

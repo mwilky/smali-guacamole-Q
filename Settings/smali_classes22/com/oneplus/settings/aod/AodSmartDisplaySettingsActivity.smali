@@ -98,7 +98,7 @@
     invoke-virtual {v1, v0}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     :cond_0
-    const v0, 0x7f0d02b5
+    const v0, 0x7f0d02b6
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/aod/AodSmartDisplaySettingsActivity;->setContentView(I)V
 

@@ -171,7 +171,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0d0361
+    const v3, 0x7f0d0362
 
     const/4 v4, 0x0
 
@@ -248,7 +248,7 @@
 
     sget-object v2, Lcom/android/settings/notification/ZenRuleSelectionDialog;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f08037c
+    const v4, 0x7f08037d
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -269,7 +269,7 @@
 
     sget-object v2, Lcom/android/settings/notification/ZenRuleSelectionDialog;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f0801d0
+    const v4, 0x7f0801d1
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -501,7 +501,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d0362
+    const v2, 0x7f0d0363
 
     const/4 v3, 0x0
 

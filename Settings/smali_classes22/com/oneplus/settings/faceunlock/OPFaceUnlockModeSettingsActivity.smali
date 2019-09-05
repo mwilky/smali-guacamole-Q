@@ -332,7 +332,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f1303a6
+    const v0, 0x7f1303a7
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->setTheme(I)V
 

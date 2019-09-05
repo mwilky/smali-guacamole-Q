@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0314
+    const v1, 0x7f0d0315
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -218,7 +218,7 @@
 
     iget-object v6, p0, Lcom/android/settings/widget/SwitchBar;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f13049f
+    const v7, 0x7f1304a0
 
     invoke-direct {v5, v6, v7}, Landroid/text/style/TextAppearanceSpan;-><init>(Landroid/content/Context;I)V
 

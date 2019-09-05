@@ -28,7 +28,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0d02cf
+    const v0, 0x7f0d02d0
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardReady;->setContentView(I)V
 

@@ -556,7 +556,7 @@
     :cond_4
     const v0, 0x7f110087
 
-    const v1, 0x7f080683
+    const v1, 0x7f080684
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -565,7 +565,7 @@
     :cond_5
     const v0, 0x7f110086
 
-    const v1, 0x7f080682
+    const v1, 0x7f080683
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -574,7 +574,7 @@
     :cond_6
     const v0, 0x7f110088
 
-    const v1, 0x7f080684
+    const v1, 0x7f080685
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 

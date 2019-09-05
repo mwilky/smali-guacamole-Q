@@ -47,11 +47,11 @@
 .method private init()V
     .locals 1
 
-    const v0, 0x7f0d0264
+    const v0, 0x7f0d0265
 
     invoke-virtual {p0, v0}, Lcom/android/settings/widget/SingleTargetGearPreference;->setLayoutResource(I)V
 
-    const v0, 0x7f0d0270
+    const v0, 0x7f0d0271
 
     invoke-virtual {p0, v0}, Lcom/android/settings/widget/SingleTargetGearPreference;->setWidgetLayoutResource(I)V
 

@@ -256,12 +256,49 @@
 .end method
 
 .method enableScanning()V
-    .locals 1
+    .locals 4
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
     invoke-virtual {p0}, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->startScanning()V
 
+    iget-object v0, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/16 v1, 0x15
+
+    const-string v2, "bluetooth_default_scan_mode"
+
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+
+    const/16 v3, 0x17
+
+    if-ne v0, v3, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    nop
+
+    :goto_0
+    invoke-virtual {v2, v1}, Landroid/bluetooth/BluetoothAdapter;->setScanMode(I)Z
+
+    :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/settings/bluetooth/DeviceListPreferenceFragment;->mScanEnabled:Z

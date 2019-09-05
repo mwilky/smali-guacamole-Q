@@ -1190,7 +1190,7 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f0d0351
+    const v0, 0x7f0d0352
 
     const/4 v1, 0x0
 
@@ -1384,7 +1384,7 @@
 
     iput-object v0, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeScannerFragment;->mDecorateView:Lcom/android/settings/wifi/qrcode/QrDecorateView;
 
-    const v0, 0x7f080320
+    const v0, 0x7f080321
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/dpp/WifiDppQrCodeScannerFragment;->setHeaderIconImageResource(I)V
 

@@ -31,6 +31,8 @@
 
 
 # instance fields
+.field private mAm:Landroid/app/ActivityManager;
+
 .field private mContext:Landroid/content/Context;
 
 .field private mDefaultThemeMode:I
@@ -81,6 +83,10 @@
     const-string v0, "oem_special_theme"
 
     :try_start_0
+    iget-object v1, p0, Lcom/oneplus/settings/OPThemeSettings;->mAm:Landroid/app/ActivityManager;
+
+    invoke-static {v1}, Lcom/oneplus/settings/utils/OPApplicationUtils;->killProcess(Landroid/app/ActivityManager;)V
+
     iget-object v1, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v1, p1}, Lcom/oneplus/settings/utils/OPThemeUtils;->setCurrentCustomizationTheme(Landroid/content/Context;I)V
@@ -343,6 +349,16 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
+
+    const-string v0, "activity"
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPThemeSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager;
+
+    iput-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mAm:Landroid/app/ActivityManager;
 
     const-string v0, "oneplus_theme_preset"
 

@@ -4738,7 +4738,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0d0285
+    const v0, 0x7f0d0286
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->setContentView(I)V
 

@@ -469,7 +469,7 @@
 
     const/4 v5, 0x0
 
-    const v6, 0x7f08046a
+    const v6, 0x7f08046b
 
     invoke-direct {v3, p0, v4, v6, v5}, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;Ljava/lang/String;II)V
 
@@ -485,7 +485,7 @@
 
     const/4 v7, 0x1
 
-    const v8, 0x7f08046e
+    const v8, 0x7f08046f
 
     invoke-direct {v4, p0, v6, v8, v7}, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;Ljava/lang/String;II)V
 
@@ -501,7 +501,7 @@
 
     const/4 v9, 0x2
 
-    const v10, 0x7f08046b
+    const v10, 0x7f08046c
 
     invoke-direct {v6, p0, v8, v10, v9}, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;Ljava/lang/String;II)V
 
@@ -517,7 +517,7 @@
 
     const/4 v11, 0x3
 
-    const v12, 0x7f08046d
+    const v12, 0x7f08046e
 
     invoke-direct {v8, p0, v10, v12, v11}, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;Ljava/lang/String;II)V
 
@@ -535,7 +535,7 @@
 
     const/16 v12, 0xa
 
-    const v13, 0x7f08046c
+    const v13, 0x7f08046d
 
     invoke-direct {v8, p0, v10, v13, v12}, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;Ljava/lang/String;II)V
 
@@ -1165,7 +1165,7 @@
 
     check-cast v8, Landroid/widget/ImageView;
 
-    const v9, 0x7f08046f
+    const v9, 0x7f080470
 
     invoke-virtual {v8, v9}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 

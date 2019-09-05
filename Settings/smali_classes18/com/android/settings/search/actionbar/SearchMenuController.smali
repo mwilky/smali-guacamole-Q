@@ -195,7 +195,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08023f
+    const v4, 0x7f080240
 
     invoke-interface {v3, v4}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 

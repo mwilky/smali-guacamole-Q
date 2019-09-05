@@ -173,7 +173,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/NightDisplayConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f08034a
+    const v2, 0x7f08034b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

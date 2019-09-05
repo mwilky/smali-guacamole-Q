@@ -855,7 +855,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1303e1
+    const v3, 0x7f1303e2
 
     invoke-virtual {v2, v3}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setTheme(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
 

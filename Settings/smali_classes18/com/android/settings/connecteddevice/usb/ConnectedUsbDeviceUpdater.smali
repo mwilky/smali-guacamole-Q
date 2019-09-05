@@ -206,7 +206,7 @@
 
     iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/ConnectedUsbDeviceUpdater;->mUsbPreference:Landroidx/preference/Preference;
 
-    const v1, 0x7f080380
+    const v1, 0x7f080381
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
 

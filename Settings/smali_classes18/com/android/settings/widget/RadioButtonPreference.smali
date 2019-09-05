@@ -59,11 +59,11 @@
 
     iput v0, p0, Lcom/android/settings/widget/RadioButtonPreference;->appendixVisibility:I
 
-    const v0, 0x7f0d0273
+    const v0, 0x7f0d0274
 
     invoke-virtual {p0, v0}, Lcom/android/settings/widget/RadioButtonPreference;->setWidgetLayoutResource(I)V
 
-    const v0, 0x7f0d0261
+    const v0, 0x7f0d0262
 
     invoke-virtual {p0, v0}, Lcom/android/settings/widget/RadioButtonPreference;->setLayoutResource(I)V
 

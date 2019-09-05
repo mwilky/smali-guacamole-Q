@@ -302,7 +302,7 @@
 
     iget-object v1, v0, Lcom/android/settings/notification/RecentNotifyingAppsPreferenceController;->mSeeAllPref:Landroidx/preference/Preference;
 
-    const v3, 0x7f0801be
+    const v3, 0x7f0801bf
 
     invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setIcon(I)V
 

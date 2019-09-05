@@ -389,7 +389,7 @@
 
     move-result v14
 
-    const v15, 0x7f080365
+    const v15, 0x7f080366
 
     if-eqz v14, :cond_6
 

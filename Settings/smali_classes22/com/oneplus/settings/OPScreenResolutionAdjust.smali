@@ -283,11 +283,9 @@
 
     :cond_7
     :goto_0
-    invoke-direct {p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->removeRunningTask()V
+    iget-object v1, p0, Lcom/oneplus/settings/OPScreenResolutionAdjust;->mAm:Landroid/app/ActivityManager;
 
-    invoke-direct {p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->killRunningProcess()V
-
-    invoke-virtual {p0}, Lcom/oneplus/settings/OPScreenResolutionAdjust;->killSystemInputMethods()V
+    invoke-static {v1}, Lcom/oneplus/settings/utils/OPApplicationUtils;->killProcess(Landroid/app/ActivityManager;)V
 
     return-void
 .end method

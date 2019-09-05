@@ -669,7 +669,7 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f0d021d
+    const v2, 0x7f0d021e
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollIntroduction;->setContentView(I)V
 

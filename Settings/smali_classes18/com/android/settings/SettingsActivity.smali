@@ -1907,7 +1907,7 @@
 .method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
     .locals 2
 
-    const v0, 0x7f1303ab
+    const v0, 0x7f1303ac
 
     const/4 v1, 0x1
 
@@ -2050,12 +2050,12 @@
 
     if-nez v10, :cond_3
 
-    const v10, 0x7f130527
+    const v10, 0x7f130528
 
     invoke-virtual {v0, v10}, Lcom/android/settings/SettingsActivity;->setTheme(I)V
 
     :cond_3
-    const v10, 0x7f0d02b5
+    const v10, 0x7f0d02b6
 
     invoke-virtual {v0, v10}, Lcom/android/settings/SettingsActivity;->setContentView(I)V
 
@@ -2516,7 +2516,7 @@
 .method public setTaskDescription(Landroid/app/ActivityManager$TaskDescription;)V
     .locals 1
 
-    const v0, 0x7f080226
+    const v0, 0x7f080227
 
     invoke-virtual {p1, v0}, Landroid/app/ActivityManager$TaskDescription;->setIcon(I)V
 

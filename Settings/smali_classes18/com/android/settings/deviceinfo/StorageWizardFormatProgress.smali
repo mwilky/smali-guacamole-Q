@@ -55,7 +55,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0d02d1
+    const v0, 0x7f0d02d2
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->setContentView(I)V
 

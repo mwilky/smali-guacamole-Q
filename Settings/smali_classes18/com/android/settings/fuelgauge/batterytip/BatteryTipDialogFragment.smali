@@ -152,7 +152,7 @@
 
     move-result v3
 
-    const v4, 0x7f0d0288
+    const v4, 0x7f0d0289
 
     const/4 v5, 0x0
 

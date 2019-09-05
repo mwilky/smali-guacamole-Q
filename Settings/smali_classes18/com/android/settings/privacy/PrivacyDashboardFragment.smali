@@ -163,7 +163,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
-    const v0, 0x7f0d0283
+    const v0, 0x7f0d0284
 
     invoke-virtual {p0, v0}, Lcom/android/settings/privacy/PrivacyDashboardFragment;->setPinnedHeaderView(I)Landroid/view/View;
 

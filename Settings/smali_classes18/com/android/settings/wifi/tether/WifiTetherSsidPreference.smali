@@ -112,11 +112,11 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/tether/WifiTetherSsidPreference;->setLayoutResource(I)V
 
-    const v0, 0x7f0d0343
+    const v0, 0x7f0d0344
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/tether/WifiTetherSsidPreference;->setWidgetLayoutResource(I)V
 
-    const v0, 0x7f08031a
+    const v0, 0x7f08031b
 
     invoke-direct {p0, v0}, Lcom/android/settings/wifi/tether/WifiTetherSsidPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

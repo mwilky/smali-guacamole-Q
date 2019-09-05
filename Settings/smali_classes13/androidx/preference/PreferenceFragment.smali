@@ -71,7 +71,7 @@
 
     iput-object v0, p0, Landroidx/preference/PreferenceFragment;->mDividerDecoration:Landroidx/preference/PreferenceFragment$DividerDecoration;
 
-    const v0, 0x7f0d025d
+    const v0, 0x7f0d025e
 
     iput v0, p0, Landroidx/preference/PreferenceFragment;->mLayoutResId:I
 
@@ -348,7 +348,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f13037d
+    const v1, 0x7f13037e
 
     :cond_0
     new-instance v2, Landroid/view/ContextThemeWrapper;
@@ -465,7 +465,7 @@
     return-object v0
 
     :cond_0
-    const v0, 0x7f0d0263
+    const v0, 0x7f0d0264
 
     const/4 v1, 0x0
 

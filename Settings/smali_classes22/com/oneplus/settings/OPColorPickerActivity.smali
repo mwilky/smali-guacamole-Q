@@ -1668,9 +1668,9 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f080660
+    const v0, 0x7f080661
 
-    const v1, 0x7f08065e
+    const v1, 0x7f08065f
 
     if-nez p1, :cond_0
 
@@ -1696,9 +1696,9 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f080661
+    const v0, 0x7f080662
 
-    const v1, 0x7f08065f
+    const v1, 0x7f080660
 
     if-nez p1, :cond_2
 
@@ -1738,7 +1738,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0804ac
+    const v1, 0x7f0804ad
 
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setIcon(I)Landroid/view/MenuItem;
 
@@ -1810,7 +1810,7 @@
 .end method
 
 .method public init()V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lcom/oneplus/settings/OPColorPickerActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1905,22 +1905,45 @@
     iput-object v0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mCurrentColor:Ljava/lang/String;
 
     :cond_1
+    iget-object v0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mColors:[Ljava/lang/String;
+
+    if-eqz v0, :cond_2
+
+    iget v2, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mSelectIndex:I
+
+    if-ltz v2, :cond_2
+
+    iget-object v3, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mCurrentColor:Ljava/lang/String;
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mSelectIndex:I
+
+    :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mCurrentColor:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mCurrentTempColor:Ljava/lang/String;
 
     iget v2, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mSelectIndex:I
 
-    if-ltz v2, :cond_2
+    if-ltz v2, :cond_3
 
     invoke-virtual {p0}, Lcom/oneplus/settings/OPColorPickerActivity;->setSelectionVisible()V
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v2, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mPickerView:Lcom/oneplus/settings/ui/ColorPickerView;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     invoke-static {v0}, Lcom/oneplus/settings/utils/OPUtils;->parseColor(Ljava/lang/String;)I
 
@@ -1928,7 +1951,7 @@
 
     invoke-virtual {v2, v0}, Lcom/oneplus/settings/ui/ColorPickerView;->setColor(I)V
 
-    :cond_3
+    :cond_4
     :goto_1
     iget-object v0, p0, Lcom/oneplus/settings/OPColorPickerActivity;->mCurrentColor:Ljava/lang/String;
 
@@ -2162,9 +2185,9 @@
 
     move-result v3
 
-    const v5, 0x7f080663
+    const v5, 0x7f080664
 
-    const v6, 0x7f080664
+    const v6, 0x7f080665
 
     const v7, 0x7f0a075b
 

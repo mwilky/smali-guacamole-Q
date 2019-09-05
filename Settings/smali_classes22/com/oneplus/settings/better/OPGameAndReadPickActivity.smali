@@ -116,9 +116,9 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/better/OPGameAndReadPickActivity;->mAppListView:Landroid/widget/ListView;
 
-    const v2, 0x7f080544
+    const v2, 0x7f080545
 
-    const v3, 0x7f080543
+    const v3, 0x7f080544
 
     const v4, 0x7f07037c
 
