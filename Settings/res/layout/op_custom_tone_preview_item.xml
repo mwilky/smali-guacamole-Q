@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oneplus="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/op_theme_tone_preview_border" android:layout_width="202.0dip" android:layout_height="435.0dip" android:layout_centerInParent="true">
+        <com.oneplus.settings.ui.RadiusImageView android:layout_gravity="center" android:id="@id/preview" android:layout_width="200.0dip" android:layout_height="433.0dip" android:src="@drawable/op_img_tone_color1" android:scaleType="fitXY" oneplus:radius="8.0dip" />
+    </FrameLayout>
+</RelativeLayout>

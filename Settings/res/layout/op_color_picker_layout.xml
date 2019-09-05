@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.internal.widget.ViewPager android:id="@id/preview_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_color_panel" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_color_panel" android:layout_width="fill_parent" android:layout_height="347.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bottom_indicator" android:background="@color/oneplus_theme_custom_background" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <View android:id="@id/page0" android:layout_width="7.0dip" android:layout_height="7.0dip" />
+            <View android:id="@id/page1" android:layout_width="7.0dip" android:layout_height="7.0dip" android:layout_marginStart="5.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@color/oneplus_contorl_bg_color_default" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="?android:colorAccent" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/oneplus_contorl_list_item_height_one_line1" android:text="@string/aod_horizon_light_select" android:layout_marginStart="@dimen/oneplus_contorl_layout_margin_left2" style="@style/oneplus_contorl_text_style_subtitle" />
+            <com.oneplus.settings.ui.ColorPickerView android:layout_gravity="center_horizontal" android:id="@id/oneplus_color_picker_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layerType="software" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+            <include android:layout_gravity="center_horizontal" android:id="@id/oneplus_color_preset_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_top2" layout="@layout/op_default_colorpicker" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/oneplus_contorl_layout_margin_top2" android:layout_marginEnd="@dimen/oneplus_contorl_layout_margin_left1">
+                <com.oneplus.lib.widget.button.OPButton android:layout_gravity="right" android:id="@id/colorpick_modify" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oneplus_theme_accent_color_customization" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
