@@ -667,13 +667,13 @@
 
     if-eqz v14, :cond_2
 
-    const v15, 0x7f030098
+    const v15, 0x7f03013f
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mMenuLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009c
+    const v15, 0x7f030140
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -682,7 +682,7 @@
 
     if-eqz v14, :cond_3
 
-    const v15, 0x7f030098
+    const v15, 0x7f03013f
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
@@ -703,7 +703,7 @@
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mBackLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009c
+    const v15, 0x7f030140
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
