@@ -96,6 +96,56 @@
     move-result-object v4
 
     invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    
+    
+    
+    const-string v4, "tweaks_custom_home_double_app"
+
+    invoke-static {v4}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    
+    const-string v4, "tweaks_custom_home_long_app"
+
+    invoke-static {v4}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    
+    const-string v4, "tweaks_custom_back_double_app"
+
+    invoke-static {v4}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    
+    const-string v4, "tweaks_custom_back_long_app"
+
+    invoke-static {v4}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+    
+    const-string v4, "tweaks_custom_recent_double_app"
+
+    invoke-static {v4}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    const-string v4, "tweaks_custom_recent_long_app"
+
+    invoke-static {v4}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4, v2, p0, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V    
 
     iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager$tsu;->mResolver:Landroid/content/ContentResolver;
 
@@ -318,6 +368,8 @@
     .locals 10
 
     iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager$tsu;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
+    
+    invoke-virtual {v0}, Lcom/android/server/policy/OpPhoneWindowManager;->setCustomApp()V
 
     invoke-static {v0}, Lcom/android/server/policy/OpPhoneWindowManager;->access$800(Lcom/android/server/policy/OpPhoneWindowManager;)Ljava/lang/Object;
 
