@@ -919,8 +919,10 @@
     if-eq p1, v0, :cond_0
 
     iget-object p0, p0, Lcom/android/server/policy/OpQuickPay;->mOpPhoneWindowManager:Lcom/android/server/policy/OpPhoneWindowManager;
+	
+	const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
+    invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
 
     goto :goto_1
 
