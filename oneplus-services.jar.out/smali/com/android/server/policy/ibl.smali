@@ -77,6 +77,8 @@
 
     invoke-static {p0, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-virtual {p0, v0, v1, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+
     :cond_0
     :goto_0
     return-void
