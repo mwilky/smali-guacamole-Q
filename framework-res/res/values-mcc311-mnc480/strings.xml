@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_mms_user_agent">odopg1917</string>
+    <string name="config_mms_user_agent_profile_url">http://uaprof.vtext.com/oneplus/odopg1917/odopg1917.xml</string>
+    <string name="prohibit_manual_network_selection_in_gobal_mode">true</string>
+</resources>
