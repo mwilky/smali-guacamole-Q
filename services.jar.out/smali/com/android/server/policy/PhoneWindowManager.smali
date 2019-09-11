@@ -22,6 +22,8 @@
 
 
 # static fields
+.field public static mBurnInProtect:Z
+
 .field public static mLockOnFreeFall:Z
 
 .field public static mFreeFallRegistered:Z
@@ -12344,33 +12346,6 @@
 
     iput-object v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mLogger:Lcom/android/internal/logging/MetricsLogger;
 
-    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x111006b
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
-
-    move-result v11
-
-    nop
-
-    const/4 v12, 0x0
-
-    const-string/jumbo v1, "persist.debug.force_burn_in"
-
-    invoke-static {v1, v12}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v13
-
-    if-nez v11, :cond_0
-
-    if-eqz v13, :cond_3
-
-    :cond_0
-    if-eqz v13, :cond_2
-
     const/4 v1, -0x8
 
     const/16 v2, 0x8
@@ -17471,6 +17446,8 @@
 .method public updateSettings()V
     .locals 10
     
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setBurnInProtect()V
+    
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setLockOnFreefall()V
     
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->switchLockOnFreefall()V
@@ -18441,6 +18418,28 @@
     move-result v0
     
     sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mLockOnFreeFall:Z
+
+    return-void
+.end method
+
+.method public setBurnInProtect()V
+    .locals 2
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string/jumbo p0, "tweaks_burnin_protect"
+
+    const/4 v0, 0x0
+
+    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBurnInProtect:Z
 
     return-void
 .end method
