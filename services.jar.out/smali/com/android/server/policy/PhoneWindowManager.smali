@@ -22,6 +22,10 @@
 
 
 # static fields
+.field public static mLockOnFreeFall:Z
+
+.field public static mFreeFallRegistered:Z
+
 .field public static mTorchAutoOff:Z
 
 .field public static mFlashlightEnabled:Z
@@ -244,6 +248,12 @@
 
 
 # instance fields
+.field private mSm:Landroid/hardware/SensorManager;
+
+.field private final mFreeFallListener:Landroid/hardware/SensorEventListener;
+
+.field private mFreeFallSensor:Landroid/hardware/Sensor;
+
 .field private mCameraManager:Landroid/hardware/camera2/CameraManager;
 
 .field private mResolvedLongPressOnPowerBehavior:I
@@ -636,6 +646,8 @@
     .locals 5
 
     const/4 v0, 0x0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
 
     sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG:Z
 
@@ -973,6 +985,12 @@
     invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManager$17;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mZenModeCallback:Lcom/oneplus/android/server/zenmode/ZenModeInjector$Callback;
+    
+    new-instance v0, Lcom/android/server/policy/PhoneWindowManager$FreeFall;
+
+    invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManager$FreeFall;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
+
+    iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
 
     return-void
 .end method
@@ -17453,6 +17471,10 @@
 .method public updateSettings()V
     .locals 10
     
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setLockOnFreefall()V
+    
+    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->switchLockOnFreefall()V
+    
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setTorchPower()V
     
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setBlockPowerMenuKeyguard()V
@@ -18227,6 +18249,198 @@
 	
 	:goto_set
 	invoke-virtual {p0, v1}, Lcom/android/server/policy/PhoneWindowManager;->setFlashlight(Z)Z
+
+    return-void
+.end method
+
+.method private destroySensor()V
+    .locals 2
+    
+    const-string v0, "mwilky"
+
+    const-string/jumbo v1, "freefall unregistered"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+    
+    const/4 v0, 0x0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private initSensor()V
+    .locals 5
+
+    const-string v0, "mwilky"
+
+    const-string/jumbo v1, "initSensor"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    const-string/jumbo v1, "sensor"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/SensorManager;
+
+    iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
+
+    const v1, 0x1fa2658
+
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/hardware/Sensor;
+
+    if-eqz v2, :cond_0
+
+    iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallSensor:Landroid/hardware/Sensor;
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallSensor:Landroid/hardware/Sensor;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
+
+    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
+
+    iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallSensor:Landroid/hardware/Sensor;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+    
+    const/4 v0, 0x1
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
+    
+    const-string v0, "mwilky"
+
+    const-string/jumbo v1, "freefall registered"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    
+    return-void
+
+    :cond_2
+    const/4 v0, 0x0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
+    
+    const-string v0, "mwilky"
+
+    const-string/jumbo v1, "freefall not available"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    
+    return-void
+.end method
+
+.method public putDeviceToSleep()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerManager:Landroid/os/PowerManager;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->goToSleep(J)V
+
+    return-void
+.end method
+
+.method public switchLockOnFreefall()V
+     .locals 1
+
+    .line 674
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
+
+    if-eqz v0, :cond_8
+
+    .line 675
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->destroySensor()V
+
+    goto :goto_b
+
+    .line 677
+    :cond_8
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mLockOnFreeFall:Z
+    
+    if-eqz v0, :cond_exit
+    
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->initSensor()V
+
+    .line 679
+    :cond_exit
+    :goto_b
+    return-void
+.end method
+
+.method public setLockOnFreefall()V
+    .locals 2
+
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string/jumbo p0, "tweaks_lock_on_freefall"
+
+    const/4 v0, 0x0
+
+    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+    
+    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mLockOnFreeFall:Z
 
     return-void
 .end method
