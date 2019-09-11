@@ -852,6 +852,12 @@
 
 .method public startBurnInProtection()V
     .locals 1
+    
+    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBurnInProtect:Z
+    
+    if-eqz v0, :cond_mw
+    
+    invoke-static {}, Lcom/android/server/policy/BurnInProtectionHelper;->logEnabled()V
 
     iget-boolean v0, p0, Lcom/android/server/policy/BurnInProtectionHelper;->mBurnInProtectionActive:Z
 
@@ -869,6 +875,40 @@
 
     invoke-direct {p0}, Lcom/android/server/policy/BurnInProtectionHelper;->updateBurnInProtection()V
 
+    :goto_exit
     :cond_0
+    return-void
+    
+    :cond_mw
+    invoke-static {}, Lcom/android/server/policy/BurnInProtectionHelper;->logDisabled()V
+    
+    goto :goto_exit
+.end method
+
+.method public static logDisabled()V
+    .registers 2
+
+    .line 56
+    const-string v0, "mwilky"
+
+    const-string v1, "BurnIn Protection disabled"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 57
+    return-void
+.end method
+
+.method public static logEnabled()V
+    .registers 2
+
+    .line 56
+    const-string v0, "mwilky"
+
+    const-string v1, "BurnIn Protection enabled"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 57
     return-void
 .end method
