@@ -30,6 +30,12 @@
 
 .method public getAvailabilityStatus()I
     .locals 2
+    
+    invoke-virtual {p0}, Lcom/android/settings/notification/NotificationVolumePreferenceController;->isVolumeUnlinked()Z
+    
+    move-result v0
+    
+    if-nez v0, :cond_mw
 
     iget-object v0, p0, Lcom/android/settings/notification/NotificationVolumePreferenceController;->mContext:Landroid/content/Context;
 
@@ -61,6 +67,7 @@
 
     if-nez v0, :cond_0
 
+    :cond_mw
     const/4 v0, 0x0
 
     goto :goto_0
@@ -98,6 +105,26 @@
     const-string v1, "notification_volume"
 
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isVolumeUnlinked()Z
+    .locals 2
+
+    iget-object v1, p0, Lcom/android/settings/notification/NotificationVolumePreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string/jumbo p0, "tweaks_unlink_volume"
+
+    const/4 v0, 0x0
+
+    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 

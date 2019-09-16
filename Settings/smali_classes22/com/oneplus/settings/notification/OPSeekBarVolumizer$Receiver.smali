@@ -40,7 +40,7 @@
 .end method
 
 .method private updateVolumeSlider(II)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer$Receiver;->this$0:Lcom/oneplus/settings/notification/OPSeekBarVolumizer;
 
@@ -51,7 +51,18 @@
     const/4 v1, 0x1
 
     const/4 v2, 0x0
+    
+    iget-object v5, p0, Lcom/oneplus/settings/notification/OPSeekBarVolumizer$Receiver;->this$0:Lcom/oneplus/settings/notification/OPSeekBarVolumizer;
+    
+    invoke-virtual {v5}, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->isVolumeUnlinked()Z
+    
+    move-result v5
+    
+    if-eqz v5, :cond_mw
+    
+    move v0, v2
 
+    :cond_mw
     if-eqz v0, :cond_0
 
     invoke-static {p1}, Lcom/oneplus/settings/notification/OPSeekBarVolumizer;->access$1900(I)Z
