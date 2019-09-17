@@ -7,6 +7,8 @@
 
 
 # static fields
+.field private static mGearContext:Landroid/content/Context;
+
 .field private static final DEBUG:Z
 
 
