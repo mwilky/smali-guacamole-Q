@@ -486,6 +486,40 @@
     return v2
 .end method
 
+.method private notifyColorGamutEnhance(Z)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, " notifyColorGamutEnhance activeCamera = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "CameraService_proxy"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_COLORDISPLAY_MANAGER:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    invoke-static {v0}, Lcom/oneplus/android/context/OneplusContext;->queryInterface(Lcom/oneplus/android/context/IOneplusContext$EType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/display/IOneplusColorDisplayManager;
+
+    invoke-interface {v0, p1}, Lcom/oneplus/display/IOneplusColorDisplayManager;->notifyCameraStatus(Z)V
+
+    return-void
+.end method
+
 .method private notifyNfcService(Z)V
     .locals 7
 
@@ -712,7 +746,7 @@
 .end method
 
 .method private updateActivityCount(Ljava/lang/String;IILjava/lang/String;I)V
-    .locals 8
+    .locals 10
 
     iget-object v0, p0, Lcom/android/server/camera/CameraServiceProxy;->mLock:Ljava/lang/Object;
 
@@ -725,267 +759,277 @@
 
     move-result v1
 
-    if-eqz p2, :cond_9
-
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
+    if-eqz p2, :cond_9
+
     if-eq p2, v3, :cond_5
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    if-eq p2, v3, :cond_0
+    if-eq p2, v4, :cond_0
 
-    const/4 v3, 0x3
+    const/4 v4, 0x3
 
-    if-eq p2, v3, :cond_0
+    if-eq p2, v4, :cond_0
 
     goto/16 :goto_5
 
     :cond_0
-    iget-object v3, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
 
-    invoke-virtual {v3, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v4, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
+    check-cast v4, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
 
-    if-nez v3, :cond_1
+    if-nez v4, :cond_1
 
     goto/16 :goto_5
 
     :cond_1
-    invoke-virtual {v3}, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->markCompleted()V
-
-    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mCameraUsageHistory:Ljava/util/List;
-
-    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mCameraUsageHistory:Ljava/util/List;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    const/16 v5, 0x64
-
-    if-le v4, v5, :cond_2
-
-    invoke-virtual {p0}, Lcom/android/server/camera/CameraServiceProxy;->dumpUsageEvents()V
-
-    :cond_2
-    const/4 v4, 0x0
-
-    nop
-
-    :goto_0
-    iget-object v5, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
-
-    invoke-virtual {v5}, Landroid/util/ArrayMap;->size()I
-
-    move-result v5
-
-    if-ge v2, v5, :cond_4
-
-    iget-object v5, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
-
-    invoke-virtual {v5, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
-
-    iget-object v5, v5, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mClientName:Ljava/lang/String;
-
-    invoke-virtual {v5, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    const/4 v4, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_1
-    if-nez v4, :cond_b
-
-    const-class v2, Lcom/android/server/wm/WindowManagerInternal;
-
-    invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/wm/WindowManagerInternal;
-
-    invoke-virtual {v2, p4}, Lcom/android/server/wm/WindowManagerInternal;->removeNonHighRefreshRatePackage(Ljava/lang/String;)V
-
-    goto/16 :goto_5
-
-    :cond_5
-    const/4 v3, 0x0
-
-    nop
-
-    :goto_2
-    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
-
-    invoke-virtual {v4}, Landroid/util/ArrayMap;->size()I
-
-    move-result v4
-
-    if-ge v2, v4, :cond_7
-
-    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
-
-    invoke-virtual {v4, v2}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
-
-    iget-object v4, v4, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mClientName:Ljava/lang/String;
-
-    invoke-virtual {v4, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    const/4 v3, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_2
-
-    :cond_7
-    :goto_3
-    if-nez v3, :cond_8
-
-    const-class v2, Lcom/android/server/wm/WindowManagerInternal;
-
-    invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/android/server/wm/WindowManagerInternal;
-
-    invoke-virtual {v2, p4}, Lcom/android/server/wm/WindowManagerInternal;->addNonHighRefreshRatePackage(Ljava/lang/String;)V
-
-    :cond_8
-    new-instance v2, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
-
-    invoke-direct {v2, p3, p4, p5}, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;-><init>(ILjava/lang/String;I)V
-
-    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
-
-    invoke-virtual {v4, p1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
-
-    if-eqz v4, :cond_b
-
-    const-string v5, "CameraService_proxy"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "Camera "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v7, " was already marked as active"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     invoke-virtual {v4}, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->markCompleted()V
 
     iget-object v5, p0, Lcom/android/server/camera/CameraServiceProxy;->mCameraUsageHistory:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    iget-object v5, p0, Lcom/android/server/camera/CameraServiceProxy;->mCameraUsageHistory:Ljava/util/List;
+
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    const/16 v6, 0x64
+
+    if-le v5, v6, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/server/camera/CameraServiceProxy;->dumpUsageEvents()V
+
+    :cond_2
+    const/4 v5, 0x0
+
+    move v6, v2
+
+    :goto_0
+    iget-object v7, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+
+    invoke-virtual {v7}, Landroid/util/ArrayMap;->size()I
+
+    move-result v7
+
+    if-ge v6, v7, :cond_4
+
+    iget-object v7, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+
+    invoke-virtual {v7, v6}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
+
+    iget-object v7, v7, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mClientName:Ljava/lang/String;
+
+    invoke-virtual {v7, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    const/4 v5, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    :goto_1
+    if-nez v5, :cond_b
+
+    const-class v6, Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-static {v6}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-virtual {v6, p4}, Lcom/android/server/wm/WindowManagerInternal;->removeNonHighRefreshRatePackage(Ljava/lang/String;)V
+
+    goto/16 :goto_5
+
+    :cond_5
+    const/4 v4, 0x0
+
+    move v5, v2
+
+    :goto_2
+    iget-object v6, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+
+    invoke-virtual {v6}, Landroid/util/ArrayMap;->size()I
+
+    move-result v6
+
+    if-ge v5, v6, :cond_7
+
+    iget-object v6, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+
+    invoke-virtual {v6, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
+
+    iget-object v6, v6, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->mClientName:Ljava/lang/String;
+
+    invoke-virtual {v6, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_6
+
+    const/4 v4, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_2
+
+    :cond_7
+    :goto_3
+    if-nez v4, :cond_8
+
+    const-class v5, Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-static {v5}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/server/wm/WindowManagerInternal;
+
+    invoke-virtual {v5, p4}, Lcom/android/server/wm/WindowManagerInternal;->addNonHighRefreshRatePackage(Ljava/lang/String;)V
+
+    :cond_8
+    new-instance v5, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
+
+    invoke-direct {v5, p3, p4, p5}, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;-><init>(ILjava/lang/String;I)V
+
+    iget-object v6, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+
+    invoke-virtual {v6, p1, v5}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;
+
+    if-eqz v6, :cond_b
+
+    const-string v7, "CameraService_proxy"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Camera "
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v9, " was already marked as active"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v6}, Lcom/android/server/camera/CameraServiceProxy$CameraUsageEvent;->markCompleted()V
+
+    iget-object v7, p0, Lcom/android/server/camera/CameraServiceProxy;->mCameraUsageHistory:Ljava/util/List;
+
+    invoke-interface {v7, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     goto :goto_5
 
     :cond_9
     invoke-virtual {p0}, Lcom/android/server/camera/CameraServiceProxy;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v4
 
-    const-class v3, Landroid/media/AudioManager;
+    const-class v5, Landroid/media/AudioManager;
 
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v4
 
-    check-cast v2, Landroid/media/AudioManager;
+    check-cast v4, Landroid/media/AudioManager;
 
-    if-eqz v2, :cond_b
+    if-eqz v4, :cond_b
 
     if-nez p3, :cond_a
 
-    const-string v3, "back"
+    const-string v5, "back"
 
     goto :goto_4
 
     :cond_a
-    const-string v3, "front"
+    const-string v5, "front"
 
     :goto_4
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "cameraFacing="
+    const-string v7, "cameraFacing="
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v6
 
-    invoke-virtual {v2, v4}, Landroid/media/AudioManager;->setParameters(Ljava/lang/String;)V
+    invoke-virtual {v4, v6}, Landroid/media/AudioManager;->setParameters(Ljava/lang/String;)V
 
     :cond_b
     :goto_5
-    iget-object v2, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
+    iget-object v4, p0, Lcom/android/server/camera/CameraServiceProxy;->mActiveCameraUsage:Landroid/util/ArrayMap;
 
-    invoke-virtual {v2}, Landroid/util/ArrayMap;->isEmpty()Z
+    invoke-virtual {v4}, Landroid/util/ArrayMap;->isEmpty()Z
 
-    move-result v2
+    move-result v4
 
-    iget-boolean v3, p0, Lcom/android/server/camera/CameraServiceProxy;->mNotifyNfc:Z
+    iget-boolean v5, p0, Lcom/android/server/camera/CameraServiceProxy;->mNotifyNfc:Z
 
-    if-eqz v3, :cond_c
+    if-eqz v5, :cond_c
 
-    if-eq v1, v2, :cond_c
+    if-eq v1, v4, :cond_c
 
-    invoke-direct {p0, v2}, Lcom/android/server/camera/CameraServiceProxy;->notifyNfcService(Z)V
+    invoke-direct {p0, v4}, Lcom/android/server/camera/CameraServiceProxy;->notifyNfcService(Z)V
 
     :cond_c
+    if-eq v1, v4, :cond_e
+
+    if-nez v4, :cond_d
+
+    move v2, v3
+
+    :cond_d
+    invoke-direct {p0, v2}, Lcom/android/server/camera/CameraServiceProxy;->notifyColorGamutEnhance(Z)V
+
+    :cond_e
     monitor-exit v0
 
     return-void
@@ -1035,6 +1079,13 @@
     invoke-direct {p0, v2}, Lcom/android/server/camera/CameraServiceProxy;->notifyNfcService(Z)V
 
     :cond_0
+    if-nez v1, :cond_1
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, v2}, Lcom/android/server/camera/CameraServiceProxy;->notifyColorGamutEnhance(Z)V
+
+    :cond_1
     monitor-exit v0
 
     return-void

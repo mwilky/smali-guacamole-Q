@@ -893,7 +893,7 @@
 
     move-result-object v1
 
-    const v2, 0x11100b8
+    const v2, 0x11100b9
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -905,7 +905,7 @@
 
     move-result-object v1
 
-    const v2, 0x1110089
+    const v2, 0x111008a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -991,7 +991,7 @@
 
     move-result-object v1
 
-    const v2, 0x1110096
+    const v2, 0x1110097
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -6041,7 +6041,7 @@
 
     move-result-object v0
 
-    const v1, 0x1110118
+    const v1, 0x1110119
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -14220,6 +14220,18 @@
     throw v1
 .end method
 
+.method public isFODAndKeyguard()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mPolicy:Lcom/android/server/policy/WindowManagerPolicy;
+
+    invoke-interface {v0}, Lcom/android/server/policy/WindowManagerPolicy;->isFODAndKeyguard()Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public isKeyguardLocked()Z
     .locals 1
 
@@ -14392,26 +14404,14 @@
 
 .method isSecureLocked(Lcom/android/server/wm/WindowState;)Z
     .locals 3
-    
-    const/4 v1, 0x1
-    
-    iget-object v0, p0, Lcom/android/server/wm/WindowManagerService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string/jumbo v2, "tweaks_secure_window"
-
-    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
 
     iget-object v0, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/lit16 v0, v0, 0x2000
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
@@ -24457,7 +24457,7 @@
 
     move-result-object v0
 
-    const v1, 0x1110114
+    const v1, 0x1110115
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -25228,19 +25228,19 @@
     :goto_1
     const-string v6, "WindowManager"
 
-    if-nez v4, :cond_12
+    if-nez v4, :cond_13
 
     iget v7, v0, Lcom/android/server/wm/WindowManagerService;->mAppsFreezingScreen:I
 
-    if-gtz v7, :cond_12
+    if-gtz v7, :cond_13
 
     iget v7, v0, Lcom/android/server/wm/WindowManagerService;->mWindowsFreezingScreen:I
 
-    if-eq v7, v2, :cond_12
+    if-eq v7, v2, :cond_13
 
     iget-boolean v7, v0, Lcom/android/server/wm/WindowManagerService;->mClientFreezingScreen:Z
 
-    if-nez v7, :cond_12
+    if-nez v7, :cond_13
 
     if-lez v5, :cond_3
 
@@ -25256,8 +25256,11 @@
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
+    if-eqz v1, :cond_5
+
     invoke-static {v1}, Lcom/android/server/wm/OpWindowManagerServiceInjector;->stopFreezingDisplayLocked(Lcom/android/server/wm/DisplayContent;)V
 
+    :cond_5
     iget v7, v0, Lcom/android/server/wm/WindowManagerService;->mFrozenDisplayId:I
 
     const/4 v8, -0x1
@@ -25300,7 +25303,7 @@
 
     iget-object v9, v0, Lcom/android/server/wm/WindowManagerService;->mLastFinishedFreezeSource:Ljava/lang/Object;
 
-    if-eqz v9, :cond_5
+    if-eqz v9, :cond_6
 
     const-string v9, " due to "
 
@@ -25310,7 +25313,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_5
+    :cond_6
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -25331,11 +25334,11 @@
 
     sget-boolean v9, Lcom/android/server/wm/WindowManagerService;->PROFILE_ORIENTATION:Z
 
-    if-eqz v9, :cond_6
+    if-eqz v9, :cond_7
 
     invoke-static {}, Landroid/os/Debug;->stopMethodTracing()V
 
-    :cond_6
+    :cond_7
     const/4 v9, 0x0
 
     iget-object v10, v0, Lcom/android/server/wm/WindowManagerService;->mAnimator:Lcom/android/server/wm/WindowAnimator;
@@ -25346,23 +25349,23 @@
 
     const/4 v15, 0x0
 
-    if-eqz v10, :cond_b
+    if-eqz v10, :cond_c
 
     invoke-interface {v10}, Lcom/android/server/wm/IScreenRotationAnimation;->hasScreenshot()Z
 
     move-result v11
 
-    if-eqz v11, :cond_a
+    if-eqz v11, :cond_b
 
     sget-boolean v11, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ORIENTATION:Z
 
-    if-eqz v11, :cond_7
+    if-eqz v11, :cond_8
 
     const-string v11, "**** Dismissing screen rotation animation"
 
     invoke-static {v6, v11}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
+    :cond_8
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->getDisplayInfo()Landroid/view/DisplayInfo;
 
     move-result-object v13
@@ -25379,13 +25382,13 @@
 
     move-result v11
 
-    if-nez v11, :cond_8
+    if-nez v11, :cond_9
 
     iput v3, v0, Lcom/android/server/wm/WindowManagerService;->mEnterAnimId:I
 
     iput v3, v0, Lcom/android/server/wm/WindowManagerService;->mExitAnimId:I
 
-    :cond_8
+    :cond_9
     iget-object v12, v0, Lcom/android/server/wm/WindowManagerService;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     const-wide/16 v16, 0x2710
@@ -25426,7 +25429,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     iget-object v2, v0, Lcom/android/server/wm/WindowManagerService;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
@@ -25436,7 +25439,7 @@
 
     goto :goto_2
 
-    :cond_9
+    :cond_a
     invoke-interface {v10}, Lcom/android/server/wm/IScreenRotationAnimation;->kill()V
 
     iget-object v2, v0, Lcom/android/server/wm/WindowManagerService;->mAnimator:Lcom/android/server/wm/WindowAnimator;
@@ -25450,16 +25453,16 @@
     :goto_2
     goto :goto_4
 
-    :cond_a
+    :cond_b
     move-object v3, v15
 
     goto :goto_3
 
-    :cond_b
+    :cond_c
     move-object v3, v15
 
     :goto_3
-    if-eqz v10, :cond_c
+    if-eqz v10, :cond_d
 
     invoke-interface {v10}, Lcom/android/server/wm/IScreenRotationAnimation;->kill()V
 
@@ -25467,23 +25470,23 @@
 
     invoke-virtual {v2, v7, v3}, Lcom/android/server/wm/WindowAnimator;->setScreenRotationAnimationLocked(ILcom/android/server/wm/IScreenRotationAnimation;)V
 
-    :cond_c
+    :cond_d
     const/4 v9, 0x1
 
     :goto_4
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_e
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->updateOrientationFromAppTokens()Z
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_e
 
     const/16 v20, 0x1
 
     goto :goto_5
 
-    :cond_d
+    :cond_e
     const/16 v20, 0x0
 
     :goto_5
@@ -25505,33 +25508,33 @@
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    if-eqz v9, :cond_f
+    if-eqz v9, :cond_10
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_10
 
-    if-eqz v9, :cond_f
+    if-eqz v9, :cond_10
 
     sget-boolean v3, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ORIENTATION:Z
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_f
 
     const-string v3, "Performing post-rotate rotation"
 
     invoke-static {v6, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_f
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->updateRotationUnchecked()Z
 
     move-result v3
 
     or-int/2addr v2, v3
 
-    :cond_f
-    if-eqz v2, :cond_10
+    :cond_10
+    if-eqz v2, :cond_11
 
     invoke-virtual {v1}, Lcom/android/server/wm/DisplayContent;->sendNewConfiguration()V
 
-    :cond_10
+    :cond_11
     iget-object v3, v0, Lcom/android/server/wm/WindowManagerService;->mLatencyTracker:Lcom/android/internal/util/LatencyTracker;
 
     const/4 v6, 0x6
@@ -25540,18 +25543,18 @@
 
     iget-object v3, v0, Lcom/android/server/wm/WindowManagerService;->mPerf:Landroid/util/BoostFramework;
 
-    if-eqz v3, :cond_11
+    if-eqz v3, :cond_12
 
     invoke-virtual {v3}, Landroid/util/BoostFramework;->perfLockRelease()I
 
-    :cond_11
+    :cond_12
     return-void
 
-    :cond_12
+    :cond_13
     :goto_6
     sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_ORIENTATION:Z
 
-    if-eqz v2, :cond_13
+    if-eqz v2, :cond_14
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -25599,7 +25602,7 @@
 
     invoke-static {v6, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_13
+    :cond_14
     return-void
 .end method
 

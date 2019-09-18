@@ -297,7 +297,7 @@
 
     iput v1, p0, Lcom/android/server/wm/RecentTasks;->mGlobalMaxNumTasks:I
 
-    const v1, 0x111008a
+    const v1, 0x111008b
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

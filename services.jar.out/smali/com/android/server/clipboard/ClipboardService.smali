@@ -836,42 +836,61 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     if-ne v1, p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v2, v1
+    const-string v2, "com.android.systemui"
 
-    iget-object v3, p0, Lcom/android/server/clipboard/ClipboardService;->mAmInternal:Landroid/app/ActivityManagerInternal;
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-static {p2}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    if-nez v1, :cond_1
+
+    const/4 p2, 0x0
+
+    :cond_1
+    move v10, v1
+
+    iget-object v2, p0, Lcom/android/server/clipboard/ClipboardService;->mAmInternal:Landroid/app/ActivityManagerInternal;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
-    move-result v4
+    move-result v3
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
-    move-result v5
+    move-result v4
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    const/4 v8, 0x2
+    const/4 v7, 0x2
 
-    const-string v9, "checkClipboardServiceCallingUser"
+    const-string v8, "checkClipboardServiceCallingUser"
 
-    move v6, p2
+    move v5, p2
 
-    move-object v10, p1
+    move-object v9, p1
 
-    invoke-virtual/range {v3 .. v10}, Landroid/app/ActivityManagerInternal;->handleIncomingUser(IIIZILjava/lang/String;Ljava/lang/String;)I
+    invoke-virtual/range {v2 .. v9}, Landroid/app/ActivityManagerInternal;->handleIncomingUser(IIIZILjava/lang/String;Ljava/lang/String;)I
 
     move-result v2
 
     return v2
 
-    :cond_1
+    :cond_2
     :goto_0
     return v1
 .end method

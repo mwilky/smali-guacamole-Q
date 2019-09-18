@@ -19,6 +19,10 @@
 
 .field public static final TAG:Ljava/lang/String; = "AppFuseBridge"
 
+.field private static isRunning:Z
+
+.field private static mAppFuseThread:Landroid/os/HandlerThread;
+
 
 # instance fields
 .field private mNativeLoop:J
@@ -47,6 +51,24 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/android/server/storage/AppFuseBridge;->isRunning:Z
+
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "AppFuse"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/android/server/storage/AppFuseBridge;->mAppFuseThread:Landroid/os/HandlerThread;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 2
 
@@ -64,7 +86,28 @@
 
     iput-wide v0, p0, Lcom/android/server/storage/AppFuseBridge;->mNativeLoop:J
 
+    sget-boolean v0, Lcom/android/server/storage/AppFuseBridge;->isRunning:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/android/server/storage/AppFuseBridge;->isRunning:Z
+
+    sget-object v0, Lcom/android/server/storage/AppFuseBridge;->mAppFuseThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
+    :cond_0
     return-void
+.end method
+
+.method static synthetic access$000(Lcom/android/server/storage/AppFuseBridge;)Landroid/util/SparseArray;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/storage/AppFuseBridge;->mScopes:Landroid/util/SparseArray;
+
+    return-object v0
 .end method
 
 .method private native native_add_bridge(JII)I
@@ -79,80 +122,40 @@
 .method private native native_start_loop(J)V
 .end method
 
-.method private declared-synchronized onClosed(I)V
+.method private onClosed(I)V
     .locals 2
 
-    monitor-enter p0
+    sget-object v0, Lcom/android/server/storage/AppFuseBridge;->mAppFuseThread:Landroid/os/HandlerThread;
 
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/storage/AppFuseBridge;->mScopes:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/storage/AppFuseBridge$MountScope;
+    new-instance v1, Lcom/android/server/storage/AppFuseBridge$2;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v1, p0, p1}, Lcom/android/server/storage/AppFuseBridge$2;-><init>(Lcom/android/server/storage/AppFuseBridge;I)V
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/android/server/storage/AppFuseBridge$MountScope;->setMountResultLocked(Z)V
-
-    invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
-
-    iget-object v1, p0, Lcom/android/server/storage/AppFuseBridge;->mScopes:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->remove(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    monitor-exit p0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
 .end method
 
-.method private declared-synchronized onMount(I)V
+.method private onMount(I)V
     .locals 2
 
-    monitor-enter p0
+    sget-object v0, Lcom/android/server/storage/AppFuseBridge;->mAppFuseThread:Landroid/os/HandlerThread;
 
-    :try_start_0
-    iget-object v0, p0, Lcom/android/server/storage/AppFuseBridge;->mScopes:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getThreadHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    check-cast v0, Lcom/android/server/storage/AppFuseBridge$MountScope;
+    new-instance v1, Lcom/android/server/storage/AppFuseBridge$1;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v1, p0, p1}, Lcom/android/server/storage/AppFuseBridge$1;-><init>(Lcom/android/server/storage/AppFuseBridge;I)V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/android/server/storage/AppFuseBridge$MountScope;->setMountResultLocked(Z)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_0
-    monitor-exit p0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
 .end method
 
 

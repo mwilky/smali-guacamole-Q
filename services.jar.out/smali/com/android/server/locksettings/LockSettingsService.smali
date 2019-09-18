@@ -3569,8 +3569,15 @@
 
     const-string v1, "LockSettingsService"
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    invoke-static {p1}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3599,7 +3606,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     :try_start_0
     const-string v0, "AndroidKeyStore"
 
@@ -10065,172 +10072,178 @@
 .end method
 
 .method protected tieProfileLockToParent(I[B)V
-    .locals 12
+    .locals 16
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 
+    move/from16 v1, p1
+
     const-string v0, "NoPadding"
 
-    const-string v1, "GCM"
+    const-string v2, "GCM"
 
-    const-string/jumbo v2, "profile_key_name_encrypt_"
+    const-string v3, " Callers="
 
-    sget-boolean v3, Lcom/android/server/locksettings/LockSettingsService;->DEBUG:Z
+    const-string v4, "The original key can now be discarded. userId: "
 
-    if-eqz v3, :cond_0
+    const-string/jumbo v5, "profile_key_name_encrypt_"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    sget-boolean v6, Lcom/android/server/locksettings/LockSettingsService;->DEBUG:Z
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v7, "LockSettingsService"
 
-    const-string/jumbo v4, "tieProfileLockToParent for user: "
+    if-eqz v6, :cond_0
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string/jumbo v8, "tieProfileLockToParent for user: "
 
-    move-result-object v3
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "LockSettingsService"
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v4, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v7, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     :try_start_0
-    const-string v3, "AES"
+    const-string v6, "AES"
 
-    invoke-static {v3}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
+    invoke-static {v6}, Ljavax/crypto/KeyGenerator;->getInstance(Ljava/lang/String;)Ljavax/crypto/KeyGenerator;
 
-    move-result-object v3
+    move-result-object v6
 
-    new-instance v4, Ljava/security/SecureRandom;
+    new-instance v8, Ljava/security/SecureRandom;
 
-    invoke-direct {v4}, Ljava/security/SecureRandom;-><init>()V
+    invoke-direct {v8}, Ljava/security/SecureRandom;-><init>()V
 
-    invoke-virtual {v3, v4}, Ljavax/crypto/KeyGenerator;->init(Ljava/security/SecureRandom;)V
+    invoke-virtual {v6, v8}, Ljavax/crypto/KeyGenerator;->init(Ljava/security/SecureRandom;)V
 
-    invoke-virtual {v3}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
+    invoke-virtual {v6}, Ljavax/crypto/KeyGenerator;->generateKey()Ljavax/crypto/SecretKey;
 
-    move-result-object v4
+    move-result-object v8
 
-    const-string v5, "AndroidKeyStore"
+    const-string v9, "AndroidKeyStore"
 
-    invoke-static {v5}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
+    invoke-static {v9}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
 
-    move-result-object v5
+    move-result-object v9
 
-    const/4 v6, 0x0
+    const/4 v10, 0x0
 
-    invoke-virtual {v5, v6}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
+    invoke-virtual {v9, v10}, Ljava/security/KeyStore;->load(Ljava/security/KeyStore$LoadStoreParameter;)V
     :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/security/UnrecoverableKeyException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/security/KeyStoreException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/security/UnrecoverableKeyException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/security/KeyStoreException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_4
 
     :try_start_1
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v12
 
-    new-instance v8, Ljava/security/KeyStore$SecretKeyEntry;
+    new-instance v13, Ljava/security/KeyStore$SecretKeyEntry;
 
-    invoke-direct {v8, v4}, Ljava/security/KeyStore$SecretKeyEntry;-><init>(Ljavax/crypto/SecretKey;)V
+    invoke-direct {v13, v8}, Ljava/security/KeyStore$SecretKeyEntry;-><init>(Ljavax/crypto/SecretKey;)V
 
-    new-instance v9, Landroid/security/keystore/KeyProtection$Builder;
+    new-instance v14, Landroid/security/keystore/KeyProtection$Builder;
 
-    const/4 v10, 0x1
+    const/4 v15, 0x1
 
-    invoke-direct {v9, v10}, Landroid/security/keystore/KeyProtection$Builder;-><init>(I)V
+    invoke-direct {v14, v15}, Landroid/security/keystore/KeyProtection$Builder;-><init>(I)V
 
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v9, v11}, Landroid/security/keystore/KeyProtection$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
-
-    move-result-object v9
-
-    filled-new-array {v0}, [Ljava/lang/String;
+    filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v11
 
-    invoke-virtual {v9, v11}, Landroid/security/keystore/KeyProtection$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
+    invoke-virtual {v14, v11}, Landroid/security/keystore/KeyProtection$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
-    move-result-object v9
+    move-result-object v11
 
-    invoke-virtual {v9}, Landroid/security/keystore/KeyProtection$Builder;->build()Landroid/security/keystore/KeyProtection;
+    filled-new-array {v0}, [Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v14
 
-    invoke-virtual {v5, v7, v8, v9}, Ljava/security/KeyStore;->setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V
+    invoke-virtual {v11, v14}, Landroid/security/keystore/KeyProtection$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    move-result-object v11
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v11}, Landroid/security/keystore/KeyProtection$Builder;->build()Landroid/security/keystore/KeyProtection;
 
-    const-string/jumbo v8, "profile_key_name_decrypt_"
+    move-result-object v11
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v12, v13, v11}, Ljava/security/KeyStore;->setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V
 
-    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v7
+    const-string/jumbo v12, "profile_key_name_decrypt_"
 
-    new-instance v8, Ljava/security/KeyStore$SecretKeyEntry;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v8, v4}, Ljava/security/KeyStore$SecretKeyEntry;-><init>(Ljavax/crypto/SecretKey;)V
+    invoke-virtual {v11, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v9, Landroid/security/keystore/KeyProtection$Builder;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v11, 0x2
+    move-result-object v11
 
-    invoke-direct {v9, v11}, Landroid/security/keystore/KeyProtection$Builder;-><init>(I)V
+    new-instance v12, Ljava/security/KeyStore$SecretKeyEntry;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    invoke-direct {v12, v8}, Ljava/security/KeyStore$SecretKeyEntry;-><init>(Ljavax/crypto/SecretKey;)V
 
-    move-result-object v1
+    new-instance v13, Landroid/security/keystore/KeyProtection$Builder;
 
-    invoke-virtual {v9, v1}, Landroid/security/keystore/KeyProtection$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
+    const/4 v14, 0x2
 
-    move-result-object v1
+    invoke-direct {v13, v14}, Landroid/security/keystore/KeyProtection$Builder;-><init>(I)V
+
+    filled-new-array {v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v13, v2}, Landroid/security/keystore/KeyProtection$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
+
+    move-result-object v2
 
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/security/keystore/KeyProtection$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
+    invoke-virtual {v2, v0}, Landroid/security/keystore/KeyProtection$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyProtection$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v10}, Landroid/security/keystore/KeyProtection$Builder;->setUserAuthenticationRequired(Z)Landroid/security/keystore/KeyProtection$Builder;
+    invoke-virtual {v0, v15}, Landroid/security/keystore/KeyProtection$Builder;->setUserAuthenticationRequired(Z)Landroid/security/keystore/KeyProtection$Builder;
 
     move-result-object v0
 
-    const/16 v1, 0x1e
+    const/16 v2, 0x1e
 
-    invoke-virtual {v0, v1}, Landroid/security/keystore/KeyProtection$Builder;->setUserAuthenticationValidityDurationSeconds(I)Landroid/security/keystore/KeyProtection$Builder;
+    invoke-virtual {v0, v2}, Landroid/security/keystore/KeyProtection$Builder;->setUserAuthenticationValidityDurationSeconds(I)Landroid/security/keystore/KeyProtection$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v10}, Landroid/security/keystore/KeyProtection$Builder;->setCriticalToDeviceEncryption(Z)Landroid/security/keystore/KeyProtection$Builder;
+    invoke-virtual {v0, v15}, Landroid/security/keystore/KeyProtection$Builder;->setCriticalToDeviceEncryption(Z)Landroid/security/keystore/KeyProtection$Builder;
 
     move-result-object v0
 
@@ -10238,181 +10251,291 @@
 
     move-result-object v0
 
-    invoke-virtual {v5, v7, v8, v0}, Ljava/security/KeyStore;->setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V
+    invoke-virtual {v9, v11, v12, v0}, Ljava/security/KeyStore;->setEntry(Ljava/lang/String;Ljava/security/KeyStore$Entry;Ljava/security/KeyStore$ProtectionParameter;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v5, v0, v6}, Ljava/security/KeyStore;->getKey(Ljava/lang/String;[C)Ljava/security/Key;
+    invoke-virtual {v9, v0, v10}, Ljava/security/KeyStore;->getKey(Ljava/lang/String;[C)Ljava/security/Key;
 
     move-result-object v0
 
     check-cast v0, Ljavax/crypto/SecretKey;
 
-    const-string v1, "AES/GCM/NoPadding"
+    const-string v2, "AES/GCM/NoPadding"
 
-    invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v10, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
-
-    invoke-virtual {v1, p2}, Ljavax/crypto/Cipher;->doFinal([B)[B
-
-    move-result-object v6
-
-    invoke-virtual {v1}, Ljavax/crypto/Cipher;->getIV()[B
-
-    move-result-object v7
+    invoke-virtual {v2, v15, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-object v0, v7
+    move-object/from16 v10, p2
 
     :try_start_2
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v10}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v11
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljavax/crypto/Cipher;->getIV()[B
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
+    move-result-object v12
     :try_end_2
-    .catch Ljava/security/cert/CertificateException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/security/UnrecoverableKeyException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljavax/crypto/BadPaddingException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/security/KeyStoreException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/security/InvalidKeyException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    nop
-
-    nop
-
-    new-instance v1, Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    move-object v2, v12
 
     :try_start_3
-    array-length v2, v0
+    invoke-static/range {p1 .. p1}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
 
-    const/16 v3, 0xc
+    move-result v0
 
-    if-ne v2, v3, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->write([B)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v6}, Ljava/io/ByteArrayOutputStream;->write([B)V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    nop
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsService;->mStorage:Lcom/android/server/locksettings/LockSettingsStorage;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v3, 0xa
+
+    invoke-static {v3}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v2, p1, v3}, Lcom/android/server/locksettings/LockSettingsStorage;->writeChildProfileLock(I[B)V
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v7, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v9, v0}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/security/cert/CertificateException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/security/UnrecoverableKeyException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/security/KeyStoreException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_3 .. :try_end_3} :catch_2
+    .catch Ljava/security/InvalidKeyException; {:try_start_3 .. :try_end_3} :catch_2
+
+    nop
+
+    nop
+
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    move-object v3, v0
+
+    :try_start_4
+    array-length v0, v2
+
+    const/16 v4, 0xc
+
+    if-ne v0, v4, :cond_2
+
+    invoke-virtual {v3, v2}, Ljava/io/ByteArrayOutputStream;->write([B)V
+
+    invoke-virtual {v3, v11}, Ljava/io/ByteArrayOutputStream;->write([B)V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+
+    nop
+
+    move-object/from16 v12, p0
+
+    iget-object v0, v12, Lcom/android/server/locksettings/LockSettingsService;->mStorage:Lcom/android/server/locksettings/LockSettingsStorage;
+
+    invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v4
+
+    invoke-virtual {v0, v1, v4}, Lcom/android/server/locksettings/LockSettingsStorage;->writeChildProfileLock(I[B)V
 
     return-void
 
-    :cond_1
-    :try_start_4
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Invalid iv length: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    array-length v4, v0
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-
-    :catch_0
-    move-exception v2
-
-    new-instance v3, Ljava/lang/RuntimeException;
-
-    const-string v4, "Failed to concatenate byte arrays"
-
-    invoke-direct {v3, v4, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v3
-
-    :catchall_0
-    move-exception v0
+    :cond_2
+    move-object/from16 v12, p0
 
     :try_start_5
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v5, "Invalid iv length: "
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    array-length v5, v2
 
-    invoke-virtual {v5, v1}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v0, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw v0
     :try_end_5
-    .catch Ljava/security/cert/CertificateException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/security/UnrecoverableKeyException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljavax/crypto/BadPaddingException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/security/KeyStoreException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_5 .. :try_end_5} :catch_1
-    .catch Ljava/security/InvalidKeyException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 
     :catch_1
     move-exception v0
 
-    new-instance v1, Ljava/lang/RuntimeException;
+    move-object/from16 v12, p0
 
-    const-string v2, "Failed to encrypt key"
+    :goto_0
+    new-instance v4, Ljava/lang/RuntimeException;
 
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v5, "Failed to concatenate byte arrays"
 
-    throw v1
+    invoke-direct {v4, v5, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v4
+
+    :catch_2
+    move-exception v0
+
+    move-object/from16 v12, p0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    move-object/from16 v12, p0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    move-object/from16 v12, p0
+
+    move-object/from16 v10, p2
+
+    :goto_1
+    :try_start_6
+    invoke-static/range {p1 .. p1}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v3, 0xa
+
+    invoke-static {v3}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v7, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v9, v2}, Ljava/security/KeyStore;->deleteEntry(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_6
+    .catch Ljava/security/cert/CertificateException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/security/UnrecoverableKeyException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljavax/crypto/BadPaddingException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljavax/crypto/IllegalBlockSizeException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/security/KeyStoreException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/security/InvalidKeyException; {:try_start_6 .. :try_end_6} :catch_3
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_4
+    move-exception v0
+
+    move-object/from16 v12, p0
+
+    move-object/from16 v10, p2
+
+    :goto_2
+    new-instance v2, Ljava/lang/RuntimeException;
+
+    const-string v3, "Failed to encrypt key"
+
+    invoke-direct {v2, v3, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
 .end method
 
 .method public unregisterStrongAuthTracker(Landroid/app/trust/IStrongAuthTracker;)V

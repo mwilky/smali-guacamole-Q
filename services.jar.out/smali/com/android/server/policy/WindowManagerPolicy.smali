@@ -580,6 +580,9 @@
 .method public abstract interceptMotionBeforeQueueingNonInteractive(IJI)I
 .end method
 
+.method public abstract isFODAndKeyguard()Z
+.end method
+
 .method public abstract isKeyguardDisabledAndNotShowing()Z
 .end method
 

@@ -197,7 +197,7 @@
 
     iput-boolean v3, p0, Lcom/android/server/connectivity/tethering/TetheringConfiguration;->isDunRequired:Z
 
-    const v3, 0x11100e2
+    const v3, 0x11100e3
 
     invoke-static {v1, v3}, Lcom/android/server/connectivity/tethering/TetheringConfiguration;->getResourceBoolean(Landroid/content/res/Resources;I)Z
 

@@ -2810,70 +2810,123 @@
 
     if-eqz v13, :cond_b
 
-    const/16 v16, 0x1
+    const/4 v13, 0x1
 
     goto :goto_6
 
     :cond_b
-    move/from16 v16, v4
+    move v13, v4
 
     :goto_6
-    move/from16 v4, v16
+    invoke-virtual {v0}, Lcom/android/server/am/ProcessRecord;->isInterestingForBackgroundTraces()Z
 
-    iget-object v13, v1, Lcom/android/server/am/AppErrors;->mService:Lcom/android/server/am/ActivityManagerService;
+    move-result v14
 
-    iget-object v13, v13, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
+    if-nez v14, :cond_c
 
-    invoke-virtual {v13}, Lcom/android/server/wm/ActivityTaskManagerInternal;->canShowErrorDialogs()Z
-
-    move-result v13
-
-    if-nez v13, :cond_c
-
-    if-eqz v6, :cond_e
-
-    :cond_c
-    if-nez v4, :cond_e
-
-    if-nez v5, :cond_d
-
-    if-nez v12, :cond_d
-
-    iget-boolean v13, v3, Lcom/android/server/am/AppErrorDialog$Data;->repeating:Z
-
-    if-eqz v13, :cond_e
-
-    :cond_d
-    new-instance v13, Lcom/android/server/am/AppErrorDialog;
-
-    iget-object v14, v1, Lcom/android/server/am/AppErrors;->mContext:Landroid/content/Context;
-
-    iget-object v2, v1, Lcom/android/server/am/AppErrors;->mService:Lcom/android/server/am/ActivityManagerService;
-
-    invoke-direct {v13, v14, v2, v3}, Lcom/android/server/am/AppErrorDialog;-><init>(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/AppErrorDialog$Data;)V
-
-    move-object v7, v13
-
-    iput-object v13, v0, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
+    const/16 v16, 0x1
 
     goto :goto_7
 
+    :cond_c
+    move/from16 v16, v4
+
+    :goto_7
+    move/from16 v14, v16
+
+    const-string/jumbo v4, "persist.sys.assert.enable"
+
+    const/4 v2, 0x0
+
+    invoke-static {v4, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
+
+    if-nez v5, :cond_d
+
+    if-eqz v12, :cond_e
+
+    :cond_d
+    const/4 v14, 0x0
+
     :cond_e
-    if-eqz v9, :cond_f
+    iget-object v4, v1, Lcom/android/server/am/AppErrors;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mAtmInternal:Lcom/android/server/wm/ActivityTaskManagerInternal;
+
+    invoke-virtual {v4}, Lcom/android/server/wm/ActivityTaskManagerInternal;->canShowErrorDialogs()Z
+
+    move-result v4
+
+    if-nez v4, :cond_10
+
+    if-eqz v6, :cond_f
+
+    goto :goto_8
+
+    :cond_f
+    move/from16 v16, v2
+
+    move/from16 v17, v5
+
+    goto :goto_9
+
+    :cond_10
+    :goto_8
+    if-nez v13, :cond_12
+
+    if-nez v5, :cond_11
+
+    if-nez v12, :cond_11
+
+    iget-boolean v4, v3, Lcom/android/server/am/AppErrorDialog$Data;->repeating:Z
+
+    if-eqz v4, :cond_f
+
+    if-nez v14, :cond_f
+
+    :cond_11
+    new-instance v4, Lcom/android/server/am/AppErrorDialog;
+
+    move/from16 v16, v2
+
+    iget-object v2, v1, Lcom/android/server/am/AppErrors;->mContext:Landroid/content/Context;
+
+    move/from16 v17, v5
+
+    iget-object v5, v1, Lcom/android/server/am/AppErrors;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    invoke-direct {v4, v2, v5, v3}, Lcom/android/server/am/AppErrorDialog;-><init>(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/AppErrorDialog$Data;)V
+
+    move-object v7, v4
+
+    iput-object v4, v0, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
+
+    goto :goto_a
+
+    :cond_12
+    move/from16 v16, v2
+
+    move/from16 v17, v5
+
+    :goto_9
+    if-eqz v9, :cond_13
 
     sget v2, Lcom/android/server/am/AppErrorDialog;->CANT_SHOW:I
 
     invoke-virtual {v9, v2}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    :cond_f
-    :goto_7
+    :cond_13
+    :goto_a
     monitor-exit v8
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
 
-    if-eqz v7, :cond_10
+    if-eqz v7, :cond_14
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2901,7 +2954,7 @@
 
     invoke-virtual {v7}, Lcom/android/server/am/AppErrorDialog;->show()V
 
-    :cond_10
+    :cond_14
     return-void
 
     :catchall_0

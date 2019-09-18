@@ -959,21 +959,6 @@
     return-void
 .end method
 
-.method public static setIMEPackageList(Lorg/json/JSONObject;)V
-    .locals 1
-
-    invoke-static {}, Lcom/android/server/wm/OpQuickReplyInjector;->initInstance()V
-
-    sget-object v0, Lcom/android/server/wm/OpQuickReplyInjector;->sOpQuickReply:Lcom/android/server/wm/IOpQuickReply;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p0}, Lcom/android/server/wm/IOpQuickReply;->setIMEPackageList(Lorg/json/JSONObject;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public static setKeyguardDone(Z)V
     .locals 1
 

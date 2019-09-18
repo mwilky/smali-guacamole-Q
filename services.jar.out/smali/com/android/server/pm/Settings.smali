@@ -1199,6 +1199,10 @@
 
     iput-object v1, p0, Lcom/android/server/pm/Settings;->mBackupStoppedPackagesFilename:Ljava/io/File;
 
+    iget-object v1, p0, Lcom/android/server/pm/Settings;->mSharedUsers:Landroid/util/ArrayMap;
+
+    invoke-static {v1}, Lcom/android/server/pm/OpSettingsInjector;->setShareUsers(Landroid/util/ArrayMap;)V
+
     return-void
 .end method
 
@@ -16983,7 +16987,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -17021,7 +17025,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_2
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -17041,33 +17045,17 @@
 
     invoke-interface {v4}, Ljava/util/Iterator;->remove()V
 
-    goto :goto_2
-
     :cond_1
-    iget-object v6, v5, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
-
-    iget-object v7, p0, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
-
-    invoke-static {v6, v7, v3}, Lcom/android/server/pm/OpSettingsInjector;->shouldPruneSharedUserPackages(Ljava/lang/String;Landroid/util/ArrayMap;Lcom/android/server/pm/SharedUserSetting;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->remove()V
-
-    :cond_2
-    :goto_2
     goto :goto_1
 
-    :cond_3
+    :cond_2
     iget-object v4, v3, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
 
     invoke-virtual {v4}, Landroid/util/ArraySet;->size()I
 
     move-result v4
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_3
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -17077,18 +17065,18 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_4
+    :cond_3
     goto :goto_0
 
-    :cond_5
+    :cond_4
     const/4 v1, 0x0
 
-    :goto_3
+    :goto_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    if-ge v1, v2, :cond_6
+    if-ge v1, v2, :cond_5
 
     iget-object v2, p0, Lcom/android/server/pm/Settings;->mSharedUsers:Landroid/util/ArrayMap;
 
@@ -17100,9 +17088,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_6
+    :cond_5
     return-void
 .end method
 

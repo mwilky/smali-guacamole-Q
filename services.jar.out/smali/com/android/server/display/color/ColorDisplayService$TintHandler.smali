@@ -59,7 +59,7 @@
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$TintHandler;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3100(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     const-class v1, Lcom/android/server/display/color/DisplayTransformManager;
 
-    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3500(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/color/ColorDisplayService$TintHandler;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3100(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+    invoke-static {v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
 
     move-result-object v1
 
@@ -98,7 +98,7 @@
 
     iget-object v1, v0, Lcom/android/server/display/color/ColorDisplayService;->mDisplayWhiteBalanceTintController:Lcom/android/server/display/color/DisplayWhiteBalanceTintController;
 
-    invoke-static {v0, v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;Z)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3400(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;Z)V
 
     goto/16 :goto_1
 
@@ -172,7 +172,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$TintHandler;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3100(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
 
     move-result-object v0
 
@@ -182,18 +182,18 @@
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$TintHandler;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3100(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$3300(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;Z)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/display/color/ColorDisplayService;->access$3400(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;Z)V
 
     goto :goto_1
 
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$TintHandler;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$2600(Lcom/android/server/display/color/ColorDisplayService;)Z
+    invoke-static {v0}, Lcom/android/server/display/color/ColorDisplayService;->access$2800(Lcom/android/server/display/color/ColorDisplayService;)Z
 
     move-result v0
 
@@ -235,7 +235,7 @@
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3000(Lcom/android/server/display/color/ColorDisplayService;I)V
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$3200(Lcom/android/server/display/color/ColorDisplayService;I)V
 
     nop
 

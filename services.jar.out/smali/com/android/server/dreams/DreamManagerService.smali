@@ -16,8 +16,6 @@
 # static fields
 .field private static final DEBUG:Z = false
 
-.field private static final STARTDREAM_TIMEOUT:J = 0x1f4L
-
 .field private static final TAG:Ljava/lang/String; = "DreamManagerService"
 
 
@@ -1336,31 +1334,21 @@
     return-void
 
     :cond_0
-    iget-object v0, v8, Lcom/android/server/dreams/DreamManagerService;->mPowerManager:Landroid/os/PowerManager;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x1
+    invoke-direct {v8, v0}, Lcom/android/server/dreams/DreamManagerService;->stopDreamLocked(Z)V
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    const-string v2, "Entering dreamland."
 
-    move-result-object v13
+    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-wide/16 v3, 0x1f4
+    new-instance v1, Landroid/os/Binder;
 
-    invoke-virtual {v13, v3, v4}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
+    invoke-direct {v1}, Landroid/os/Binder;-><init>()V
 
-    invoke-direct {v8, v2}, Lcom/android/server/dreams/DreamManagerService;->stopDreamLocked(Z)V
+    move-object v13, v1
 
-    const-string v0, "Entering dreamland."
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v0, Landroid/os/Binder;
-
-    invoke-direct {v0}, Landroid/os/Binder;-><init>()V
-
-    move-object v14, v0
-
-    iput-object v14, v8, Lcom/android/server/dreams/DreamManagerService;->mCurrentDreamToken:Landroid/os/Binder;
+    iput-object v13, v8, Lcom/android/server/dreams/DreamManagerService;->mCurrentDreamToken:Landroid/os/Binder;
 
     iput-object v9, v8, Lcom/android/server/dreams/DreamManagerService;->mCurrentDreamName:Landroid/content/ComponentName;
 
@@ -1370,23 +1358,23 @@
 
     iput v12, v8, Lcom/android/server/dreams/DreamManagerService;->mCurrentDreamUserId:I
 
-    iget-object v0, v8, Lcom/android/server/dreams/DreamManagerService;->mPowerManager:Landroid/os/PowerManager;
+    iget-object v1, v8, Lcom/android/server/dreams/DreamManagerService;->mPowerManager:Landroid/os/PowerManager;
 
-    const-string/jumbo v1, "startDream"
+    const-string/jumbo v2, "startDream"
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    invoke-virtual {v1, v0, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
-    move-result-object v15
+    move-result-object v14
 
-    iget-object v7, v8, Lcom/android/server/dreams/DreamManagerService;->mHandler:Lcom/android/server/dreams/DreamManagerService$DreamHandler;
+    iget-object v15, v8, Lcom/android/server/dreams/DreamManagerService;->mHandler:Lcom/android/server/dreams/DreamManagerService$DreamHandler;
 
-    new-instance v6, Lcom/android/server/dreams/-$$Lambda$DreamManagerService$f7cEVKQvPKMm_Ir9dq0e6PSOkX8;
+    new-instance v7, Lcom/android/server/dreams/-$$Lambda$DreamManagerService$f7cEVKQvPKMm_Ir9dq0e6PSOkX8;
 
-    move-object v0, v6
+    move-object v0, v7
 
     move-object/from16 v1, p0
 
-    move-object v2, v14
+    move-object v2, v13
 
     move-object/from16 v3, p1
 
@@ -1394,21 +1382,19 @@
 
     move/from16 v5, p3
 
-    move-object v8, v6
-
     move/from16 v6, p4
 
-    move-object v9, v7
+    move-object v8, v7
 
-    move-object v7, v15
+    move-object v7, v14
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/dreams/-$$Lambda$DreamManagerService$f7cEVKQvPKMm_Ir9dq0e6PSOkX8;-><init>(Lcom/android/server/dreams/DreamManagerService;Landroid/os/Binder;Landroid/content/ComponentName;ZZILandroid/os/PowerManager$WakeLock;)V
 
-    invoke-virtual {v15, v8}, Landroid/os/PowerManager$WakeLock;->wrap(Ljava/lang/Runnable;)Ljava/lang/Runnable;
+    invoke-virtual {v14, v8}, Landroid/os/PowerManager$WakeLock;->wrap(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object v0
 
-    invoke-virtual {v9, v0}, Lcom/android/server/dreams/DreamManagerService$DreamHandler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v15, v0}, Lcom/android/server/dreams/DreamManagerService$DreamHandler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

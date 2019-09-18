@@ -13,7 +13,11 @@
 
 .field private static final MSG_START_LISTENING:I = 0x1
 
+.field private static final MSG_START_UPDATE_LOCATION:I = 0x4
+
 .field private static final MSG_STOP_LISTENING:I = 0x2
+
+.field private static final MSG_STOP_UPDATE_LOCATION:I = 0x3
 
 .field private static final TAG:Ljava/lang/String; = "TwilightService"
 
@@ -491,6 +495,28 @@
     return-void
 .end method
 
+.method private startUpdateLocationChange()V
+    .locals 3
+
+    const-string v0, "TwilightService"
+
+    const-string/jumbo v1, "startUpdateLocationChange"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/twilight/TwilightService;->mLocationManager:Landroid/location/LocationManager;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, p0, v1}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;)V
+
+    return-void
+.end method
+
 .method private stopListening()V
     .locals 3
 
@@ -531,6 +557,22 @@
     invoke-virtual {v0, p0}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
     iput-object v1, p0, Lcom/android/server/twilight/TwilightService;->mLastLocation:Landroid/location/Location;
+
+    return-void
+.end method
+
+.method private stopUpdateLocationChange()V
+    .locals 2
+
+    const-string v0, "TwilightService"
+
+    const-string/jumbo v1, "stopUpdateLocationChange"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/twilight/TwilightService;->mLocationManager:Landroid/location/LocationManager;
+
+    invoke-virtual {v0, p0}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
     return-void
 .end method
@@ -670,11 +712,19 @@
 
     const/4 v1, 0x1
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v1, :cond_6
 
     const/4 v2, 0x2
 
     const/4 v3, 0x0
+
+    if-eq v0, v2, :cond_4
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_2
+
+    const/4 v2, 0x4
 
     if-eq v0, v2, :cond_0
 
@@ -685,13 +735,11 @@
 
     if-eqz v0, :cond_1
 
-    iput-boolean v3, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
-
     iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mBootCompleted:Z
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/twilight/TwilightService;->stopListening()V
+    invoke-direct {p0}, Lcom/android/server/twilight/TwilightService;->startUpdateLocationChange()V
 
     :cond_1
     return v1
@@ -699,17 +747,47 @@
     :cond_2
     iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
 
-    if-nez v0, :cond_3
-
-    iput-boolean v1, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
+    if-eqz v0, :cond_3
 
     iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mBootCompleted:Z
 
     if-eqz v0, :cond_3
 
-    invoke-direct {p0}, Lcom/android/server/twilight/TwilightService;->startListening()V
+    invoke-direct {p0}, Lcom/android/server/twilight/TwilightService;->stopUpdateLocationChange()V
 
     :cond_3
+    return v1
+
+    :cond_4
+    iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
+
+    if-eqz v0, :cond_5
+
+    iput-boolean v3, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
+
+    iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mBootCompleted:Z
+
+    if-eqz v0, :cond_5
+
+    invoke-direct {p0}, Lcom/android/server/twilight/TwilightService;->stopListening()V
+
+    :cond_5
+    return v1
+
+    :cond_6
+    iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
+
+    if-nez v0, :cond_7
+
+    iput-boolean v1, p0, Lcom/android/server/twilight/TwilightService;->mHasListeners:Z
+
+    iget-boolean v0, p0, Lcom/android/server/twilight/TwilightService;->mBootCompleted:Z
+
+    if-eqz v0, :cond_7
+
+    invoke-direct {p0}, Lcom/android/server/twilight/TwilightService;->startListening()V
+
+    :cond_7
     return v1
 .end method
 

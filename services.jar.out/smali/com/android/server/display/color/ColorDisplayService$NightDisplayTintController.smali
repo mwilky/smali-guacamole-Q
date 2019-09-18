@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
@@ -150,7 +150,37 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/display/color/ColorDisplayService$NightDisplayAutoMode;->onActivated(Z)V
 
+    if-nez p1, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
+
+    const-class v1, Lcom/android/server/twilight/TwilightManager;
+
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2600(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/twilight/TwilightManager;
+
+    invoke-interface {v0}, Lcom/android/server/twilight/TwilightManager;->stopUpdateLocation()V
+
+    goto :goto_1
+
     :cond_1
+    iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
+
+    const-class v1, Lcom/android/server/twilight/TwilightManager;
+
+    invoke-static {v0, v1}, Lcom/android/server/display/color/ColorDisplayService;->access$2700(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/twilight/TwilightManager;
+
+    invoke-interface {v0}, Lcom/android/server/twilight/TwilightManager;->startUpdateLocation()V
+
+    :cond_2
+    :goto_1
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     iget-object v0, v0, Lcom/android/server/display/color/ColorDisplayService;->mDisplayWhiteBalanceTintController:Lcom/android/server/display/color/DisplayWhiteBalanceTintController;
@@ -165,16 +195,16 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
     invoke-virtual {v0}, Lcom/android/server/display/color/ColorDisplayService;->updateDisplayWhiteBalanceStatus()V
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 
-    invoke-static {v0, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$2602(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+    invoke-static {v0, p1}, Lcom/android/server/display/color/ColorDisplayService;->access$2802(Lcom/android/server/display/color/ColorDisplayService;Z)Z
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService$NightDisplayTintController;->this$0:Lcom/android/server/display/color/ColorDisplayService;
 

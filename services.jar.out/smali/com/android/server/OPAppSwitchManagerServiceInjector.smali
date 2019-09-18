@@ -49,6 +49,25 @@
     return v0
 .end method
 
+.method public static getOposAdsSettings(Landroid/content/Context;)Z
+    .locals 1
+
+    sget-object v0, Lcom/android/server/OPAppSwitchManagerServiceInjector;->opAppSwitchManagerServiceHelper:Lcom/android/server/IOPAppSwitchManagerService;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p0}, Lcom/android/server/IOPAppSwitchManagerService;->getOposAdsSettings(Landroid/content/Context;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public static handleActivityPaused(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
     .locals 2
 

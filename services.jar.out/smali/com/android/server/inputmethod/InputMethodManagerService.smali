@@ -684,6 +684,8 @@
 
     iput-object v5, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mImeSwitchPendingIntent:Landroid/app/PendingIntent;
 
+    iput-boolean v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mShowOngoingImeSwitcherForPhones:Z
+
     iput-boolean v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mNotificationShown:Z
 
     const/4 v0, 0x0
@@ -752,8 +754,6 @@
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mSwitchingController:Lcom/android/server/inputmethod/InputMethodSubtypeSwitchingController;
-    
-    invoke-virtual {p0}, Lcom/android/server/inputmethod/InputMethodManagerService;->getKeyboardSwitcher()V
 
     return-void
 .end method
@@ -12780,11 +12780,11 @@
 
     move-result v15
 
-    if-eqz v14, :cond_2
+    if-eqz v14, :cond_3
 
     iget-object v0, v14, Landroid/view/inputmethod/EditorInfo;->targetInputMethodUser:Landroid/os/UserHandle;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     iget-object v0, v14, Landroid/view/inputmethod/EditorInfo;->targetInputMethodUser:Landroid/os/UserHandle;
 
@@ -12792,7 +12792,7 @@
 
     move-result v0
 
-    if-eq v0, v15, :cond_2
+    if-eq v0, v15, :cond_3
 
     iget-object v0, v13, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
 
@@ -12808,13 +12808,33 @@
 
     move-result v0
 
+    invoke-static {v0}, Lcom/oneplus/android/os/OnePlusParallelAppUtils;->isParallelUser(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-nez v15, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, v14, Landroid/view/inputmethod/EditorInfo;->targetInputMethodUser:Landroid/os/UserHandle;
+
+    invoke-virtual {v0}, Landroid/os/UserHandle;->getIdentifier()I
+
+    move-result v0
+
+    :goto_0
     iget-object v1, v13, Lcom/android/server/inputmethod/InputMethodManagerService;->mUserManagerInternal:Landroid/os/UserManagerInternal;
 
     invoke-virtual {v1, v0}, Landroid/os/UserManagerInternal;->isUserRunning(I)Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -12842,12 +12862,12 @@
 
     return-object v1
 
-    :cond_1
+    :cond_2
     move/from16 v16, v0
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -12862,24 +12882,24 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     const/16 v0, 0x3e7
 
-    if-ne v15, v0, :cond_3
+    if-ne v15, v0, :cond_4
 
     const/4 v0, 0x0
 
     move/from16 v16, v0
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
+    :cond_4
     move v0, v15
 
     move/from16 v16, v0
 
-    :goto_0
+    :goto_1
     iget-object v12, v13, Lcom/android/server/inputmethod/InputMethodManagerService;->mMethodMap:Landroid/util/ArrayMap;
 
     monitor-enter v12
@@ -12935,7 +12955,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -12979,7 +12999,7 @@
 
     return-object v1
 
-    :cond_4
+    :cond_5
     return-object v0
 
     :catchall_0
@@ -12997,7 +13017,7 @@
 
     move-object/from16 v19, v12
 
-    :goto_1
+    :goto_2
     monitor-exit v19
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
@@ -13007,7 +13027,7 @@
     :catchall_2
     move-exception v0
 
-    goto :goto_1
+    goto :goto_2
 .end method
 
 .method startInputUncheckedLocked(Lcom/android/server/inputmethod/InputMethodManagerService$ClientState;Lcom/android/internal/view/IInputContext;ILandroid/view/inputmethod/EditorInfo;II)Lcom/android/internal/view/InputBindResult;
@@ -13670,6 +13690,16 @@
 
     invoke-direct {p0, v3, v4}, Lcom/android/server/inputmethod/InputMethodManagerService;->updateSystemUiLocked(II)V
 
+    iget-object v3, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mRes:Landroid/content/res/Resources;
+
+    const v4, 0x1110126
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result v3
+
+    iput-boolean v3, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mShowOngoingImeSwitcherForPhones:Z
+
     iget-boolean v3, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mShowOngoingImeSwitcherForPhones:Z
 
     if-eqz v3, :cond_2
@@ -14209,38 +14239,5 @@
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    return-void
-.end method
-
-.method public getKeyboardSwitcher()V
-    .locals 3
-
-    .prologue
-    iget-object v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mContext:Landroid/content/Context;
-    
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-    
-    const-string/jumbo v1, "tweaks_hide_keyboard_switcher"
-    
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-    
-    if-eqz v0, :cond_show
-    
-    const/4 v0, 0x0
-    
-    goto :goto_jump
-       
-    :cond_show
-    const/4 v0, 0x1
-
-    :goto_jump
-    iput-boolean v0, p0, Lcom/android/server/inputmethod/InputMethodManagerService;->mShowOngoingImeSwitcherForPhones:Z
-   
     return-void
 .end method

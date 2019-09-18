@@ -17,3 +17,6 @@
 # virtual methods
 .method public abstract onAnimationEnd()V
 .end method
+
+.method public abstract setDimmingSpeed(II)V
+.end method

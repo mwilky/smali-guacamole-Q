@@ -7125,7 +7125,7 @@
     return v1
 
     :cond_0
-    const v1, 0x11100a1
+    const v1, 0x11100a2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

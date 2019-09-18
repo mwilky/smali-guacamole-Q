@@ -687,68 +687,6 @@
     return v1
 .end method
 
-.method private isInterestingForBackgroundTraces()Z
-    .locals 3
-
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->pid:I
-
-    sget v1, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
-
-    const/4 v2, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    return v2
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->isInterestingTopLocked()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    const-string v1, "com.android.systemui"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    :cond_1
-    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->hasTopUi()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->hasOverlayUi()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v2, 0x0
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    nop
-
-    :goto_1
-    return v2
-.end method
-
 .method private makeAppNotRespondingLocked(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
 
@@ -4599,6 +4537,68 @@
     return v0
 .end method
 
+.method protected isInterestingForBackgroundTraces()Z
+    .locals 3
+
+    iget v0, p0, Lcom/android/server/am/ProcessRecord;->pid:I
+
+    sget v1, Lcom/android/server/am/ActivityManagerService;->MY_PID:I
+
+    const/4 v2, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    return v2
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->isInterestingTopLocked()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    const-string v1, "com.android.systemui"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->hasTopUi()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->hasOverlayUi()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v2, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    nop
+
+    :goto_1
+    return v2
+.end method
+
 .method public isInterestingToUserLocked()Z
     .locals 5
 
@@ -4723,7 +4723,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/am/ProcessRecord;->isInterestingForBackgroundTraces()Z
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->isInterestingForBackgroundTraces()Z
 
     move-result v0
 

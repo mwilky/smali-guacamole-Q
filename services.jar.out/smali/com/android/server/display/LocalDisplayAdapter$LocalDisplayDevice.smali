@@ -1232,7 +1232,7 @@
 
     iput v7, v6, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
-    const v6, 0x1110097
+    const v6, 0x1110098
 
     invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1262,7 +1262,7 @@
     iput v6, v4, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
     :cond_4
-    const v4, 0x1110098
+    const v4, 0x1110099
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1500,7 +1500,7 @@
     iput v5, v4, Lcom/android/server/display/DisplayDeviceInfo;->flags:I
 
     :cond_b
-    const v4, 0x1110093
+    const v4, 0x1110094
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 

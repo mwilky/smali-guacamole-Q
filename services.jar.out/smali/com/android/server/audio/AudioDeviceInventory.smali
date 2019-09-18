@@ -2817,11 +2817,17 @@
     :cond_6
     invoke-static {v0}, Lcom/android/server/audio/BtHelper;->getName(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v8
 
-    const-string/jumbo v8, "onSetA2dpSinkConnectionState"
+    const-string/jumbo v10, "onSetA2dpSinkConnectionState"
 
-    invoke-direct {p0, v2, v6, v8, v3}, Lcom/android/server/audio/AudioDeviceInventory;->makeA2dpDeviceAvailable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {p0, v2, v8, v10, v3}, Lcom/android/server/audio/AudioDeviceInventory;->makeA2dpDeviceAvailable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+
+    iget-object v8, p0, Lcom/android/server/audio/AudioDeviceInventory;->mDeviceBroker:Lcom/android/server/audio/AudioDeviceBroker;
+
+    iget-object v10, p0, Lcom/android/server/audio/AudioDeviceInventory;->mDockAddress:Ljava/lang/String;
+
+    invoke-virtual {v8, v6, v10}, Lcom/android/server/audio/AudioDeviceBroker;->checkMusicActive(ILjava/lang/String;)V
 
     :cond_7
     :goto_2

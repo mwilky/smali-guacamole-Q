@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$18;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$10700(Lcom/android/server/notification/NotificationManagerService;)I
+    invoke-static {v0}, Lcom/android/server/notification/NotificationManagerService;->access$10800(Lcom/android/server/notification/NotificationManagerService;)I
 
     move-result v0
 
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lcom/android/server/notification/NotificationManagerService;->access$10800(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/android/server/notification/NotificationManagerService;->access$10900(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -74,7 +74,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$18;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    invoke-static {v0, p1}, Lcom/android/server/notification/NotificationManagerService;->access$10702(Lcom/android/server/notification/NotificationManagerService;I)I
+    invoke-static {v0, p1}, Lcom/android/server/notification/NotificationManagerService;->access$10802(Lcom/android/server/notification/NotificationManagerService;I)I
 
     return-void
 .end method

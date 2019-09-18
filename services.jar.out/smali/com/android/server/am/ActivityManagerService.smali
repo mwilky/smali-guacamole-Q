@@ -88,7 +88,7 @@
 
 .field static final DISPATCH_UIDS_CHANGED_UI_MSG:I = 0x35
 
-.field static final DROPBOX_MAX_SIZE:I = 0x30000
+.field static final DROPBOX_MAX_SIZE:I = 0x60000
 
 .field static final DUMP_MEM_BUCKETS:[J
 
@@ -28113,7 +28113,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService;->mUserController:Lcom/android/server/am/UserController;
 
-    const v4, 0x111009a
+    const v4, 0x111009b
 
     invoke-virtual {v10, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -61970,7 +61970,7 @@
 .end method
 
 .method public final publishContentProviders(Landroid/app/IApplicationThread;Ljava/util/List;)V
-    .locals 18
+    .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -61985,11 +61985,34 @@
 
     move-object/from16 v2, p2
 
-    if-nez v2, :cond_0
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "publishContentProviders: "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "ActivityManager"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    if-nez v2, :cond_1
 
     return-void
 
-    :cond_0
+    :cond_1
     const-string/jumbo v0, "publishContentProviders"
 
     invoke-direct {v1, v0}, Lcom/android/server/am/ActivityManagerService;->enforceNotIsolatedCaller(Ljava/lang/String;)V
@@ -62005,9 +62028,46 @@
 
     move-object v3, v0
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_2
+
+    if-eqz v3, :cond_2
+
+    const-string v0, "android.process.media"
+
+    iget-object v4, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "ActivityManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "ProcessRecord uid = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v5, v3, Lcom/android/server/am/ProcessRecord;->uid:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
     sget-boolean v0, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_MU:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     const-string v0, "ActivityManager_MU"
 
@@ -62029,8 +62089,8 @@
 
     invoke-static {v0, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
-    if-eqz v3, :cond_a
+    :cond_3
+    if-eqz v3, :cond_13
 
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
@@ -62042,12 +62102,45 @@
 
     move v6, v0
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "android.process.media"
+
+    iget-object v7, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const-string v0, "ActivityManager"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "N: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v0, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
     const/4 v0, 0x0
 
     move v7, v0
 
     :goto_0
-    if-ge v7, v6, :cond_9
+    if-ge v7, v6, :cond_12
 
     invoke-interface {v2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -62057,19 +62150,56 @@
 
     move-object v8, v0
 
-    if-eqz v8, :cond_8
+    if-eqz v8, :cond_11
 
     iget-object v0, v8, Landroid/app/ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_11
 
     iget-object v0, v8, Landroid/app/ContentProviderHolder;->provider:Landroid/content/IContentProvider;
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_5
 
     goto/16 :goto_3
 
-    :cond_2
+    :cond_5
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_6
+
+    const-string v0, "android.process.media"
+
+    iget-object v9, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const-string v0, "ActivityManager"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v10, "src.info.name: "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v10, v8, Landroid/app/ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
+
+    iget-object v10, v10, Landroid/content/pm/ProviderInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v0, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_6
     iget-object v0, v3, Lcom/android/server/am/ProcessRecord;->pubProviders:Landroid/util/ArrayMap;
 
     iget-object v9, v8, Landroid/app/ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
@@ -62084,11 +62214,48 @@
 
     move-object v9, v0
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_7
+
+    if-eqz v9, :cond_7
+
+    const-string v0, "android.process.media"
+
+    iget-object v10, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const-string v0, "ActivityManager"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "ContentProviderRecord uid = "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v11, v9, Lcom/android/server/am/ContentProviderRecord;->uid:I
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v0, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
     sget-boolean v0, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_MU:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_8
 
-    if-eqz v9, :cond_3
+    if-eqz v9, :cond_8
 
     const-string v0, "ActivityManager_MU"
 
@@ -62110,8 +62277,8 @@
 
     invoke-static {v0, v10}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
-    if-eqz v9, :cond_8
+    :cond_8
+    if-eqz v9, :cond_11
 
     new-instance v0, Landroid/content/ComponentName;
 
@@ -62127,6 +62294,39 @@
 
     move-object v10, v0
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_9
+
+    const-string v0, "android.process.media"
+
+    iget-object v11, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    const-string v0, "ActivityManager"
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "comp: "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v0, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_9
     iget-object v0, v1, Lcom/android/server/am/ActivityManagerService;->mProviderMap:Lcom/android/server/am/ProviderMap;
 
     invoke-virtual {v0, v10, v9}, Lcom/android/server/am/ProviderMap;->putProviderByClass(Landroid/content/ComponentName;Lcom/android/server/am/ContentProviderRecord;)V
@@ -62143,12 +62343,45 @@
 
     move-object v11, v0
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_a
+
+    const-string v0, "android.process.media"
+
+    iget-object v12, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    const-string v0, "ActivityManager"
+
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v13, "names: "
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v0, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_a
     const/4 v0, 0x0
 
     :goto_1
     array-length v12, v11
 
-    if-ge v0, v12, :cond_4
+    if-ge v0, v12, :cond_b
 
     iget-object v12, v1, Lcom/android/server/am/ActivityManagerService;->mProviderMap:Lcom/android/server/am/ProviderMap;
 
@@ -62160,7 +62393,7 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_b
     iget-object v0, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -62176,62 +62409,132 @@
     move v12, v0
 
     :goto_2
+    if-ge v13, v12, :cond_e
+
+    sget-boolean v15, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v15, :cond_c
+
+    const-string v15, "android.process.media"
+
+    iget-object v0, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v15, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    const-string v0, "ActivityManager"
+
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "dst: "
+
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mLaunchingProviders.get(j): "
+
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_c
+    iget-object v0, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v9, :cond_d
+
+    iget-object v0, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v13}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
     const/4 v0, 0x1
-
-    if-ge v13, v12, :cond_6
-
-    iget-object v15, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
-
-    invoke-virtual {v15, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v15
-
-    if-ne v15, v9, :cond_5
-
-    iget-object v15, v1, Lcom/android/server/am/ActivityManagerService;->mLaunchingProviders:Ljava/util/ArrayList;
-
-    invoke-virtual {v15, v13}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    const/4 v14, 0x1
 
     add-int/lit8 v13, v13, -0x1
 
     add-int/lit8 v12, v12, -0x1
 
-    :cond_5
+    move v14, v0
+
+    :cond_d
+    const/4 v0, 0x1
+
     add-int/2addr v13, v0
+
+    move-object/from16 v2, p2
 
     goto :goto_2
 
-    :cond_6
-    if-eqz v14, :cond_7
+    :cond_e
+    if-eqz v14, :cond_10
 
-    iget-object v15, v1, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    const/16 v0, 0x39
+    if-eqz v0, :cond_f
 
-    invoke-virtual {v15, v0, v3}, Lcom/android/server/am/ActivityManagerService$MainHandler;->removeMessages(ILjava/lang/Object;)V
+    const-string v0, "android.process.media"
 
-    :cond_7
+    iget-object v2, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    const-string v0, "ActivityManager"
+
+    const-string v2, "Remove CONTENT_PROVIDER_PUBLISH_TIMEOUT_MSG"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_f
+    iget-object v0, v1, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
+
+    const/16 v2, 0x39
+
+    invoke-virtual {v0, v2, v3}, Lcom/android/server/am/ActivityManagerService$MainHandler;->removeMessages(ILjava/lang/Object;)V
+
+    :cond_10
     iget-object v0, v9, Lcom/android/server/am/ContentProviderRecord;->info:Landroid/content/pm/ProviderInfo;
 
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    iget-object v15, v9, Lcom/android/server/am/ContentProviderRecord;->info:Landroid/content/pm/ProviderInfo;
+    iget-object v2, v9, Lcom/android/server/am/ContentProviderRecord;->info:Landroid/content/pm/ProviderInfo;
 
-    iget-object v15, v15, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v2, v2, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    move-object/from16 v16, v10
+    move-object v15, v10
 
-    move-object/from16 v17, v11
+    move-object/from16 v16, v11
 
-    iget-wide v10, v15, Landroid/content/pm/ApplicationInfo;->longVersionCode:J
+    iget-wide v10, v2, Landroid/content/pm/ApplicationInfo;->longVersionCode:J
 
-    iget-object v15, v1, Lcom/android/server/am/ActivityManagerService;->mProcessStats:Lcom/android/server/am/ProcessStatsService;
+    iget-object v2, v1, Lcom/android/server/am/ActivityManagerService;->mProcessStats:Lcom/android/server/am/ProcessStatsService;
 
-    invoke-virtual {v3, v0, v10, v11, v15}, Lcom/android/server/am/ProcessRecord;->addPackage(Ljava/lang/String;JLcom/android/server/am/ProcessStatsService;)Z
+    invoke-virtual {v3, v0, v10, v11, v2}, Lcom/android/server/am/ProcessRecord;->addPackage(Ljava/lang/String;JLcom/android/server/am/ProcessStatsService;)Z
 
     monitor-enter v9
     :try_end_0
@@ -62253,19 +62556,19 @@
     :try_start_2
     const-string/jumbo v0, "updateOomAdj_getProvider"
 
-    const/4 v10, 0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {v1, v3, v10, v0}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjLocked(Lcom/android/server/am/ProcessRecord;ZLjava/lang/String;)Z
+    invoke-virtual {v1, v3, v2, v0}, Lcom/android/server/am/ActivityManagerService;->updateOomAdjLocked(Lcom/android/server/am/ProcessRecord;ZLjava/lang/String;)Z
 
     iget-object v0, v8, Landroid/app/ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
 
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
 
-    iget-object v10, v8, Landroid/app/ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
+    iget-object v2, v8, Landroid/app/ContentProviderHolder;->info:Landroid/content/pm/ProviderInfo;
 
-    iget-object v10, v10, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+    iget-object v2, v2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    invoke-direct {v1, v3, v0, v10}, Lcom/android/server/am/ActivityManagerService;->maybeUpdateProviderUsageStatsLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v0, v2}, Lcom/android/server/am/ActivityManagerService;->maybeUpdateProviderUsageStatsLocked(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -62282,13 +62585,15 @@
     :try_start_4
     throw v0
 
-    :cond_8
+    :cond_11
     :goto_3
     add-int/lit8 v7, v7, 0x1
 
+    move-object/from16 v2, p2
+
     goto/16 :goto_0
 
-    :cond_9
+    :cond_12
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     monitor-exit p0
@@ -62299,51 +62604,51 @@
 
     return-void
 
-    :cond_a
+    :cond_13
     :try_start_5
     new-instance v0, Ljava/lang/SecurityException;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Unable to find app for caller "
+    const-string v4, "Unable to find app for caller "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    move-object/from16 v5, p1
+    move-object/from16 v4, p1
 
     :try_start_6
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v6, " (pid="
+    const-string v5, " (pid="
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v6, ") when publishing content providers"
+    const-string v5, ") when publishing content providers"
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-direct {v0, v4}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
     :catchall_1
     move-exception v0
 
-    move-object/from16 v5, p1
+    move-object/from16 v4, p1
 
     :goto_4
     monitor-exit p0

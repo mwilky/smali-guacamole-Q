@@ -8,10 +8,31 @@
 
 .field private static final TAG:Ljava/lang/String;
 
+.field private static final sMayChangeShareUidPackageList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static sSharedUsers:Landroid/util/ArrayMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/String;",
+            "Lcom/android/server/pm/SharedUserSetting;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -24,6 +45,30 @@
     move-result-object v0
 
     sput-object v0, Lcom/android/server/pm/OpSettingsInjector;->TAG:Ljava/lang/String;
+
+    new-instance v0, Landroid/util/ArrayMap;
+
+    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
+
+    sput-object v0, Lcom/android/server/pm/OpSettingsInjector;->sSharedUsers:Landroid/util/ArrayMap;
+
+    const-string v0, "com.qualcomm.qti.dynamicddsservice"
+
+    const-string v1, "com.qualcomm.qti.ims"
+
+    const-string v2, "com.qti.confuridialer"
+
+    const-string/jumbo v3, "net.oneplus.widget"
+
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/pm/OpSettingsInjector;->sMayChangeShareUidPackageList:Ljava/util/List;
 
     return-void
 .end method
@@ -50,19 +95,49 @@
         }
     .end annotation
 
+    if-eqz p1, :cond_5
+
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
-
-    const-string v1, "com.qualcomm.qti.dynamicddsservice"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
 
     if-nez v0, :cond_0
 
-    return-void
+    goto/16 :goto_1
 
     :cond_0
+    const/16 v0, 0x1e8
+
+    const-string v1, "enable.change.shareuid"
+
+    invoke-static {v0, v1}, Lcom/android/server/pm/OpCompatibilityInjector;->isInConfigList(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p1, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/android/server/pm/OpCompatibilityInjector;->isInConfigList(ILjava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return-void
+
+    :cond_1
+    sget-object v0, Lcom/android/server/pm/OpSettingsInjector;->sMayChangeShareUidPackageList:Ljava/util/List;
+
+    iget-object v1, p1, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return-void
+
+    :cond_2
     iget-object v0, p1, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -71,21 +146,17 @@
 
     check-cast v0, Lcom/android/server/pm/PackageSetting;
 
-    if-eqz v0, :cond_1
-
-    iget-object v1, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_4
 
     iget-object v1, v0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_4
 
     iget-object v1, v0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
     iget-object v2, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
-    if-eq v1, v2, :cond_1
+    if-eq v1, v2, :cond_4
 
     const/4 v1, 0x6
 
@@ -107,6 +178,16 @@
 
     iget-object v3, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
+    if-nez v3, :cond_3
+
+    const-string/jumbo v3, "null"
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v3, p1, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
+
+    :goto_0
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v3, " but is now "
@@ -131,92 +212,55 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/SharedUserSetting;->removePackage(Lcom/android/server/pm/PackageSetting;)Z
 
-    :cond_1
+    sget-object v1, Lcom/android/server/pm/OpSettingsInjector;->sSharedUsers:Landroid/util/ArrayMap;
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, v0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
+
+    iget-object v1, v1, Lcom/android/server/pm/SharedUserSetting;->name:Ljava/lang/String;
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, v0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
+
+    iget-object v1, v1, Lcom/android/server/pm/SharedUserSetting;->packages:Landroid/util/ArraySet;
+
+    invoke-virtual {v1}, Landroid/util/ArraySet;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    sget-object v1, Lcom/android/server/pm/OpSettingsInjector;->sSharedUsers:Landroid/util/ArrayMap;
+
+    iget-object v2, v0, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
+
+    iget-object v2, v2, Lcom/android/server/pm/SharedUserSetting;->name:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    return-void
+
+    :cond_5
+    :goto_1
     return-void
 .end method
 
-.method static shouldPruneSharedUserPackages(Ljava/lang/String;Landroid/util/ArrayMap;Lcom/android/server/pm/SharedUserSetting;)Z
-    .locals 4
+.method static setShareUsers(Landroid/util/ArrayMap;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/lang/String;",
             "Landroid/util/ArrayMap<",
             "Ljava/lang/String;",
-            "Lcom/android/server/pm/PackageSetting;",
-            ">;",
             "Lcom/android/server/pm/SharedUserSetting;",
-            ")Z"
+            ">;)V"
         }
     .end annotation
 
-    const-string v0, "com.qualcomm.qti.ims"
+    sput-object p0, Lcom/android/server/pm/OpSettingsInjector;->sSharedUsers:Landroid/util/ArrayMap;
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "com.qti.confuridialer"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-virtual {p1, p0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/android/server/pm/PackageSetting;
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    iget v2, p2, Lcom/android/server/pm/SharedUserSetting;->userId:I
-
-    invoke-virtual {v0}, Lcom/android/server/pm/PackageSetting;->getSharedUserId()I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_3
-
-    sget-boolean v1, Lcom/android/server/pm/OpSettingsInjector;->DEBUG:Z
-
-    if-eqz v1, :cond_2
-
-    sget-object v1, Lcom/android/server/pm/OpSettingsInjector;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "call OpReserveAppInjector.shouldPruneSharedUsersPackage(), pkgName:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    const/4 v1, 0x1
-
-    return v1
-
-    :cond_3
-    return v1
+    return-void
 .end method

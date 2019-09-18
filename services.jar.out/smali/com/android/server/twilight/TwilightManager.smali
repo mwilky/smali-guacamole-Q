@@ -10,5 +10,11 @@
 .method public abstract registerListener(Lcom/android/server/twilight/TwilightListener;Landroid/os/Handler;)V
 .end method
 
+.method public abstract startUpdateLocation()V
+.end method
+
+.method public abstract stopUpdateLocation()V
+.end method
+
 .method public abstract unregisterListener(Lcom/android/server/twilight/TwilightListener;)V
 .end method

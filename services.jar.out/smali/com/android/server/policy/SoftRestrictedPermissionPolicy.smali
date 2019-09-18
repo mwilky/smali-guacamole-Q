@@ -31,7 +31,7 @@
 .end method
 
 .method public static forPermission(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Landroid/os/UserHandle;Ljava/lang/String;)Lcom/android/server/policy/SoftRestrictedPermissionPolicy;
-    .locals 16
+    .locals 21
 
     move-object/from16 v1, p1
 
@@ -44,8 +44,6 @@
     move-result v0
 
     const v4, -0x1833add0
-
-    const/4 v5, 0x0
 
     const/4 v6, 0x1
 
@@ -80,7 +78,7 @@
 
     if-eqz v0, :cond_0
 
-    move v0, v5
+    const/4 v0, 0x0
 
     goto :goto_1
 
@@ -88,7 +86,21 @@
     const/4 v0, -0x1
 
     :goto_1
-    if-eqz v0, :cond_6
+    const/4 v4, 0x6
+
+    const-string v7, " Callers="
+
+    const-string v8, " targetSDK="
+
+    const-string v9, " isWhiteListed="
+
+    const-string v10, " package="
+
+    const-string v11, "PermissionPolicyService"
+
+    const-string/jumbo v12, "null"
+
+    if-eqz v0, :cond_9
 
     if-eq v0, v6, :cond_3
 
@@ -103,79 +115,147 @@
 
     move-result-object v0
 
-    iget-object v4, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v13, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v4, v2}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
+    invoke-virtual {v0, v3, v13, v2}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
 
     move-result v0
 
-    and-int/lit16 v4, v0, 0x3800
+    and-int/lit16 v13, v0, 0x3800
 
-    if-eqz v4, :cond_4
+    if-eqz v13, :cond_4
 
     move v5, v6
 
-    :cond_4
-    move v4, v5
+    goto :goto_2
 
+    :cond_4
+    const/4 v5, 0x0
+
+    :goto_2
     invoke-static/range {p0 .. p2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->getMinimumTargetSDK(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Landroid/os/UserHandle;)I
 
     move-result v0
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_5
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     const/4 v0, 0x0
 
-    :goto_2
-    new-instance v5, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;
-
-    invoke-direct {v5, v4, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;-><init>(ZI)V
-
-    return-object v5
-
-    :cond_6
-    if-eqz v1, :cond_c
-
-    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v4
-
-    iget-object v0, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v4, v3, v0, v2}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
-
-    move-result v7
-
-    and-int/lit16 v0, v7, 0x4000
-
-    if-eqz v0, :cond_7
-
-    move v0, v6
-
-    goto :goto_3
-
-    :cond_7
-    move v0, v5
-
     :goto_3
-    move v8, v0
+    sget-boolean v6, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    and-int/lit16 v0, v7, 0x3800
+    if-eqz v6, :cond_8
 
-    if-eqz v0, :cond_8
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v13, "[WRITE_EXTERNAL_STORAGE] user="
+
+    invoke-virtual {v6, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-nez v2, :cond_6
+
+    move-object v13, v12
 
     goto :goto_4
 
-    :cond_8
-    move v6, v5
+    :cond_6
+    invoke-virtual/range {p2 .. p2}, Landroid/os/UserHandle;->getIdentifier()I
+
+    move-result v13
+
+    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v13
 
     :goto_4
+    invoke-virtual {v6, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-nez v1, :cond_7
+
+    goto :goto_5
+
+    :cond_7
+    iget-object v12, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    :goto_5
+    invoke-virtual {v6, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v4}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v11, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8
+    new-instance v4, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;
+
+    invoke-direct {v4, v5, v0}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$3;-><init>(ZI)V
+
+    return-object v4
+
+    :cond_9
+    if-eqz v1, :cond_f
+
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v13
+
+    iget-object v0, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v13, v3, v0, v2}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
+
+    move-result v14
+
+    and-int/lit16 v0, v14, 0x4000
+
+    if-eqz v0, :cond_a
+
+    move v0, v6
+
+    goto :goto_6
+
+    :cond_a
+    const/4 v0, 0x0
+
+    :goto_6
+    move v15, v0
+
+    and-int/lit16 v0, v14, 0x3800
+
+    if-eqz v0, :cond_b
+
+    goto :goto_7
+
+    :cond_b
+    const/4 v6, 0x0
+
+    :goto_7
     invoke-static/range {p0 .. p2}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy;->getMinimumTargetSDK(Landroid/content/Context;Landroid/content/pm/ApplicationInfo;Landroid/os/UserHandle;)I
 
-    move-result v9
+    move-result v16
 
     nop
 
@@ -183,35 +263,41 @@
 
     move-result v0
 
-    iget v10, v1, Landroid/content/pm/ApplicationInfo;->uid:I
+    iget v4, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v4, v10}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+    invoke-virtual {v13, v4}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v4
 
-    if-eqz v10, :cond_a
+    if-eqz v4, :cond_e
 
-    array-length v11, v10
+    array-length v5, v4
 
-    move v13, v0
+    move/from16 v18, v0
 
-    move v12, v5
+    const/4 v3, 0x0
 
-    :goto_5
-    if-ge v12, v11, :cond_b
+    :goto_8
+    if-ge v3, v5, :cond_d
 
-    aget-object v14, v10, v12
+    move/from16 v19, v5
+
+    aget-object v5, v4, v3
 
     iget-object v0, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v14, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_c
+
+    move-object/from16 v20, v4
+
+    const/4 v4, 0x0
 
     :try_start_0
-    invoke-virtual {v4, v14, v5, v2}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/pm/ApplicationInfo;
+    invoke-virtual {v13, v5, v4, v2}, Landroid/content/pm/PackageManager;->getApplicationInfoAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
     :try_end_0
@@ -223,48 +309,148 @@
 
     invoke-virtual {v0}, Landroid/content/pm/ApplicationInfo;->hasRequestedLegacyExternalStorage()Z
 
-    move-result v15
+    move-result v17
 
-    or-int/2addr v13, v15
+    or-int v18, v18, v17
 
-    goto :goto_6
+    goto :goto_9
 
     :catch_0
     move-exception v0
 
-    move-object v15, v0
+    move-object/from16 v17, v0
 
-    move-object v0, v15
+    move-object/from16 v0, v17
 
-    :cond_9
-    :goto_6
-    add-int/lit8 v12, v12, 0x1
-
-    goto :goto_5
-
-    :cond_a
-    move v13, v0
-
-    :cond_b
-    move v0, v13
-
-    goto :goto_7
+    goto :goto_9
 
     :cond_c
-    const/4 v7, 0x0
+    move-object/from16 v20, v4
 
-    const/4 v8, 0x0
+    const/4 v4, 0x0
+
+    :goto_9
+    add-int/lit8 v3, v3, 0x1
+
+    move/from16 v5, v19
+
+    move-object/from16 v4, v20
+
+    goto :goto_8
+
+    :cond_d
+    move-object/from16 v20, v4
+
+    move/from16 v0, v18
+
+    goto :goto_a
+
+    :cond_e
+    move-object/from16 v20, v4
+
+    :goto_a
+    nop
+
+    move/from16 v3, v16
+
+    goto :goto_b
+
+    :cond_f
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
 
     const/4 v6, 0x0
 
     const/4 v0, 0x0
 
-    const/4 v9, 0x0
+    const/16 v16, 0x0
 
-    :goto_7
+    move/from16 v3, v16
+
+    :goto_b
+    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v4, :cond_12
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "[READ_EXTERNAL_STORAGE] user="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-nez v2, :cond_10
+
+    move-object v5, v12
+
+    goto :goto_c
+
+    :cond_10
+    invoke-virtual/range {p2 .. p2}, Landroid/os/UserHandle;->getIdentifier()I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    :goto_c
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    if-nez v1, :cond_11
+
+    goto :goto_d
+
+    :cond_11
+    iget-object v12, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    :goto_d
+    invoke-virtual {v4, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " applyRestriction="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v15}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, " requestedLegacyExternalStorage="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v5, 0x6
+
+    invoke-static {v5}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v11, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_12
     new-instance v4, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;
 
-    invoke-direct {v4, v8, v0, v6, v9}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;-><init>(ZZZI)V
+    invoke-direct {v4, v15, v0, v6, v3}, Lcom/android/server/policy/SoftRestrictedPermissionPolicy$2;-><init>(ZZZI)V
 
     return-object v4
 .end method

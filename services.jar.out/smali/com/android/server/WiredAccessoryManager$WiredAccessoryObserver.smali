@@ -68,7 +68,7 @@
 
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
-    invoke-static {v1}, Lcom/android/server/WiredAccessoryManager;->access$500(Lcom/android/server/WiredAccessoryManager;)Z
+    invoke-static {v1}, Lcom/android/server/WiredAccessoryManager;->access$600(Lcom/android/server/WiredAccessoryManager;)Z
 
     move-result v1
 
@@ -214,7 +214,7 @@
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_2
-    invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$600()[Ljava/lang/String;
+    invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$500()[Ljava/lang/String;
 
     move-result-object v2
 
@@ -417,7 +417,7 @@
 
 # virtual methods
 .method init()V
-    .locals 11
+    .locals 12
 
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
@@ -451,7 +451,7 @@
 
     move-result v5
 
-    if-ge v4, v5, :cond_1
+    if-ge v4, v5, :cond_2
 
     iget-object v5, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
@@ -490,8 +490,61 @@
 
     move-result v8
 
-    if-lez v8, :cond_0
+    if-lez v8, :cond_1
 
+    invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$500()[Ljava/lang/String;
+
+    move-result-object v9
+
+    const/4 v10, 0x1
+
+    aget-object v9, v9, v10
+
+    invoke-virtual {v5}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getDevName()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_0
+
+    invoke-virtual {v5}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getDevPath()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string/jumbo v10, "soc:qcom,msm-ext-disp"
+
+    invoke-direct {p0, v9, v10, v8}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->updateStateLocked(Ljava/lang/String;Ljava/lang/String;I)V
+
+    invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getDevName()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v11, " Dev name change to soc:qcom,msm-ext-disp in init"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v9, v10}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_0
     invoke-virtual {v5}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getDevPath()Ljava/lang/String;
 
     move-result-object v9
@@ -506,8 +559,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_0
-    goto :goto_1
+    :cond_1
+    :goto_1
+    goto :goto_2
 
     :catch_0
     move-exception v6
@@ -537,7 +591,7 @@
 
     invoke-static {v7, v8, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_1
+    goto :goto_2
 
     :catch_1
     move-exception v6
@@ -568,26 +622,26 @@
 
     nop
 
-    :goto_1
+    :goto_2
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_1
+    :cond_2
     monitor-exit v0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     const/4 v0, 0x0
 
-    :goto_2
+    :goto_3
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-ge v0, v1, :cond_2
+    if-ge v0, v1, :cond_3
 
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
@@ -619,9 +673,9 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_2
+    :cond_3
     return-void
 
     :catchall_0

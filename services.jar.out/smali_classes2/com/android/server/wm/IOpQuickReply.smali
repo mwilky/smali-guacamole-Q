@@ -81,9 +81,6 @@
 .method public abstract setDisplayFrames(Lcom/android/server/wm/DisplayFrames;)V
 .end method
 
-.method public abstract setIMEPackageList(Lorg/json/JSONObject;)V
-.end method
-
 .method public abstract setKeyguardDone(Z)V
 .end method
 

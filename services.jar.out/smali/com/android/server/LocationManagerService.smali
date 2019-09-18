@@ -4254,7 +4254,7 @@
 
     iget-object v10, v0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
 
-    const v13, 0x1110076
+    const v13, 0x1110077
 
     const v14, 0x1040199
 
@@ -4294,7 +4294,7 @@
 
     iget-object v12, v0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
 
-    const v15, 0x111006e
+    const v15, 0x111006f
 
     const v16, 0x104017f
 
@@ -4334,7 +4334,7 @@
     :goto_1
     iget-object v12, v0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
 
-    const v13, 0x111006f
+    const v13, 0x1110070
 
     const v14, 0x1040180
 
@@ -4355,7 +4355,7 @@
     :cond_4
     iget-object v12, v0, Lcom/android/server/LocationManagerService;->mContext:Landroid/content/Context;
 
-    const v13, 0x1110070
+    const v13, 0x1110071
 
     const v14, 0x1040181
 

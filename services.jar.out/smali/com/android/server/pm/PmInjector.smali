@@ -75,7 +75,7 @@
 
     const-string v0, "com.oppo.market"
 
-    const-string v1, "com.haytap.quicksearchbox"
+    const-string v1, "com.heytap.quicksearchbox"
 
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
@@ -1756,59 +1756,66 @@
 .end method
 
 .method public static isPkgNeedToBeHandleThemeAndOpSdk(Landroid/content/Context;Lcom/android/server/pm/PackageManagerService$OriginInfo;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
+    const/4 v1, 0x0
+
     :try_start_0
-    iget-object v1, p1, Lcom/android/server/pm/PackageManagerService$OriginInfo;->file:Ljava/io/File;
+    iget-object v2, p1, Lcom/android/server/pm/PackageManagerService$OriginInfo;->file:Ljava/io/File;
 
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    move-result-object v1
-
-    const/4 v2, 0x0
+    move-result-object v2
 
     const/4 v3, 0x0
 
-    invoke-static {p0, v1, v2, v3}, Lcom/android/server/pm/PackageManagerServiceUtils;->getMinimalPackageInfo(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)Landroid/content/pm/PackageInfoLite;
+    invoke-static {p0, v2, v1, v3}, Lcom/android/server/pm/PackageManagerServiceUtils;->getMinimalPackageInfo(Landroid/content/Context;Ljava/lang/String;ILjava/lang/String;)Landroid/content/pm/PackageInfoLite;
 
-    move-result-object v1
+    move-result-object v2
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-object v0, v1
+    move-object v0, v2
 
     goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    sget-object v2, Lcom/android/server/pm/PmInjector;->TAG:Ljava/lang/String;
+    sget-object v3, Lcom/android/server/pm/PmInjector;->TAG:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Exception while getMinimalPackageInfo"
+    const-string v5, "Exception while getMinimalPackageInfo"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    iget-object v1, v0, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-static {p0, v1}, Lcom/android/server/pm/PmInjector;->isInSystemAppList(Landroid/content/Context;Ljava/lang/String;)Z
+    iget-object v2, v0, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
-    move-result v1
+    invoke-static {p0, v2}, Lcom/android/server/pm/PmInjector;->isInSystemAppList(Landroid/content/Context;Ljava/lang/String;)Z
 
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
     return v1
 .end method
 

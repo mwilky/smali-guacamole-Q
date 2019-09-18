@@ -165,7 +165,7 @@
 
     move-result-object v1
 
-    const v2, 0x11100ea
+    const v2, 0x11100eb
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -228,20 +228,20 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/WiredAccessoryManager;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/server/WiredAccessoryManager;->mUseDevInputEventForAudioJack:Z
-
-    return v0
-.end method
-
-.method static synthetic access$600()[Ljava/lang/String;
+.method static synthetic access$500()[Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/android/server/WiredAccessoryManager;->DP_AUDIO_CONNS:[Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method static synthetic access$600(Lcom/android/server/WiredAccessoryManager;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/server/WiredAccessoryManager;->mUseDevInputEventForAudioJack:Z
+
+    return v0
 .end method
 
 .method static synthetic access$700(Lcom/android/server/WiredAccessoryManager;)I

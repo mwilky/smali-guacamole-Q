@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
 
@@ -251,6 +251,30 @@
     move-result-object v5
 
     invoke-interface {v5}, Lcom/android/server/display/RampAnimator$Listener;->onAnimationEnd()V
+
+    iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
+
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$1100(Lcom/android/server/display/RampAnimator;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
+
+    invoke-static {v5}, Lcom/android/server/display/RampAnimator;->access$1000(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+
+    move-result-object v5
+
+    const/4 v7, 0x1
+
+    const/16 v8, 0x7d0
+
+    invoke-interface {v5, v7, v8}, Lcom/android/server/display/RampAnimator$Listener;->setDimmingSpeed(II)V
+
+    iget-object v5, p0, Lcom/android/server/display/RampAnimator$1;->this$0:Lcom/android/server/display/RampAnimator;
+
+    invoke-static {v5, v6}, Lcom/android/server/display/RampAnimator;->access$1102(Lcom/android/server/display/RampAnimator;Z)Z
 
     :cond_4
     :goto_1

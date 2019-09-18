@@ -2916,6 +2916,14 @@
     if-eqz v3, :cond_2
 
     :cond_1
+    invoke-virtual {p2}, Lcom/android/server/wm/WindowState;->getOwningUid()I
+
+    move-result v3
+
+    const-string v4, "updateSystemUiVisibility"
+
+    invoke-static {v3, v4}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
+
     iget-object v3, p2, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
     iget v4, p2, Lcom/android/server/wm/WindowState;->mSeq:I
@@ -5522,7 +5530,7 @@
 
     move-result-object v3
 
-    const v4, 0x111007c
+    const v4, 0x111007d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -10057,22 +10065,45 @@
     return v3
 
     :cond_3
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    invoke-virtual {p1}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v3
+
+    :cond_4
     iget-object v1, p1, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     iget-boolean v4, v1, Lcom/android/server/wm/AppWindowToken;->removed:Z
 
-    if-nez v4, :cond_4
+    if-nez v4, :cond_5
 
     iget-boolean v4, v1, Lcom/android/server/wm/AppWindowToken;->sendingToBottom:Z
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
-    :cond_4
+    :cond_5
     sget-boolean v4, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_FOCUS:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -10090,13 +10121,13 @@
 
     iget-boolean v5, v1, Lcom/android/server/wm/AppWindowToken;->removed:Z
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_6
 
     const-string v5, "removed"
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     const-string v5, "sendingToBottom"
 
     :goto_0
@@ -10108,17 +10139,17 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_6
+    :cond_7
     return v3
 
-    :cond_7
+    :cond_8
     const/4 v3, 0x1
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     sget-boolean v4, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_FOCUS_LIGHT:Z
 
-    if-eqz v4, :cond_8
+    if-eqz v4, :cond_9
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -10136,21 +10167,21 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_8
+    :cond_9
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent;->mTmpWindow:Lcom/android/server/wm/WindowState;
 
     return v3
 
-    :cond_9
+    :cond_a
     invoke-virtual {v0}, Lcom/android/server/wm/AppWindowToken;->windowsAreFocusable()Z
 
     move-result v4
 
-    if-nez v4, :cond_b
+    if-nez v4, :cond_c
 
     sget-boolean v4, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_FOCUS_LIGHT:Z
 
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_b
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -10168,13 +10199,13 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_a
+    :cond_b
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent;->mTmpWindow:Lcom/android/server/wm/WindowState;
 
     return v3
 
-    :cond_b
-    if-eqz v1, :cond_d
+    :cond_c
+    if-eqz v1, :cond_e
 
     iget-object v4, p1, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -10182,17 +10213,17 @@
 
     const/4 v5, 0x3
 
-    if-eq v4, v5, :cond_d
+    if-eq v4, v5, :cond_e
 
     invoke-virtual {v0, v1}, Lcom/android/server/wm/AppWindowToken;->compareTo(Lcom/android/server/wm/WindowContainer;)I
 
     move-result v4
 
-    if-lez v4, :cond_d
+    if-lez v4, :cond_e
 
     sget-boolean v4, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_FOCUS_LIGHT:Z
 
-    if-eqz v4, :cond_c
+    if-eqz v4, :cond_d
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -10210,17 +10241,17 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_c
+    :cond_d
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/wm/DisplayContent;->mTmpWindow:Lcom/android/server/wm/WindowState;
 
     return v3
 
-    :cond_d
+    :cond_e
     sget-boolean v4, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_FOCUS_LIGHT:Z
 
-    if-eqz v4, :cond_e
+    if-eqz v4, :cond_f
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -10238,7 +10269,7 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_e
+    :cond_f
     iput-object p1, p0, Lcom/android/server/wm/DisplayContent;->mTmpWindow:Lcom/android/server/wm/WindowState;
 
     return v3
@@ -12718,10 +12749,15 @@
 
     invoke-virtual {v1}, Lcom/android/server/wm/InputMonitor;->onDisplayRemoved()V
 
+    iget-boolean v1, p0, Lcom/android/server/wm/DisplayContent;->isDefaultDisplay:Z
+
+    if-eqz v1, :cond_1
+
     invoke-static {}, Lcom/android/server/wm/OpDisplayContentInjector;->removeImmediately()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    :cond_1
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent;->mDisplayReady:Z
 
     iput-boolean v0, p0, Lcom/android/server/wm/DisplayContent;->mRemovingDisplay:Z

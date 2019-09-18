@@ -1133,7 +1133,7 @@
 .end method
 
 .method private limitLuxValue(F)F
-    .locals 5
+    .locals 14
 
     const/4 v0, 0x0
 
@@ -1147,131 +1147,295 @@
 
     iget v2, v2, Landroid/text/format/Time;->hour:I
 
-    const/16 v3, 0x14
+    const-string v3, "18831"
 
-    const/4 v4, 0x6
+    const-string v4, "18827"
 
-    if-lt v2, v4, :cond_0
+    const-string v5, "18825"
 
-    if-ge v2, v3, :cond_0
+    const-string v6, "18821"
 
-    const v0, 0x3f99999a    # 1.2f
+    const/16 v7, 0x14
 
-    goto :goto_2
+    const-string v8, "19861"
 
-    :cond_0
-    if-lt v2, v3, :cond_5
+    const-string v9, "19833"
 
-    const/16 v3, 0x17
+    const-string v10, "19831"
 
-    if-gt v2, v3, :cond_5
+    const-string v11, "19830"
 
-    const-string v3, "19850"
+    const-string v12, "19801"
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v13, 0x6
 
-    move-result v3
+    if-lt v2, v13, :cond_2
 
-    if-nez v3, :cond_4
+    if-ge v2, v7, :cond_2
 
-    const-string v3, "19851"
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v7
 
-    move-result v3
+    if-nez v7, :cond_1
 
-    if-nez v3, :cond_4
+    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v3, "18865"
+    move-result v7
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez v7, :cond_1
 
-    move-result v3
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v3, :cond_4
+    move-result v7
 
-    const-string v3, "19863"
+    if-nez v7, :cond_1
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v7
 
-    if-eqz v3, :cond_1
+    if-nez v7, :cond_1
 
-    goto :goto_1
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_1
-    const-string v3, "19801"
+    move-result v7
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    const-string v3, "19830"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    const-string v3, "19831"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    const-string v3, "19833"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    const-string v3, "19861"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
+    if-eqz v7, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    const v0, 0x3e570a3d    # 0.21f
+    :cond_0
+    const v0, 0x3f99999a    # 1.2f
 
-    goto :goto_2
+    goto/16 :goto_4
+
+    :cond_1
+    :goto_0
+    const v0, 0x3fe66666    # 1.8f
+
+    goto/16 :goto_4
+
+    :cond_2
+    if-lt v2, v7, :cond_9
+
+    const/16 v7, 0x17
+
+    if-gt v2, v7, :cond_9
+
+    const-string v7, "19850"
+
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_8
+
+    const-string v7, "19851"
+
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_8
+
+    const-string v7, "18865"
+
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_8
+
+    const-string v7, "19863"
+
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    goto :goto_3
 
     :cond_3
-    :goto_0
-    const v0, 0x3f666666    # 0.9f
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_7
+
+    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_7
+
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_7
+
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_7
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
 
     goto :goto_2
 
     :cond_4
-    :goto_1
-    const v0, 0x3ecccccd    # 0.4f
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_6
+
+    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_6
+
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_6
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
+
+    goto :goto_1
 
     :cond_5
+    const v0, 0x3e570a3d    # 0.21f
+
+    goto :goto_4
+
+    :cond_6
+    :goto_1
+    const v0, 0x3f4ccccd    # 0.8f
+
+    goto :goto_4
+
+    :cond_7
     :goto_2
+    const v0, 0x3f666666    # 0.9f
+
+    goto :goto_4
+
+    :cond_8
+    :goto_3
+    const v0, 0x3ecccccd    # 0.4f
+
+    goto :goto_4
+
+    :cond_9
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_a
+
+    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_a
+
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_a
+
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_a
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_b
+
+    :cond_a
+    const v0, 0x3ecccccd    # 0.4f
+
+    :cond_b
+    :goto_4
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_c
+
+    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_c
+
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_c
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_c
+
+    const-string v3, "18857"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_d
+
+    :cond_c
+    const/4 v3, 0x0
+
+    cmpg-float v3, v3, p1
+
+    if-gtz v3, :cond_d
+
+    const/high16 v3, 0x40a00000    # 5.0f
+
+    cmpg-float v3, p1, v3
+
+    if-gtz v3, :cond_d
+
+    move p1, v0
+
+    :cond_d
     cmpg-float v3, p1, v0
 
-    if-gez v3, :cond_6
+    if-gez v3, :cond_e
 
     move v3, v0
 
-    goto :goto_3
+    goto :goto_5
 
-    :cond_6
+    :cond_e
     move v3, p1
 
-    :goto_3
+    :goto_5
     return v3
 .end method
 
@@ -1469,8 +1633,315 @@
     return-void
 .end method
 
-.method private setAmbientLux(F)V
+.method private reviseAmbientThreshold(Z)V
     .locals 12
+
+    const-string/jumbo v0, "ro.boot.project_name"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "18857"
+
+    const-string v2, "18831"
+
+    const-string v3, "18827"
+
+    const-string v4, "18825"
+
+    const-string v5, "18821"
+
+    const/high16 v6, 0x40a00000    # 5.0f
+
+    const/high16 v7, 0x41f00000    # 30.0f
+
+    const/4 v8, 0x0
+
+    const/high16 v9, 0x42dc0000    # 110.0f
+
+    const/high16 v10, 0x40000000    # 2.0f
+
+    const/high16 v11, 0x41200000    # 10.0f
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpg-float v2, v1, v6
+
+    if-gtz v2, :cond_1
+
+    cmpl-float v1, v1, v8
+
+    if-ltz v1, :cond_1
+
+    iput v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto/16 :goto_2
+
+    :cond_1
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v10
+
+    if-ltz v2, :cond_2
+
+    cmpg-float v1, v1, v7
+
+    if-gtz v1, :cond_2
+
+    iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto/16 :goto_2
+
+    :cond_2
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v11
+
+    if-ltz v2, :cond_d
+
+    cmpg-float v1, v1, v9
+
+    if-gtz v1, :cond_d
+
+    iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto/16 :goto_2
+
+    :cond_3
+    :goto_0
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpg-float v2, v1, v11
+
+    if-gtz v2, :cond_4
+
+    cmpl-float v1, v1, v8
+
+    if-ltz v1, :cond_4
+
+    iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto/16 :goto_2
+
+    :cond_4
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v10
+
+    if-ltz v2, :cond_5
+
+    cmpg-float v1, v1, v7
+
+    if-gtz v1, :cond_5
+
+    iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto/16 :goto_2
+
+    :cond_5
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v11
+
+    if-ltz v2, :cond_d
+
+    cmpg-float v1, v1, v9
+
+    if-gtz v1, :cond_d
+
+    iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto/16 :goto_2
+
+    :cond_6
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_a
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_a
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_a
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    goto :goto_1
+
+    :cond_7
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v11
+
+    if-ltz v2, :cond_8
+
+    cmpg-float v1, v1, v9
+
+    if-gtz v1, :cond_8
+
+    iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto :goto_2
+
+    :cond_8
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v10
+
+    if-ltz v2, :cond_9
+
+    cmpg-float v1, v1, v7
+
+    if-gtz v1, :cond_9
+
+    iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto :goto_2
+
+    :cond_9
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpg-float v2, v1, v6
+
+    if-gtz v2, :cond_d
+
+    cmpl-float v1, v1, v8
+
+    if-ltz v1, :cond_d
+
+    iput v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto :goto_2
+
+    :cond_a
+    :goto_1
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v11
+
+    if-ltz v2, :cond_b
+
+    cmpg-float v1, v1, v9
+
+    if-gtz v1, :cond_b
+
+    iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto :goto_2
+
+    :cond_b
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpl-float v2, v1, v10
+
+    if-ltz v2, :cond_c
+
+    cmpg-float v1, v1, v7
+
+    if-gtz v1, :cond_c
+
+    iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    goto :goto_2
+
+    :cond_c
+    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    cmpg-float v2, v1, v11
+
+    if-gtz v2, :cond_d
+
+    cmpl-float v1, v1, v8
+
+    if-ltz v1, :cond_d
+
+    iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+
+    iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
+
+    :cond_d
+    :goto_2
+    return-void
+.end method
+
+.method private setAmbientLux(F)V
+    .locals 8
 
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
@@ -1517,148 +1988,37 @@
     :cond_1
     const/4 v2, 0x0
 
-    cmpg-float v5, p1, v2
+    cmpg-float v2, p1, v2
 
-    if-gez v5, :cond_2
+    if-gez v2, :cond_2
 
-    const-string v5, "Ambient lux was negative, ignoring and setting to 0"
+    const-string v2, "Ambient lux was negative, ignoring and setting to 0"
 
-    invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
     :cond_2
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    iget-object v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
+    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
 
-    invoke-virtual {v5, p1}, Lcom/android/server/display/HysteresisLevels;->getBrighteningThreshold(F)F
+    invoke-virtual {v2, p1}, Lcom/android/server/display/HysteresisLevels;->getBrighteningThreshold(F)F
 
-    move-result v5
+    move-result v2
 
-    iput v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
 
-    iget-object v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
+    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
 
-    invoke-virtual {v5, p1}, Lcom/android/server/display/HysteresisLevels;->getDarkeningThreshold(F)F
+    invoke-virtual {v2, p1}, Lcom/android/server/display/HysteresisLevels;->getDarkeningThreshold(F)F
 
-    move-result v5
-
-    iput v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
-
-    const/high16 v5, 0x41f00000    # 30.0f
-
-    const/high16 v6, 0x42dc0000    # 110.0f
-
-    const/high16 v7, 0x40000000    # 2.0f
-
-    const/high16 v8, 0x40a00000    # 5.0f
-
-    const/high16 v9, 0x41200000    # 10.0f
-
-    if-eqz v0, :cond_5
-
-    iget v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    cmpg-float v11, v10, v8
-
-    if-gtz v11, :cond_3
-
-    cmpl-float v10, v10, v2
-
-    if-ltz v10, :cond_3
-
-    iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
+    move-result v2
 
     iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
 
-    goto :goto_1
+    invoke-direct {p0, v0}, Lcom/android/server/display/AutomaticBrightnessController;->reviseAmbientThreshold(Z)V
 
-    :cond_3
-    iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    cmpl-float v8, v2, v7
-
-    if-ltz v8, :cond_4
-
-    cmpg-float v2, v2, v5
-
-    if-gtz v2, :cond_4
-
-    iput v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
-
-    iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
-
-    goto :goto_1
-
-    :cond_4
-    iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    cmpl-float v5, v2, v9
-
-    if-ltz v5, :cond_8
-
-    cmpg-float v2, v2, v6
-
-    if-gtz v2, :cond_8
-
-    iput v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
-
-    iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
-
-    goto :goto_1
-
-    :cond_5
-    iget v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    cmpl-float v11, v10, v9
-
-    if-ltz v11, :cond_6
-
-    cmpg-float v10, v10, v6
-
-    if-gtz v10, :cond_6
-
-    iput v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
-
-    iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
-
-    goto :goto_1
-
-    :cond_6
-    iget v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    cmpl-float v9, v6, v7
-
-    if-ltz v9, :cond_7
-
-    cmpg-float v6, v6, v5
-
-    if-gtz v6, :cond_7
-
-    iput v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
-
-    iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
-
-    goto :goto_1
-
-    :cond_7
-    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    cmpg-float v6, v5, v8
-
-    if-gtz v6, :cond_8
-
-    cmpl-float v5, v5, v2
-
-    if-ltz v5, :cond_8
-
-    iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientBrighteningThreshold:F
-
-    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientDarkeningThreshold:F
-
-    :cond_8
-    :goto_1
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     invoke-direct {p0, v2}, Lcom/android/server/display/AutomaticBrightnessController;->limitLuxValue(F)F
@@ -1669,7 +2029,7 @@
 
     iget-boolean v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mShortTermModelValid:Z
 
-    if-nez v2, :cond_b
+    if-nez v2, :cond_5
 
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mShortTermModelAnchor:F
 
@@ -1677,7 +2037,7 @@
 
     cmpl-float v5, v2, v5
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_5
 
     iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->SHORT_TERM_MODEL_THRESHOLD_RATIO:F
 
@@ -1693,15 +2053,15 @@
 
     cmpg-float v7, v6, v5
 
-    if-gez v7, :cond_a
+    if-gez v7, :cond_4
 
     cmpg-float v5, v5, v2
 
-    if-gez v5, :cond_a
+    if-gez v5, :cond_4
 
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLoggingEnabled:Z
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_3
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1731,12 +2091,12 @@
 
     invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_9
+    :cond_3
     iput-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mShortTermModelValid:Z
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_a
+    :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1771,8 +2131,8 @@
 
     invoke-virtual {p0}, Lcom/android/server/display/AutomaticBrightnessController;->resetShortTermModel()V
 
-    :cond_b
-    :goto_2
+    :cond_5
+    :goto_1
     return-void
 .end method
 
@@ -2524,237 +2884,249 @@
 .end method
 
 .method private updateAutoBrightness(ZZ)V
-    .locals 5
+    .locals 6
 
-    iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
+
+    if-nez v1, :cond_0
 
     return-void
 
     :cond_0
+    const/4 v1, 0x1
+
+    new-array v2, v1, [I
+
+    const/16 v3, 0x77
+
+    const/4 v4, 0x0
+
+    aput v3, v2, v4
+
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v2
+
+    const-string v3, "AutomaticBrightnessController"
+
+    if-eqz v2, :cond_3
+
+    iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
+
+    const v5, 0x45cb2000    # 6500.0f
+
+    cmpl-float v5, v2, v5
+
+    if-lez v5, :cond_1
+
+    iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
+
+    invoke-virtual {v4, v2}, Lcom/android/server/display/BrightnessMappingStrategy;->getHBMBrightness(F)F
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Math;->round(F)I
+
+    move-result v2
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "hbm_brightness="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBM_State:Z
+
+    sget v3, Landroid/os/PowerManager;->BRIGHTNESS_ON:I
+
+    int-to-float v3, v3
+
+    iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
+
+    iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
+
+    iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
+
+    invoke-interface {v3, v2, v1}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->animateHBMBrightness(IZ)V
+
+    return-void
+
+    :cond_1
+    iget-boolean v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBM_State:Z
+
+    if-ne v2, v1, :cond_2
+
     const/4 v0, 0x1
 
-    new-array v1, v0, [I
+    :cond_2
+    iput-boolean v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBM_State:Z
 
-    const/16 v2, 0x77
+    :cond_3
+    iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 
-    const/4 v3, 0x0
+    iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    aput v2, v1, v3
+    iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mForegroundAppPackageName:Ljava/lang/String;
 
-    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mForegroundAppCategory:I
 
-    move-result v1
-
-    const-string v2, "AutomaticBrightnessController"
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    const v4, 0x45cb2000    # 6500.0f
-
-    cmpl-float v4, v1, v4
-
-    if-lez v4, :cond_1
-
-    iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
-
-    invoke-virtual {v3, v1}, Lcom/android/server/display/BrightnessMappingStrategy;->getHBMBrightness(F)F
+    invoke-virtual {v1, v2, v4, v5}, Lcom/android/server/display/BrightnessMappingStrategy;->getBrightness(FLjava/lang/String;I)F
 
     move-result v1
-
-    invoke-static {v1}, Ljava/lang/Math;->round(F)I
-
-    move-result v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "hbm_brightness="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBM_State:Z
 
     sget v2, Landroid/os/PowerManager;->BRIGHTNESS_ON:I
 
     int-to-float v2, v2
 
-    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
+    mul-float/2addr v2, v1
 
-    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
+    invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
-    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
+    move-result v2
 
-    invoke-interface {v2, v1, v0}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->animateHBMBrightness(IZ)V
+    invoke-direct {p0, v2}, Lcom/android/server/display/AutomaticBrightnessController;->clampScreenBrightness(I)I
 
-    return-void
-
-    :cond_1
-    iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBM_State:Z
-
-    :cond_2
-    iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
-
-    iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
-
-    iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mForegroundAppPackageName:Ljava/lang/String;
-
-    iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mForegroundAppCategory:I
-
-    invoke-virtual {v0, v1, v3, v4}, Lcom/android/server/display/BrightnessMappingStrategy;->getBrightness(FLjava/lang/String;I)F
-
-    move-result v0
-
-    sget v1, Landroid/os/PowerManager;->BRIGHTNESS_ON:I
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Ljava/lang/Math;->round(F)I
-
-    move-result v1
-
-    invoke-direct {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->clampScreenBrightness(I)I
-
-    move-result v1
-
-    iget v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
-
-    const/4 v4, -0x1
-
-    if-eq v3, v4, :cond_4
-
-    if-nez p2, :cond_4
-
-    int-to-float v3, v1
-
-    iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
-
-    cmpl-float v3, v3, v4
-
-    if-lez v3, :cond_4
-
-    int-to-float v3, v1
-
-    iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
-
-    cmpg-float v3, v3, v4
-
-    if-gez v3, :cond_4
-
-    iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLoggingEnabled:Z
-
-    if-eqz v3, :cond_3
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "ignoring newScreenAutoBrightness: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v4, " < "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    return-void
-
-    :cond_4
-    iget v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
-
-    if-eq v3, v1, :cond_6
-
-    iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLoggingEnabled:Z
-
-    if-eqz v3, :cond_5
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v4, "updateAutoBrightness: mScreenAutoBrightness="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
     iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v5, -0x1
 
-    const-string v4, ", newScreenAutoBrightness="
+    if-eq v4, v5, :cond_5
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez p2, :cond_5
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    int-to-float v4, v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
 
-    move-result-object v3
+    cmpl-float v4, v4, v5
 
-    invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-lez v4, :cond_5
+
+    int-to-float v4, v2
+
+    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
+
+    cmpg-float v4, v4, v5
+
+    if-gez v4, :cond_5
+
+    iget-boolean v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLoggingEnabled:Z
+
+    if-eqz v4, :cond_4
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "ignoring newScreenAutoBrightness: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v5, " < "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    return-void
 
     :cond_5
-    iput v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
+    iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
-    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
+    if-ne v4, v2, :cond_6
 
-    int-to-float v3, v1
-
-    invoke-virtual {v2, v3}, Lcom/android/server/display/HysteresisLevels;->getBrighteningThreshold(F)F
-
-    move-result v2
-
-    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
-
-    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
-
-    int-to-float v3, v1
-
-    invoke-virtual {v2, v3}, Lcom/android/server/display/HysteresisLevels;->getDarkeningThreshold(F)F
-
-    move-result v2
-
-    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
-
-    if-eqz p1, :cond_6
-
-    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
-
-    invoke-interface {v2}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->updateBrightness()V
+    if-eqz v0, :cond_8
 
     :cond_6
+    iget-boolean v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLoggingEnabled:Z
+
+    if-eqz v4, :cond_7
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "updateAutoBrightness: mScreenAutoBrightness="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ", newScreenAutoBrightness="
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_7
+    iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
+
+    iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
+
+    int-to-float v4, v2
+
+    invoke-virtual {v3, v4}, Lcom/android/server/display/HysteresisLevels;->getBrighteningThreshold(F)F
+
+    move-result v3
+
+    iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrighteningThreshold:F
+
+    iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessThresholds:Lcom/android/server/display/HysteresisLevels;
+
+    int-to-float v4, v2
+
+    invoke-virtual {v3, v4}, Lcom/android/server/display/HysteresisLevels;->getDarkeningThreshold(F)F
+
+    move-result v3
+
+    iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenDarkeningThreshold:F
+
+    if-eqz p1, :cond_8
+
+    iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
+
+    invoke-interface {v3}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->updateBrightness()V
+
+    :cond_8
     return-void
 .end method
 

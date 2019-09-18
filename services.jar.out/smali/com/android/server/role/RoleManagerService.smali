@@ -676,29 +676,70 @@
     return-void
 .end method
 
-.method static synthetic lambda$performInitialGrantsIfNecessaryAsync$0(Lcom/android/server/role/RoleUserState;Ljava/lang/String;Ljava/util/concurrent/CompletableFuture;Ljava/lang/Boolean;)V
-    .locals 1
+.method static synthetic lambda$performInitialGrantsIfNecessaryAsync$0(ILjava/util/concurrent/CompletableFuture;Lcom/android/server/role/RoleUserState;Ljava/lang/String;Ljava/lang/Boolean;)V
+    .locals 5
 
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/role/RoleUserState;->setPackagesHash(Ljava/lang/String;)V
+    const-class v0, Landroid/os/UserManagerInternal;
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
+    move-result-object v0
+
+    check-cast v0, Landroid/os/UserManagerInternal;
+
+    invoke-virtual {v0, p0}, Landroid/os/UserManagerInternal;->exists(I)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lcom/android/server/role/RoleManagerService;->LOG_TAG:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Ignoring to update hash for packages due to user "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, " has been removed"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p2, p3}, Lcom/android/server/role/RoleUserState;->setPackagesHash(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v2}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
-    invoke-virtual {p2, v0}, Ljava/util/concurrent/CompletableFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/CompletableFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
 
     :goto_0
     return-void
@@ -1048,7 +1089,19 @@
 
     sget-object v4, Lcom/android/server/role/RoleManagerService;->LOG_TAG:Ljava/lang/String;
 
-    const-string v5, "Granting default permissions..."
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Granting default permissions for user "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -1064,9 +1117,9 @@
 
     move-result-object v6
 
-    new-instance v7, Lcom/android/server/role/-$$Lambda$RoleManagerService$bWORjt1dBr7EfFhavgUePqPY2LM;
+    new-instance v7, Lcom/android/server/role/-$$Lambda$RoleManagerService$pEzDvTDAn4HPjdI4MM6WI_bmKlo;
 
-    invoke-direct {v7, v0, v1, v4}, Lcom/android/server/role/-$$Lambda$RoleManagerService$bWORjt1dBr7EfFhavgUePqPY2LM;-><init>(Lcom/android/server/role/RoleUserState;Ljava/lang/String;Ljava/util/concurrent/CompletableFuture;)V
+    invoke-direct {v7, p1, v4, v0, v1}, Lcom/android/server/role/-$$Lambda$RoleManagerService$pEzDvTDAn4HPjdI4MM6WI_bmKlo;-><init>(ILjava/util/concurrent/CompletableFuture;Lcom/android/server/role/RoleUserState;Ljava/lang/String;)V
 
     invoke-virtual {v5, v6, v7}, Landroid/app/role/RoleControllerManager;->grantDefaultRoles(Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)V
 

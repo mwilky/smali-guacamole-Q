@@ -35,58 +35,86 @@
 
 # virtual methods
 .method public onChanged(Z)V
-    .locals 4
+    .locals 5
 
-    const-string v0, "WindowManager"
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_0
-
-    const-string v1, "Force to show navigation bar when zen mode is on"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$17;->this$0:Lcom/android/server/policy/PhoneWindowManager;
-
-    iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
+    new-array v1, v0, [I
 
     const/4 v2, 0x0
 
-    const-string/jumbo v3, "systemui_navigation_bar_hided"
+    const/16 v3, 0x26
 
-    invoke-static {v1, v3, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    aput v3, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v1
 
-    const/4 v3, 0x1
+    if-eqz v1, :cond_4
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$17;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    move v2, v3
+    iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    if-nez v1, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    const-string v1, "WindowManager"
+
+    if-eqz p1, :cond_1
+
+    const-string v0, "Force to show navigation bar when zen mode is on"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$17;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-virtual {v0, v2}, Lcom/android/server/wm/DisplayPolicy;->updateNavigationBar(Z)V
+
+    goto :goto_2
 
     :cond_1
-    move v1, v2
+    iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager$17;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v3, v3, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    if-eqz v1, :cond_2
+    move-result-object v3
 
-    const-string v3, "Hide"
+    const-string/jumbo v4, "systemui_navigation_bar_hided"
+
+    invoke-static {v3, v4, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v3
+
+    if-ne v3, v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    const-string v3, "Show"
+    move v0, v2
 
     :goto_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    if-eqz v0, :cond_3
+
+    const-string v3, "Hide"
+
+    goto :goto_1
+
+    :cond_3
+    const-string v3, "Show"
+
+    :goto_1
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, " navigation bar when zen mode is off"
@@ -97,8 +125,18 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_1
+    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$17;->this$0:Lcom/android/server/policy/PhoneWindowManager;
+
+    iget-object v1, v1, Lcom/android/server/policy/PhoneWindowManager;->mDefaultDisplayPolicy:Lcom/android/server/wm/DisplayPolicy;
+
+    invoke-virtual {v1, v0}, Lcom/android/server/wm/DisplayPolicy;->updateNavigationBar(Z)V
+
+    :goto_2
+    return-void
+
+    :cond_4
+    :goto_3
     return-void
 .end method

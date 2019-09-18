@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final DEBUG:Z = true
+.field private static final DEBUG:Z
 
 .field private static final LOG_TAG:Ljava/lang/String;
 
@@ -67,6 +67,10 @@
     move-result-object v0
 
     sput-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
 
     return-void
 .end method
@@ -248,28 +252,33 @@
 .method private grantOrUpgradeDefaultRuntimePermissionsIfNeeded(I)V
     .locals 5
 
+    sget-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    const-string v1, ")"
+
+    if-eqz v0, :cond_0
+
     sget-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "grantOrUpgradeDefaultPermsIfNeeded("
+    const-string v3, "grantOrUpgradeDefaultPermsIfNeeded("
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, ")"
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
+    :cond_0
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -280,11 +289,15 @@
 
     invoke-virtual {v0, p1}, Landroid/content/pm/PackageManagerInternal;->wereDefaultPermissionsGrantedSinceBoot(I)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_2
 
-    sget-object v1, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
+    sget-boolean v2, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v2, :cond_1
+
+    sget-object v2, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -296,14 +309,15 @@
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_1
     new-instance v1, Ljava/util/concurrent/CountDownLatch;
 
     const/4 v2, 0x1
@@ -357,7 +371,7 @@
 
     invoke-virtual {v0, v3, p1}, Landroid/content/pm/PackageManagerInternal;->setRuntimePermissionsFingerPrint(Ljava/lang/String;I)V
 
-    :cond_0
+    :cond_2
     return-void
 .end method
 
@@ -451,7 +465,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService;->mLock:Ljava/lang/Object;
 
@@ -493,6 +507,10 @@
     goto :goto_0
 
     :cond_0
+    sget-boolean v1, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v1, :cond_1
+
     sget-object v1, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -521,6 +539,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_1
     :goto_0
     monitor-exit v0
 
@@ -535,7 +554,7 @@
 
     throw v1
 
-    :cond_1
+    :cond_2
     :goto_1
     return-void
 .end method
@@ -563,6 +582,10 @@
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sget-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
@@ -598,6 +621,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    :cond_0
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -614,11 +638,11 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     return-void
 
-    :cond_0
+    :cond_1
     new-instance v3, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;
 
     invoke-virtual {p0}, Lcom/android/server/policy/PermissionPolicyService;->getContext()Landroid/content/Context;
@@ -645,12 +669,12 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_3
 
     array-length v5, v4
 
     :goto_0
-    if-ge v2, v5, :cond_2
+    if-ge v2, v5, :cond_3
 
     aget-object v6, v4, v2
 
@@ -660,18 +684,18 @@
 
     move-result-object v7
 
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_2
 
     iget-object v8, v7, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     invoke-virtual {v3, v8}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->addPackage(Ljava/lang/String;)V
 
-    :cond_1
+    :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     invoke-static {v3}, Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;->access$400(Lcom/android/server/policy/PermissionPolicyService$PermissionToOpSynchroniser;)V
 
     return-void
@@ -689,6 +713,10 @@
 
 .method private synchronizePermissionsAndAppOpsForUser(I)V
     .locals 4
+
+    sget-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
@@ -712,6 +740,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_0
     const-class v0, Landroid/content/pm/PackageManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -752,6 +781,10 @@
 .method public onBootPhase(I)V
     .locals 6
 
+    sget-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
     sget-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -774,9 +807,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_0
     const/16 v0, 0x226
 
-    if-ne p1, v0, :cond_1
+    if-ne p1, v0, :cond_2
 
     const-class v0, Landroid/os/UserManagerInternal;
 
@@ -795,7 +829,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_1
+    if-ge v3, v2, :cond_2
 
     aget v4, v1, v3
 
@@ -803,16 +837,16 @@
 
     move-result v5
 
-    if-eqz v5, :cond_0
+    if-eqz v5, :cond_1
 
     invoke-virtual {p0, v4}, Lcom/android/server/policy/PermissionPolicyService;->onStartUser(I)V
 
-    :cond_0
+    :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -975,6 +1009,10 @@
 .method public onStartUser(I)V
     .locals 3
 
+    sget-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
     sget-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -997,15 +1035,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/policy/PermissionPolicyService;->isStarted(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     return-void
 
-    :cond_0
+    :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/policy/PermissionPolicyService;->grantOrUpgradeDefaultRuntimePermissionsIfNeeded(I)V
 
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService;->mLock:Ljava/lang/Object;
@@ -1027,11 +1066,11 @@
 
     invoke-direct {p0, p1}, Lcom/android/server/policy/PermissionPolicyService;->synchronizePermissionsAndAppOpsForUser(I)V
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-interface {v1, p1}, Lcom/android/server/policy/PermissionPolicyInternal$OnInitializedCallback;->onInitialized(I)V
 
-    :cond_1
+    :cond_2
     return-void
 
     :catchall_0
@@ -1047,6 +1086,10 @@
 
 .method public onStopUser(I)V
     .locals 3
+
+    sget-boolean v0, Lcom/android/server/policy/PermissionPolicyService;->DEBUG:Z
+
+    if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/server/policy/PermissionPolicyService;->LOG_TAG:Ljava/lang/String;
 
@@ -1070,6 +1113,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PermissionPolicyService;->mLock:Ljava/lang/Object;
 
     monitor-enter v0

@@ -99,7 +99,7 @@
 
     move-result v2
 
-    const/high16 v4, 0x30000
+    const/high16 v4, 0x60000
 
     iget-object v5, p0, Lcom/android/server/am/ActivityManagerService$22;->val$sb:Ljava/lang/StringBuilder;
 

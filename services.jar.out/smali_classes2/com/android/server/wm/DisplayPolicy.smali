@@ -13,10 +13,6 @@
 
 
 # static fields
-.field public static mAllowCustomNavBarHeight:Z
-
-.field public static mCustomNavBarHeight:I
-
 .field private static final ALTERNATE_CAR_MODE_NAV_SIZE:Z = false
 
 .field private static final DEBUG:Z = false
@@ -548,7 +544,7 @@
 
     iput-boolean v4, p0, Lcom/android/server/wm/DisplayPolicy;->mDeskDockEnablesAccelerometer:Z
 
-    const v4, 0x1110083
+    const v4, 0x1110084
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -698,7 +694,7 @@
 
     move-result-object v0
 
-    const v6, 0x11100bd
+    const v6, 0x11100be
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1666,16 +1662,7 @@
 
 .method private getNavigationBarFrameHeight(II)I
     .locals 1
-    
-    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
-    
-    if-eqz v0, :cond_stock
-    
-    sget v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
-    
-    return v0
-    
-    :cond_stock
+
     iget-object v0, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarFrameHeightForRotationDefault:[I
 
     aget v0, v0, p1
@@ -1685,16 +1672,7 @@
 
 .method private getNavigationBarHeight(II)I
     .locals 1
-    
-    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
-    
-    if-eqz v0, :cond_stock
-    
-    sget v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
-    
-    return v0
-    
-    :cond_stock
+
     const/4 v0, 0x3
 
     if-le p1, v0, :cond_0
@@ -1711,16 +1689,7 @@
 
 .method private getNavigationBarWidth(II)I
     .locals 1
-    
-    sget-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
-    
-    if-eqz v0, :cond_stock
-    
-    sget v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
-    
-    return v0
-    
-    :cond_stock
+
     const/4 v0, 0x3
 
     if-le p1, v0, :cond_0
@@ -12455,7 +12424,7 @@
 
     iput v7, p0, Lcom/android/server/wm/DisplayPolicy;->mSideGestureInset:I
 
-    const v7, 0x111009e
+    const v7, 0x111009f
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -12463,7 +12432,7 @@
 
     iput-boolean v7, p0, Lcom/android/server/wm/DisplayPolicy;->mNavigationBarLetsThroughTaps:Z
 
-    const v7, 0x111009b
+    const v7, 0x111009c
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -13826,7 +13795,7 @@
 
     if-eq v1, v2, :cond_0
 
-    const v1, 0x111009c
+    const v1, 0x111009d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field private final DISABLE_NOTIF_SOUND:Landroid/net/Uri;
+.field private final DRIVING_MODE_STATE:Ljava/lang/String;
+
+.field private final DRIVING_MODE_STATE_URI:Landroid/net/Uri;
 
 .field private final ESPORT_MODE_ENABLED:Landroid/net/Uri;
 
@@ -51,14 +53,6 @@
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     nop
-    
-    const-string/jumbo p1, "tweaks_disable_notif_sound_screenon"
-
-    invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DISABLE_NOTIF_SOUND:Landroid/net/Uri;
 
     const-string/jumbo p1, "notification_badging"
 
@@ -130,6 +124,18 @@
 
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_APP_LOCKER_SWITCH:Landroid/net/Uri;
 
+    const-string p1, "driving_mode_state"
+
+    iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DRIVING_MODE_STATE:Ljava/lang/String;
+
+    nop
+
+    invoke-static {p1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DRIVING_MODE_STATE_URI:Landroid/net/Uri;
+
     nop
 
     const-string/jumbo p1, "oem_notification_ringtone"
@@ -175,10 +181,6 @@
     const/4 v2, -0x1
 
     const/4 v3, 0x0
-    
-    invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
-    
-    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DISABLE_NOTIF_SOUND:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
@@ -209,6 +211,10 @@
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_APP_LOCKER_SWITCH:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DRIVING_MODE_STATE_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
@@ -355,22 +361,6 @@
     invoke-virtual {v4}, Lcom/android/server/notification/PreferencesHelper;->updateBadgingEnabled()V
 
     :cond_6
-    if-eqz p1, :cond_mw
-
-    iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DISABLE_NOTIF_SOUND:Landroid/net/Uri;
-
-    invoke-virtual {v4, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_mw2
-
-    :cond_mw
-    iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
-
-    invoke-virtual {v4}, Lcom/android/server/notification/NotificationManagerService;->setDisableNotificationSoundScreenOn()V
-
-    :cond_mw2
     if-eqz p1, :cond_7
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_BUBBLES_URI:Landroid/net/Uri;
@@ -502,6 +492,38 @@
     invoke-virtual {v4}, Lcom/android/server/notification/NotificationManagerService$WorkerHandler;->scheduleSendRankingUpdate()V
 
     :cond_f
+    if-eqz p1, :cond_10
+
+    iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DRIVING_MODE_STATE_URI:Landroid/net/Uri;
+
+    invoke-virtual {v4, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_12
+
+    :cond_10
+    iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
+    const-string v5, "driving_mode_state"
+
+    invoke-static {v0, v5, v3, v2}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v5
+
+    if-eqz v5, :cond_11
+
+    move v5, v1
+
+    goto :goto_2
+
+    :cond_11
+    move v5, v3
+
+    :goto_2
+    invoke-static {v4, v5}, Lcom/android/server/notification/NotificationManagerService;->access$2702(Lcom/android/server/notification/NotificationManagerService;Z)Z
+
+    :cond_12
     new-array v4, v1, [I
 
     const/16 v5, 0xa3
@@ -512,9 +534,9 @@
 
     move-result v4
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_14
 
-    if-eqz p1, :cond_10
+    if-eqz p1, :cond_13
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_HEADSET_MODE_URI:Landroid/net/Uri;
 
@@ -522,9 +544,9 @@
 
     move-result v4
 
-    if-eqz v4, :cond_11
+    if-eqz v4, :cond_14
 
-    :cond_10
+    :cond_13
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string/jumbo v5, "oem_notification_ringtone"
@@ -535,8 +557,8 @@
 
     iput v5, v4, Lcom/android/server/notification/NotificationManagerService;->mNotificationHeadsetMode:I
 
-    :cond_11
-    if-eqz p1, :cond_12
+    :cond_14
+    if-eqz p1, :cond_15
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->ESPORT_MODE_ENABLED:Landroid/net/Uri;
 
@@ -544,9 +566,9 @@
 
     move-result v4
 
-    if-eqz v4, :cond_14
+    if-eqz v4, :cond_17
 
-    :cond_12
+    :cond_15
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     const-string v5, "esport_mode_enabled"
@@ -555,17 +577,17 @@
 
     move-result v2
 
-    if-ne v2, v1, :cond_13
+    if-ne v2, v1, :cond_16
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_13
+    :cond_16
     move v1, v3
 
-    :goto_2
-    invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$2702(Lcom/android/server/notification/NotificationManagerService;Z)Z
+    :goto_3
+    invoke-static {v4, v1}, Lcom/android/server/notification/NotificationManagerService;->access$2802(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    :cond_14
+    :cond_17
     return-void
 
     :catchall_0

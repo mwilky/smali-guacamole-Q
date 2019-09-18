@@ -1962,7 +1962,7 @@
 
     iput-boolean v5, p0, Lcom/android/server/UiModeManagerService;->mEnableCarDockLaunch:Z
 
-    const v5, 0x1110095
+    const v5, 0x1110096
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1970,7 +1970,7 @@
 
     iput-boolean v5, p0, Lcom/android/server/UiModeManagerService;->mUiModeLocked:Z
 
-    const v5, 0x1110094
+    const v5, 0x1110095
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 

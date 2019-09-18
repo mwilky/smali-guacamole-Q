@@ -400,7 +400,27 @@
     return-object v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/display/color/ColorDisplayService;)Z
+.method static synthetic access$2600(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$2700(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$2800(Lcom/android/server/display/color/ColorDisplayService;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mNightModeState:Z
@@ -408,7 +428,7 @@
     return v0
 .end method
 
-.method static synthetic access$2602(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+.method static synthetic access$2802(Lcom/android/server/display/color/ColorDisplayService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/display/color/ColorDisplayService;->mNightModeState:Z
@@ -416,30 +436,12 @@
     return p1
 .end method
 
-.method static synthetic access$2702(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/ColorDisplayService$DisplayWhiteBalanceListener;)Lcom/android/server/display/color/ColorDisplayService$DisplayWhiteBalanceListener;
+.method static synthetic access$2902(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/ColorDisplayService$DisplayWhiteBalanceListener;)Lcom/android/server/display/color/ColorDisplayService$DisplayWhiteBalanceListener;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/display/color/ColorDisplayService;->mDisplayWhiteBalanceListener:Lcom/android/server/display/color/ColorDisplayService$DisplayWhiteBalanceListener;
 
     return-object p1
-.end method
-
-.method static synthetic access$2800(Lcom/android/server/display/color/ColorDisplayService;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->isDisplayWhiteBalanceSettingEnabled()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$2900(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/AppSaturationController;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mAppSaturationController:Lcom/android/server/display/color/AppSaturationController;
-
-    return-object v0
 .end method
 
 .method static synthetic access$300(Lcom/android/server/display/color/ColorDisplayService;)I
@@ -450,7 +452,25 @@
     return v0
 .end method
 
-.method static synthetic access$3000(Lcom/android/server/display/color/ColorDisplayService;I)V
+.method static synthetic access$3000(Lcom/android/server/display/color/ColorDisplayService;)Z
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->isDisplayWhiteBalanceSettingEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$3100(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/AppSaturationController;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mAppSaturationController:Lcom/android/server/display/color/AppSaturationController;
+
+    return-object v0
+.end method
+
+.method static synthetic access$3200(Lcom/android/server/display/color/ColorDisplayService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->onUserChanged(I)V
@@ -458,7 +478,7 @@
     return-void
 .end method
 
-.method static synthetic access$3100(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
+.method static synthetic access$3300(Lcom/android/server/display/color/ColorDisplayService;)Lcom/android/server/display/color/TintController;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/color/ColorDisplayService;->mGlobalSaturationTintController:Lcom/android/server/display/color/TintController;
@@ -466,7 +486,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3200(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;Z)V
+.method static synthetic access$3400(Lcom/android/server/display/color/ColorDisplayService;Lcom/android/server/display/color/TintController;Z)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/color/ColorDisplayService;->applyTint(Lcom/android/server/display/color/TintController;Z)V
@@ -474,7 +494,7 @@
     return-void
 .end method
 
-.method static synthetic access$3300(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
+.method static synthetic access$3500(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 1
 
     invoke-virtual {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->getLocalService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -484,7 +504,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3400(Lcom/android/server/display/color/ColorDisplayService;I)V
+.method static synthetic access$3600(Lcom/android/server/display/color/ColorDisplayService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->setColorModeInternal(I)V
@@ -492,7 +512,7 @@
     return-void
 .end method
 
-.method static synthetic access$3500(Lcom/android/server/display/color/ColorDisplayService;)Z
+.method static synthetic access$3700(Lcom/android/server/display/color/ColorDisplayService;)Z
     .locals 1
 
     invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->isDeviceColorManagedInternal()Z
@@ -502,7 +522,7 @@
     return v0
 .end method
 
-.method static synthetic access$3600(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/String;I)Z
+.method static synthetic access$3800(Lcom/android/server/display/color/ColorDisplayService;Ljava/lang/String;I)Z
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/color/ColorDisplayService;->setAppSaturationLevelInternal(Ljava/lang/String;I)Z
@@ -512,30 +532,10 @@
     return v0
 .end method
 
-.method static synthetic access$3700(Lcom/android/server/display/color/ColorDisplayService;)I
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->getTransformCapabilitiesInternal()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic access$3800(Lcom/android/server/display/color/ColorDisplayService;I)Z
-    .locals 1
-
-    invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->setNightDisplayAutoModeInternal(I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method static synthetic access$3900(Lcom/android/server/display/color/ColorDisplayService;)I
     .locals 1
 
-    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->getNightDisplayAutoModeRawInternal()I
+    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->getTransformCapabilitiesInternal()I
 
     move-result v0
 
@@ -552,7 +552,27 @@
     return v0
 .end method
 
-.method static synthetic access$4000(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
+.method static synthetic access$4000(Lcom/android/server/display/color/ColorDisplayService;I)Z
+    .locals 1
+
+    invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->setNightDisplayAutoModeInternal(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$4100(Lcom/android/server/display/color/ColorDisplayService;)I
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/display/color/ColorDisplayService;->getNightDisplayAutoModeRawInternal()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$4200(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->setNightDisplayCustomStartTimeInternal(Landroid/hardware/display/Time;)Z
@@ -562,7 +582,7 @@
     return v0
 .end method
 
-.method static synthetic access$4100(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
+.method static synthetic access$4300(Lcom/android/server/display/color/ColorDisplayService;Landroid/hardware/display/Time;)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->setNightDisplayCustomEndTimeInternal(Landroid/hardware/display/Time;)Z
@@ -572,7 +592,7 @@
     return v0
 .end method
 
-.method static synthetic access$4200(Lcom/android/server/display/color/ColorDisplayService;Z)Z
+.method static synthetic access$4400(Lcom/android/server/display/color/ColorDisplayService;Z)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->setDisplayWhiteBalanceSettingEnabled(Z)Z
@@ -582,7 +602,7 @@
     return v0
 .end method
 
-.method static synthetic access$4300(Lcom/android/server/display/color/ColorDisplayService;Ljava/io/PrintWriter;)V
+.method static synthetic access$4500(Lcom/android/server/display/color/ColorDisplayService;Ljava/io/PrintWriter;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/display/color/ColorDisplayService;->dumpInternal(Ljava/io/PrintWriter;)V
@@ -1520,7 +1540,7 @@
 
     move-result-object v1
 
-    const v2, 0x11100b6
+    const v2, 0x11100b7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1531,7 +1551,7 @@
     or-int/lit8 v0, v0, 0x2
 
     :cond_1
-    const v2, 0x11100b7
+    const v2, 0x11100b8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
