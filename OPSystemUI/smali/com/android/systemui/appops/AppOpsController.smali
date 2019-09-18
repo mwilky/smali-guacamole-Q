@@ -9,8 +9,3 @@
         Lcom/android/systemui/appops/AppOpsController$Callback;
     }
 .end annotation
-
-
-# virtual methods
-.method public abstract addCallback([ILcom/android/systemui/appops/AppOpsController$Callback;)V
-.end method

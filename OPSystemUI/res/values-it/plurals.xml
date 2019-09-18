@@ -61,8 +61,8 @@
         <item quantity="one">%d dispositivo</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">tra %d minuti</item>
-        <item quantity="one">tra %d minuto</item>
+        <item quantity="other">tra %d min.</item>
+        <item quantity="one">tra %d min.</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d ore</item>

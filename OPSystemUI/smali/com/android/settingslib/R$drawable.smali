@@ -30,12 +30,12 @@
 
 .field public static final op_ic_account_circle:I = 0x7f0808a3
 
-.field public static final op_ic_wifi_signal_0:I = 0x7f0808cd
+.field public static final op_ic_wifi_signal_0:I = 0x7f0808cf
 
-.field public static final op_ic_wifi_signal_1:I = 0x7f0808ce
+.field public static final op_ic_wifi_signal_1:I = 0x7f0808d0
 
-.field public static final op_ic_wifi_signal_2:I = 0x7f0808cf
+.field public static final op_ic_wifi_signal_2:I = 0x7f0808d1
 
-.field public static final op_ic_wifi_signal_3:I = 0x7f0808d0
+.field public static final op_ic_wifi_signal_3:I = 0x7f0808d2
 
-.field public static final op_ic_wifi_signal_4:I = 0x7f0808d1
+.field public static final op_ic_wifi_signal_4:I = 0x7f0808d3

@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Nadiskonekta ang Ethernet.</string>
     <string name="accessibility_face_dialog_face_icon">Face icon</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Icon ng fingerprint</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Lugar ng mensahe ng tulong</string>
     <string name="accessibility_gps_acquiring">Kumukuha ng GPS.</string>
     <string name="accessibility_gps_enabled">Pinapagana ang GPS.</string>
     <string name="accessibility_hide">Itago</string>
@@ -657,8 +657,8 @@ Kapag nakapag-cool down na ang iyong telepono, gagana na ito nang normal."</stri
     <string name="hotspot_apm_message">Hindi makakonekta sa mga mobile na network habang ang pamamaraang Airplane ay gumagana. Huwag paganahin ang pamamaraang Airplane at subukin muli.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Magkabit ng isang SIM card para magamit ang Mobile Hotspot at iba pang opsyon sa pag-tether</string>
     <string name="hotspot_operator_dialog_nosim_title">Walang SIM card</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Hindi ka naka-subscribe sa pag-tether ng Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Nagka-error sa pag-tether ng Wi-Fi</string>
     <string name="ime_security_warning">Maaaring magawa ng pamamaraan ng pag-input na ito na kolektahin ang lahat ng tekstong iyong tina-type, kabilang ang personal na data katulad ng mga password at mga numero ng credit card. Nagmumula ito sa app na %1$s. Gamitin ang pamamaraan ng pag-input na ito?</string>
     <string name="immediately_destroy_activities">Huwag magtago ng mga aktibidad</string>
     <string name="immediately_destroy_activities_summary">Burahin ang aktibidad kapag iniwan na ito ng user</string>
@@ -1104,7 +1104,16 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="op_earphone_device">I-TAP PARA IPARES</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Mag-swipe pababa para sa emergency service</string>
-    <string name="op_quick_settings_night_display_label">Pamamaraan sa gabi</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Mahalaga</string>
+    <string name="op_notification_channel_summary_low">Mga hindi gaanong mahalagang notification na walang anumang tunog o pag-vibrate.</string>
+    <string name="op_notification_section_header_gentle">Iba pang notification</string>
+    <string name="op_notification_silence_title">Iba pa</string>
+    <string name="op_quick_settings_night_display_label">Mode sa gabi</string>
     <string name="op_quick_settings_night_display_summary_off">Ang Mode sa Gabi ay hindi gumagana, i-tap upang buksan ito</string>
     <string name="op_quick_settings_night_display_summary_on">Ang Mode sa Gabi ay gumagana, i-tap upang patayin ito</string>
     <string name="open_saver_setting_action">Mga Setting</string>
@@ -1116,25 +1125,25 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="osu_sign_up_failed">Hindi makumpleto ang pag-sign up. I-tap para subukang muli.</string>
     <string name="other">Iba pa</string>
     <string name="output_calls_title">Output ng tawag sa telepono</string>
-    <string name="output_chooser_empty_hint">Walang konektadong aparato</string>
+    <string name="output_chooser_empty_hint">Walang nakakonektang device</string>
     <string name="output_none_found">Walang nakitang device</string>
     <string name="output_none_found_service_off">Walang nakitang device. Subukang i-on ang %1$s</string>
     <string name="output_service_bt">Bluetooth</string>
     <string name="output_service_bt_wifi">Bluetooth at Wi-Fi</string>
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Output ng media</string>
-    <string name="overheat_dialog_orange_button">I-execute ngayon</string>
-    <string name="overheat_dialog_orange_message">"Isasagawa ang mga sumusunod na operasyon para bumaba ang temperatura
-1.Bawasan ang liwanag
-2.I-off ang hotspot
-3.I-off ang flashlight"</string>
+    <string name="overheat_dialog_orange_button">Isakatuparan ngayon</string>
+    <string name="overheat_dialog_orange_message">"Isasagawa ang mga sumusunod na hakbang para mapababa ang temperatura
+1. Babawasan ang liwanag
+2.Io-off ang hotspot
+3.Io-off ang flashlight"</string>
     <string name="overheat_dialog_purple_button">I-off ngayon</string>
-    <string name="overheat_dialog_purple_message">Io-off ang telepono pagkalipas ng 5 segundo</string>
-    <string name="overheat_dialog_red_message">Iki-clear ang lahat ng proseso ng application upang mapababa ang temperatura</string>
-    <string name="overheat_dialog_title">Napakataas ng temperatura ng telepono mo</string>
-    <string name="overheat_notification_alert">Napakataas ng temperatura ng telepono mo, at ini-off ang mga function na malakas kumain ng baterya para mapababa ang temperatura</string>
-    <string name="overheat_notification_resume">Naibalik ang temperatura ng telepono at magagamit nang normal ang telepono</string>
-    <string name="overheat_notification_title_resume">Naibalik ang temperatura ng telepono</string>
+    <string name="overheat_dialog_purple_message">Io-off ang telepono pagkatapos ng 5 segundo</string>
+    <string name="overheat_dialog_red_message">Buburahin ang lahat ng proseso para mapababa ang temperatura</string>
+    <string name="overheat_dialog_title">Masyadong mataas ang temperatura ng iyong telepono</string>
+    <string name="overheat_notification_alert">Masyadong mataas ang temperatura ng iyong telepono, at naka-off ang function para sa malakas na paggamit ng power para mapababa ang temperatura</string>
+    <string name="overheat_notification_resume">Naitama na ang temperatura ng telepono at magagamit na ito nang normal</string>
+    <string name="overheat_notification_title_resume">Naitama na ang temperatura ng telepono</string>
     <string name="overheat_toast_content">Mataas ang temperatura ng telepono, hindi inirerekomendang gamitin ang feature na ito</string>
     <string name="overlay_display_devices_title">I-simulate, ika-2 display</string>
     <string name="overview">Pangkalahatang-ideya</string>
@@ -1216,11 +1225,6 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="prevent_view_top_tag_cancel2">Mangyaring sundin ang mga bilog sa screen at tapikin ito upang puwersahin na tumigil sa pocket mode.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">camera</string>
     <string name="privacy_type_location">lokasyon</string>
     <string name="privacy_type_microphone">mikropono</string>
@@ -1329,7 +1333,7 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="quick_settings_nfc_off">Naka-disable ang NFC</string>
     <string name="quick_settings_nfc_on">Naka-enable ang NFC</string>
     <string name="quick_settings_night_display_label">Night Light</string>
-    <string name="quick_settings_night_mode_label">Pamamaraan sa gabi</string>
+    <string name="quick_settings_night_mode_label">Mode sa gabi</string>
     <string name="quick_settings_night_secondary_label_on_at">Mao-on sa ganap na %s</string>
     <string name="quick_settings_night_secondary_label_on_at_sunset">Mao-on sa sunset</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Hanggang sunrise</string>
@@ -1338,9 +1342,9 @@ Nakakonekta ka rin sa isang VPN, na may kakayahang subaybayan ang iyong aktibida
     <string name="quick_settings_op_car_mode_dnd_summary_off">Naka-off ang car mode dnd, i-tap para i-on</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Naka-on ang car mode dnd, i-tap para i-off</string>
     <string name="quick_settings_power_saving_label">Saver ng baterya</string>
-    <string name="quick_settings_read_mode_label">Mode sa Pagbabasa</string>
-    <string name="quick_settings_read_mode_summary_off">Ang Mode sa Pagbabasa ay hindi gumagana, i-tap upang buksan ito</string>
-    <string name="quick_settings_read_mode_summary_on">Ang Mode sa Pagbabasa ay gumagana, i-tap upang patayin ito</string>
+    <string name="quick_settings_read_mode_label">Reading mode</string>
+    <string name="quick_settings_read_mode_summary_off">Ang reading mode ay hindi gumagana, i-tap upang buksan ito</string>
+    <string name="quick_settings_read_mode_summary_on">Ang reading mode ay gumagana, i-tap upang patayin ito</string>
     <string name="quick_settings_reset_confirmation_button">Itago</string>
     <string name="quick_settings_reset_confirmation_message">Lalabas itong muli sa susunod na pagkakataon na i-on mo ito sa mga setting.</string>
     <string name="quick_settings_reset_confirmation_title">Itago ang %1$s?</string>
@@ -1379,7 +1383,7 @@ Pangtipid sa baterya"</string>
     <string name="recents_deep_clean_option">Malalim na paglinis</string>
     <string name="recents_empty_no_apps_open">Walang bukas na aplikasyon</string>
     <string name="recents_empty_recently_closed">Kamakailan na sinaran na apps</string>
-    <string name="recents_normal_clean_description">I-clear ang listahan ng task at cache nang hindi kini-clear ang mga proseso sa background.</string>
+    <string name="recents_normal_clean_description">I-clear ang listahan ng gawain at cache nang hindi kini-clear ang mga proseso sa background.</string>
     <string name="recents_normal_clean_option">Normal na malinaw</string>
     <string name="recents_option_note">Maaari mo itong baguhin sa Pantugma -> Pasulong.</string>
     <string name="recents_option_title">Aling paraan ang mas nais mo</string>

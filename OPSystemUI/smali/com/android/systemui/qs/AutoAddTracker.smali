@@ -272,8 +272,21 @@
 
 # virtual methods
 .method public isAdded(Ljava/lang/String;)Z
-    .locals 0
+    .locals 1
 
+    const-string v0, "night"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/qs/AutoAddTracker;->mAutoAdded:Landroid/util/ArraySet;
 
     invoke-virtual {p0, p1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z

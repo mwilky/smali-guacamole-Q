@@ -695,7 +695,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_8
 
     iget-object v8, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -709,9 +709,29 @@
 
     if-nez v8, :cond_6
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_8
 
     :cond_6
+    iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
+
+    invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$900(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/content/Context;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
+
+    invoke-static {v1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$1000(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/app/IActivityManager;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lcom/android/systemui/pip/phone/PipUtils;->getTopPinnedActivity(Landroid/content/Context;Landroid/app/IActivityManager;)Landroid/util/Pair;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    if-eqz p1, :cond_7
+
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$900(Lcom/android/systemui/pip/phone/PipTouchHandler;)Landroid/content/Context;
@@ -736,6 +756,7 @@
 
     invoke-static {p1, v1}, Lcom/android/internal/os/logging/MetricsLoggerWrapper;->logPictureInPictureDismissByDrag(Landroid/content/Context;Landroid/util/Pair;)V
 
+    :cond_7
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$600(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipMotionHelper;
@@ -766,18 +787,18 @@
 
     return v3
 
-    :cond_7
+    :cond_8
     invoke-virtual {p1}, Lcom/android/systemui/pip/phone/PipTouchState;->isDragging()Z
 
     move-result p1
 
     const/4 v6, 0x0
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_a
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -785,11 +806,11 @@
 
     move-result p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_a
 
     iget-boolean p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->mStartedOnLeft:Z
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_9
 
     iget p1, v0, Landroid/graphics/PointF;->x:F
 
@@ -797,12 +818,12 @@
 
     goto :goto_4
 
-    :cond_8
+    :cond_9
     iget p1, v0, Landroid/graphics/PointF;->x:F
 
     cmpl-float p1, p1, v5
 
-    :cond_9
+    :cond_a
     :goto_4
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -810,20 +831,20 @@
 
     move-result p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_b
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1, v1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$700(Lcom/android/systemui/pip/phone/PipTouchHandler;Z)V
 
-    :cond_a
+    :cond_b
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$1500(Lcom/android/systemui/pip/phone/PipTouchHandler;)I
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -867,7 +888,7 @@
 
     goto :goto_5
 
-    :cond_b
+    :cond_c
     new-instance p1, Lcom/android/systemui/pip/phone/PipTouchHandler$3$1;
 
     invoke-direct {p1, p0}, Lcom/android/systemui/pip/phone/PipTouchHandler$3$1;-><init>(Lcom/android/systemui/pip/phone/PipTouchHandler$3;)V
@@ -875,7 +896,7 @@
     move-object v12, p1
 
     :goto_5
-    if-eqz v4, :cond_c
+    if-eqz v4, :cond_d
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -905,7 +926,7 @@
 
     goto/16 :goto_6
 
-    :cond_c
+    :cond_d
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$600(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipMotionHelper;
@@ -928,14 +949,14 @@
 
     goto/16 :goto_6
 
-    :cond_d
+    :cond_e
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$500(Lcom/android/systemui/pip/phone/PipTouchHandler;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_f
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -957,7 +978,7 @@
 
     goto :goto_6
 
-    :cond_e
+    :cond_f
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$1500(Lcom/android/systemui/pip/phone/PipTouchHandler;)I
@@ -966,7 +987,7 @@
 
     const/4 v0, 0x2
 
-    if-eq p1, v0, :cond_11
+    if-eq p1, v0, :cond_12
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -978,7 +999,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_f
+    if-eqz p1, :cond_10
 
     iget-object p0, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -990,7 +1011,7 @@
 
     goto :goto_6
 
-    :cond_f
+    :cond_10
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$2300(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipTouchState;
@@ -1001,7 +1022,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_10
+    if-nez p1, :cond_11
 
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
@@ -1039,7 +1060,7 @@
 
     goto :goto_6
 
-    :cond_10
+    :cond_11
     iget-object p0, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p0}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$2300(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipTouchState;
@@ -1050,7 +1071,7 @@
 
     goto :goto_6
 
-    :cond_11
+    :cond_12
     iget-object p1, p0, Lcom/android/systemui/pip/phone/PipTouchHandler$3;->this$0:Lcom/android/systemui/pip/phone/PipTouchHandler;
 
     invoke-static {p1}, Lcom/android/systemui/pip/phone/PipTouchHandler;->access$1200(Lcom/android/systemui/pip/phone/PipTouchHandler;)Lcom/android/systemui/pip/phone/PipMenuActivityController;

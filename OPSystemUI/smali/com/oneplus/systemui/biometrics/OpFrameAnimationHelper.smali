@@ -535,7 +535,7 @@
 .end method
 
 .method public stop()V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->mFrames:[I
 
@@ -568,15 +568,17 @@
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->mLoop:Z
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->runnable:Ljava/lang/Runnable;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->mCallback:Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper$Callbacks;
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->mAnimationView:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->runnable:Ljava/lang/Runnable;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    iget-object v1, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->mAnimationView:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFrameAnimationHelper;->mAnimationView:Landroid/widget/ImageView;
 

@@ -411,12 +411,17 @@
 
     if-nez v1, :cond_3
 
-    move v0, v3
+    move v1, v3
+
+    goto :goto_4
 
     :cond_3
+    move v1, v0
+
+    :goto_4
     invoke-virtual {p4, p2}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setUseIncreasedCollapsedHeight(Z)V
 
-    invoke-virtual {p4, v0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setUseIncreasedHeadsUpHeight(Z)V
+    invoke-virtual {p4, v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setUseIncreasedHeadsUpHeight(Z)V
 
     invoke-virtual {p4, p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
@@ -454,11 +459,99 @@
 
     check-cast p2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
-    invoke-interface {p2, p1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->needsRedaction(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
+    invoke-interface {p2}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->isSecure()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    const-class p2, Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
+
+    invoke-static {p2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/android/systemui/statusbar/notification/NotificationEntryManager;
+
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/NotificationEntryManager;->getNotificationData()Lcom/android/systemui/statusbar/notification/collection/NotificationData;
+
+    move-result-object p2
+
+    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->key:Ljava/lang/String;
+
+    invoke-virtual {p2, v1}, Lcom/oneplus/systemui/statusbar/notification/collection/OpNotificationData;->isLocked(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    move p2, v3
+
+    goto :goto_5
+
+    :cond_6
+    move p2, v0
+
+    :goto_5
+    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->notification:Landroid/service/notification/StatusBarNotification;
+
+    invoke-virtual {v1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/app/Notification;->visibility:I
+
+    if-eq v1, v3, :cond_7
+
+    move v1, v3
+
+    goto :goto_6
+
+    :cond_7
+    move v1, v0
+
+    :goto_6
+    const-class v2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+
+    invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+
+    invoke-interface {v2, p1}, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;->needsRedaction(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     move-result p1
 
-    invoke-virtual {p4, p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setNeedsRedaction(Z)V
+    if-nez p1, :cond_9
+
+    if-eqz p2, :cond_8
+
+    if-eqz v1, :cond_8
+
+    goto :goto_7
+
+    :cond_8
+    move p1, v0
+
+    goto :goto_8
+
+    :cond_9
+    :goto_7
+    move p1, v3
+
+    :goto_8
+    if-nez p1, :cond_a
+
+    if-eqz p2, :cond_b
+
+    :cond_a
+    move v0, v3
+
+    :cond_b
+    invoke-virtual {p4, v0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setNeedsRedaction(Z)V
+
+    invoke-virtual {p4, p2}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->setContentHidden(Z)V
 
     invoke-virtual {p4}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->inflateViews()V
 

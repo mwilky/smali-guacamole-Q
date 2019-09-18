@@ -87,8 +87,8 @@
         <item quantity="many">%d устройств</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">через %d мин.</item>
-        <item quantity="one">через %d минуту</item>
+        <item quantity="other">через %d мин</item>
+        <item quantity="one">через %d мин</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d часа</item>

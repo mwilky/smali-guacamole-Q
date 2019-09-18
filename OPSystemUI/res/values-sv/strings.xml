@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet har kopplats från.</string>
     <string name="accessibility_face_dialog_face_icon">Ansiktsikon</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikon för fingeravtryck</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Område för hjälpmeddelanden</string>
     <string name="accessibility_gps_acquiring">Tar emot GPS.</string>
     <string name="accessibility_gps_enabled">GPS aktiverad.</string>
     <string name="accessibility_hide">Dölj</string>
@@ -657,8 +657,8 @@ Mobilen fungerar som vanligt när den har svalnat."</string>
     <string name="hotspot_apm_message">Det går inte att ansluta till mobila nätverk när flygplansläget är aktiverat. Inaktivera flygplansläget och försök igen.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Sätt i ett SIM-kort för att använda Mobil hotspot och andra alternativ för internetdelning</string>
     <string name="hotspot_operator_dialog_nosim_title">Inget SIM-kort</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Du har ingen prenumeration på internetdelning via Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Fel vid interenetdelning via Wi-Fi</string>
     <string name="ime_security_warning">Den här inmatningsmetoden kan samla all text som du skriver, inklusive personliga uppgifter som lösenord och kreditkortsnummer. Den kommer från appen %1$s. Vill du använda inmatningsmetoden?</string>
     <string name="immediately_destroy_activities">Behåll inte aktiviteter</string>
     <string name="immediately_destroy_activities_summary">Förstör aktiviteter så fort användaren lämnar dem</string>
@@ -1102,8 +1102,17 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="op_earphone_connected_fail">Det gick inte att para ihop. Kontrollera status för headset och Bluetooth.</string>
     <string name="op_earphone_connected_success">Ihopparad. Tryck för att ställa in fler.</string>
     <string name="op_earphone_device">TRYCK FÖR ATT PARA IHOP</string>
-    <string name="op_earphone_title">OnePlus Bullets trådlösa</string>
+    <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Svep nedåt för nödfallstjänster</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Viktigt</string>
+    <string name="op_notification_channel_summary_low">Mindre viktiga aviseringar utan ljud eller vibration.</string>
+    <string name="op_notification_section_header_gentle">Övriga aviseringar</string>
+    <string name="op_notification_silence_title">Annan</string>
     <string name="op_quick_settings_night_display_label">Nattläge</string>
     <string name="op_quick_settings_night_display_summary_off">Nattläge är av. Tryck för att sätta på</string>
     <string name="op_quick_settings_night_display_summary_on">Nattläge är på. Tryck för att stänga av</string>
@@ -1132,7 +1141,7 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="overheat_dialog_purple_message">Telefonen kommer att stängas av efter 5 sekunder</string>
     <string name="overheat_dialog_red_message">Kommer att rensa alla programprocesser för att sänka temperaturen</string>
     <string name="overheat_dialog_title">Telefonens temperatur är för hög</string>
-    <string name="overheat_notification_alert">Telefonens temperatur är för hög och funktioner med hög energiförbrukning har stängts av för att sänka temperaturen</string>
+    <string name="overheat_notification_alert">Telefonens temperatur är för hög och en funktion med hög energiförbrukning har stängts av för att sänka temperaturen</string>
     <string name="overheat_notification_resume">Telefonens temperatur har återställts och telefonen kan användas normalt</string>
     <string name="overheat_notification_title_resume">Telefonens temperatur har återställts</string>
     <string name="overheat_toast_content">Telefonen är i ett tillstånd med hög temperatur. Vi rekommenderar att den här funktionen inte används</string>
@@ -1216,11 +1225,6 @@ Du är även ansluten till ett VPN som kan övervaka nätverksaktivitet."</strin
     <string name="prevent_view_top_tag_cancel2">Följ cirklarna på skärmen och tryck på dem för att tvångsavsluta fickläge.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_location">plats</string>
     <string name="privacy_type_microphone">mikrofon</string>

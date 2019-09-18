@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final OP_BRICK_MODE_STATUS_URI:Landroid/net/Uri;
+.field private final mOpBrickModeStatusUri:Landroid/net/Uri;
 
 .field final synthetic this$0:Lcom/oneplus/scene/OpSceneModeObserver;
 
@@ -34,7 +34,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->OP_BRICK_MODE_STATUS_URI:Landroid/net/Uri;
+    iput-object p1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->mOpBrickModeStatusUri:Landroid/net/Uri;
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->OP_BRICK_MODE_STATUS_URI:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->mOpBrickModeStatusUri:Landroid/net/Uri;
 
     const/4 v2, 0x0
 
@@ -92,13 +92,13 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->OP_BRICK_MODE_STATUS_URI:Landroid/net/Uri;
+    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->mOpBrickModeStatusUri:Landroid/net/Uri;
 
     invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     :cond_0
     const/4 v1, -0x2
@@ -121,7 +121,7 @@
 
     move-result v1
 
-    if-eq v1, v0, :cond_1
+    if-eq v1, v0, :cond_2
 
     iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->this$0:Lcom/oneplus/scene/OpSceneModeObserver;
 
@@ -148,6 +148,39 @@
     invoke-virtual {v1, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->onBrickModeChanged(Z)V
 
     :cond_1
+    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->this$0:Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-static {v1}, Lcom/oneplus/scene/OpSceneModeObserver;->access$200(Lcom/oneplus/scene/OpSceneModeObserver;)Lcom/android/systemui/statusbar/NavigationBarController;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->this$0:Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-static {v1}, Lcom/oneplus/scene/OpSceneModeObserver;->access$200(Lcom/oneplus/scene/OpSceneModeObserver;)Lcom/android/systemui/statusbar/NavigationBarController;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/NavigationBarController;->getDefaultNavigationBarFragment()Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->this$0:Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-static {v1}, Lcom/oneplus/scene/OpSceneModeObserver;->access$200(Lcom/oneplus/scene/OpSceneModeObserver;)Lcom/android/systemui/statusbar/NavigationBarController;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/NavigationBarController;->getDefaultNavigationBarFragment()Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->onBrickModeChanged(Z)V
+
+    :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -969,15 +969,13 @@
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/keyguard/KeyguardClockSwitch;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     :cond_5
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardStatusView;->mKeyguardSlice:Lcom/android/keyguard/KeyguardSliceView;
 
-    if-eqz v0, :cond_6
+    if-eqz p0, :cond_6
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/android/keyguard/KeyguardSliceView;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/android/keyguard/KeyguardSliceView;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     :cond_6
-    invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->loadBottomMargin()V
-
     return-void
 .end method
 
@@ -1155,7 +1153,7 @@
     goto :goto_0
 
     :cond_0
-    sget v3, Lcom/android/keyguard/R$dimen;->widget_big_font_size:I
+    sget v3, Lcom/android/keyguard/R$dimen;->oneplus_widget_big_font_size:I
 
     :goto_0
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1175,7 +1173,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/android/keyguard/R$dimen;->widget_label_font_size:I
+    sget v3, Lcom/android/keyguard/R$dimen;->oneplus_widget_label_font_size:I
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1192,19 +1190,39 @@
 
     invoke-virtual {p0}, Landroid/widget/GridLayout;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p0
+    move-result-object v2
 
-    sget v2, Lcom/android/keyguard/R$dimen;->widget_label_font_size:I
+    sget v3, Lcom/android/keyguard/R$dimen;->oneplus_widget_label_font_size:I
 
-    invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result p0
+    move-result v2
 
-    int-to-float p0, p0
+    int-to-float v2, v2
 
-    invoke-virtual {v0, v1, p0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersionFont()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->getMclTypeface(I)Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v1, p0, Lcom/android/keyguard/KeyguardStatusView;->mChargingInfo:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
     :cond_3
+    invoke-direct {p0}, Lcom/android/keyguard/KeyguardStatusView;->loadBottomMargin()V
+
     return-void
 .end method
 

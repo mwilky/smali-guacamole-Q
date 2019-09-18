@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Rozłączono z siecią Ethernet.</string>
     <string name="accessibility_face_dialog_face_icon">Ikona twarzy</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikona odcisku palca</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Obszar wiadomości pomocy</string>
     <string name="accessibility_gps_acquiring">Pobieranie danych GPS.</string>
     <string name="accessibility_gps_enabled">GPS włączony.</string>
     <string name="accessibility_hide">Ukryj</string>
@@ -200,8 +200,8 @@
     <string name="accessibility_quick_settings_open_details">Otwórz szczegóły.</string>
     <string name="accessibility_quick_settings_open_settings">Otwórz ustawienia: %s.</string>
     <string name="accessibility_quick_settings_page">Strona %1$d z %2$d</string>
-    <string name="accessibility_quick_settings_power_saving_changed_off">Tryb oszczędzania energii jest wyłączony.</string>
-    <string name="accessibility_quick_settings_power_saving_changed_on">Tryb oszczędzania energii jest włączony.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">Tryb Oszczędzanie baterii jest wyłączony.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_on">Tryb Oszczędzanie baterii jest włączony.</string>
     <string name="accessibility_quick_settings_rotation">Autoobracanie ekranu</string>
     <string name="accessibility_quick_settings_rotation_value">Tryb: %s</string>
     <string name="accessibility_quick_settings_sensor_privacy_changed_off">Wyłączono ustawienia prywatności czujników.</string>
@@ -313,7 +313,7 @@
     <string name="battery_low_percent_format_hybrid_short">Pozostało %1$s, jeszcze około %2$s</string>
     <string name="battery_low_percent_format_saver_started">Pozostało %s. Oszczędzanie baterii jest włączone.</string>
     <string name="battery_low_title">Bateria może się wkrótce wyczerpać</string>
-    <string name="battery_low_warning">zostało %s, włącz Oszczędzanie energii, by wydłużyć czas użytkowania</string>
+    <string name="battery_low_warning">zostało %s, włącz tryb Oszczędzanie baterii, aby wydłużyć czas użytkowania</string>
     <string name="battery_low_why">Ustawienia</string>
     <string name="battery_panel_title">Zużycie baterii</string>
     <string name="battery_saver_confirmation_ok">Włącz</string>
@@ -323,7 +323,7 @@
     <string name="battery_saver_notification_text">Zmniejsza wydajność i ogranicza dane w tle</string>
     <string name="battery_saver_notification_title">Oszczędzanie baterii jest włączone</string>
     <string name="battery_saver_start_action">Włączyć Oszczędzanie baterii?</string>
-    <string name="battery_usage_extanded">Oszczędzanie baterii może wydłużyć czas użytkowania o ok. %s, w zależności od sposobu korzystania</string>
+    <string name="battery_usage_extanded">Tryb Oszczędzanie baterii może wydłużyć czas użytkowania o ok. %s, w zależności od sposobu korzystania</string>
     <string name="battery_usage_remaining">Powinno wystarczyć na %s, w zależności od sposobu korzystania. Powoduje obniżenie wydajności i użycia danych w tle.</string>
     <string name="biometric_dialog_confirm">Potwierdź</string>
     <string name="biometric_dialog_empty_space_description">Pusty obszar, kliknij, by anulować uwierzytelnianie</string>
@@ -656,8 +656,8 @@ Gdy temperatura się obniży, telefon będzie działał normalnie."</string>
     <string name="hotspot_apm_message">Nie można połączyć się z sieciami komórkowymi przy włączonym trybie samolotowym. Wyłącz tryb samolotowy i spróbuj ponownie.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Włóż kartę SIM, aby korzystać z mobilnego hotspota lub innych opcji połączeń</string>
     <string name="hotspot_operator_dialog_nosim_title">Brak karty SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Nie masz subskrypcji połączeń Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Błąd połączenia Wi-Fi</string>
     <string name="ime_security_warning">Ta metoda wprowadzania tekstu może gromadzić cały wpisywany tekst, w tym dane osobowe takie jak hasła czy numery kart kredytowych. Pochodzi ona z aplikacji %1$s. Użyć jej?</string>
     <string name="immediately_destroy_activities">Nie zachowuj działań</string>
     <string name="immediately_destroy_activities_summary">Przerwij każde działanie, gdy użytkownik je porzuci</string>
@@ -792,7 +792,7 @@ priorytetowe"</string>
     <string name="keyguard_plugged_in">%s • Ładowanie</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Szybkie ładowanie</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • Wolne ładowanie</string>
-    <string name="keyguard_plugged_in_charging_warp">%s •ładowanie Warp</string>
+    <string name="keyguard_plugged_in_charging_warp">%s • Superszybkie ładowanie</string>
     <string name="keyguard_plugged_in_wireless">%s • Ładowanie bezprzewodowe</string>
     <string name="keyguard_sim_error_message_short">Nieprawidłowa karta.</string>
     <string name="keyguard_sim_locked_message">Karta SIM jest zablokowana.</string>
@@ -1029,8 +1029,8 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="music_controls_no_title">Bez tytułu</string>
     <string name="nav_bar">Pasek nawigacji</string>
     <string name="nav_bar_default">(wartość domyślna)</string>
-    <string name="nav_bar_guide_positive">ZROZUMIAŁE</string>
-    <string name="nav_bar_guide_title">Przesuń palcem z dołu w górę, aby wyświetlić pasek nawigacji. Stuknij, aby był wyświetlany zawsze</string>
+    <string name="nav_bar_guide_positive">ROZUMIEM</string>
+    <string name="nav_bar_guide_title">Przesuń palcem z dołu w górę, aby wyświetlić pasek nawigacyjny. Stuknij, aby był wyświetlany zawsze</string>
     <string name="nav_bar_layout">Układ</string>
     <string name="no_application">Brak</string>
     <string name="no_auto_saver_action">Nie</string>
@@ -1061,7 +1061,7 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="notification_channel_tv_pip">Obraz w obrazie</string>
     <string name="notification_channel_unsilenced">Te powiadomienia będą Cię ostrzegać</string>
     <string name="notification_content_disable_button">Dotknij, aby go wyłączyć</string>
-    <string name="notification_content_disable_button_in_nav">Pasek nawigacji jest wyłączony, gdy zablokowane są przyciski sprzętowe</string>
+    <string name="notification_content_disable_button_in_nav">Pasek nawigacyjny jest wyłączony, gdy zablokowane są przyciski sprzętowe</string>
     <string name="notification_content_gesture_nav_available">Otwórz Ustawienia, by zaktualizować nawigację w systemie</string>
     <string name="notification_content_system_nav_changed">Nawigacja w systemie została zaktualizowana. Aby wprowadzić zmiany, otwórz Ustawienia.</string>
     <string name="notification_delegate_header">Powiadomienie w zastępstwie</string>
@@ -1089,7 +1089,7 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="oneplus_threekey_navigation_disturb_changed">Tryb „Nie przeszkadzać” się zmienił!</string>
     <string name="oneplus_threekey_navigation_next">DALEJ</string>
     <string name="oneplus_threekey_navigation_silence">Całkowita cisza</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Zmienił się suwak powiadomień!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Zmieniła się funkcja Alert slider!</string>
     <string name="oneplus_threekey_navigation_sound">Zezwalaj na wszystkie dźwięki</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Włącz za pomocą przełącznika powyżej</string>
     <string name="oneplus_threekey_navigation_vibration">Tylko wibracje</string>
@@ -1099,10 +1099,19 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="ongoing_privacy_dialog_separator">", "</string>
     <string name="op_earphone_connect">Parowanie...</string>
     <string name="op_earphone_connected_fail">Nie udało się sparować. Możesz sprawdzić status słuchawek i Bluetooth.</string>
-    <string name="op_earphone_connected_success">Sparowano. Dotknij, aby ustawić więcej.</string>
+    <string name="op_earphone_connected_success">Sparowano. Dotknij, aby ustawić więcej opcji.</string>
     <string name="op_earphone_device">DOTKNIJ, ABY SPAROWAĆ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Przesuń w dół, aby skontaktować się ze służbami ratunkowymi</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Ważne</string>
+    <string name="op_notification_channel_summary_low">Mniej ważne powiadomienia bez jakiegokolwiek dźwięku lub wibracji.</string>
+    <string name="op_notification_section_header_gentle">Inne powiadomienia</string>
+    <string name="op_notification_silence_title">Inne</string>
     <string name="op_quick_settings_night_display_label">Tryb nocny</string>
     <string name="op_quick_settings_night_display_summary_off">Tryb nocny jest wyłączony. Dotknij, aby włączyć</string>
     <string name="op_quick_settings_night_display_summary_on">Tryb nocny jest włączony. Dotknij, aby wyłączyć</string>
@@ -1128,13 +1137,13 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
 2.Wyłączenie hotspotu
 3.Wyłączenie latarki"</string>
     <string name="overheat_dialog_purple_button">Wyłącz teraz</string>
-    <string name="overheat_dialog_purple_message">Telefon wyłączy się po 5 sekundach</string>
-    <string name="overheat_dialog_red_message">Procesy aplikacji zostaną wyczyszczone, aby obniżyć temperaturę telefonu</string>
+    <string name="overheat_dialog_purple_message">Telefon zostanie wyłączony po 5 sekundach</string>
+    <string name="overheat_dialog_red_message">Procesy aplikacji zostaną wyczyszczone, aby obniżyć temperaturę</string>
     <string name="overheat_dialog_title">Temperatura telefonu jest zbyt wysoka</string>
     <string name="overheat_notification_alert">Temperatura telefonu jest zbyt wysoka. Aby obniżyć temperaturę, wyłączono funkcję wysokiego zużycia energii</string>
-    <string name="overheat_notification_resume">Przywrócono prawidłową temperaturę. Możesz korzystać z telefonu w trybie normalnym</string>
+    <string name="overheat_notification_resume">Prawidłowa temperatura telefonu została przywrócona i możesz normalnie z niego korzystać</string>
     <string name="overheat_notification_title_resume">Prawidłowa temperatura telefonu została przywrócona</string>
-    <string name="overheat_toast_content">Temperatura telefonu jest wysoka. Nie zaleca się korzystania z tej funkcji</string>
+    <string name="overheat_toast_content">Temperatura telefonu jest wysoka, nie zaleca się korzystania z tej funkcji</string>
     <string name="overlay_display_devices_title">Symuluj ekrany dodatkowe</string>
     <string name="overview">Przegląd</string>
     <string name="phone_hint">Aby włączyć telefon, przesuń palcem od ikony</string>
@@ -1215,11 +1224,6 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="prevent_view_top_tag_cancel2">Aby wyjść z trybu \"W kieszeni\", dotknij kół na ekranie.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">aparat</string>
     <string name="privacy_type_location">lokalizacja</string>
     <string name="privacy_type_microphone">mikrofon</string>
@@ -1336,7 +1340,7 @@ Aby dowiedzieć się więcej, skontaktuj się z administratorem.
     <string name="quick_settings_op_car_mode_dnd_label">Nie przeszkadzać</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">Tryb samochodowy Nie przeszkadzać jest wyłączony. Dotknij, aby włączyć</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Tryb samochodowy Nie przeszkadzać jest włączony. Dotknij, aby wyłączyć</string>
-    <string name="quick_settings_power_saving_label">Oszczędzanie energii</string>
+    <string name="quick_settings_power_saving_label">Oszczędzanie baterii</string>
     <string name="quick_settings_read_mode_label">Tryb czytania</string>
     <string name="quick_settings_read_mode_summary_off">Tryb czytania jest wyłączony. Dotknij, aby włączyć</string>
     <string name="quick_settings_read_mode_summary_on">Tryb czytania jest włączony. Dotknij, aby wyłączyć</string>
@@ -1378,7 +1382,7 @@ Oszczędzanie baterii"</string>
     <string name="recents_deep_clean_option">Głębokie czyszczenie</string>
     <string name="recents_empty_no_apps_open">Brak otwartych aplikacji</string>
     <string name="recents_empty_recently_closed">Ostatnio zamknięte aplikacje</string>
-    <string name="recents_normal_clean_description">Wyczyść listę zadań i pamięć podręczną bez czyszczenia procesów w tle.</string>
+    <string name="recents_normal_clean_description">Czyszczenie listy zadań i pamięci podręcznej bez czyszczenia procesów w tle.</string>
     <string name="recents_normal_clean_option">Zwykłe oczyszczenie</string>
     <string name="recents_option_note">Możesz zmienić to w Ustawieniach -> Zaawansowane.</string>
     <string name="recents_option_title">Jaki sposób wolisz</string>

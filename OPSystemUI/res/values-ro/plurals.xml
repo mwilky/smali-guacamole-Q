@@ -74,8 +74,8 @@
         <item quantity="few">%d dispozitive</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">in %d minute</item>
-        <item quantity="one">in %d minut</item>
+        <item quantity="other">în %d min.</item>
+        <item quantity="one">în %d min.</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d de ore</item>

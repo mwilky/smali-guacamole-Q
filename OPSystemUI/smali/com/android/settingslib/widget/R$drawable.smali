@@ -4,4 +4,4 @@
 
 
 # static fields
-.field public static final settings_spinner_background:I = 0x7f08096d
+.field public static final settings_spinner_background:I = 0x7f08097b

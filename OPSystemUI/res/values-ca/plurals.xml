@@ -61,8 +61,8 @@
         <item quantity="one">%d dispositiu</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">in %d minuts</item>
-        <item quantity="one">in %d minut</item>
+        <item quantity="other">en %d minuts</item>
+        <item quantity="one">en %d minut</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d hores</item>

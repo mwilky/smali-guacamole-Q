@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">"S'ha desconnectat l'Ethernet."</string>
     <string name="accessibility_face_dialog_face_icon">Icona facial</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">"Icona d'empremta digital"</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">"Àrea de missatges d'ajuda"</string>
     <string name="accessibility_gps_acquiring">"S'està adquirint el GPS."</string>
     <string name="accessibility_gps_enabled">GPS activat.</string>
     <string name="accessibility_hide">Amaga</string>
@@ -657,8 +657,8 @@ Un cop s'hagi refredat, funcionarà amb normalitat."</string>
     <string name="hotspot_apm_message">No es pot connectar a les xarxes mòbils mentre el mode avió estigui activat. Desactiveu el mode avió i torneu-ho a provar.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Inseriu una targeta SIM per utilitzar la zona Wi-Fi mòbil i altres opcions de compartició de xarxa</string>
     <string name="hotspot_operator_dialog_nosim_title">No hi ha cap targeta SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">No esteu subscrits a la compartició de xarxa Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Error de compartició de xarxa Wi-Fi</string>
     <string name="ime_security_warning">"Pot ser que aquest mètode d'introducció pugui recopilar tot el que escriviu, incloses dades personals, com ara contrasenyes i números de targetes de crèdit. Ve de l'aplicació %1$s. Voleu utilitzar aquest mètode d'introducció?"</string>
     <string name="immediately_destroy_activities">No desis les activitats</string>
     <string name="immediately_destroy_activities_summary">"Destrueix activitats quan l'usuari deixi d'utilitzar-les"</string>
@@ -1090,7 +1090,7 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="oneplus_threekey_navigation_disturb_changed">\"No molesteu\" ha canviat.</string>
     <string name="oneplus_threekey_navigation_next">SEGÜENT</string>
     <string name="oneplus_threekey_navigation_silence">Silenci total</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">"El lliscador d'avís ha canviat!"</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider ha canviat!</string>
     <string name="oneplus_threekey_navigation_sound">Tots els sons permesos</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Es pot activar amb el commutador anterior</string>
     <string name="oneplus_threekey_navigation_vibration">Només vibració</string>
@@ -1104,6 +1104,15 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="op_earphone_device">TOQUEU PER APARELLAR</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">"Llisqueu cap avall per veure els serveis d'emergència"</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_channel_summary_low">Notificacions menys importants sense so o vibració.</string>
+    <string name="op_notification_section_header_gentle">Altres notificacions</string>
+    <string name="op_notification_silence_title">Altres</string>
     <string name="op_quick_settings_night_display_label">Mode nocturn</string>
     <string name="op_quick_settings_night_display_summary_off">Mode nocturn desactivat. Toqueu per activar</string>
     <string name="op_quick_settings_night_display_summary_on">Mode nocturn activat. Toqueu per desactivar</string>
@@ -1125,17 +1134,17 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="output_title">Sortida de contingut multimèdia</string>
     <string name="overheat_dialog_orange_button">Executa ara</string>
     <string name="overheat_dialog_orange_message">"Es realitzaran aquestes accions per reduir la temperatura
-1. Redueix la brillantor
-2. Desactiva el punt de connexió
-3. Apaga la llanterna"</string>
+1. Reduir la brillantor
+2. Desactivar el punt de connexió
+3. Apagar la llanterna"</string>
     <string name="overheat_dialog_purple_button">Apaga ara</string>
     <string name="overheat_dialog_purple_message">"El telèfon s'apagarà després de 5 segons"</string>
     <string name="overheat_dialog_red_message">"Esborrarà tots els processos d'aplicacions per reduir la temperatura"</string>
-    <string name="overheat_dialog_title">La temperatura del vostre telèfon és massa alta</string>
-    <string name="overheat_notification_alert">"La temperatura del vostre telèfon és massa alta, i s'han desactivat les funcions de consum d'energia alt per reduir la temperatura"</string>
-    <string name="overheat_notification_resume">"La temperatura del telèfon s'ha restaurat i el telèfon es pot utilitzar amb normalitat"</string>
+    <string name="overheat_dialog_title">La temperatura del telèfon és massa alta</string>
+    <string name="overheat_notification_alert">"La temperatura del telèfon és massa alta i s'ha desactivat la funció de consum d'energia alt per reduir la temperatura"</string>
+    <string name="overheat_notification_resume">"La temperatura del telèfon s'ha restaurat i ja es pot utilitzar amb normalitat"</string>
     <string name="overheat_notification_title_resume">"La temperatura del telèfon s'ha restaurat"</string>
-    <string name="overheat_toast_content">El telèfon està en un estat de temperatura alta, no es recomana utilitzar aquesta funció</string>
+    <string name="overheat_toast_content">El telèfon està en un estat de temperatura alta. No es recomana utilitzar aquesta funció</string>
     <string name="overlay_display_devices_title">Simula pantalles secundàries</string>
     <string name="overview">Aplicacions recents</string>
     <string name="phone_hint">Llisca des de la icona per obrir el telèfon</string>
@@ -1216,11 +1225,6 @@ A més, estàs connectat a una VPN, que també pot supervisar la teva activitat 
     <string name="prevent_view_top_tag_cancel2">Seguiu els cercles de la pantalla i toqueu-los per forçar la sortida de la funció Mode butxaca.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">càmera</string>
     <string name="privacy_type_location">ubicació</string>
     <string name="privacy_type_microphone">micròfon</string>
@@ -1673,7 +1677,7 @@ Qualsevol usuari pot actualitzar les aplicacions de la resta d'usuaris."</string
     <string name="volume_dialog_title">Controls de volum %s</string>
     <string name="volume_dnd_silent">Drecera per als botons de volum</string>
     <string name="volume_footer_no_disturb">No molesteu</string>
-    <string name="volume_footer_ring">So</string>
+    <string name="volume_footer_ring">So de trucada</string>
     <string name="volume_footer_slient">Silenci</string>
     <string name="volume_footer_vibrate">Silenci (vibra)</string>
     <string name="volume_odi_captions_content_description">Superposició de subtítols</string>

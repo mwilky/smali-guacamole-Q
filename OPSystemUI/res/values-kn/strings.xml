@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">ಇಥರ್ನೆಟ್ ಸಂಪರ್ಕ ಕಡಿತಗೊಳಿಸಲಾಗಿದೆ.</string>
     <string name="accessibility_face_dialog_face_icon">ಮುಖದ ಐಕಾನ್‌</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಐಕಾನ್</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">ಸಹಾಯ ಸಂದೇಶದ ಪ್ರದೇಶ</string>
     <string name="accessibility_gps_acquiring">GPS ಸ್ವಾಧೀನ.</string>
     <string name="accessibility_gps_enabled">GPS ಸಕ್ರಿಯವಾಗಿದೆ.</string>
     <string name="accessibility_hide">ಹುದುಗಿಸಿ</string>
@@ -657,8 +657,8 @@
     <string name="hotspot_apm_message">ಏರ್‌ಪ್ಲೇನ್ ಮೋಡ್ ಸಕ್ರಿಯವಾಗಿರುವಾಗ ಮೊಬೈಲ್ ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ. ಏರ್‌ಪ್ಲೇನ್ ಮೋಡ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="hotspot_operator_dialog_nosim_msg">ಮೊಬೈಲ್ ಹಾಟ್‌ಸ್ಪಾಟ್ ಮತ್ತು ಇತರೆ ಟೆಥರಿಂಗ್ ಆಯ್ಕೆಗಳನ್ನು ಬಳಸಲು SIM ಕಾರ್ಡ್ ಸೇರ್ಪಡಿಸಿ</string>
     <string name="hotspot_operator_dialog_nosim_title">ಯಾವುದೇ SIM ಕಾರ್ಡ್ ಇಲ್ಲ</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">ನೀವು Wifi ಟೆಥರಿಂಗ್‌ಗೆ ಸಬ್‌ಸ್ಕ್ರೈಬ್ ಮಾಡಿಲ್ಲ</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi ಟೆಥರಿಂಗ್ ದೋಷ</string>
     <string name="ime_security_warning">ವೈಯಕ್ತಿಕ ಡೇಟಾಗಳಾದ ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಮತ್ತು ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ ಸಂಖ್ಯೆಗಳನ್ನು ಒಳಗೊಂಡಂತೆ ನೀವು ಟೈಪ್ ಮಾಡುವ ಎಲ್ಲ ಪಠ್ಯವನ್ನು ಸಂಗ್ರಹಿಸಲು ಈ ಇನ್‌ಪುಟ್ ವಿಧಾನಕ್ಕೆ ಸಾಧ್ಯವಾಗಬಹುದು. ಇದು %1$s ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ಬರುತ್ತದೆ. ಈ ಇನ್‌ಪುಟ್ ವಿಧಾನವನ್ನು ಬಳಸುವುದೇ?</string>
     <string name="immediately_destroy_activities">ಚಟುವಟಿಕೆಗಳನ್ನು ಇರಿಸದಿರು</string>
     <string name="immediately_destroy_activities_summary">ಬಳಕೆದಾರರು ಹೊರಹೋಗುತ್ತಿದ್ದಂತೆಯೇ ಚಟುವಟಿಕೆ ನಾಶಪಡಿಸು</string>
@@ -1104,6 +1104,15 @@
     <string name="op_earphone_device">ಜೋಡಿ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">ತುರ್ತು ಸೇವೆಗಳಿಗಾಗಿ ಕೆಳಮುಖವಾಗಿ ಸ್ವೈಪ್ ಮಾಡಿ</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">ಪ್ರಮುಖ</string>
+    <string name="op_notification_channel_summary_low">ಯಾವುದೇ ಶಬ್ಧ ಅಥವಾ ಕಂಪನವಿಲ್ಲದೆಯೇ ಕಡಿಮೆ ಪ್ರಾಮುಖ್ಯತೆಯುಳ್ಳ ಅಧಿಸೂಚನೆಗಳು.</string>
+    <string name="op_notification_section_header_gentle">ಇತರೆ ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="op_notification_silence_title">ಇತರೆ</string>
     <string name="op_quick_settings_night_display_label">ನೈಟ್ ಮೋಡ್</string>
     <string name="op_quick_settings_night_display_summary_off">ನೈಟ್ ಮೋಡ್ ಆಫ್ ಆಗಿದೆ. ಟರ್ನ್ ಆನ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
     <string name="op_quick_settings_night_display_summary_on">ನೈಟ್ ಮೋಡ್ ಆನ್ ಆಗಿದೆ. ಟರ್ನ್ ಆಫ್ ಮಾಡಲು ಟ್ಯಾಪ್ ಮಾಡಿ</string>
@@ -1116,7 +1125,7 @@
     <string name="osu_sign_up_failed">ಸೈನ್-ಅಪ್ ಅನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಲು ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="other">ಇತರ</string>
     <string name="output_calls_title">ಫೋನ್ ಕರೆ ಔಟ್‌ಪುಟ್</string>
-    <string name="output_chooser_empty_hint">ಸಂಪರ್ಕಿತ ಸಾಧನ ಇಲ್ಲ</string>
+    <string name="output_chooser_empty_hint">ಯಾವುದೇ ಸಂಪರ್ಕಿತ ಸಾಧನವಿಲ್ಲ</string>
     <string name="output_none_found">ಯಾವ ಸಾಧನಗಳೂ ಕಂಡುಬಂದಿಲ್ಲ</string>
     <string name="output_none_found_service_off">ಯಾವುದೇ ಸಾಧನಗಳು ಪತ್ತೆಯಾಗಿಲ್ಲ. %1$s ಅನ್ನು ಆನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="output_service_bt">ಬ್ಲೂಟೂತ್‌</string>
@@ -1124,18 +1133,18 @@
     <string name="output_service_wifi">ವೈ-ಫೈ</string>
     <string name="output_title">ಮೀಡಿಯಾ ಔಟ್‌ಪುಟ್</string>
     <string name="overheat_dialog_orange_button">ಈಗಲೇ ಕಾರ್ಯಗತಗೊಳಿಸಿ</string>
-    <string name="overheat_dialog_orange_message">"ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಈ ಕೆಳಗಿನ ಕಾರ್ಯಗಳನ್ನು ಮಾಡಲಾಗುತ್ತದೆ.
-1 ಪ್ರಕಾಶಮಾನತೆಯನ್ನು ತಗ್ಗಿಸುವುದು.
-2ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಫ್ ಮಾಡುವುದು.
-3 ಫ್ಲಾಶ್‌ಲೈಟ್ ಆಫ್ ಮಾಡುವುದು"</string>
-    <string name="overheat_dialog_purple_button">ಈಗ ಪವರ್ ಆಫ್ ಮಾಡಿ</string>
+    <string name="overheat_dialog_orange_message">"ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಈ ಮುಂದಿನ ಕಾರ್ಯಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗುತ್ತದೆ.
+1. ಪ್ರಕಾಶಮಾನತೆಯನ್ನು ತಗ್ಗಿಸುವುದು.
+2. ಹಾಟ್‌ಸ್ಪಾಟ್ ಆಫ್ ಮಾಡುವುದು.
+3. ಫ್ಲಾಶ್‌ಲೈಟ್ ಆಫ್ ಮಾಡುವುದು"</string>
+    <string name="overheat_dialog_purple_button">ಈಗಲೇ ಪವರ್ ಆಫ್ ಮಾಡಿ</string>
     <string name="overheat_dialog_purple_message">ಫೋನ್ 5 ಸೆಕೆಂಡುಗಳ ನಂತರ ಪವರ್ ಆಫ್ ಆಗುತ್ತದೆ</string>
-    <string name="overheat_dialog_red_message">ತಾಪಮಾನವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಲಾಗುತ್ತದೆ</string>
-    <string name="overheat_dialog_title">ನಿಮ್ಮ ಫೋನ್‌ನ ಉಷ್ಣತೆಯು ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ</string>
-    <string name="overheat_notification_alert">ನಿಮ್ಮ ಫೋನ್ ಉಷ್ಣತೆ ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ, ಹಾಗೂ ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಪವರ್ ಬಳಕೆಯ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಆಫ್ ಮಾಡಲಾಗುತ್ತದೆ</string>
-    <string name="overheat_notification_resume">ಫೋನ್‌ನ ತಾಪಮಾನವನ್ನು ಪುನರ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಫೋನ್ ಅನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಬಳಸಬಹುದಾಗಿದೆ</string>
-    <string name="overheat_notification_title_resume">ಫೋನ್‌ನ ತಾಪಮಾನವನ್ನು ಪುನರ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆ</string>
-    <string name="overheat_toast_content">ಫೋನ್ ಉಷ್ಣತೆಯು ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ, ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಬಳಸುವುದನ್ನು ಶಿಫಾರಸು ಮಾಡುವುದಿಲ್ಲ</string>
+    <string name="overheat_dialog_red_message">ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಲಾಗುತ್ತದೆ</string>
+    <string name="overheat_dialog_title">ಫೋನ್‌ನ ಉಷ್ಣತೆಯು ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ</string>
+    <string name="overheat_notification_alert">ನಿಮ್ಮ ಫೋನ್‌ನ ಉಷ್ಣತೆ ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ ಮತ್ತು ಉಷ್ಣತೆಯನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಅಧಿಕ ಪವರ್ ಬಳಕೆಯ ಕಾರ್ಯವಿಧಾನವನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ</string>
+    <string name="overheat_notification_resume">ಫೋನ್‌ನ ಉಷ್ಣತೆಯು ಸಹಜ ಸ್ಥಿತಿಗೆ ಬಂದಿದೆ ಮತ್ತು ಫೋನ್ ಅನ್ನು ಸಾಮಾನ್ಯ ರೀತಿಯಲ್ಲಿ ಬಳಸಬಹುದಾಗಿದೆ</string>
+    <string name="overheat_notification_title_resume">ಫೋನ್‌ನ ಉಷ್ಣತೆಯು ಸಹಜ ಸ್ಥಿತಿಗೆ ಬಂದಿದೆ</string>
+    <string name="overheat_toast_content">ಫೋನ್‌ನ ಉಷ್ಣತೆಯು ತುಂಬಾ ಹೆಚ್ಚಾಗಿದೆ, ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಬಳಸಬಾರದೆಂದು ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ</string>
     <string name="overlay_display_devices_title">ಮಾಧ್ಯಮಿಕ ಡಿಸ್‌ಪ್ಲೇ ಸಿಮ್ಯುಲೇಟ್‌</string>
     <string name="overview">ಸಮಗ್ರ ನೋಟ</string>
     <string name="phone_hint">ಫೋನ್‌ಗಾಗಿ ಐಕಾನ್‌ನಿಂದ ಸ್ವೈಪ್ ಮಾಡಿ</string>
@@ -1216,11 +1225,6 @@
     <string name="prevent_view_top_tag_cancel2">ದಯವಿಟ್ಟು ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿರುವ ವೃತ್ತಗಳನ್ನು ಅನುಸರಿಸಿ ಮತ್ತು ಕ್ವಿಟ್ ಪಾಕೆಟ್ ಮೋಡ್ ಒತ್ತಾಯಿಸಲು ಅವುಗಳ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">ಕ್ಯಾಮರಾ</string>
     <string name="privacy_type_location">ಸ್ಥಳ</string>
     <string name="privacy_type_microphone">ಮೈಕ್ರೋಫೋನ್‌</string>
@@ -1379,7 +1383,7 @@
     <string name="recents_deep_clean_option">ಆಳ ತೆರವು</string>
     <string name="recents_empty_no_apps_open">ಯಾವುದೇ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ತೆರೆದಿಲ್ಲ</string>
     <string name="recents_empty_recently_closed">ಇತ್ತೀಚೆಗೆ ಮುಚ್ಚಿದ ಆಪ್‌ಗಳು</string>
-    <string name="recents_normal_clean_description">ಹಿನ್ನೆಲೆ ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ತೆರವುಗೊಳಿಸದೆ, ಕಾರ್ಯ ಪಟ್ಟಿ ಮತ್ತು ಕ್ಯಾಶ್‌ ತೆರವುಗೊಳಿಸಿ.</string>
+    <string name="recents_normal_clean_description">ಹಿನ್ನೆಲೆ ಪ್ರಕ್ರಿಯೆಗಳನ್ನು ತೆರವುಗೊಳಿಸದೆಯೇ, ಕಾರ್ಯ ಪಟ್ಟಿ ಮತ್ತು ಕ್ಯಾಶ್‌ ತೆರವುಗೊಳಿಸಿ.</string>
     <string name="recents_normal_clean_option">ಸಾಮಾನ್ಯ ತೆರವು</string>
     <string name="recents_option_note">ನೀವು ಸೆಟ್ಟಿಂಗ್ -> ಮುಂದುವರಿಕೆಯಲ್ಲಿ ಬದಲಾಯಿಸಬಹುದು.</string>
     <string name="recents_option_title">ನೀವು ಯಾವ ಮಾರ್ಗಕ್ಕೆ ಆದ್ಯತೆ ನೀಡುವಿರಿ</string>

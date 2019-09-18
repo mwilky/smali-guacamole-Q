@@ -18,24 +18,24 @@
 
 .field public static final keyguard_security_view_top_margin:I = 0x7f070220
 
-.field public static final oneplus_widget_big_font_size_mcl:I = 0x7f0704a7
+.field public static final oneplus_widget_big_font_size:I = 0x7f0704a8
 
-.field public static final password_char_padding:I = 0x7f0705b7
+.field public static final oneplus_widget_big_font_size_mcl:I = 0x7f0704a9
 
-.field public static final password_dot_size:I = 0x7f0705b9
+.field public static final oneplus_widget_label_font_size:I = 0x7f0704aa
 
-.field public static final status_bar_height:I = 0x7f0706cc
+.field public static final password_char_padding:I = 0x7f0705c0
 
-.field public static final title_clock_padding:I = 0x7f07072c
+.field public static final password_dot_size:I = 0x7f0705c2
 
-.field public static final widget_big_font_size:I = 0x7f070778
+.field public static final status_bar_height:I = 0x7f0706d5
 
-.field public static final widget_label_font_size:I = 0x7f07077d
+.field public static final title_clock_padding:I = 0x7f070735
 
-.field public static final widget_small_font_size:I = 0x7f07077e
+.field public static final widget_small_font_size:I = 0x7f070787
 
-.field public static final widget_vertical_padding:I = 0x7f070780
+.field public static final widget_vertical_padding:I = 0x7f070789
 
-.field public static final widget_vertical_padding_clock:I = 0x7f070781
+.field public static final widget_vertical_padding_clock:I = 0x7f07078a
 
-.field public static final widget_vertical_padding_with_header:I = 0x7f070782
+.field public static final widget_vertical_padding_with_header:I = 0x7f07078b

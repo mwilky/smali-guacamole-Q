@@ -17,7 +17,7 @@
         <item quantity="one">ਗ਼ਲਤ SIM%1$d PIN ਕੋਡ, ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਤੁਹਾਨੂੰ ਆਪਣਾ ਡਿਵਾਈਸ ਅਣਲੌਕ ਕਰਨ ਲਈ ਆਪਣੇ ਕੈਰੀਅਰ ਨਾਲ ਸੰਪਰਕ ਕਰਨਾ ਪਵੇ, ਤੁਹਾਡੇ ਕੋਲ %2$d ਮੌਕਾ ਬਾਕੀ ਹੈ।</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">%d ਮਿੰਟਾਂ ਵਿੱਚ</item>
-        <item quantity="one">%d ਮਿੰਟ ਵਿੱਚ</item>
+        <item quantity="other">%d ਮਿੰਟਾਂ ਦੇ ਅੰਦਰ</item>
+        <item quantity="one">%d ਮਿੰਟ ਦੇ ਅੰਦਰ</item>
     </plurals>
 </resources>

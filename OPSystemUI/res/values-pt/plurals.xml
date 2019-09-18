@@ -62,7 +62,7 @@
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
         <item quantity="other">dentro de %d minutos</item>
-        <item quantity="one">dentro de %d minuto</item>
+        <item quantity="one">dentro de%d minuto</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d horas</item>

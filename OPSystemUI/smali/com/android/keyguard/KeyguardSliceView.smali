@@ -72,10 +72,6 @@
     .end annotation
 .end field
 
-.field private mMcl:Z
-
-.field private mMclTypeface:Landroid/graphics/Typeface;
-
 .field private mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
 .field private final mRowPadding:I
@@ -109,10 +105,6 @@
     const/4 p2, -0x1
 
     iput p2, p0, Lcom/android/keyguard/KeyguardSliceView;->mDisplayId:I
-
-    const/4 p2, 0x0
-
-    iput-object p2, p0, Lcom/android/keyguard/KeyguardSliceView;->mMclTypeface:Landroid/graphics/Typeface;
 
     const-class p2, Lcom/android/systemui/tuner/TunerService;
 
@@ -222,7 +214,7 @@
 .end method
 
 .method private showSlice()V
-    .locals 14
+    .locals 13
 
     const-string v0, "KeyguardSliceView#showSlice"
 
@@ -480,7 +472,7 @@
     invoke-virtual {v8, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :goto_5
-    if-ge v7, v0, :cond_16
+    if-ge v7, v0, :cond_13
 
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -676,106 +668,36 @@
     :goto_b
     invoke-virtual {v10, v1}, Landroid/widget/Button;->setClickable(Z)V
 
-    iget-boolean v1, p0, Lcom/android/keyguard/KeyguardSliceView;->mMcl:Z
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersionFont()Z
 
-    if-eqz v1, :cond_15
+    move-result v1
 
-    iget-object v1, p0, Lcom/android/keyguard/KeyguardSliceView;->mMclTypeface:Landroid/graphics/Typeface;
+    if-eqz v1, :cond_12
 
-    if-eqz v1, :cond_15
+    const/4 v1, 0x3
 
-    new-instance v1, Landroid/text/SpannableStringBuilder;
+    invoke-static {v1}, Lcom/oneplus/util/OpUtils;->getMclTypeface(I)Landroid/graphics/Typeface;
 
-    invoke-virtual {v10}, Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
+    move-result-object v1
 
-    move-result-object v8
+    if-eqz v1, :cond_12
 
-    invoke-direct {v1, v8}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v10}, Landroid/widget/Button;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v8
-
-    move v9, v2
-
-    :goto_c
-    invoke-interface {v8}, Ljava/lang/CharSequence;->length()I
-
-    move-result v11
-
-    if-ge v9, v11, :cond_14
-
-    invoke-interface {v8, v9}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v11
-
-    invoke-static {v11}, Ljava/lang/Character;->isDigit(C)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_13
-
-    sget-boolean v11, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
-
-    if-eqz v11, :cond_12
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v12, "digit charText.charAt(j):"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {v8, v9}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v12
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    const-string v12, "KeyguardSliceView"
-
-    invoke-static {v12, v11}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v10, v1}, Landroid/widget/Button;->setTypeface(Landroid/graphics/Typeface;)V
 
     :cond_12
-    new-instance v11, Lcom/oneplus/util/OpCustomTypefaceSpan;
-
-    iget-object v12, p0, Lcom/android/keyguard/KeyguardSliceView;->mMclTypeface:Landroid/graphics/Typeface;
-
-    const-string v13, ""
-
-    invoke-direct {v11, v13, v12}, Lcom/oneplus/util/OpCustomTypefaceSpan;-><init>(Ljava/lang/String;Landroid/graphics/Typeface;)V
-
-    add-int/lit8 v12, v9, 0x1
-
-    invoke-virtual {v1, v11, v9, v12, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
-
-    :cond_13
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_c
-
-    :cond_14
-    invoke-virtual {v10, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_15
     add-int/lit8 v7, v7, 0x1
 
     goto/16 :goto_5
 
-    :cond_16
-    :goto_d
+    :cond_13
+    :goto_c
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
-    if-ge v2, v0, :cond_18
+    if-ge v2, v0, :cond_15
 
     iget-object v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
@@ -789,7 +711,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_17
+    if-nez v1, :cond_14
 
     iget-object v1, p0, Lcom/android/keyguard/KeyguardSliceView;->mRow:Lcom/android/keyguard/KeyguardSliceView$Row;
 
@@ -797,19 +719,19 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    :cond_17
+    :cond_14
     add-int/2addr v2, v4
 
-    goto :goto_d
+    goto :goto_c
 
-    :cond_18
+    :cond_15
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSliceView;->mContentChangeListener:Ljava/lang/Runnable;
 
-    if-eqz p0, :cond_19
+    if-eqz p0, :cond_16
 
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
-    :cond_19
+    :cond_16
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
     return-void
@@ -1311,7 +1233,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/android/systemui/R$dimen;->widget_label_font_size:I
+    sget v1, Lcom/android/systemui/R$dimen;->op_owner_info_font_size:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1341,60 +1263,6 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const-string v0, "debug.my_features_switch"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mMcl:Z
-
-    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mMcl:Z
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    const-string v0, "/op1/fonts/McLarenBespoke_Bd.ttf"
-
-    invoke-static {v0}, Landroid/graphics/Typeface;->createFromFile(Ljava/lang/String;)Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardSliceView;->mMclTypeface:Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "RuntimeException, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "KeyguardSliceView"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    :goto_0
     return-void
 .end method
 

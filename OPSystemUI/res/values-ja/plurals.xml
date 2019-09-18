@@ -61,7 +61,7 @@
         <item quantity="one">%d 台のデバイス</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">残り %d 分</item>
+        <item quantity="other">%d 分以内</item>
         <item quantity="one">in %d min</item>
     </plurals>
     <plurals name="snoozeHourOptions">

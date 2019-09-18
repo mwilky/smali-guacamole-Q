@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">イーサネット接続を解除しました。</string>
     <string name="accessibility_face_dialog_face_icon">顔アイコン</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">指紋アイコン</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">ヘルプメッセージのエリア</string>
     <string name="accessibility_gps_acquiring">GPS取得中です。</string>
     <string name="accessibility_gps_enabled">GPSが有効です。</string>
     <string name="accessibility_hide">隠す</string>
@@ -657,8 +657,8 @@
     <string name="hotspot_apm_message">機内モード有効時はモバイルネットワークに接続できません。機能モードを無効にして、もう一度やり直してください。</string>
     <string name="hotspot_operator_dialog_nosim_msg">モバイルホットスポットや他のテザリングオプションを使用するには、SIM カードを挿入してください</string>
     <string name="hotspot_operator_dialog_nosim_title">SIM カードはありません</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">WiFi テザリングにサブスクライブされていません</string>
+    <string name="hotspot_operator_dialog_othererror_title">WiFi テザリングエラー</string>
     <string name="ime_security_warning">この入力方法を選択すると、すべての入力内容の収集をアプリ（%1$s）に許可することになります。これにはパスワードやクレジットカード番号などの個人情報も含まれます。この入力方法を使用しますか？</string>
     <string name="immediately_destroy_activities">アクティビティを保持しない</string>
     <string name="immediately_destroy_activities_summary">ユーザーが離れたアクティビティを直ちに破棄する</string>
@@ -1090,7 +1090,7 @@
     <string name="oneplus_threekey_navigation_disturb_changed">「おやすみモード」が変更されました！</string>
     <string name="oneplus_threekey_navigation_next">次へ</string>
     <string name="oneplus_threekey_navigation_silence">完全にミュート</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">3 段トグルスライダーが変更されました！</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider が変更されました！</string>
     <string name="oneplus_threekey_navigation_sound">すべての音を許可</string>
     <string name="oneplus_threekey_navigation_turned_on_here">上のトグルでオンにできます</string>
     <string name="oneplus_threekey_navigation_vibration">バイブのみ</string>
@@ -1104,6 +1104,15 @@
     <string name="op_earphone_device">ペア設定するにはタップしてください</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">緊急電話サービスを利用するには、下にスワイプしてください</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">重要</string>
+    <string name="op_notification_channel_summary_low">重要性の低い通知は、サウンドまたはバイブを使用しません。</string>
+    <string name="op_notification_section_header_gentle">その他の通知</string>
+    <string name="op_notification_silence_title">その他</string>
     <string name="op_quick_settings_night_display_label">おやすみモード</string>
     <string name="op_quick_settings_night_display_summary_off">おやすみモードがオフになっています。タップしてオンにします。</string>
     <string name="op_quick_settings_night_display_summary_on">おやすみモードがオンになっています。タップしてオフにします。</string>
@@ -1132,7 +1141,7 @@
     <string name="overheat_dialog_purple_message">5 秒後に携帯電話の電源が切れます</string>
     <string name="overheat_dialog_red_message">温度を下げるため、すべてのアプリケーションプロセスがクリアされます</string>
     <string name="overheat_dialog_title">携帯電話の温度が高すぎます</string>
-    <string name="overheat_notification_alert">携帯電話の温度が高すぎます。温度を下げるため、バッテリー消費量の多い機能がオフになります</string>
+    <string name="overheat_notification_alert">携帯電話の温度が高すぎます。温度を下げるため、バッテリー消費量の多い機能がオフにされます</string>
     <string name="overheat_notification_resume">携帯電話の温度が通常に戻りました。携帯電話を通常どおり使用できます</string>
     <string name="overheat_notification_title_resume">携帯電話の温度が通常に戻りました</string>
     <string name="overheat_toast_content">携帯電話の温度が高くなっています。この機能を使用することは推奨されません</string>
@@ -1216,11 +1225,6 @@
     <string name="prevent_view_top_tag_cancel2">画面上の円をなぞってからタップし、ポケットモードを強制終了します。</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">カメラ</string>
     <string name="privacy_type_location">現在地情報</string>
     <string name="privacy_type_microphone">マイク</string>
@@ -1379,7 +1383,7 @@
     <string name="recents_deep_clean_option">ディープクリア</string>
     <string name="recents_empty_no_apps_open">最近開いたアプリケーションはありません</string>
     <string name="recents_empty_recently_closed">最近閉じたアプリ</string>
-    <string name="recents_normal_clean_description">バックグランドプロセスを終了することなく、タスクリストとキャッシュを消去します。</string>
+    <string name="recents_normal_clean_description">バックグラウンド処理を消去しないでタスクリストとキャッシュを消去します。</string>
     <string name="recents_normal_clean_option">通常クリア</string>
     <string name="recents_option_note">これは、設定 -> 詳細設定で変更することができます。</string>
     <string name="recents_option_title">お好きな方法をお選びください</string>

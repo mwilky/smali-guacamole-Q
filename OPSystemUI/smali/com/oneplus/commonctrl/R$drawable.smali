@@ -112,24 +112,24 @@
 
 .field public static final op_edit_text_material_light:I = 0x7f08089b
 
-.field public static final op_major_a_b:I = 0x7f0808d5
+.field public static final op_major_a_b:I = 0x7f0808d7
 
-.field public static final op_major_a_b_animation:I = 0x7f0808d6
+.field public static final op_major_a_b_animation:I = 0x7f0808d8
 
-.field public static final op_major_b_a_animation:I = 0x7f0808d8
+.field public static final op_major_b_a_animation:I = 0x7f0808da
 
-.field public static final op_major_b_c_animation:I = 0x7f0808da
+.field public static final op_major_b_c_animation:I = 0x7f0808dc
 
-.field public static final op_major_c_b_animation:I = 0x7f0808dc
+.field public static final op_major_c_b_animation:I = 0x7f0808de
 
-.field public static final op_minor_a_b_animation:I = 0x7f0808de
+.field public static final op_minor_a_b_animation:I = 0x7f0808e0
 
-.field public static final op_minor_b_a_animation:I = 0x7f0808e0
+.field public static final op_minor_b_a_animation:I = 0x7f0808e2
 
-.field public static final op_minor_b_c_animation:I = 0x7f0808e2
+.field public static final op_minor_b_c_animation:I = 0x7f0808e4
 
-.field public static final op_minor_c_b_animation:I = 0x7f0808e4
+.field public static final op_minor_c_b_animation:I = 0x7f0808e6
 
-.field public static final op_rectangle_floating_action_button:I = 0x7f0808ff
+.field public static final op_rectangle_floating_action_button:I = 0x7f08090d
 
-.field public static final op_switch_floating_action_button:I = 0x7f080917
+.field public static final op_switch_floating_action_button:I = 0x7f080925

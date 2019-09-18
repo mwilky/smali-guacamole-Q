@@ -16,6 +16,8 @@
 
 .field private mIsInBrickMode:Z
 
+.field private mNavigationBarController:Lcom/android/systemui/statusbar/NavigationBarController;
+
 .field private mSettingsObserver:Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;
 
 
@@ -34,6 +36,16 @@
     iput-boolean v0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mIsInBrickMode:Z
 
     iput-object p1, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mContext:Landroid/content/Context;
+
+    const-class p1, Lcom/android/systemui/statusbar/NavigationBarController;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/systemui/statusbar/NavigationBarController;
+
+    iput-object p1, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mNavigationBarController:Lcom/android/systemui/statusbar/NavigationBarController;
 
     new-instance p1, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;
 
@@ -74,6 +86,14 @@
     iput-boolean p1, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mIsInBrickMode:Z
 
     return p1
+.end method
+
+.method static synthetic access$200(Lcom/oneplus/scene/OpSceneModeObserver;)Lcom/android/systemui/statusbar/NavigationBarController;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mNavigationBarController:Lcom/android/systemui/statusbar/NavigationBarController;
+
+    return-object p0
 .end method
 
 

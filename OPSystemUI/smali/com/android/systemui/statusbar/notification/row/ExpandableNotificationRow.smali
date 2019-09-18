@@ -867,7 +867,9 @@
 .method private getHeadsUpHeight()I
     .locals 0
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getShowingLayout()Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
+
+    move-result-object p0
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/NotificationContentView;->getHeadsUpHeight()I
 
@@ -7923,20 +7925,6 @@
 .method public setExpandable(Z)V
     .locals 0
 
-    if-eqz p1, :cond_0
-
-    iget-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsContentHidden:Z
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mExpandable:Z
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPrivateLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
@@ -8250,21 +8238,20 @@
 
     const/4 v9, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_1
 
-    :cond_1
     iget-boolean v1, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mIsContentHidden:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    :cond_2
+    :cond_1
     move v1, v8
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     move v1, v9
 
     :goto_0
@@ -8272,27 +8259,27 @@
 
     iget-boolean v1, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mShowingPublicInitialized:Z
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     iget-boolean v1, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mShowingPublic:Z
 
-    if-ne v1, v0, :cond_4
+    if-ne v1, v0, :cond_3
 
     return-void
 
-    :cond_4
+    :cond_3
     iget-object v0, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPublicLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getChildCount()I
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
     return-void
 
-    :cond_5
-    if-nez v7, :cond_8
+    :cond_4
+    if-nez v7, :cond_7
 
     iget-object v0, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPublicLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
@@ -8314,7 +8301,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -8326,7 +8313,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    :cond_6
+    :cond_5
     iget-object v0, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mPublicLayout:Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setAlpha(F)V
@@ -8339,13 +8326,13 @@
 
     iget-boolean v1, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mShowingPublic:Z
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_6
 
     move v1, v9
 
     goto :goto_1
 
-    :cond_7
+    :cond_6
     const/4 v1, 0x4
 
     :goto_1
@@ -8355,7 +8342,7 @@
 
     goto :goto_2
 
-    :cond_8
+    :cond_7
     iget-boolean v5, v6, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mShowingPublic:Z
 
     move-object v0, p0
@@ -8764,7 +8751,7 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->mNeedsRedaction:Z
 
-    const/16 v0, 0x10
+    const/16 v0, 0x18
 
     invoke-virtual {p0, v0, p1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->updateInflationFlag(IZ)V
 

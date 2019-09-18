@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Síť ethernet je odpojena.</string>
     <string name="accessibility_face_dialog_face_icon">Ikona obličeje</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikona otisku prstu</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Oblast zprávy nápovědy</string>
     <string name="accessibility_gps_acquiring">Zaměřování GPS.</string>
     <string name="accessibility_gps_enabled">GPS je povoleno.</string>
     <string name="accessibility_hide">Skrýt</string>
@@ -200,7 +200,7 @@
     <string name="accessibility_quick_settings_open_details">Otevřít podrobnosti.</string>
     <string name="accessibility_quick_settings_open_settings">Otevřít nastavení aplikace %s.</string>
     <string name="accessibility_quick_settings_page">Stránka %1$d z %2$d</string>
-    <string name="accessibility_quick_settings_power_saving_changed_off">Je vypnut režim spořiče baterie.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">Je vypnut režim Šetřič baterie.</string>
     <string name="accessibility_quick_settings_power_saving_changed_on">Je zapnut režim spořiče baterie.</string>
     <string name="accessibility_quick_settings_rotation">Automatické otočení obrazovky</string>
     <string name="accessibility_quick_settings_rotation_value">Režim %s</string>
@@ -657,8 +657,8 @@ Až telefon vychladne, bude fungovat normálně."</string>
     <string name="hotspot_apm_message">Při povolení režimu letadlo se nelze připojit k žádné mobilní síti. Vypněte režim letadlo a opakujte akci.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Vložte kartu SIM, abyste mohli používat Mobilní hotspot a další možnosti sdílení internetového připojení</string>
     <string name="hotspot_operator_dialog_nosim_title">Žádná karta SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Nejste přihlášeni ke sdílení Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Chyba sdílení Wi-Fi</string>
     <string name="ime_security_warning">Prostřednictvím této vstupní metody zadávání dat lze shromažďovat zadaný text včetně osobních údajů, jako jsou hesla a čísla platebních karet. Metoda je poskytována aplikací %1$s. Chcete tuto metodu zadávání dat použít?</string>
     <string name="immediately_destroy_activities">Neukládat aktivity</string>
     <string name="immediately_destroy_activities_summary">Rušit všechny činnosti, jakmile je uživatel zavře</string>
@@ -793,7 +793,7 @@ prioritní"</string>
     <string name="keyguard_plugged_in">%s • Nabíjení</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Rychlé nabíjení</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • Pomalé nabíjení</string>
-    <string name="keyguard_plugged_in_charging_warp">%s • Warp nabíjení</string>
+    <string name="keyguard_plugged_in_charging_warp">%s • Warp Charging</string>
     <string name="keyguard_plugged_in_wireless">%s • Bezdrátové nabíjení</string>
     <string name="keyguard_sim_error_message_short">Neplatná karta.</string>
     <string name="keyguard_sim_locked_message">SIM karta je zablokována.</string>
@@ -1098,7 +1098,7 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="oneplus_threekey_navigation_disturb_changed">Režim „Nerušit“ se změnil!</string>
     <string name="oneplus_threekey_navigation_next">DALŠÍ</string>
     <string name="oneplus_threekey_navigation_silence">Naprosté ticho</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Posuvník varování se změnil!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider se změnil!</string>
     <string name="oneplus_threekey_navigation_sound">Jsou povoleny všechny zvuky</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Můžete zapnout pomocí výše uvedeného přepínače</string>
     <string name="oneplus_threekey_navigation_vibration">Pouze vibrace</string>
@@ -1112,6 +1112,15 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="op_earphone_device">KLEPNUTÍM SPÁRUJTE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Potáhněte prstem dolů pro tísňové služby</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Důležité</string>
+    <string name="op_notification_channel_summary_low">Méně důležitá oznámení beze zvuku a vibrací.</string>
+    <string name="op_notification_section_header_gentle">Ostatní oznámení</string>
+    <string name="op_notification_silence_title">Ostatní</string>
     <string name="op_quick_settings_night_display_label">Noční režim</string>
     <string name="op_quick_settings_night_display_summary_off">Noční režim vypnut, klepnutím zapnete</string>
     <string name="op_quick_settings_night_display_summary_on">Noční režim zapnut, klepnutím vypnete</string>
@@ -1131,8 +1140,8 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="output_service_bt_wifi">Bluetooth a Wi-Fi</string>
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Výstup médií</string>
-    <string name="overheat_dialog_orange_button">Spustit nyní</string>
-    <string name="overheat_dialog_orange_message">"Ke snížení teploty provedeme tyto operace:
+    <string name="overheat_dialog_orange_button">Provést nyní</string>
+    <string name="overheat_dialog_orange_message">"Ke snížení teploty provedeme tyto akce
 1. Snížení jasu
 2. Vypnutí hotspotu
 3. Vypnutí svítilny"</string>
@@ -1143,7 +1152,7 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="overheat_notification_alert">Teplota telefonu je příliš vysoká. Ke snížení teploty vypneme funkce s vysokou spotřebou energie</string>
     <string name="overheat_notification_resume">Teplota telefonu byla obnovena a telefon můžete normálně používat</string>
     <string name="overheat_notification_title_resume">Teplota telefonu byla obnovena</string>
-    <string name="overheat_toast_content">Telefonu je ve stavu s příliš vysokou teplotou. Nedoporučujeme používat tuto funkci</string>
+    <string name="overheat_toast_content">Telefon je ve stavu s příliš vysokou teplotou. Nedoporučujeme používat tuto funkci</string>
     <string name="overlay_display_devices_title">Simulovat sekundární obrazovky</string>
     <string name="overview">Přehled</string>
     <string name="phone_hint">Telefon otevřete přejetím prstem od ikony</string>
@@ -1224,11 +1233,6 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="prevent_view_top_tag_cancel2">Pro opuštění kapesního módu prosím sledujte kruhy na obrazovce a klepněte na ně.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">fotoaparát</string>
     <string name="privacy_type_location">poloha</string>
     <string name="privacy_type_microphone">mikrofon</string>
@@ -1345,7 +1349,7 @@ Jste také připojeni k síti VPN, která může sledovat vaši aktivitu v sí
     <string name="quick_settings_op_car_mode_dnd_label">Nerušit</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">Režim nerušit v autě vypnut, klepnutím zapnete</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Režim nerušit v autě zapnut, klepnutím vypnete</string>
-    <string name="quick_settings_power_saving_label">Spořič baterie</string>
+    <string name="quick_settings_power_saving_label">Šetřič baterie</string>
     <string name="quick_settings_read_mode_label">Režim čtení</string>
     <string name="quick_settings_read_mode_summary_off">Režim čtení vypnut, klepnutím zapnete</string>
     <string name="quick_settings_read_mode_summary_on">Režim čtení zapnut, klepnutím vypnete</string>

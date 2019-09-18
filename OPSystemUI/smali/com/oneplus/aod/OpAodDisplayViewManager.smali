@@ -747,24 +747,6 @@
     return-void
 .end method
 
-.method public isShowing()Z
-    .locals 0
-
-    iget p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mStatus:I
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
 .method public onAmbientStateChanged(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
     .locals 0
 
@@ -856,6 +838,24 @@
     invoke-direct {p0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->updateView()V
 
     return-void
+.end method
+
+.method public playAodWakingUpAnimation()Z
+    .locals 0
+
+    iget p0, p0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mStatus:I
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method public resetStatus()V

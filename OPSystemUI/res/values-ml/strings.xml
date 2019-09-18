@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">ഇതർനെറ്റ് വിച്ഛേദിച്ചു.</string>
     <string name="accessibility_face_dialog_face_icon">മുഖത്തിന്റെ ഐക്കൺ</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">വിരലടയാള ഐക്കൺ</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">സഹായ മെസേജ് ഏരിയ</string>
     <string name="accessibility_gps_acquiring">GPS നേടുന്നു.</string>
     <string name="accessibility_gps_enabled">GPS പ്രവർത്തനക്ഷമമായി.</string>
     <string name="accessibility_hide">മറയ്ക്കുക</string>
@@ -657,8 +657,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="hotspot_apm_message">എയര്‍പ്ലെയിന്‍ മോഡ് പ്രാപ്തമാക്കിയിരിക്കുമ്പോള്‍ മൊബൈല്‍ നൈറ്റ്‍വര്‍ക്കുകളിലേക്ക് ബന്ധിപ്പിക്കാന്‍ സാധിക്കില്ല. എയര്‍പ്ലെയിന്‍ മോഡ് അപ്രാപ്തമാക്കുകയും വീണ്ടും ശ്രമിക്കുകയും ചെയ്യുക.</string>
     <string name="hotspot_operator_dialog_nosim_msg">മൊബൈൽ ഹോട്ട്‌സ്പോട്ടും മറ്റ് ടെതറിംഗ് ഓപ്ഷനുകളും ഉപയോഗിക്കുന്നതിനായി ഒരു SIM കാർഡ് ചേർക്കുക</string>
     <string name="hotspot_operator_dialog_nosim_title">SIM കാര്‍ഡൊന്നും ഇല്ല</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Wifi ടെതറിംഗ് സബ്‌സ്ക്രൈബ് ചെയ്തിട്ടില്ല</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi ടെതറിംഗ് പിശക്</string>
     <string name="ime_security_warning">പാസ്‌വേഡുകൾ, ക്രെഡിറ്റ് കാർഡ് നമ്പറുകൾ എന്നിവ പോലുള്ള വ്യക്തിഗതമായ ഡാറ്റയുൾപ്പെടെ നിങ്ങൾ ടൈപ്പുചെയ്യുന്ന എല്ലാ വാചകവും ഈ ടൈപ്പുചെയ്യൽ രീതിയ്‌ക്ക് ശേഖരിക്കാനായേക്കും. ഇത് %1$s അപ്ലിക്കേഷനിൽ നിന്നും വരുന്നു. ഈ ടൈപ്പുചെയ്യൽ രീതി ഉപയോഗിക്കണോ?</string>
     <string name="immediately_destroy_activities">പ്രവർത്തനങ്ങൾ സൂക്ഷിക്കരുത്</string>
     <string name="immediately_destroy_activities_summary">ഉപയോക്താവ് ഉപേക്ഷിക്കുന്നതിനനുസരിച്ച് എല്ലാ പ്രവർത്തനങ്ങളും നശിപ്പിക്കുക</string>
@@ -1104,6 +1104,15 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_earphone_device">ജോടിയാക്കാൻ ടാപ്പുചെയ്യുക</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">എമർജൻസി സേവനങ്ങൾക്കായി താഴേയ്ക്ക് സ്വൈപ്പ് ചെയ്യുക</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">പ്രധാനപ്പെട്ടത്</string>
+    <string name="op_notification_channel_summary_low">ശബ്ദമോ വൈബ്രേഷനോ ഇല്ലാത്ത പ്രാധാന്യം കുറഞ്ഞ അറിയിപ്പുകൾ.</string>
+    <string name="op_notification_section_header_gentle">മറ്റ് അറിയിപ്പുകള്‍</string>
+    <string name="op_notification_silence_title">മറ്റുള്ളവ</string>
     <string name="op_quick_settings_night_display_label">നൈറ്റ് മോഡ്</string>
     <string name="op_quick_settings_night_display_summary_off">നൈറ്റ് മോഡ് ഓഫാണ്, ഓണ്‍ ചെയ്യാന്‍ ടാപ് ചെയ്യുക</string>
     <string name="op_quick_settings_night_display_summary_on">നൈറ്റ് മോഡ് ഓണാണ്, ഓഫ് ചെയ്യാന്‍ ടാപ് ചെയ്യുക</string>
@@ -1135,7 +1144,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="overheat_notification_alert">നിങ്ങളുടെ ഫോണിന്റെ താപനില വളരെ ഉയർന്നതാണ്, താപനില കുറയ്ക്കുന്നതിനായി പവർ കൂടുതൽ ഉപയോഗിക്കുന്ന പ്രവർത്തനങ്ങൾ ഓഫാക്കിയിരിക്കുന്നു</string>
     <string name="overheat_notification_resume">ഫോണിൻ്റെ താപനില പുനഃസ്ഥാപിക്കപ്പെട്ടു, ഫോൺ സാധാരണരീതിയിൽ ഉപയോഗിക്കാം</string>
     <string name="overheat_notification_title_resume">ഫോണിൻ്റെ താപനില പുനഃസ്ഥാപിക്കപ്പെട്ടു</string>
-    <string name="overheat_toast_content">ഫോൺ ഉയർന്ന താപനിലയുള്ള അവസ്ഥയിലാണ്, ഈ സവിശേഷത ഉപയോഗിക്കുന്നതിന് ശുപാർശ ചെയ്തിട്ടില്ല</string>
+    <string name="overheat_toast_content">ഫോൺ ഉയർന്ന താപനിലയുള്ള അവസ്ഥയിലാണ്, ഈ ഫീച്ചർ ഉപയോഗിക്കുന്നതിന് ശുപാർശ ചെയ്യുന്നില്ല</string>
     <string name="overlay_display_devices_title">രണ്ടാം ഡിസ്‌പ്ലേകൾ പ്രവർത്തിപ്പിക്കുക</string>
     <string name="overview">ചുരുക്കവിവരണം</string>
     <string name="phone_hint">ഫോൺ ഐക്കണിൽ നിന്ന് സ്വൈപ്പുചെയ്യുക</string>
@@ -1216,11 +1225,6 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="prevent_view_top_tag_cancel2">സ്ക്രീനിലെ വൃത്തങ്ങള്‍ പിന്തുടരുകയും പോക്കറ്റ് മോഡില്‍ നിന്ന് പുറത്ത് കടക്കാന്‍ നിര്‍ബന്ധിക്കുന്നതിന് അതില്‍ ടാപ് ചെയ്യുകയും ചെയ്യുക.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">ക്യാമറ</string>
     <string name="privacy_type_location">ലൊക്കേഷന്‍</string>
     <string name="privacy_type_microphone">മൈക്രോഫോൺ</string>

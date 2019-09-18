@@ -90,7 +90,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer$2;->this$0:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
-    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$100(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)I
+    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$300(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)I
 
     move-result v2
 
@@ -98,7 +98,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer$2;->this$0:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$200(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)Z
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$400(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)Z
 
     move-result v0
 
@@ -137,15 +137,15 @@
     :goto_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer$2;->this$0:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$202(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$402(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer$2;->this$0:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$302(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$502(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer$2;->this$0:Lcom/android/systemui/statusbar/phone/KeyguardBouncer;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$400(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)F
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->access$600(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)F
 
     move-result v0
 

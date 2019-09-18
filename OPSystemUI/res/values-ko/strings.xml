@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">이더넷에서 연결 해제되었습니다.</string>
     <string name="accessibility_face_dialog_face_icon">얼굴 아이콘</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">지문 아이콘</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">도움말 메시지 영역</string>
     <string name="accessibility_gps_acquiring">GPS를 가져오는 중입니다.</string>
     <string name="accessibility_gps_enabled">GPS가 사용 설정되었습니다.</string>
     <string name="accessibility_hide">숨기기</string>
@@ -657,8 +657,8 @@
     <string name="hotspot_apm_message">비행기 모드가 활성화된 동안 모바일 네트워크에 연결할 수 없습니다. 비행기 모드를 비활성화하고 다시 시도하십시오.</string>
     <string name="hotspot_operator_dialog_nosim_msg">모바일 핫스팟 및 기타 테더링 옵션을 사용하려면 SIM 카드를 삽입하세요</string>
     <string name="hotspot_operator_dialog_nosim_title">SIM 카드 없음</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">귀하는 Wi-Fi 테더링에 가입하지 않았습니다.</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi 테더링 오류</string>
     <string name="ime_security_warning">%1$s 앱에서 지원하는 이 입력 방법을 사용하면 비밀번호 및 신용카드 번호와 같은 개인 정보를 비롯하여 입력한 모든 텍스트가 수집될 수 있습니다. 사용하시겠습니까?</string>
     <string name="immediately_destroy_activities">활동 유지 안함</string>
     <string name="immediately_destroy_activities_summary">사용자가 종료하는 즉시 바로 제거</string>
@@ -1104,6 +1104,15 @@
     <string name="op_earphone_device">연결하려면 탭하세요.</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">응급 서비스를 위해 아래로 살짝 밀기</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">중요</string>
+    <string name="op_notification_channel_summary_low">소리 또는 진동이 없는 덜 중요한 알림.</string>
+    <string name="op_notification_section_header_gentle">기타 알림</string>
+    <string name="op_notification_silence_title">기타</string>
     <string name="op_quick_settings_night_display_label">야간 모드</string>
     <string name="op_quick_settings_night_display_summary_off">야간 모드 꺼짐, 탭하여 켜기</string>
     <string name="op_quick_settings_night_display_summary_on">야간 모드 켜짐, 탭하여 끄기</string>
@@ -1131,11 +1140,11 @@
     <string name="overheat_dialog_purple_button">지금 전원 끄기</string>
     <string name="overheat_dialog_purple_message">5초 후에 휴대폰 전원이 꺼집니다.</string>
     <string name="overheat_dialog_red_message">온도를 낮추기 위해 모든 응용 프로그램 프로세스를 취소합니다.</string>
-    <string name="overheat_dialog_title">휴대폰의 온도가 너무 높습니다</string>
-    <string name="overheat_notification_alert">휴대폰의 온도가 너무 높습니다. 온도를 낮추기 위해 높은 전력 소비 기능이 꺼집니다</string>
+    <string name="overheat_dialog_title">휴대폰의 온도가 너무 높습니다.</string>
+    <string name="overheat_notification_alert">휴대폰의 온도가 너무 높습니다. 온도를 낮추기 위해 전력 소비량이 높은 기능이 꺼집니다.</string>
     <string name="overheat_notification_resume">휴대폰의 온도가 정상으로 돌아왔습니다. 휴대폰을 정상적으로 사용할 수 있습니다.</string>
-    <string name="overheat_notification_title_resume">휴대폰의 온도가 정상으로 돌아왔습니다</string>
-    <string name="overheat_toast_content">휴대폰이 고온 상태이므로 이 기능을 사용하는 것은 권장되지 않습니다</string>
+    <string name="overheat_notification_title_resume">휴대폰의 온도가 정상으로 돌아왔습니다.</string>
+    <string name="overheat_toast_content">휴대폰이 고온 상태이므로 이 기능을 사용하는 것은 권장되지 않습니다.</string>
     <string name="overlay_display_devices_title">보조 디스플레이 시뮬레이션</string>
     <string name="overview">최근 사용</string>
     <string name="phone_hint">전화 기능을 사용하려면 아이콘에서 스와이프하세요.</string>
@@ -1216,11 +1225,6 @@
     <string name="prevent_view_top_tag_cancel2">화면의 원을 따라 탭하여 강제로 포켓 모드를 종료하세요.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">카메라</string>
     <string name="privacy_type_location">위치</string>
     <string name="privacy_type_microphone">마이크</string>

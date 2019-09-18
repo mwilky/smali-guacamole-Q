@@ -10,8 +10,8 @@
             <com.android.systemui.statusbar.AlphaOptimizedImageView android:id="@id/wifi_signal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
             <ImageView android:layout_gravity="start|bottom|center" android:id="@id/wifi_inout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         </FrameLayout>
-        <View android:id="@id/wifi_signal_spacer" android:visibility="gone" android:layout_width="@dimen/status_bar_wifi_signal_spacer_width" android:layout_height="4.0dip" />
+        <View android:id="@id/wifi_signal_spacer" android:visibility="gone" android:layout_width="@dimen/op_status_bar_wifi_signal_spacer_width" android:layout_height="4.0dip" />
         <ViewStub android:id="@id/connected_device_signals_stub" android:layout="@layout/connected_device_signal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-        <View android:id="@id/wifi_airplane_spacer" android:visibility="gone" android:layout_width="@dimen/status_bar_airplane_spacer_width" android:layout_height="4.0dip" />
+        <View android:id="@id/wifi_airplane_spacer" android:visibility="gone" android:layout_width="@dimen/op_status_bar_airplane_spacer_width" android:layout_height="4.0dip" />
     </com.android.keyguard.AlphaOptimizedLinearLayout>
 </com.android.systemui.statusbar.StatusBarWifiView>

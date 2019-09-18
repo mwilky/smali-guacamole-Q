@@ -108,7 +108,7 @@
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1400()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1600()Z
 
     move-result p1
 
@@ -122,7 +122,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
+.method static synthetic access$1700(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->update()V
@@ -176,26 +176,26 @@
 
     if-eqz p0, :cond_6
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1700()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2000()I
 
     move-result p0
 
     if-nez p0, :cond_3
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1800()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2100()I
 
     move-result p0
 
     if-eqz p0, :cond_6
 
     :cond_3
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1700()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2000()I
 
     move-result p0
 
     iput p0, p3, Landroid/graphics/Rect;->left:I
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1800()I
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$2100()I
 
     move-result p0
 
@@ -557,7 +557,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mDecorations:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$300(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$1800(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v0
 
@@ -594,7 +594,7 @@
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1600()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1900()Z
 
     move-result v0
 
@@ -887,36 +887,26 @@
 .method public onDisplayChanged(I)V
     .locals 4
 
-    invoke-virtual {p0}, Landroid/view/View;->getDisplay()Landroid/view/Display;
+    iget-object v0, p0, Landroid/view/View;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/Display;->getDisplayId()I
+    invoke-virtual {v0}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFacelockRecognizing()Z
 
     move-result v0
 
-    if-ne p1, v0, :cond_0
-
-    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->update()V
-
-    :cond_0
-    const/16 v0, 0xfa
-
-    iget-object v1, p0, Landroid/view/View;->mContext:Landroid/content/Context;
-
-    invoke-static {v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFacelockRecognizing()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_0
 
     const/16 v0, 0x1f4
 
-    :cond_1
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x190
+
+    :goto_0
     new-instance v1, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView$1;
 
     invoke-direct {v1, p0, p1}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView$1;-><init>(Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;I)V
@@ -1047,7 +1037,7 @@
 
     iput p1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mColor:I
 
-    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1400()Z
+    invoke-static {}, Lcom/android/systemui/ScreenDecorations;->access$1600()Z
 
     move-result p1
 
@@ -1059,16 +1049,6 @@
 
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-.end method
-
-.method public setRotation(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->mRotation:I
-
-    invoke-direct {p0}, Lcom/android/systemui/ScreenDecorations$DisplayCutoutView;->update()V
 
     return-void
 .end method

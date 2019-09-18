@@ -789,6 +789,40 @@
     return v0
 .end method
 
+.method public static isMCLVersionFont()Z
+    .locals 4
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersion()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-array v0, v1, [I
+
+    const/16 v3, 0xef
+
+    aput v3, v0, v2
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    return v1
+.end method
+
 .method public static isNeedDarkNavBar(Landroid/content/Context;)Z
     .locals 1
 

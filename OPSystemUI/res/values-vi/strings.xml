@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Đã ngắt kết nối Ethernet.</string>
     <string name="accessibility_face_dialog_face_icon">Biểu tượng khuôn mặt</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Biểu tượng vân tay</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Khu vực tin nhắn trợ giúp</string>
     <string name="accessibility_gps_acquiring">Nhận GPS.</string>
     <string name="accessibility_gps_enabled">Đã bật GPS.</string>
     <string name="accessibility_hide">Ẩn</string>
@@ -657,8 +657,8 @@ Sau khi đã nguội, điện thoại sẽ chạy bình thường."</string>
     <string name="hotspot_apm_message">Không thể kết nối đến mạng di động khi chế độ Máy bay đang bật. Tắt chế độ Máy bay và thử lại.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Lắp thẻ SIM để sử dụng Điểm truy cập Di động và các tùy chọn chia sẻ kết nối khác</string>
     <string name="hotspot_operator_dialog_nosim_title">Không có thẻ SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Bạn chưa đăng ký chia sẻ kết nối Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Lỗi chia sẻ kết nối Wi-Fi</string>
     <string name="ime_security_warning">Phương thức nhập này có thể thu thập tất cả văn bản bạn nhập, bao gồm dữ liệu cá nhân như mật khẩu và số thẻ tín dụng. Phương thức nhập này đến từ ứng dụng %1$s. Sử dụng phương thức nhập này?</string>
     <string name="immediately_destroy_activities">Không lưu hoạt động</string>
     <string name="immediately_destroy_activities_summary">Hủy mọi hoạt động ngay khi người dùng rời khỏi</string>
@@ -1104,6 +1104,15 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="op_earphone_device">CHẠM ĐỂ GHÉP NỐI</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Vuốt xuống để sử dụng các dịch vụ khẩn cấp</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Quan trọng</string>
+    <string name="op_notification_channel_summary_low">Những thông báo ít quan trọng hơn không có âm thanh hoặc rung.</string>
+    <string name="op_notification_section_header_gentle">Thông báo khác</string>
+    <string name="op_notification_silence_title">Khác</string>
     <string name="op_quick_settings_night_display_label">Chế độ ban đêm</string>
     <string name="op_quick_settings_night_display_summary_off">Chế độ Ban đêm đang tắt, chạm để bật</string>
     <string name="op_quick_settings_night_display_summary_on">Chế độ Ban đêm đang bật, chạm để tắt</string>
@@ -1132,7 +1141,7 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="overheat_dialog_purple_message">Điện thoại sẽ tắt nguồn sau 5 giây</string>
     <string name="overheat_dialog_red_message">Sẽ xóa tất cả các quy trình ứng dụng để giảm bớt nhiệt độ</string>
     <string name="overheat_dialog_title">Nhiệt độ của điện thoại quá cao</string>
-    <string name="overheat_notification_alert">Nhiệt độ của điện thoại quá cao và các chức năng tiêu tốn nhiều pin sẽ được tắt để giảm bớt nhiệt độ</string>
+    <string name="overheat_notification_alert">Nhiệt độ của điện thoại quá cao và chức năng tiêu tốn nhiều pin sẽ được tắt để giảm bớt nhiệt độ</string>
     <string name="overheat_notification_resume">Nhiệt độ của điện thoại đã được phục hồi và điện thoại có thể được sử dụng bình thường</string>
     <string name="overheat_notification_title_resume">Nhiệt độ của điện thoại đã được phục hồi</string>
     <string name="overheat_toast_content">Nhiệt độ của điện thoại cao, chúng tôi khuyến nghị không nên dùng tính năng này</string>
@@ -1216,11 +1225,6 @@ Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sá
     <string name="prevent_view_top_tag_cancel2">Vui lòng di theo các vòng tròn trên màn hình và chạm vào chúng để bắt dừng chế độ bỏ túi.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">máy ảnh</string>
     <string name="privacy_type_location">vị trí</string>
     <string name="privacy_type_microphone">micrô</string>
@@ -1673,7 +1677,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="volume_dialog_title">Điều khiển âm lượng %s</string>
     <string name="volume_dnd_silent">Phím tắt các nút âm lượng</string>
     <string name="volume_footer_no_disturb">Không làm phiền</string>
-    <string name="volume_footer_ring">Chuông</string>
+    <string name="volume_footer_ring">Reo</string>
     <string name="volume_footer_slient">Im lặng</string>
     <string name="volume_footer_vibrate">Im lặng (Rung)</string>
     <string name="volume_odi_captions_content_description">Lớp phủ phụ đề</string>

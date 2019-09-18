@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet deconectat.</string>
     <string name="accessibility_face_dialog_face_icon">Pictograma chip</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Pictograma amprentă</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Zonă de mesaje de ajutor</string>
     <string name="accessibility_gps_acquiring">Se obține GPS.</string>
     <string name="accessibility_gps_enabled">GPS activat.</string>
     <string name="accessibility_hide">Ascundere</string>
@@ -657,8 +657,8 @@ După ce se răcește, telefonul va funcționa normal."</string>
     <string name="hotspot_apm_message">Nu se poate face conexiunea la rețelele mobile când modul Avion este activat. Dezactivați modul Avion și încercați din nou.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Introduceți o cartelă SIM pentru a utiliza punctul de acces mobil și alte opțiuni de conexiune</string>
     <string name="hotspot_operator_dialog_nosim_title">Absență cartelă SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Nu sunteți abonat(ă) la conexiune Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Eroare conexiune Wi-Fi</string>
     <string name="ime_security_warning">Această metodă de introducere de text poate culege în întregime textul introdus, inclusiv datele personale, cum ar fi parolele și numerele cardurilor de credit. Metoda provine de la aplicația %1$s. Utilizați această metodă de introducere de text?</string>
     <string name="immediately_destroy_activities">Nu păstrați activitățile</string>
     <string name="immediately_destroy_activities_summary">Elimină activitățile imediat ce utilizatorul le închide</string>
@@ -1090,7 +1090,7 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="oneplus_threekey_navigation_disturb_changed">S-a schimbat „Nu deranjați”!</string>
     <string name="oneplus_threekey_navigation_next">URMĂTOAREA</string>
     <string name="oneplus_threekey_navigation_silence">Silențios total</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Cursorul de alertă s-a schimbat!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert slider s-a schimbat!</string>
     <string name="oneplus_threekey_navigation_sound">Toate sunetele permise</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Poate fi activat prin butonul de mai sus</string>
     <string name="oneplus_threekey_navigation_vibration">Doar vibrații</string>
@@ -1104,6 +1104,15 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="op_earphone_device">APĂSAȚI PENTRU A ASOCIA</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Glisați cu degetul în jos pentru a accesa serviciile de urgență</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_channel_summary_low">Notificările mai puțin importante fără sunet sau vibrații.</string>
+    <string name="op_notification_section_header_gentle">Alte notificări</string>
+    <string name="op_notification_silence_title">Altul</string>
     <string name="op_quick_settings_night_display_label">Mod noapte</string>
     <string name="op_quick_settings_night_display_summary_off">Modul noapte este dezactivat, atingeți pentru a îl activa</string>
     <string name="op_quick_settings_night_display_summary_on">Modul noapte este activat, atingeți pentru a îl dezactiva</string>
@@ -1124,16 +1133,16 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Ieșire media</string>
     <string name="overheat_dialog_orange_button">Execută acum</string>
-    <string name="overheat_dialog_orange_message">"Operațiunile următoarele vor fi efectuate pentru a reduce temperatura
+    <string name="overheat_dialog_orange_message">"Se vor lua următoarele măsuri pentru a reduce temperatura
 1. Reduceți luminozitatea
 2. Dezactivați punctul de acces
 3. Dezactivați lanterna"</string>
     <string name="overheat_dialog_purple_button">Oprire acum</string>
     <string name="overheat_dialog_purple_message">Telefonul va fi oprit după 5 secunde</string>
-    <string name="overheat_dialog_red_message">Toate procesele aplicației vor fi eliminate pentru a scădea temperatura</string>
-    <string name="overheat_dialog_title">Temperatura telefonului dvs. este prea mare</string>
-    <string name="overheat_notification_alert">Temperatura telefonului dvs. este prea mare, iar funcțiile cu consum mare de energie sunt dezactivate pentru a reduce temperatura</string>
-    <string name="overheat_notification_resume">Temperatura telefonului a fost restabilită, iar telefonul poate fi utilizat în mod normal</string>
+    <string name="overheat_dialog_red_message">Toate procesele de aplicație vor fi închise pentru a reduce temperatura</string>
+    <string name="overheat_dialog_title">Temperatura telefonului este prea mare</string>
+    <string name="overheat_notification_alert">Temperatura telefonului dvs. este prea mare, iar funcția cu consum mare de energie este dezactivată pentru a reduce temperatura</string>
+    <string name="overheat_notification_resume">Temperatura normală a fost restabilită, telefonul poate fi utilizat în mod normal</string>
     <string name="overheat_notification_title_resume">Temperatura telefonului a fost restabilită</string>
     <string name="overheat_toast_content">Temperatura telefonului este mare, nu se recomandă utilizarea acestei funcții</string>
     <string name="overlay_display_devices_title">Simulați afișaje secundare</string>
@@ -1216,11 +1225,6 @@ De asemenea, sunteți conectat(ă) la o rețea VPN care vă poate monitoriza act
     <string name="prevent_view_top_tag_cancel2">Vă rugăm să urmați cercurile de pe ecran și să le atingeți pentru a forța părăsirea modului buzunar.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">cameră foto</string>
     <string name="privacy_type_location">locație</string>
     <string name="privacy_type_microphone">microfon</string>

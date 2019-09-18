@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet déconnecté</string>
     <string name="accessibility_face_dialog_face_icon">Icône représentant un visage</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">"Icône d'empreinte digitale"</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">"Zone de message d'aide"</string>
     <string name="accessibility_gps_acquiring">Acquisition de données GPS</string>
     <string name="accessibility_gps_enabled">GPS activé</string>
     <string name="accessibility_hide">Masquer</string>
@@ -459,7 +459,7 @@ Bluetooth"</string>
     <string name="clear_process_done">Processus effacés !</string>
     <string name="clear_process_warning_checkbox">"D'accord. Ne plus afficher"</string>
     <string name="clear_process_warning_message">"Cela effacera tous les processus d'arrière-plan, ce qui peut donner lieu à des résultats inattendus. Certaines applis peuvent s'arrêter de fonctionner et nécessiter un redémarrage. Continuer ?"</string>
-    <string name="clear_process_warning_title">Mise en garde</string>
+    <string name="clear_process_warning_title">Attention</string>
     <string name="clipboard">Presse-papiers</string>
     <string name="clock">Horloge</string>
     <string name="clock_seconds">"Afficher les secondes sur l'horloge"</string>
@@ -655,10 +655,10 @@ Une fois refroidi, il fonctionnera normalement."</string>
     <string name="high_temp_title">Le téléphone chauffe</string>
     <string name="home">Paramètres</string>
     <string name="hotspot_apm_message">Impossible de se connecter aux réseaux mobiles tant que le mode Avion est activé. Veuillez désactiver le mode Avion et réessayer.</string>
-    <string name="hotspot_operator_dialog_nosim_msg">"Insérer une carte SIM pour utiliser le point d'accès mobile et d'autres options de connexion USB"</string>
+    <string name="hotspot_operator_dialog_nosim_msg">"Insérer une carte SIM pour utiliser le point d'accès mobile et d'autres options de partage de connexion USB"</string>
     <string name="hotspot_operator_dialog_nosim_title">Aucune carte SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">"Vous n'êtes pas inscrit au partage de connexion Wi-Fi"</string>
+    <string name="hotspot_operator_dialog_othererror_title">Erreur de partage de connexion Wi-Fi</string>
     <string name="ime_security_warning">"Ce mode de saisie est susceptible d'enregistrer le texte que vous saisissez, y compris vos données personnelles, telles que les mots de passe et les numéros de carte de paiement. Il provient de l'application %1$s. Voulez-vous vraiment l'activer ?"</string>
     <string name="immediately_destroy_activities">Ne pas conserver les activités</string>
     <string name="immediately_destroy_activities_summary">Supprimer immédiatement les activités abandonnées</string>
@@ -1104,6 +1104,15 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="op_earphone_device">APPUYER POUR ASSOCIER</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">"Balayer vers le bas pour les services d'urgence"</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_channel_summary_low">Des notifications moins importantes sans aucun son ni vibration.</string>
+    <string name="op_notification_section_header_gentle">Autres notifications</string>
+    <string name="op_notification_silence_title">Autre</string>
     <string name="op_quick_settings_night_display_label">Mode nuit</string>
     <string name="op_quick_settings_night_display_summary_off">Mode nuit désactivé. Tapotez pour activer</string>
     <string name="op_quick_settings_night_display_summary_on">Mode nuit activé. Tapotez pour désactiver</string>
@@ -1123,19 +1132,19 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="output_service_bt_wifi">Bluetooth et Wi-Fi</string>
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">Sortie multimédia</string>
-    <string name="overheat_dialog_orange_button">Exécutez maintenant</string>
-    <string name="overheat_dialog_orange_message">"Les opérations suivantes seront exécutées afin de réduire la température
-1.Réduire la luminosité
-2.Désactiver le point d'accès
-3.Éteindre la lampe torche"</string>
-    <string name="overheat_dialog_purple_button">Mettez hors tension à présent</string>
-    <string name="overheat_dialog_purple_message">Le téléphone est mis hors tension au bout de 5 secondes</string>
-    <string name="overheat_dialog_red_message">Efface tous les processus d’application pour abaisser la température</string>
-    <string name="overheat_dialog_title">La température de votre téléphone est trop élevée</string>
-    <string name="overheat_notification_alert">La température de votre téléphone est trop élevée et les fonctions à consommation élevée sont désactivées afin de réduire la température</string>
-    <string name="overheat_notification_resume">Température du téléphone a été restaurée et le téléphone peut être utilisé normalement</string>
-    <string name="overheat_notification_title_resume">Température du téléphone a été restaurée</string>
-    <string name="overheat_toast_content">"L'état du téléphone est à température élevée. Il n'est pas recommandé d'utiliser cette fonctionnalité"</string>
+    <string name="overheat_dialog_orange_button">Exécuter</string>
+    <string name="overheat_dialog_orange_message">"Suivre la méthode suivante pour réduire la température
+1.Réduisez la luminotisé
+2.Désactivez le point d'accès
+3.Désactiver la lampe torche"</string>
+    <string name="overheat_dialog_purple_button">Mettre hors tension</string>
+    <string name="overheat_dialog_purple_message">"Le téléphone s'éteindra après 5 secondes"</string>
+    <string name="overheat_dialog_red_message">Effacer tous les processus d’applications pour réduire la température</string>
+    <string name="overheat_dialog_title">"La température de votre téléphone n'est pas élevée"</string>
+    <string name="overheat_notification_alert">La température de votre téléphone est trop élevée et la fonction de consommation élevée est désactivée pour réduire la température.</string>
+    <string name="overheat_notification_resume">La température du téléphone a été restaurée et le téléphone peut être utilisé normalement</string>
+    <string name="overheat_notification_title_resume">Le température du téléphone est restaurée</string>
+    <string name="overheat_toast_content">Le téléphone surchauffe, il est recommandé de ne pas utiliser cette fonction</string>
     <string name="overlay_display_devices_title">Simuler des écrans secondaires</string>
     <string name="overview">Aperçu</string>
     <string name="phone_hint">Balayer pour téléphoner</string>
@@ -1216,11 +1225,6 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="prevent_view_top_tag_cancel2">"Veuillez suivre les cercles à l'écran et tapoter dessus pour quitter de force le mode poche."</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">appareil photo</string>
     <string name="privacy_type_location">position</string>
     <string name="privacy_type_microphone">micro</string>
@@ -1374,12 +1378,12 @@ Vous êtes également connecté à un VPN qui peut contrôler votre activité su
     <string name="recents_deep_clean_description">"Supprimer les processus en arrière-plan peut mener à des résultats innattendus. Certaines applications peuvent arrêter de fonctionner et ne plus recevoir de notifications jusqu'à ce que vous les redémarriez."</string>
     <string name="recents_deep_clean_dialog_checkbox_text">Ne plus afficher</string>
     <string name="recents_deep_clean_dialog_message">"Le nettoyage en profondeur effacera les processus en arrière-plan, ce qui peut mener à des résultats inattendus. Certaines applications peuvent arrêter de fonctionner et ne plus recevoir de notifications jusqu'à ce que vous les redémarriez. Merci de confirmer."</string>
-    <string name="recents_deep_clean_dialog_title">Mise en garde</string>
+    <string name="recents_deep_clean_dialog_title">Attention</string>
     <string name="recents_deep_clean_message">Tuer toutes les applications</string>
     <string name="recents_deep_clean_option">Nettoyage en profondeur</string>
     <string name="recents_empty_no_apps_open">Aucune application ouverte</string>
     <string name="recents_empty_recently_closed">Applis récemment fermées</string>
-    <string name="recents_normal_clean_description">Effacer la liste des tâches et le cache sans supprimer les processus en arrière-plan.</string>
+    <string name="recents_normal_clean_description">Effacer la liste des tâches et vider le cache sans supprimer les processus en arrière-plan.</string>
     <string name="recents_normal_clean_option">Effacement normal</string>
     <string name="recents_option_note">Vous pouvez changer cela dans les Paramètres -> Avancés.</string>
     <string name="recents_option_title">Quelle manière préférez-vous</string>

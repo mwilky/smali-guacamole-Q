@@ -61,7 +61,7 @@
         <item quantity="one">기기 %d대</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">%d분</item>
+        <item quantity="other">%d분 후</item>
         <item quantity="one">in %d min</item>
     </plurals>
     <plurals name="snoozeHourOptions">

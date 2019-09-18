@@ -98,7 +98,13 @@
 
     check-cast v0, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/app/Fragment;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
 
     invoke-virtual {v0}, Landroid/app/Fragment;->getView()Landroid/view/View;
 
@@ -116,11 +122,12 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/view/WindowManagerGlobal;->removeView(Landroid/view/View;Z)V
 
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/NavigationBarController;->mNavigationBars:Landroid/util/SparseArray;
 
     invoke-virtual {p0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 

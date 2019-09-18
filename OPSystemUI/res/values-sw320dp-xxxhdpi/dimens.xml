@@ -128,7 +128,6 @@
     <dimen name="op_quick_launch_hint_margin_bottom">409.0px</dimen>
     <dimen name="op_quick_launch_hint_size">34.0px</dimen>
     <dimen name="op_quick_launch_icon_padding">2.0px</dimen>
-    <dimen name="op_quick_launch_icon_size">236.0px</dimen>
     <dimen name="op_quick_launch_label_margin_bottom">867.0px</dimen>
     <dimen name="op_quick_launch_label_size">47.0px</dimen>
     <dimen name="op_quick_launch_recycler_view_margin_bottom">526.0px</dimen>

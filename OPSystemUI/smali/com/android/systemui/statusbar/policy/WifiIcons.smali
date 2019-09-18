@@ -47,7 +47,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 9
 
     const/4 v0, 0x5
 
@@ -175,29 +175,81 @@
 
     sput-object v1, Lcom/android/systemui/statusbar/policy/WifiIcons;->WIFI_6_FULL_ICONS:[I
 
+    new-array v1, v0, [I
+
+    sget v2, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_0:I
+
+    aput v2, v1, v3
+
+    sget v2, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_1:I
+
+    aput v2, v1, v4
+
+    sget v2, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_2:I
+
+    aput v2, v1, v5
+
+    sget v2, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_3:I
+
+    aput v2, v1, v6
+
+    sget v2, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_4:I
+
+    aput v2, v1, v7
+
+    sput-object v1, Lcom/android/systemui/statusbar/policy/WifiIcons;->WIFI_6_NO_INTERNET_ICONS:[I
+
+    new-array v1, v5, [[I
+
+    new-array v2, v0, [I
+
+    sget v8, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_0:I
+
+    aput v8, v2, v3
+
+    sget v8, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_1:I
+
+    aput v8, v2, v4
+
+    sget v8, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_2:I
+
+    aput v8, v2, v5
+
+    sget v8, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_3:I
+
+    aput v8, v2, v6
+
+    sget v8, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_4:I
+
+    aput v8, v2, v7
+
+    aput-object v2, v1, v3
+
     new-array v0, v0, [I
 
-    sget v1, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_0:I
+    sget v2, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_full_0:I
 
-    aput v1, v0, v3
+    aput v2, v0, v3
 
-    sget v1, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_1:I
+    sget v2, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_full_1:I
 
-    aput v1, v0, v4
+    aput v2, v0, v4
 
-    sget v1, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_2:I
+    sget v2, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_full_2:I
 
-    aput v1, v0, v5
+    aput v2, v0, v5
 
-    sget v1, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_3:I
+    sget v2, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_full_3:I
 
-    aput v1, v0, v6
+    aput v2, v0, v6
 
-    sget v1, Lcom/android/systemui/R$drawable;->ic_qs_wifi_6_4:I
+    sget v2, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_full_4:I
 
-    aput v1, v0, v7
+    aput v2, v0, v7
 
-    sput-object v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->WIFI_6_NO_INTERNET_ICONS:[I
+    aput-object v0, v1, v4
+
+    sput-object v1, Lcom/android/systemui/statusbar/policy/WifiIcons;->QS_WIFI_SIGNAL_STRENGTH:[[I
 
     new-array v0, v5, [[I
 
@@ -208,10 +260,6 @@
     sget-object v1, Lcom/android/systemui/statusbar/policy/WifiIcons;->WIFI_FULL_ICONS:[I
 
     aput-object v1, v0, v4
-
-    sput-object v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->QS_WIFI_SIGNAL_STRENGTH:[[I
-
-    sget-object v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->QS_WIFI_SIGNAL_STRENGTH:[[I
 
     sput-object v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->WIFI_SIGNAL_STRENGTH:[[I
 
@@ -263,9 +311,11 @@
 
     sput-object v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->WIFI_6_SIGNAL_STRENGTH:[[I
 
-    sget v0, Lcom/android/systemui/R$drawable;->stat_sys_wifi_signal_0_fully:I
+    sget v0, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_disabled:I
 
     sput v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->QS_WIFI_DISABLED:I
+
+    sget v0, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_full_0:I
 
     sput v0, Lcom/android/systemui/statusbar/policy/WifiIcons;->QS_WIFI_NO_NETWORK:I
 

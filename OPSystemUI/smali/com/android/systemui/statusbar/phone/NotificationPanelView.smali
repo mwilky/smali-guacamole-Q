@@ -9015,7 +9015,7 @@
 
     const/4 v2, 0x1
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_f
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mQs:Lcom/android/systemui/plugins/qs/QS;
 
@@ -9126,21 +9126,36 @@
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mHintAnimationRunning:Z
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     :cond_7
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mQsExpanded:Z
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_9
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mBarState:I
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mDozing:Z
 
+    if-nez v0, :cond_9
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v0
+
     if-nez v0, :cond_8
 
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->isBouncerShowing()Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    :cond_8
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mAffordanceHelper:Lcom/android/systemui/statusbar/phone/KeyguardAffordanceHelper;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/phone/KeyguardAffordanceHelper;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -9151,17 +9166,17 @@
 
     goto :goto_0
 
-    :cond_8
+    :cond_9
     move v0, v1
 
     :goto_0
     iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mOnlyAffordanceInThisMotion:Z
 
-    if-eqz v3, :cond_9
+    if-eqz v3, :cond_a
 
     return v2
 
-    :cond_9
+    :cond_a
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mHeadsUpTouchHelper:Lcom/android/systemui/statusbar/phone/HeadsUpTouchHelper;
 
     invoke-virtual {v3, p1}, Lcom/android/systemui/statusbar/phone/HeadsUpTouchHelper;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -9176,28 +9191,28 @@
 
     move-result v3
 
-    if-nez v3, :cond_a
+    if-nez v3, :cond_b
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->handleQsTouch(Landroid/view/MotionEvent;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
     return v2
 
-    :cond_a
+    :cond_b
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v3
 
-    if-nez v3, :cond_b
+    if-nez v3, :cond_c
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelView;->isFullyCollapsed()Z
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
     iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
@@ -9213,7 +9228,7 @@
 
     move v0, v2
 
-    :cond_b
+    :cond_c
     invoke-super {p0, p1}, Lcom/android/systemui/statusbar/phone/PanelView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -9222,21 +9237,21 @@
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mDozing:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mPulsing:Z
 
-    if-nez p0, :cond_c
+    if-nez p0, :cond_d
 
-    if-eqz p1, :cond_d
-
-    :cond_c
-    move v1, v2
+    if-eqz p1, :cond_e
 
     :cond_d
-    return v1
+    move v1, v2
 
     :cond_e
+    return v1
+
+    :cond_f
     :goto_1
     sget-object p1, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView;->TAG:Ljava/lang/String;
 
@@ -9258,11 +9273,11 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mQs:Lcom/android/systemui/plugins/qs/QS;
 
-    if-eqz p0, :cond_f
+    if-eqz p0, :cond_10
 
     goto :goto_2
 
-    :cond_f
+    :cond_10
     move v2, v1
 
     :goto_2

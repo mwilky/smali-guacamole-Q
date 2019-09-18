@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">ਹੈਲਪ ਮੈਸੇਜ਼ ਏਰੀਆ</string>
     <string name="accessibility_hide">ਲੁਕਾਓ</string>
     <string name="accessibility_phone_four_bars">ਫ਼ੋਨ ਸਿਗਨਲ ਦੀਆਂ ਚਾਰ ਪੱਟੀਆਂ।</string>
     <string name="accessibility_quick_settings_data_switch_changed_1">"ਡੇਟਾ ਕਾਰਡ ਨੂੰ SIM 1 'ਤੇ ਬਦਲੋ।"</string>
@@ -40,8 +40,8 @@
     <string name="hotspot_apm_message">"ਹਵਾਈ ਜਹਾਜ਼ ਮੋਡ ਸਮਰੱਥ ਹੋਣ ਦੌਰਾਨ ਮੋਬਾਈਲ ਨੈੱਟਵਰਕਾਂ 'ਤੇ ਕਨੈਕਟ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ। ਹਵਾਈ ਜਹਾਜ਼ ਮੋਡ ਅਸਮਰੱਥ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="hotspot_operator_dialog_nosim_msg">ਮੋਬਾਈਲ ਹੌਟਸਪੌਟ ਅਤੇ ਹੋਰ ਟੈਦਰਿੰਗ ਵਿਕਲਪਾਂ ਨੂੰ ਵਰਤਣ ਲਈ SIM ਕਾਰਡ ਪਾਓ</string>
     <string name="hotspot_operator_dialog_nosim_title">ਕੋਈ SIM ਕਾਰਡ ਨਹੀਂ</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">ਤੁਸੀਂ Wifi ਟੀਥਰਿੰਗ ਦੀ ਸੇਵਾ ਨਹੀਂ ਲਈ ਹੋਈ ਹੈ</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi ਟਿਥਰਿੰਗ ਦੀ ਭੁਲ</string>
     <string name="interruption_level_game">ਗੇਮ</string>
     <string name="interruption_level_movie">ਫਿਲਮ</string>
     <string name="interruption_level_music">ਸੰਗੀਤ</string>
@@ -82,6 +82,15 @@
     <string name="op_earphone_device">ਜੋੜੇ ਦੇ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">ਐਮਰਜੈਂਸੀ ਸੇਵਾਵਾਂ ਲਈ ਹੇਠਾਂ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">ਮਹੱਤਵਪੂਰਨ</string>
+    <string name="op_notification_channel_summary_low">ਬਿਨਾਂ ਕਿਸੇ ਧੁਨੀ ਜਾਂ ਕੰਪਨ ਦੇ ਘੱਟ ਮਹੱਤਵਪੂਰਨ ਸੂਚਨਾਵਾਂ।</string>
+    <string name="op_notification_section_header_gentle">ਹੋਰ ਸੂਚਨਾਵਾਂ</string>
+    <string name="op_notification_silence_title">ਹੋਰ</string>
     <string name="op_quick_settings_night_display_label">ਰਾਤਰੀ ਮੋਡ</string>
     <string name="op_quick_settings_night_display_summary_off">ਰਾਤਰੀ ਮੋਡ ਬੰਦ ਹੈ, ਚਾਲੂ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="op_quick_settings_night_display_summary_on">ਰਾਤਰੀ ਮੋਡ ਚਾਲੂ ਹੈ, ਬੰਦ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
@@ -92,10 +101,10 @@
 2. ਹਾੱਟ ਸਪਾੱਟ ਨੂੰ ਬੰਦ ਕਰੋ
 3. ਫਲੈਸ਼ ਲਾਈਟ ਨੂੰ ਬੰਦ ਕਰੋ"</string>
     <string name="overheat_dialog_purple_button">ਹੁਣੇ ਪਾਵਰ ਬੰਦ ਕਰੋ</string>
-    <string name="overheat_dialog_purple_message">ਫ਼ੋਨ ਦੀ ਪਾਵਰ 5 ਸਕਿੰਟਾਂ ਬਾਅਦ ਬੰਦ ਹੋ ਜਾਵੇਗੀ</string>
+    <string name="overheat_dialog_purple_message">ਫ਼ੋਨ 5 ਸਕਿੰਟਾਂ ਬਾਅਦ ਬੰਦ ਹੋ ਜਾਵੇਗਾ</string>
     <string name="overheat_dialog_red_message">ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨ ਪ੍ਰਕਿਰਿਆਵਾਂ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ</string>
     <string name="overheat_dialog_title">ਤੁਹਾਡੇ ਫੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ</string>
-    <string name="overheat_notification_alert">ਤੁਹਾਡੇ ਫੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ, ਅਤੇ ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਜ਼ਿਆਦਾ ਬਿਜਲੀ ਦੀ ਖਪਤ ਕਰਨ ਵਾਲੇ ਸਾਰੇ ਫੰਕਸ਼ਨ ਬੰਦ ਕਰ ਦਿਤੇ ਹਨ।</string>
+    <string name="overheat_notification_alert">ਤੁਹਾਡੇ ਫੋਨ ਦਾ ਤਾਪਮਾਨ ਬਹੁਤ ਜ਼ਿਆਦਾ ਹੈ, ਅਤੇ ਤਾਪਮਾਨ ਨੂੰ ਘੱਟ ਕਰਨ ਲਈ ਜ਼ਿਆਦਾ ਬਿਜਲੀ ਦੀ ਖਪਤ ਕਰਨ ਵਾਲਾ ਫੰਕਸ਼ਨ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।</string>
     <string name="overheat_notification_resume">ਫ਼ੋਨ ਦੇ ਤਾਪਮਾਨ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕੀਤਾ ਗਿਆ ਹੈ ਅਤੇ ਫ਼ੋਨ ਨੂੰ ਸਧਾਰਨ ਰੂਪ ਵਿੱਚ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ</string>
     <string name="overheat_notification_title_resume">ਫ਼ੋਨ ਦੇ ਤਾਪਮਾਨ ਨੂੰ ਮੁੜ-ਬਹਾਲ ਕੀਤਾ ਗਿਆ ਹੈ</string>
     <string name="overheat_toast_content">ਫੋਨ ਉੱਚ ਤਾਪਮਾਨ ਦੀ ਸਥਿਤੀ ਵਿੱਚ ਹੈ, ਇਸ ਫੰਕਸ਼ਨ ਦਾ ਉਪਯੋਗ ਕਰਨ ਦੀ ਸਲਾਹ ਨਹੀਂ ਦਿੱਤੀ ਜਾਂਦੀ</string>
@@ -105,11 +114,6 @@
     <string name="prevent_view_top_tag_cancel2">"ਕਿਰਪਾ ਕਰਕੇ ਸਕ੍ਰੀਨ ਉੱਚੇ ਚੱਕਰਾਂ ਦੀ ਅਨੁਸਰਣ ਕਰੋ ਅਤੇ ਪਾਕੇਟ ਮੋਡ ਨੂੰ ਜਬਰਦਸਤੀ ਬੰਦ ਕਰਨ ਲਈ ਉਹਨਾਂ 'ਤੇ ਟੈਪ ਕਰੋ।"</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="qs_edit">ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="quick_launch_exit">ਬਾਹਰ ਜਾਓ</string>
     <string name="quick_launch_exit_hint">ਬਾਹਰ ਜਾਣ ਲਈ ਸਕ੍ਰੀਨ ਤੋਂ ਉਂਗਲੀ ਉਠਾਓ</string>
@@ -172,11 +176,11 @@
     <string name="usb_storage_badremoval_notification_title">USB ਸਟੋਰੇਜ ਹਟਾਈ ਗਈ</string>
     <string name="usb_storage_checking_notification_title">USB ਸਟੋਰੇਜ ਤਿਆਰ ਕਰ ਰਿਹਾ</string>
     <string name="volume_footer_no_disturb">ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ</string>
-    <string name="volume_footer_ring">ਘੰਟੀ</string>
-    <string name="volume_footer_slient">ਸ਼ਾਂਤ</string>
+    <string name="volume_footer_ring">ਰਿੰਗ</string>
+    <string name="volume_footer_slient">ਸਾਇਲੈਂਟ</string>
     <string name="volume_footer_vibrate">ਸਾਇਲੈਂਟ (ਵਾਈਬ੍ਰੇਟ)</string>
     <string name="volume_vibrate">ਵਾਈਬ੍ਰੇਟ</string>
     <string name="zen_important_interruptions">ਤਰਜੀਹੀ ਸੂਚਨਾਵਾਂ</string>
     <string name="zen_interruption_level_all">ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ</string>
-    <string name="zen_no_interruptions">ਸ਼ਾਂਤ</string>
+    <string name="zen_no_interruptions">ਸਾਇਲੈਂਟ</string>
 </resources>

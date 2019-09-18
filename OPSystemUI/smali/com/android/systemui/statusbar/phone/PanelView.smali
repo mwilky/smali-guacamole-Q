@@ -672,7 +672,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_d
+    if-nez p1, :cond_e
 
     iget p1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mInitialTouchX:F
 
@@ -720,6 +720,40 @@
 
     double-to-float v4, v4
 
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/oneplus/plugin/OpLsState;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+
+    move-result v5
+
+    const/4 v6, 0x5
+
+    if-ne v5, v6, :cond_5
+
+    move v5, v3
+
+    goto :goto_1
+
+    :cond_5
+    move v5, v2
+
+    :goto_1
+    iget-object v6, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-static {v6}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFacelockUnlocking()Z
+
+    move-result v7
+
     invoke-virtual {p0, v0, v4, p2, p3}, Lcom/android/systemui/statusbar/phone/PanelView;->flingExpands(FFFF)Z
 
     move-result v4
@@ -732,18 +766,19 @@
 
     if-eq p1, v1, :cond_6
 
-    if-eqz p4, :cond_5
+    if-eqz p4, :cond_7
 
-    goto :goto_1
+    :cond_6
+    if-nez v5, :cond_7
 
-    :cond_5
-    move p1, v2
+    if-nez v7, :cond_7
+
+    move p1, v3
 
     goto :goto_2
 
-    :cond_6
-    :goto_1
-    move p1, v3
+    :cond_7
+    move p1, v2
 
     :goto_2
     iget-boolean p4, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mTouchAboveFalsingThreshold:Z
@@ -762,7 +797,7 @@
 
     invoke-static {p1, p4, v1, v4}, Lcom/android/systemui/doze/DozeLog;->traceFling(ZZZZ)V
 
-    if-nez p1, :cond_a
+    if-nez p1, :cond_b
 
     iget-object p4, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mStatusBarStateController:Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
@@ -770,7 +805,7 @@
 
     move-result p4
 
-    if-ne p4, v3, :cond_a
+    if-ne p4, v3, :cond_b
 
     iget-object p4, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
@@ -804,66 +839,56 @@
 
     invoke-virtual {v4, v5, v1, p4}, Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;->write(III)V
 
-    iget-object p4, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    invoke-static {p4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object p4
-
     invoke-static {}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isMotorCameraSupported()Z
-
-    move-result v1
-
-    invoke-virtual {p4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isKeyguardVisible()Z
-
-    move-result v4
-
-    invoke-virtual {p4}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFacelockUnlocking()Z
 
     move-result p4
 
-    sget-boolean v5, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    invoke-virtual {v6}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isKeyguardVisible()Z
 
-    if-eqz v5, :cond_7
+    move-result v1
 
-    sget-object v5, Lcom/android/systemui/statusbar/phone/PanelView;->TAG:Ljava/lang/String;
+    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_8
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v4, Lcom/android/systemui/statusbar/phone/PanelView;->TAG:Ljava/lang/String;
 
-    const-string v7, "fling, "
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v6, "fling, "
 
-    const-string v7, ", "
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v6, ", "
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_7
-    iget-object v5, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mKeyguardMonitor:Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
+    move-result-object v5
 
-    if-eqz v5, :cond_8
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-interface {v5}, Lcom/android/systemui/statusbar/policy/KeyguardMonitor;->isSecure()Z
+    :cond_8
+    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mKeyguardMonitor:Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
 
-    move-result v5
+    if-eqz v4, :cond_9
 
-    if-nez v5, :cond_8
+    invoke-interface {v4}, Lcom/android/systemui/statusbar/policy/KeyguardMonitor;->isSecure()Z
+
+    move-result v4
+
+    if-nez v4, :cond_9
 
     const-string p4, "lock_unlock_success"
 
@@ -875,16 +900,16 @@
 
     goto :goto_3
 
-    :cond_8
-    if-eqz v1, :cond_a
+    :cond_9
+    if-eqz p4, :cond_b
 
-    if-eqz v4, :cond_a
+    if-eqz v1, :cond_b
 
-    if-nez p4, :cond_a
+    if-nez v7, :cond_b
 
     sget-boolean p4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz p4, :cond_9
+    if-eqz p4, :cond_a
 
     sget-object p4, Lcom/android/systemui/statusbar/phone/PanelView;->TAG:Ljava/lang/String;
 
@@ -892,12 +917,12 @@
 
     invoke-static {p4, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_9
+    :cond_a
     iget-object p4, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {p4}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->flingToStartFacelock()V
 
-    :cond_a
+    :cond_b
     :goto_3
     invoke-direct {p0, p2, p3}, Lcom/android/systemui/statusbar/phone/PanelView;->isFalseTouch(FF)Z
 
@@ -907,7 +932,7 @@
 
     sget-boolean p4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz p4, :cond_b
+    if-eqz p4, :cond_c
 
     sget-object p4, Lcom/android/systemui/statusbar/phone/PanelView;->TAG:Ljava/lang/String;
 
@@ -937,22 +962,22 @@
 
     invoke-static {p4, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_b
+    :cond_c
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/PanelView;->onTrackingStopped(Z)V
 
-    if-eqz p1, :cond_c
+    if-eqz p1, :cond_d
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mPanelClosedOnDown:Z
 
-    if-eqz p1, :cond_c
+    if-eqz p1, :cond_d
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mHasLayoutedSinceDown:Z
 
-    if-nez p1, :cond_c
+    if-nez p1, :cond_d
 
     goto :goto_4
 
-    :cond_c
+    :cond_d
     move v3, v2
 
     :goto_4
@@ -960,11 +985,11 @@
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mUpdateFlingOnLayout:Z
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     iput v0, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mUpdateFlingVelocity:F
 
-    :cond_d
+    :cond_e
     :goto_5
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -2413,9 +2438,9 @@
 
     if-eqz p5, :cond_4
 
-    cmpg-float p4, p1, v9
+    cmpg-float p2, p1, v9
 
-    if-gez p4, :cond_4
+    if-gez p2, :cond_4
 
     move p1, v9
 
@@ -2426,9 +2451,9 @@
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
-    move-result p4
+    move-result p2
 
-    int-to-float v8, p4
+    int-to-float v8, p2
 
     move-object v4, p3
 
@@ -2440,46 +2465,46 @@
 
     if-nez p1, :cond_9
 
-    const-wide/16 p4, 0x15e
+    const-wide/16 p1, 0x15e
 
-    invoke-virtual {p3, p4, p5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {p3, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     goto :goto_3
 
     :cond_5
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelView;->shouldUseDismissingAnimation()Z
 
-    move-result p5
+    move-result p2
 
-    if-eqz p5, :cond_7
+    if-eqz p2, :cond_7
 
-    cmpl-float p5, p1, v9
+    cmpl-float p2, p1, v9
 
-    if-nez p5, :cond_6
+    if-nez p2, :cond_6
 
-    sget-object p5, Lcom/android/systemui/Interpolators;->PANEL_CLOSE_ACCELERATED:Landroid/view/animation/Interpolator;
+    sget-object p2, Lcom/android/systemui/Interpolators;->PANEL_CLOSE_ACCELERATED:Landroid/view/animation/Interpolator;
 
-    invoke-virtual {p3, p5}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {p3, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    const/high16 p5, 0x43480000    # 200.0f
+    const/high16 p2, 0x43480000    # 200.0f
 
-    iget v1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mExpandedHeight:F
+    iget p5, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mExpandedHeight:F
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
-    move-result v3
+    move-result v1
 
-    int-to-float v3, v3
+    int-to-float v1, v1
 
-    div-float/2addr v1, v3
+    div-float/2addr p5, v1
 
-    const/high16 v3, 0x42c80000    # 100.0f
+    const/high16 v1, 0x42c80000    # 100.0f
 
-    mul-float/2addr v1, v3
+    mul-float/2addr p5, v1
 
-    add-float/2addr v1, p5
+    add-float/2addr p5, p2
 
-    float-to-long v3, v1
+    float-to-long v3, p5
 
     invoke-virtual {p3, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
@@ -2492,9 +2517,9 @@
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
-    move-result p5
+    move-result p2
 
-    int-to-float v8, p5
+    int-to-float v8, p2
 
     move-object v4, p3
 
@@ -2511,9 +2536,9 @@
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getHeight()I
 
-    move-result p5
+    move-result p2
 
-    int-to-float v8, p5
+    int-to-float v8, p2
 
     move-object v4, p3
 
@@ -2528,24 +2553,24 @@
 
     invoke-virtual {p3}, Landroid/animation/ValueAnimator;->getDuration()J
 
-    move-result-wide v3
+    move-result-wide p1
 
-    long-to-float p1, v3
+    long-to-float p1, p1
 
     div-float/2addr p1, p4
 
-    float-to-long p4, p1
+    float-to-long p1, p1
 
-    invoke-virtual {p3, p4, p5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {p3, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     :cond_8
     iget p1, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mFixedDuration:I
 
     if-eq p1, v0, :cond_9
 
-    int-to-long p4, p1
+    int-to-long p1, p1
 
-    invoke-virtual {p3, p4, p5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {p3, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     :cond_9
     :goto_3
@@ -2559,24 +2584,36 @@
 
     move-result-object p1
 
-    iget-object p4, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mPerf:Landroid/util/BoostFramework;
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/PanelView;->mPerf:Landroid/util/BoostFramework;
 
-    const/16 p5, 0x1080
+    const/16 p4, 0x1080
 
-    const/4 v1, 0x3
+    const/4 p5, 0x3
 
-    invoke-virtual {p4, p5, p1, v0, v1}, Landroid/util/BoostFramework;->perfHint(ILjava/lang/String;II)I
+    invoke-virtual {p2, p4, p1, v0, p5}, Landroid/util/BoostFramework;->perfHint(ILjava/lang/String;II)I
 
     :cond_a
-    iget-object p1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFingerprintAlreadyAuthenticated()Z
+    invoke-virtual {p1}, Lcom/oneplus/plugin/OpLsState;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->isBiometricUnlock()Z
 
     move-result p1
+
+    iget-object p2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-static {p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isKeyguardVisible()Z
+
+    move-result p2
 
     sget-object p4, Lcom/android/systemui/statusbar/phone/PanelView;->TAG:Ljava/lang/String;
 
@@ -2590,7 +2627,7 @@
 
     invoke-virtual {p5, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v0, ", expand = "
+    const-string v0, ", "
 
     invoke-virtual {p5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2604,7 +2641,7 @@
 
     if-eqz p1, :cond_b
 
-    if-nez p2, :cond_b
+    if-eqz p2, :cond_b
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/PanelView;->opFlingToHeightAnimatorForBiometricUnlock()V
 

@@ -17,7 +17,7 @@
         <item quantity="one">सिम%1$dपिन कोड चुकीचा आहे, आपण आपल्या साधनास अनलॉक करण्यासाठी आपल्या कॅरियरला संपर्क करण्यापूर्वी आपल्याकडे %2$dप्रयत्न उरलेले आहेत.</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">in %d मिनिटे</item>
-        <item quantity="one">in %d मिनि</item>
+        <item quantity="other">%d मिनिटांमध्‍ये</item>
+        <item quantity="one">%d मिनिटामध्‍ये</item>
     </plurals>
 </resources>

@@ -865,22 +865,6 @@
     return-object p0
 .end method
 
-.method private getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
-    .locals 2
-
-    const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    const-string v1, "mStatusBarWindowController"
-
-    invoke-static {v0, p0, v1}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
-
-    return-object p0
-.end method
-
 .method private getUnlockScrimCallback()Lcom/android/systemui/statusbar/phone/ScrimController$Callback;
     .locals 2
 
@@ -1122,6 +1106,22 @@
     return p0
 .end method
 
+.method static synthetic lambda$checkGestureStartAssist$1(Landroid/os/Bundle;)V
+    .locals 1
+
+    const-class v0, Lcom/android/systemui/assist/AssistManager;
+
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/systemui/assist/AssistManager;
+
+    invoke-virtual {v0, p0}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method private updateDozing()V
     .locals 3
 
@@ -1165,21 +1165,21 @@
 
 # virtual methods
 .method public checkGestureStartAssist(Landroid/os/Bundle;)Z
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
+    iget-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mNavShowing:Z
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    const-class p0, Lcom/android/systemui/assist/AssistManager;
-
-    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getHandler()Landroid/os/Handler;
 
     move-result-object p0
 
-    check-cast p0, Lcom/android/systemui/assist/AssistManager;
+    new-instance v0, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$pxcFa-Vpz_eOL3Jjz1zwym3ILn0;
 
-    invoke-virtual {p0, p1}, Lcom/android/systemui/assist/AssistManager;->startAssist(Landroid/os/Bundle;)V
+    invoke-direct {v0, p1}, Lcom/oneplus/systemui/statusbar/phone/-$$Lambda$OpStatusBar$pxcFa-Vpz_eOL3Jjz1zwym3ILn0;-><init>(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     const-string p0, "OpStatusBar"
 
@@ -1696,6 +1696,22 @@
     move-result-object p0
 
     check-cast p0, Landroid/view/View;
+
+    return-object p0
+.end method
+
+.method public getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
+    .locals 2
+
+    const-class v0, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    const-string v1, "mStatusBarWindowController"
+
+    invoke-static {v0, p0, v1}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     return-object p0
 .end method
@@ -2230,13 +2246,13 @@
 
     if-eqz v1, :cond_1
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object v1
 
@@ -2413,9 +2429,17 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    iget-boolean v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpDozingRequested:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, " playAodWakingUpAnimation="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->isShowing()Z
+    invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->playAodWakingUpAnimation()Z
 
     move-result v2
 
@@ -2434,7 +2458,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-virtual {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->isShowing()Z
+    invoke-virtual {v0}, Lcom/oneplus/aod/OpAodDisplayViewManager;->playAodWakingUpAnimation()Z
 
     move-result v0
 
@@ -2659,13 +2683,13 @@
 .method public onWallpaperChange(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getStatusBarWindowController()Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     move-result-object p0
 
@@ -3750,7 +3774,7 @@
 
     iget-object v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mAodDisplayViewManager:Lcom/oneplus/aod/OpAodDisplayViewManager;
 
-    invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->isShowing()Z
+    invoke-virtual {v2}, Lcom/oneplus/aod/OpAodDisplayViewManager;->playAodWakingUpAnimation()Z
 
     move-result v2
 
@@ -3854,7 +3878,7 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v8, " isAodDisplay:"
+    const-string v8, " playAodWakingUpAnimation:"
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4010,6 +4034,16 @@
     move-result-object v2
 
     if-eqz v3, :cond_8
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getKeyguardUpdateMonitor()Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isCameraLaunched()Z
+
+    move-result v3
+
+    if-nez v3, :cond_8
 
     if-eqz v4, :cond_7
 

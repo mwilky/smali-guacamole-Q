@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet on irrotettu.</string>
     <string name="accessibility_face_dialog_face_icon">Kasvokuvake</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Sormenjälkikuvake</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Ohjeviestialue</string>
     <string name="accessibility_gps_acquiring">Haetaan GPS-signaalia.</string>
     <string name="accessibility_gps_enabled">GPS käytössä.</string>
     <string name="accessibility_hide">Piilota</string>
@@ -657,8 +657,8 @@ Kun puhelin on jäähtynyt, se toimii normaalisti."</string>
     <string name="hotspot_apm_message">Mobiiliverkkoihin ei voi yhdistää, kun lentotila on käytössä. Ota lentotila pois käytöstä ja yritä uudelleen.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Asenna SIM-kortti käyttääksesi mobiilihotspotia ja muita Internet-yhteyden jakamisvaihtoehtoja</string>
     <string name="hotspot_operator_dialog_nosim_title">Ei SIM-korttia</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Et ole tilannut Wi-Fi-yhteyden jakamista</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi-yhteyden jakamisvirhe</string>
     <string name="ime_security_warning">Tämä syöttötapa saattaa kerätä kaiken kirjoittamasi tekstin, mukaan luettuna henkilökohtaiset tiedot kuten salasanat ja luottokortin numerot. Se on lähtöisin sovelluksesta %1$s. Käytetäänkö tätä syöttötapaa?</string>
     <string name="immediately_destroy_activities">Älä säilytä toimintoja</string>
     <string name="immediately_destroy_activities_summary">Tuhoa kaikki toiminnot, kun käyttäjä poistuu.</string>
@@ -1090,7 +1090,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="oneplus_threekey_navigation_disturb_changed">\"Älä häiritse\" on muuttunut!</string>
     <string name="oneplus_threekey_navigation_next">SEURAAVA</string>
     <string name="oneplus_threekey_navigation_silence">Täydellinen hiljaisuus</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Hälytysliukusäädin on muuttunut!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider on muuttunut!</string>
     <string name="oneplus_threekey_navigation_sound">Kaikki äänet sallitaan</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Se voidaan kytkeä päälle yllä olevalla kytkimellä</string>
     <string name="oneplus_threekey_navigation_vibration">Vain värinä</string>
@@ -1104,6 +1104,15 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="op_earphone_device">MUODOSTA LAITEPARI NAPAUTTAMALLA</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Pyyhkäise alas siirtyäksesi hätäpalveluihin</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Tärkeää</string>
+    <string name="op_notification_channel_summary_low">Vähemmän tärkeät ilmoitukset ilman ääntä tai värinää.</string>
+    <string name="op_notification_section_header_gentle">Muut ilmoitukset</string>
+    <string name="op_notification_silence_title">Muut</string>
     <string name="op_quick_settings_night_display_label">Yötila</string>
     <string name="op_quick_settings_night_display_summary_off">Yötila on pois käytöstä, ota käyttöön napauttamalla</string>
     <string name="op_quick_settings_night_display_summary_on">Yötila on käytössä, poista käytöstä napauttamalla</string>
@@ -1116,7 +1125,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="osu_sign_up_failed">Rekisteröityminen epäonnistui. Yritä uudelleen napauttamalla.</string>
     <string name="other">Muu</string>
     <string name="output_calls_title">Puhelun äänentoisto</string>
-    <string name="output_chooser_empty_hint">Ei kytkettyä laitetta</string>
+    <string name="output_chooser_empty_hint">Ei yhdistettyä laitetta</string>
     <string name="output_none_found">Laitteita ei löytynyt</string>
     <string name="output_none_found_service_off">Laitteita ei löytynyt. Kokeile ottaa käyttöön %1$s.</string>
     <string name="output_service_bt">Bluetooth</string>
@@ -1132,7 +1141,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="overheat_dialog_purple_message">Puhelin sammutetaan 5 sekunnin kuluttua</string>
     <string name="overheat_dialog_red_message">Tyhjentää kaikki sovellusprosessit lämpötilan alentamiseksi</string>
     <string name="overheat_dialog_title">Puhelin on liian kuuma</string>
-    <string name="overheat_notification_alert">Puhelin on liian kuuma, ja paljon virtaa käyttävät toiminnot on poistettu käytöstä lämpötilan laskemiseksi</string>
+    <string name="overheat_notification_alert">Puhelin on liian kuuma, ja paljon virtaa käyttävä toiminto on poistettu käytöstä lämpötilan laskemiseksi</string>
     <string name="overheat_notification_resume">Puhelimen lämpötila on palautettu, ja puhelinta voi käyttää normaalisti</string>
     <string name="overheat_notification_title_resume">Puhelimen lämpötila on palautettu</string>
     <string name="overheat_toast_content">Puhelin on kuuma; tämän ominaisuuden käyttöä ei suositella</string>
@@ -1216,11 +1225,6 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="prevent_view_top_tag_cancel2">Seuraa näytöllä olevia renkaita ja poistu Pocket-tilasta napauttamalla niitä.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_location">sijainti</string>
     <string name="privacy_type_microphone">mikrofoni</string>
@@ -1334,7 +1338,7 @@ Olet myös yhteydessä VPN:ään, joka voi valvoa toimintaasi verkossa."</string
     <string name="quick_settings_night_secondary_label_on_at_sunset">Auringon laskiessa</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Auringonnousuun</string>
     <string name="quick_settings_notifications_label">Ilmoitukset</string>
-    <string name="quick_settings_op_car_mode_dnd_label">Ei saa häiritä</string>
+    <string name="quick_settings_op_car_mode_dnd_label">Älä häiritse</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">Autotilan ei saa häiritä on pois käytöstä, ota käyttöön napauttamalla</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Autotilan ei saa häiritä on käytössä, poista käytöstä napauttamalla</string>
     <string name="quick_settings_power_saving_label">Virransäästö</string>
@@ -1672,9 +1676,9 @@ Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille."</stri
     <string name="volume_dialog_ringer_guidance_ring">Puhelut ja ilmoitukset soivat (%1$s)</string>
     <string name="volume_dialog_title">Äänenvoimakkuuden säädin: %s</string>
     <string name="volume_dnd_silent">Äänenvoimakkuuspainikkeiden pikanäppäin</string>
-    <string name="volume_footer_no_disturb">Ei saa häiritä</string>
+    <string name="volume_footer_no_disturb">Älä häiritse</string>
     <string name="volume_footer_ring">Soittoääni</string>
-    <string name="volume_footer_slient">Äänetön</string>
+    <string name="volume_footer_slient">Hiljainen</string>
     <string name="volume_footer_vibrate">Äänetön (värinä)</string>
     <string name="volume_odi_captions_content_description">Tekstitysten peitto</string>
     <string name="volume_odi_captions_hint_disable">poista käytöstä</string>
@@ -1743,7 +1747,7 @@ Kaikki käyttäjät voivat päivittää sovelluksia muille käyttäjille."</stri
     <string name="zen_mode_forever">Kunnes poistat sen käytöstä</string>
     <string name="zen_mode_settings_summary_off">Ei koskaan</string>
     <string name="zen_mode_settings_turn_on_dialog_title">Ota Älä häiritse ‑tila käyttöön</string>
-    <string name="zen_no_interruptions">Äänetön</string>
+    <string name="zen_no_interruptions">Hiljainen</string>
     <string name="zen_priority_customize_button">Muokkaa</string>
     <string name="zen_priority_introduction">Äänet ja värinät eivät häiritse sinua, paitsi jos ne ovat hälytyksiä, muistutuksia, tapahtumia tai määrittämiäsi soittajia. Kuulet edelleen kaiken valitsemasi sisällön, kuten musiikin, videot ja pelit.</string>
     <string name="zen_silence_introduction">Tämä estää KAIKKI äänet ja värinät, mukaan lukien hälytysten, musiikin, videoiden ja pelien äänet ja värinät.</string>

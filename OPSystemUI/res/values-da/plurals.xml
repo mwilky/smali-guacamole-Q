@@ -61,8 +61,8 @@
         <item quantity="one">%d enhed</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">om %d min</item>
-        <item quantity="one">om %d min</item>
+        <item quantity="other">i %d min.</item>
+        <item quantity="one">i %d min.</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d timer</item>

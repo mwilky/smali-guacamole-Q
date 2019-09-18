@@ -15,8 +15,6 @@
 
 
 # static fields
-.field private static final DEBUG:Z
-
 .field private static final TAG:Ljava/lang/String; = "NavigationModeController"
 
 
@@ -53,16 +51,6 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    sput-boolean v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/UiOffloadThread;)V
     .locals 16
 
@@ -191,15 +179,7 @@
     return-void
 .end method
 
-.method static synthetic access$000()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    return v0
-.end method
-
-.method static synthetic access$100()Ljava/lang/String;
+.method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
@@ -207,7 +187,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Landroid/content/Context;
+.method static synthetic access$100(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
@@ -215,7 +195,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/android/systemui/statusbar/phone/NavigationModeController;Landroid/content/Context;)Ljava/lang/String;
+.method static synthetic access$200(Lcom/android/systemui/statusbar/phone/NavigationModeController;Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->getDefaultLauncherPackageName(Landroid/content/Context;)Ljava/lang/String;
@@ -225,7 +205,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Ljava/lang/String;
+.method static synthetic access$300(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mLastDefaultLauncher:Ljava/lang/String;
@@ -233,7 +213,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$402(Lcom/android/systemui/statusbar/phone/NavigationModeController;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$302(Lcom/android/systemui/statusbar/phone/NavigationModeController;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mLastDefaultLauncher:Ljava/lang/String;
@@ -241,7 +221,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$500(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+.method static synthetic access$400(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->switchFromGestureNavModeIfNotSupportedByDefaultLauncher()V
@@ -249,7 +229,7 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+.method static synthetic access$500(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->showNotificationIfDefaultLauncherSupportsGestureNav()V
@@ -257,7 +237,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
+.method static synthetic access$600(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
@@ -265,7 +245,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$800(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+.method static synthetic access$700(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->restoreGesturalNavOverlayIfNecessary()V
@@ -273,7 +253,7 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+.method static synthetic access$800(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->deferGesturalNavOverlayIfNecessary()V
@@ -302,7 +282,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
@@ -310,11 +290,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
-
-    sget-boolean p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
     sget-object p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
@@ -322,10 +298,9 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     return-void
 
-    :cond_1
+    :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -361,11 +336,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_3
-
-    sget-boolean p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz p0, :cond_2
+    if-nez v2, :cond_1
 
     sget-object p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
@@ -385,10 +356,9 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
     return-void
 
-    :cond_3
+    :cond_1
     const/4 v1, -0x2
 
     const-string v2, "com.android.internal.systemui.navbar.threebutton"
@@ -401,17 +371,12 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    sget-boolean p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz p0, :cond_4
-
     sget-object p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
     const-string v0, "deferGesturalNavOverlayIfNecessary: setting to 3 button mode"
 
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_4
     return-void
 .end method
 
@@ -488,10 +453,6 @@
 
     move-result v0
 
-    sget-boolean v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz v1, :cond_0
-
     sget-object v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -522,7 +483,6 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     return v0
 .end method
 
@@ -562,10 +522,6 @@
 
     move-result-object v0
 
-    sget-boolean v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz v1, :cond_0
-
     sget-object v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -594,10 +550,26 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const-string v1, "com.oneplus.brickmode"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
 
     return-object p0
 
@@ -608,9 +580,7 @@
 
     if-eqz p0, :cond_2
 
-    const/4 p0, 0x1
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
@@ -662,10 +632,6 @@
 .method private restoreGesturalNavOverlayIfNecessary()V
     .locals 3
 
-    sget-boolean v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz v0, :cond_0
-
     sget-object v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -686,7 +652,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mDeviceProvisionedController:Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
     invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;->getCurrentUser()I
@@ -699,7 +664,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     const/4 v1, -0x2
 
@@ -713,7 +678,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 
@@ -727,10 +692,6 @@
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p2
-
-    sget-boolean v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz v0, :cond_0
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
@@ -750,7 +711,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     new-instance v0, Landroid/app/Notification$Builder;
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mContext:Landroid/content/Context;
@@ -898,112 +858,14 @@
 .end method
 
 .method private switchFromGestureNavModeIfNotSupportedByDefaultLauncher()V
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
+    sget-object p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->getCurrentInteractionMode(Landroid/content/Context;)I
+    const-string v0, "not Switching when changing launcher"
 
-    move-result v0
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
-
-    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->isGestureNavSupportedByDefaultLauncher(Landroid/content/Context;)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Switching system navigation to 3-button mode: defaultLauncher="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
-
-    invoke-direct {p0, v2}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->getDefaultLauncherPackageName(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " contextUser="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getUserId()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, -0x2
-
-    const-string v1, "com.android.internal.systemui.navbar.threebutton"
-
-    invoke-virtual {p0, v1, v0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->setModeOverlay(Ljava/lang/String;I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
-
-    sget v1, Lcom/android/systemui/R$string;->notification_content_system_nav_changed:I
-
-    invoke-direct {p0, v0, v1}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->showNotification(Landroid/content/Context;I)V
-
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mCurrentUserContext:Landroid/content/Context;
-
-    const/4 v0, 0x0
-
-    const-string v1, "navigation_mode_controller_preferences"
-
-    invoke-virtual {p0, v1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    const/4 v0, 0x1
-
-    const-string v1, "switched_from_gesture_nav"
-
-    invoke-interface {p0, v1, v0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    :cond_2
-    :goto_0
     return-void
 .end method
 
@@ -1155,10 +1017,6 @@
 
     move-result v0
 
-    sget-boolean v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz v1, :cond_0
-
     sget-object v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1189,20 +1047,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getUserId()I
 
     move-result v1
 
-    if-ne v1, v0, :cond_1
+    if-ne v1, v0, :cond_0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mContext:Landroid/content/Context;
 
     return-object p0
 
-    :cond_1
+    :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mContext:Landroid/content/Context;
 
@@ -1239,10 +1096,6 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mOverlayManager:Landroid/content/om/IOverlayManager;
 
     invoke-interface {p0, p1, p2}, Landroid/content/om/IOverlayManager;->setEnabledExclusiveInCategory(Ljava/lang/String;I)Z
-
-    sget-boolean p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz p0, :cond_0
 
     sget-object p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
@@ -1297,7 +1150,6 @@
 
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     :goto_0
     return-void
 .end method
@@ -1371,10 +1223,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/UiOffloadThread;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    sget-boolean v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->DEBUG:Z
-
-    if-eqz v1, :cond_0
-
     sget-object v1, Lcom/android/systemui/statusbar/phone/NavigationModeController;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1411,8 +1259,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->dumpAssetPaths(Landroid/content/Context;)V
 
-    :cond_0
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x0
 
@@ -1423,7 +1270,7 @@
 
     move-result v1
 
-    if-ge p1, v1, :cond_1
+    if-ge p1, v1, :cond_0
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController;->mListeners:Ljava/util/ArrayList;
 
@@ -1439,6 +1286,6 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     return-void
 .end method

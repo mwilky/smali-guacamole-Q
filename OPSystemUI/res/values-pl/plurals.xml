@@ -88,7 +88,7 @@
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
         <item quantity="other">za %d min</item>
-        <item quantity="one">za %d min</item>
+        <item quantity="one">za %d minutę</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d godziny</item>

@@ -187,3 +187,13 @@
 
     return-void
 .end method
+
+.method public vibrate()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->performHapticFeedback(I)Z
+
+    return-void
+.end method

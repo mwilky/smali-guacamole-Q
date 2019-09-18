@@ -657,8 +657,8 @@ Once your phone has cooled down, it will run normally."</string>
     <string name="hotspot_apm_message">Unable to connect to mobile networks while Airplane mode is enabled. Disable Airplane mode and try again.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Insert a SIM card to use Mobile Hotspot and other tethering options</string>
     <string name="hotspot_operator_dialog_nosim_title">No SIM card</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wi-Fi tethering</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi tethering error</string>
     <string name="ime_security_warning">This input method may be able to collect all the text that you type, including personal data like passwords and credit card numbers. It comes from the app %1$s. Use this input method?</string>
     <string name="immediately_destroy_activities">"Don't keep activities"</string>
     <string name="immediately_destroy_activities_summary">Destroy every activity as soon as the user leaves it</string>
@@ -1104,6 +1104,15 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_earphone_device">TAP TO PAIR</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Swipe down for emergency services</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Important</string>
+    <string name="op_notification_channel_summary_low">Less important notifications without any sound or vibration.</string>
+    <string name="op_notification_section_header_gentle">Other notifications</string>
+    <string name="op_notification_silence_title">Other</string>
     <string name="op_quick_settings_night_display_label">Night mode</string>
     <string name="op_quick_settings_night_display_summary_off">Night mode off. Tap to turn on</string>
     <string name="op_quick_settings_night_display_summary_on">Night mode on. Tap to turn off</string>
@@ -1116,7 +1125,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="osu_sign_up_failed">Couldn’t complete sign-up. Tap to try again</string>
     <string name="other">Other</string>
     <string name="output_calls_title">Phone call output</string>
-    <string name="output_chooser_empty_hint">No device connected</string>
+    <string name="output_chooser_empty_hint">No connected device</string>
     <string name="output_none_found">No devices found</string>
     <string name="output_none_found_service_off">No devices found. Try turning on %1$s</string>
     <string name="output_service_bt">Bluetooth</string>
@@ -1132,7 +1141,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="overheat_dialog_purple_message">The phone will be powered off after 5 seconds</string>
     <string name="overheat_dialog_red_message">All application processes will be cleared to lower the temperature</string>
     <string name="overheat_dialog_title">The temperature of your phone is too high</string>
-    <string name="overheat_notification_alert">The temperature of your phone is too high. High power consumption functions have been turned off to lower the temperature</string>
+    <string name="overheat_notification_alert">The temperature of your phone is too high. The high power consumption function has been turned off to lower the temperature</string>
     <string name="overheat_notification_resume">"The phone's temperature has been restored and the phone can be used normally"</string>
     <string name="overheat_notification_title_resume">"The phone's temperature has been restored"</string>
     <string name="overheat_toast_content">The phone is in a high temperature state. It is not recommended to use this feature</string>
@@ -1216,11 +1225,6 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="prevent_view_top_tag_cancel2">Please follow the circles on the screen and tap on them to force quit pocket mode.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">camera</string>
     <string name="privacy_type_location">location</string>
     <string name="privacy_type_microphone">microphone</string>

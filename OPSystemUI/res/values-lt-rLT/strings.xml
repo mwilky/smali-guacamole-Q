@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Pagalbos žinutės sritis</string>
     <string name="accessibility_hide">Slėpti</string>
     <string name="accessibility_phone_four_bars">Keturi telefono stulpeliai.</string>
     <string name="accessibility_quick_settings_data_switch_changed_1">Keisti duomenų kortelę į SIM 1.</string>
@@ -40,8 +40,8 @@
     <string name="hotspot_apm_message">Kol įjungtas lėktuvo režimas, prisijungti prie mobiliųjų tinklų nepavyksta. Išjunkite lėktuvo režimą ir bandykite dar kartą.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Įstatykite SIM kortelę, kad galėtumėte naudotis mobiliąja saitviete ir kitomis siejimo parinktimis</string>
     <string name="hotspot_operator_dialog_nosim_title">Nėra SIM kortelės</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Nesate užsisakę „Wifi“ siejimo</string>
+    <string name="hotspot_operator_dialog_othererror_title">„Wifi“ siejimo klaida</string>
     <string name="interruption_level_game">Žaidimas</string>
     <string name="interruption_level_movie">Filmas</string>
     <string name="interruption_level_music">Muzika</string>
@@ -72,7 +72,7 @@
     <string name="oneplus_threekey_navigation_disturb_changed">Pasikeitė „Netrukdyti“!</string>
     <string name="oneplus_threekey_navigation_next">KITAS</string>
     <string name="oneplus_threekey_navigation_silence">Visiška tyla</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Pasikeitė įspėjimo slankiklis!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Pasikeitė „Alert Slider“!</string>
     <string name="oneplus_threekey_navigation_sound">Leidžiami visi garsai</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Įjungti galima, viršuje perjungus</string>
     <string name="oneplus_threekey_navigation_vibration">Tik vibracija</string>
@@ -82,6 +82,15 @@
     <string name="op_earphone_device">BAKSTELĖKITE, KAD SUSIETUMĖTE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Braukdami žemyn susisiekite su pagalbos tarnybomis</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Svarbu</string>
+    <string name="op_notification_channel_summary_low">Mažiau svarbūs pranešimai be jokio garso ar vibracijos.</string>
+    <string name="op_notification_section_header_gentle">Kiti pranešimai</string>
+    <string name="op_notification_silence_title">Kita</string>
     <string name="op_quick_settings_night_display_label">Nakties režimas</string>
     <string name="op_quick_settings_night_display_summary_off">Nakties režimas išjungtas, bakstelėkite, kad įjungtumėte</string>
     <string name="op_quick_settings_night_display_summary_on">Nakties režimas įjungtas, bakstelėkite, kad išjungtumėte</string>
@@ -95,9 +104,9 @@
     <string name="overheat_dialog_purple_message">Po 5 sek. telefonas bus išjungtas</string>
     <string name="overheat_dialog_red_message">Kad temperatūra sumažėtų, bus išjungti visi programėlių procesai</string>
     <string name="overheat_dialog_title">Jūsų telefono temperatūra per aukšta</string>
-    <string name="overheat_notification_alert">Jūsų telefono temperatūra per aukšta, todėl temperatūrai sumažinti išjungtos daug energijos vartojančios funkcijos</string>
-    <string name="overheat_notification_resume">Telefono temperatūra atstatyta ir telefoną dabar galima naudoti įprastai</string>
-    <string name="overheat_notification_title_resume">Telefono temperatūra atstatyta</string>
+    <string name="overheat_notification_alert">Jūsų telefono temperatūra per aukšta, todėl temperatūrai sumažinti išjungta daug energijos vartojanti funkcija</string>
+    <string name="overheat_notification_resume">Telefono temperatūra atkurta, o telefoną dabar galima naudoti įprastai</string>
+    <string name="overheat_notification_title_resume">Telefono temperatūra atkurta</string>
     <string name="overheat_toast_content">Jūsų telefono temperatūra aukšta, šia funkcija nerekomenduojama naudotis</string>
     <string name="prevent_view_title">Įjungtas kišeninis režimas</string>
     <string name="prevent_view_title_cancel">Kad suaktyvintumėte savo telefoną:</string>
@@ -105,11 +114,6 @@
     <string name="prevent_view_top_tag_cancel2">Stebėkite apskritimus ekrane ir bakstelėkite, kad priverstiniu būdu išjungtumėte kišeninį režimą.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="qs_edit">Redaguoti</string>
     <string name="quick_launch_exit">Išeiti</string>
     <string name="quick_launch_exit_hint">Pirštas nuo ekrano, kad išeitumėte</string>
@@ -151,7 +155,7 @@
     <string name="recents_deep_clean_option">Gilus išvalymas</string>
     <string name="recents_empty_no_apps_open">Nėra atidarytų programėlių</string>
     <string name="recents_empty_recently_closed">Neseniai uždarytos programėlės</string>
-    <string name="recents_normal_clean_description">Išvalyti užduočių sąrašą ir podėlį, neišjungiant foninių procesų.</string>
+    <string name="recents_normal_clean_description">Išvalykite užduočių sąrašą ir talpyklą neišvalant fone veikiančių procesų.</string>
     <string name="recents_normal_clean_option">Įprastas valymas</string>
     <string name="recents_option_note">Šį parametrą galite pakeisti išplėstinių -> parametrų lange.</string>
     <string name="recents_option_title">Kaip norite elgtis?</string>

@@ -35,39 +35,31 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$7;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/PowerManager;
+    iget-boolean v1, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mPendingHideDialog:Z
 
-    move-result-object v0
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isInteractive()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$7;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
-
-    const/4 v0, 0x2
-
-    invoke-static {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
-
-    goto :goto_0
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$7;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$7;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x6
 
-    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->updateDimViewVisibility(Z)V
+    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->updateFpDaemonStatus(I)V
 
-    :goto_0
+    :cond_1
     return-void
 .end method

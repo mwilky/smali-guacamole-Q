@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet er frakoblet.</string>
     <string name="accessibility_face_dialog_face_icon">Ansiktikon</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikon for fingeravtrykk</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Hjelpmeldingsfelt</string>
     <string name="accessibility_gps_acquiring">Henting av GPS-signal.</string>
     <string name="accessibility_gps_enabled">GPS er aktivert.</string>
     <string name="accessibility_hide">Skjul</string>
@@ -657,8 +657,8 @@ Telefonen kommer til å kjøre som normalt, når den har kjølt seg ned."</strin
     <string name="hotspot_apm_message">Kan ikke koble til mobilnettverk mens flymodus er aktivert. Deaktiver flymodus, og prøv igjen.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Sett inn et SIM-kort for å bruke mobilt hotspot og andre tethering-alternativer</string>
     <string name="hotspot_operator_dialog_nosim_title">Ingen SIM-kort</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Du har ikke abonnert på Wifi-tethering</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi-tetheringfeil</string>
     <string name="ime_security_warning">Denne inndatametoden har tilgang til all tekst du skriver, blant annet personlige opplysninger som for eksempel passord og kredittkortnumre. Den kommer fra appen %1$s. Vil du bruke denne inndatametoden?</string>
     <string name="immediately_destroy_activities">Ikke behold aktiviteter</string>
     <string name="immediately_destroy_activities_summary">Fjern hver aktivitet så fort brukeren forlater den</string>
@@ -1104,6 +1104,15 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="op_earphone_device">TRYKK FOR Å PARRE</string>
     <string name="op_earphone_title">OnePlus kuler trådløs</string>
     <string name="op_emergency_indicator_hint_text">Sveip ned for nødstjenester</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Viktig</string>
+    <string name="op_notification_channel_summary_low">Mindre viktige varsler uten noe lyd eller vibrasjon.</string>
+    <string name="op_notification_section_header_gentle">Andre varsler</string>
+    <string name="op_notification_silence_title">Annet</string>
     <string name="op_quick_settings_night_display_label">Nattmodus</string>
     <string name="op_quick_settings_night_display_summary_off">Nattmodus er av, trykk for å slå på</string>
     <string name="op_quick_settings_night_display_summary_on">Nattmodus er på, trykk for å slå av</string>
@@ -1216,11 +1225,6 @@ Du er også tilkoblet en VPN som kan overvåke nettverksaktiviteten din."</strin
     <string name="prevent_view_top_tag_cancel2">Følg sirklene på skjermen, og trykk på dem for å tvinge avslutning av lommemodus.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_location">posisjon</string>
     <string name="privacy_type_microphone">mikrofon</string>

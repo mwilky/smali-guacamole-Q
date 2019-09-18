@@ -336,11 +336,11 @@
 .end method
 
 .method public appTransitionStarting(IJJZ)V
-    .locals 6
+    .locals 7
 
     iget v0, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mDisplayId:I
 
-    if-ne v0, p1, :cond_3
+    if-ne v0, p1, :cond_4
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mKeyguardMonitor:Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
 
@@ -357,42 +357,83 @@
     :cond_0
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
 
-    const/4 p6, 0x0
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTintChangePending:Z
 
+    if-eqz p1, :cond_2
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTintChangePending:Z
+
+    sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
     if-eqz p1, :cond_1
 
-    iput-boolean p6, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTintChangePending:Z
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "TransitionStarting, "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mPendingDarkIntensity:F
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p6, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mNextDarkIntensity:F
+
+    invoke-virtual {p1, p6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p6, "LightBar"
+
+    invoke-static {p6, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mPendingDarkIntensity:F
+
+    const-wide/16 v3, 0x0
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v5
 
-    sub-long/2addr p2, v4
+    sub-long/2addr p2, v5
 
-    invoke-static {v2, v3, p2, p3}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {v3, v4, p2, p3}, Ljava/lang/Math;->max(JJ)J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-wide v4, p4
+    move-wide v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->animateIconTint(FJJ)V
+    invoke-direct/range {v1 .. v6}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->animateIconTint(FJJ)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-boolean p1, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     const/4 p1, 0x1
 
@@ -414,11 +455,11 @@
 
     invoke-virtual {p1, p4, p2, p3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    :cond_2
-    :goto_0
-    iput-boolean p6, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
-
     :cond_3
+    :goto_0
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
+
+    :cond_4
     :goto_1
     return-void
 .end method
@@ -615,64 +656,107 @@
 .method public setIconsDark(ZZ)V
     .locals 8
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    const/4 v2, 0x0
+    if-eqz v3, :cond_0
 
-    if-nez p2, :cond_2
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    move v3, v1
+    const-string v4, "setIconsDark, "
 
-    goto :goto_0
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v5, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v4, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mNextDarkIntensity:F
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "LightBar"
+
+    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    move v3, v2
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    :goto_0
-    invoke-direct {p0, v3}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconTintInternal(F)V
+    const/4 v4, 0x0
+
+    if-nez p2, :cond_3
 
     if-eqz p1, :cond_1
 
-    goto :goto_1
+    move v2, v3
+
+    goto :goto_0
 
     :cond_1
-    move v1, v2
+    move v2, v4
+
+    :goto_0
+    invoke-direct {p0, v2}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->setIconTintInternal(F)V
+
+    if-eqz p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v3, v4
 
     :goto_1
-    iput v1, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mNextDarkIntensity:F
+    iput v3, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mNextDarkIntensity:F
 
     goto :goto_5
 
-    :cond_2
-    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
+    :cond_3
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionPending:Z
 
-    if-eqz v3, :cond_4
+    if-eqz v2, :cond_5
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     goto :goto_2
 
-    :cond_3
-    move v1, v2
+    :cond_4
+    move v3, v4
 
     :goto_2
-    invoke-direct {p0, v1}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->deferIconTintChange(F)V
+    invoke-direct {p0, v3}, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->deferIconTintChange(F)V
 
     goto :goto_5
 
-    :cond_4
-    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionDeferring:Z
+    :cond_5
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/LightBarTransitionsController;->mTransitionDeferring:Z
 
-    if-eqz v3, :cond_6
+    if-eqz v2, :cond_7
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
+
+    move v1, v3
 
     goto :goto_3
 
-    :cond_5
-    move v1, v2
+    :cond_6
+    move v1, v4
 
     :goto_3
     const-wide/16 v2, 0x0
@@ -697,13 +781,15 @@
 
     goto :goto_5
 
-    :cond_6
-    if-eqz p1, :cond_7
+    :cond_7
+    if-eqz p1, :cond_8
+
+    move v1, v3
 
     goto :goto_4
 
-    :cond_7
-    move v1, v2
+    :cond_8
+    move v1, v4
 
     :goto_4
     const-wide/16 v2, 0x0

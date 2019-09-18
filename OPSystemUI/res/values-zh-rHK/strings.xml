@@ -756,7 +756,7 @@
     <string name="keyguard_indication_charging_time_slowly">%2$s • 正在慢速充電 (%1$s後完成)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • 無線充電中 (%1$s後完成充電)</string>
     <string name="keyguard_indication_trust_disabled">裝置將保持上鎖，直到您手動解鎖</string>
-    <string name="keyguard_indication_trust_unlocked">由信任的代理保持解鎖狀態</string>
+    <string name="keyguard_indication_trust_unlocked">@string/op_keyguard_indication_trust_unlocked</string>
     <string name="keyguard_instructions_when_pattern_disabled">按下 [選單] 即可解鎖。</string>
     <string name="keyguard_low_battery">請連接充電器。</string>
     <string name="keyguard_missing_sim_instructions">請插入 SIM 卡。</string>

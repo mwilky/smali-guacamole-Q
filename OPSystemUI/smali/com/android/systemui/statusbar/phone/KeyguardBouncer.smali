@@ -144,7 +144,23 @@
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)I
+.method static synthetic access$100(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->showPrimarySecurityScreen()V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)I
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mStatusBarHeight:I
@@ -152,7 +168,7 @@
     return p0
 .end method
 
-.method static synthetic access$200(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)Z
+.method static synthetic access$400(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mNoAnim:Z
@@ -160,7 +176,7 @@
     return p0
 .end method
 
-.method static synthetic access$202(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
+.method static synthetic access$402(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mNoAnim:Z
@@ -168,7 +184,7 @@
     return p1
 .end method
 
-.method static synthetic access$302(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
+.method static synthetic access$502(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mShowingSoon:Z
@@ -176,7 +192,7 @@
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)F
+.method static synthetic access$600(Lcom/android/systemui/statusbar/phone/KeyguardBouncer;)F
     .locals 0
 
     iget p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->mExpansion:F
@@ -474,6 +490,34 @@
 
 .method public hide(Z)V
     .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "hide / destroyView:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " isShowing:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->isShowing()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "KeyguardBouncer"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBouncer;->isShowing()Z
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">உதவிச் செய்திப் பகுதி</string>
     <string name="accessibility_hide">மறை</string>
     <string name="accessibility_phone_four_bars">ஃபோனின் நான்கு பார்கள்.</string>
     <string name="accessibility_quick_settings_data_switch_changed_1">தரவு அட்டையை SIM 1க்கு மாற்றுக.</string>
@@ -40,8 +40,8 @@
     <string name="hotspot_apm_message">வானூர்தி பயன்முறை செயல்படுத்தப்பட்டிருக்கையில், மொபைல் நெட்வொர்க் உடன் இணைக்க இயலவில்லை. வானூர்தி பயன்முறையை முடக்கிவிட்டு மீண்டும் முயற்சிக்கவும்.</string>
     <string name="hotspot_operator_dialog_nosim_msg">மொபைல் ஹாட்ஸ்பாட் மற்றும் பிற டெதரிங் விருப்பங்களைப் பயன்படுத்த SIM அட்டையைச் செருகவும்</string>
     <string name="hotspot_operator_dialog_nosim_title">SIM அட்டை இல்லை</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Wifi டெதரிங்கில் நீங்கள் குழு சேரவில்லை</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wifi டெதரிங் பிழை</string>
     <string name="interruption_level_game">விளையாட்டு</string>
     <string name="interruption_level_movie">மூவி</string>
     <string name="interruption_level_music">இசை</string>
@@ -62,7 +62,7 @@
     <string name="nav_bar_guide_positive">புரிந்தது</string>
     <string name="nav_bar_guide_title">நேவிகேஷன் பட்டியைக் காண கீழிருந்து மேலே ஸ்வைப் செய்யவும். நீங்கள் நேவிகேஷன் மறைப்பதை நிறுத்த விரும்பினால், தயவுசெய்து டேப் செய்யவும்</string>
     <string name="non_op_earphone_notification_content">உங்கள் ஹெட்செட்டிற்கான சில புதிய அம்சங்களை OnePlus வழங்குகிறது. அதை முயற்சித்துப் பார்க்க, அறிவிப்பு மீது கிளிக் செய்யவும்.</string>
-    <string name="non_op_earphone_notification_title">குறிப்புகள்</string>
+    <string name="non_op_earphone_notification_title">உதவிக்குறிப்புகள்</string>
     <string name="notification_content_disable_button">அவற்றை ஆஃப் செய்ய தொடவும்</string>
     <string name="notification_content_disable_button_in_nav">HW பொத்தான்கள் பூட்டப்பட்டிருக்கும்போது நேவிகேஷன் பட்டி முடக்கப்பட்டிருக்கும்</string>
     <string name="notification_title_disable_button">HW பொத்தான்கள் பூட்டப்பட்டுள்ளன</string>
@@ -82,10 +82,19 @@
     <string name="op_earphone_device">இணைக்கத் தட்டவும்</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">அவசரகாலச் சேவைகளுக்கு கீழ்நோக்கி ஸ்வைப் செய்யவும்</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">முக்கியமானது</string>
+    <string name="op_notification_channel_summary_low">எந்த ஒலி அல்லது அதிர்வு இல்லாத குறைந்த முக்கியத்துவம் கொண்ட அறிவிப்புகள்.</string>
+    <string name="op_notification_section_header_gentle">மற்ற அறிவிப்புகள்</string>
+    <string name="op_notification_silence_title">மற்றவை</string>
     <string name="op_quick_settings_night_display_label">இரவு பயன்முறை</string>
     <string name="op_quick_settings_night_display_summary_off">இரவு பயன்முறை ஆஃப் ஆக உள்ளது, ஆன் செய்ய டேப் செய்யவும்</string>
     <string name="op_quick_settings_night_display_summary_on">இரவு பயன்முறை ஆன் ஆக உள்ளது, ஆஃப் செய்ய டேப் செய்யவும்</string>
-    <string name="output_chooser_empty_hint">இணைக்கப்பட்ட சாதனம் ஏதமில்லை</string>
+    <string name="output_chooser_empty_hint">இணைக்கப்பட்ட சாதனம் ஏதுமில்லை</string>
     <string name="overheat_dialog_orange_button">இப்போதே செயல்படுத்து</string>
     <string name="overheat_dialog_orange_message">"இந்த நடவடிக்கைகளை மேற்கொண்டால் வெப்பநிலை குறையும்
 1.திரைப் பிரகாசத்தைக் குறைக்கவும்
@@ -95,9 +104,9 @@
     <string name="overheat_dialog_purple_message">5 வினாடிகளுக்குப் பிறகு ஃபோன் பவர் ஆஃப் செய்யப்படும்</string>
     <string name="overheat_dialog_red_message">வெப்பநிலையைக் குறைக்க அனைத்து பயன்பாடு செயல்முறைகளையும் அழிக்கும்</string>
     <string name="overheat_dialog_title">உங்கள் ஃபோனின் வெப்பநிலை மிக அதிகமாக உள்ளது</string>
-    <string name="overheat_notification_alert">உங்கள் ஃபோனின் வெப்பநிலை மிக அதிகமாக உள்ளது. அதைக் குறைக்க, மின்சக்தியை அதிகம் பயன்படுத்தும் செயல்பாடுகள் முடக்கப்படுகின்றன</string>
-    <string name="overheat_notification_resume">தொலைபேசியின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது, இப்போது வழக்கம்போல் தொலைபேசியைப் பயன்படுத்தலாம்</string>
-    <string name="overheat_notification_title_resume">தொலைபேசியின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது</string>
+    <string name="overheat_notification_alert">உங்கள் ஃபோனின் வெப்பநிலை மிக அதிகமாக உள்ளது. அதைக் குறைக்க, மின்சக்தியை அதிகம் பயன்படுத்தும் செயல்பாடு முடக்கப்படுகிறது</string>
+    <string name="overheat_notification_resume">ஃபோனின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது, இப்போது வழக்கம்போல் ஃபோனைப் பயன்படுத்தலாம்</string>
+    <string name="overheat_notification_title_resume">ஃபோனின் வெப்பநிலை மீண்டும் இயல்புக்கு மீட்கப்பட்டது</string>
     <string name="overheat_toast_content">ஃபோனின் வெப்பநிலை அதிகமாக உள்ளதால் இந்த அம்சத்தைப் பயன்படுத்துவது பரிந்துரைக்கப்படவில்லை</string>
     <string name="prevent_view_title">பாக்கெட் பயன்முறை ஆன் ஆக உள்ளது</string>
     <string name="prevent_view_title_cancel">உங்கள் ஃபோனை செயல்படுத்த:</string>
@@ -105,11 +114,6 @@
     <string name="prevent_view_top_tag_cancel2">திரையிலுள்ள வட்டங்களைப் பின்தொடரவும், பாக்கெட் பயன்முறையிலிருந்து வலுக்கட்டாயமாக வெளியேற அவற்றின் மீது டேப் செய்யவும்.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="qs_edit">திருத்துக</string>
     <string name="quick_launch_exit">வெளியேறுக</string>
     <string name="quick_launch_exit_hint">வெளியேறுவதற்கு திரையிலிருந்து விரலை எடுத்துவிடவும்</string>
@@ -151,7 +155,7 @@
     <string name="recents_deep_clean_option">டீப் க்ளீயர்</string>
     <string name="recents_empty_no_apps_open">திறந்துள்ள பயன்பாடுகள் இல்லை</string>
     <string name="recents_empty_recently_closed">சமீபத்தில் மூடப்பட்ட பயன்பாடுகள்</string>
-    <string name="recents_normal_clean_description">பின்னணி செயல்முறைகளை அழிக்காமல், பணி பட்டியல் மற்றும் தேக்ககத்தை அழிக்கும்.</string>
+    <string name="recents_normal_clean_description">பின்னணி செயல்முறைகளை அழிக்காமல், பணிப் பட்டியல் மற்றும் தேக்ககத்தை அழிக்கும்.</string>
     <string name="recents_normal_clean_option">சாதாரணமாக அழிக்கவும்</string>
     <string name="recents_option_note">நீங்கள் இதை அமைத்து -> மேம்பட்டது என்பதில் மாற்றிக்கொள்ளலாம்.</string>
     <string name="recents_option_title">நீங்கள் எதை விரும்புகிறீர்கள்</string>

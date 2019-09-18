@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet er ikke tilsluttet.</string>
     <string name="accessibility_face_dialog_face_icon">Ansigt</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikon for fingeraftryk</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Område for hjælpemeddelelse</string>
     <string name="accessibility_gps_acquiring">GPS samler data.</string>
     <string name="accessibility_gps_enabled">GPS aktiveret.</string>
     <string name="accessibility_hide">Skjul</string>
@@ -657,8 +657,8 @@ Når din telefon er kølet ned, fungerer den normalt igen."</string>
     <string name="hotspot_apm_message">Der kan ikke oprettes forbindelse til mobilnet, så længe flytilstand er aktiveret. Deaktivér flytilstand, og prøv igen.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Indsæt et SIM-kort for at bruge mobilt hotspot og andre indstillinger for internetdeling</string>
     <string name="hotspot_operator_dialog_nosim_title">Intet SIM-kort</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Du er ikke tilmeldt internetdeling via Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Fejl med internetdeling via Wi-Fi</string>
     <string name="ime_security_warning">Denne inputmetode kan muligvis indsamle al indtastet tekst, f.eks. personlige data såsom adgangskoder og kreditkortnumre. Den kommer fra appen %1$s. Vil du anvende denne inputmetode?</string>
     <string name="immediately_destroy_activities">Behold ikke aktiviteter</string>
     <string name="immediately_destroy_activities_summary">Luk hver aktivitet, så snart brugeren forlader den</string>
@@ -1090,7 +1090,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="oneplus_threekey_navigation_disturb_changed">"'Må ikke forstyrres' er ændret!"</string>
     <string name="oneplus_threekey_navigation_next">NÆSTE</string>
     <string name="oneplus_threekey_navigation_silence">Total stilhed</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Alarmskyder er ændret!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert slider er ændret!</string>
     <string name="oneplus_threekey_navigation_sound">Alle lyde tilladt</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Den kan aktiveres med til/fra-knappen ovenfor</string>
     <string name="oneplus_threekey_navigation_vibration">Kun vibration</string>
@@ -1104,7 +1104,16 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="op_earphone_device">TRYK FOR AT DANNE PAR</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Stryg nedad for beredskabstjenester</string>
-    <string name="op_quick_settings_night_display_label">Nat-tilstand</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Vigtigt</string>
+    <string name="op_notification_channel_summary_low">Mindre vigtige meddelelser uden lyd eller vibration.</string>
+    <string name="op_notification_section_header_gentle">Andre meddelelser</string>
+    <string name="op_notification_silence_title">Andet</string>
+    <string name="op_quick_settings_night_display_label">Nattetilstand</string>
     <string name="op_quick_settings_night_display_summary_off">Nattetilstand slået fra, tryk for at slå til</string>
     <string name="op_quick_settings_night_display_summary_on">Nattetilstand slået til, tryk for at slå fra</string>
     <string name="open_saver_setting_action">Indstillinger</string>
@@ -1132,7 +1141,7 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="overheat_dialog_purple_message">Telefonen slukkes efter 5 sekunder</string>
     <string name="overheat_dialog_red_message">Vil rydde alle programprocesser for at sænke temperaturen</string>
     <string name="overheat_dialog_title">Din telefons temperatur er for høj</string>
-    <string name="overheat_notification_alert">Din telefons temperatur er for høj, og funktioner med højt strømforbrug deaktiveres for at sænke temperaturen</string>
+    <string name="overheat_notification_alert">Din telefons temperatur er for høj, og en funktion med højt strømforbrug deaktiveres for at sænke temperaturen</string>
     <string name="overheat_notification_resume">Telefonens temperatur er genoprettet, og telefonen kan bruges normalt</string>
     <string name="overheat_notification_title_resume">Telefonens temperatur er genoprettet</string>
     <string name="overheat_toast_content">Telefonen er i en høj temperaturtilstand. Det anbefales ikke at bruge denne funktion</string>
@@ -1216,11 +1225,6 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="prevent_view_top_tag_cancel2">Følg cirklerne på skærmen og tryk på dem for at gennemtvinge afslutning af lommetilstanden.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_location">placering</string>
     <string name="privacy_type_microphone">mikrofon</string>
@@ -1329,12 +1333,12 @@ Du har også forbindelse til et VPN, som kan overvåge din netværksaktivitet."<
     <string name="quick_settings_nfc_off">NFC er deaktiveret</string>
     <string name="quick_settings_nfc_on">NFC er aktiveret</string>
     <string name="quick_settings_night_display_label">Nattelys</string>
-    <string name="quick_settings_night_mode_label">Nat-tilstand</string>
+    <string name="quick_settings_night_mode_label">Nattetilstand</string>
     <string name="quick_settings_night_secondary_label_on_at">Tænd kl. %s</string>
     <string name="quick_settings_night_secondary_label_on_at_sunset">Tænd ved solnedgang</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Indtil solopgang</string>
     <string name="quick_settings_notifications_label">Notifikationer</string>
-    <string name="quick_settings_op_car_mode_dnd_label">Må ikke forstyrres</string>
+    <string name="quick_settings_op_car_mode_dnd_label">Vil ikke forstyrres</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">Vil ikke forstyrres for bilstand slået fra, tryk for at slå til</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Vil ikke forstyrres for bilstand slået til, tryk for at slå fra</string>
     <string name="quick_settings_power_saving_label">Strømsparetilstand</string>
@@ -1672,7 +1676,7 @@ Enhver bruger kan opdatere apps for alle andre brugere."</string>
     <string name="volume_dialog_ringer_guidance_ring">Der afspilles lyd ved opkald og notifikationer (%1$s)</string>
     <string name="volume_dialog_title">%s lydstyrkeknapper</string>
     <string name="volume_dnd_silent">Genvej til lydstyrkeknapper</string>
-    <string name="volume_footer_no_disturb">Må ikke forstyrres</string>
+    <string name="volume_footer_no_disturb">Vil ikke forstyrres</string>
     <string name="volume_footer_ring">Ring</string>
     <string name="volume_footer_slient">Lydløs</string>
     <string name="volume_footer_vibrate">Lydløs (vibrer)</string>

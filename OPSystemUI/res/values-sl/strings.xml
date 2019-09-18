@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernetna povezava je prekinjena.</string>
     <string name="accessibility_face_dialog_face_icon">Ikona obraza</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikona prstnih odtisov</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Območje sporočila za pomoč</string>
     <string name="accessibility_gps_acquiring">Pridobivanje GPS.</string>
     <string name="accessibility_gps_enabled">GPS omogočen.</string>
     <string name="accessibility_hide">Skrij</string>
@@ -657,8 +657,8 @@ Ko se telefon ohladi, bo zopet deloval kot običajno."</string>
     <string name="hotspot_apm_message">V letalskem načinu povezava z mobilnimi omrežji ni mogoča. Izključite letalski način in poskusite znova.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Vstavite kartico SIM za uporabo mobilne dostopne točke in drugih možnosti skupne rabe interneta</string>
     <string name="hotspot_operator_dialog_nosim_title">Ni kartice SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Niste naročeni na skupno rabo Wifi-ja</string>
+    <string name="hotspot_operator_dialog_othererror_title">Napaka skupne rabe Wifi-ja</string>
     <string name="ime_security_warning">Ta način vnosa lahko morda zbere besedilo, ki ga vtipkate, vključno z osebnimi podatki, kot so gesla in številke kreditnih kartic. Omogoča ga aplikacija %1$s. Ali želite uporabiti ta način vnosa?</string>
     <string name="immediately_destroy_activities">Ne obdrži dejavnosti</string>
     <string name="immediately_destroy_activities_summary">Uniči vsako dejavnost, ko uporabnik preneha z njo</string>
@@ -1104,6 +1104,15 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="op_earphone_device">TAPNITE ZA SEZNANJANJE</string>
     <string name="op_earphone_title">Brezžične slušalke OnePlus Bullets</string>
     <string name="op_emergency_indicator_hint_text">Za službe za nujne primere podrsajte navzdol</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Pomembno</string>
+    <string name="op_notification_channel_summary_low">Manj pomembna obvestila brez zvoka ali vibriranja.</string>
+    <string name="op_notification_section_header_gentle">Druga obvestila</string>
+    <string name="op_notification_silence_title">Drugo</string>
     <string name="op_quick_settings_night_display_label">Nočni način</string>
     <string name="op_quick_settings_night_display_summary_off">Izključen nočni način, tapnite za vklop</string>
     <string name="op_quick_settings_night_display_summary_on">Vključen nočni način, tapnite za izklop</string>
@@ -1216,11 +1225,6 @@ Povezani ste tudi z omrežjem VPN, ki lahko nadzira vašo omrežno dejavnost."</
     <string name="prevent_view_top_tag_cancel2">Poiščite kroge na zaslonu in se jih dotaknite, da zapustite žepni način.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">fotoaparat</string>
     <string name="privacy_type_location">lokacijo</string>
     <string name="privacy_type_microphone">mikrofon</string>

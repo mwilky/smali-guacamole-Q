@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet leválasztva.</string>
     <string name="accessibility_face_dialog_face_icon">Arcikon</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ujjlenyomat ikonja</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Súgóüzenet területe</string>
     <string name="accessibility_gps_acquiring">GPS lekérése.</string>
     <string name="accessibility_gps_enabled">GPS engedélyezve.</string>
     <string name="accessibility_hide">Elrejtés</string>
@@ -657,8 +657,8 @@ Amint a telefon lehűl, újra a szokásos módon működik majd."</string>
     <string name="hotspot_apm_message">Nem lehet mobil hálózatokhoz csatlakoztatni, míg a repülőgép üzemmód engedélyezve van. Tiltsa le a repülőgép üzemmódot, és próbálkozzon újra.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Helyezzen be SIM-kártyát a Mobil Hotspot és más pányvázási lehetőségek használatához</string>
     <string name="hotspot_operator_dialog_nosim_title">Nincs SIM-kártya</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Nincs feliratkozva a Wi-Fi internetmegosztásra</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi internetmegosztási hiba</string>
     <string name="ime_security_warning">Ez a beviteli módszer alkalmas lehet a beírt szövegek – köztük az olyan személyes adatok, mint a jelszavak és a hitelkártyaszámok - összegyűjtésére. A %1$s alkalmazás kapcsolta be. Használja ezt a módszert?</string>
     <string name="immediately_destroy_activities">Törölje a tevékenységeket</string>
     <string name="immediately_destroy_activities_summary">Tevékenységek törlése, amint elhagyják azokat</string>
@@ -1104,6 +1104,15 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="op_earphone_device">KOPPINTSON A PÁROSÍTÁSHOZ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Lapozzon le a vészhelyzeti szolgáltatásokhoz</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Fontos</string>
+    <string name="op_notification_channel_summary_low">Kevésbé fontos értesítések hang és rezgés nélkül.</string>
+    <string name="op_notification_section_header_gentle">Egyéb értesítések</string>
+    <string name="op_notification_silence_title">Egyéb</string>
     <string name="op_quick_settings_night_display_label">Éjszakai mód</string>
     <string name="op_quick_settings_night_display_summary_off">Éjszakai mód nem aktív, koppintásra bekapcsol</string>
     <string name="op_quick_settings_night_display_summary_on">Éjszakai mód aktív, koppintásra kikapcsol</string>
@@ -1216,11 +1225,6 @@ VPN-hez is kapcsolódik, amely szintén figyelheti hálózati tevékenységét."
     <string name="prevent_view_top_tag_cancel2">Kérjük, kövesse a köröket a képernyőn, és érintse meg őket a zseb-üzemmódból való kilépés kényszerítéséhez.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">kamera</string>
     <string name="privacy_type_location">helyadatok</string>
     <string name="privacy_type_microphone">mikrofon</string>

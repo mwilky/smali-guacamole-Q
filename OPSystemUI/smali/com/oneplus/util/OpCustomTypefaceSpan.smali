@@ -8,16 +8,6 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Landroid/graphics/Typeface;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
-
-    iput-object p2, p0, Lcom/oneplus/util/OpCustomTypefaceSpan;->newType:Landroid/graphics/Typeface;
-
-    return-void
-.end method
-
 .method private static applyCustomTypeFace(Landroid/graphics/Paint;Landroid/graphics/Typeface;)V
     .locals 2
 

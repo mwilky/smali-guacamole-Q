@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">‏تم قطع اتصال Ethernet.</string>
     <string name="accessibility_face_dialog_face_icon">رمز الوجه</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">رمز بصمة الإصبع</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">منطقة رسالة التعليمات</string>
     <string name="accessibility_gps_acquiring">‏الحصول على GPS.</string>
     <string name="accessibility_gps_enabled">‏تم تفعيل GPS.</string>
     <string name="accessibility_hide">إخفاء</string>
@@ -657,8 +657,8 @@
     <string name="hotspot_apm_message">تعذر الوصول إلى شبكات المحمول أثناء تمكين وضع الطائرة. قم بتعطيل وضع الطائرة وحاول مرة أخرى.</string>
     <string name="hotspot_operator_dialog_nosim_msg">أدخل بطاقة SIM لاستخدام نقطة اتصال الجوال وخيارات الربط الأخرى</string>
     <string name="hotspot_operator_dialog_nosim_title">لا توجد بطاقة SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">أنت لست مشتركًا في ربط الشبكة اللاسلكية</string>
+    <string name="hotspot_operator_dialog_othererror_title">خطأ في ربط الشبكة اللاسلكية</string>
     <string name="ime_security_warning">يمكن أن يكون أسلوب الإدخال هذا قادرًا على جمع كل النصوص التي تكتبها، بما في ذلك البيانات الشخصية مثل كلمات المرور وأرقام بطاقات الائتمان. يتم الحصول على هذا الأسلوب من التطبيق %1$s. هل تريد استخدام أسلوب الإدخال هذا؟</string>
     <string name="immediately_destroy_activities">عدم الاحتفاظ بالأنشطة</string>
     <string name="immediately_destroy_activities_summary">محو كل نشاط فور مغادرة المستخدم له</string>
@@ -1104,6 +1104,15 @@
     <string name="op_earphone_device">اضغط للاقتران</string>
     <string name="op_earphone_title">OnePlus Bullets اللاسلكية</string>
     <string name="op_emergency_indicator_hint_text">مرر لأسفل للحصول على خدمات الطوارئ</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">مهم</string>
+    <string name="op_notification_channel_summary_low">الإشعارات الأقل أهمية دون إصدار صوت أو اهتزاز.</string>
+    <string name="op_notification_section_header_gentle">إشعارات أخرى</string>
+    <string name="op_notification_silence_title">أخرى</string>
     <string name="op_quick_settings_night_display_label">الوضع الليلي</string>
     <string name="op_quick_settings_night_display_summary_off">الوضع الليلي قيد إيقاف التشغيل، المس للتشغيل</string>
     <string name="op_quick_settings_night_display_summary_on">الوضع الليلي قيد التشغيل، المس لإيقاف التشغيل</string>
@@ -1116,7 +1125,7 @@
     <string name="osu_sign_up_failed">تعذّر إكمال الاشتراك. انقر للمحاولة مرة أخرى.</string>
     <string name="other">غير ذلك</string>
     <string name="output_calls_title">إخراج المكالمة الهاتفية</string>
-    <string name="output_chooser_empty_hint">لا يوجد جهاز متصل</string>
+    <string name="output_chooser_empty_hint">لا يوجد أجهزة متصلة</string>
     <string name="output_none_found">لم يتم العثور على أي أجهزة.</string>
     <string name="output_none_found_service_off">لم يتم العثور على أي أجهزة. جرِّب تفعيل %1$s.</string>
     <string name="output_service_bt">البلوتوث</string>
@@ -1126,16 +1135,16 @@
     <string name="overheat_dialog_orange_button">تنفيذ الآن</string>
     <string name="overheat_dialog_orange_message">"سيتم تنفيذ العمليات التالية لخفض درجة الحرارة
 1.تقليل السطوع
-2.إيقاف تشغيل نقطة الاتصال 
+2.إيقاف تشغيل نقطة الاتصال
 3.إيقاف تشغيل المصباح"</string>
-    <string name="overheat_dialog_purple_button">إيقاف الآن</string>
-    <string name="overheat_dialog_purple_message">سيتم إيقاف الهاتف بعد 5 ثوانٍ</string>
+    <string name="overheat_dialog_purple_button">إيقاف التشغيل الآن</string>
+    <string name="overheat_dialog_purple_message">سيتم إيقاف تشغيل الهاتف بعد 5 ثوانٍ</string>
     <string name="overheat_dialog_red_message">ستمسح كافة عمليات التطبيقات لتقليل درجة الحرارة</string>
     <string name="overheat_dialog_title">درجة حرارة هاتفك مرتفعة للغاية</string>
-    <string name="overheat_notification_alert">درجة حرارة هاتفك مرتفعة للغاية، وقد تم إيقاف تشغيل الوظائف مرتفعة الاستهلاك للطاقة لخفض درجة الحرارة</string>
+    <string name="overheat_notification_alert">درجة حرارة هاتفك مرتفعة للغاية، وقد تم إيقاف تشغيل الوظيفة مرتفعة الاستهلاك للطاقة لخفض درجة الحرارة</string>
     <string name="overheat_notification_resume">تمت استعادة درجة حرارة الهاتف ويمكن استخدامه الآن بشكل طبيعي</string>
     <string name="overheat_notification_title_resume">تمت استعادة درجة حرارة الهاتف</string>
-    <string name="overheat_toast_content">الهاتف في حالة درجة حرارة مرتفعة، لا يُنصح باستخدام هذه الميزة</string>
+    <string name="overheat_toast_content">الهاتف في حالة ذات درجة حرارة مرتفعة، يُوصى بعدم استخدام هذه الميزة</string>
     <string name="overlay_display_devices_title">محاكاة الشاشات الثانوية</string>
     <string name="overview">نظرة عامة</string>
     <string name="phone_hint">يمكنك التمرير سريعًا من الرمز لتشغيل الهاتف</string>
@@ -1216,11 +1225,6 @@
     <string name="prevent_view_top_tag_cancel2">الرجاء متابعة الدوائر على الشاشة المسها لإجبار الخروج من وضع الجيب.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">الكاميرا</string>
     <string name="privacy_type_location">الموقع</string>
     <string name="privacy_type_microphone">الميكروفون</string>
@@ -1379,7 +1383,7 @@
     <string name="recents_deep_clean_option">مسح عميق</string>
     <string name="recents_empty_no_apps_open">لا توجد تطبيقات مفتوحة</string>
     <string name="recents_empty_recently_closed">التطبيقات المغلقة مؤخرًا</string>
-    <string name="recents_normal_clean_description">مسح قائمة المهام وذاكرة التخزين المؤقت دون مسح عمليات الخلفية.</string>
+    <string name="recents_normal_clean_description">مسح قائمة المهام والذاكرة الخاصة بها دون مسح العمليات التي تتم في الخلفية.</string>
     <string name="recents_normal_clean_option">المسح العادي</string>
     <string name="recents_option_note">يمكنك تغيير هذا الإعداد في--> خيارات متقدمة.</string>
     <string name="recents_option_title">ما الطريقة التي تفضلها</string>

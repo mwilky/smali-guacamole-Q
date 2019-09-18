@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Bantuan dialog mesej</string>
     <string name="accessibility_hide">Sembunyi</string>
     <string name="accessibility_phone_four_bars">Telefon empat bar.</string>
     <string name="accessibility_quick_settings_data_switch_changed_1">Tukar kad data kepada SIM 1.</string>
@@ -40,8 +40,8 @@
     <string name="hotspot_apm_message">Tidak dapat menyambung ke rangkaian mudah alih sementara mod Kapal Terbang dibolehkan. Nyahdayakan mod kapal terbang dan cuba lagi.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Masukkan kad SIM untuk menggunakan Hotspot Mudah Alih dan pilihan tambatan lain</string>
     <string name="hotspot_operator_dialog_nosim_title">Tiada kad SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Anda tidak melanggan untuk penambatan Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Ralat tambatan Wi-Fi</string>
     <string name="interruption_level_game">Permainan</string>
     <string name="interruption_level_movie">Filem</string>
     <string name="interruption_level_music">Muzik</string>
@@ -62,7 +62,7 @@
     <string name="nav_bar_guide_positive">SUDAH DAPAT</string>
     <string name="nav_bar_guide_title">Leret ke atas dari bawah untuk menunjukkan palang navigasi. Jika anda ingin berhenti menyembunyikan navigasi, sila ketik</string>
     <string name="non_op_earphone_notification_content">OnePlus menawarkan beberapa ciri baru bagi set kepala anda. Klik pada pemberitahuan untuk mencubanya.</string>
-    <string name="non_op_earphone_notification_title">Tip</string>
+    <string name="non_op_earphone_notification_title">Petua</string>
     <string name="notification_content_disable_button">Sentuh untuk mematikannya</string>
     <string name="notification_content_disable_button_in_nav">Palang navigasi dilumpuhkan apabila butang HW dikunci</string>
     <string name="notification_title_disable_button">BUTANG HW DIKUNCI</string>
@@ -72,7 +72,7 @@
     <string name="oneplus_threekey_navigation_disturb_changed">"'Jangan Ganggu' telah berubah!"</string>
     <string name="oneplus_threekey_navigation_next">SETERUSNYA</string>
     <string name="oneplus_threekey_navigation_silence">Senyap sepenuhnya</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Peluncur Amaran telah berubah!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider telah berubah!</string>
     <string name="oneplus_threekey_navigation_sound">Semua bunyi dibenarkan</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Ia boleh dihidupkan oleh togol di atas</string>
     <string name="oneplus_threekey_navigation_vibration">Getaran sahaja</string>
@@ -82,6 +82,15 @@
     <string name="op_earphone_device">KETIK UNTUK BERPASANGAN</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Leret ke bawah untuk perkhidmatan kecemasan</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Penting</string>
+    <string name="op_notification_channel_summary_low">Pemberitahuan yang kurang penting tanpa apa-apa bunyi atau getaran.</string>
+    <string name="op_notification_section_header_gentle">Pemberitahuan lain</string>
+    <string name="op_notification_silence_title">Lain-lain</string>
     <string name="op_quick_settings_night_display_label">Mod malam</string>
     <string name="op_quick_settings_night_display_summary_off">Mod Malam dipadam, ketik untuk menghidupkan</string>
     <string name="op_quick_settings_night_display_summary_on">Mod malam dihidupkan, ketik untuk memadamkan</string>
@@ -105,11 +114,6 @@
     <string name="prevent_view_top_tag_cancel2">Sila ikut bulatan pada skrin dan ketik padanya untuk memaksa mod poket berhenti.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="qs_edit">Sunting</string>
     <string name="quick_launch_exit">Keluar</string>
     <string name="quick_launch_exit_hint">Angkat jari dari skrin untuk keluar</string>
@@ -151,7 +155,7 @@
     <string name="recents_deep_clean_option">Pembersihan dalam</string>
     <string name="recents_empty_no_apps_open">Tiada aplikasi terbuka</string>
     <string name="recents_empty_recently_closed">Aplikasi yang baru ditutup</string>
-    <string name="recents_normal_clean_description">Padamkan senarai tugas dan cache, tanpa proses memadamkan latar belakang.</string>
+    <string name="recents_normal_clean_description">Padamkan senarai tugas dan cache, tanpa memadamkan proses latar belakang.</string>
     <string name="recents_normal_clean_option">Padam yang biasa</string>
     <string name="recents_option_note">Anda boleh ubah ini di Seting-> Lanjutan.</string>
     <string name="recents_option_title">Cara mana yang anda suka</string>

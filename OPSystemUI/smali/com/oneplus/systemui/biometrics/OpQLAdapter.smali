@@ -22,6 +22,8 @@
 
 
 # instance fields
+.field private final mAppIconSize:I
+
 .field private mAppMap:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -32,11 +34,25 @@
     .end annotation
 .end field
 
+.field private mAppShapeIcon:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroid/graphics/drawable/Drawable;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mBackgroundDrawable:Landroid/graphics/drawable/ColorDrawable;
+
 .field private mContext:Landroid/content/Context;
 
 .field private final mIconPadding:I
 
 .field private final mIconSize:I
+
+.field private final mShortcutIconSize:I
 
 
 # direct methods
@@ -86,6 +102,142 @@
 
     iput p1, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mIconPadding:I
 
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$dimen;->op_quick_launch_app_icon_size:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p1
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppIconSize:I
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget p2, Lcom/android/systemui/R$dimen;->op_quick_launch_shortcut_icon_size:I
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p1
+
+    invoke-static {p1}, Lcom/oneplus/util/OpUtils;->convertDpToFixedPx(F)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mShortcutIconSize:I
+
+    new-instance p1, Landroid/graphics/drawable/ColorDrawable;
+
+    const/4 p2, -0x1
+
+    invoke-direct {p1, p2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    iput-object p1, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mBackgroundDrawable:Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->initShapeIcon()V
+
+    return-void
+.end method
+
+.method private initShapeIcon()V
+    .locals 7
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppShapeIcon:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppMap:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppMap:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;
+
+    new-instance v3, Landroid/graphics/drawable/LayerDrawable;
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Landroid/graphics/drawable/Drawable;
+
+    iget-object v5, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mBackgroundDrawable:Landroid/graphics/drawable/ColorDrawable;
+
+    aput-object v5, v4, v0
+
+    iget-object v5, v2, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mAppIcon:Landroid/graphics/drawable/Drawable;
+
+    const/4 v6, 0x1
+
+    aput-object v5, v4, v6
+
+    invoke-direct {v3, v4}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+
+    iget v4, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mIconSize:I
+
+    invoke-virtual {v3, v0, v4, v4}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    const/16 v4, 0x11
+
+    invoke-virtual {v3, v6, v4}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
+
+    iget-object v2, v2, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mShortcutId:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    iget v2, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mShortcutIconSize:I
+
+    invoke-virtual {v3, v6, v2, v2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    goto :goto_1
+
+    :cond_0
+    iget v2, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppIconSize:I
+
+    invoke-virtual {v3, v6, v2, v2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    :goto_1
+    new-instance v2, Landroid/graphics/drawable/AdaptiveIconDrawable;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v4, v3}, Landroid/graphics/drawable/AdaptiveIconDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppShapeIcon:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method
 
@@ -122,36 +274,42 @@
 .end method
 
 .method public onBindViewHolder(Lcom/oneplus/systemui/biometrics/OpQLAdapter$ViewHolder;I)V
-    .locals 1
+    .locals 2
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppMap:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppMap:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;
+
+    invoke-virtual {p1}, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ViewHolder;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppShapeIcon:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;
+    check-cast p0, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1}, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ViewHolder;->getView()Landroid/view/View;
+    if-eqz v1, :cond_0
 
-    move-result-object p2
+    if-eqz p0, :cond_0
 
-    check-cast p2, Landroid/widget/ImageView;
-
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mAppIcon:Landroid/graphics/drawable/Drawable;
-
-    if-eqz p2, :cond_0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, p0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     invoke-virtual {p1}, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ViewHolder;->getView()Landroid/view/View;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -224,6 +382,8 @@
     iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mContext:Landroid/content/Context;
 
     iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppMap:Ljava/util/ArrayList;
+
+    iput-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLAdapter;->mAppShapeIcon:Ljava/util/ArrayList;
 
     return-void
 .end method

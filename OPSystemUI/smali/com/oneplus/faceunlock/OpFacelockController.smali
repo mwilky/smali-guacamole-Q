@@ -547,14 +547,6 @@
 
     invoke-virtual {p1, p4, p3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    new-instance p1, Lcom/oneplus/os/OpMotorManager;
-
-    iget-object p3, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mContext:Landroid/content/Context;
-
-    invoke-direct {p1, p3}, Lcom/oneplus/os/OpMotorManager;-><init>(Landroid/content/Context;)V
-
-    iput-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mMotorManager:Lcom/oneplus/os/OpMotorManager;
-
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mContext:Landroid/content/Context;
 
     const-string p3, "vibrator"
@@ -5242,6 +5234,14 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
+    new-instance v0, Lcom/oneplus/os/OpMotorManager;
+
+    iget-object v1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcom/oneplus/os/OpMotorManager;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mMotorManager:Lcom/oneplus/os/OpMotorManager;
+
     invoke-direct {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->bindFacelock()V
 
     invoke-direct {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->bindFacelockSetting()V
@@ -5276,13 +5276,26 @@
 .end method
 
 .method public onUserSwitchComplete(I)V
-    .locals 0
+    .locals 1
 
     if-eqz p1, :cond_0
 
     invoke-direct {p0}, Lcom/oneplus/faceunlock/OpFacelockController;->stopFacelock()V
 
+    goto :goto_0
+
     :cond_0
+    const-string p1, "OpFacelockController"
+
+    const-string v0, "user switch to owner"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lcom/oneplus/faceunlock/OpFacelockController;->tryToStartFaceLock(Z)Z
+
+    :goto_0
     return-void
 .end method
 

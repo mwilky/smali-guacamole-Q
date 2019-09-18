@@ -74,8 +74,8 @@
         <item quantity="few">%d uređaja</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">za %d min</item>
-        <item quantity="one">za %d min</item>
+        <item quantity="other">in %d min</item>
+        <item quantity="one">in %d min</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d sati</item>

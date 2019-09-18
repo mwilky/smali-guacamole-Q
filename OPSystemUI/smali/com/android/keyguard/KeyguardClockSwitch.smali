@@ -36,10 +36,6 @@
 
 .field private mKeyguardStatusArea:Landroid/view/View;
 
-.field private mMcl:Z
-
-.field private mMclTypeface:Landroid/graphics/Typeface;
-
 .field private mShowingHeader:Z
 
 .field private mSmallClockFrame:Landroid/widget/FrameLayout;
@@ -74,10 +70,6 @@
     invoke-direct {p1, p0}, Lcom/android/keyguard/-$$Lambda$KeyguardClockSwitch$H31kNGqlEfE-tZQZgrBtirdKZKc;-><init>(Lcom/android/keyguard/KeyguardClockSwitch;)V
 
     iput-object p1, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockChangedListener:Lcom/android/keyguard/clock/ClockManager$ClockChangedListener;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mMclTypeface:Landroid/graphics/Typeface;
 
     new-instance p1, Lcom/android/keyguard/-$$Lambda$KeyguardClockSwitch$1K4q2TFTethGttjK4WWfYw-lPoo;
 
@@ -813,7 +805,7 @@
 .end method
 
 .method protected onFinishInflate()V
-    .locals 3
+    .locals 1
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
@@ -855,68 +847,8 @@
 
     iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mKeyguardStatusArea:Landroid/view/View;
 
-    const-string v0, "debug.my_features_switch"
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->setClockViewTypeface()V
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mMcl:Z
-
-    iget-boolean v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mMcl:Z
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    const-string v0, "/op1/fonts/McLarenBespoke_Bd.ttf"
-
-    invoke-static {v0}, Landroid/graphics/Typeface;->createFromFile(Ljava/lang/String;)Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mMclTypeface:Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "RuntimeException, "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "KeyguardClockSwitch"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_0
-    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mMclTypeface:Landroid/graphics/Typeface;
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockView:Landroid/widget/TextClock;
-
-    invoke-virtual {p0, v0}, Landroid/widget/TextClock;->setTypeface(Landroid/graphics/Typeface;)V
-
-    :cond_0
     return-void
 .end method
 
@@ -1008,6 +940,33 @@
     return-void
 .end method
 
+.method public setClockViewTypeface()V
+    .locals 1
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isMCLVersionFont()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Lcom/oneplus/util/OpUtils;->getMclTypeface(I)Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockView:Landroid/widget/TextClock;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextClock;->setTypeface(Landroid/graphics/Typeface;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public setDarkAmount(F)V
     .locals 0
 
@@ -1030,9 +989,11 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setFormat12Hour(Ljava/lang/CharSequence;)V
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockViewBold:Landroid/widget/TextClock;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockViewBold:Landroid/widget/TextClock;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextClock;->setFormat12Hour(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setFormat12Hour(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->setClockViewTypeface()V
 
     return-void
 .end method
@@ -1044,9 +1005,11 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setFormat24Hour(Ljava/lang/CharSequence;)V
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockViewBold:Landroid/widget/TextClock;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockViewBold:Landroid/widget/TextClock;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextClock;->setFormat24Hour(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setFormat24Hour(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->setClockViewTypeface()V
 
     return-void
 .end method
@@ -1100,7 +1063,7 @@
     goto :goto_0
 
     :cond_1
-    sget v2, Lcom/android/keyguard/R$dimen;->widget_big_font_size:I
+    sget v2, Lcom/android/keyguard/R$dimen;->oneplus_widget_big_font_size:I
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -1253,9 +1216,11 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setShowCurrentUserTime(Z)V
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockViewBold:Landroid/widget/TextClock;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockViewBold:Landroid/widget/TextClock;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextClock;->setShowCurrentUserTime(Z)V
+    invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setShowCurrentUserTime(Z)V
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->setClockViewTypeface()V
 
     return-void
 .end method
@@ -1271,22 +1236,26 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextClock;->setTextColor(I)V
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockPlugin:Lcom/android/systemui/plugins/ClockPlugin;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockPlugin:Lcom/android/systemui/plugins/ClockPlugin;
 
-    if-eqz p0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {p0, p1}, Lcom/android/systemui/plugins/ClockPlugin;->setTextColor(I)V
+    invoke-interface {v0, p1}, Lcom/android/systemui/plugins/ClockPlugin;->setTextColor(I)V
 
     :cond_0
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->setClockViewTypeface()V
+
     return-void
 .end method
 
 .method public setTextSize(IF)V
-    .locals 0
+    .locals 1
 
-    iget-object p0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockView:Landroid/widget/TextClock;
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardClockSwitch;->mClockView:Landroid/widget/TextClock;
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/TextClock;->setTextSize(IF)V
+    invoke-virtual {v0, p1, p2}, Landroid/widget/TextClock;->setTextSize(IF)V
+
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardClockSwitch;->setClockViewTypeface()V
 
     return-void
 .end method

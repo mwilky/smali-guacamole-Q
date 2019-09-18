@@ -794,13 +794,13 @@
 
     move-result v7
 
-    const v8, 0x108051e
-
     if-eqz v7, :cond_14
 
     if-eqz v5, :cond_10
 
-    invoke-static {v8}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
+    sget v4, Lcom/android/systemui/R$drawable;->op_ic_signal_wifi_transient_animation:I
+
+    invoke-static {v4}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
     move-result-object v4
 
@@ -909,7 +909,9 @@
     :cond_14
     if-eqz v5, :cond_15
 
-    invoke-static {v8}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
+    sget v4, Lcom/android/systemui/R$drawable;->op_ic_signal_wifi_transient_animation:I
+
+    invoke-static {v4}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 
     move-result-object v4
 
@@ -978,7 +980,7 @@
     :cond_17
     if-eqz v4, :cond_18
 
-    sget v4, Lcom/android/systemui/R$drawable;->ic_qs_wifi_disconnected:I
+    sget v4, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_disconnected:I
 
     invoke-static {v4}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
 

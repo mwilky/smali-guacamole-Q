@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Palīdzības ziņojumu zona</string>
     <string name="accessibility_hide">Paslēpt</string>
     <string name="accessibility_phone_four_bars">Četras tālruņa joslas.</string>
     <string name="accessibility_quick_settings_data_switch_changed_1">Mainīt datu karti uz SIM 1.</string>
@@ -40,8 +40,8 @@
     <string name="hotspot_apm_message">Kamēr ir ieslēgts lidojuma režīms, nav iespējams izveidot savienojumu ar mobilo datu tīklu. Izslēdziet lidojuma režīmu un mēģiniet vēlreiz.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Ievietojiet SIM karti, lai izmantotu mobilo tīklāju un citas sasaistes iespējas</string>
     <string name="hotspot_operator_dialog_nosim_title">Nav SIM kartes</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Jūs neabonējat W-Fi sasaistes pakalpojumu</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi sasaistes kļūda</string>
     <string name="interruption_level_game">Spēle</string>
     <string name="interruption_level_movie">Filmas</string>
     <string name="interruption_level_music">Mūzika</string>
@@ -82,6 +82,15 @@
     <string name="op_earphone_device">PIESKARIETIES, LAI SAVIENOTU PĀRĪ</string>
     <string name="op_earphone_title">bezvadu austiņas OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Pavelciet uz leju, lai sazinātos ar avārijas dienestiem</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Svarīgi</string>
+    <string name="op_notification_channel_summary_low">Mazāk svarīgiem paziņojumiem netiek lietota ne skaņa, ne vibrācija.</string>
+    <string name="op_notification_section_header_gentle">Citi paziņojumi</string>
+    <string name="op_notification_silence_title">Cits</string>
     <string name="op_quick_settings_night_display_label">Nakts režīms</string>
     <string name="op_quick_settings_night_display_summary_off">Nakts režīms ir izslēgts, pieskarieties, lai to aktivizētu</string>
     <string name="op_quick_settings_night_display_summary_on">Nakts režīms ir aktivizēts, pieskarieties, lai to izslēgtu</string>
@@ -94,7 +103,7 @@
     <string name="overheat_dialog_purple_button">Izslēgt tagad</string>
     <string name="overheat_dialog_purple_message">Tālrunis tiks izslēgts pēc 5 sekundēm</string>
     <string name="overheat_dialog_red_message">Lai samazinātu temperatūru, tiks pārtrauktas visas lietotņu darbības</string>
-    <string name="overheat_dialog_title">Tālruņa temperatūra ir pārāk augsta</string>
+    <string name="overheat_dialog_title">Jūsu tālruņa temperatūra ir pārāk augsta</string>
     <string name="overheat_notification_alert">Tālruņa temperatūra ir pārāk augsta, tādēļ funkcijas, kas patērē daudz enerģijas, tika izslēgtas, lai samazinātu temperatūru</string>
     <string name="overheat_notification_resume">Tālrunim ir atjaunota normāla temperatūra, un to atkal var izmantot kā parasti</string>
     <string name="overheat_notification_title_resume">Tālrunim ir atjaunota normāla temperatūra</string>
@@ -105,11 +114,6 @@
     <string name="prevent_view_top_tag_cancel2">Sekojiet ekrānā redzamajiem apļiem un pieskarieties tiem, lai piespiestu ierīci iziet no kabatas režīma.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="qs_edit">Rediģēt</string>
     <string name="quick_launch_exit">Iziet</string>
     <string name="quick_launch_exit_hint">Noņemiet pirkstu no ekrāna, lai izietu</string>

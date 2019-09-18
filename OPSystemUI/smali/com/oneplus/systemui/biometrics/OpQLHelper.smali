@@ -159,8 +159,8 @@
     return-object p0
 .end method
 
-.method private getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-    .locals 5
+.method private getApplicationIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
+    .locals 4
 
     const-string v0, "Exception e = "
 
@@ -168,76 +168,135 @@
 
     const/4 v2, 0x0
 
+    if-ltz p2, :cond_0
+
     :try_start_0
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    const/16 v3, 0x80
+
+    invoke-virtual {v0, p1, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
     iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    const/4 v4, 0x0
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    invoke-virtual {v3, p1, v4}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v3
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/Exception;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    move-object v3, v2
-
-    :goto_0
-    :try_start_1
-    iget-object v4, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mPackageManager:Landroid/content/pm/PackageManager;
-
-    invoke-virtual {v4, p1}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
-
-    move-result-object p1
-    :try_end_1
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-object p1, v2
-
-    :goto_1
-    if-eqz p1, :cond_0
-
-    if-eqz v3, :cond_0
-
-    iget v3, v3, Landroid/content/pm/ApplicationInfo;->icon:I
-
-    if-eqz v3, :cond_0
-
-    :try_start_2
-    invoke-direct {p0, p1, v3}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getDrawable(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->getApplicationIcon(Landroid/content/pm/ApplicationInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    invoke-static {p2}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
+
+    move-result-object p2
+
+    invoke-virtual {v3, p0, p2}, Landroid/content/pm/PackageManager;->getUserBadgedIcon(Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p0
 
+    :catch_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "Package ["
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "] name not found"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v2
+
+    :cond_0
+    :try_start_1
+    iget-object p2, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p2, p1, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p2
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-object p2, v2
+
+    :goto_0
+    :try_start_2
+    iget-object v3, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mPackageManager:Landroid/content/pm/PackageManager;
+
+    invoke-virtual {v3, p1}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
+
+    move-result-object p1
+    :try_end_2
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
+
+    goto :goto_1
+
     :catch_2
+    move-object p1, v2
+
+    :goto_1
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_1
+
+    iget p2, p2, Landroid/content/pm/ApplicationInfo;->icon:I
+
+    if-eqz p2, :cond_1
+
+    :try_start_3
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getDrawable(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+
+    return-object p0
+
+    :catch_3
     move-exception p0
 
     new-instance p1, Ljava/lang/StringBuilder;
@@ -258,7 +317,7 @@
 
     invoke-static {v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
+    :cond_1
     return-object v2
 .end method
 
@@ -613,7 +672,9 @@
     :cond_4
     iget-object v3, v4, Lcom/oneplus/systemui/biometrics/OpQLAdapter$OPQuickPayConfig;->packageName:Ljava/lang/String;
 
-    invoke-direct {p0, v3}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    const/4 v5, -0x1
+
+    invoke-direct {p0, v3, v5}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -791,7 +852,9 @@
 
     iget-object p1, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mPackageName:Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    iget v0, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mUid:I
+
+    invoke-direct {p0, p1, v0}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -865,7 +928,7 @@
 
     iget-object v2, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mLauncherApps:Landroid/content/pm/LauncherApps;
 
-    const/16 v3, 0x280
+    iget v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mUid:I
 
     invoke-virtual {v2, v0, v3}, Landroid/content/pm/LauncherApps;->getShortcutIconDrawable(Landroid/content/pm/ShortcutInfo;I)Landroid/graphics/drawable/Drawable;
 
@@ -879,7 +942,9 @@
 
     iget-object v2, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mPackageName:Ljava/lang/String;
 
-    invoke-direct {p0, v2}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    iget v3, v1, Lcom/oneplus/systemui/biometrics/OpQLAdapter$ActionInfo;->mUid:I
+
+    invoke-direct {p0, v2, v3}, Lcom/oneplus/systemui/biometrics/OpQLHelper;->getApplicationIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -1792,7 +1857,7 @@
     :cond_8
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpQLHelper;->mContext:Landroid/content/Context;
 
-    const p1, 0x50d00aa
+    const p1, 0x50d00ab
 
     invoke-static {p0, p1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

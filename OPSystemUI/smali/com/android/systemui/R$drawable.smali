@@ -1274,6 +1274,8 @@
 
 .field public static final ic_camera_alt_24dp:I = 0x7f08060c
 
+.field public static final ic_camera_fod:I = 0x7f08060d
+
 .field public static final ic_cast:I = 0x7f08060e
 
 .field public static final ic_cast_connected:I = 0x7f08060f
@@ -1338,6 +1340,8 @@
 
 .field public static final ic_mic_26dp:I = 0x7f080678
 
+.field public static final ic_mic_fod:I = 0x7f080679
+
 .field public static final ic_nav_bar_guide_pin_off:I = 0x7f0806fd
 
 .field public static final ic_notif_low_battery:I = 0x7f0806fe
@@ -1355,6 +1359,10 @@
 .field public static final ic_output_chooser_phone:I = 0x7f080708
 
 .field public static final ic_pause_white:I = 0x7f08070b
+
+.field public static final ic_phone_24dp:I = 0x7f08070d
+
+.field public static final ic_phone_fod:I = 0x7f08070e
 
 .field public static final ic_play_arrow_white:I = 0x7f08070f
 
@@ -1451,8 +1459,6 @@
 .field public static final ic_qs_wifi_6_3:I = 0x7f08074b
 
 .field public static final ic_qs_wifi_6_4:I = 0x7f08074c
-
-.field public static final ic_qs_wifi_disconnected:I = 0x7f08074d
 
 .field public static final ic_recovery:I = 0x7f08074e
 
@@ -1746,440 +1752,466 @@
 
 .field public static final op_ic_ring:I = 0x7f0808be
 
-.field public static final op_ic_silence:I = 0x7f0808c0
+.field public static final op_ic_signal_wifi_transient_animation:I = 0x7f0808c1
 
-.field public static final op_ic_vibrate:I = 0x7f0808c1
+.field public static final op_ic_silence:I = 0x7f0808c2
 
-.field public static final op_ic_weather_cloudy:I = 0x7f0808c2
+.field public static final op_ic_vibrate:I = 0x7f0808c3
 
-.field public static final op_ic_weather_fog:I = 0x7f0808c3
+.field public static final op_ic_weather_cloudy:I = 0x7f0808c4
 
-.field public static final op_ic_weather_hail:I = 0x7f0808c4
+.field public static final op_ic_weather_fog:I = 0x7f0808c5
 
-.field public static final op_ic_weather_haze:I = 0x7f0808c5
+.field public static final op_ic_weather_hail:I = 0x7f0808c6
 
-.field public static final op_ic_weather_overcast:I = 0x7f0808c6
+.field public static final op_ic_weather_haze:I = 0x7f0808c7
 
-.field public static final op_ic_weather_rain:I = 0x7f0808c7
+.field public static final op_ic_weather_overcast:I = 0x7f0808c8
 
-.field public static final op_ic_weather_sandstorm:I = 0x7f0808c8
+.field public static final op_ic_weather_rain:I = 0x7f0808c9
 
-.field public static final op_ic_weather_sleet:I = 0x7f0808c9
+.field public static final op_ic_weather_sandstorm:I = 0x7f0808ca
 
-.field public static final op_ic_weather_snow:I = 0x7f0808ca
+.field public static final op_ic_weather_sleet:I = 0x7f0808cb
 
-.field public static final op_ic_weather_sunny:I = 0x7f0808cb
+.field public static final op_ic_weather_snow:I = 0x7f0808cc
 
-.field public static final op_ic_weather_typhoon:I = 0x7f0808cc
+.field public static final op_ic_weather_sunny:I = 0x7f0808cd
 
-.field public static final op_lockscreen_fingerprint_draw_off_animation:I = 0x7f0808d4
+.field public static final op_ic_weather_typhoon:I = 0x7f0808ce
 
-.field public static final op_qs_footer_background_my:I = 0x7f0808fe
+.field public static final op_lockscreen_fingerprint_draw_off_animation:I = 0x7f0808d6
 
-.field public static final op_stat_sys_wifi_signal_0:I = 0x7f08090d
+.field public static final op_p_ic_qs_wifi_0:I = 0x7f0808ee
 
-.field public static final op_stat_sys_wifi_signal_0_fully:I = 0x7f08090e
+.field public static final op_p_ic_qs_wifi_1:I = 0x7f0808ef
 
-.field public static final op_stat_sys_wifi_signal_1:I = 0x7f08090f
+.field public static final op_p_ic_qs_wifi_2:I = 0x7f0808f0
 
-.field public static final op_stat_sys_wifi_signal_1_fully:I = 0x7f080910
+.field public static final op_p_ic_qs_wifi_3:I = 0x7f0808f1
 
-.field public static final op_stat_sys_wifi_signal_2:I = 0x7f080911
+.field public static final op_p_ic_qs_wifi_4:I = 0x7f0808f2
 
-.field public static final op_stat_sys_wifi_signal_2_fully:I = 0x7f080912
+.field public static final op_p_ic_qs_wifi_disabled:I = 0x7f0808f3
 
-.field public static final op_stat_sys_wifi_signal_3:I = 0x7f080913
+.field public static final op_p_ic_qs_wifi_disconnected:I = 0x7f0808f4
 
-.field public static final op_stat_sys_wifi_signal_3_fully:I = 0x7f080914
+.field public static final op_p_ic_qs_wifi_full_0:I = 0x7f0808f5
 
-.field public static final op_stat_sys_wifi_signal_4:I = 0x7f080915
+.field public static final op_p_ic_qs_wifi_full_1:I = 0x7f0808f6
 
-.field public static final op_stat_sys_wifi_signal_4_fully:I = 0x7f080916
+.field public static final op_p_ic_qs_wifi_full_2:I = 0x7f0808f7
 
-.field public static final op_trusted_state_to_error_animation:I = 0x7f08092b
+.field public static final op_p_ic_qs_wifi_full_3:I = 0x7f0808f8
 
-.field public static final pip_dismiss_scrim:I = 0x7f080937
+.field public static final op_p_ic_qs_wifi_full_4:I = 0x7f0808f9
 
-.field public static final pip_icon:I = 0x7f080939
+.field public static final op_qs_footer_background_my:I = 0x7f08090c
 
-.field public static final prevent_mode_img:I = 0x7f08093d
+.field public static final op_stat_sys_wifi_signal_0:I = 0x7f08091b
 
-.field public static final qs_ic_wifi_lock:I = 0x7f08094f
+.field public static final op_stat_sys_wifi_signal_0_fully:I = 0x7f08091c
 
-.field public static final recents_dismiss_all_icon:I = 0x7f080952
+.field public static final op_stat_sys_wifi_signal_1:I = 0x7f08091d
 
-.field public static final ripple_background_dark:I = 0x7f080955
+.field public static final op_stat_sys_wifi_signal_1_fully:I = 0x7f08091e
 
-.field public static final ripple_background_white:I = 0x7f080956
+.field public static final op_stat_sys_wifi_signal_2:I = 0x7f08091f
 
-.field public static final ripple_drawable_dark:I = 0x7f080959
+.field public static final op_stat_sys_wifi_signal_2_fully:I = 0x7f080920
 
-.field public static final rounded_bg:I = 0x7f08095d
+.field public static final op_stat_sys_wifi_signal_3:I = 0x7f080921
 
-.field public static final rounded_bg_bottom:I = 0x7f08095e
+.field public static final op_stat_sys_wifi_signal_3_fully:I = 0x7f080922
 
-.field public static final rounded_bg_full:I = 0x7f080960
+.field public static final op_stat_sys_wifi_signal_4:I = 0x7f080923
 
-.field public static final rounded_bottom:I = 0x7f080961
+.field public static final op_stat_sys_wifi_signal_4_fully:I = 0x7f080924
 
-.field public static final rounded_full_bg_bottom:I = 0x7f080962
+.field public static final op_trusted_state_to_error_animation:I = 0x7f080939
 
-.field public static final rounded_top:I = 0x7f080965
+.field public static final pip_dismiss_scrim:I = 0x7f080945
 
-.field public static final star:I = 0x7f08096f
+.field public static final pip_icon:I = 0x7f080947
 
-.field public static final stat_notify_image:I = 0x7f080970
+.field public static final prevent_mode_img:I = 0x7f08094b
 
-.field public static final stat_notify_image_error:I = 0x7f080971
+.field public static final qs_ic_wifi_lock:I = 0x7f08095d
 
-.field public static final stat_sys_airplane_mode:I = 0x7f080972
+.field public static final recents_dismiss_all_icon:I = 0x7f080960
 
-.field public static final stat_sys_alarm:I = 0x7f080973
+.field public static final ripple_background_dark:I = 0x7f080963
 
-.field public static final stat_sys_alarm_dim:I = 0x7f080974
+.field public static final ripple_background_white:I = 0x7f080964
 
-.field public static final stat_sys_branded_vpn:I = 0x7f080975
+.field public static final ripple_drawable_dark:I = 0x7f080967
 
-.field public static final stat_sys_bt_battery_0:I = 0x7f080976
+.field public static final rounded_bg:I = 0x7f08096b
 
-.field public static final stat_sys_bt_battery_1:I = 0x7f080977
+.field public static final rounded_bg_bottom:I = 0x7f08096c
 
-.field public static final stat_sys_bt_battery_10:I = 0x7f080978
+.field public static final rounded_bg_full:I = 0x7f08096e
 
-.field public static final stat_sys_bt_battery_1_dark:I = 0x7f080979
+.field public static final rounded_bottom:I = 0x7f08096f
 
-.field public static final stat_sys_bt_battery_2:I = 0x7f08097a
+.field public static final rounded_full_bg_bottom:I = 0x7f080970
 
-.field public static final stat_sys_bt_battery_2_dark:I = 0x7f08097b
+.field public static final rounded_top:I = 0x7f080973
 
-.field public static final stat_sys_bt_battery_3:I = 0x7f08097c
+.field public static final star:I = 0x7f08097d
 
-.field public static final stat_sys_bt_battery_4:I = 0x7f08097d
+.field public static final stat_notify_image:I = 0x7f08097e
 
-.field public static final stat_sys_bt_battery_5:I = 0x7f08097e
+.field public static final stat_notify_image_error:I = 0x7f08097f
 
-.field public static final stat_sys_bt_battery_6:I = 0x7f08097f
+.field public static final stat_sys_airplane_mode:I = 0x7f080980
 
-.field public static final stat_sys_bt_battery_7:I = 0x7f080980
+.field public static final stat_sys_alarm:I = 0x7f080981
 
-.field public static final stat_sys_bt_battery_8:I = 0x7f080981
+.field public static final stat_sys_alarm_dim:I = 0x7f080982
 
-.field public static final stat_sys_bt_battery_9:I = 0x7f080982
+.field public static final stat_sys_branded_vpn:I = 0x7f080983
 
-.field public static final stat_sys_cast:I = 0x7f080984
+.field public static final stat_sys_bt_battery_0:I = 0x7f080984
 
-.field public static final stat_sys_data_bluetooth:I = 0x7f080985
+.field public static final stat_sys_bt_battery_1:I = 0x7f080985
 
-.field public static final stat_sys_data_bluetooth_connected:I = 0x7f080986
+.field public static final stat_sys_bt_battery_10:I = 0x7f080986
 
-.field public static final stat_sys_data_disabled:I = 0x7f08098e
+.field public static final stat_sys_bt_battery_1_dark:I = 0x7f080987
 
-.field public static final stat_sys_data_fully_connected_1x:I = 0x7f08098f
+.field public static final stat_sys_bt_battery_2:I = 0x7f080988
 
-.field public static final stat_sys_data_fully_connected_2g:I = 0x7f080990
+.field public static final stat_sys_bt_battery_2_dark:I = 0x7f080989
 
-.field public static final stat_sys_data_fully_connected_3g:I = 0x7f080991
+.field public static final stat_sys_bt_battery_3:I = 0x7f08098a
 
-.field public static final stat_sys_data_fully_connected_3g_plus:I = 0x7f080992
+.field public static final stat_sys_bt_battery_4:I = 0x7f08098b
 
-.field public static final stat_sys_data_fully_connected_4g:I = 0x7f080993
+.field public static final stat_sys_bt_battery_5:I = 0x7f08098c
 
-.field public static final stat_sys_data_fully_connected_4g_lte:I = 0x7f080994
+.field public static final stat_sys_bt_battery_6:I = 0x7f08098d
 
-.field public static final stat_sys_data_fully_connected_4g_plus:I = 0x7f080995
+.field public static final stat_sys_bt_battery_7:I = 0x7f08098e
 
-.field public static final stat_sys_data_fully_connected_4g_plus_lte:I = 0x7f080996
+.field public static final stat_sys_bt_battery_8:I = 0x7f08098f
 
-.field public static final stat_sys_data_fully_connected_5g:I = 0x7f080997
+.field public static final stat_sys_bt_battery_9:I = 0x7f080990
 
-.field public static final stat_sys_data_fully_connected_5g_uwb:I = 0x7f080998
+.field public static final stat_sys_cast:I = 0x7f080992
 
-.field public static final stat_sys_data_fully_connected_e:I = 0x7f080999
+.field public static final stat_sys_data_bluetooth:I = 0x7f080993
 
-.field public static final stat_sys_data_fully_connected_g:I = 0x7f08099a
+.field public static final stat_sys_data_bluetooth_connected:I = 0x7f080994
 
-.field public static final stat_sys_data_fully_connected_h:I = 0x7f08099b
+.field public static final stat_sys_data_disabled:I = 0x7f08099c
 
-.field public static final stat_sys_data_fully_connected_h_plus:I = 0x7f08099c
+.field public static final stat_sys_data_fully_connected_1x:I = 0x7f08099d
 
-.field public static final stat_sys_data_fully_connected_lte:I = 0x7f08099e
+.field public static final stat_sys_data_fully_connected_2g:I = 0x7f08099e
 
-.field public static final stat_sys_data_fully_connected_lte_plus:I = 0x7f08099f
+.field public static final stat_sys_data_fully_connected_3g:I = 0x7f08099f
 
-.field public static final stat_sys_data_op_stacked_1x:I = 0x7f0809b5
+.field public static final stat_sys_data_fully_connected_3g_plus:I = 0x7f0809a0
 
-.field public static final stat_sys_data_op_stacked_2g:I = 0x7f0809b6
+.field public static final stat_sys_data_fully_connected_4g:I = 0x7f0809a1
 
-.field public static final stat_sys_data_op_stacked_3g:I = 0x7f0809b7
+.field public static final stat_sys_data_fully_connected_4g_lte:I = 0x7f0809a2
 
-.field public static final stat_sys_data_op_stacked_4g:I = 0x7f0809b8
+.field public static final stat_sys_data_fully_connected_4g_plus:I = 0x7f0809a3
 
-.field public static final stat_sys_data_op_stacked_4g_plus:I = 0x7f0809b9
+.field public static final stat_sys_data_fully_connected_4g_plus_lte:I = 0x7f0809a4
 
-.field public static final stat_sys_data_op_stacked_g:I = 0x7f0809ba
+.field public static final stat_sys_data_fully_connected_5g:I = 0x7f0809a5
 
-.field public static final stat_sys_data_op_stacked_lte:I = 0x7f0809bb
+.field public static final stat_sys_data_fully_connected_5g_uwb:I = 0x7f0809a6
 
-.field public static final stat_sys_data_op_stacked_lte_plus:I = 0x7f0809bc
+.field public static final stat_sys_data_fully_connected_e:I = 0x7f0809a7
 
-.field public static final stat_sys_data_op_stacked_roam:I = 0x7f0809bd
+.field public static final stat_sys_data_fully_connected_g:I = 0x7f0809a8
 
-.field public static final stat_sys_data_saver:I = 0x7f0809c5
+.field public static final stat_sys_data_fully_connected_h:I = 0x7f0809a9
 
-.field public static final stat_sys_dnd:I = 0x7f0809c6
+.field public static final stat_sys_data_fully_connected_h_plus:I = 0x7f0809aa
 
-.field public static final stat_sys_ethernet:I = 0x7f0809c7
+.field public static final stat_sys_data_fully_connected_lte:I = 0x7f0809ac
 
-.field public static final stat_sys_ethernet_fully:I = 0x7f0809c8
+.field public static final stat_sys_data_fully_connected_lte_plus:I = 0x7f0809ad
 
-.field public static final stat_sys_hd:I = 0x7f0809c9
+.field public static final stat_sys_data_op_stacked_1x:I = 0x7f0809c3
 
-.field public static final stat_sys_hd_slot1:I = 0x7f0809ca
+.field public static final stat_sys_data_op_stacked_2g:I = 0x7f0809c4
 
-.field public static final stat_sys_hd_slot12:I = 0x7f0809cb
+.field public static final stat_sys_data_op_stacked_3g:I = 0x7f0809c5
 
-.field public static final stat_sys_hd_slot2:I = 0x7f0809cc
+.field public static final stat_sys_data_op_stacked_4g:I = 0x7f0809c6
 
-.field public static final stat_sys_hd_unavailable:I = 0x7f0809cd
+.field public static final stat_sys_data_op_stacked_4g_plus:I = 0x7f0809c7
 
-.field public static final stat_sys_headset:I = 0x7f0809ce
+.field public static final stat_sys_data_op_stacked_g:I = 0x7f0809c8
 
-.field public static final stat_sys_headset_mic:I = 0x7f0809cf
+.field public static final stat_sys_data_op_stacked_lte:I = 0x7f0809c9
 
-.field public static final stat_sys_hotspot:I = 0x7f0809d0
+.field public static final stat_sys_data_op_stacked_lte_plus:I = 0x7f0809ca
 
-.field public static final stat_sys_managed_profile_status:I = 0x7f0809d2
+.field public static final stat_sys_data_op_stacked_roam:I = 0x7f0809cb
 
-.field public static final stat_sys_nfc:I = 0x7f0809d4
+.field public static final stat_sys_data_saver:I = 0x7f0809d3
 
-.field public static final stat_sys_no_sims:I = 0x7f0809d8
+.field public static final stat_sys_dnd:I = 0x7f0809d4
 
-.field public static final stat_sys_no_sims_edge:I = 0x7f0809d9
+.field public static final stat_sys_ethernet:I = 0x7f0809d5
 
-.field public static final stat_sys_ringer_silent:I = 0x7f080a3e
+.field public static final stat_sys_ethernet_fully:I = 0x7f0809d6
 
-.field public static final stat_sys_ringer_vibrate:I = 0x7f080a3f
+.field public static final stat_sys_hd:I = 0x7f0809d7
 
-.field public static final stat_sys_rotate_landscape:I = 0x7f080a41
+.field public static final stat_sys_hd_slot1:I = 0x7f0809d8
 
-.field public static final stat_sys_rotate_portrait:I = 0x7f080a42
+.field public static final stat_sys_hd_slot12:I = 0x7f0809d9
 
-.field public static final stat_sys_sensors_off:I = 0x7f080a43
+.field public static final stat_sys_hd_slot2:I = 0x7f0809da
 
-.field public static final stat_sys_signal_0:I = 0x7f080a44
+.field public static final stat_sys_hd_unavailable:I = 0x7f0809db
 
-.field public static final stat_sys_signal_0_default_fully_roam:I = 0x7f080a61
+.field public static final stat_sys_headset:I = 0x7f0809dc
 
-.field public static final stat_sys_signal_0_default_roam:I = 0x7f080a62
+.field public static final stat_sys_headset_mic:I = 0x7f0809dd
 
-.field public static final stat_sys_signal_0_fully:I = 0x7f080a67
+.field public static final stat_sys_hotspot:I = 0x7f0809de
 
-.field public static final stat_sys_signal_0_op_4_bar_stacked:I = 0x7f080a79
+.field public static final stat_sys_managed_profile_status:I = 0x7f0809e0
 
-.field public static final stat_sys_signal_0_op_4_bar_virtual:I = 0x7f080a7a
+.field public static final stat_sys_nfc:I = 0x7f0809e2
 
-.field public static final stat_sys_signal_0_op_5_bar:I = 0x7f080a7b
+.field public static final stat_sys_no_sims:I = 0x7f0809e6
 
-.field public static final stat_sys_signal_0_op_5_bar_fully:I = 0x7f080a7c
+.field public static final stat_sys_no_sims_edge:I = 0x7f0809e7
 
-.field public static final stat_sys_signal_0_op_5_bar_roam:I = 0x7f080a7d
+.field public static final stat_sys_ringer_silent:I = 0x7f080a4c
 
-.field public static final stat_sys_signal_0_op_5_bar_stacked:I = 0x7f080a7e
+.field public static final stat_sys_ringer_vibrate:I = 0x7f080a4d
 
-.field public static final stat_sys_signal_0_op_5_bar_virtual:I = 0x7f080a7f
+.field public static final stat_sys_rotate_landscape:I = 0x7f080a4f
 
-.field public static final stat_sys_signal_1:I = 0x7f080a8b
+.field public static final stat_sys_rotate_portrait:I = 0x7f080a50
 
-.field public static final stat_sys_signal_1_default_fully_roam:I = 0x7f080aa8
+.field public static final stat_sys_sensors_off:I = 0x7f080a51
 
-.field public static final stat_sys_signal_1_default_roam:I = 0x7f080aa9
+.field public static final stat_sys_signal_0:I = 0x7f080a52
 
-.field public static final stat_sys_signal_1_fully:I = 0x7f080aae
+.field public static final stat_sys_signal_0_default_fully_roam:I = 0x7f080a6f
 
-.field public static final stat_sys_signal_1_op_4_bar_stacked:I = 0x7f080ac0
+.field public static final stat_sys_signal_0_default_roam:I = 0x7f080a70
 
-.field public static final stat_sys_signal_1_op_4_bar_virtual:I = 0x7f080ac1
+.field public static final stat_sys_signal_0_fully:I = 0x7f080a75
 
-.field public static final stat_sys_signal_1_op_5_bar:I = 0x7f080ac2
+.field public static final stat_sys_signal_0_op_4_bar_stacked:I = 0x7f080a87
 
-.field public static final stat_sys_signal_1_op_5_bar_fully:I = 0x7f080ac3
+.field public static final stat_sys_signal_0_op_4_bar_virtual:I = 0x7f080a88
 
-.field public static final stat_sys_signal_1_op_5_bar_roam:I = 0x7f080ac4
+.field public static final stat_sys_signal_0_op_5_bar:I = 0x7f080a89
 
-.field public static final stat_sys_signal_1_op_5_bar_stacked:I = 0x7f080ac5
+.field public static final stat_sys_signal_0_op_5_bar_fully:I = 0x7f080a8a
 
-.field public static final stat_sys_signal_1_op_5_bar_virtual:I = 0x7f080ac6
+.field public static final stat_sys_signal_0_op_5_bar_roam:I = 0x7f080a8b
 
-.field public static final stat_sys_signal_2:I = 0x7f080ad6
+.field public static final stat_sys_signal_0_op_5_bar_stacked:I = 0x7f080a8c
 
-.field public static final stat_sys_signal_2_default_fully_roam:I = 0x7f080af3
+.field public static final stat_sys_signal_0_op_5_bar_virtual:I = 0x7f080a8d
 
-.field public static final stat_sys_signal_2_default_roam:I = 0x7f080af4
+.field public static final stat_sys_signal_1:I = 0x7f080a99
 
-.field public static final stat_sys_signal_2_fully:I = 0x7f080af9
+.field public static final stat_sys_signal_1_default_fully_roam:I = 0x7f080ab6
 
-.field public static final stat_sys_signal_2_op_4_bar_stacked:I = 0x7f080b0b
+.field public static final stat_sys_signal_1_default_roam:I = 0x7f080ab7
 
-.field public static final stat_sys_signal_2_op_4_bar_virtual:I = 0x7f080b0c
+.field public static final stat_sys_signal_1_fully:I = 0x7f080abc
 
-.field public static final stat_sys_signal_2_op_5_bar:I = 0x7f080b0d
+.field public static final stat_sys_signal_1_op_4_bar_stacked:I = 0x7f080ace
 
-.field public static final stat_sys_signal_2_op_5_bar_fully:I = 0x7f080b0e
+.field public static final stat_sys_signal_1_op_4_bar_virtual:I = 0x7f080acf
 
-.field public static final stat_sys_signal_2_op_5_bar_roam:I = 0x7f080b0f
+.field public static final stat_sys_signal_1_op_5_bar:I = 0x7f080ad0
 
-.field public static final stat_sys_signal_2_op_5_bar_stacked:I = 0x7f080b10
+.field public static final stat_sys_signal_1_op_5_bar_fully:I = 0x7f080ad1
 
-.field public static final stat_sys_signal_2_op_5_bar_virtual:I = 0x7f080b11
+.field public static final stat_sys_signal_1_op_5_bar_roam:I = 0x7f080ad2
 
-.field public static final stat_sys_signal_3:I = 0x7f080b21
+.field public static final stat_sys_signal_1_op_5_bar_stacked:I = 0x7f080ad3
 
-.field public static final stat_sys_signal_3_default_fully_roam:I = 0x7f080b3e
+.field public static final stat_sys_signal_1_op_5_bar_virtual:I = 0x7f080ad4
 
-.field public static final stat_sys_signal_3_default_roam:I = 0x7f080b3f
+.field public static final stat_sys_signal_2:I = 0x7f080ae4
 
-.field public static final stat_sys_signal_3_fully:I = 0x7f080b44
+.field public static final stat_sys_signal_2_default_fully_roam:I = 0x7f080b01
 
-.field public static final stat_sys_signal_3_op_4_bar_stacked:I = 0x7f080b56
+.field public static final stat_sys_signal_2_default_roam:I = 0x7f080b02
 
-.field public static final stat_sys_signal_3_op_4_bar_virtual:I = 0x7f080b57
+.field public static final stat_sys_signal_2_fully:I = 0x7f080b07
 
-.field public static final stat_sys_signal_3_op_5_bar:I = 0x7f080b58
+.field public static final stat_sys_signal_2_op_4_bar_stacked:I = 0x7f080b19
 
-.field public static final stat_sys_signal_3_op_5_bar_fully:I = 0x7f080b59
+.field public static final stat_sys_signal_2_op_4_bar_virtual:I = 0x7f080b1a
 
-.field public static final stat_sys_signal_3_op_5_bar_roam:I = 0x7f080b5a
+.field public static final stat_sys_signal_2_op_5_bar:I = 0x7f080b1b
 
-.field public static final stat_sys_signal_3_op_5_bar_stacked:I = 0x7f080b5b
+.field public static final stat_sys_signal_2_op_5_bar_fully:I = 0x7f080b1c
 
-.field public static final stat_sys_signal_3_op_5_bar_virtual:I = 0x7f080b5c
+.field public static final stat_sys_signal_2_op_5_bar_roam:I = 0x7f080b1d
 
-.field public static final stat_sys_signal_4:I = 0x7f080b6c
+.field public static final stat_sys_signal_2_op_5_bar_stacked:I = 0x7f080b1e
 
-.field public static final stat_sys_signal_4_default_fully_roam:I = 0x7f080b89
+.field public static final stat_sys_signal_2_op_5_bar_virtual:I = 0x7f080b1f
 
-.field public static final stat_sys_signal_4_default_roam:I = 0x7f080b8a
+.field public static final stat_sys_signal_3:I = 0x7f080b2f
 
-.field public static final stat_sys_signal_4_fully:I = 0x7f080b8f
+.field public static final stat_sys_signal_3_default_fully_roam:I = 0x7f080b4c
 
-.field public static final stat_sys_signal_4_op_4_bar_stacked:I = 0x7f080ba1
+.field public static final stat_sys_signal_3_default_roam:I = 0x7f080b4d
 
-.field public static final stat_sys_signal_4_op_4_bar_virtual:I = 0x7f080ba2
+.field public static final stat_sys_signal_3_fully:I = 0x7f080b52
 
-.field public static final stat_sys_signal_4_op_5_bar:I = 0x7f080ba3
+.field public static final stat_sys_signal_3_op_4_bar_stacked:I = 0x7f080b64
 
-.field public static final stat_sys_signal_4_op_5_bar_fully:I = 0x7f080ba4
+.field public static final stat_sys_signal_3_op_4_bar_virtual:I = 0x7f080b65
 
-.field public static final stat_sys_signal_4_op_5_bar_roam:I = 0x7f080ba5
+.field public static final stat_sys_signal_3_op_5_bar:I = 0x7f080b66
 
-.field public static final stat_sys_signal_4_op_5_bar_stacked:I = 0x7f080ba6
+.field public static final stat_sys_signal_3_op_5_bar_fully:I = 0x7f080b67
 
-.field public static final stat_sys_signal_4_op_5_bar_virtual:I = 0x7f080ba7
+.field public static final stat_sys_signal_3_op_5_bar_roam:I = 0x7f080b68
 
-.field public static final stat_sys_signal_5_op_5_bar:I = 0x7f080bbb
+.field public static final stat_sys_signal_3_op_5_bar_stacked:I = 0x7f080b69
 
-.field public static final stat_sys_signal_5_op_5_bar_fully:I = 0x7f080bbc
+.field public static final stat_sys_signal_3_op_5_bar_virtual:I = 0x7f080b6a
 
-.field public static final stat_sys_signal_5_op_5_bar_roam:I = 0x7f080bbd
+.field public static final stat_sys_signal_4:I = 0x7f080b7a
 
-.field public static final stat_sys_signal_5_op_5_bar_stacked:I = 0x7f080bbe
+.field public static final stat_sys_signal_4_default_fully_roam:I = 0x7f080b97
 
-.field public static final stat_sys_signal_5_op_5_bar_virtual:I = 0x7f080bbf
+.field public static final stat_sys_signal_4_default_roam:I = 0x7f080b98
 
-.field public static final stat_sys_signal_in:I = 0x7f080bd0
+.field public static final stat_sys_signal_4_fully:I = 0x7f080b9d
 
-.field public static final stat_sys_signal_inout:I = 0x7f080bd1
+.field public static final stat_sys_signal_4_op_4_bar_stacked:I = 0x7f080baf
 
-.field public static final stat_sys_signal_none:I = 0x7f080bd2
+.field public static final stat_sys_signal_4_op_4_bar_virtual:I = 0x7f080bb0
 
-.field public static final stat_sys_signal_null:I = 0x7f080bd3
+.field public static final stat_sys_signal_4_op_5_bar:I = 0x7f080bb1
 
-.field public static final stat_sys_signal_oneplus_roam_0:I = 0x7f080bd7
+.field public static final stat_sys_signal_4_op_5_bar_fully:I = 0x7f080bb2
 
-.field public static final stat_sys_signal_oneplus_roam_1:I = 0x7f080bd8
+.field public static final stat_sys_signal_4_op_5_bar_roam:I = 0x7f080bb3
 
-.field public static final stat_sys_signal_oneplus_roam_2:I = 0x7f080bd9
+.field public static final stat_sys_signal_4_op_5_bar_stacked:I = 0x7f080bb4
 
-.field public static final stat_sys_signal_oneplus_roam_3:I = 0x7f080bda
+.field public static final stat_sys_signal_4_op_5_bar_virtual:I = 0x7f080bb5
 
-.field public static final stat_sys_signal_oneplus_roam_4:I = 0x7f080bdb
+.field public static final stat_sys_signal_5_op_5_bar:I = 0x7f080bc9
 
-.field public static final stat_sys_signal_out:I = 0x7f080bdc
+.field public static final stat_sys_signal_5_op_5_bar_fully:I = 0x7f080bca
 
-.field public static final stat_sys_signal_stacked_in:I = 0x7f080be1
+.field public static final stat_sys_signal_5_op_5_bar_roam:I = 0x7f080bcb
 
-.field public static final stat_sys_signal_stacked_inout:I = 0x7f080be2
+.field public static final stat_sys_signal_5_op_5_bar_stacked:I = 0x7f080bcc
 
-.field public static final stat_sys_signal_stacked_none:I = 0x7f080be3
+.field public static final stat_sys_signal_5_op_5_bar_virtual:I = 0x7f080bcd
 
-.field public static final stat_sys_signal_stacked_out:I = 0x7f080be4
+.field public static final stat_sys_signal_in:I = 0x7f080bde
 
-.field public static final stat_sys_three_key_no_disturb:I = 0x7f080be5
+.field public static final stat_sys_signal_inout:I = 0x7f080bdf
 
-.field public static final stat_sys_three_key_normal:I = 0x7f080be6
+.field public static final stat_sys_signal_none:I = 0x7f080be0
 
-.field public static final stat_sys_three_key_silent:I = 0x7f080be7
+.field public static final stat_sys_signal_null:I = 0x7f080be1
 
-.field public static final stat_sys_tty_mode:I = 0x7f080be8
+.field public static final stat_sys_signal_oneplus_roam_0:I = 0x7f080be5
 
-.field public static final stat_sys_volte:I = 0x7f080be9
+.field public static final stat_sys_signal_oneplus_roam_1:I = 0x7f080be6
 
-.field public static final stat_sys_volte_slot1:I = 0x7f080bea
+.field public static final stat_sys_signal_oneplus_roam_2:I = 0x7f080be7
 
-.field public static final stat_sys_volte_slot12:I = 0x7f080beb
+.field public static final stat_sys_signal_oneplus_roam_3:I = 0x7f080be8
 
-.field public static final stat_sys_volte_slot2:I = 0x7f080bec
+.field public static final stat_sys_signal_oneplus_roam_4:I = 0x7f080be9
 
-.field public static final stat_sys_vowifi:I = 0x7f080bed
+.field public static final stat_sys_signal_out:I = 0x7f080bea
 
-.field public static final stat_sys_vowifi_slot1:I = 0x7f080bee
+.field public static final stat_sys_signal_stacked_in:I = 0x7f080bef
 
-.field public static final stat_sys_vowifi_slot12:I = 0x7f080bef
+.field public static final stat_sys_signal_stacked_inout:I = 0x7f080bf0
 
-.field public static final stat_sys_vowifi_slot2:I = 0x7f080bf0
+.field public static final stat_sys_signal_stacked_none:I = 0x7f080bf1
 
-.field public static final stat_sys_vpn_ic:I = 0x7f080bf1
+.field public static final stat_sys_signal_stacked_out:I = 0x7f080bf2
 
-.field public static final stat_sys_wifi_5_hotspot:I = 0x7f080bf2
+.field public static final stat_sys_three_key_no_disturb:I = 0x7f080bf3
 
-.field public static final stat_sys_wifi_6_hotspot:I = 0x7f080bf3
+.field public static final stat_sys_three_key_normal:I = 0x7f080bf4
 
-.field public static final stat_sys_wifi_signal_0:I = 0x7f080bf4
+.field public static final stat_sys_three_key_silent:I = 0x7f080bf5
 
-.field public static final stat_sys_wifi_signal_0_fully:I = 0x7f080bf5
+.field public static final stat_sys_tty_mode:I = 0x7f080bf6
 
-.field public static final stat_sys_wifi_signal_1:I = 0x7f080bf6
+.field public static final stat_sys_volte:I = 0x7f080bf7
 
-.field public static final stat_sys_wifi_signal_1_fully:I = 0x7f080bf7
+.field public static final stat_sys_volte_slot1:I = 0x7f080bf8
 
-.field public static final stat_sys_wifi_signal_2:I = 0x7f080bf8
+.field public static final stat_sys_volte_slot12:I = 0x7f080bf9
 
-.field public static final stat_sys_wifi_signal_2_fully:I = 0x7f080bf9
+.field public static final stat_sys_volte_slot2:I = 0x7f080bfa
 
-.field public static final stat_sys_wifi_signal_3:I = 0x7f080bfa
+.field public static final stat_sys_vowifi:I = 0x7f080bfb
 
-.field public static final stat_sys_wifi_signal_3_fully:I = 0x7f080bfb
+.field public static final stat_sys_vowifi_slot1:I = 0x7f080bfc
 
-.field public static final stat_sys_wifi_signal_4:I = 0x7f080bfc
+.field public static final stat_sys_vowifi_slot12:I = 0x7f080bfd
 
-.field public static final stat_sys_wifi_signal_4_fully:I = 0x7f080bfd
+.field public static final stat_sys_vowifi_slot2:I = 0x7f080bfe
 
-.field public static final status_background:I = 0x7f080bfe
+.field public static final stat_sys_vpn_ic:I = 0x7f080bff
 
-.field public static final status_bar_notification_section_header_clear_btn:I = 0x7f080c00
+.field public static final stat_sys_wifi_5_hotspot:I = 0x7f080c00
 
-.field public static final sun:I = 0x7f080c01
+.field public static final stat_sys_wifi_6_hotspot:I = 0x7f080c01
 
-.field public static final volume_dialog_bg_dark:I = 0x7f080c14
+.field public static final stat_sys_wifi_signal_0:I = 0x7f080c02
 
-.field public static final volume_dialog_bg_light:I = 0x7f080c15
+.field public static final stat_sys_wifi_signal_0_fully:I = 0x7f080c03
 
-.field public static final volume_dialog_progress_dark:I = 0x7f080c16
+.field public static final stat_sys_wifi_signal_1:I = 0x7f080c04
 
-.field public static final volume_dialog_progress_light:I = 0x7f080c17
+.field public static final stat_sys_wifi_signal_1_fully:I = 0x7f080c05
 
-.field public static final volume_dialog_row_container_bg_dark:I = 0x7f080c18
+.field public static final stat_sys_wifi_signal_2:I = 0x7f080c06
 
-.field public static final volume_dialog_row_container_bg_light:I = 0x7f080c19
+.field public static final stat_sys_wifi_signal_2_fully:I = 0x7f080c07
 
-.field public static final work_challenge_background:I = 0x7f080c1e
+.field public static final stat_sys_wifi_signal_3:I = 0x7f080c08
+
+.field public static final stat_sys_wifi_signal_3_fully:I = 0x7f080c09
+
+.field public static final stat_sys_wifi_signal_4:I = 0x7f080c0a
+
+.field public static final stat_sys_wifi_signal_4_fully:I = 0x7f080c0b
+
+.field public static final status_background:I = 0x7f080c0c
+
+.field public static final status_bar_notification_section_header_clear_btn:I = 0x7f080c0e
+
+.field public static final sun:I = 0x7f080c0f
+
+.field public static final volume_dialog_bg_dark:I = 0x7f080c22
+
+.field public static final volume_dialog_bg_light:I = 0x7f080c23
+
+.field public static final volume_dialog_progress_dark:I = 0x7f080c24
+
+.field public static final volume_dialog_progress_light:I = 0x7f080c25
+
+.field public static final volume_dialog_row_container_bg_dark:I = 0x7f080c26
+
+.field public static final volume_dialog_row_container_bg_light:I = 0x7f080c27
+
+.field public static final work_challenge_background:I = 0x7f080c2c

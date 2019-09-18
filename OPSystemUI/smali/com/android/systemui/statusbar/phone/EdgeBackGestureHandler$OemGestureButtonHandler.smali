@@ -164,6 +164,12 @@
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
 
+    iget-object p1, p1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->mEdgeEffectView:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;
+
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$EdgeEffectView;->vibrate()V
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler$OemGestureButtonHandler;->this$0:Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;
+
     invoke-static {p1}, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->access$700(Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;)Z
 
     move-result p1

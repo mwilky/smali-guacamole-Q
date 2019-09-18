@@ -61,8 +61,8 @@
         <item quantity="one">%d device</item>
     </plurals>
     <plurals name="smart_aod_calendar_remain_time">
-        <item quantity="other">sa loob ng %d (na) min</item>
-        <item quantity="one">sa loob ng %d min</item>
+        <item quantity="other">sa loobg ng %d minuto</item>
+        <item quantity="one">sa loob ng %d minuto</item>
     </plurals>
     <plurals name="snoozeHourOptions">
         <item quantity="other">%d na oras</item>

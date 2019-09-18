@@ -1439,7 +1439,7 @@
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
-    invoke-virtual {p0}, Lcom/android/systemui/recents/OverviewProxyService;->panelExpansionChanged()V
+    invoke-virtual {p0}, Lcom/android/systemui/recents/OverviewProxyService;->updateSystemUIStateFlagsInternal()V
 
     :cond_6
     return-void

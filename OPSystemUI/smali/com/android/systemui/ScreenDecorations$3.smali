@@ -46,11 +46,11 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-static {p2, p1}, Lcom/android/systemui/ScreenDecorations;->access$702(Lcom/android/systemui/ScreenDecorations;Z)Z
+    invoke-static {p2, p1}, Lcom/android/systemui/ScreenDecorations;->access$102(Lcom/android/systemui/ScreenDecorations;Z)Z
 
     iget-object p0, p0, Lcom/android/systemui/ScreenDecorations$3;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {p0}, Lcom/android/systemui/ScreenDecorations;->access$800(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/qs/SecureSetting;
+    invoke-static {p0}, Lcom/android/systemui/ScreenDecorations;->access$200(Lcom/android/systemui/ScreenDecorations;)Lcom/android/systemui/qs/SecureSetting;
 
     move-result-object p1
 
@@ -58,7 +58,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations;->access$600(Lcom/android/systemui/ScreenDecorations;I)V
+    invoke-static {p0, p1}, Lcom/android/systemui/ScreenDecorations;->access$000(Lcom/android/systemui/ScreenDecorations;I)V
 
     return-void
 .end method

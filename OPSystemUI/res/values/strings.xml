@@ -854,7 +854,7 @@ only"</string>
     <string name="keyguard_indication_charging_time_slowly">%2$s • Charging slowly (%1$s until full)</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Charging wirelessly (%1$s until full)</string>
     <string name="keyguard_indication_trust_disabled">Device will stay locked until you manually unlock</string>
-    <string name="keyguard_indication_trust_unlocked">Kept unlocked by TrustAgent</string>
+    <string name="keyguard_indication_trust_unlocked">@string/op_keyguard_indication_trust_unlocked</string>
     <string name="keyguard_instructions_when_pattern_disabled">Press Menu to unlock.</string>
     <string name="keyguard_low_battery">Connect your charger.</string>
     <string name="keyguard_missing_sim_instructions">Insert a SIM card.</string>
@@ -1226,7 +1226,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_bubble_text">SOS</string>
     <string name="op_emergency_indicator_hint_text">Swipe down for emergency services</string>
-    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Lock</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
     <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
     <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
     <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>

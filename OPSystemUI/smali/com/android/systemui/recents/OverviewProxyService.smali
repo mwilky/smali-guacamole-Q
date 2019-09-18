@@ -30,6 +30,8 @@
 # instance fields
 .field private mActiveNavBarRegion:Landroid/graphics/Region;
 
+.field private final mAssistContentObserver:Landroid/database/ContentObserver;
+
 .field private mBound:Z
 
 .field private mConnectionBackoffAttempts:I
@@ -45,6 +47,8 @@
 .end field
 
 .field private final mConnectionRunnable:Ljava/lang/Runnable;
+
+.field private mContentResolver:Landroid/content/ContentResolver;
 
 .field private final mContext:Landroid/content/Context;
 
@@ -179,6 +183,20 @@
 
     iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mTouchHandler:Landroid/os/Handler;
 
+    new-instance v1, Lcom/android/systemui/recents/OverviewProxyService$6;
+
+    new-instance v2, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-direct {v1, p0, v2}, Lcom/android/systemui/recents/OverviewProxyService$6;-><init>(Lcom/android/systemui/recents/OverviewProxyService;Landroid/os/Handler;)V
+
+    iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mAssistContentObserver:Landroid/database/ContentObserver;
+
     iput-object p1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/os/Handler;
@@ -295,9 +313,17 @@
 
     invoke-virtual {p2, p3, p1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    iget-object p0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarWindowCallback:Lcom/android/systemui/statusbar/phone/StatusBarWindowCallback;
+    iget-object p1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarWindowCallback:Lcom/android/systemui/statusbar/phone/StatusBarWindowCallback;
 
-    invoke-virtual {p5, p0}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->registerCallback(Lcom/android/systemui/statusbar/phone/StatusBarWindowCallback;)V
+    invoke-virtual {p5, p1}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->registerCallback(Lcom/android/systemui/statusbar/phone/StatusBarWindowCallback;)V
+
+    iget-object p1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContentResolver:Landroid/content/ContentResolver;
 
     return-void
 .end method
@@ -441,12 +467,36 @@
 .method static synthetic access$2300(Lcom/android/systemui/recents/OverviewProxyService;)V
     .locals 0
 
+    invoke-direct {p0}, Lcom/android/systemui/recents/OverviewProxyService;->sendAssistantAvailabilityInternal()V
+
+    return-void
+.end method
+
+.method static synthetic access$2400(Lcom/android/systemui/recents/OverviewProxyService;)Landroid/database/ContentObserver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mAssistContentObserver:Landroid/database/ContentObserver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2500(Lcom/android/systemui/recents/OverviewProxyService;)Landroid/content/ContentResolver;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContentResolver:Landroid/content/ContentResolver;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2600(Lcom/android/systemui/recents/OverviewProxyService;)V
+    .locals 0
+
     invoke-direct {p0}, Lcom/android/systemui/recents/OverviewProxyService;->internalConnectToCurrentUser()V
 
     return-void
 .end method
 
-.method static synthetic access$2400(Lcom/android/systemui/recents/OverviewProxyService;Landroid/view/MotionEvent;)V
+.method static synthetic access$2700(Lcom/android/systemui/recents/OverviewProxyService;Landroid/view/MotionEvent;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/systemui/recents/OverviewProxyService;->dispatchLauncherTouch(Landroid/view/MotionEvent;)V
@@ -454,7 +504,7 @@
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/android/systemui/recents/OverviewProxyService;)V
+.method static synthetic access$2800(Lcom/android/systemui/recents/OverviewProxyService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/recents/OverviewProxyService;->dispatchCancelTouch()V
@@ -1374,6 +1424,98 @@
     return-void
 .end method
 
+.method private sendAssistantAvailabilityInternal()V
+    .locals 6
+
+    const-string v0, "OverviewProxyService"
+
+    const-class v1, Lcom/android/systemui/assist/AssistManager;
+
+    invoke-static {v1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/systemui/assist/AssistManager;
+
+    const/4 v2, -0x2
+
+    invoke-virtual {v1, v2}, Lcom/android/systemui/assist/AssistManager;->getAssistInfoForUser(I)Landroid/content/ComponentName;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v3
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/android/systemui/recents/OverviewProxyService;->getProxy()Lcom/android/systemui/shared/recents/IOverviewProxy;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_2
+
+    :try_start_0
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Send assistant availability data to launcher "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Lcom/android/systemui/recents/OverviewProxyService;->getProxy()Lcom/android/systemui/shared/recents/IOverviewProxy;
+
+    move-result-object v4
+
+    if-eqz v1, :cond_1
+
+    iget p0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mNavBarMode:I
+
+    invoke-static {p0}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    invoke-interface {v4, v2}, Lcom/android/systemui/shared/recents/IOverviewProxy;->onAssistantAvailable(Z)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    const-string p0, "Unable to send assistant availability data to launcher"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    :goto_2
+    return-void
+.end method
+
 .method private updateEnabledState()V
     .locals 4
 
@@ -1792,123 +1934,6 @@
     return-void
 .end method
 
-.method public panelExpansionChanged()V
-    .locals 6
-
-    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getDisplayId()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
-
-    const-class v2, Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    invoke-static {v1, v2}, Lcom/android/systemui/SysUiServiceProvider;->getComponent(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    :cond_0
-    iget v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mNavBarMode:I
-
-    invoke-static {v1}, Lcom/android/systemui/shared/system/QuickStepContract;->isGesturalMode(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getNavigationBarHiddenMode()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    sget-boolean v1, Lcom/android/systemui/statusbar/phone/EdgeBackGestureHandler;->sSideGestureEnabled:Z
-
-    if-nez v1, :cond_4
-
-    :cond_1
-    const-string v1, "OverviewProxyService"
-
-    const-string v3, "Handle update panel view expand state to launcher when navigation bar is hidden"
-
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    invoke-virtual {v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDisableFlag()I
-
-    move-result v1
-
-    const/16 v3, 0x80
-
-    const/high16 v4, 0x1000000
-
-    and-int/2addr v4, v1
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_2
-
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_2
-    move v4, v5
-
-    :goto_0
-    invoke-virtual {p0, v3, v4, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
-
-    const/16 v3, 0x100
-
-    const/high16 v4, 0x200000
-
-    and-int/2addr v1, v4
-
-    if-eqz v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move v2, v5
-
-    :goto_1
-    invoke-virtual {p0, v3, v2, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
-
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->getPanel()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/PanelView;->isFullyExpanded()Z
-
-    move-result v2
-
-    invoke-virtual {p0, v1, v2, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
-
-    :cond_4
-    return-void
-.end method
-
 .method public removeCallback(Lcom/android/systemui/recents/OverviewProxyService$OverviewProxyListener;)V
     .locals 0
 
@@ -2027,6 +2052,113 @@
     return-void
 .end method
 
+.method public updateSystemUIStateFlagsInternal()V
+    .locals 6
+
+    iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getDisplayId()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mContext:Landroid/content/Context;
+
+    const-class v2, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-static {v1, v2}, Lcom/android/systemui/SysUiServiceProvider;->getComponent(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    iput-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    :cond_0
+    sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "OverviewProxyService"
+
+    const-string v2, "Update system ui flag state to launcher when navigation bar is hidden"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v1}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDisableFlag()I
+
+    move-result v1
+
+    const/16 v2, 0x80
+
+    const/high16 v3, 0x1000000
+
+    and-int/2addr v3, v1
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    if-eqz v3, :cond_2
+
+    move v3, v4
+
+    goto :goto_0
+
+    :cond_2
+    move v3, v5
+
+    :goto_0
+    invoke-virtual {p0, v2, v3, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
+
+    const/16 v2, 0x100
+
+    const/high16 v3, 0x200000
+
+    and-int/2addr v1, v3
+
+    if-eqz v1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v4, v5
+
+    :goto_1
+    invoke-virtual {p0, v2, v4, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
+
+    iget-object v1, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->getPanel()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->getPanel()Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/PanelView;->isFullyExpanded()Z
+
+    move-result v2
+
+    invoke-virtual {p0, v1, v2, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
+
+    :cond_4
+    return-void
+.end method
+
 .method public updateSystemUiStateFlags()V
     .locals 3
 
@@ -2063,7 +2195,12 @@
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->updateSystemUiStateFlags()V
 
+    goto :goto_0
+
     :cond_1
+    invoke-virtual {p0}, Lcom/android/systemui/recents/OverviewProxyService;->updateSystemUIStateFlagsInternal()V
+
+    :goto_0
     iget-object v0, p0, Lcom/android/systemui/recents/OverviewProxyService;->mStatusBarWinController:Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
     if-eqz v0, :cond_2

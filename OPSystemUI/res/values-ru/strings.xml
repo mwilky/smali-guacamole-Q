@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Устройство отключено от Ethernet.</string>
     <string name="accessibility_face_dialog_face_icon">Значок лица</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Значок отпечатка пальца</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Область сообщения помощи</string>
     <string name="accessibility_gps_acquiring">Установление связи с GPS.</string>
     <string name="accessibility_gps_enabled">Система GPS включена.</string>
     <string name="accessibility_hide">Скрыть</string>
@@ -657,8 +657,8 @@
     <string name="hotspot_apm_message">Не удается подключиться к мобильным сетям при включенном самолетном режиме. Выключите самолетный режим и повторите попытку.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Вставьте SIM-карту, чтобы использовать мобильную точку доступа и другие варианты режима модема</string>
     <string name="hotspot_operator_dialog_nosim_title">Нет SIM-карты</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Вы не подписаны на услугу Wi-Fi модема</string>
+    <string name="hotspot_operator_dialog_othererror_title">Ошибка режима Wi-Fi модема</string>
     <string name="ime_security_warning">При использовании этого способа могут собираться все вводимые данные, в том числе пароли и номера кредитных карт. Запрос поступил от приложения \"%1$s\". Использовать этот способ ввода?</string>
     <string name="immediately_destroy_activities">Вытеснение фоновых Activity</string>
     <string name="immediately_destroy_activities_summary">Удалять все Activity после выхода пользователя</string>
@@ -1090,7 +1090,7 @@
     <string name="oneplus_threekey_navigation_disturb_changed">Режим \"Не беспокоить\" был изменен!</string>
     <string name="oneplus_threekey_navigation_next">ДАЛЕЕ</string>
     <string name="oneplus_threekey_navigation_silence">Полная тишина</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Изменился переключатель сигналов!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider изменен!</string>
     <string name="oneplus_threekey_navigation_sound">Все звуки разрешены</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Он может быть включен с помощью переключателя выше</string>
     <string name="oneplus_threekey_navigation_vibration">Только вибрация</string>
@@ -1104,6 +1104,15 @@
     <string name="op_earphone_device">НАЖМИТЕ ДЛЯ СОПРЯЖЕНИЯ</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Проведите пальцем вниз для экстренных служб</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Важно</string>
+    <string name="op_notification_channel_summary_low">Менее важные уведомления без звука и вибрации.</string>
+    <string name="op_notification_section_header_gentle">Другие уведомления</string>
+    <string name="op_notification_silence_title">Другое</string>
     <string name="op_quick_settings_night_display_label">Ночной режим</string>
     <string name="op_quick_settings_night_display_summary_off">Ночной режим выключен, коснитесь для включения</string>
     <string name="op_quick_settings_night_display_summary_on">Ночной режим включен, коснитесь для выключения</string>
@@ -1130,9 +1139,9 @@
 3.Отключение фонарика"</string>
     <string name="overheat_dialog_purple_button">Выключить сейчас</string>
     <string name="overheat_dialog_purple_message">Телефон будет выключен через 5 секунд</string>
-    <string name="overheat_dialog_red_message">Чтобы снизить температуру телефона, процессы приложений будут закрыты</string>
+    <string name="overheat_dialog_red_message">Чтобы снизить температуру телефона, процессы всех приложений будут закрыты</string>
     <string name="overheat_dialog_title">Температура телефона слишком высока</string>
-    <string name="overheat_notification_alert">Температура телефона слишком высока. Функции с высоким энергопотреблением будут отключены для снижения температуры</string>
+    <string name="overheat_notification_alert">Температура телефона слишком высока. Функция с высоким энергопотреблением будет отключена для снижения температуры</string>
     <string name="overheat_notification_resume">Температура телефона была восстановлена, и его можно использовать как обычно</string>
     <string name="overheat_notification_title_resume">Температура телефона была восстановлена</string>
     <string name="overheat_toast_content">Телефон слишком сильно нагрет. Использование данной функции не рекомендуется</string>
@@ -1216,11 +1225,6 @@
     <string name="prevent_view_top_tag_cancel2">Проследите за кругами на экране и нажмите на них, чтобы принудительно выйти из пакетного режима.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">камера</string>
     <string name="privacy_type_location">местоположение</string>
     <string name="privacy_type_microphone">микрофон</string>

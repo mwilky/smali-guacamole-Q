@@ -17,6 +17,8 @@
 # instance fields
 .field private mClippingBounds:Landroid/graphics/Rect;
 
+.field private mLandscapeMargin:I
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
@@ -31,6 +33,8 @@
     iput-object p1, p0, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->mClippingBounds:Landroid/graphics/Rect;
 
     const/4 p1, 0x0
+
+    iput p1, p0, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->mLandscapeMargin:I
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
@@ -86,6 +90,12 @@
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingEnd()I
 
     move-result v5
+
+    sub-int/2addr v4, v5
+
+    iget v5, p0, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->mLandscapeMargin:I
+
+    mul-int/lit8 v5, v5, 0x2
 
     sub-int/2addr v4, v5
 
@@ -272,9 +282,13 @@
 .method protected getColumnStart(I)I
     .locals 2
 
+    iget v0, p0, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->mLandscapeMargin:I
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getPaddingStart()I
 
-    move-result v0
+    move-result v1
+
+    add-int/2addr v0, v1
 
     iget v1, p0, Lcom/android/systemui/qs/TileLayout;->mCellWidth:I
 
@@ -298,12 +312,40 @@
 .end method
 
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     invoke-virtual {p0}, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->updateResources()Z
 
+    iget p1, p1, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_0
+
+    iget-object p1, p0, Landroid/view/ViewGroup;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    sget v0, Lcom/android/systemui/R$dimen;->op_quick_qs_panel_landscape_side_margin:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->mLandscapeMargin:I
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/android/systemui/qs/QuickQSPanel$HeaderTileLayout;->mLandscapeMargin:I
+
+    :goto_0
     return-void
 .end method
 

@@ -37,13 +37,7 @@
 .method public onDeviceProvisionedChanged()V
     .locals 3
 
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$000()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
@@ -57,7 +51,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
-    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$700(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
+    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$600(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
     move-result-object v2
 
@@ -73,10 +67,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$800(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$700(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
 
     return-void
 .end method
@@ -84,13 +77,7 @@
 .method public onUserSetupChanged()V
     .locals 3
 
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$000()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
@@ -104,7 +91,7 @@
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
-    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$700(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
+    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$600(Lcom/android/systemui/statusbar/phone/NavigationModeController;)Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
     move-result-object v2
 
@@ -120,10 +107,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$800(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$700(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
 
     return-void
 .end method
@@ -131,13 +117,7 @@
 .method public onUserSwitched()V
     .locals 3
 
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$000()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$100()Ljava/lang/String;
+    invoke-static {}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$000()Ljava/lang/String;
 
     move-result-object v0
 
@@ -165,7 +145,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
     const/4 v1, 0x1
@@ -174,11 +153,11 @@
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
-    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$500(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$400(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/NavigationModeController$2;->this$0:Lcom/android/systemui/statusbar/phone/NavigationModeController;
 
-    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$900(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
+    invoke-static {p0}, Lcom/android/systemui/statusbar/phone/NavigationModeController;->access$800(Lcom/android/systemui/statusbar/phone/NavigationModeController;)V
 
     return-void
 .end method

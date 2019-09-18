@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Conexión Ethernet desconectada.</string>
     <string name="accessibility_face_dialog_face_icon">Icono de cara</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Icono de huella digital</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Área de mensajes de ayuda</string>
     <string name="accessibility_gps_acquiring">Obteniendo ubicación...</string>
     <string name="accessibility_gps_enabled">GPS habilitado</string>
     <string name="accessibility_hide">Ocultar</string>
@@ -200,8 +200,8 @@
     <string name="accessibility_quick_settings_open_details">Abrir detalles.</string>
     <string name="accessibility_quick_settings_open_settings">Abrir ajustes de %s.</string>
     <string name="accessibility_quick_settings_page">Página %1$d de %2$d</string>
-    <string name="accessibility_quick_settings_power_saving_changed_off">El modo de Ahorro de energía está desactivado.</string>
-    <string name="accessibility_quick_settings_power_saving_changed_on">El modo de Ahorro de energía está activado.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">El modo Ahorro de batería está desactivado.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_on">El modo Ahorro de batería está activado.</string>
     <string name="accessibility_quick_settings_rotation">Girar pantalla automáticamente</string>
     <string name="accessibility_quick_settings_rotation_value">Modo %s</string>
     <string name="accessibility_quick_settings_sensor_privacy_changed_off">Se ha desactivado el sensor de privacidad.</string>
@@ -657,8 +657,8 @@ Una vez que se haya enfriado, funcionará con normalidad."</string>
     <string name="hotspot_apm_message">No se puede conectar a las redes móviles mientras el modo Avión esté habilitado. Deshabilita el modo Avión e inténtalo de nuevo.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Inserta una tarjeta SIM para utilizar el punto de acceso móvil y otras opciones de tethering</string>
     <string name="hotspot_operator_dialog_nosim_title">No hay tarjeta SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">No tienes una suscripción de tethering Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Error de tethering Wi-Fi</string>
     <string name="ime_security_warning">Este método de entrada puede registrar todo lo que escribas, incluidos datos personales, como las contraseñas y los números de las tarjetas de crédito. Procede de la aplicación %1$s. ¿Quieres usar este método de entrada?</string>
     <string name="immediately_destroy_activities">No mantener actividades</string>
     <string name="immediately_destroy_activities_summary">Destruir actividades cuando el usuario deje de usarlas</string>
@@ -1104,7 +1104,16 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="op_earphone_device">TOCAR PARA EMPAREJAR</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Desliza hacia abajo para acceder a los servicios de emergencia</string>
-    <string name="op_quick_settings_night_display_label">Modo nocturno</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Importante</string>
+    <string name="op_notification_channel_summary_low">Notificaciones menos importantes sin sonido ni vibración.</string>
+    <string name="op_notification_section_header_gentle">Otras notificaciones</string>
+    <string name="op_notification_silence_title">Otro</string>
+    <string name="op_quick_settings_night_display_label">Modo noche</string>
     <string name="op_quick_settings_night_display_summary_off">Modo nocturno desactivado. Tocar para activar</string>
     <string name="op_quick_settings_night_display_summary_on">Modo nocturno activado. Tocar para desactivar</string>
     <string name="open_saver_setting_action">Ajustes</string>
@@ -1132,10 +1141,10 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="overheat_dialog_purple_message">El teléfono se apagará en 5 segundos</string>
     <string name="overheat_dialog_red_message">Se interrumpirán todos los procesos de aplicaciones para reducir la temperatura</string>
     <string name="overheat_dialog_title">La temperatura del teléfono es demasiado elevada</string>
-    <string name="overheat_notification_alert">La temperatura del teléfono es demasiado elevada. Se han desactivado las funciones con un alto consumo de energía para reducir la temperatura.</string>
+    <string name="overheat_notification_alert">La temperatura del teléfono es demasiado elevada. Se ha desactivado una función con un alto consumo de energía para reducir la temperatura</string>
     <string name="overheat_notification_resume">La temperatura del teléfono se ha restaurado y el teléfono se puede utilizar con normalidad</string>
     <string name="overheat_notification_title_resume">La temperatura del teléfono se ha restaurado</string>
-    <string name="overheat_toast_content">El teléfono se encuentra en un estado de temperatura elevada, no es recomendable utilizar esta función.</string>
+    <string name="overheat_toast_content">El teléfono se encuentra en un estado de temperatura elevada. No es recomendable utilizar esta función</string>
     <string name="overlay_display_devices_title">Simular pantallas secundarias</string>
     <string name="overview">Aplicaciones recientes</string>
     <string name="phone_hint">Desliza desde el icono para abrir el teléfono</string>
@@ -1216,11 +1225,6 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="prevent_view_top_tag_cancel2">Por favor, sigue los círculos en pantalla y tócalos para salir del modo Bolsillo.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">cámara</string>
     <string name="privacy_type_location">ubicación</string>
     <string name="privacy_type_microphone">micrófono</string>
@@ -1329,7 +1333,7 @@ También estás conectado a una red VPN, que puede supervisar tu actividad de re
     <string name="quick_settings_nfc_off">La conexión NFC está inhabilitada</string>
     <string name="quick_settings_nfc_on">La conexión NFC está habilitada</string>
     <string name="quick_settings_night_display_label">Luz nocturna</string>
-    <string name="quick_settings_night_mode_label">Modo nocturno</string>
+    <string name="quick_settings_night_mode_label">Modo noche</string>
     <string name="quick_settings_night_secondary_label_on_at">Hora: %s</string>
     <string name="quick_settings_night_secondary_label_on_at_sunset">Al atardecer</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Hasta el amanecer</string>
@@ -1673,7 +1677,7 @@ Cualquier usuario puede actualizar las aplicaciones del resto de usuarios."</str
     <string name="volume_dialog_title">Controles de volumen %s</string>
     <string name="volume_dnd_silent">Combinación de teclas para los botones de volumen</string>
     <string name="volume_footer_no_disturb">No molestar</string>
-    <string name="volume_footer_ring">Sonido</string>
+    <string name="volume_footer_ring">Sonido de timbre</string>
     <string name="volume_footer_slient">Silencio</string>
     <string name="volume_footer_vibrate">Silencio (Vibración)</string>
     <string name="volume_odi_captions_content_description">Superposición de subtítulos</string>

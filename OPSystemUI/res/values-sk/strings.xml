@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Sieť ethernet je odpojená</string>
     <string name="accessibility_face_dialog_face_icon">Ikona tváre</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikona odtlačku prsta</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Oblasť správy nápovedy</string>
     <string name="accessibility_gps_acquiring">Prebieha zameriavanie GPS.</string>
     <string name="accessibility_gps_enabled">GPS je povolené.</string>
     <string name="accessibility_hide">Skryť</string>
@@ -657,8 +657,8 @@ Po poklese teploty bude telefón fungovať ako normálne."</string>
     <string name="hotspot_apm_message">Nedá sa pripojiť k mobilným sieťam, kým je zapnutý režim Lietadlo. Vypnite režim Lietadlo a skúste to znova.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Na použitie mobilného hotspotu a iných možností zdieľania internetu vložte kartu SIM</string>
     <string name="hotspot_operator_dialog_nosim_title">Bez karty SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Nie ste prihlásení k zdieľaniu internetu cez Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Chyba zdieľania internetu cez Wi-Fi</string>
     <string name="ime_security_warning">Pri tejto metóde vstupu sa môže zhromažďovať zadávaný text vrátane osobných údajov, ako sú heslá alebo čísla kreditných kariet. Táto metóda je poskytovaná aplikáciou %1$s. Chcete použiť túto metódu vstupu?</string>
     <string name="immediately_destroy_activities">Neuchovávať aktivity</string>
     <string name="immediately_destroy_activities_summary">Zničiť každú aktivitu, hneď ako ju používateľ ukončí</string>
@@ -1090,7 +1090,7 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="oneplus_threekey_navigation_disturb_changed">"Režim 'Nerušiť' bol zmenený!"</string>
     <string name="oneplus_threekey_navigation_next">ĎALEJ</string>
     <string name="oneplus_threekey_navigation_silence">Úplné ticho</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Jazdec upozornení sa zmenil!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert Slider sa zmenil!</string>
     <string name="oneplus_threekey_navigation_sound">Všetky zvuky povolené</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Možno zapnúť prepínačom vyššie</string>
     <string name="oneplus_threekey_navigation_vibration">Len vibrácie</string>
@@ -1104,6 +1104,15 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="op_earphone_device">ŤUKNUTÍM SPÁRUJTE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Potiahnite prstom nadol pre núdzové služby</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Dôležité</string>
+    <string name="op_notification_channel_summary_low">Menej dôležité oznámenia bez zvuku alebo vibrácie.</string>
+    <string name="op_notification_section_header_gentle">Ostatné oznámenia</string>
+    <string name="op_notification_silence_title">Ostatné</string>
     <string name="op_quick_settings_night_display_label">Nočný režim</string>
     <string name="op_quick_settings_night_display_summary_off">Nočný režim je vypnutý, ťuknutím sa zapne</string>
     <string name="op_quick_settings_night_display_summary_on">Nočný režim je zapnutý, ťuknutím sa vypne</string>
@@ -1216,11 +1225,6 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="prevent_view_top_tag_cancel2">Pre opustenie vreckového režimu sledujte kruhy na obrazovke a ťuknite na ne.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">fotoaparát</string>
     <string name="privacy_type_location">poloha</string>
     <string name="privacy_type_microphone">mikrofón</string>
@@ -1379,7 +1383,7 @@ Máte tiež aktívne pripojenie k sieti VPN, ktorá môže sledovať vašu akti
     <string name="recents_deep_clean_option">Dôkladné vyčistenie</string>
     <string name="recents_empty_no_apps_open">Nie sú otvorené žiadne aplikácie</string>
     <string name="recents_empty_recently_closed">Naposledy zatvorené aplikácie</string>
-    <string name="recents_normal_clean_description">Vymaže zoznam úloh a pamäť cache, bez vyčistenia procesov na pozadí.</string>
+    <string name="recents_normal_clean_description">Vymaže zoznam úloh a medzipamäť, bez vyčistenia procesov na pozadí.</string>
     <string name="recents_normal_clean_option">Normálne vyčistenie</string>
     <string name="recents_option_note">Toto môžete zmeniť prejdením do ponuky Nastavenia -> Rozšírené.</string>
     <string name="recents_option_title">Aký spôsob preferujete?</string>

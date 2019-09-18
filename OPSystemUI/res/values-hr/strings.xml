@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Prekinuta je veza s ethernetom.</string>
     <string name="accessibility_face_dialog_face_icon">Ikona lica</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ikona otiska prsta</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Područje poruke pomoći</string>
     <string name="accessibility_gps_acquiring">Dohvaćanje GPS-a.</string>
     <string name="accessibility_gps_enabled">GPS je omogućen.</string>
     <string name="accessibility_hide">Sakrij</string>
@@ -657,8 +657,8 @@ Kad se ohladi, radit će normalno."</string>
     <string name="hotspot_apm_message">Nije moguće povezivanje s mobilnim mrežama dok je omogućen način rada u zrakoplovu. Onemogućite način rada u zrakoplovu i pokušajte ponovno.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Umetnite SIM karticu za korištenje mobilne žarišne točke i mogućnosti dijeljenja internetske veze</string>
     <string name="hotspot_operator_dialog_nosim_title">Nema SIM kartice</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Niste pretplaćeni na dijeljenje Wi-Fi veze</string>
+    <string name="hotspot_operator_dialog_othererror_title">Pogreška dijeljenja Wi-Fi veze</string>
     <string name="ime_security_warning">Ovaj način unosa možda može prikupljati sav tekst koji unosite, uključujući osobne podatke poput zaporki i brojeva kreditnih kartica. To omogućuje aplikacija %1$s. Upotrijebiti taj način unosa?</string>
     <string name="immediately_destroy_activities">Uklanjanje aktivnosti</string>
     <string name="immediately_destroy_activities_summary">Aktivnost se prekida čim je korisnik napusti.</string>
@@ -1104,6 +1104,15 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="op_earphone_device">DODIRNITE ZA UPARIVANJE</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Prevucite nadolje za žurne službe</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Važno</string>
+    <string name="op_notification_channel_summary_low">Manje važne obavijesti bez zvuka ili vibracija.</string>
+    <string name="op_notification_section_header_gentle">Druge obavijesti</string>
+    <string name="op_notification_silence_title">Drugo</string>
     <string name="op_quick_settings_night_display_label">Noćni način rada</string>
     <string name="op_quick_settings_night_display_summary_off">Noćni način rada isključen, dodirnite kako biste ga uključili</string>
     <string name="op_quick_settings_night_display_summary_on">Noćni način rada uključen, dodirnite kako biste ga isključili</string>
@@ -1132,7 +1141,7 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="overheat_dialog_purple_message">Telefon se mora isključiti nakon 5 sekundi</string>
     <string name="overheat_dialog_red_message">Obrisat će sve procese aplikacija kako bi se smanjila temperatura</string>
     <string name="overheat_dialog_title">Temperatura telefona je previsoka</string>
-    <string name="overheat_notification_alert">Temperatura telefona je previsoka, zbog čega se isključuju funkcije s velikom potrošnjom energije kako bi se snizila temperatura</string>
+    <string name="overheat_notification_alert">Temperatura telefona je previsoka, zbog čega se isključuje funkcija s velikom potrošnjom energije kako bi se snizila temperatura</string>
     <string name="overheat_notification_resume">Temperatura telefona je snižena i telefon se može normalno upotrebljavati</string>
     <string name="overheat_notification_title_resume">Temperatura telefona je snižena</string>
     <string name="overheat_toast_content">Previsoka je temperatura telefona te se ne preporučuje upotreba te značajke</string>
@@ -1216,11 +1225,6 @@ Povezani ste i s VPN-om koji može nadzirati vašu mrežnu aktivnost."</string>
     <string name="prevent_view_top_tag_cancel2">Pratite krugove na zaslonu i dodirnite ih kako biste prisilno prekinuli džepni način rada.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">fotoaparat</string>
     <string name="privacy_type_location">lokaciju</string>
     <string name="privacy_type_microphone">mikrofon</string>

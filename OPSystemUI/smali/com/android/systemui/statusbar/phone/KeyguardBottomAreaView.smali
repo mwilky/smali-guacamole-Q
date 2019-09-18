@@ -50,6 +50,10 @@
 
 .field private final mDevicePolicyReceiver:Landroid/content/BroadcastReceiver;
 
+.field protected mDisplay:Landroid/view/Display;
+
+.field private final mDisplayMetrics:Landroid/util/DisplayMetrics;
+
 .field private mDozing:Z
 
 .field private mEmergencyCarrierArea:Lcom/android/keyguard/EmergencyCarrierArea;
@@ -65,6 +69,8 @@
 .field private mIndicationBottomMargin:I
 
 .field private mIndicationText:Landroid/widget/TextView;
+
+.field private mIs2KDisplay:Z
 
 .field private mLeftAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
@@ -110,6 +116,8 @@
 
 .field private mPrewarmMessenger:Landroid/os/Messenger;
 
+.field private mRealDisplaySize:Landroid/graphics/Point;
+
 .field private mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
 .field private mRightButton:Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;
@@ -133,6 +141,8 @@
 .field private final mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
 .field private mUserSetupComplete:Z
+
+.field protected mWindowManager:Landroid/view/WindowManager;
 
 
 # direct methods
@@ -229,13 +239,31 @@
 
     iput-object p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mHandler:Landroid/os/Handler;
 
-    new-instance p1, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView$2;
+    const-class p1, Landroid/util/DisplayMetrics;
 
-    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView$2;-><init>(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)V
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mAccessibilityDelegate:Landroid/view/View$AccessibilityDelegate;
+    move-result-object p1
+
+    check-cast p1, Landroid/util/DisplayMetrics;
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+    new-instance p1, Landroid/graphics/Point;
+
+    invoke-direct {p1}, Landroid/graphics/Point;-><init>()V
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRealDisplaySize:Landroid/graphics/Point;
 
     const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIs2KDisplay:Z
+
+    new-instance p2, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView$2;
+
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView$2;-><init>(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)V
+
+    iput-object p2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mAccessibilityDelegate:Landroid/view/View$AccessibilityDelegate;
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLockIconMarginBottom:I
 
@@ -258,6 +286,26 @@
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mNeedShowOTAWizard:Z
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->initHandler()V
+
+    iget-object p1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    const-string p2, "window"
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/WindowManager;
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mWindowManager:Landroid/view/WindowManager;
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mWindowManager:Landroid/view/WindowManager;
+
+    invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplay:Landroid/view/Display;
 
     return-void
 .end method
@@ -338,7 +386,15 @@
     return-object p0
 .end method
 
-.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Z
+.method static synthetic access$1800(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Z
     .locals 0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->isPhoneVisible()Z
@@ -346,14 +402,6 @@
     move-result p0
 
     return p0
-.end method
-
-.method static synthetic access$1900(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    return-object p0
 .end method
 
 .method static synthetic access$2000(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
@@ -364,7 +412,23 @@
     return-object p0
 .end method
 
-.method static synthetic access$2100()Landroid/content/Intent;
+.method static synthetic access$2100(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2200(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2300()Landroid/content/Intent;
     .locals 1
 
     sget-object v0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->PHONE_INTENT:Landroid/content/Intent;
@@ -372,26 +436,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$2200(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/phone/StatusBar;
+.method static synthetic access$2400(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/phone/StatusBar;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2300(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method static synthetic access$2400(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     return-object p0
 .end method
@@ -404,20 +452,36 @@
     return-object p0
 .end method
 
-.method static synthetic access$2600(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/internal/widget/LockPatternUtils;
+.method static synthetic access$2600(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2700(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2800(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Landroid/content/Context;
+    .locals 0
+
+    iget-object p0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2900(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/internal/widget/LockPatternUtils;
     .locals 0
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object p0
-.end method
-
-.method static synthetic access$2700()Landroid/content/Intent;
-    .locals 1
-
-    sget-object v0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->SECURE_CAMERA_INTENT:Landroid/content/Intent;
-
-    return-object v0
 .end method
 
 .method static synthetic access$300(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/KeyguardAffordanceView;
@@ -426,6 +490,14 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
     return-object p0
+.end method
+
+.method static synthetic access$3000()Landroid/content/Intent;
+    .locals 1
+
+    sget-object v0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->SECURE_CAMERA_INTENT:Landroid/content/Intent;
+
+    return-object v0
 .end method
 
 .method static synthetic access$400(Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;)Lcom/android/systemui/statusbar/KeyguardAffordanceView;
@@ -1123,7 +1195,7 @@
 .end method
 
 .method private updateLeftAffordanceIcon()V
-    .locals 4
+    .locals 7
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLeftButton:Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;
 
@@ -1135,13 +1207,15 @@
 
     iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDozing:Z
 
+    const/4 v3, 0x0
+
     if-nez v2, :cond_0
 
     iget-boolean v2, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->isVisible:Z
 
     if-eqz v2, :cond_0
 
-    const/4 v2, 0x0
+    move v2, v3
 
     goto :goto_0
 
@@ -1176,17 +1250,131 @@
 
     iget-object v2, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->drawable:Landroid/graphics/drawable/Drawable;
 
-    iget-boolean v3, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->tint:Z
+    iget-boolean v4, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->tint:Z
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setImageDrawable(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-virtual {v1, v2, v4}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setImageDrawable(Landroid/graphics/drawable/Drawable;Z)V
 
     :cond_2
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLeftAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
+
+    iget-object v2, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->contentDescription:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_affordance_view_padding:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLeftAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
+
+    invoke-virtual {v2, v1, v3, v3, v1}, Landroid/widget/ImageView;->setPaddingRelative(IIII)V
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v4, Lcom/android/systemui/R$dimen;->keyguard_affordance_height:I
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    sget v5, Lcom/android/systemui/R$dimen;->keyguard_affordance_width:I
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    iget-object v0, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->drawable:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_3
+    move v0, v3
+
+    :goto_1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutDirection()I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-ne v5, v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v6, v3
+
+    :goto_2
+    if-eqz v6, :cond_7
+
+    sub-int/2addr v4, v1
+
+    div-int/lit8 v0, v0, 0x2
+
+    sub-int/2addr v4, v0
+
+    if-lez v4, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v4, v3
+
+    :goto_3
+    sub-int/2addr v2, v1
+
+    sub-int v0, v2, v0
+
+    if-lez v0, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    move v0, v3
+
+    goto :goto_4
+
+    :cond_7
+    div-int/lit8 v0, v0, 0x2
+
+    add-int v4, v1, v0
+
+    sub-int/2addr v2, v1
+
+    sub-int v0, v2, v0
+
+    if-lez v0, :cond_6
+
+    :goto_4
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mLeftAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
-    iget-object v0, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->contentDescription:Ljava/lang/CharSequence;
+    invoke-virtual {p0, v4, v0}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setCenter(II)V
 
-    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
-
+    :cond_8
     return-void
 .end method
 
@@ -1267,7 +1455,7 @@
 .end method
 
 .method private updateRightAffordanceIcon()V
-    .locals 4
+    .locals 7
 
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightButton:Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton;
 
@@ -1279,13 +1467,15 @@
 
     iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDozing:Z
 
+    const/4 v3, 0x0
+
     if-nez v2, :cond_0
 
     iget-boolean v2, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->isVisible:Z
 
     if-eqz v2, :cond_0
 
-    const/4 v2, 0x0
+    move v2, v3
 
     goto :goto_0
 
@@ -1320,17 +1510,131 @@
 
     iget-object v2, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->drawable:Landroid/graphics/drawable/Drawable;
 
-    iget-boolean v3, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->tint:Z
+    iget-boolean v4, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->tint:Z
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setImageDrawable(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-virtual {v1, v2, v4}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setImageDrawable(Landroid/graphics/drawable/Drawable;Z)V
 
     :cond_2
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
+
+    iget-object v2, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->contentDescription:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_affordance_view_padding:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
+
+    invoke-virtual {v2, v3, v3, v1, v1}, Landroid/widget/ImageView;->setPaddingRelative(IIII)V
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v4, Lcom/android/systemui/R$dimen;->keyguard_affordance_height:I
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    sget v5, Lcom/android/systemui/R$dimen;->keyguard_affordance_width:I
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    iget-object v0, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->drawable:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_3
+    move v0, v3
+
+    :goto_1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getLayoutDirection()I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-ne v5, v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v6, v3
+
+    :goto_2
+    if-eqz v6, :cond_6
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int v4, v1, v0
+
+    sub-int/2addr v2, v1
+
+    sub-int v0, v2, v0
+
+    if-lez v0, :cond_5
+
+    goto :goto_4
+
+    :cond_5
+    move v0, v3
+
+    goto :goto_4
+
+    :cond_6
+    sub-int/2addr v4, v1
+
+    div-int/lit8 v0, v0, 0x2
+
+    sub-int/2addr v4, v0
+
+    if-lez v4, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    move v4, v3
+
+    :goto_3
+    sub-int/2addr v2, v1
+
+    sub-int v0, v2, v0
+
+    if-lez v0, :cond_5
+
+    :goto_4
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
-    iget-object v0, v0, Lcom/android/systemui/plugins/IntentButtonProvider$IntentButton$IconState;->contentDescription:Ljava/lang/CharSequence;
+    invoke-virtual {p0, v4, v0}, Lcom/android/systemui/statusbar/KeyguardAffordanceView;->setCenter(II)V
 
-    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
-
+    :cond_8
     return-void
 .end method
 
@@ -1930,115 +2234,8 @@
 
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->updateIndicationArea()V
 
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
-
-    invoke-static {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object p1
-
-    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isUnlockWithFingerprintPossible(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lcom/android/systemui/R$dimen;->op_keyguard_indication_margin_bottom:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lcom/android/systemui/R$dimen;->keyguard_affordance_height:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/systemui/R$dimen;->margin_top1:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    add-int/2addr p1, v0
-
-    :goto_0
-    iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lcom/android/systemui/R$dimen;->keyguard_indication_margin_bottom:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
-
-    :goto_1
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    sget v0, Lcom/android/systemui/R$dimen;->default_burn_in_prevention_offset:I
-
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mBurnInYOffset:I
-
-    iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    iget v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
-
-    if-eq v0, v1, :cond_2
-
-    iput v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_2
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mEnterpriseDisclosure:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
@@ -2053,9 +2250,9 @@
 
     int-to-float v0, v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p1, v1, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationText:Landroid/widget/TextView;
 
@@ -2063,13 +2260,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    sget v2, Lcom/android/systemui/R$dimen;->oneplus_widget_label_font_size:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    invoke-virtual {p1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
+    invoke-virtual {p1, v1, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRightAffordanceView:Lcom/android/systemui/statusbar/KeyguardAffordanceView;
 
@@ -2297,17 +2496,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationText:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lcom/android/systemui/R$dimen;->keyguard_indication_margin_bottom:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->updateIndicationArea()V
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
@@ -2716,6 +2905,187 @@
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mPrewarmBound:Z
 
     :cond_1
+    return-void
+.end method
+
+.method public updateIndicationArea()V
+    .locals 5
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isCustomFingerprint()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isUnlockWithFingerprintPossible(I)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplay:Landroid/view/Display;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+    invoke-virtual {v1, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplay:Landroid/view/Display;
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRealDisplaySize:Landroid/graphics/Point;
+
+    invoke-virtual {v1, v2}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mRealDisplaySize:Landroid/graphics/Point;
+
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mDisplayMetrics:Landroid/util/DisplayMetrics;
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    const/16 v3, 0x5a0
+
+    if-ne v2, v3, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    iget-object v3, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    if-eqz v2, :cond_1
+
+    sget v4, Lcom/android/systemui/R$dimen;->op_biometric_icon_normal_location_y_2k:I
+
+    goto :goto_1
+
+    :cond_1
+    sget v4, Lcom/android/systemui/R$dimen;->op_biometric_icon_normal_location_y_1080p:I
+
+    :goto_1
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    iget-object v4, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    if-eqz v2, :cond_2
+
+    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_indication_padding_bottom_2k:I
+
+    goto :goto_2
+
+    :cond_2
+    sget v2, Lcom/android/systemui/R$dimen;->op_keyguard_indication_padding_bottom_1080p:I
+
+    :goto_2
+    invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    sub-int/2addr v1, v3
+
+    add-int/2addr v1, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->keyguard_affordance_height:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lcom/android/systemui/R$dimen;->margin_top1:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    :goto_3
+    iput v1, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
+
+    goto :goto_4
+
+    :cond_4
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->keyguard_indication_margin_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
+
+    :goto_4
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lcom/android/systemui/R$dimen;->default_burn_in_prevention_offset:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mBurnInYOffset:I
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    iget v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationBottomMargin:I
+
+    if-eq v1, v2, :cond_5
+
+    iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/KeyguardBottomAreaView;->mIndicationArea:Landroid/view/ViewGroup;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_5
     return-void
 .end method
 

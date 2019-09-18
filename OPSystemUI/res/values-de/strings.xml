@@ -99,7 +99,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet nicht verbunden</string>
     <string name="accessibility_face_dialog_face_icon">Gesichtssymbol</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Fingerabdruck-Symbol</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Hilfe-Mitteilungsfeld</string>
     <string name="accessibility_gps_acquiring">GPS-Signal abrufen</string>
     <string name="accessibility_gps_enabled">GPS aktiviert</string>
     <string name="accessibility_hide">Verbergen</string>
@@ -655,8 +655,8 @@ Sobald dein Smartphone abgekühlt ist, funktioniert es wieder normal."</string>
     <string name="hotspot_apm_message">Im Flugzeugmodus kann keine mobile Netzwerkverbindung hergestellt werden. Deaktivieren Sie zuerst den Flugzeugmodus.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Eine SIM-Karte einlegen, um Mobile Hotspot und andere Tethering-Optionen zu verwenden</string>
     <string name="hotspot_operator_dialog_nosim_title">Keine SIM-Karte</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Sie haben Wi-Fi Tethering nicht abonniert</string>
+    <string name="hotspot_operator_dialog_othererror_title">Wi-Fi Tethering fehlerhaft</string>
     <string name="ime_security_warning">Diese Eingabemethode kann den gesamten von dir eingegebenen Text erfassen, einschließlich personenbezogener Daten wie Passwörter und Kreditkartennummern. Sie ist Teil der App \"%1$s\". Möchtest du diese Eingabemethode verwenden?</string>
     <string name="immediately_destroy_activities">Aktivitäten nicht speichern</string>
     <string name="immediately_destroy_activities_summary">Aktivität löschen, sobald der Nutzer diese beendet</string>
@@ -1088,7 +1088,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="oneplus_threekey_navigation_disturb_changed">"'Bitte nicht stören' wurde verändert!"</string>
     <string name="oneplus_threekey_navigation_next">WEITER</string>
     <string name="oneplus_threekey_navigation_silence">Totale Stille</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Der Alarm-Schieberegler wurde verändert!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Der Alert Slider wurde verändert!</string>
     <string name="oneplus_threekey_navigation_sound">Alle Töne zugelassen</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Es kann durch die Schnelleinstellung oben eingeschaltet werden</string>
     <string name="oneplus_threekey_navigation_vibration">Nur Vibration</string>
@@ -1102,7 +1102,16 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="op_earphone_device">ZUM KOPPELN TIPPEN</string>
     <string name="op_earphone_title">OnePlus Bullets drahtlos</string>
     <string name="op_emergency_indicator_hint_text">Für Notfalldienste nach unten streichen</string>
-    <string name="op_quick_settings_night_display_label">Nacht-Modus</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Wichtig</string>
+    <string name="op_notification_channel_summary_low">Weniger wichtige Benachrichtigungen ohne Ton oder Vibration.</string>
+    <string name="op_notification_section_header_gentle">Sonstige Benachrichtigungen</string>
+    <string name="op_notification_silence_title">Andere</string>
+    <string name="op_quick_settings_night_display_label">Nachtmodus</string>
     <string name="op_quick_settings_night_display_summary_off">Nacht-Modus deaktiviert, zum Aktivieren tippen</string>
     <string name="op_quick_settings_night_display_summary_on">Nacht-Modus aktiviert, zum Deaktivieren tippen</string>
     <string name="open_saver_setting_action">Einstellungen</string>
@@ -1114,7 +1123,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="osu_sign_up_failed">Anmeldung konnte nicht abgeschlossen werden. Tippe, um es noch einmal zu versuchen.</string>
     <string name="other">Sonstiges</string>
     <string name="output_calls_title">Telefonanrufausgabe</string>
-    <string name="output_chooser_empty_hint">Kein Gerät angeschlossen</string>
+    <string name="output_chooser_empty_hint">Kein angeschlossenes Gerät</string>
     <string name="output_none_found">Keine Geräte gefunden</string>
     <string name="output_none_found_service_off">Keine Geräte gefunden. Aktiviere %1$s</string>
     <string name="output_service_bt">Bluetooth</string>
@@ -1128,7 +1137,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
 3. Die Taschenlampe ausschalten"</string>
     <string name="overheat_dialog_purple_button">Jetzt ausschalten</string>
     <string name="overheat_dialog_purple_message">Das Telefon wird nach 5 Sekunden ausgeschaltet</string>
-    <string name="overheat_dialog_red_message">Zum Senken der Temperatur alle Anwendungsprozesse löschen</string>
+    <string name="overheat_dialog_red_message">Zum Senken der Temperatur werden alle Anwendungsprozesse gelöscht</string>
     <string name="overheat_dialog_title">Die Temperatur Ihres Telefons ist zu hoch</string>
     <string name="overheat_notification_alert">Die Temperatur Ihres Telefons ist zu hoch und zum Senken der Temperatur werden Funktionen mit hohem Stromverbrauch deaktiviert</string>
     <string name="overheat_notification_resume">Die Temperatur des Telefons wurde wiederhergestellt und das Telefon kann normal verwendet werden</string>
@@ -1214,11 +1223,6 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="prevent_view_top_tag_cancel2">Folgen Sie den Kreisen auf dem Bildschirm und tippen Sie darauf, um Schließen des Pocket-Modus zu erzwingen.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">Kamera</string>
     <string name="privacy_type_location">Standort</string>
     <string name="privacy_type_microphone">Mikrofon</string>
@@ -1327,7 +1331,7 @@ Außerdem bist du mit einem VPN verbunden, das deine Netzwerkaktivitäten erfass
     <string name="quick_settings_nfc_off">NFC ist deaktiviert</string>
     <string name="quick_settings_nfc_on">NFC ist aktiviert</string>
     <string name="quick_settings_night_display_label">Nachtlicht</string>
-    <string name="quick_settings_night_mode_label">Nacht-Modus</string>
+    <string name="quick_settings_night_mode_label">Nachtmodus</string>
     <string name="quick_settings_night_secondary_label_on_at">An um %s</string>
     <string name="quick_settings_night_secondary_label_on_at_sunset">An bei Sonnenuntergang</string>
     <string name="quick_settings_night_secondary_label_until_sunrise">Bis Sonnenaufgang</string>
@@ -1377,7 +1381,7 @@ Energiesparmodus"</string>
     <string name="recents_deep_clean_option">Tiefenbereinigung</string>
     <string name="recents_empty_no_apps_open">Keine Anwendung geöffnet</string>
     <string name="recents_empty_recently_closed">Zuletzt geschlossene Apps</string>
-    <string name="recents_normal_clean_description">Aufgabenliste und Cache bereinigen, ohne Hintergrundprozesse zu bereinigen.</string>
+    <string name="recents_normal_clean_description">Aufgabenliste und Cache löschen, ohne Hintergrundprozesse zu löschen.</string>
     <string name="recents_normal_clean_option">Normal bereinigen</string>
     <string name="recents_option_note">Das können Sie in den Einstellungen -> Erweitert ändern.</string>
     <string name="recents_option_title">Welche Methode bevorzugen Sie</string>

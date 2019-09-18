@@ -56,10 +56,10 @@
 
 .field public static final oneplus_theme_dialog_light:I = 0x7f1204d5
 
-.field public static final qs_theme:I = 0x7f1204dc
+.field public static final qs_theme:I = 0x7f1204dd
 
-.field public static final single_notification_header:I = 0x7f1204de
+.field public static final single_notification_header:I = 0x7f1204df
 
-.field public static final single_notification_smallText:I = 0x7f1204df
+.field public static final single_notification_smallText:I = 0x7f1204e0
 
-.field public static final single_notification_title:I = 0x7f1204e0
+.field public static final single_notification_title:I = 0x7f1204e1

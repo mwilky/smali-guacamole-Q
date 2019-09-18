@@ -101,7 +101,7 @@
 
     move-result-object p2
 
-    const v0, 0x11100f7
+    const v0, 0x11100f8
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -115,7 +115,7 @@
 
     move-result-object p2
 
-    const v0, 0x111007e
+    const v0, 0x111007f
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -206,8 +206,25 @@
 .end method
 
 .method private isInCall()Z
-    .locals 0
+    .locals 1
 
+    invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->getTelecommManager()Landroid/telecom/TelecomManager;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string p0, "EmergencyButton"
+
+    const-string v0, " isInCall: getTelecommManager is null"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
     invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->getTelecommManager()Landroid/telecom/TelecomManager;
 
     move-result-object p0
@@ -222,6 +239,21 @@
 .method private resumeCall()V
     .locals 1
 
+    invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->getTelecommManager()Landroid/telecom/TelecomManager;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string p0, "EmergencyButton"
+
+    const-string v0, " resumeCall: getTelecommManager is null"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
     invoke-direct {p0}, Lcom/android/keyguard/EmergencyButton;->getTelecommManager()Landroid/telecom/TelecomManager;
 
     move-result-object p0

@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet desconectada.</string>
     <string name="accessibility_face_dialog_face_icon">Ícone facial</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Ícone de impressão digital</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Área da mensagem de ajuda</string>
     <string name="accessibility_gps_acquiring">Aquisição de GPS.</string>
     <string name="accessibility_gps_enabled">GPS ativado.</string>
     <string name="accessibility_hide">Ocultar</string>
@@ -657,8 +657,8 @@ Quando o smartphone estiver resfriado, ele voltará ao normal."</string>
     <string name="hotspot_apm_message">Não é possível ligar a redes móveis quando o modo Avião está ativo. Desative o modo Avião e tente de novo.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Insira um cartão SIM para utilizar o Ponto de acesso móvel e outras opções de partilha</string>
     <string name="hotspot_operator_dialog_nosim_title">Sem cartão SIM</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">Não tem subscrição ao serviço de partilha de rede Wi-Fi</string>
+    <string name="hotspot_operator_dialog_othererror_title">Erro de partilha de rede Wi-Fi</string>
     <string name="ime_security_warning">Este método de entrada pode coletar todo o texto que você digita, incluindo dados pessoais, como senhas e números de cartão de crédito. É um método do app %1$s. Usar este método de entrada?</string>
     <string name="immediately_destroy_activities">Não manter atividades</string>
     <string name="immediately_destroy_activities_summary">Destruir todas as atividades quando o usuário sair</string>
@@ -1104,6 +1104,15 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="op_earphone_device">TOCAR P/ EMP.</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Deslizar para baixo para obter serviços de emergência</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Importante</string>
+    <string name="op_notification_channel_summary_low">Notificações menos importantes sem qualquer som ou vibração.</string>
+    <string name="op_notification_section_header_gentle">Outras notificações</string>
+    <string name="op_notification_silence_title">Outros</string>
     <string name="op_quick_settings_night_display_label">Modo noturno</string>
     <string name="op_quick_settings_night_display_summary_off">Modo noturno desativado, toque para ativar</string>
     <string name="op_quick_settings_night_display_summary_on">Modo noturno ativado, toque para desativar</string>
@@ -1132,7 +1141,7 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="overheat_dialog_purple_message">O telefone será desligado após 5 segundos</string>
     <string name="overheat_dialog_red_message">Irá limpar todos os processos de aplicações para baixar a temperatura</string>
     <string name="overheat_dialog_title">A temperatura do telefone está demasiado elevada</string>
-    <string name="overheat_notification_alert">A temperatura do telefone está demasiado elevada e as funções que consomem bastante energia foram desligadas para baixar a temperatura</string>
+    <string name="overheat_notification_alert">A temperatura do telefone está demasiado elevada e a função que consome bastante energia foi desligada para baixar a temperatura</string>
     <string name="overheat_notification_resume">A temperatura do telefone foi reposta e o telefone pode ser utilizado normalmente</string>
     <string name="overheat_notification_title_resume">A temperatura do telefone foi reposta</string>
     <string name="overheat_toast_content">O telefone encontra-se num estado de elevada temperatura. Não é recomendada a utilização desta funcionalidade</string>
@@ -1216,11 +1225,6 @@ Você também está conectado a uma VPN, que pode monitorar sua atividade de red
     <string name="prevent_view_top_tag_cancel2">Siga os círculos no ecrã e toque neles para forçar a saída do modo de bolso.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">câmera</string>
     <string name="privacy_type_location">localização</string>
     <string name="privacy_type_microphone">microfone</string>
@@ -1673,7 +1677,7 @@ Qualquer usuário pode atualizar apps para os demais usuários."</string>
     <string name="volume_dialog_title">Controles de volume %s</string>
     <string name="volume_dnd_silent">Atalho de botões de volume</string>
     <string name="volume_footer_no_disturb">Não incomodar</string>
-    <string name="volume_footer_ring">Tocar</string>
+    <string name="volume_footer_ring">Toque</string>
     <string name="volume_footer_slient">Silêncio</string>
     <string name="volume_footer_vibrate">Silêncio (Vibrar)</string>
     <string name="volume_odi_captions_content_description">Sobreposição de legendas</string>

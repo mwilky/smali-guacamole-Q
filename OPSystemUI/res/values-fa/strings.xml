@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">اترنت قطع شد.</string>
     <string name="accessibility_face_dialog_face_icon">نماد چهره</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">نماد اثر انگشت</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">قسمت پیام راهنما</string>
     <string name="accessibility_gps_acquiring">‏دستیابی به GPS.</string>
     <string name="accessibility_gps_enabled">‏GPS فعال شد.</string>
     <string name="accessibility_hide">پنهان کردن</string>
@@ -657,8 +657,8 @@
     <string name="hotspot_apm_message">وقتی حالت هواپیما فعال است، اتصال به شبکه‌های تلفن همراه مقدور نیست. ابتدا حالت هواپیما را غیرفعال و سپس دوباره تلاش کنید.</string>
     <string name="hotspot_operator_dialog_nosim_msg">برای استفاده از نقطۀ دسترسی تلفن همراه و دیگر گزینه‌های به اشتراک گذاشتن اتصال اینترنت، یک سیم‌کارت وارد کنید</string>
     <string name="hotspot_operator_dialog_nosim_title">بدون سیم‌کارت</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">شما مشترک قابلیت اشتراک‌گذاری WiFi نیستید</string>
+    <string name="hotspot_operator_dialog_othererror_title">خطا در اشتراک‌گذاری WiFi</string>
     <string name="ime_security_warning">این روش ورودی ممکن است بتواند تمام متنی را که تایپ می‌کنید جمع‌آوری کند، از جمله اطلاعات شخصی مانند گذرواژه‌ها و شماره‌های کارت اعتباری. این روش توسط برنامه %1$s ارائه می‌شود. از این روش ورودی استفاده می‌کنید؟</string>
     <string name="immediately_destroy_activities">فعالیت‌ها نگه داشته نشوند</string>
     <string name="immediately_destroy_activities_summary">از بین بردن هر فعالیت به محض خروج کاربر از آن</string>
@@ -793,7 +793,7 @@
     <string name="keyguard_plugged_in">%s • درحال شارژ شدن</string>
     <string name="keyguard_plugged_in_charging_fast">%s • درحال شارژ سریع</string>
     <string name="keyguard_plugged_in_charging_slowly">%s • درحال شارژ آهسته</string>
-    <string name="keyguard_plugged_in_charging_warp">%s • شارژ Warp</string>
+    <string name="keyguard_plugged_in_charging_warp">%s • شارژ سریع</string>
     <string name="keyguard_plugged_in_wireless">%s • درحال شارژ بی‌سیم</string>
     <string name="keyguard_sim_error_message_short">کارت نامعتبر</string>
     <string name="keyguard_sim_locked_message">سیم‌کارت قفل شد.</string>
@@ -1090,7 +1090,7 @@
     <string name="oneplus_threekey_navigation_disturb_changed">«بدون مزاحمت» تغییر کرده است!</string>
     <string name="oneplus_threekey_navigation_next">بعدی</string>
     <string name="oneplus_threekey_navigation_silence">کل مدت سکوت</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">لغزندۀ هشدار تغییر کرده است!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert slider تغییر کرده است!</string>
     <string name="oneplus_threekey_navigation_sound">همۀ صداها مجاز باشند</string>
     <string name="oneplus_threekey_navigation_turned_on_here">با کلید بالا روشن می‌شود</string>
     <string name="oneplus_threekey_navigation_vibration">تنها لرزش</string>
@@ -1104,6 +1104,15 @@
     <string name="op_earphone_device">برای جفت‌سازی، ضربه بزنید</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">برای خدمات اضطراری، انگشتتان را به پایین بکشید</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">مهم</string>
+    <string name="op_notification_channel_summary_low">اعلان‌های کم‌اهمیت‌تر بدون صدا یا لرزش خواهد بود.</string>
+    <string name="op_notification_section_header_gentle">سایر اعلان‌ها</string>
+    <string name="op_notification_silence_title">دیگر</string>
     <string name="op_quick_settings_night_display_label">حالت شب</string>
     <string name="op_quick_settings_night_display_summary_off">حالت شب خاموش است؛ برای روشن کردن، ضربه بزنید</string>
     <string name="op_quick_settings_night_display_summary_on">حالت شب روشن است؛ برای خاموش کردن، ضربه بزنید</string>
@@ -1124,15 +1133,15 @@
     <string name="output_service_wifi">Wi-Fi</string>
     <string name="output_title">خروجی رسانه</string>
     <string name="overheat_dialog_orange_button">الآن اجرا شود</string>
-    <string name="overheat_dialog_orange_message">"عملیات زیر برای کاهش دما انجام خواهند شد
+    <string name="overheat_dialog_orange_message">"اقدامات زیر برای کاهش دما انجام خواهد شد
 1.کاهش روشنایی
 2.خاموش کردن نقطۀ اتصال
 3.خاموش کردن چراغ‌قوه"</string>
     <string name="overheat_dialog_purple_button">الآن خاموش شود</string>
     <string name="overheat_dialog_purple_message">تلفن پس از 5 ثانیه خاموش خواهد شد</string>
     <string name="overheat_dialog_red_message">برای کاهش دما، تمام فرآیندهای برنامه‌ها پاک خواهد شد</string>
-    <string name="overheat_dialog_title">دمای تلفن شما بیش از حد بالاست</string>
-    <string name="overheat_notification_alert">دمای تلفن شما بیش از حد بالاست و عملکردهایی که مصرف نیروی زیادی دارند خاموش می‌شوند تا دما کاهش یابد</string>
+    <string name="overheat_dialog_title">دمای تلفن بیش از حد بالاست</string>
+    <string name="overheat_notification_alert">دمای تلفن شما بیش از حد بالاست و عملکردی که مصرف نیروی زیادی دارد خاموش می‌شود تا دما کاهش یابد</string>
     <string name="overheat_notification_resume">دمای تلفن به حالت عادی برگشته و تلفن به صورت عادی قابل استفاده است</string>
     <string name="overheat_notification_title_resume">دمای تلفن به حالت عادی برگشته است</string>
     <string name="overheat_toast_content">دمای تلفن بالاست و توصیه می‌شود از این قابلیت استفاده نکنید</string>
@@ -1216,11 +1225,6 @@
     <string name="prevent_view_top_tag_cancel2">لطفاً دایره‌های روی صفحه نمایش را دنبال کنید و برای خروج اجباری از حالت جیب، روی آنها ضربه بزنید.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">دوربین</string>
     <string name="privacy_type_location">مکان</string>
     <string name="privacy_type_microphone">میکروفون</string>
@@ -1314,7 +1318,7 @@
     <string name="quick_settings_header_onboarding_text">برای گزینه‌های بیشتر، نمادها را لمس کنید و نگه‌دارید</string>
     <string name="quick_settings_hotspot_label">نقطه اتصال</string>
     <string name="quick_settings_hotspot_no_password">باز کردن شبکه</string>
-    <string name="quick_settings_hotspot_password">گذرواژه</string>
+    <string name="quick_settings_hotspot_password">رمز عبور</string>
     <string name="quick_settings_hotspot_secondary_label_data_saver_enabled">صرفه‌جویی داده روشن است</string>
     <string name="quick_settings_hotspot_secondary_label_transient">روشن کردن…</string>
     <string name="quick_settings_hotspot_secure_lock">برای نمایش رمز عبور، قفل دستگاه را باز کنید</string>
@@ -1379,7 +1383,7 @@
     <string name="recents_deep_clean_option">پاکسازی عمیق</string>
     <string name="recents_empty_no_apps_open">برنامه‌ای باز نیست</string>
     <string name="recents_empty_recently_closed">آخرین برنامه‌های بسته شده</string>
-    <string name="recents_normal_clean_description">بدون پاک کردن فرآیندهای پس‌زمینه، فهرست کارها و حافظه پنهان را پاک کنید.</string>
+    <string name="recents_normal_clean_description">بدون پاک کردن فرآیندهای پس‌زمینه، فهرست وظایف و حافظۀ پنهان پاک می‌شود.</string>
     <string name="recents_normal_clean_option">حذف عادی</string>
     <string name="recents_option_note">می‌توانید این مورد را در بخش «تنظیمات > پیشرفته» تغییر دهید.</string>
     <string name="recents_option_title">کدام روش را ترجیح می‌دهید</string>

@@ -101,7 +101,7 @@
     <string name="accessibility_ethernet_disconnected">Ethernet-verbinding verbroken.</string>
     <string name="accessibility_face_dialog_face_icon">Gezichtspictogram</string>
     <string name="accessibility_fingerprint_dialog_fingerprint_icon">Vingerafdrukpictogram</string>
-    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Helpberichtgebied</string>
     <string name="accessibility_gps_acquiring">Verbinding maken met gps.</string>
     <string name="accessibility_gps_enabled">gps ingeschakeld.</string>
     <string name="accessibility_hide">Verbergen</string>
@@ -200,8 +200,8 @@
     <string name="accessibility_quick_settings_open_details">Details openen.</string>
     <string name="accessibility_quick_settings_open_settings">%s-instellingen openen.</string>
     <string name="accessibility_quick_settings_page">Pagina %1$d van %2$d</string>
-    <string name="accessibility_quick_settings_power_saving_changed_off">Modus Batterij Sparen staat uit.</string>
-    <string name="accessibility_quick_settings_power_saving_changed_on">Modus Batterij Sparen staat aan.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_off">Batterijbesparingsmodus is uitgeschakeld.</string>
+    <string name="accessibility_quick_settings_power_saving_changed_on">Batterijbesparingsmodus is ingeschakeld.</string>
     <string name="accessibility_quick_settings_rotation">Scherm automatisch draaien</string>
     <string name="accessibility_quick_settings_rotation_value">Modus voor %s</string>
     <string name="accessibility_quick_settings_sensor_privacy_changed_off">Sensorprivacy uitgeschakeld.</string>
@@ -313,7 +313,7 @@
     <string name="battery_low_percent_format_hybrid_short">Nog %1$s, dat is ongeveer %2$s</string>
     <string name="battery_low_percent_format_saver_started">Nog %s. Batterijbesparing is ingeschakeld.</string>
     <string name="battery_low_title">Batterij is bijna leeg</string>
-    <string name="battery_low_warning">%s resterend, schakel Batterij Sparen in om het gebruik te verlengen</string>
+    <string name="battery_low_warning">%s resterend, schakel Batterijbesparing in om het gebruik te verlengen</string>
     <string name="battery_low_why">Instellingen</string>
     <string name="battery_panel_title">Batterijgebruik</string>
     <string name="battery_saver_confirmation_ok">Inschakelen</string>
@@ -323,8 +323,8 @@
     <string name="battery_saver_notification_text">Vermindert de prestaties en achtergrondgegevens</string>
     <string name="battery_saver_notification_title">Batterijbesparing aan</string>
     <string name="battery_saver_start_action">Batterijbesparing inschakelen</string>
-    <string name="battery_usage_extanded">Batterij Sparen kan het gebruik met ongeveer %s verlengen op basis van uw gebruik</string>
-    <string name="battery_usage_remaining">De batterij zou nog ongeveer %s moeten meegaan op basis van uw gebruik. Vermindert prestaties en gegevensgebruik op de achtergrond.</string>
+    <string name="battery_usage_extanded">Batterijbesparing kan het gebruik met ongeveer %s verlengen op basis van uw gebruik</string>
+    <string name="battery_usage_remaining">De batterij zou nog ongeveer %s moeten meegaan op basis van uw gebruik. Batterijbesparing vermindert prestaties en gegevensgebruik op de achtergrond.</string>
     <string name="biometric_dialog_confirm">Bevestigen</string>
     <string name="biometric_dialog_empty_space_description">Leeg gebied. Tik om de verificatie te annuleren.</string>
     <string name="biometric_dialog_face_icon_description_authenticated">Gezicht geverifieerd</string>
@@ -657,8 +657,8 @@ Zodra de telefoon is afgekoeld, werkt deze weer normaal."</string>
     <string name="hotspot_apm_message">Onmogelijk te verbinden met mobiele netwerken terwijl Vliegtuigmodus is ingeschakeld. Schakel Vliegtuigmodus uit en probeer opnieuw.</string>
     <string name="hotspot_operator_dialog_nosim_msg">Plaats een simkaart om Mobiele Hotspot en andere tethering-opties te gebruiken</string>
     <string name="hotspot_operator_dialog_nosim_title">Geen simkaart</string>
-    <string name="hotspot_operator_dialog_othererror_msg">You are not subscribed to Wifi tethering</string>
-    <string name="hotspot_operator_dialog_othererror_title">Wifi tethering error</string>
+    <string name="hotspot_operator_dialog_othererror_msg">U bent niet geabonneerd op Wifi-tethering</string>
+    <string name="hotspot_operator_dialog_othererror_title">Fout met Wifi-tethering</string>
     <string name="ime_security_warning">Deze invoermethode verzamelt mogelijk alle tekst die je typt, inclusief persoonsgegevens zoals wachtwoorden en creditcardnummers. De methode is afkomstig uit de app %1$s. Deze invoermethode inschakelen?</string>
     <string name="immediately_destroy_activities">Activiteiten niet opslaan</string>
     <string name="immediately_destroy_activities_summary">Activiteit wissen zodra de gebruiker deze verlaat</string>
@@ -1090,7 +1090,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="oneplus_threekey_navigation_disturb_changed">"'Niet storen' is gewijzigd!"</string>
     <string name="oneplus_threekey_navigation_next">VOLGENDE</string>
     <string name="oneplus_threekey_navigation_silence">Totale stilte</string>
-    <string name="oneplus_threekey_navigation_slider_has_changed">Schuifregelaar meldingen is gewijzigd!</string>
+    <string name="oneplus_threekey_navigation_slider_has_changed">Alert slider is gewijzigd!</string>
     <string name="oneplus_threekey_navigation_sound">Alle geluiden toegestaan</string>
     <string name="oneplus_threekey_navigation_turned_on_here">Het kan worden ingeschakeld met de schakelaar hierboven</string>
     <string name="oneplus_threekey_navigation_vibration">Alleen vibreren</string>
@@ -1104,6 +1104,15 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="op_earphone_device">TIK OM TE KOPPELEN</string>
     <string name="op_earphone_title">OnePlus Bullets Wireless</string>
     <string name="op_emergency_indicator_hint_text">Veeg omlaag voor hulpdiensten</string>
+    <string name="op_keyguard_indication_face_unlocked">Kept unlocked by Face Unlock</string>
+    <string name="op_keyguard_indication_trust_unlocked">Kept unlocked by Smart Lock</string>
+    <string name="op_kg_prompt_reason_timeout_password">For additional security, press power key and swipe up to use password</string>
+    <string name="op_kg_prompt_reason_timeout_pattern">For additional security, press power key and swipe up to use pattern</string>
+    <string name="op_kg_prompt_reason_timeout_pin">For additional security, press power key and swipe up to use PIN</string>
+    <string name="op_notification_alert_title">Belangrijk</string>
+    <string name="op_notification_channel_summary_low">Minder belangrijke meldingen zonder geluid of trillingen.</string>
+    <string name="op_notification_section_header_gentle">Overige meldingen</string>
+    <string name="op_notification_silence_title">Andere</string>
     <string name="op_quick_settings_night_display_label">Nachtmodus</string>
     <string name="op_quick_settings_night_display_summary_off">Nachtmodus uit, tap om in te schakelen</string>
     <string name="op_quick_settings_night_display_summary_on">Nachtmodus aan, tap om uit te schakelen</string>
@@ -1130,7 +1139,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
 3.De zaklamp wordt uitgeschakeld"</string>
     <string name="overheat_dialog_purple_button">Nu uitschakelen</string>
     <string name="overheat_dialog_purple_message">De telefoon wordt na 5 seconden uitgeschakeld</string>
-    <string name="overheat_dialog_red_message">Alle toepassingsprocessen worden uitgeschakeld om de temperatuur te verlagen</string>
+    <string name="overheat_dialog_red_message">Alle applicatieprocessen worden gewist om de temperatuur te verlagen</string>
     <string name="overheat_dialog_title">De temperatuur van uw telefoon is te hoog</string>
     <string name="overheat_notification_alert">De temperatuur van uw telefoon is te hoog en functies met een hoog energieverbruik zijn uitgeschakeld om de temperatuur te verlagen</string>
     <string name="overheat_notification_resume">De temperatuur van de telefoon is hersteld en de telefoon kan normaal worden gebruikt</string>
@@ -1216,11 +1225,6 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="prevent_view_top_tag_cancel2">Volg de cirkels op het scherm en tap erop om pocket mode geforceerd te stoppen.</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
-    <string name="privacy_alert_application_name">Privacy Alerts</string>
-    <string name="privacy_alert_content_text">Tap to change</string>
-    <string name="privacy_alert_content_text_location">This app can always access your location. Tap to change</string>
-    <string name="privacy_alert_content_title" formatted="false">%s is using your %s</string>
-    <string name="privacy_alert_content_title_location">%s has been using your location</string>
     <string name="privacy_type_camera">camera</string>
     <string name="privacy_type_location">locatie</string>
     <string name="privacy_type_microphone">microfoon</string>
@@ -1337,7 +1341,7 @@ Je bent ook verbonden met een VPN, waarmee je netwerkactiviteit kan worden gecon
     <string name="quick_settings_op_car_mode_dnd_label">Niet storen</string>
     <string name="quick_settings_op_car_mode_dnd_summary_off">Automodus niet storen uitgeschakeld, tik aan om in te schakelen</string>
     <string name="quick_settings_op_car_mode_dnd_summary_on">Automodus niet storen ingeschakeld, tik aan om uit te schakelen</string>
-    <string name="quick_settings_power_saving_label">Batterij Sparen</string>
+    <string name="quick_settings_power_saving_label">Batterijbesparing</string>
     <string name="quick_settings_read_mode_label">Leesmodus</string>
     <string name="quick_settings_read_mode_summary_off">Leesmodus uit, tap om in te schakelen</string>
     <string name="quick_settings_read_mode_summary_on">Leesmodus aan, tap om uit te schakelen</string>
