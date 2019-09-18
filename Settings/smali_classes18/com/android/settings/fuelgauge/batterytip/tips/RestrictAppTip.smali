@@ -129,7 +129,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f08030d
+    const v0, 0x7f080311
 
     goto :goto_0
 

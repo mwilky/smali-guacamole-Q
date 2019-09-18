@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080335
+    const v1, 0x7f080339
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton1Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -188,7 +188,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f080330
+    const v3, 0x7f080334
 
     invoke-virtual {v1, v3}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f080332
+    const v3, 0x7f080336
 
     invoke-virtual {v1, v3}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 

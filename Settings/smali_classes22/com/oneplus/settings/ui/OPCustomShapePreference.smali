@@ -180,52 +180,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0805e8
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mNotificationGroup:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSoundPanelGroup:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mPowerPanelGroup:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveWifi:Landroid/view/View;
-
-    const v1, 0x7f0802e7
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveFlashlight:Landroid/view/View;
-
-    const v2, 0x7f0802e6
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveNfc:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveAirplane:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
-
-    goto/16 :goto_0
-
-    :cond_0
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_1
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
-
-    const v1, 0x7f0805e9
+    const v1, 0x7f0805f1
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
@@ -261,16 +216,16 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_1
-    const/4 v0, 0x3
+    :cond_0
+    const/4 v0, 0x2
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v0, :cond_1
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0805ea
+    const v1, 0x7f0805f2
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
@@ -288,13 +243,58 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveWifi:Landroid/view/View;
 
-    const v1, 0x7f0802f4
+    const v1, 0x7f0802ef
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveFlashlight:Landroid/view/View;
 
-    const v2, 0x7f0802f3
+    const v2, 0x7f0802ee
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveNfc:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveAirplane:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x3
+
+    if-ne p1, v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
+
+    const v1, 0x7f0805f3
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mNotificationGroup:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSoundPanelGroup:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mPowerPanelGroup:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveWifi:Landroid/view/View;
+
+    const v1, 0x7f0802f8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveFlashlight:Landroid/view/View;
+
+    const v2, 0x7f0802f7
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -315,7 +315,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0805e7
+    const v1, 0x7f0805f0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
 
@@ -333,13 +333,13 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveWifi:Landroid/view/View;
 
-    const v1, 0x7f0802ee
+    const v1, 0x7f0802f2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveFlashlight:Landroid/view/View;
 
-    const v2, 0x7f0802ed
+    const v2, 0x7f0802f1
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -373,9 +373,9 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f080657
+    const v0, 0x7f080660
 
-    const v1, 0x7f080655
+    const v1, 0x7f08065e
 
     if-nez p1, :cond_0
 
@@ -401,9 +401,9 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f080658
+    const v0, 0x7f080661
 
-    const v1, 0x7f080656
+    const v1, 0x7f08065f
 
     if-nez p1, :cond_2
 
@@ -469,7 +469,7 @@
 
     invoke-super/range {p0 .. p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v2, 0x7f0a01b2
+    const v2, 0x7f0a01b3
 
     invoke-virtual {v1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -503,7 +503,7 @@
 
     invoke-virtual {v4, v5}, Lcom/oneplus/lib/widget/recyclerview/OPRecyclerView;->addOPItemDecoration(Lcom/oneplus/lib/widget/recyclerview/OPItemDecoration;)V
 
-    const v4, 0x7f0a04f6
+    const v4, 0x7f0a04f8
 
     invoke-virtual {v1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -511,7 +511,7 @@
 
     iput-object v4, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mIndicator1:Landroid/view/View;
 
-    const v4, 0x7f0a04f7
+    const v4, 0x7f0a04f9
 
     invoke-virtual {v1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -551,7 +551,7 @@
 
     invoke-interface {v7, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const v7, 0x7f0a054f
+    const v7, 0x7f0a0551
 
     invoke-virtual {v1, v7}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -609,7 +609,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveAirplane:Landroid/view/View;
 
-    const v8, 0x7f0a057c
+    const v8, 0x7f0a057e
 
     invoke-virtual {v6, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -619,7 +619,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
 
-    const v8, 0x7f0a0441
+    const v8, 0x7f0a0443
 
     invoke-virtual {v6, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -629,7 +629,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mNotificationGroup:Landroid/view/ViewGroup;
 
-    const v8, 0x7f0a063f
+    const v8, 0x7f0a0642
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -639,7 +639,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSoundPanelGroup:Landroid/view/ViewGroup;
 
-    const v8, 0x7f0a053f
+    const v8, 0x7f0a0541
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -655,7 +655,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f120f7c
+    const v10, 0x7f120f80
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -663,7 +663,7 @@
 
     const/4 v10, 0x1
 
-    const v11, 0x7f0802e8
+    const v11, 0x7f0802ec
 
     invoke-direct {v8, v0, v9, v11, v10}, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomShapePreference;Ljava/lang/String;II)V
 
@@ -673,7 +673,7 @@
 
     move-result-object v11
 
-    const v12, 0x7f120f7e
+    const v12, 0x7f120f82
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -681,7 +681,7 @@
 
     const/4 v12, 0x2
 
-    const v13, 0x7f0802ec
+    const v13, 0x7f0802f0
 
     invoke-direct {v9, v0, v11, v13, v12}, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomShapePreference;Ljava/lang/String;II)V
 
@@ -691,7 +691,7 @@
 
     move-result-object v13
 
-    const v14, 0x7f120f7f
+    const v14, 0x7f120f83
 
     invoke-virtual {v13, v14}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -699,7 +699,7 @@
 
     const/4 v14, 0x3
 
-    const v15, 0x7f0802f5
+    const v15, 0x7f0802f9
 
     invoke-direct {v11, v0, v13, v15, v14}, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomShapePreference;Ljava/lang/String;II)V
 
@@ -709,7 +709,7 @@
 
     move-result-object v15
 
-    const v14, 0x7f120f7d
+    const v14, 0x7f120f81
 
     invoke-virtual {v15, v14}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -717,7 +717,7 @@
 
     const/4 v15, 0x4
 
-    const v12, 0x7f0802ef
+    const v12, 0x7f0802f3
 
     invoke-direct {v13, v0, v14, v12, v15}, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;-><init>(Lcom/oneplus/settings/ui/OPCustomShapePreference;Ljava/lang/String;II)V
 

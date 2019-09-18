@@ -83,7 +83,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0a0497
+    const v0, 0x7f0a0499
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -93,7 +93,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f120d2b
+    const v1, 0x7f120d2c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

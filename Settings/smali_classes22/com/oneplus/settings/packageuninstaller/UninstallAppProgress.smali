@@ -236,7 +236,7 @@
 
     const-string v8, "user"
 
-    const v9, 0x7f1215bb
+    const v9, 0x7f1215c2
 
     const-string v10, " with code "
 
@@ -279,7 +279,7 @@
     goto/16 :goto_a
 
     :cond_7
-    const v0, 0x7f1215b9
+    const v0, 0x7f1215c0
 
     invoke-virtual {v1, v0}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -420,7 +420,7 @@
 
     invoke-interface {v0, v4}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress$ProgressFragment;->setDeviceManagerButtonVisible(Z)V
 
-    const v0, 0x7f1215bd
+    const v0, 0x7f1215c4
 
     invoke-virtual {v1, v0}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -455,7 +455,7 @@
 
     invoke-interface {v0, v5}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress$ProgressFragment;->setDeviceManagerButtonVisible(Z)V
 
-    const v0, 0x7f1215be
+    const v0, 0x7f1215c5
 
     invoke-virtual {v1, v0}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -549,7 +549,7 @@
     :goto_6
     add-int/lit8 v15, v15, 0x1
 
-    const v9, 0x7f1215bb
+    const v9, 0x7f1215c2
 
     goto :goto_5
 
@@ -589,7 +589,7 @@
     :goto_8
     if-nez v14, :cond_11
 
-    const v4, 0x7f1215b6
+    const v4, 0x7f1215bd
 
     invoke-virtual {v1, v4}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -628,7 +628,7 @@
 
     invoke-static {v12, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v4, 0x7f1215bb
+    const v4, 0x7f1215c2
 
     invoke-virtual {v1, v4}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -643,7 +643,7 @@
 
     if-eqz v4, :cond_13
 
-    const v4, 0x7f1215b0
+    const v4, 0x7f1215b7
 
     invoke-virtual {v1, v4}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -652,7 +652,7 @@
     goto :goto_9
 
     :cond_13
-    const v4, 0x7f1215b7
+    const v4, 0x7f1215be
 
     invoke-virtual {v1, v4}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->getString(I)Ljava/lang/String;
 
@@ -802,12 +802,12 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    const v2, 0x7f1215c4
+    const v2, 0x7f1215cb
 
     goto :goto_2
 
     :cond_3
-    const v2, 0x7f1215b5    # 1.9418E38f
+    const v2, 0x7f1215bc
 
     :goto_2
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/packageuninstaller/UninstallAppProgress;->setTitle(I)V

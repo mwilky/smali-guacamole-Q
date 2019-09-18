@@ -366,7 +366,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/CloudConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f080331
+    const v2, 0x7f080335
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -416,6 +416,12 @@
 
     if-eqz v0, :cond_1
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CloudConditionController;->mAppContext:Landroid/content/Context;
 
     invoke-direct {p0, v0}, Lcom/android/settings/homepage/contextualcards/conditional/CloudConditionController;->getCloudTipsNeed(Landroid/content/Context;)Z
@@ -454,6 +460,12 @@
     move-result v0
 
     if-eqz v0, :cond_3
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/CloudConditionController;->mAppContext:Landroid/content/Context;
 

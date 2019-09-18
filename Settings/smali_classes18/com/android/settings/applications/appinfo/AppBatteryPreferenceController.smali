@@ -111,6 +111,8 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
+    if-eqz p1, :cond_1
+
     invoke-virtual {p1}, Lcom/android/internal/os/BatteryStatsHelper;->getUsageList()Ljava/util/List;
 
     move-result-object v0
@@ -144,9 +146,9 @@
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    return-object v1
+    return-object v0
 .end method
 
 .method public getAvailabilityStatus()I

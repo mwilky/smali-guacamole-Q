@@ -68,17 +68,17 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->viewBorder:Landroid/view/View;
+    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
-    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->viewBorder:Landroid/view/View;
+    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;
 
@@ -122,11 +122,11 @@
 
     check-cast v0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;
 
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->imageView:Landroid/widget/ImageView;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
     iget v2, v0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;->animResId:I
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setImageResource(I)V
 
     iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->textView:Landroid/widget/TextView;
 
@@ -138,11 +138,11 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->viewBorder:Landroid/view/View;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;
 
@@ -151,11 +151,11 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->viewBorder:Landroid/view/View;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x4
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     :goto_0
     iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$VH;->itemView:Landroid/view/View;

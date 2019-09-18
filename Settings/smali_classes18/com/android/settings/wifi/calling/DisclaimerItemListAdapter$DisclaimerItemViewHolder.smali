@@ -15,12 +15,12 @@
 
 
 # static fields
-.field static final ID_DISCLAIMER_ITEM_DESCRIPTION:I = 0x7f0a0200
+.field static final ID_DISCLAIMER_ITEM_DESCRIPTION:I = 0x7f0a0201
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 .end field
 
-.field static final ID_DISCLAIMER_ITEM_TITLE:I = 0x7f0a0202
+.field static final ID_DISCLAIMER_ITEM_TITLE:I = 0x7f0a0203
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 .end field
@@ -38,7 +38,7 @@
 
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a0202
+    const v0, 0x7f0a0203
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -48,7 +48,7 @@
 
     iput-object v0, p0, Lcom/android/settings/wifi/calling/DisclaimerItemListAdapter$DisclaimerItemViewHolder;->titleView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0200
+    const v0, 0x7f0a0201
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

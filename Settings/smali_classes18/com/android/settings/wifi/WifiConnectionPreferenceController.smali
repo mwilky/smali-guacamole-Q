@@ -212,7 +212,7 @@
 
     iget-object v4, p0, Lcom/android/settings/wifi/WifiConnectionPreferenceController;->mBadgeCache:Lcom/android/settingslib/wifi/AccessPointPreference$UserBadgeCache;
 
-    const v5, 0x7f080393
+    const v5, 0x7f080397
 
     const/4 v6, 0x0
 
@@ -343,7 +343,7 @@
 
     invoke-direct {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f12110d
+    const v2, 0x7f121114
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 

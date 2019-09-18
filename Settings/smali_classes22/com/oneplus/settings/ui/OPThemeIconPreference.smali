@@ -168,32 +168,32 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f080529
+    const v1, 0x7f080530
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f08052c
+    const v1, 0x7f080533
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f08052d
+    const v1, 0x7f080534
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f08052b
+    const v1, 0x7f080532
 
     goto :goto_0
 
     :cond_3
-    const v1, 0x7f08052a
+    const v1, 0x7f080531
 
     goto :goto_0
 
     :cond_4
-    const v1, 0x7f080529
+    const v1, 0x7f080530
 
     nop
 
@@ -238,32 +238,32 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f080463
+    const v1, 0x7f08046a
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080465
+    const v1, 0x7f08046c
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f080466
+    const v1, 0x7f08046d
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f080464
+    const v1, 0x7f08046b
 
     goto :goto_0
 
     :cond_3
-    const v1, 0x7f080467
+    const v1, 0x7f08046e
 
     goto :goto_0
 
     :cond_4
-    const v1, 0x7f080463
+    const v1, 0x7f08046a
 
     nop
 
@@ -414,7 +414,7 @@
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a06e2
+    const v0, 0x7f0a06e5
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -440,7 +440,7 @@
 
     invoke-virtual {v0, p0}, Lcom/oneplus/settings/ui/RadiusImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a06ce
+    const v0, 0x7f0a06d1
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -456,7 +456,7 @@
 
     nop
 
-    const v0, 0x7f0a06cf
+    const v0, 0x7f0a06d2
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -478,7 +478,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0a06d0
+    const v0, 0x7f0a06d3
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -487,7 +487,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    const v0, 0x7f0a06db
+    const v0, 0x7f0a06de
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -507,7 +507,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0a0486
+    const v0, 0x7f0a0488
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -530,7 +530,7 @@
 
     const/high16 v1, 0x10000000
 
-    const v2, 0x7f0a06e2
+    const v2, 0x7f0a06e5
 
     if-ne v0, v2, :cond_0
 
@@ -555,7 +555,7 @@
     goto/16 :goto_4
 
     :cond_0
-    const v2, 0x7f0a06ce
+    const v2, 0x7f0a06d1
 
     const-string v3, "com.android.settings"
 
@@ -629,7 +629,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f120f68
+    const v3, 0x7f120f6b
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -643,7 +643,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f120f67
+    const v5, 0x7f120f6a
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -681,7 +681,7 @@
     goto/16 :goto_4
 
     :cond_4
-    const v2, 0x7f0a06cf
+    const v2, 0x7f0a06d2
 
     if-ne v0, v2, :cond_6
 
@@ -697,7 +697,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120f6f
+    const v2, 0x7f120f72
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -711,7 +711,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120f6e
+    const v3, 0x7f120f71
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -747,7 +747,7 @@
     goto :goto_3
 
     :cond_6
-    const v2, 0x7f0a06db
+    const v2, 0x7f0a06de
 
     if-ne v0, v2, :cond_9
 
@@ -851,11 +851,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mWallpaperInfo:Landroid/app/WallpaperInfo;
 
-    iget-object v2, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mWallpaperInfo:Landroid/app/WallpaperInfo;
+    if-eqz v1, :cond_0
 
-    invoke-static {v1, v2}, Lcom/oneplus/settings/ui/OPWallPaperUtils;->loadHomeWallpaper(Landroid/content/Context;Landroid/app/WallpaperInfo;)Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/oneplus/settings/ui/OPThemeIconPreference;->mContext:Landroid/content/Context;
+
+    invoke-static {v2, v1}, Lcom/oneplus/settings/ui/OPWallPaperUtils;->loadHomeWallpaper(Landroid/content/Context;Landroid/app/WallpaperInfo;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 

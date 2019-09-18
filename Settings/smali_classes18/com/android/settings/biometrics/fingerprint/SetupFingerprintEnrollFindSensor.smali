@@ -103,7 +103,7 @@
 
     invoke-super {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor;->initViews()V
 
-    const v0, 0x7f0a0681
+    const v0, 0x7f0a0684
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a0675
+    const v1, 0x7f0a0678
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
@@ -119,7 +119,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a042b
+    const v2, 0x7f0a042d
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f06039d
+    const v5, 0x7f06039e
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -236,7 +236,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0603ed
+    const v2, 0x7f0603ee
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -253,7 +253,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0603eb
+    const v2, 0x7f0603ec
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -269,7 +269,7 @@
 
     if-eqz v0, :cond_5
 
-    const v0, 0x7f0a0496
+    const v0, 0x7f0a0498
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 

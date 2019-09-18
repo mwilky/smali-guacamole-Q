@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/language_settings" android:key="language_and_input_settings_screen" settings:initialExpandedChildrenCount="3"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
-    <Preference android:icon="@drawable/ic_translate_24dp" android:title="@string/phone_language" android:key="phone_language" android:fragment="com.android.settings.localepicker.LocaleListEditor" />
+    <Preference android:icon="@drawable/ic_translate_24dp" android:title="@string/language_picker_title_o2" android:key="phone_language" android:fragment="com.android.settings.localepicker.LocaleListEditor" />
     <Preference android:icon="@drawable/ic_translate_24dp" android:title="@string/phone_language" android:key="phone_language_h2os" android:fragment="com.android.settings.localepicker.OPLocalePicker" />
     <PreferenceCategory android:title="@string/keyboard_and_input_methods_category" android:key="keyboards_category">
         <Preference android:title="@string/virtual_keyboard_category" android:key="virtual_keyboard_pref" android:fragment="com.android.settings.inputmethod.VirtualKeyboardFragment" />

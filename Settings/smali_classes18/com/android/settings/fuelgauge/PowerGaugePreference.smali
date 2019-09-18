@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120ff5
+    const v1, 0x7f120ffb
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -390,7 +390,7 @@
 
     iput-object v0, p0, Lcom/android/settings/fuelgauge/PowerGaugePreference;->appendix:Landroid/view/View;
 
-    const v0, 0x7f0a076f
+    const v0, 0x7f0a0772
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -408,7 +408,7 @@
 
     if-eqz v2, :cond_0
 
-    const v2, 0x7f08038d
+    const v2, 0x7f080391
 
     invoke-virtual {v1, v2, v3, v3, v3}, Landroid/widget/TextView;->setCompoundDrawablesRelativeWithIntrinsicBounds(IIII)V
 
@@ -428,7 +428,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f120f4a
+    const v2, 0x7f120f4d
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 

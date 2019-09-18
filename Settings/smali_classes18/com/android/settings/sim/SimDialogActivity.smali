@@ -69,7 +69,7 @@
 
     const/4 v2, 0x2
 
-    const v3, 0x7f121329
+    const v3, 0x7f121330
 
     if-eq p1, v2, :cond_3
 
@@ -162,7 +162,7 @@
     return-object v0
 
     :cond_4
-    const v0, 0x7f121327
+    const v0, 0x7f12132e
 
     invoke-static {p1, v0, v1}, Lcom/android/settings/sim/CallsSimListDialogFragment;->newInstance(IIZ)Lcom/android/settings/sim/SimListDialogFragment;
 
@@ -171,7 +171,7 @@
     return-object v0
 
     :cond_5
-    const v1, 0x7f121328
+    const v1, 0x7f12132f
 
     invoke-static {p1, v1, v0}, Lcom/android/settings/sim/SimListDialogFragment;->newInstance(IIZ)Lcom/android/settings/sim/SimListDialogFragment;
 

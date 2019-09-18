@@ -126,7 +126,7 @@
 
     invoke-direct {v1, v2, p0}, Lcom/android/settings/password/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroidx/fragment/app/Fragment;)V
 
-    const v2, 0x7f121077
+    const v2, 0x7f12107e
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/others/OPToolsSettings;->getString(I)Ljava/lang/String;
 
@@ -296,7 +296,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickPayPreference:Landroidx/preference/Preference;
 
-    const v3, 0x7f120cd0
+    const v3, 0x7f120cd1
 
     invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -305,7 +305,7 @@
     :cond_4
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mQuickPayPreference:Landroidx/preference/Preference;
 
-    const v3, 0x7f120e66
+    const v3, 0x7f120e68
 
     invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -375,7 +375,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mAntiMisOperationTouch:Landroidx/preference/SwitchPreference;
 
-    const v3, 0x7f120e3b
+    const v3, 0x7f120e3e
 
     invoke-virtual {v1, v3}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 
@@ -400,7 +400,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mTimerShutdownPreference:Landroidx/preference/Preference;
 
-    const v2, 0x7f120f8c
+    const v2, 0x7f120f90
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -683,7 +683,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f1600c2
+    const v0, 0x7f1600c3
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/others/OPToolsSettings;->addPreferencesFromResource(I)V
 

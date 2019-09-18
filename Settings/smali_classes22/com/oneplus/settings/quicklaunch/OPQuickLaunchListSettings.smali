@@ -122,7 +122,7 @@
 .method private configureDragAndDrop(Landroid/view/View;)V
     .locals 3
 
-    const v0, 0x7f0a021b
+    const v0, 0x7f0a021c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120f2b
+    const v2, 0x7f120f2e
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -285,7 +285,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/quicklaunch/OPQuickLaunchListSettings;->mAddView:Landroid/widget/Button;
 
-    const v1, 0x7f120d92
+    const v1, 0x7f120d95
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -300,7 +300,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/quicklaunch/OPQuickLaunchListSettings;->mAddView:Landroid/widget/Button;
 
-    const v1, 0x7f120f2b
+    const v1, 0x7f120f2e
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
@@ -389,7 +389,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f120f2d
+    const v1, 0x7f120f30
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
 

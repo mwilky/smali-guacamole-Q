@@ -41,7 +41,7 @@
 
     move-result-object v0
 
-    const v1, 0x11100ff
+    const v1, 0x1110100
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -172,7 +172,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f12176a
+    const v1, 0x7f121771
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -369,7 +369,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/preference/ListPreference;->setEnabled(Z)V
 
-    const v3, 0x7f121766
+    const v3, 0x7f12176d
 
     invoke-virtual {v2, v3}, Landroidx/preference/ListPreference;->setSummary(I)V
 

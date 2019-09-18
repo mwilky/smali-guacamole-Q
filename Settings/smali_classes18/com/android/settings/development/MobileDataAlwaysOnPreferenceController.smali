@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     const-string v2, "mobile_data_always_on"
 
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
     const-string v2, "mobile_data_always_on"
 
@@ -117,12 +117,9 @@
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    const/4 v1, 0x1
 
     :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
     invoke-virtual {v2, v1}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
 
     return-void

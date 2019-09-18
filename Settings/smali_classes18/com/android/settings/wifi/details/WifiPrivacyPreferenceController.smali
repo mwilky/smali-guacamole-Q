@@ -139,7 +139,7 @@
 
     move-result-object v0
 
-    const v1, 0x11100fc
+    const v1, 0x11100fd
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -355,7 +355,7 @@
 
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setSelectable(Z)V
 
-    const v2, 0x7f12184c
+    const v2, 0x7f121853
 
     invoke-virtual {v0, v2}, Landroidx/preference/DropDownPreference;->setSummary(I)V
 

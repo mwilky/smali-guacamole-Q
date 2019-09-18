@@ -334,7 +334,7 @@
 
     iget-object v0, p0, Lcom/android/settings/widget/EntityHeaderController;->mHeader:Landroid/view/View;
 
-    const v1, 0x7f0a023a
+    const v1, 0x7f0a023b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -390,11 +390,9 @@
 .method public done(Landroid/app/Activity;Z)Landroid/view/View;
     .locals 4
 
-    invoke-virtual {p0, p1}, Lcom/android/settings/widget/EntityHeaderController;->styleActionBar(Landroid/app/Activity;)Lcom/android/settings/widget/EntityHeaderController;
-
     iget-object v0, p0, Lcom/android/settings/widget/EntityHeaderController;->mHeader:Landroid/view/View;
 
-    const v1, 0x7f0a023b
+    const v1, 0x7f0a023c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -413,19 +411,19 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     :cond_0
-    const v1, 0x7f0a023e
+    const v1, 0x7f0a023f
 
     iget-object v2, p0, Lcom/android/settings/widget/EntityHeaderController;->mLabel:Ljava/lang/CharSequence;
 
     invoke-direct {p0, v1, v2}, Lcom/android/settings/widget/EntityHeaderController;->setText(ILjava/lang/CharSequence;)V
 
-    const v1, 0x7f0a023d
+    const v1, 0x7f0a023e
 
     iget-object v2, p0, Lcom/android/settings/widget/EntityHeaderController;->mSummary:Ljava/lang/CharSequence;
 
     invoke-direct {p0, v1, v2}, Lcom/android/settings/widget/EntityHeaderController;->setText(ILjava/lang/CharSequence;)V
 
-    const v1, 0x7f0a023c
+    const v1, 0x7f0a023d
 
     iget-object v2, p0, Lcom/android/settings/widget/EntityHeaderController;->mSecondSummary:Ljava/lang/CharSequence;
 
@@ -435,7 +433,7 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f0a0322
+    const v1, 0x7f0a0323
 
     iget-object v2, p0, Lcom/android/settings/widget/EntityHeaderController;->mHeader:Landroid/view/View;
 

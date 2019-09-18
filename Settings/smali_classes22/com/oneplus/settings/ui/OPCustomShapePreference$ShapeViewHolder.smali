@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field border:Landroid/view/View;
+.field imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
-.field imageView:Landroid/widget/ImageView;
+.field imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
 .field textView:Landroid/widget/TextView;
 
@@ -32,15 +32,25 @@
 
     invoke-direct {p0, p2}, Lcom/oneplus/lib/widget/recyclerview/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
+    const v0, 0x7f0a0150
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/RadiusImageView;
+
+    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ShapeViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
+
     const v0, 0x7f0a014a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    check-cast v0, Lcom/oneplus/settings/ui/RadiusImageView;
 
-    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ShapeViewHolder;->imageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ShapeViewHolder;->imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const v0, 0x7f0a0151
 
@@ -51,14 +61,6 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ShapeViewHolder;->textView:Landroid/widget/TextView;
-
-    const v0, 0x7f0a0148
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ShapeViewHolder;->border:Landroid/view/View;
 
     return-void
 .end method

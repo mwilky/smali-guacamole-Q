@@ -110,7 +110,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0603c6
+    const v3, 0x7f0603c7
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0603c5
+    const v3, 0x7f0603c6
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -526,7 +526,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f121082    # 1.94153E38f
+    const v3, 0x7f121089
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -571,7 +571,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f12108b
+    const v3, 0x7f121092
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -616,7 +616,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f12108d
+    const v3, 0x7f121094
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -637,7 +637,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12105d
+    const v2, 0x7f121064
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -787,7 +787,7 @@
 
     if-gt v0, v1, :cond_0
 
-    const v1, 0x7f0a0175
+    const v1, 0x7f0a0176
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -923,7 +923,7 @@
 
     aget-object v4, v4, v2
 
-    const v5, 0x7f080460
+    const v5, 0x7f080467
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -979,7 +979,7 @@
     goto/16 :goto_0
 
     :cond_6
-    const v2, 0x7f0a03c8
+    const v2, 0x7f0a03ca
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1009,9 +1009,8 @@
 
     :array_0
     .array-data 4
-        0x7f0a015f
         0x7f0a0160
-        0x7f0a0163
+        0x7f0a0161
         0x7f0a0164
         0x7f0a0165
         0x7f0a0166
@@ -1019,8 +1018,9 @@
         0x7f0a0168
         0x7f0a0169
         0x7f0a016a
-        0x7f0a0161
+        0x7f0a016b
         0x7f0a0162
+        0x7f0a0163
     .end array-data
 .end method
 
@@ -1037,7 +1037,7 @@
 
     nop
 
-    const v1, 0x7f0a05e5
+    const v1, 0x7f0a05e8
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

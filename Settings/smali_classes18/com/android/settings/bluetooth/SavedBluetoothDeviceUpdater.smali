@@ -44,12 +44,6 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->isTwsPlusDevice()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
     const/4 v1, 0x1
 
     goto :goto_0

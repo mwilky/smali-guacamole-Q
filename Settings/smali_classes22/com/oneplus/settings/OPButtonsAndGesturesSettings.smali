@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    const v1, 0x11100bd
+    const v1, 0x11100be
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -238,7 +238,7 @@
 
     iget-object v4, p0, Lcom/oneplus/settings/OPButtonsAndGesturesSettings;->mCameraDoubleTapPowerGesturePreference:Landroidx/preference/SwitchPreference;
 
-    const v5, 0x7f120c9b
+    const v5, 0x7f120c9c
 
     invoke-virtual {v4, v5}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 

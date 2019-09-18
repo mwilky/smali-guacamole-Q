@@ -84,7 +84,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0805d6
+    const v2, 0x7f0805dd
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -115,7 +115,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0805d8
+    const v2, 0x7f0805df
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -144,7 +144,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0805d5
+    const v2, 0x7f0805dc
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0805d9
+    const v2, 0x7f0805e0
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -206,7 +206,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0805d7
+    const v2, 0x7f0805de
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -218,17 +218,17 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->shadow:Landroid/view/View;
+    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x4
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
-    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->shadow:Landroid/view/View;
+    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
@@ -312,21 +312,21 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageView:Landroid/widget/ImageView;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
     iget v2, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->resId:I
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setImageResource(I)V
 
     iget-boolean v1, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;->selected:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->shadow:Landroid/view/View;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
@@ -335,11 +335,11 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->shadow:Landroid/view/View;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x4
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     :goto_0
     iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->itemView:Landroid/view/View;

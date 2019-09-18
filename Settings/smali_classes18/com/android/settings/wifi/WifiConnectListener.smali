@@ -30,7 +30,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f1217f4
+    const v1, 0x7f1217fb
 
     const/4 v2, 0x0
 

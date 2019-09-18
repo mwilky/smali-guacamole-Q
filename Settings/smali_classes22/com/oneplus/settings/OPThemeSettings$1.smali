@@ -42,10 +42,24 @@
 
     invoke-direct {v0, p1}, Landroid/provider/SearchIndexableResource;-><init>(Landroid/content/Context;)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportMclTheme()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const v1, 0x7f1600c1
+
+    iput v1, v0, Landroid/provider/SearchIndexableResource;->xmlResId:I
+
+    goto :goto_0
+
+    :cond_0
     const v1, 0x7f1600c0
 
     iput v1, v0, Landroid/provider/SearchIndexableResource;->xmlResId:I
 
+    :goto_0
     const/4 v1, 0x1
 
     new-array v1, v1, [Landroid/provider/SearchIndexableResource;

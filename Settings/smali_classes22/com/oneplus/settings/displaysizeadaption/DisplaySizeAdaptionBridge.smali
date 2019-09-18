@@ -4,6 +4,8 @@
 
 
 # static fields
+.field private static final ADAPTION_MANAGER:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
+
 .field private static final BROWSER_H2_PACKAGE_NAME:Ljava/lang/String; = "com.nearme.browser"
 
 .field private static final BROWSER_PACKAGE_NAME:Ljava/lang/String; = "com.android.browser"
@@ -18,7 +20,7 @@
 
 .field private static final DUO_PACKAGE_NAME:Ljava/lang/String; = "com.google.android.apps.tachyon"
 
-.field public static final FILTER_APP_All:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+.field public static final FILTER_APP_ALL_SCREENS:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
 
 .field public static final FILTER_APP_DEFAULT:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
 
@@ -43,8 +45,6 @@
 .field private static final VIDEOS_PACKAGE_NAME:Ljava/lang/String; = "com.google.android.videos"
 
 .field private static final YOUTUBE_PACKAGE_NAME:Ljava/lang/String; = "com.google.android.youtube"
-
-.field private static final mManager:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
 
 .field private static resolveInfoList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->mManager:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
+    sput-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->ADAPTION_MANAGER:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
 
     new-instance v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge$1;
 
@@ -89,7 +89,7 @@
 
     invoke-direct {v0}, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge$2;-><init>()V
 
-    sput-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->FILTER_APP_All:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    sput-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->FILTER_APP_ALL_SCREENS:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
 
     new-instance v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge$3;
 
@@ -159,7 +159,7 @@
 .method static synthetic access$200()Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->mManager:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
+    sget-object v0, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->ADAPTION_MANAGER:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
 
     return-object v0
 .end method
@@ -435,7 +435,7 @@
 
     move-result v1
 
-    sget-object v2, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->mManager:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
+    sget-object v2, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->ADAPTION_MANAGER:Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;
 
     invoke-virtual {v2}, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptiongeManager;->loadAppMap()Ljava/util/Map;
 

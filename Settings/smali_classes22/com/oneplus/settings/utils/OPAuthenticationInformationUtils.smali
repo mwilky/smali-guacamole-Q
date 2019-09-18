@@ -39,7 +39,7 @@
 
     nop
 
-    const v1, 0x7f120e0a
+    const v1, 0x7f120e0d
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -53,7 +53,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f120e11
+    const v1, 0x7f120e14
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -73,30 +73,6 @@
     if-nez v1, :cond_9
 
     :cond_1
-    const v1, 0x7f120e0b
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    const v1, 0x7f120e12
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
     const v1, 0x7f120e0e
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -109,7 +85,31 @@
 
     if-nez v1, :cond_9
 
-    const v1, 0x7f120e13
+    const v1, 0x7f120e15
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    const v1, 0x7f120e11
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    const v1, 0x7f120e16
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -151,7 +151,7 @@
     goto :goto_0
 
     :cond_3
-    const v1, 0x7f120da1
+    const v1, 0x7f120da4
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -163,7 +163,7 @@
 
     if-nez v1, :cond_4
 
-    const v1, 0x7f120d9b
+    const v1, 0x7f120d9e
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -175,7 +175,7 @@
 
     if-nez v1, :cond_4
 
-    const v1, 0x7f120da0
+    const v1, 0x7f120da3
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -187,7 +187,7 @@
 
     if-nez v1, :cond_4
 
-    const v1, 0x7f120d9a
+    const v1, 0x7f120d9d
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -250,7 +250,7 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v1, 0x7f120e09
+    const v1, 0x7f120e0c
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -260,25 +260,25 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const v1, 0x7f120e13
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const v1, 0x7f120e10
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    const v1, 0x7f120e0d
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -294,26 +294,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     :cond_0
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v1, 0x7f120d9e
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    const v1, 0x7f120d98
+    const v1, 0x7f120da1
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -325,14 +311,41 @@
 
     if-eqz v0, :cond_1
 
-    goto :goto_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
 
     :cond_1
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const v1, 0x7f120d9b
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
     const/4 v0, 0x0
 
     return v0
 
-    :cond_2
+    :cond_3
     :goto_0
     const/4 v0, 0x1
 

@@ -27,7 +27,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f04041c
+    const v2, 0x7f04041d
 
     aput v2, v0, v1
 
@@ -218,7 +218,7 @@
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a0619
+    const v0, 0x7f0a061c
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -245,7 +245,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/p2p/WifiP2pPeer;->mSignal:Landroid/widget/ImageView;
 
-    const v1, 0x7f080697
+    const v1, 0x7f0806a0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -131,7 +131,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f16011d
+    const v0, 0x7f16011e
 
     return v0
 .end method
@@ -203,7 +203,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x7f121956
+    const v4, 0x7f12195d
 
     invoke-virtual {v2, v4, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

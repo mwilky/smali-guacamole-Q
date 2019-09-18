@@ -674,7 +674,7 @@
     goto :goto_1
 
     :cond_2
-    const v5, 0x7f1210ce
+    const v5, 0x7f1210d5
 
     invoke-virtual {v4, v5}, Landroidx/preference/PreferenceCategory;->setTitle(I)V
 

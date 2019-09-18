@@ -754,6 +754,7 @@
     <color name="oneplus_main_home_color_Accent_bg_interface">@color/bg_interface</color>
     <color name="oneplus_main_home_title_background_bg_ab">@color/bg_ab</color>
     <color name="oneplus_main_line">@color/divider_fine</color>
+    <color name="oneplus_navigation_bar_color">#fffafafa</color>
     <color name="oneplus_no_color">#00000000</color>
     <color name="oneplus_nofile_tips">@color/selection_control_disable</color>
     <color name="oneplus_numberpicker_divider_color_dark">#38ffffff</color>

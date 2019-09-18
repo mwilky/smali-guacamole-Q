@@ -1185,7 +1185,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f1217aa
+    const v1, 0x7f1217b1
 
     goto :goto_0
 
@@ -1348,7 +1348,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f121773
+    const v3, 0x7f12177a
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1371,7 +1371,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f121774
+    const v3, 0x7f12177b
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1958,7 +1958,7 @@
 
     iget-object v4, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f121256
+    const v5, 0x7f12125d
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -2075,7 +2075,7 @@
 
     iget-object v4, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1215a8
+    const v5, 0x7f1215af
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -2170,7 +2170,7 @@
 
     iget-object v2, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mFragment:Landroidx/preference/PreferenceFragmentCompat;
 
-    const v3, 0x7f0a0239
+    const v3, 0x7f0a023a
 
     invoke-virtual {v0, v3}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -2182,7 +2182,7 @@
 
     iput-object v1, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mEntityHeaderController:Lcom/android/settings/widget/EntityHeaderController;
 
-    const v1, 0x7f0a023b
+    const v1, 0x7f0a023c
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -2369,9 +2369,9 @@
 .method private updateConnectedButton(I)V
     .locals 5
 
-    const v0, 0x7f080358
+    const v0, 0x7f08035c
 
-    const v1, 0x7f121794
+    const v1, 0x7f12179b
 
     const/4 v2, 0x0
 
@@ -2440,7 +2440,7 @@
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mButtonsPref:Lcom/android/settingslib/widget/ActionButtonsPreference;
 
-    const v1, 0x7f121797
+    const v1, 0x7f12179e
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton3Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2502,7 +2502,7 @@
 
     iget v1, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mConnectingState:I
 
-    const v3, 0x7f1217f4
+    const v3, 0x7f1217fb
 
     const/4 v4, 0x4
 
@@ -2555,7 +2555,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f121796
+    const v2, 0x7f12179d
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -2594,7 +2594,7 @@
 
     const/4 p1, 0x1
 
-    const v2, 0x7f121834
+    const v2, 0x7f12183b
 
     invoke-static {v0, v2, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -2638,7 +2638,7 @@
 
     invoke-direct {p0, v5}, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->updateConnectedButton(I)V
 
-    const v1, 0x7f1218bb
+    const v1, 0x7f1218c2
 
     invoke-static {v0, v1, v7}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -2862,7 +2862,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f1217f4
+    const v1, 0x7f1217fb
 
     const/4 v2, 0x0
 
@@ -2923,7 +2923,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080335
+    const v1, 0x7f080339
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton1Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2937,13 +2937,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f121897
+    const v1, 0x7f12189e
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
     move-result-object v0
 
-    const v1, 0x7f080350
+    const v1, 0x7f080354
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2957,13 +2957,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f121794
+    const v1, 0x7f12179b
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton3Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
     move-result-object v0
 
-    const v1, 0x7f080358
+    const v1, 0x7f08035c
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton3Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2983,13 +2983,13 @@
 
     move-result-object v0
 
-    const v2, 0x7f12135b
+    const v2, 0x7f121362
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton4Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
     move-result-object v0
 
-    const v2, 0x7f080316
+    const v2, 0x7f08031a
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton4Icon(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -3177,7 +3177,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/details/WifiDetailPreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f121880
+    const v3, 0x7f121887
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3457,7 +3457,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1217f9
+    const v1, 0x7f121800
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 

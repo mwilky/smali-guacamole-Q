@@ -608,7 +608,7 @@
 
     invoke-virtual {v7, v6}, Lcom/oneplus/sdk/utils/OpTheme;->enableTheme(Ljava/util/HashMap;)I
 
-    const v8, 0x7f0603c6
+    const v8, 0x7f0603c7
 
     invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -669,7 +669,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0603c5
+    const v11, 0x7f0603c6
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -771,7 +771,7 @@
 
     invoke-virtual {v1, v0}, Lcom/oneplus/sdk/utils/OpTheme;->enableTheme(Ljava/util/HashMap;)I
 
-    const v3, 0x7f0603c5
+    const v3, 0x7f0603c6
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -816,7 +816,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0603c6
+    const v7, 0x7f0603c7
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -963,7 +963,7 @@
 
     invoke-static {p0, v2}, Lcom/oneplus/settings/utils/OPThemeUtils;->setCurrentHorizonLight(Landroid/content/Context;I)V
 
-    const v4, 0x7f0603c6
+    const v4, 0x7f0603c7
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1024,7 +1024,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0603c5
+    const v7, 0x7f0603c6
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1658,23 +1658,7 @@
 .end method
 
 .method public static setDefaultWallpaper(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "net.oneplus.launcher.ACTION_SET_THEME_WALLPAPER"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "wallpaperName"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "net.oneplus.launcher"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    .locals 0
 
     return-void
 .end method

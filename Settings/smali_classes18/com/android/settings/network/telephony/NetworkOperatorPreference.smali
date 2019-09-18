@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    const v1, 0x1110077
+    const v1, 0x1110078
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -110,7 +110,7 @@
     return v1
 
     :cond_0
-    const v1, 0x7f080660
+    const v1, 0x7f080669
 
     return v1
 
@@ -119,23 +119,23 @@
 
     if-eqz v1, :cond_2
 
-    const v1, 0x7f08035e
+    const v1, 0x7f080362
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f080662
+    const v1, 0x7f08066b
 
     :goto_0
     return v1
 
     :cond_3
-    const v1, 0x7f08065f
+    const v1, 0x7f080668
 
     return v1
 
     :cond_4
-    const v1, 0x7f080661
+    const v1, 0x7f08066a
 
     return v1
 .end method

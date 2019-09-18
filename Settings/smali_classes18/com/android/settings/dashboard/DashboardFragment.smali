@@ -1219,7 +1219,7 @@
 
     const-string v9, "Chromebook"
 
-    const v11, 0x7f0805f4
+    const v11, 0x7f0805fd
 
     const-string v12, "privacy_google_autofill"
 
@@ -1256,7 +1256,7 @@
 
     if-eqz v10, :cond_7
 
-    const v10, 0x7f080567
+    const v10, 0x7f08056e
 
     invoke-virtual {v8, v10}, Landroidx/preference/Preference;->setIcon(I)V
 
@@ -1385,7 +1385,7 @@
 
     if-eqz v8, :cond_b
 
-    const v8, 0x7f080567
+    const v8, 0x7f08056e
 
     invoke-virtual {v15, v8}, Landroidx/preference/Preference;->setIcon(I)V
 
@@ -1539,6 +1539,11 @@
 
     move-result-object v0
 
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v1, p0, Lcom/android/settings/dashboard/DashboardFragment;->mPreferenceControllers:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -1554,7 +1559,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1571,7 +1576,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1583,11 +1588,11 @@
 
     move-result v6
 
-    if-nez v6, :cond_0
+    if-nez v6, :cond_1
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     invoke-virtual {v5}, Lcom/android/settingslib/core/AbstractPreferenceController;->getPreferenceKey()Ljava/lang/String;
 
     move-result-object v6
@@ -1604,7 +1609,7 @@
 
     const-string v11, "DashboardFragment"
 
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_2
 
     new-array v7, v10, [Ljava/lang/Object;
 
@@ -1630,12 +1635,12 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     invoke-virtual {v0, v6}, Landroidx/preference/PreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v7
 
-    if-nez v7, :cond_2
+    if-nez v7, :cond_3
 
     new-array v10, v10, [Ljava/lang/Object;
 
@@ -1661,15 +1666,15 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     invoke-virtual {v5, v7}, Lcom/android/settingslib/core/AbstractPreferenceController;->updateState(Landroidx/preference/Preference;)V
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     goto :goto_0
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 

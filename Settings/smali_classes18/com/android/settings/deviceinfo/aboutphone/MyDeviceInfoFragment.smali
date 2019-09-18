@@ -275,7 +275,7 @@
     return-void
 
     :cond_0
-    const v2, 0x7f0a0239
+    const v2, 0x7f0a023a
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 

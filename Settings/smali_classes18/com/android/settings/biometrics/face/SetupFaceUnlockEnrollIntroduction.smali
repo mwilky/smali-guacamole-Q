@@ -83,7 +83,7 @@
 .method private adjustForGuideImage()V
     .locals 5
 
-    const v0, 0x7f0a0683
+    const v0, 0x7f0a0686
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -91,7 +91,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0a0306
+    const v1, 0x7f0a0307
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -549,7 +549,7 @@
 
     invoke-super {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->initViews()V
 
-    const v0, 0x7f0a0681
+    const v0, 0x7f0a0684
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -557,11 +557,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f121301
+    const v1, 0x7f121308
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v1, 0x7f0a0270
+    const v1, 0x7f0a0271
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -575,15 +575,15 @@
 
     move-result v1
 
-    const v2, 0x7f0a05a6
+    const v2, 0x7f0a05a8
 
-    const v3, 0x7f120ca5
+    const v3, 0x7f120ca6
 
     if-eqz v1, :cond_0
 
     invoke-virtual {p0, v3}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v1, 0x7f120cb7
+    const v1, 0x7f120cb8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -604,22 +604,22 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f120fb4
+    const v1, 0x7f120fba
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v1, 0x7f120fb3
+    const v1, 0x7f120fb9
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f120ca4
+    const v1, 0x7f120ca5
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v1, 0x7f120ca3
+    const v1, 0x7f120ca4
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -636,7 +636,7 @@
 
     invoke-virtual {v1, v3}, Lcom/oneplus/lib/widget/button/OPButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0269
+    const v1, 0x7f0a026a
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -656,11 +656,11 @@
 
     iget-object v1, p0, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->mBtnCancel:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v3, 0x7f1212fd
+    const v3, 0x7f121304
 
     invoke-virtual {v1, v3}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 
-    const v1, 0x7f0a0298
+    const v1, 0x7f0a0299
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -678,7 +678,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0603ed
+    const v4, 0x7f0603ee
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -693,7 +693,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0603eb
+    const v4, 0x7f0603ec
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -716,7 +716,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v4, 0x7f0a0675
+    const v4, 0x7f0a0678
 
     invoke-virtual {p0, v4}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -742,7 +742,7 @@
 
     iget-object v2, p0, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->mBtnNext:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v4, 0x7f06039d
+    const v4, 0x7f06039e
 
     invoke-virtual {p0, v4}, Lcom/android/settings/biometrics/face/SetupFaceUnlockEnrollIntroduction;->getColor(I)I
 

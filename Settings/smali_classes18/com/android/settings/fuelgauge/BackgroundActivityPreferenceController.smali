@@ -389,12 +389,12 @@
     :goto_0
     if-eqz v1, :cond_3
 
-    const v2, 0x7f12121b
+    const v2, 0x7f121222
 
     goto :goto_1
 
     :cond_3
-    const v2, 0x7f12121a
+    const v2, 0x7f121221
 
     :goto_1
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setSummary(I)V

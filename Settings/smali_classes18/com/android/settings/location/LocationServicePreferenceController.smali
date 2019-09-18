@@ -240,7 +240,7 @@
 .end method
 
 .method public updateState(Landroidx/preference/Preference;)V
-    .locals 8
+    .locals 10
 
     iget-object v0, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServices:Landroidx/preference/PreferenceCategory;
 
@@ -258,118 +258,146 @@
 
     const/4 v2, 0x0
 
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    iget-object v3, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object v3
 
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v3}, Landroid/os/UserManager;->getUserProfiles()Ljava/util/List;
 
     move-result-object v4
 
-    check-cast v4, Ljava/util/Map$Entry;
-
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v5
 
-    check-cast v5, Ljava/util/List;
-
-    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    :goto_1
+    :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_4
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Landroidx/preference/Preference;
+    check-cast v6, Ljava/util/Map$Entry;
 
-    instance-of v7, v6, Lcom/android/settings/widget/RestrictedAppPreference;
+    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    if-eqz v7, :cond_0
+    move-result-object v7
 
-    move-object v7, v6
+    check-cast v7, Ljava/util/List;
 
-    check-cast v7, Lcom/android/settings/widget/RestrictedAppPreference;
+    invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v7}, Lcom/android/settings/widget/RestrictedAppPreference;->checkRestrictionAndSetDisabled()V
+    move-result-object v7
+
+    :goto_1
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Landroidx/preference/Preference;
+
+    instance-of v9, v8, Lcom/android/settings/widget/RestrictedAppPreference;
+
+    if-eqz v9, :cond_0
+
+    move-object v9, v8
+
+    check-cast v9, Lcom/android/settings/widget/RestrictedAppPreference;
+
+    invoke-virtual {v9}, Lcom/android/settings/widget/RestrictedAppPreference;->checkRestrictionAndSetDisabled()V
 
     :cond_0
     goto :goto_1
 
     :cond_1
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v7
 
-    check-cast v5, Ljava/lang/Integer;
+    check-cast v7, Ljava/lang/Integer;
 
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
 
-    move-result v5
+    move-result v7
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
-    move-result v6
+    move-result v8
 
-    if-ne v5, v6, :cond_2
+    if-eq v7, v8, :cond_3
 
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    move-result-object v5
+    move-result v7
 
-    check-cast v5, Ljava/util/List;
+    const/4 v8, 0x3
 
-    iget-object v6, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServices:Landroidx/preference/PreferenceCategory;
+    if-ge v7, v8, :cond_2
 
-    invoke-static {v5, v6}, Lcom/android/settings/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroidx/preference/PreferenceGroup;)V
+    invoke-static {v3}, Lcom/oneplus/settings/utils/OPUtils;->hasMultiAppProfiles(Landroid/os/UserManager;)Z
 
-    const/4 v1, 0x1
+    move-result v7
+
+    if-eqz v7, :cond_2
 
     goto :goto_2
 
     :cond_2
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v7
 
-    check-cast v5, Ljava/util/List;
+    check-cast v7, Ljava/util/List;
 
-    iget-object v6, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServicesManaged:Landroidx/preference/PreferenceCategory;
+    iget-object v8, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServicesManaged:Landroidx/preference/PreferenceCategory;
 
-    invoke-static {v5, v6}, Lcom/android/settings/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroidx/preference/PreferenceGroup;)V
+    invoke-static {v7, v8}, Lcom/android/settings/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroidx/preference/PreferenceGroup;)V
 
     const/4 v2, 0x1
 
-    :goto_2
-    goto :goto_0
+    goto :goto_3
 
     :cond_3
-    iget-object v3, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServices:Landroidx/preference/PreferenceCategory;
+    :goto_2
+    invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v3, v1}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
+    move-result-object v7
 
-    iget-object v3, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServicesManaged:Landroidx/preference/PreferenceCategory;
+    check-cast v7, Ljava/util/List;
 
-    invoke-virtual {v3, v2}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
+    iget-object v8, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServices:Landroidx/preference/PreferenceCategory;
+
+    invoke-static {v7, v8}, Lcom/android/settings/location/LocationSettings;->addPreferencesSorted(Ljava/util/List;Landroidx/preference/PreferenceGroup;)V
+
+    const/4 v1, 0x1
+
+    :goto_3
+    goto :goto_0
+
+    :cond_4
+    iget-object v5, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServices:Landroidx/preference/PreferenceCategory;
+
+    invoke-virtual {v5, v1}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
+
+    iget-object v5, p0, Lcom/android/settings/location/LocationServicePreferenceController;->mCategoryLocationServicesManaged:Landroidx/preference/PreferenceCategory;
+
+    invoke-virtual {v5, v2}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
 
     return-void
 .end method

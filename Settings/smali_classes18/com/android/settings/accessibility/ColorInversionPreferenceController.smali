@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/android/settings/accessibility/ColorInversionPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120ebc
+    const v1, 0x7f120ebe
 
     const/4 v2, 0x0
 

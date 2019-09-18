@@ -159,7 +159,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1213d3
+    const v4, 0x7f1213da
 
     invoke-virtual {v3, v4, p0}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
@@ -242,7 +242,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f1213d6
+    const v5, 0x7f1213dd
 
     invoke-virtual {v3, v5, p0}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 

@@ -175,7 +175,7 @@
 
     const/4 v3, 0x6
 
-    const v5, 0x7f1213ef
+    const v5, 0x7f1213f6
 
     invoke-direct {v1, v2, v3, v5}, Lcom/android/settings/applications/manageapplications/AppFilterItem;-><init>(Lcom/android/settingslib/applications/ApplicationsState$AppFilter;II)V
 
@@ -189,7 +189,7 @@
 
     const/4 v3, 0x7
 
-    const v5, 0x7f1213ee
+    const v5, 0x7f1213f5
 
     invoke-direct {v1, v2, v3, v5}, Lcom/android/settings/applications/manageapplications/AppFilterItem;-><init>(Lcom/android/settingslib/applications/ApplicationsState$AppFilter;II)V
 
@@ -313,7 +313,7 @@
 
     new-instance v1, Lcom/android/settings/applications/manageapplications/AppFilterItem;
 
-    sget-object v2, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->FILTER_APP_All:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
+    sget-object v2, Lcom/oneplus/settings/displaysizeadaption/DisplaySizeAdaptionBridge;->FILTER_APP_ALL_SCREENS:Lcom/android/settingslib/applications/ApplicationsState$AppFilter;
 
     const/16 v3, 0x11
 

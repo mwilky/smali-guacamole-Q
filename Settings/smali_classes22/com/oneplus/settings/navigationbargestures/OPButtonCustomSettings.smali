@@ -557,13 +557,13 @@
 
     if-eqz v15, :cond_4
 
-    const v1, 0x7f03013f
+    const v1, 0x7f030098
 
     invoke-virtual {v15, v1}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v15, v0, Lcom/oneplus/settings/navigationbargestures/OPButtonCustomSettings;->mMenuDoubleTapAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f030140
+    const v1, 0x7f03009c
 
     invoke-virtual {v15, v1}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -931,7 +931,7 @@
 
     move-result-object v0
 
-    const v1, 0x11100bd
+    const v1, 0x11100be
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -987,7 +987,7 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
@@ -1027,6 +1027,21 @@
 
     invoke-virtual {v0, p0}, Landroidx/preference/SwitchPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
+    const-string v0, "OP_FEATURE_HIDE_NAVBAR"
+
+    invoke-static {v0}, Lcom/oneplus/lib/util/ReflectUtil;->isFeatureSupported(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/settings/navigationbargestures/OPButtonCustomSettings;->mHideNavkeys:Landroidx/preference/SwitchPreference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setVisible(Z)V
+
+    :cond_0
     return-void
 .end method
 

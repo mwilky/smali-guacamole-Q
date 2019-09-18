@@ -153,7 +153,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f1600d5
+    const v0, 0x7f1600d6
 
     return v0
 .end method
@@ -173,7 +173,7 @@
 
     iget-object v0, p0, Lcom/android/settings/privacy/PrivacyDashboardFragment;->mProgressHeader:Landroid/view/View;
 
-    const v1, 0x7f0a0563
+    const v1, 0x7f0a0565
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

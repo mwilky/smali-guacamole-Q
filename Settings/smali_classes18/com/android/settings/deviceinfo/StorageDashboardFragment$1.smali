@@ -102,7 +102,7 @@
 
     invoke-direct {v0, p1}, Landroid/provider/SearchIndexableResource;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1600ec
+    const v1, 0x7f1600ed
 
     iput v1, v0, Landroid/provider/SearchIndexableResource;->xmlResId:I
 

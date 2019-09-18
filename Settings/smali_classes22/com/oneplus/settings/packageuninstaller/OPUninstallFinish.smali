@@ -63,7 +63,7 @@
 
     new-instance v1, Landroid/app/Notification$Action$Builder;
 
-    const v2, 0x7f0804dd
+    const v2, 0x7f0804e4
 
     invoke-static {p1, v2}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -117,7 +117,7 @@
 
     new-instance v1, Landroid/app/Notification$Action$Builder;
 
-    const v2, 0x7f080343
+    const v2, 0x7f080347
 
     invoke-static {p1, v2}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
@@ -339,7 +339,7 @@
 
     new-instance v0, Landroid/app/NotificationChannel;
 
-    const v12, 0x7f1215c0
+    const v12, 0x7f1215c7
 
     invoke-virtual {v2, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -592,7 +592,7 @@
 
     invoke-direct {v1, v2, v13}, Lcom/oneplus/settings/packageuninstaller/OPUninstallFinish;->addDeviceManagerButton(Landroid/content/Context;Landroid/app/Notification$Builder;)V
 
-    const v3, 0x7f1215bd
+    const v3, 0x7f1215c4
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -631,7 +631,7 @@
 
     invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const v3, 0x7f1215be
+    const v3, 0x7f1215c5
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -813,7 +813,7 @@
     :cond_b
     if-nez v0, :cond_c
 
-    const v6, 0x7f1215b6
+    const v6, 0x7f1215bd
 
     invoke-virtual {v2, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -826,7 +826,7 @@
     :cond_c
     if-eqz v9, :cond_d
 
-    const v6, 0x7f1215b0
+    const v6, 0x7f1215b7
 
     invoke-virtual {v2, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -837,7 +837,7 @@
     goto :goto_9
 
     :cond_d
-    const v6, 0x7f1215b7
+    const v6, 0x7f1215be
 
     invoke-virtual {v2, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -848,7 +848,7 @@
     nop
 
     :goto_9
-    const v0, 0x7f1215bc
+    const v0, 0x7f1215c3
 
     const/4 v3, 0x1
 
@@ -866,7 +866,7 @@
 
     invoke-virtual {v13, v4}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
-    const v0, 0x7f0804bd
+    const v0, 0x7f0804c4
 
     invoke-virtual {v13, v0}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -915,7 +915,7 @@
     const/4 v10, 0x1
 
     :goto_a
-    const v0, 0x7f1215ba
+    const v0, 0x7f1215c1
 
     new-array v6, v10, [Ljava/lang/Object;
 

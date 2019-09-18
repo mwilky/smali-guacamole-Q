@@ -64,7 +64,7 @@
 .end method
 
 .method protected varargs doInBackground([Ljava/lang/Integer;)Ljava/lang/Void;
-    .locals 10
+    .locals 13
 
     const/4 v0, 0x0
 
@@ -173,7 +173,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_a
 
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -200,7 +200,7 @@
 
     if-eqz v2, :cond_3
 
-    goto/16 :goto_3
+    goto/16 :goto_5
 
     :cond_3
     const/4 v2, 0x3
@@ -211,7 +211,7 @@
 
     if-nez v3, :cond_4
 
-    goto :goto_2
+    goto/16 :goto_4
 
     :cond_4
     new-instance v4, Ljava/io/File;
@@ -224,7 +224,7 @@
 
     if-nez v5, :cond_5
 
-    goto :goto_2
+    goto/16 :goto_4
 
     :cond_5
     iget-object v5, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity$WorkAsyncTask;->this$0:Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;
@@ -241,7 +241,7 @@
 
     if-eqz v5, :cond_6
 
-    goto :goto_2
+    goto/16 :goto_4
 
     :cond_6
     invoke-static {v0}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->getUriFromCursor(Landroid/database/Cursor;)Landroid/net/Uri;
@@ -296,6 +296,69 @@
     move-result-object v7
 
     :goto_1
+    if-eqz v5, :cond_9
+
+    iget-object v8, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity$WorkAsyncTask;->this$0:Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;
+
+    iget-object v8, v8, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->mUriForDefaultItem:Landroid/net/Uri;
+
+    if-eqz v8, :cond_9
+
+    invoke-virtual {v5}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v8
+
+    iget-object v9, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity$WorkAsyncTask;->this$0:Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;
+
+    iget-object v9, v9, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->mUriForDefaultItem:Landroid/net/Uri;
+
+    invoke-virtual {v9}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v9
+
+    const-string v10, "audio"
+
+    invoke-virtual {v8, v10}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v11
+
+    invoke-virtual {v8, v11}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v10
+
+    if-gez v10, :cond_8
+
+    iget-object v12, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity$WorkAsyncTask;->this$0:Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;
+
+    iget-object v12, v12, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->mUriForDefaultItem:Landroid/net/Uri;
+
+    invoke-static {v12}, Landroid/content/ContentProvider;->getUriWithoutUserId(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v12
+
+    invoke-virtual {v5, v12}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    goto :goto_2
+
+    :cond_8
+    invoke-virtual {v9, v10}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    :goto_2
+    goto :goto_3
+
+    :cond_9
     iget-object v8, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity$WorkAsyncTask;->this$0:Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;
 
     iget-object v8, v8, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->mUriForDefaultItem:Landroid/net/Uri;
@@ -306,23 +369,24 @@
 
     invoke-virtual {v5, v8}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
-    move-result v8
+    move-result v12
 
-    new-instance v9, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;
+    :goto_3
+    new-instance v8, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;
 
-    invoke-direct {v9, v5, v7, v8}, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;-><init>(Landroid/net/Uri;Ljava/lang/String;Z)V
+    invoke-direct {v8, v5, v7, v12}, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;-><init>(Landroid/net/Uri;Ljava/lang/String;Z)V
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v9, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;->filepath:Ljava/lang/String;
+    iput-object v2, v8, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;->filepath:Ljava/lang/String;
 
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, v9, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;->mimetype:Ljava/lang/String;
+    iput-object v2, v8, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$RingtoneData;->mimetype:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity$WorkAsyncTask;->this$0:Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;
 
@@ -330,17 +394,17 @@
 
     move-result-object v2
 
-    invoke-interface {v2, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :goto_2
+    :goto_4
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    :cond_8
-    :goto_3
+    :cond_a
+    :goto_5
     nop
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V

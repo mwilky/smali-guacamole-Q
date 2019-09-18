@@ -1075,7 +1075,7 @@
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a042b
+    const v1, 0x7f0a042d
 
     if-eq v0, v1, :cond_0
 
@@ -1187,7 +1187,7 @@
 
     move-result-object v3
 
-    const v7, 0x7f0a050c
+    const v7, 0x7f0a050e
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1213,7 +1213,7 @@
 
     iput-object v7, v0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntryInputDisabler:Lcom/android/internal/widget/TextViewInputDisabler;
 
-    const v7, 0x7f0a02cd
+    const v7, 0x7f0a02ce
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1227,7 +1227,7 @@
 
     if-nez v7, :cond_1
 
-    const v7, 0x7f0a0675
+    const v7, 0x7f0a0678
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1238,7 +1238,7 @@
     iput-object v7, v0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mHeaderTextView:Landroid/widget/TextView;
 
     :cond_1
-    const v7, 0x7f0a0681
+    const v7, 0x7f0a0684
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1248,7 +1248,7 @@
 
     iput-object v7, v0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mDetailsTextView:Landroid/widget/TextView;
 
-    const v7, 0x7f0a0244
+    const v7, 0x7f0a0245
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

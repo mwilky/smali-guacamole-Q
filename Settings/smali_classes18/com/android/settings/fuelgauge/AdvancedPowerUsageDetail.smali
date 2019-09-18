@@ -510,7 +510,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f1600cd
+    const v0, 0x7f1600ce
 
     return v0
 .end method
@@ -522,7 +522,7 @@
 
     iget-object v0, p0, Lcom/android/settings/fuelgauge/AdvancedPowerUsageDetail;->mHeaderPreference:Lcom/android/settingslib/widget/LayoutPreference;
 
-    const v1, 0x7f0a0239
+    const v1, 0x7f0a023a
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 

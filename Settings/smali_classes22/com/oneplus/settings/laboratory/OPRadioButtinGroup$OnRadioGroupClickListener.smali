@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract OnRadioGroupClick(I)V
+.method public abstract onRadioGroupClick(I)V
 .end method

@@ -171,7 +171,7 @@
 .method private updateThemeSummary(I)V
     .locals 2
 
-    const v0, 0x7f120f78
+    const v0, 0x7f120f7b
 
     if-eqz p1, :cond_3
 
@@ -196,7 +196,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mThemeModePreference:Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;
 
-    const v1, 0x7f120f79
+    const v1, 0x7f120f7c
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->setSummary(I)V
 
@@ -205,7 +205,7 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mThemeModePreference:Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;
 
-    const v1, 0x7f120f76
+    const v1, 0x7f120f79
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->setSummary(I)V
 
@@ -214,7 +214,7 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mThemeModePreference:Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;
 
-    const v1, 0x7f120f77
+    const v1, 0x7f120f7a
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->setSummary(I)V
 
@@ -252,6 +252,17 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPThemeUtils;->isSupportMclTheme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x7f1600c1
+
+    return v0
+
+    :cond_0
     const v0, 0x7f1600c0
 
     return v0
@@ -451,13 +462,13 @@
 
     invoke-direct {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f120f65
+    const v1, 0x7f120f68
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setTitle(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f120f64
+    const v1, 0x7f120f67
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setMessage(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 

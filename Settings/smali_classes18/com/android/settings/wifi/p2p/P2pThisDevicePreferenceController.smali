@@ -69,38 +69,91 @@
 .end method
 
 .method public updateDeviceName(Landroid/net/wifi/p2p/WifiP2pDevice;)V
-    .locals 2
+    .locals 5
 
-    iget-object v0, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mPreference:Landroidx/preference/Preference;
+    iget-object v0, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mContext:Landroid/content/Context;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    if-eqz p1, :cond_1
+    move-result-object v0
 
-    iget-object v0, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
+    const-string v1, "oem_oneplus_devicename"
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mContext:Landroid/content/Context;
 
-    iget-object v0, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mPreference:Landroidx/preference/Preference;
+    invoke-static {v2}, Lcom/oneplus/settings/utils/OPUtils;->resetDeviceNameIfInvalid(Landroid/content/Context;)Ljava/lang/String;
 
-    iget-object v1, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    goto :goto_0
+    move-result v2
+
+    const/16 v3, 0x20
+
+    if-le v2, v3, :cond_0
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x1f
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    invoke-static {v2, v1, v0}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     :cond_0
-    iget-object v0, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mPreference:Landroidx/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mPreference:Landroidx/preference/Preference;
+
+    invoke-virtual {v1, v0}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
     iget-object v1, p1, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mContext:Landroid/content/Context;
+
+    const-string v2, "wifip2p"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/net/wifi/p2p/WifiP2pManager;
+
+    iget-object v2, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mContext:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/android/settings/wifi/p2p/P2pThisDevicePreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/net/wifi/p2p/WifiP2pManager;->initialize(Landroid/content/Context;Landroid/os/Looper;Landroid/net/wifi/p2p/WifiP2pManager$ChannelListener;)Landroid/net/wifi/p2p/WifiP2pManager$Channel;
+
+    move-result-object v2
+
+    nop
+
+    invoke-virtual {v1, v2, v0, v4}, Landroid/net/wifi/p2p/WifiP2pManager;->setDeviceName(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Ljava/lang/String;Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;)V
 
     :cond_1
-    :goto_0
     return-void
 .end method

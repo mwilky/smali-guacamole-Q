@@ -15,11 +15,9 @@
 
 
 # instance fields
-.field border:Landroid/view/View;
+.field imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
-.field imageGroup:Landroid/view/ViewGroup;
-
-.field imageView:Landroid/widget/ImageView;
+.field imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
 .field textView:Landroid/widget/TextView;
 
@@ -34,15 +32,15 @@
 
     invoke-direct {p0, p2}, Lcom/oneplus/lib/widget/recyclerview/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a014b
+    const v0, 0x7f0a0150
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/ViewGroup;
+    check-cast v0, Lcom/oneplus/settings/ui/RadiusImageView;
 
-    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageGroup:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const v0, 0x7f0a014a
 
@@ -50,9 +48,9 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    check-cast v0, Lcom/oneplus/settings/ui/RadiusImageView;
 
-    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageView:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const v0, 0x7f0a0151
 
@@ -63,14 +61,6 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->textView:Landroid/widget/TextView;
-
-    const v0, 0x7f0a0148
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
 
     return-void
 .end method

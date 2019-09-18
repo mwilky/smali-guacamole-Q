@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:gravity="center_horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.internal.widget.ViewPager android:id="@id/preview_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/page_point_group" />
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/page_point_group" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_above="@id/choose_title">
+    <com.android.internal.widget.ViewPager android:id="@id/preview_viewpager" android:background="@color/oneplus_theme_custom_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/page_point_group" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/page_point_group" android:background="@color/oneplus_theme_custom_background" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_above="@id/choose_title">
         <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
             <View android:id="@id/page0" android:background="@drawable/shape_oval_select_light" android:layout_width="7.0dip" android:layout_height="7.0dip" />
             <View android:id="@id/page1" android:background="@drawable/shape_oval_unselect_light" android:layout_width="7.0dip" android:layout_height="7.0dip" android:layout_marginStart="5.0dip" />

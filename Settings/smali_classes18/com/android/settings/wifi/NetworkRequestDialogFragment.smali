@@ -177,7 +177,7 @@
     return-void
 
     :cond_0
-    const v1, 0x7f0a0423
+    const v1, 0x7f0a0425
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/app/AlertDialog;->findViewById(I)Landroid/view/View;
 
@@ -585,7 +585,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a0424
+    const v4, 0x7f0a0426
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -620,7 +620,7 @@
     iput-boolean v7, p0, Lcom/android/settings/wifi/NetworkRequestDialogFragment;->mIsSpecifiedSsid:Z
 
     :cond_0
-    const v7, 0x7f0a0423
+    const v7, 0x7f0a0425
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -676,7 +676,7 @@
 
     if-eqz v9, :cond_1
 
-    const v9, 0x7f121794
+    const v9, 0x7f12179b
 
     invoke-virtual {v8, v9, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 

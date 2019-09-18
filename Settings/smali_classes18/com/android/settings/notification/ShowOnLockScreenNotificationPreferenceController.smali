@@ -183,7 +183,7 @@
 
     iget-object v0, p0, Lcom/android/settings/notification/ShowOnLockScreenNotificationPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120d7e
+    const v1, 0x7f120d81
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -194,7 +194,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/settings/notification/ShowOnLockScreenNotificationPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120d7f
+    const v1, 0x7f120d82
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -250,7 +250,7 @@
     move v3, v1
 
     :goto_0
-    const v4, 0x7f120d7f
+    const v4, 0x7f120d82
 
     if-ne v0, v4, :cond_1
 
@@ -331,7 +331,7 @@
 
     iget-object v3, p0, Lcom/android/settings/notification/ShowOnLockScreenNotificationPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120d7f
+    const v4, 0x7f120d82
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -353,7 +353,7 @@
 
     iget-object v7, p0, Lcom/android/settings/notification/ShowOnLockScreenNotificationPreferenceController;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f120d7e
+    const v8, 0x7f120d81
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

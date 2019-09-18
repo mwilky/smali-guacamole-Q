@@ -558,7 +558,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f160114
+    const v0, 0x7f160115
 
     return v0
 .end method
@@ -828,7 +828,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f12183d
+    const v8, 0x7f121844
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -855,7 +855,7 @@
 
     move-result-object v0
 
-    const v7, 0x7f12183c
+    const v7, 0x7f121843
 
     new-array v5, v5, [Ljava/lang/Object;
 
@@ -874,7 +874,7 @@
 
     invoke-direct {v4, v5}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v5, 0x7f12183e
+    const v5, 0x7f121845
 
     invoke-virtual {v4, v5}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -919,7 +919,7 @@
     :cond_2
     if-ne p1, v0, :cond_4
 
-    const v0, 0x7f121838
+    const v0, 0x7f12183f
 
     iget-object v6, p0, Lcom/android/settings/wifi/p2p/WifiP2pSettings;->mSelectedWifiPeer:Lcom/android/settings/wifi/p2p/WifiP2pPeer;
 
@@ -959,7 +959,7 @@
 
     invoke-direct {v7, v8}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v8, 0x7f121839
+    const v8, 0x7f121840
 
     invoke-virtual {v7, v8}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -1107,7 +1107,7 @@
 
     invoke-direct {v0, v4}, Landroidx/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v4, 0x7f121841
+    const v4, 0x7f121848
 
     invoke-virtual {v0, v4}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -1156,7 +1156,7 @@
 
     if-ne p1, v0, :cond_8
 
-    const v0, 0x7f12183a
+    const v0, 0x7f121841
 
     new-instance v3, Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -1223,12 +1223,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f121843
+    const v0, 0x7f12184a
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f121842
+    const v0, 0x7f121849
 
     :goto_0
     nop
@@ -1247,7 +1247,7 @@
 
     const/4 v1, 0x2
 
-    const v3, 0x7f121841
+    const v3, 0x7f121848
 
     invoke-interface {p1, v2, v1, v2, v3}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -1721,14 +1721,14 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f121843
+    const v0, 0x7f12184a
 
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 
     goto :goto_1
 
     :cond_1
-    const v0, 0x7f121842
+    const v0, 0x7f121849
 
     invoke-interface {v1, v0}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 

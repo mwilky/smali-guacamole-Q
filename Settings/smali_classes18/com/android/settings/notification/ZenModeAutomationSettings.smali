@@ -206,7 +206,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f16011a
+    const v0, 0x7f16011b
 
     return v0
 .end method
@@ -251,7 +251,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f121958
+    const v2, 0x7f12195f
 
     invoke-interface {p1, v0, v1, v0, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -348,7 +348,7 @@
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f121958
+    const v3, 0x7f12195f
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -366,7 +366,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1219a3
+    const v3, 0x7f1219aa
 
     new-instance v4, Lcom/android/settings/notification/ZenModeAutomationSettings$1;
 

@@ -110,51 +110,62 @@
 .end method
 
 .method protected updateConnectivity()V
-    .locals 4
+    .locals 3
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "HardwareIds"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/android/settingslib/deviceinfo/AbstractWifiMacAddressPreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getFactoryMacAddresses()[Ljava/lang/String;
+    :try_start_0
+    iget-object v1, p0, Lcom/android/settingslib/deviceinfo/AbstractWifiMacAddressPreferenceController;->mWifiManager:Landroid/net/wifi/WifiManager;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getFactoryMacAddresses()[Ljava/lang/String;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    array-length v2, v0
+    array-length v2, v1
 
     if-lez v2, :cond_0
 
     const/4 v2, 0x0
 
-    aget-object v1, v0, v2
+    aget-object v2, v1, v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v2
 
     :cond_0
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/android/settingslib/deviceinfo/AbstractWifiMacAddressPreferenceController;->mWifiMacAddress:Landroidx/preference/Preference;
-
-    sget v3, Lcom/android/settingslib/R$string;->status_unavailable:I
-
-    invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
-
     goto :goto_0
 
-    :cond_1
-    iget-object v2, p0, Lcom/android/settingslib/deviceinfo/AbstractWifiMacAddressPreferenceController;->mWifiMacAddress:Landroidx/preference/Preference;
-
-    invoke-virtual {v2, v1}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+    :catch_0
+    move-exception v1
 
     :goto_0
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/android/settingslib/deviceinfo/AbstractWifiMacAddressPreferenceController;->mWifiMacAddress:Landroidx/preference/Preference;
+
+    sget v2, Lcom/android/settingslib/R$string;->status_unavailable:I
+
+    invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setSummary(I)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p0, Lcom/android/settingslib/deviceinfo/AbstractWifiMacAddressPreferenceController;->mWifiMacAddress:Landroidx/preference/Preference;
+
+    invoke-virtual {v1, v0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :goto_1
     return-void
 .end method

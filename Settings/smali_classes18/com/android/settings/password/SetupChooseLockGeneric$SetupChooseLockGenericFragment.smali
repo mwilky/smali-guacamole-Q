@@ -71,7 +71,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f1600e3
+    const v0, 0x7f1600e4
 
     invoke-virtual {p0, v0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->addPreferencesFromResource(I)V
 
@@ -367,7 +367,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0804dd
+    const v2, 0x7f0804e4
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -384,7 +384,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f121358
+    const v1, 0x7f12135f
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;

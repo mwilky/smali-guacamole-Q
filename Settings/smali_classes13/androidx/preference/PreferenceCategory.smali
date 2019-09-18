@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f06042e
+    const v3, 0x7f06042f
 
     invoke-static {v2, v3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

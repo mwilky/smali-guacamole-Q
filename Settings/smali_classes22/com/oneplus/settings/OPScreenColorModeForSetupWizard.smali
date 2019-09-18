@@ -35,7 +35,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a03af
+    const v2, 0x7f0a03b1
 
     invoke-virtual {v1, v2, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
@@ -45,7 +45,7 @@
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    const v3, 0x7f0a042b
+    const v3, 0x7f0a042d
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/OPScreenColorModeForSetupWizard;->findViewById(I)Landroid/view/View;
 

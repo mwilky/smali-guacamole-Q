@@ -282,7 +282,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
         </activity>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="" android:launchMode="singleTask" android:name="com.android.settings.Settings$ApnSettingsActivity" android:parentActivityName="com.android.settings.Settings$NetworkDashboardActivity" android:process="com.android.phone" android:theme="@style/Oneplus.BaseActivity.Theme">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="" android:launchMode="singleTask" android:name="com.android.settings.Settings$ApnSettingsActivity" android:parentActivityName="com.android.settings.Settings$NetworkDashboardActivity" android:process="com.android.phone" android:screenOrientation="portrait" android:theme="@style/Oneplus.BaseActivity.Theme">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.APN_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -1132,7 +1132,7 @@
         <activity android:exported="false" android:name="com.android.settings.deviceinfo.StorageWizardMoveConfirm" android:theme="@style/GlifV3Theme.Light"/>
         <activity android:exported="true" android:name="com.android.settings.deviceinfo.StorageWizardMoveProgress" android:permission="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" android:theme="@style/GlifV3Theme.Light"/>
         <receiver android:exported="true" android:name="com.android.settings.deviceinfo.StorageUnmountReceiver" android:permission="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/apn_edit" android:name="com.android.settings.Settings$ApnEditorActivity" android:process="com.android.phone" android:theme="@style/Oneplus.BaseActivity.Theme">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/apn_edit" android:name="com.android.settings.Settings$ApnEditorActivity" android:process="com.android.phone" android:screenOrientation="portrait" android:theme="@style/Oneplus.BaseActivity.Theme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.EDIT"/>
@@ -1261,7 +1261,7 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.nfc.AndroidBeam"/>
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED" android:value="true"/>
         </activity>
-        <activity android:icon="@drawable/ic_cast_24dp" android:label="@string/op_wifi_display_settings_title" android:name="com.android.settings.Settings$WifiDisplaySettingsActivity" android:parentActivityName="com.android.settings.Settings" android:screenOrientation="portrait">
+        <activity android:icon="@drawable/ic_cast_24dp" android:label="@string/op_wifi_display_summary" android:name="com.android.settings.Settings$WifiDisplaySettingsActivity" android:parentActivityName="com.android.settings.Settings" android:screenOrientation="portrait">
             <intent-filter android:priority="1">
                 <action android:name="android.settings.CAST_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -2450,6 +2450,7 @@
         <activity android:name="com.oneplus.settings.ringtone.OPRingtonePickerActivity" android:screenOrientation="portrait" android:theme="@style/OPTheme.Ringtone">
             <intent-filter>
                 <action android:name="oneplus.intent.action.RINGTONE_PICKER"/>
+                <action android:name="android.intent.action.RINGTONE_PICKER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>

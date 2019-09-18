@@ -85,6 +85,29 @@
     return-object v0
 .end method
 
+.method private isIntentResolvable(Landroid/content/Intent;)Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
 
 # virtual methods
 .method public buildContextualCard()Lcom/android/settings/homepage/contextualcards/ContextualCard;
@@ -126,7 +149,7 @@
 
     iget-object v2, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
 
-    const v3, 0x7f120e2a
+    const v3, 0x7f120e2d
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -174,7 +197,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f080376
+    const v2, 0x7f08037a
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -296,7 +319,7 @@
 .end method
 
 .method public onPrimaryClick(Landroid/content/Context;)V
-    .locals 2
+    .locals 3
 
     new-instance v0, Landroid/content/Intent;
 
@@ -308,10 +331,24 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    move-result-object v0
+    invoke-direct {p0, v0}, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->isIntentResolvable(Landroid/content/Intent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "OPOTACondition"
+
+    const-string v2, "Not found Activity for: oneplus.intent.action.CheckUpdate"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
     return-void
 .end method
 

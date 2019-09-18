@@ -85,7 +85,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a06ef
+    const v2, 0x7f0a06f2
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/oneplus/settings/laboratory/OPRadioButtinGroup$OnRadioGroupClickListener;->OnRadioGroupClick(I)V
+    invoke-interface {v0, v1}, Lcom/oneplus/settings/laboratory/OPRadioButtinGroup$OnRadioGroupClickListener;->onRadioGroupClick(I)V
 
     :cond_0
     return-void
@@ -154,7 +154,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a04b1
+    const v3, 0x7f0a04b3
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a04b1
+    const v3, 0x7f0a04b3
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

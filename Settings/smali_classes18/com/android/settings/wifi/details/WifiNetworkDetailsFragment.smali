@@ -245,7 +245,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f160113
+    const v0, 0x7f160114
 
     return v0
 .end method
@@ -316,7 +316,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f12182b
+    const v2, 0x7f121832
 
     invoke-interface {p1, v0, v1, v0, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 

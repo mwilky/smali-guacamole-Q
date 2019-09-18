@@ -65,7 +65,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/aboutphone/OPForumContributors;->mForumImageview:Landroid/widget/ImageView;
 
-    const v1, 0x7f08048b
+    const v1, 0x7f080492
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -74,7 +74,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/aboutphone/OPForumContributors;->mForumImageview:Landroid/widget/ImageView;
 
-    const v1, 0x7f08048c
+    const v1, 0x7f080493
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -104,7 +104,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/aboutphone/OPForumContributors;->mForumImageview:Landroid/widget/ImageView;
 
-    const v1, 0x7f080489
+    const v1, 0x7f080490
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -113,7 +113,7 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/aboutphone/OPForumContributors;->mForumImageview:Landroid/widget/ImageView;
 
-    const v1, 0x7f08048a
+    const v1, 0x7f080491
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -451,7 +451,7 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/aboutphone/OPForumContributors;->setContentView(I)V
 
-    const v0, 0x7f0a06fc
+    const v0, 0x7f0a06ff
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/aboutphone/OPForumContributors;->findViewById(I)Landroid/view/View;
 
@@ -459,7 +459,7 @@
 
     check-cast v0, Landroid/widget/Toolbar;
 
-    const v1, 0x7f1212b5
+    const v1, 0x7f1212bc
 
     invoke-virtual {v0, v1}, Landroid/widget/Toolbar;->setTitle(I)V
 
@@ -485,7 +485,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120e08
+    const v3, 0x7f120e0b
 
     invoke-virtual {v2, v3}, Landroid/app/ActionBar;->setTitle(I)V
 
@@ -496,13 +496,13 @@
 
     move-result-object v2
 
-    const v3, 0x7f120d40
+    const v3, 0x7f120d41
 
     invoke-virtual {v2, v3}, Landroid/app/ActionBar;->setTitle(I)V
 
     :cond_1
     :goto_0
-    const v2, 0x7f0a028b
+    const v2, 0x7f0a028c
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/aboutphone/OPForumContributors;->findViewById(I)Landroid/view/View;
 
@@ -512,7 +512,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/aboutphone/OPForumContributors;->mForumImageview:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a028a
+    const v2, 0x7f0a028b
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/aboutphone/OPForumContributors;->findViewById(I)Landroid/view/View;
 

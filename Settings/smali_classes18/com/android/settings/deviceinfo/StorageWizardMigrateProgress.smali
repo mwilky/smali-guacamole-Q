@@ -70,11 +70,11 @@
 
     iput v0, p0, Lcom/android/settings/deviceinfo/StorageWizardMigrateProgress;->mMoveId:I
 
-    const v0, 0x7f080371
+    const v0, 0x7f080375
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMigrateProgress;->setIcon(I)V
 
-    const v0, 0x7f1214a6
+    const v0, 0x7f1214ad
 
     const/4 v1, 0x0
 

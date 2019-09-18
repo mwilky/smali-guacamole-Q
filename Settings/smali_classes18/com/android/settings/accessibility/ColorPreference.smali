@@ -108,7 +108,7 @@
 
     move-result v1
 
-    const v2, 0x7f0a0171
+    const v2, 0x7f0a0172
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -120,7 +120,7 @@
 
     if-ge v1, v3, :cond_0
 
-    const v3, 0x7f080690
+    const v3, 0x7f080699
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -162,7 +162,7 @@
 
     if-eqz v4, :cond_2
 
-    const v5, 0x7f0a068e
+    const v5, 0x7f0a0691
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f0a016f
+    const v0, 0x7f0a0170
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -207,7 +207,7 @@
 
     if-ge v2, v3, :cond_0
 
-    const v2, 0x7f080690
+    const v2, 0x7f080699
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 

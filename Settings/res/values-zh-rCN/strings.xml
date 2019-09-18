@@ -322,7 +322,7 @@
     <string name="another_migration_already_in_progress">系统目前正在执行另一项迁移操作。</string>
     <string name="aod_clock_analog">表盘</string>
     <string name="aod_clock_default">默认</string>
-    <string name="aod_clock_mcl">迈凯轮</string>
+    <string name="aod_clock_mcl">迈凯伦</string>
     <string name="aod_clock_minimalism">极简</string>
     <string name="aod_clock_none">无</string>
     <string name="aod_clock_select_style_text">选择时钟样式</string>
@@ -331,7 +331,7 @@
     <string name="aod_horizon_light_effect_2">红色</string>
     <string name="aod_horizon_light_effect_3">紫色</string>
     <string name="aod_horizon_light_effect_4">金色</string>
-    <string name="aod_horizon_light_effect_5">迈凯轮</string>
+    <string name="aod_horizon_light_effect_5">迈凯伦</string>
     <string name="aod_horizon_light_select">选择颜⾊</string>
     <string name="aod_horizon_light_snake_action">去开启</string>
     <string name="aod_horizon_light_snake_tip">此功能在开启“新通知提醒”后即可使用</string>
@@ -2974,7 +2974,8 @@
     <string name="oneplus_cpu">处理器</string>
     <string name="oneplus_custom_time">自定义时间开启</string>
     <string name="oneplus_customization">虚拟按键自定义设置</string>
-    <string name="oneplus_customization_summary">长按、双击、一键隐藏</string>
+    <string name="oneplus_customization_summary">长按、双击</string>
+    <string name="oneplus_customization_summary_hide_navbar">长按、双击、一键隐藏</string>
     <string name="oneplus_dark_mode">暗色模式</string>
     <string name="oneplus_dark_mode_summary">部分系统界面变为暗色，以减少屏幕耗电</string>
     <string name="oneplus_data_usage_control_title">联网控制</string>
@@ -3250,6 +3251,10 @@
     <string name="oneplus_intelligently_select_best_wifi">智能选择最佳 WLAN</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">通过对连接性和信号强度的检测和分析，智能选择并连接最佳的 WLAN</string>
     <string name="oneplus_intensely">强烈</string>
+    <string name="oneplus_is_turn_on_feature">确认开启该功能吗？</string>
+    <string name="oneplus_is_turn_on_feature_summary">"开启该功能后，在某些情况下可能出现以下问题：
+1.屏幕局部显示异常
+2.自动亮度调节异常"</string>
     <string name="oneplus_keyboard_settings_category">输入法设置</string>
     <string name="oneplus_lab_dislike">不喜欢</string>
     <string name="oneplus_lab_features">实验室功能</string>
@@ -3609,7 +3614,8 @@
     <string name="oneplus_search_keyword_swap_navkeys">调换按键, 切换</string>
     <string name="oneplus_search_keyword_switch">搬家, 迁移, 传输, 换机</string>
     <string name="oneplus_search_keyword_theme_mode">@string/oneplus_search_keyword_screen_color_mode</string>
-    <string name="oneplus_search_keyword_theme_settings">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包</string>
+    <string name="oneplus_search_keyword_theme_settings">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包, 简约, 沉浸, 活泼</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">锁屏个性化, 壁纸, 时钟样式, 指纹动画效果, 通知光效, 系统个性化, 强调色, 形状, 字体, 色调, 图标包, 迈凯伦, 简约, 沉浸, 活泼</string>
     <string name="oneplus_search_keyword_three_screenshots">截屏</string>
     <string name="oneplus_search_keyword_timer_boot">开机, 关机</string>
     <string name="oneplus_search_keyword_user_experience">推送, 体验, 改进, 计划, 方案</string>
@@ -3638,7 +3644,7 @@
     <string name="oneplus_select_fingerprint_animation_effect_2">波纹</string>
     <string name="oneplus_select_fingerprint_animation_effect_3">霓裳</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">涟漪</string>
-    <string name="oneplus_select_fingerprint_animation_effect_mcl">迈凯轮</string>
+    <string name="oneplus_select_fingerprint_animation_effect_mcl">迈凯伦</string>
     <string name="oneplus_select_fingerprint_animation_effect_none">无动画</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">选择指纹动画效果</string>
     <string name="oneplus_service_messaging_summary">允许一加提供快速即时的移动互联网服务信息推送，以保证产品体验。</string>
@@ -3731,8 +3737,9 @@
     <string name="oneplus_theme_preset_color">活泼</string>
     <string name="oneplus_theme_preset_dark">沉浸</string>
     <string name="oneplus_theme_preset_light">简约</string>
-    <string name="oneplus_theme_preset_mcl">迈凯轮</string>
-    <string name="oneplus_theme_preset_summary">为你提供整套的全局主题，包括壁纸、强调色、色调等内容</string>
+    <string name="oneplus_theme_preset_mcl">迈凯伦</string>
+    <string name="oneplus_theme_preset_summary">为你提供整套的全局主题，包括强调色、色调等内容</string>
+    <string name="oneplus_theme_preset_summary_tmp">为你提供整套的全局主题，包括壁纸、强调色、色调等内容</string>
     <string name="oneplus_theme_shape">形状</string>
     <string name="oneplus_theme_shape_effect_round">圆形</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">圆方形</string>
@@ -3778,6 +3785,8 @@
     <string name="oneplus_top_notification">置顶通知</string>
     <string name="oneplus_touch_vibrate">触摸振动</string>
     <string name="oneplus_turn_off_time">结束时间</string>
+    <string name="oneplus_turn_on_feature_cancel">取消</string>
+    <string name="oneplus_turn_on_feature_ok">开启</string>
     <string name="oneplus_turn_on_time">开始时间</string>
     <string name="oneplus_uninstatll_multi_app_msg">卸载双开应用后，应用内的数据将被删除。确认要卸载吗？</string>
     <string name="oneplus_uninstatll_multi_app_title">双开%1$s</string>

@@ -144,7 +144,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v4, 0x7f12109a
+    const v4, 0x7f1210a1
 
     invoke-virtual {p0, v4}, Lcom/oneplus/settings/aboutphone/OpenIdSettings;->getString(I)Ljava/lang/String;
 
@@ -229,7 +229,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v5, 0x7f12109a
+    const v5, 0x7f1210a1
 
     invoke-virtual {p0, v5}, Lcom/oneplus/settings/aboutphone/OpenIdSettings;->getString(I)Ljava/lang/String;
 
@@ -267,7 +267,7 @@
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
-    const v2, 0x7f0a059e
+    const v2, 0x7f0a05a0
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -343,13 +343,13 @@
 
     invoke-direct {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f121099
+    const v1, 0x7f1210a0
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setTitle(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f121098
+    const v1, 0x7f12109f
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setMessage(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
@@ -359,7 +359,7 @@
 
     invoke-direct {v1, p0}, Lcom/oneplus/settings/aboutphone/-$$Lambda$OpenIdSettings$gH9zyX_fqtkhjBj1gsjo4pbq_5Y;-><init>(Lcom/oneplus/settings/aboutphone/OpenIdSettings;)V
 
-    const v2, 0x7f121097
+    const v2, 0x7f12109e
 
     invoke-virtual {v0, v2, v1}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 

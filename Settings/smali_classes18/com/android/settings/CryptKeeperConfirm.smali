@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcom/android/settings/CryptKeeperConfirm;->mContentView:Landroid/view/View;
 
-    const v1, 0x7f0a024e
+    const v1, 0x7f0a024f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

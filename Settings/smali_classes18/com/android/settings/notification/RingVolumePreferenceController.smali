@@ -195,7 +195,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f08049f
+    const v0, 0x7f0804a6
 
     iput v0, p0, Lcom/android/settings/notification/RingVolumePreferenceController;->mMuteIcon:I
 
@@ -208,7 +208,7 @@
     :cond_0
     if-nez v0, :cond_1
 
-    const v0, 0x7f08049e
+    const v0, 0x7f0804a5
 
     iput v0, p0, Lcom/android/settings/notification/RingVolumePreferenceController;->mMuteIcon:I
 
@@ -221,7 +221,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/settings/notification/RingVolumePreferenceController;->mPreference:Lcom/android/settings/notification/VolumeSeekBarPreference;
 
-    const v1, 0x7f08049d
+    const v1, 0x7f0804a4
 
     invoke-virtual {v0, v1}, Lcom/android/settings/notification/VolumeSeekBarPreference;->showIcon(I)V
 

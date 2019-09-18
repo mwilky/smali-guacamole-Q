@@ -933,7 +933,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
-    const v4, 0x7f0603c6
+    const v4, 0x7f0603c7
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -943,7 +943,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x7f0603ca
+    const v4, 0x7f0603cb
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -953,7 +953,7 @@
 
     aput-object v4, v3, v6
 
-    const v4, 0x7f0603d1
+    const v4, 0x7f0603d2
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -963,7 +963,7 @@
 
     aput-object v4, v3, v7
 
-    const v4, 0x7f0603cc
+    const v4, 0x7f0603cd
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -973,7 +973,7 @@
 
     aput-object v4, v3, v8
 
-    const v4, 0x7f0603c4
+    const v4, 0x7f0603c5
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -983,7 +983,7 @@
 
     aput-object v4, v3, v9
 
-    const v4, 0x7f0603d5
+    const v4, 0x7f0603d6
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -993,7 +993,7 @@
 
     aput-object v4, v3, v10
 
-    const v4, 0x7f0603e1
+    const v4, 0x7f0603e2
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1003,7 +1003,7 @@
 
     aput-object v4, v3, v11
 
-    const v4, 0x7f0603c8
+    const v4, 0x7f0603c9
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1013,7 +1013,7 @@
 
     aput-object v4, v3, v12
 
-    const v4, 0x7f0603d3
+    const v4, 0x7f0603d4
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1023,7 +1023,7 @@
 
     aput-object v4, v3, v13
 
-    const v4, 0x7f0603c0
+    const v4, 0x7f0603c1
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1033,7 +1033,7 @@
 
     aput-object v4, v3, v14
 
-    const v4, 0x7f0603cf
+    const v4, 0x7f0603d0
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1043,7 +1043,7 @@
 
     aput-object v4, v3, v15
 
-    const v4, 0x7f0603cd
+    const v4, 0x7f0603ce
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1057,7 +1057,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
-    const v2, 0x7f0603c5
+    const v2, 0x7f0603c6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1065,7 +1065,7 @@
 
     aput-object v2, v3, v5
 
-    const v2, 0x7f0603c9
+    const v2, 0x7f0603ca
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1073,7 +1073,7 @@
 
     aput-object v2, v3, v6
 
-    const v2, 0x7f0603d0
+    const v2, 0x7f0603d1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1081,7 +1081,7 @@
 
     aput-object v2, v3, v7
 
-    const v2, 0x7f0603cb
+    const v2, 0x7f0603cc
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1089,7 +1089,7 @@
 
     aput-object v2, v3, v8
 
-    const v2, 0x7f0603c3
+    const v2, 0x7f0603c4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1097,7 +1097,7 @@
 
     aput-object v2, v3, v9
 
-    const v2, 0x7f0603d4
+    const v2, 0x7f0603d5
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1105,7 +1105,7 @@
 
     aput-object v2, v3, v10
 
-    const v2, 0x7f0603e0
+    const v2, 0x7f0603e1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1113,7 +1113,7 @@
 
     aput-object v2, v3, v11
 
-    const v2, 0x7f0603c7
+    const v2, 0x7f0603c8
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1121,7 +1121,7 @@
 
     aput-object v2, v3, v12
 
-    const v2, 0x7f0603d2
+    const v2, 0x7f0603d3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1129,7 +1129,7 @@
 
     aput-object v2, v3, v13
 
-    const v2, 0x7f0603bf
+    const v2, 0x7f0603c0
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1137,7 +1137,7 @@
 
     aput-object v2, v3, v14
 
-    const v2, 0x7f0603ce
+    const v2, 0x7f0603cf
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1210,33 +1210,33 @@
 
     :array_0
     .array-data 4
-        0x7f12105d
-        0x7f121063
-        0x7f121069
-        0x7f121066
-        0x7f121059
-        0x7f12106e
-        0x7f121071
-        0x7f121060
+        0x7f121064
         0x7f12106a
-        0x7f12106b
-        0x7f12105a
+        0x7f121070
+        0x7f12106d
+        0x7f121060
+        0x7f121075
+        0x7f121078
+        0x7f121067
+        0x7f121071
+        0x7f121072
+        0x7f121061
         0x7f1204f8
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f12105b
-        0x7f121061
-        0x7f121067
-        0x7f121064
-        0x7f121057
-        0x7f12106c
-        0x7f12106f
-        0x7f12105e
-        0x7f12106a
+        0x7f121062
+        0x7f121068
+        0x7f12106e
         0x7f12106b
-        0x7f12105a
+        0x7f12105e
+        0x7f121073
+        0x7f121076
+        0x7f121065
+        0x7f121071
+        0x7f121072
+        0x7f121061
         0x7f1204f8
     .end array-data
 .end method
@@ -1438,7 +1438,7 @@
 .method private static isTapToWakeAvailable(Landroid/content/res/Resources;)Z
     .locals 1
 
-    const v0, 0x11100d0
+    const v0, 0x11100d1
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1811,7 +1811,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0603c6
+    const v1, 0x7f0603c7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2128,7 +2128,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f121265
+    const v4, 0x7f12126c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2147,7 +2147,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f121263
+    const v4, 0x7f12126a
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2168,7 +2168,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120ead
+    const v4, 0x7f120eaf
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2187,7 +2187,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb5
+    const v4, 0x7f120eb7
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2208,7 +2208,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb3
+    const v4, 0x7f120eb5
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2227,7 +2227,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb6
+    const v4, 0x7f120eb8
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2248,7 +2248,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb4
+    const v4, 0x7f120eb6
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2290,7 +2290,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb9
+    const v4, 0x7f120ebb
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2737,7 +2737,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f120ebb
+    const v7, 0x7f120ebd
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2764,7 +2764,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f120eb8
+    const v7, 0x7f120eba
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2797,12 +2797,12 @@
 
     if-eqz v0, :cond_13
 
-    const v4, 0x7f1214f7
+    const v4, 0x7f1214fe
 
     goto :goto_a
 
     :cond_13
-    const v4, 0x7f1214f6
+    const v4, 0x7f1214fd
 
     :goto_a
     invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setSummary(I)V
@@ -2860,7 +2860,7 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
-    const v3, 0x7f120ec5
+    const v3, 0x7f120ec7
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -2871,7 +2871,7 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
-    const v3, 0x7f120ec9
+    const v3, 0x7f120ecb
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -2881,7 +2881,7 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
-    const v3, 0x7f120ec7
+    const v3, 0x7f120ec9
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -2906,12 +2906,12 @@
 
     if-ne v0, v1, :cond_1a
 
-    const v1, 0x7f120ec1
+    const v1, 0x7f120ec3
 
     goto :goto_c
 
     :cond_1a
-    const v1, 0x7f120ebf
+    const v1, 0x7f120ec1
 
     :goto_c
     invoke-virtual {v2, v1}, Landroidx/preference/Preference;->setSummary(I)V
@@ -3020,7 +3020,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f121271
+    const v5, 0x7f121278
 
     const/4 v6, 0x1
 
@@ -3416,7 +3416,7 @@
 
     if-eqz v3, :cond_6
 
-    const v5, 0x7f120d42
+    const v5, 0x7f120d43
 
     invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setSummary(I)V
 

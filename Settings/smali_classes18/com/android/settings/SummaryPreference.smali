@@ -51,7 +51,7 @@
 
     iget-object v0, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f0a016b
+    const v1, 0x7f0a016c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -97,7 +97,7 @@
     :goto_0
     iget-boolean v1, p0, Lcom/android/settings/SummaryPreference;->mChartEnabled:Z
 
-    const v4, 0x7f0a034f
+    const v4, 0x7f0a0350
 
     if-eqz v1, :cond_2
 
@@ -178,7 +178,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121476
+    const v1, 0x7f12147d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -268,7 +268,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121476
+    const v1, 0x7f12147d
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

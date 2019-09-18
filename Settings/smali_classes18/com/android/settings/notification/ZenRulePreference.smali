@@ -203,7 +203,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1214f7
+    const v1, 0x7f1214fe
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -219,7 +219,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1214f6
+    const v1, 0x7f1214fd
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -282,7 +282,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0721
+    const v1, 0x7f0a0724
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

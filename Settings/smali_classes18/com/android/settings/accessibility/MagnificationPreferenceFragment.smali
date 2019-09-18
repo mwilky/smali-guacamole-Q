@@ -188,7 +188,7 @@
 .method static isApplicable(Landroid/content/res/Resources;)Z
     .locals 1
 
-    const v0, 0x11100bd
+    const v0, 0x11100be
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 

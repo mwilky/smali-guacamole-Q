@@ -25,7 +25,7 @@
 
     iget-object v2, p0, Lcom/android/settings/deviceinfo/hardwareinfo/SerialNumberPreferenceController;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f121436
+    const v3, 0x7f12143d
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

@@ -298,15 +298,15 @@
     <item type="id" name="checked" />
     <item type="id" name="chip" />
     <item type="id" name="chip_group" />
-    <item type="id" name="choose_border" />
+    <item type="id" name="choose_container" />
     <item type="id" name="choose_different_network" />
     <item type="id" name="choose_image" />
-    <item type="id" name="choose_image_group" />
     <item type="id" name="choose_lock_clear_button" />
     <item type="id" name="choose_lock_next_button" />
     <item type="id" name="choose_lock_password_clear_button" />
     <item type="id" name="choose_lock_password_next_button" />
     <item type="id" name="choose_lock_scrollview" />
+    <item type="id" name="choose_mask" />
     <item type="id" name="choose_name" />
     <item type="id" name="choose_title" />
     <item type="id" name="chronometer" />
@@ -802,6 +802,7 @@
     <item type="id" name="layout_container" />
     <item type="id" name="layout_head" />
     <item type="id" name="layout_left" />
+    <item type="id" name="layout_lockPattern" />
     <item type="id" name="layout_lockPattern_parent" />
     <item type="id" name="layout_middle" />
     <item type="id" name="layout_right" />

@@ -39,13 +39,22 @@
 
     invoke-super {p0, p1}, Lcom/oneplus/settings/BaseActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->finish()V
+
+    :cond_0
     iput-object p0, p0, Lcom/oneplus/settings/OPSecurityDetectionActivity;->mContext:Landroid/content/Context;
 
     const v0, 0x7f0d0163
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->setContentView(I)V
 
-    const v0, 0x7f0a06b6
+    const v0, 0x7f0a06b9
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->findViewById(I)Landroid/view/View;
 
@@ -53,7 +62,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a04eb
+    const v1, 0x7f0a04ed
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->findViewById(I)Landroid/view/View;
 
@@ -61,7 +70,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f120ff8
+    const v2, 0x7f120ffe
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 
@@ -69,7 +78,7 @@
 
     const-string v3, "http://www.qq.com/privacy.htm"
 
-    const v4, 0x7f120ff9
+    const v4, 0x7f120fff
 
     invoke-virtual {p0, v4}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 
@@ -89,7 +98,7 @@
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    const v6, 0x7f120ff6
+    const v6, 0x7f120ffc
 
     invoke-virtual {p0, v6}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 
@@ -97,7 +106,7 @@
 
     const-string v7, "https://www.oppo.com/cn/service/help/640?id=640&name=%E6%9C%8D%E5%8A%A1%E6%94%BF%E7%AD%96&hdscreen=1"
 
-    const v8, 0x7f120ff7
+    const v8, 0x7f120ffd
 
     invoke-virtual {p0, v8}, Lcom/oneplus/settings/OPSecurityDetectionActivity;->getString(I)Ljava/lang/String;
 

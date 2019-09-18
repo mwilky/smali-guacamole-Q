@@ -29,11 +29,11 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setIcon(I)V
 
-    const v0, 0x7f121759
+    const v0, 0x7f121760
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setTitle(I)V
 
-    const v0, 0x7f08031c
+    const v0, 0x7f080320
 
     invoke-direct {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -136,7 +136,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1217e0
+    const v2, 0x7f1217e7
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -159,7 +159,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSummaryUpdater;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1214f6
+    const v1, 0x7f1214fd
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -212,7 +212,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121110
+    const v2, 0x7f121117
 
     const/4 v3, 0x2
 

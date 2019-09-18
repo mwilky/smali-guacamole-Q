@@ -471,7 +471,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f0a0521
+    const v2, 0x7f0a0523
 
     if-ne v0, v2, :cond_1
 
@@ -515,7 +515,7 @@
 
     move-result v0
 
-    const v2, 0x7f0a0522
+    const v2, 0x7f0a0524
 
     const/4 v3, 0x0
 
@@ -530,7 +530,7 @@
 
     move-result v0
 
-    const v2, 0x7f0a0520
+    const v2, 0x7f0a0522
 
     if-ne v0, v2, :cond_3
 
@@ -543,7 +543,7 @@
 
     move-result v0
 
-    const v2, 0x7f0a051f
+    const v2, 0x7f0a0521
 
     if-ne v0, v2, :cond_5
 

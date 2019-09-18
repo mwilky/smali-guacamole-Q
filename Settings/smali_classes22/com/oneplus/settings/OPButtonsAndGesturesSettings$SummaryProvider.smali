@@ -110,7 +110,7 @@
 
     iget-object v2, p0, Lcom/oneplus/settings/OPButtonsAndGesturesSettings$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120e51
+    const v4, 0x7f120e53
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

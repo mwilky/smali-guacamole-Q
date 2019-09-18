@@ -117,7 +117,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f0a017a
+    const v5, 0x7f0a017b
 
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     check-cast v5, Landroid/widget/Button;
 
-    const v6, 0x7f121456
+    const v6, 0x7f12145d
 
     invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/PrivateVolumeUnmount;->getText(I)Ljava/lang/CharSequence;
 

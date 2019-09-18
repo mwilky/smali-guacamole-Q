@@ -132,7 +132,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a0777
+    const v5, 0x7f0a077a
 
     const-string v6, "wifi_network_list_fragment"
 
@@ -162,19 +162,19 @@
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/wifi/dpp/WifiDppQrCodeBaseFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f08039a
+    const v0, 0x7f08039e
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/dpp/WifiDppChooseSavedWifiNetworkFragment;->setHeaderIconImageResource(I)V
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiDppChooseSavedWifiNetworkFragment;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f1217d1
+    const v1, 0x7f1217d8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiDppChooseSavedWifiNetworkFragment;->mSummary:Landroid/widget/TextView;
 
-    const v1, 0x7f1217d2
+    const v1, 0x7f1217d9
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

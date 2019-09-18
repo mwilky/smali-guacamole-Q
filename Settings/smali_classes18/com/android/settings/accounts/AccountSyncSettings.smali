@@ -838,7 +838,7 @@
     :goto_5
     if-nez v12, :cond_9
 
-    const v4, 0x7f1214fe
+    const v4, 0x7f121505
 
     invoke-virtual {v8, v4}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->setSummary(I)V
 
@@ -855,7 +855,7 @@
     :cond_9
     if-eqz v13, :cond_a
 
-    const v4, 0x7f121503
+    const v4, 0x7f12150a
 
     invoke-virtual {v8, v4}, Lcom/android/settings/accounts/SyncStateSwitchPreference;->setSummary(I)V
 
@@ -1017,7 +1017,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f121504
+    const v3, 0x7f12150b
 
     invoke-virtual {v1, v3}, Lcom/oneplus/settings/widget/OPFooterPreference;->setTitle(I)V
 
@@ -1674,7 +1674,7 @@
 
     nop
 
-    const v0, 0x7f121506
+    const v0, 0x7f12150d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/accounts/AccountSyncSettings;->getString(I)Ljava/lang/String;
 
@@ -1696,7 +1696,7 @@
 
     nop
 
-    const v2, 0x7f121505
+    const v2, 0x7f12150c
 
     invoke-virtual {p0, v2}, Lcom/android/settings/accounts/AccountSyncSettings;->getString(I)Ljava/lang/String;
 

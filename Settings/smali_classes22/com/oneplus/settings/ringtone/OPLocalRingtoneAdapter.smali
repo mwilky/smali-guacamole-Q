@@ -104,7 +104,7 @@
 
     iput-object v1, v0, Lcom/oneplus/settings/ringtone/OPLocalRingtoneAdapter$HoldView;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f0a02f4
+    const v1, 0x7f0a02f5
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

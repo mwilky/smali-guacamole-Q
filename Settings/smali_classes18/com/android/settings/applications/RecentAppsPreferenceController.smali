@@ -300,7 +300,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/RecentAppsPreferenceController;->mRecentAppsPreference:Lcom/android/settingslib/widget/LayoutPreference;
 
-    const v1, 0x7f0a047d
+    const v1, 0x7f0a047f
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -312,7 +312,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211e6
+    const v2, 0x7f1211ed
 
     invoke-virtual {v1, v2}, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->setHeaderTitleRes(I)Lcom/android/settingslib/widget/AppEntitiesHeaderController;
 

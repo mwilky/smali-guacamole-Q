@@ -103,7 +103,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0603c6
+    const v3, 0x7f0603c7
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -117,7 +117,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0603c5
+    const v3, 0x7f0603c6
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -428,7 +428,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12105d
+    const v2, 0x7f121064
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -570,7 +570,7 @@
 
     if-gt v0, v2, :cond_0
 
-    const v2, 0x7f0a0175
+    const v2, 0x7f0a0176
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -657,7 +657,7 @@
     goto :goto_0
 
     :cond_2
-    const v2, 0x7f0a03c8
+    const v2, 0x7f0a03ca
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -689,14 +689,14 @@
 
     :array_0
     .array-data 4
-        0x7f0a015f
         0x7f0a0160
-        0x7f0a0163
+        0x7f0a0161
         0x7f0a0164
         0x7f0a0165
         0x7f0a0166
         0x7f0a0167
         0x7f0a0168
+        0x7f0a0169
     .end array-data
 .end method
 
@@ -707,7 +707,7 @@
 
     nop
 
-    const v0, 0x7f0a05e5
+    const v0, 0x7f0a05e8
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

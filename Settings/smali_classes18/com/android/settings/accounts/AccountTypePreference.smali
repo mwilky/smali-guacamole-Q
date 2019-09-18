@@ -1,5 +1,5 @@
 .class public Lcom/android/settings/accounts/AccountTypePreference;
-.super Lcom/android/settingslib/widget/apppreference/AppPreference;
+.super Lcom/android/settings/widget/AppPreference;
 .source "AccountTypePreference.java"
 
 # interfaces
@@ -26,7 +26,7 @@
 .method public constructor <init>(Landroid/content/Context;ILandroid/accounts/Account;Ljava/lang/String;ILjava/lang/CharSequence;Ljava/lang/String;Landroid/os/Bundle;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/android/settingslib/widget/apppreference/AppPreference;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/android/settings/widget/AppPreference;-><init>(Landroid/content/Context;)V
 
     iget-object v0, p3, Landroid/accounts/Account;->name:Ljava/lang/String;
 

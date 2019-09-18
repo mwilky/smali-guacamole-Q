@@ -3274,10 +3274,11 @@ Battery saver turns off automatically when your device is charging."</string>
     <string name="oneplus_contorl_font_family_subtitle">sans-serif-medium</string>
     <string name="oneplus_contorl_font_family_title">sans-serif-medium</string>
     <string name="oneplus_contorl_font_family_title_extended">sans-serif-medium</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESSOR</string>
     <string name="oneplus_custom_time">Custom time range</string>
     <string name="oneplus_customization">Navigation bar customization</string>
-    <string name="oneplus_customization_summary">Long press, double tap, hide the navigation bar</string>
+    <string name="oneplus_customization_summary">Long press, double tap</string>
+    <string name="oneplus_customization_summary_hide_navbar">Long press, double tap, hide the navigation bar</string>
     <string name="oneplus_dark_mode">@string/theme_switch_dark_mode_title</string>
     <string name="oneplus_dark_mode_summary">Part of the system interface becomes dark, in order to reduce the power consumption of the screen</string>
     <string name="oneplus_data_usage_control_title">Data usage control</string>
@@ -3560,6 +3561,10 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_intelligently_select_best_wifi">Intelligently select the best Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Intelligently select and connect the best Wi‑Fi by detecting and analyzing the connectivity and signal strength of Wi‑Fi networks</string>
     <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_is_turn_on_feature">Are you sure you want to turn on this feature?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"When it's turned on, the following situations might occur occasionally:
+1.Some areas of the screen display are abnormal
+2.Adaptive brightness won't work properly"</string>
     <string name="oneplus_keyboard_settings_category">@string/input_method</string>
     <string name="oneplus_lab_dislike">Dislike</string>
     <string name="oneplus_lab_features">LAB FEATURES</string>
@@ -3791,7 +3796,6 @@ Go to \"Settings - Apps &amp; notifications\", click on the corresponding applic
     <string name="oneplus_preference_settings_turn_on_time">From</string>
     <string name="oneplus_prior_to_use_you_need_to">Prior to use, you need to：</string>
     <string name="oneplus_privacy_policy">Privacy Policy</string>
-    <string name="oneplus_processor">PROCESSOR</string>
     <string name="oneplus_product_info">User guide</string>
     <string name="oneplus_product_info_introduce">"Device's information &amp; Warranty card"</string>
     <string name="oneplus_product_info_summary">Warranty card, preinstalled list</string>
@@ -3974,7 +3978,8 @@ Go to \"Settings - Apps &amp; notifications\", click on the corresponding applic
     <string name="oneplus_search_keyword_swap_navkeys">swap buttons</string>
     <string name="oneplus_search_keyword_switch">transfer,data migration</string>
     <string name="oneplus_search_keyword_theme_mode">@string/oneplus_search_keyword_screen_color_mode</string>
-    <string name="oneplus_search_keyword_theme_settings">LOCK SCREEN CUSTOMIZATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMIZATION, Accent color, Shape, Font, Tone, Icon pack</string>
+    <string name="oneplus_search_keyword_theme_settings">LOCK SCREEN CUSTOMIZATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMIZATION, Accent color, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">LOCK SCREEN CUSTOMIZATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMIZATION, Accent color, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifications,experience,program,improvement</string>
@@ -4101,7 +4106,8 @@ Note:
     <string name="oneplus_theme_preset_dark">Nuanced dark</string>
     <string name="oneplus_theme_preset_light">Illuminating light</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of wallpapers, accent color, tone, etc</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent color, tone, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent color, tone, etc</string>
     <string name="oneplus_theme_shape">Shape</string>
     <string name="oneplus_theme_shape_effect_round">Round</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Round rectangle</string>
@@ -4148,6 +4154,8 @@ Note:
     <string name="oneplus_top_notification">top notification</string>
     <string name="oneplus_touch_vibrate">Touch vibration</string>
     <string name="oneplus_turn_off_time">To</string>
+    <string name="oneplus_turn_on_feature_cancel">CANCEL</string>
+    <string name="oneplus_turn_on_feature_ok">TURN ON</string>
     <string name="oneplus_turn_on_time">From</string>
     <string name="oneplus_uninstatll_multi_app_msg">All data within the parallel app will be erased upon uninstallation. Are you sure you want to uninstall?</string>
     <string name="oneplus_uninstatll_multi_app_title">Parallel %1$s</string>
@@ -4313,6 +4321,7 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_fetch_data_in_process">Loading</string>
     <string name="op_first_time_add_fingerprint_tips">You need to set a password to unlock when the fingerprint is not available</string>
     <string name="op_fragment">Short</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">High power usage apps</string>
     <string name="op_light_mode_title">Light</string>
     <string name="op_linked_launch_summary">Manage apps can be linked launch in the background</string>
@@ -6976,22 +6985,17 @@ Update settings to:
     <item type="string" name="APKTOOL_DUMMY_ba7">false</item>
     <item type="string" name="APKTOOL_DUMMY_bd4">false</item>
     <item type="string" name="APKTOOL_DUMMY_bd5">false</item>
-    <item type="string" name="APKTOOL_DUMMY_c59">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d46">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d82">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d84">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d86">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db6">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db7">false</item>
-    <item type="string" name="APKTOOL_DUMMY_e06">false</item>
-    <item type="string" name="APKTOOL_DUMMY_e07">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f19">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f8d">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f8e">false</item>
-    <item type="string" name="APKTOOL_DUMMY_15bf">false</item>
-    <string name="hardware_keys_action_kill">Kill foreground app</string>
-    <string name="hardware_keys_action_screenshot">Full screenshot</string>
-    <string name="hardware_keys_action_app">Launch custom app (select app in RiCE)</string>
-    <string name="hardware_keys_action_previous_app">Switch to previous app</string>
-    <string name="hardware_keys_action_default_double_recents">Nothing (Switch to previous app)</string>
+    <item type="string" name="APKTOOL_DUMMY_c5a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d47">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d85">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d87">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d89">false</item>
+    <item type="string" name="APKTOOL_DUMMY_db9">false</item>
+    <item type="string" name="APKTOOL_DUMMY_dba">false</item>
+    <item type="string" name="APKTOOL_DUMMY_e09">false</item>
+    <item type="string" name="APKTOOL_DUMMY_e0a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f1c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f91">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f92">false</item>
+    <item type="string" name="APKTOOL_DUMMY_15c6">false</item>
 </resources>

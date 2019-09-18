@@ -245,7 +245,7 @@
 
     if-eqz v3, :cond_2
 
-    const v6, 0x7f0a05c9
+    const v6, 0x7f0a05cc
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -278,21 +278,53 @@
 
     move-result-object v2
 
-    const v4, 0x7f060332
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const v6, 0x7f060332
+
+    invoke-virtual {v4, v6}, Landroid/content/Context;->getColor(I)I
+
+    move-result v4
 
     invoke-virtual {v2, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v6, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mMessage:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mMessage:Landroid/widget/TextView;
 
-    invoke-virtual {v6, v4}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getContext()Landroid/content/Context;
 
-    iget-object v6, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mAutoCheckPinLengthCheckBox:Landroid/widget/CheckBox;
+    move-result-object v7
 
-    invoke-virtual {v6, v4}, Landroid/widget/CheckBox;->setTextColor(I)V
+    invoke-virtual {v7, v6}, Landroid/content/Context;->getColor(I)I
 
-    iget-object v6, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mPasswordEntry:Lcom/android/settings/widget/ImeAwareEditText;
+    move-result v7
 
-    invoke-virtual {v6, v4}, Lcom/android/settings/widget/ImeAwareEditText;->setTextColor(I)V
+    invoke-virtual {v4, v7}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v4, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mAutoCheckPinLengthCheckBox:Landroid/widget/CheckBox;
+
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Landroid/content/Context;->getColor(I)I
+
+    move-result v7
+
+    invoke-virtual {v4, v7}, Landroid/widget/CheckBox;->setTextColor(I)V
+
+    iget-object v4, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mPasswordEntry:Lcom/android/settings/widget/ImeAwareEditText;
+
+    invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Landroid/content/Context;->getColor(I)I
+
+    move-result v6
+
+    invoke-virtual {v4, v6}, Lcom/android/settings/widget/ImeAwareEditText;->setTextColor(I)V
 
     iget-object v4, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mNextButton:Lcom/oneplus/lib/widget/button/OPButton;
 
@@ -300,7 +332,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f06039d
+    const v7, 0x7f06039e
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getColor(I)I
 
@@ -326,7 +358,7 @@
 
     iget-object v0, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mSkipOrClearButton:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f1213d5
+    const v1, 0x7f1213dc
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 

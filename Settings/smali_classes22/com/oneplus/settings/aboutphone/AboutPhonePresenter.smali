@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v1, 0x7f08042f
+    const v1, 0x7f080434
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -164,7 +164,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120e93
+    const v2, 0x7f120e95
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -172,7 +172,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v1, 0x7f080432
+    const v1, 0x7f080437
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -184,7 +184,7 @@
 
     iget-object v4, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v5, 0x7f120da5
+    const v5, 0x7f120da8
 
     invoke-virtual {v4, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -196,9 +196,9 @@
 
     const v4, 0x7f120bdf
 
-    const v5, 0x7f1211ef
+    const v5, 0x7f1211f6
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_a
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -208,7 +208,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_a
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -218,7 +218,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_9
+    if-nez v3, :cond_a
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -237,7 +237,7 @@
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120da6
+    const v7, 0x7f120da9
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -247,7 +247,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_8
+    if-nez v3, :cond_9
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -266,7 +266,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isOP3T()Z
 
@@ -281,7 +281,7 @@
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120e0a
+    const v7, 0x7f120e0d
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -291,13 +291,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120e11
+    const v7, 0x7f120e14
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -307,23 +307,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
-
-    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
-
-    const v7, 0x7f120e0c
-
-    invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -339,13 +323,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120e13
+    const v7, 0x7f120e12
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -355,13 +339,29 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120e0d
+    const v7, 0x7f120e16
+
+    invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
+
+    const v7, 0x7f120e10
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -377,14 +377,14 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     :cond_3
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120e15
+    const v7, 0x7f120e18
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -394,13 +394,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_4
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120da2
+    const v7, 0x7f120da5
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -410,13 +410,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_4
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120d9d
+    const v7, 0x7f120da0
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -426,13 +426,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_4
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120d9c
+    const v7, 0x7f120d9f
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -442,13 +442,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_4
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120da3
+    const v7, 0x7f120da6
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -458,13 +458,13 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_4
 
     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v7, 0x7f120da4
+    const v7, 0x7f120da7
 
     invoke-virtual {v6, v7}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -474,18 +474,25 @@
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
+
+    :cond_4
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v3
+
+    if-nez v3, :cond_5
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     iget-object v3, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
     invoke-static {v3}, Lcom/oneplus/settings/utils/OPAuthenticationInformationUtils;->isNeedShowAuthenticationInformation(Landroid/content/Context;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
     const-string v2, "com.oneplus.intent.OPAuthenticationInformationSettings"
 
@@ -497,7 +504,7 @@
 
     goto :goto_5
 
-    :cond_5
+    :cond_6
     :goto_0
     const-string v2, "android.settings.SHOW_REGULATORY_INFO"
 
@@ -509,7 +516,7 @@
 
     goto :goto_5
 
-    :cond_6
+    :cond_7
     :goto_1
     const-string v3, "ro.rf_version"
 
@@ -523,7 +530,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_8
 
     const-string v2, "android.settings.SHOW_REGULATORY_INFO"
 
@@ -535,7 +542,7 @@
 
     goto :goto_2
 
-    :cond_7
+    :cond_8
     const-string v2, "com.oneplus.intent.OPAuthenticationInformationSettings"
 
     iget-object v5, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
@@ -547,7 +554,7 @@
     :goto_2
     goto :goto_5
 
-    :cond_8
+    :cond_9
     :goto_3
     const-string v2, "android.settings.SHOW_REGULATORY_INFO"
 
@@ -559,13 +566,13 @@
 
     goto :goto_5
 
-    :cond_9
+    :cond_a
     :goto_4
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
 
     move-result v3
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
     const-string v2, "android.settings.SHOW_REGULATORY_INFO"
 
@@ -577,7 +584,7 @@
 
     goto :goto_5
 
-    :cond_a
+    :cond_b
     const-string v2, "com.oneplus.intent.OPAuthenticationInformationSettings"
 
     iget-object v3, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
@@ -586,7 +593,7 @@
 
     move-result-object v1
 
-    :cond_b
+    :cond_c
     :goto_5
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setTitle(Ljava/lang/String;)V
 
@@ -608,7 +615,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120cf3
+    const v2, 0x7f120cf4
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -624,7 +631,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120e08
+    const v2, 0x7f120e0b
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -637,7 +644,7 @@
     :cond_0
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120d40
+    const v2, 0x7f120d41
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -646,7 +653,7 @@
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
     :goto_0
-    const v1, 0x7f080439
+    const v1, 0x7f08043e
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -678,7 +685,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setTitle(Ljava/lang/String;)V
 
-    const v1, 0x7f080551
+    const v1, 0x7f080558
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -792,7 +799,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v2, 0x7f080474
+    const v2, 0x7f08047b
 
     invoke-virtual {v0, v2}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -816,7 +823,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120fed
+    const v2, 0x7f120ff3
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -824,7 +831,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setTitle(Ljava/lang/String;)V
 
-    const v1, 0x7f080493
+    const v1, 0x7f08049a
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -874,7 +881,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120d71
+    const v2, 0x7f120d74
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -882,7 +889,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v1, 0x7f08053b
+    const v1, 0x7f080542
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -920,7 +927,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f08055b
+    const v1, 0x7f080562
 
     iget-object v3, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
@@ -928,7 +935,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120e2f
+    const v4, 0x7f120e32
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -961,7 +968,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080492
+    const v1, 0x7f080499
 
     iget-object v3, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
@@ -969,7 +976,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120d58
+    const v4, 0x7f120d59
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1030,7 +1037,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120e49
+    const v2, 0x7f120e4b
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1040,7 +1047,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120e4b
+    const v2, 0x7f120e4d
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1048,7 +1055,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v1, 0x7f08056b
+    const v1, 0x7f080572
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -1072,7 +1079,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120fee
+    const v2, 0x7f120ff4
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1080,7 +1087,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setTitle(Ljava/lang/String;)V
 
-    const v1, 0x7f0805b5
+    const v1, 0x7f0805bc
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -1153,7 +1160,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120f49
+    const v2, 0x7f120f4c
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1161,7 +1168,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v1, 0x7f0805bb
+    const v1, 0x7f0805c2
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -1232,7 +1239,7 @@
     :cond_0
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setSummary(Ljava/lang/String;)V
 
-    const v2, 0x7f0805b4
+    const v2, 0x7f0805bb
 
     invoke-virtual {v0, v2}, Lcom/oneplus/settings/aboutphone/SoftwareInfoEntity;->setResIcon(I)V
 
@@ -1387,7 +1394,7 @@
 
     if-eqz v1, :cond_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_0
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isOP3T()Z
@@ -1464,9 +1471,15 @@
 
     if-eqz v1, :cond_5
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120d4c
+    const v2, 0x7f120d4d
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1480,6 +1493,12 @@
     move-result v1
 
     if-eqz v1, :cond_7
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
@@ -1574,9 +1593,15 @@
 
     if-eqz v1, :cond_5
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120d4d
+    const v2, 0x7f120d4e
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1590,6 +1615,12 @@
     move-result v1
 
     if-eqz v1, :cond_6
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
@@ -1722,9 +1753,15 @@
 
     if-eqz v1, :cond_5
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v2, 0x7f120d4e
+    const v2, 0x7f120d4f
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -1738,6 +1775,12 @@
     move-result v1
 
     if-eqz v1, :cond_9
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
 
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
@@ -2031,7 +2074,13 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080425
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isMEARom()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f080429
 
     goto/16 :goto_1
 
@@ -2069,7 +2118,7 @@
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f08041b
+    const v0, 0x7f08041f
 
     goto :goto_1
 
@@ -2084,7 +2133,7 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f08041c
+    const v0, 0x7f080420
 
     goto :goto_1
 
@@ -2095,7 +2144,7 @@
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f080419
+    const v0, 0x7f08041d
 
     goto :goto_1
 
@@ -2106,7 +2155,7 @@
 
     if-eqz v0, :cond_5
 
-    const v0, 0x7f08041a
+    const v0, 0x7f08041e
 
     goto :goto_1
 
@@ -2117,7 +2166,7 @@
 
     if-eqz v0, :cond_6
 
-    const v0, 0x7f080422
+    const v0, 0x7f080426
 
     goto :goto_1
 
@@ -2128,7 +2177,7 @@
 
     if-eqz v0, :cond_7
 
-    const v0, 0x7f080418
+    const v0, 0x7f08041c
 
     goto :goto_1
 
@@ -2139,18 +2188,18 @@
 
     if-nez v0, :cond_8
 
-    const v0, 0x7f080425
+    const v0, 0x7f080429
 
     goto :goto_1
 
     :cond_8
-    const v0, 0x7f08041d
+    const v0, 0x7f080421
 
     goto :goto_1
 
     :cond_9
     :goto_0
-    const v0, 0x7f08041d
+    const v0, 0x7f080421
 
     :goto_1
     iget-object v1, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mView:Lcom/oneplus/settings/aboutphone/Contract$View;
@@ -2324,7 +2373,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mView:Lcom/oneplus/settings/aboutphone/Contract$View;
 
-    const v1, 0x7f121369
+    const v1, 0x7f121370
 
     invoke-interface {v0, v1}, Lcom/oneplus/settings/aboutphone/Contract$View;->showLongToast(I)V
 
@@ -2541,7 +2590,7 @@
 
     iget-object v4, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mActivity:Landroid/app/Activity;
 
-    const v5, 0x7f1215ed
+    const v5, 0x7f1215f4
 
     invoke-virtual {v4, v5}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -2615,7 +2664,7 @@
 
     iget-object v2, p0, Lcom/oneplus/settings/aboutphone/AboutPhonePresenter;->mView:Lcom/oneplus/settings/aboutphone/Contract$View;
 
-    const v3, 0x7f121368
+    const v3, 0x7f12136f
 
     invoke-interface {v2, v3}, Lcom/oneplus/settings/aboutphone/Contract$View;->showLongToast(I)V
 

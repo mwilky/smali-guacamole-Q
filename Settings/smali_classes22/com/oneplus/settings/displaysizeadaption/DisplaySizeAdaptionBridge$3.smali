@@ -116,7 +116,7 @@
 
     const/16 v3, 0x1d
 
-    if-ge v2, v3, :cond_3
+    if-gt v2, v3, :cond_3
 
     move v0, v4
 

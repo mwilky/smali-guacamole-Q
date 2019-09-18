@@ -100,8 +100,11 @@
 
     invoke-direct {v1, p0, v2, v3, v4}, Lcom/android/settings/notification/LockScreenNotificationPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
+    if-eqz p2, :cond_0
+
     invoke-virtual {p2, v1}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
 
+    :cond_0
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     new-instance v2, Lcom/android/settings/security/screenlock/PatternVisiblePreferenceController;
@@ -198,7 +201,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f1600dc
+    const v0, 0x7f1600dd
 
     return v0
 .end method

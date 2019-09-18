@@ -422,7 +422,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_10
 
     invoke-static {p1}, Lcom/oneplus/settings/utils/OPUtils;->restoreBackupEntranceInLauncher(Landroid/content/Context;)V
 
@@ -436,83 +436,119 @@
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTrackerForAllSettings()V
 
-    const-string v2, "user"
-
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    check-cast v2, Landroid/os/UserManager;
+    const-string v4, "oneplus_dc_dimming_value"
 
-    iput-object v2, p0, Lcom/oneplus/settings/receiver/SettingsReceiver;->mUm:Landroid/os/UserManager;
-
-    iget-object v2, p0, Lcom/oneplus/settings/receiver/SettingsReceiver;->mUm:Landroid/os/UserManager;
-
-    if-eqz v2, :cond_d
-
-    const/16 v4, 0x3e7
-
-    invoke-virtual {v2, v4}, Landroid/os/UserManager;->isUserRunning(I)Z
+    invoke-static {v2, v4, v8}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v2
 
     if-eqz v2, :cond_d
 
-    const-string v2, "Handle Parallel App Requirement"
+    move v2, v5
 
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    goto :goto_2
+
+    :cond_d
+    move v2, v8
+
+    :goto_2
+    if-eqz v2, :cond_e
+
+    const-string v4, "1"
+
+    goto :goto_3
+
+    :cond_e
+    const-string v4, "0"
+
+    :goto_3
+    const-string v6, "dc_dimming"
+
+    const-string v7, "status"
+
+    invoke-static {v6, v7, v4}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v4, "user"
+
+    invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/os/UserManager;
+
+    iput-object v4, p0, Lcom/oneplus/settings/receiver/SettingsReceiver;->mUm:Landroid/os/UserManager;
+
+    iget-object v4, p0, Lcom/oneplus/settings/receiver/SettingsReceiver;->mUm:Landroid/os/UserManager;
+
+    if-eqz v4, :cond_f
+
+    const/16 v6, 0x3e7
+
+    invoke-virtual {v4, v6}, Landroid/os/UserManager;->isUserRunning(I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_f
+
+    const-string v4, "Handle Parallel App Requirement"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :try_start_1
-    sget-object v2, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
-
-    invoke-virtual {v2}, Landroid/app/Application;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    invoke-static {v2, v0, v8}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v2
-
     sget-object v3, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
 
     invoke-virtual {v3}, Landroid/app/Application;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    invoke-static {v3, v0, v2, v4}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v3, v0, v8}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v3
+
+    sget-object v4, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+
+    invoke-virtual {v4}, Landroid/app/Application;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v4
+
+    invoke-static {v4, v0, v3, v6}, Landroid/provider/Settings$System;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     nop
 
-    goto :goto_2
+    goto :goto_4
 
     :catch_1
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :goto_2
+    :goto_4
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v2, Lcom/oneplus/settings/receiver/SettingsReceiver$1;
+    new-instance v3, Lcom/oneplus/settings/receiver/SettingsReceiver$1;
 
-    invoke-direct {v2, p0, p1}, Lcom/oneplus/settings/receiver/SettingsReceiver$1;-><init>(Lcom/oneplus/settings/receiver/SettingsReceiver;Landroid/content/Context;)V
+    invoke-direct {v3, p0, p1}, Lcom/oneplus/settings/receiver/SettingsReceiver$1;-><init>(Lcom/oneplus/settings/receiver/SettingsReceiver;Landroid/content/Context;)V
 
-    invoke-direct {v0, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v0, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    :cond_d
+    :cond_f
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
     move-result v0
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_10
 
     invoke-static {p1}, Lcom/android/settings/datausage/backgrounddata/utils/BackgroundDataUtils;->initAppBackgroundDataType(Landroid/content/Context;)V
 
-    :cond_e
+    :cond_10
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -523,7 +559,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_11
 
     const-string v0, "persist.sys.oem.otg_support"
 
@@ -553,7 +589,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_11
 
     new-instance v3, Landroid/app/NotificationChannel;
 
@@ -561,7 +597,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f120e2c
+    const v6, 0x7f120e2f
 
     invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -577,7 +613,7 @@
 
     invoke-direct {v4, p1, v9}, Landroidx/core/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v7, 0x7f0804e6
+    const v7, 0x7f0804ed
 
     invoke-virtual {v4, v7}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
 
@@ -647,6 +683,6 @@
 
     invoke-static {v6, v2, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    :cond_f
+    :cond_11
     return-void
 .end method

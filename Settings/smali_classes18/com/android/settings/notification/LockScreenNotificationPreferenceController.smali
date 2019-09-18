@@ -302,7 +302,7 @@
     goto :goto_2
 
     :cond_3
-    const v3, 0x7f120d7d
+    const v3, 0x7f120d80
 
     :goto_2
     return v3
@@ -347,7 +347,7 @@
 
     iget-object v4, p0, Lcom/android/settings/notification/LockScreenNotificationPreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f120d7d
+    const v5, 0x7f120d80
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -813,6 +813,10 @@
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcom/android/settings/notification/LockScreenNotificationPreferenceController;->mLockscreenProfile:Lcom/android/settings/RestrictedListPreference;
+
+    if-eqz v0, :cond_1
+
     iget v0, p0, Lcom/android/settings/notification/LockScreenNotificationPreferenceController;->mProfileUserId:I
 
     const/16 v1, -0x2710

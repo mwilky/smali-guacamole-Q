@@ -62,7 +62,7 @@
 
     iget v0, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference;->mSelectedIndex:I
 
-    if-eq v0, p1, :cond_4
+    if-eq v0, p1, :cond_5
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -70,18 +70,42 @@
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    const/4 v1, 0x4
+    const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
-    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    const/4 v0, 0x2
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    if-ne p1, v0, :cond_0
 
+    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
+
+    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
+
+    const v2, 0x7f0805e7
+
+    invoke-virtual {v0, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setImageResource(I)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
+
+    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
+
+    const v2, 0x7f0805e8
+
+    invoke-virtual {v0, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setImageResource(I)V
+
+    :goto_0
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
     iput p1, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference;->mSelectedIndex:I
@@ -90,7 +114,7 @@
 
     const/4 v0, 0x0
 
-    :goto_0
+    :goto_1
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
     invoke-static {v2}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$100(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
@@ -103,9 +127,9 @@
 
     const/4 v3, 0x1
 
-    if-ge v0, v2, :cond_1
+    if-ge v0, v2, :cond_2
 
-    if-ne p1, v0, :cond_0
+    if-ne p1, v0, :cond_1
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -121,9 +145,9 @@
 
     iput-boolean v3, v2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ItemEntity;->selected:Z
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_0
+    :cond_1
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
     invoke-static {v2}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$100(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
@@ -138,12 +162,12 @@
 
     iput-boolean v1, v2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ItemEntity;->selected:Z
 
-    :goto_1
+    :goto_2
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
     invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
@@ -156,68 +180,7 @@
 
     iget v0, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference;->mSelectedIndex:I
 
-    const v1, 0x7f0805e4
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
-
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
-
-    move-result-object v0
-
-    const v1, 0x7f08052f
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
-
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
-
-    move-result-object v0
-
-    const v1, 0x7f080530
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
-
-    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference;->mSelectedIndex:I
-
-    if-ne v0, v3, :cond_3
-
-    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
-
-    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
-
-    move-result-object v0
-
-    const v1, 0x7f080535
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -233,14 +196,28 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_2
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
+
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
+
+    move-result-object v0
+
+    const v1, 0x7f080537
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
 
     :cond_3
-    iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
-    const v1, 0x7f0805da
+    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference;->mSelectedIndex:I
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
+    if-ne v0, v3, :cond_4
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -248,7 +225,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080532
+    const v1, 0x7f08053c
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -262,7 +239,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080533
+    const v1, 0x7f08053d
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -270,7 +247,38 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :goto_2
+    goto :goto_3
+
+    :cond_4
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
+
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
+
+    move-result-object v0
+
+    const v1, 0x7f080539
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
+
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$000(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Ljava/util/List;
+
+    move-result-object v0
+
+    const v1, 0x7f08053a
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :goto_3
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
     invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomTonePreference;->access$300(Lcom/oneplus/settings/ui/OPCustomTonePreference;)Landroidx/viewpager/widget/PagerAdapter;
@@ -279,7 +287,7 @@
 
     invoke-virtual {v0}, Landroidx/viewpager/widget/PagerAdapter;->notifyDataSetChanged()V
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 
@@ -294,7 +302,7 @@
 .end method
 
 .method public onBindViewHolder(Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;I)V
-    .locals 6
+    .locals 5
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -314,11 +322,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageView:Landroid/widget/ImageView;
+    iget-object v1, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
     iget v2, v0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ItemEntity;->resId:I
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setImageResource(I)V
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -338,11 +346,9 @@
 
     move-result v1
 
-    const v3, 0x7f0805e4
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x4
+    const/16 v4, 0x8
 
     if-ne v1, v2, :cond_1
 
@@ -350,13 +356,9 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -365,9 +367,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     goto :goto_0
 
@@ -378,13 +380,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -393,9 +391,9 @@
     goto :goto_0
 
     :cond_2
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     goto :goto_0
 
@@ -408,21 +406,17 @@
 
     if-eqz v2, :cond_4
 
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageGroup:Landroid/view/ViewGroup;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    const v3, 0x7f0805db
+    const/4 v3, 0x4
 
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    const v3, 0x7f0805da
+    const v3, 0x7f0805e7
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundResource(I)V
-
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
-
-    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/settings/ui/RadiusImageView;->setImageResource(I)V
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomTonePreference;
 
@@ -431,19 +425,19 @@
     goto :goto_0
 
     :cond_4
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->border:Landroid/view/View;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
     :cond_5
     :goto_0
-    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageView:Landroid/widget/ImageView;
+    iget-object v2, p1, Lcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;->imageView:Lcom/oneplus/settings/ui/RadiusImageView;
 
     new-instance v3, Lcom/oneplus/settings/ui/-$$Lambda$OPCustomTonePreference$ChooseStyleAdapter$TQOysjhtGWTNfIFmxiFZJIZ53K4;
 
     invoke-direct {v3, p0, p2, p1}, Lcom/oneplus/settings/ui/-$$Lambda$OPCustomTonePreference$ChooseStyleAdapter$TQOysjhtGWTNfIFmxiFZJIZ53K4;-><init>(Lcom/oneplus/settings/ui/OPCustomTonePreference$ChooseStyleAdapter;ILcom/oneplus/settings/ui/OPCustomTonePreference$ToneViewHolder;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, v3}, Lcom/oneplus/settings/ui/RadiusImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method

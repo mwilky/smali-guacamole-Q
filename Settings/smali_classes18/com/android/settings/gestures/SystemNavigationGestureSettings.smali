@@ -556,7 +556,7 @@
     :cond_4
     const v0, 0x7f110087
 
-    const v1, 0x7f08067a
+    const v1, 0x7f080683
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -565,7 +565,7 @@
     :cond_5
     const v0, 0x7f110086
 
-    const v1, 0x7f080679
+    const v1, 0x7f080682
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -574,7 +574,7 @@
     :cond_6
     const v0, 0x7f110088
 
-    const v1, 0x7f08067b
+    const v1, 0x7f080684
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -759,13 +759,13 @@
 
     new-instance v2, Lcom/android/settings/gestures/SystemNavigationGestureSettings$NavModeCandidateInfo;
 
-    const v4, 0x7f1214f5
+    const v4, 0x7f1214fc
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    const v5, 0x7f1214f4
+    const v5, 0x7f1214fb
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -835,7 +835,7 @@
 .method protected getPreferenceScreenResId()I
     .locals 1
 
-    const v0, 0x7f1600f1
+    const v0, 0x7f1600f2
 
     return v0
 .end method

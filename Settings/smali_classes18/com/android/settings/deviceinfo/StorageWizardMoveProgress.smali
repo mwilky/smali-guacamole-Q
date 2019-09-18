@@ -90,7 +90,7 @@
     return-object v0
 
     :cond_2
-    const v0, 0x7f121512
+    const v0, 0x7f121519
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->getString(I)Ljava/lang/String;
 
@@ -169,11 +169,11 @@
 
     move-result-object v1
 
-    const v2, 0x7f080371
+    const v2, 0x7f080375
 
     invoke-virtual {p0, v2}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setIcon(I)V
 
-    const v2, 0x7f1214b4
+    const v2, 0x7f1214bb
 
     const/4 v3, 0x1
 
@@ -185,7 +185,7 @@
 
     invoke-virtual {p0, v2, v4}, Lcom/android/settings/deviceinfo/StorageWizardMoveProgress;->setHeaderText(I[Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f1214b2
+    const v2, 0x7f1214b9
 
     const/4 v4, 0x2
 

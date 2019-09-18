@@ -6500,7 +6500,7 @@
     </style>
     <style name="Theme.Oneplus.SetupWizardTheme.Black" parent="@style/SetupWizardTheme.Light.Oxygen">
         <item name="android:windowBackground">@color/oneplus_fingerprint_enrolling_bg_ab</item>
-        <item name="android:alertDialogTheme">@style/ThemeOverlay.AlertDialog</item>
+        <item name="android:alertDialogTheme">@style/OnePlusFingerprintEnrolling.Dialog.Alert</item>
         <item name="android:colorPrimary">?onePlusActionbarBackgroundColor</item>
         <item name="android:colorPrimaryDark">?onePlusActionbarBackgroundColor</item>
         <item name="android:colorAccent">@color/op_setupwizard_oxygen_accent_color</item>
@@ -6577,8 +6577,9 @@
         <item name="android:clipChildren">true</item>
         <item name="android:clipToPadding">true</item>
         <item name="android:actionBarStyle">@style/Widget.ActionBar</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/oneplus_navigation_bar_color</item>
         <item name="android:lockPatternStyle">@style/LockPatternStyle.Setttings</item>
+        <item name="alertDialogTheme">@style/Theme.AlertDialog</item>
         <item name="alertDialogTheme">@style/Theme.AlertDialog</item>
         <item name="batteryBadColor">@color/battery_bad_color_light</item>
         <item name="batteryGoodColor">@color/battery_good_color_light</item>

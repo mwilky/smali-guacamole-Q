@@ -158,7 +158,7 @@
 
     iget-object v0, p0, Lcom/android/settings/notification/WorkSoundPreferenceController;->mWorkPhoneRingtonePreference:Landroidx/preference/Preference;
 
-    const v1, 0x7f1218f9
+    const v1, 0x7f121900
 
     if-eqz v0, :cond_0
 

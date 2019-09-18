@@ -859,7 +859,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    const v2, 0x7f12177c
+    const v2, 0x7f121783
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -869,7 +869,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f12177b
+    const v2, 0x7f121782
 
     invoke-virtual {v0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -883,7 +883,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a0699
+    const v3, 0x7f0a069c
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1009,7 +1009,7 @@
 
     invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f16010e
+    const v0, 0x7f16010f
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/calling/WifiCallingSettingsForSub;->addPreferencesFromResource(I)V
 
@@ -1140,7 +1140,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0543
+    const v2, 0x7f0a0545
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1555,7 +1555,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f121782
+    const v3, 0x7f121789
 
     invoke-virtual {v2, v3}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 

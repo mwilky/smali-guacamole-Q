@@ -2960,7 +2960,8 @@
     <string name="oneplus_cpu">處理器</string>
     <string name="oneplus_custom_time">自定義時間開啟</string>
     <string name="oneplus_customization">虛擬按鍵自定義設定</string>
-    <string name="oneplus_customization_summary">長按、雙擊、一鍵隱藏</string>
+    <string name="oneplus_customization_summary">長按、雙擊</string>
+    <string name="oneplus_customization_summary_hide_navbar">長按、雙擊、一鍵隱藏</string>
     <string name="oneplus_dark_mode">暗色模式</string>
     <string name="oneplus_dark_mode_summary">部分系統界面變為暗色，以減少螢幕耗電</string>
     <string name="oneplus_data_usage_control_title">聯網控制</string>
@@ -3236,6 +3237,10 @@
     <string name="oneplus_intelligently_select_best_wifi">智慧選擇最佳 Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">透過對連線性和訊號強度的檢測和分析，智慧選擇並連線最佳的 Wi‑Fi</string>
     <string name="oneplus_intensely">強烈</string>
+    <string name="oneplus_is_turn_on_feature">確認開啟該功能嗎？</string>
+    <string name="oneplus_is_turn_on_feature_summary">"開啟該功能後，在某些情況下可能出現以下問題：
+1.螢幕局部顯示異常
+2.自動亮度調節異常"</string>
     <string name="oneplus_keyboard_settings_category">輸入法設置</string>
     <string name="oneplus_lab_dislike">不喜歡</string>
     <string name="oneplus_lab_features">實驗室功能</string>
@@ -3595,7 +3600,8 @@
     <string name="oneplus_search_keyword_swap_navkeys">調換按鍵, 切換</string>
     <string name="oneplus_search_keyword_switch">搬家, 遷移, 傳輸, 換機</string>
     <string name="oneplus_search_keyword_theme_mode">@string/oneplus_search_keyword_screen_color_mode</string>
-    <string name="oneplus_search_keyword_theme_settings">鎖屏個性化, 桌面, 時鐘樣式, 指紋動畫效果, 通知光效, 系統個性化, 強調色, 形狀, 字體, 色調, 圖標包</string>
+    <string name="oneplus_search_keyword_theme_settings">鎖屏個性化, 桌面, 時鐘樣式, 指紋動畫效果, 通知光效, 系統個性化, 強調色, 形狀, 字體, 色調, 圖標包, 簡約, 沉浸, 活潑</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">鎖屏個性化, 桌面, 時鐘樣式, 指紋動畫效果, 通知光效, 系統個性化, 強調色, 形狀, 字體, 色調, 圖標包, 簡約, 沉浸, 活潑, 麥拉倫</string>
     <string name="oneplus_search_keyword_three_screenshots">截屏</string>
     <string name="oneplus_search_keyword_timer_boot">開機, 關機</string>
     <string name="oneplus_search_keyword_user_experience">推送, 體驗, 改進, 計畫, 方案</string>
@@ -3718,7 +3724,8 @@
     <string name="oneplus_theme_preset_dark">沉浸</string>
     <string name="oneplus_theme_preset_light">簡約</string>
     <string name="oneplus_theme_preset_mcl">麥拉倫</string>
-    <string name="oneplus_theme_preset_summary">為你提供成整套的全局主題，包括桌布、強調色、色調等內容</string>
+    <string name="oneplus_theme_preset_summary">為你提供成整套的全局主題，包括強調色、色調等內容</string>
+    <string name="oneplus_theme_preset_summary_tmp">為你提供成整套的全局主題，包括桌布、強調色、色調等內容</string>
     <string name="oneplus_theme_shape">形狀</string>
     <string name="oneplus_theme_shape_effect_round">圓形</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">圓方形</string>
@@ -3764,6 +3771,8 @@
     <string name="oneplus_top_notification">置頂通知</string>
     <string name="oneplus_touch_vibrate">觸控震動</string>
     <string name="oneplus_turn_off_time">結束時間</string>
+    <string name="oneplus_turn_on_feature_cancel">取消</string>
+    <string name="oneplus_turn_on_feature_ok">開啟</string>
     <string name="oneplus_turn_on_time">開始時間</string>
     <string name="oneplus_uninstatll_multi_app_msg">解除安裝雙開應用程式後，應用程式內的資料將被刪除。確認解除安裝嗎？</string>
     <string name="oneplus_uninstatll_multi_app_title">雙開%1$s</string>
@@ -4807,6 +4816,7 @@ PIN 碼可能不正確。"</string>
     <string name="smart_battery_manager_title">智慧電池管理</string>
     <string name="smart_battery_summary">針對不常使用的應用程式限制電池用量</string>
     <string name="smart_battery_title">使用智慧電池管理</string>
+    <string name="smart_control_title">智慧控制</string>
     <string name="smart_notifications_title">自動調整通知</string>
     <string name="sms_access_restriction_enabled">限制簡訊和通話記錄存取權</string>
     <string name="sms_access_restriction_enabled_summary">只有預設使用的電話和簡訊應用程式擁有簡訊和通話記錄權限</string>

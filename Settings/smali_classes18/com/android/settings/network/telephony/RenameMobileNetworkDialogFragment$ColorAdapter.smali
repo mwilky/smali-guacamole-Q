@@ -81,7 +81,7 @@
     move-result-object p2
 
     :cond_0
-    const v1, 0x7f0a016d
+    const v1, 0x7f0a016e
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -101,7 +101,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v1, 0x7f0a016e
+    const v1, 0x7f0a016f
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

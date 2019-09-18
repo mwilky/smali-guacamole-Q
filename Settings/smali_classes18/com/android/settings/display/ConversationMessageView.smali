@@ -215,12 +215,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f06051d
+    const v1, 0x7f06051e
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f06051e
+    const v1, 0x7f06051f
 
     :goto_1
     nop
@@ -327,12 +327,12 @@
 
     if-eqz v11, :cond_2
 
-    const v11, 0x7f0803f5
+    const v11, 0x7f0803f9
 
     goto :goto_2
 
     :cond_2
-    const v11, 0x7f0803f6
+    const v11, 0x7f0803fa
 
     :goto_2
     nop
@@ -481,7 +481,7 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    const v0, 0x7f0a03ca
+    const v0, 0x7f0a03cc
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -491,7 +491,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mMessageBubble:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a03ce
+    const v0, 0x7f0a03d0
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -501,7 +501,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mMessageTextAndInfoView:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a03cd
+    const v0, 0x7f0a03cf
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -511,7 +511,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mMessageTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03cc
+    const v0, 0x7f0a03ce
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -521,7 +521,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mStatusTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0198
+    const v0, 0x7f0a0199
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 

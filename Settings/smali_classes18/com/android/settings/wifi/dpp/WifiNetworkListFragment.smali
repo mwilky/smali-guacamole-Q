@@ -65,7 +65,7 @@
 
     iget-object v3, p0, Lcom/android/settings/wifi/dpp/WifiNetworkListFragment;->mUserBadgeCache:Lcom/android/settingslib/wifi/AccessPointPreference$UserBadgeCache;
 
-    const v4, 0x7f080393
+    const v4, 0x7f080397
 
     const/4 v5, 0x0
 
@@ -201,7 +201,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f121759
+    const v1, 0x7f121760
 
     invoke-virtual {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -648,7 +648,7 @@
 .method public onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 2
 
-    const v0, 0x7f160112
+    const v0, 0x7f160113
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/dpp/WifiNetworkListFragment;->addPreferencesFromResource(I)V
 
@@ -674,7 +674,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiNetworkListFragment;->mFakeNetworkPreference:Landroidx/preference/Preference;
 
-    const v1, 0x7f080393
+    const v1, 0x7f080397
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
 
@@ -708,7 +708,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiNetworkListFragment;->mAddPreference:Landroidx/preference/Preference;
 
-    const v1, 0x7f121759
+    const v1, 0x7f121760
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(I)V
 

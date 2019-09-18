@@ -269,7 +269,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a03af
+    const v1, 0x7f0a03b1
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentActivity;->findViewById(I)Landroid/view/View;
 
@@ -308,7 +308,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f08069a
+    const v3, 0x7f0806a3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -679,6 +679,8 @@
 
     iget-object v0, p0, Lcom/android/settings/password/ConfirmDeviceCredentialBaseFragment;->mFingerprintHelper:Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;
 
+    if-eqz v0, :cond_0
+
     invoke-virtual {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;->isListening()Z
 
     move-result v0
@@ -742,7 +744,7 @@
 
     iput-object v0, p0, Lcom/android/settings/password/ConfirmDeviceCredentialBaseFragment;->mCancelButton:Landroid/widget/Button;
 
-    const v0, 0x7f0a0266
+    const v0, 0x7f0a0267
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -760,7 +762,7 @@
 
     iget-object v3, p0, Lcom/android/settings/password/ConfirmDeviceCredentialBaseFragment;->mFingerprintIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a0244
+    const v1, 0x7f0a0245
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

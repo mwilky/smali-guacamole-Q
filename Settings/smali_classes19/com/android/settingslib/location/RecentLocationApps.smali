@@ -433,7 +433,7 @@
 
 # virtual methods
 .method public getAppList(Z)Ljava/util/List;
-    .locals 24
+    .locals 25
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
@@ -504,7 +504,7 @@
     const/4 v11, 0x0
 
     :goto_1
-    if-ge v11, v5, :cond_7
+    if-ge v11, v5, :cond_8
 
     invoke-interface {v3, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -530,53 +530,74 @@
 
     if-nez v16, :cond_1
 
-    move-object/from16 v22, v1
+    move-object/from16 v23, v1
 
     move-object/from16 v17, v2
 
     move-object/from16 v18, v3
 
-    move/from16 v23, v5
+    move/from16 v24, v5
 
-    goto :goto_4
+    goto/16 :goto_5
 
     :cond_1
-    const/16 v16, 0x1
+    const-string v4, "com.opos.ads"
 
-    if-nez p1, :cond_5
-
-    sget-object v4, Lcom/android/settingslib/location/RecentLocationApps;->LOCATION_PERMISSION_OPS:[I
-
-    move-object/from16 v17, v2
-
-    array-length v2, v4
-
-    move-object/from16 v18, v3
-
-    const/4 v3, 0x0
-
-    :goto_2
-    if-ge v3, v2, :cond_4
-
-    aget v19, v4, v3
-
-    move/from16 v20, v2
-
-    invoke-static/range {v19 .. v19}, Landroid/app/AppOpsManager;->opToPermission(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    move-object/from16 v21, v4
-
-    invoke-virtual {v1, v2, v13, v15}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
+    invoke-virtual {v13, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
-    move-object/from16 v22, v1
+    if-eqz v4, :cond_2
+
+    move-object/from16 v23, v1
+
+    move-object/from16 v17, v2
+
+    move-object/from16 v18, v3
+
+    move/from16 v24, v5
+
+    goto/16 :goto_5
+
+    :cond_2
+    const/4 v4, 0x1
+
+    if-nez p1, :cond_6
+
+    move-object/from16 v17, v2
+
+    sget-object v2, Lcom/android/settingslib/location/RecentLocationApps;->LOCATION_PERMISSION_OPS:[I
+
+    move-object/from16 v18, v3
+
+    array-length v3, v2
+
+    move/from16 v19, v4
+
+    const/4 v4, 0x0
+
+    :goto_2
+    if-ge v4, v3, :cond_5
+
+    aget v20, v2, v4
+
+    move-object/from16 v21, v2
+
+    invoke-static/range {v20 .. v20}, Landroid/app/AppOpsManager;->opToPermission(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    move/from16 v22, v3
+
+    invoke-virtual {v1, v2, v13, v15}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
+
+    move-result v3
+
+    move-object/from16 v23, v1
 
     iget-object v1, v0, Lcom/android/settingslib/location/RecentLocationApps;->mContext:Landroid/content/Context;
 
-    move/from16 v23, v5
+    move/from16 v24, v5
 
     const/4 v5, -0x1
 
@@ -584,80 +605,85 @@
 
     move-result v1
 
-    if-nez v1, :cond_2
-
-    and-int/lit16 v1, v4, 0x100
-
     if-nez v1, :cond_3
 
-    const/16 v16, 0x0
+    and-int/lit16 v1, v3, 0x100
 
-    goto :goto_3
+    if-nez v1, :cond_4
 
-    :cond_2
-    and-int/lit16 v1, v4, 0x200
+    const/4 v4, 0x0
 
-    if-nez v1, :cond_3
-
-    const/16 v16, 0x0
-
-    goto :goto_3
+    goto :goto_4
 
     :cond_3
-    add-int/lit8 v3, v3, 0x1
+    and-int/lit16 v1, v3, 0x200
 
-    move/from16 v2, v20
+    if-nez v1, :cond_4
 
-    move-object/from16 v4, v21
+    const/4 v4, 0x0
 
-    move-object/from16 v1, v22
+    goto :goto_4
 
-    move/from16 v5, v23
+    :cond_4
+    add-int/lit8 v4, v4, 0x1
+
+    move-object/from16 v2, v21
+
+    move/from16 v3, v22
+
+    move-object/from16 v1, v23
+
+    move/from16 v5, v24
 
     goto :goto_2
 
-    :cond_4
-    move-object/from16 v22, v1
+    :cond_5
+    move-object/from16 v23, v1
 
-    move/from16 v23, v5
+    move/from16 v24, v5
 
     goto :goto_3
 
-    :cond_5
-    move-object/from16 v22, v1
+    :cond_6
+    move-object/from16 v23, v1
 
     move-object/from16 v17, v2
 
     move-object/from16 v18, v3
 
-    move/from16 v23, v5
+    move/from16 v19, v4
+
+    move/from16 v24, v5
 
     :goto_3
-    if-eqz v16, :cond_6
+    move/from16 v4, v19
+
+    :goto_4
+    if-eqz v4, :cond_7
 
     invoke-direct {v0, v7, v8, v12}, Lcom/android/settingslib/location/RecentLocationApps;->getRequestFromOps(JLandroid/app/AppOpsManager$PackageOps;)Lcom/android/settingslib/location/RecentLocationApps$Request;
 
     move-result-object v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_6
-    :goto_4
+    :cond_7
+    :goto_5
     add-int/lit8 v11, v11, 0x1
 
     move-object/from16 v2, v17
 
     move-object/from16 v3, v18
 
-    move-object/from16 v1, v22
+    move-object/from16 v1, v23
 
-    move/from16 v5, v23
+    move/from16 v5, v24
 
     goto/16 :goto_1
 
-    :cond_7
+    :cond_8
     return-object v6
 .end method
 

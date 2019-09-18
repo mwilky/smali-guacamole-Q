@@ -15,6 +15,8 @@
 
 .field private static final KEY_PRIVACY_GOOGLE_USAGE_REPORTING:Ljava/lang/String; = "privacy_google_usage_reporting"
 
+.field private static final KEY_PRIVACY_HUB_ACTIVITY_CONTROLS_ACTIVITY:Ljava/lang/String; = "dashboard_tile_pref_com.google.android.gms.accountsettings.ui.PrivacyHubActivityControlsActivity"
+
 .field private static final META_DATA_KEY_INTENT_ACTION:Ljava/lang/String; = "com.android.settings.intent.action"
 
 .field private static final TAG:Ljava/lang/String; = "DashboardFeatureImpl"
@@ -91,7 +93,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1214e6
+    const v2, 0x7f1214ed
 
     if-eqz v1, :cond_1
 
@@ -367,7 +369,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121510
+    const v2, 0x7f121517
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -377,7 +379,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1212c2
+    const v1, 0x7f1212c9
 
     const/4 v2, 0x1
 
@@ -433,7 +435,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
 
@@ -479,7 +481,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0804cf
+    const v3, 0x7f0804d6
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -502,7 +504,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f0804db
+    const v3, 0x7f0804e2
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -531,19 +533,15 @@
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {p1}, Landroidx/preference/Preference;->getContext()Landroid/content/Context;
+    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    move-result-object v2
+    const v3, 0x7f080463
 
-    const v3, 0x7f060321
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getColor(I)I
+    move-result-object v1
 
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_2
     invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
@@ -560,7 +558,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f080569
+    const v3, 0x7f080570
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -583,7 +581,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f080566
+    const v3, 0x7f08056d
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -606,7 +604,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f080568
+    const v3, 0x7f08056f
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -615,7 +613,30 @@
     goto :goto_0
 
     :cond_5
-    if-eqz p3, :cond_6
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "dashboard_tile_pref_com.google.android.gms.accountsettings.ui.PrivacyHubActivityControlsActivity"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
+
+    const v3, 0x7f08042f
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_6
+    if-eqz p3, :cond_7
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
@@ -631,7 +652,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_7
 
     new-instance v2, Lcom/android/settingslib/widget/AdaptiveIcon;
 
@@ -649,18 +670,18 @@
 
     invoke-virtual {v2, v3, p2}, Lcom/android/settingslib/widget/AdaptiveIcon;->setBackgroundColor(Landroid/content/Context;Lcom/android/settingslib/drawer/Tile;)V
 
-    :cond_6
+    :cond_7
     :goto_0
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 
-    :cond_7
+    :cond_8
     invoke-virtual {p2}, Lcom/android/settingslib/drawer/Tile;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     invoke-virtual {p2}, Lcom/android/settingslib/drawer/Tile;->getMetaData()Landroid/os/Bundle;
 
@@ -672,7 +693,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_a
 
     new-instance v1, Lcom/android/settings/dashboard/-$$Lambda$DashboardFeatureProviderImpl$UvJ8-OPK0AmeGQfPSjZ3lJhOyxc;
 
@@ -682,11 +703,11 @@
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     :goto_1
     nop
 
-    :cond_9
+    :cond_a
     :goto_2
     return-void
 .end method

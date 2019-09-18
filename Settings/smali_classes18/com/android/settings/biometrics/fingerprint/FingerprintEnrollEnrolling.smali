@@ -484,7 +484,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0675
+    const v0, 0x7f0a0678
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -868,7 +868,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a026b
+    const v1, 0x7f0a026c
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -1023,7 +1023,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0675
+    const v0, 0x7f0a0678
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -1097,7 +1097,7 @@
 .method private initFingerPrintEnrollView()V
     .locals 3
 
-    const v0, 0x7f0a0491
+    const v0, 0x7f0a0493
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2188,11 +2188,11 @@
 
     move-result v0
 
-    const v1, 0x7f0a018e
+    const v1, 0x7f0a018f
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a0628
+    const v1, 0x7f0a062b
 
     if-eq v0, v1, :cond_0
 
@@ -2373,11 +2373,11 @@
     :goto_1
     invoke-virtual {p0, v3}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->setContentView(I)V
 
-    const v5, 0x7f121307
+    const v5, 0x7f12130e
 
     invoke-virtual {p0, v5}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->setHeaderText(I)V
 
-    const v5, 0x7f0a0651
+    const v5, 0x7f0a0654
 
     invoke-virtual {p0, v5}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2387,7 +2387,7 @@
 
     iput-object v5, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mStartMessage:Landroid/widget/TextView;
 
-    const v5, 0x7f0a0599
+    const v5, 0x7f0a059b
 
     invoke-virtual {p0, v5}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2397,7 +2397,7 @@
 
     iput-object v5, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->mRepeatMessage:Landroid/widget/TextView;
 
-    const v5, 0x7f0a0247
+    const v5, 0x7f0a0248
 
     invoke-virtual {p0, v5}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2423,7 +2423,7 @@
 
     if-eqz v5, :cond_a
 
-    const v5, 0x7f0a018e
+    const v5, 0x7f0a018f
 
     invoke-virtual {p0, v5}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2447,7 +2447,7 @@
 
     invoke-virtual {v4, v5}, Lcom/oneplus/lib/widget/button/OPButton;->setVisibility(I)V
 
-    const v4, 0x7f0a0490
+    const v4, 0x7f0a0492
 
     invoke-virtual {p0, v4}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 
@@ -2623,12 +2623,12 @@
 
     if-eq p1, v0, :cond_0
 
-    const v0, 0x7f120cba
+    const v0, 0x7f120cbb
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f1212f6
+    const v0, 0x7f1212fd
 
     nop
 
@@ -2689,7 +2689,7 @@
 
     move-result v0
 
-    const v3, 0x7f120cc1
+    const v3, 0x7f120cc2
 
     const/16 v4, 0x44c
 
@@ -2706,7 +2706,7 @@
     goto/16 :goto_0
 
     :cond_0
-    const v0, 0x7f120f0d
+    const v0, 0x7f120f10
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2765,7 +2765,7 @@
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f120f0d
+    const v0, 0x7f120f10
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2794,7 +2794,7 @@
     goto :goto_0
 
     :cond_6
-    const v0, 0x7f120cc0
+    const v0, 0x7f120cc1
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2805,7 +2805,7 @@
     goto :goto_0
 
     :cond_7
-    const v0, 0x7f120cbe
+    const v0, 0x7f120cbf
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -2816,7 +2816,7 @@
     goto :goto_0
 
     :cond_8
-    const v0, 0x7f120cbf
+    const v0, 0x7f120cc0
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->getText(I)Ljava/lang/CharSequence;
 
@@ -3137,7 +3137,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0675
+    const v0, 0x7f0a0678
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollEnrolling;->findViewById(I)Landroid/view/View;
 

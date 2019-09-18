@@ -337,7 +337,7 @@
 .method private initView()V
     .locals 2
 
-    const v0, 0x7f0a0480
+    const v0, 0x7f0a0482
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/carcharger/OPCarChargerOpenApp;->findViewById(I)Landroid/view/View;
 
@@ -371,7 +371,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/apploader/OPApplicationLoader;->setAppType(I)V
 
-    const v0, 0x7f0a039f
+    const v0, 0x7f0a03a1
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/carcharger/OPCarChargerOpenApp;->findViewById(I)Landroid/view/View;
 

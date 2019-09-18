@@ -1372,7 +1372,6 @@
     <attr name="queryBackground" format="reference" />
     <attr name="queryHint" format="string" />
     <attr name="radioButtonStyle" format="reference" />
-    <attr name="radius" format="dimension" />
     <attr name="ratingBarStyle" format="reference" />
     <attr name="ratingBarStyleIndicator" format="reference" />
     <attr name="ratingBarStyleSmall" format="reference" />
@@ -1391,6 +1390,7 @@
     <attr name="rewind" format="reference" />
     <attr name="rippleColor" format="color" />
     <attr name="rippleEffectColor" format="reference|color" />
+    <attr name="round_radius" format="dimension" />
     <attr name="rowHeaderDescriptionStyle" format="reference" />
     <attr name="rowHeaderDockStyle" format="reference" />
     <attr name="rowHeaderStyle" format="reference" />
@@ -1435,6 +1435,10 @@
     <attr name="shapeAppearanceMediumComponent" format="reference" />
     <attr name="shapeAppearanceOverlay" format="reference" />
     <attr name="shapeAppearanceSmallComponent" format="reference" />
+    <attr name="shape_mode">
+        <enum name="circle" value="2" />
+        <enum name="round_rect" value="1" />
+    </attr>
     <attr name="shouldDisableView" format="boolean" />
     <attr name="showAsAction">
         <flag name="always" value="0x00000002" />

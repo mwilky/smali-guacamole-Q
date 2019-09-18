@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/deviceinfo/StorageSlice;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f121457
+    const v1, 0x7f12145e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -140,7 +140,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/deviceinfo/StorageSlice;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f121457
+    const v2, 0x7f12145e
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -248,7 +248,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f121483
+    const v2, 0x7f12148a
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

@@ -120,7 +120,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f0a025d
+    const v1, 0x7f0a025e
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -130,7 +130,7 @@
 
     iput-object v1, v0, Lcom/oneplus/settings/laboratory/OPLabPluginListAdapter$ViewHolder;->featureImage:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a025e
+    const v1, 0x7f0a025f
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -15,7 +15,7 @@
 
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 6
+    .locals 5
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
@@ -52,6 +52,12 @@
 
     move-result-object v2
 
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object v2
+
     invoke-virtual {v2}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v2
@@ -81,27 +87,27 @@
     return-void
 
     :cond_1
-    new-instance v4, Landroid/content/Intent;
+    new-instance v2, Landroid/content/Intent;
 
-    const-class v5, Lcom/android/settings/applications/autofill/AutofillPickerActivity;
+    const-class v3, Lcom/android/settings/applications/autofill/AutofillPickerActivity;
 
-    invoke-direct {v4, p0, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v2, p0, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const/high16 v5, 0x2000000
+    const/high16 v3, 0x2000000
 
-    invoke-virtual {v4, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    move-result-object v4
+    move-result-object v2
 
     invoke-virtual {v1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v5
+    move-result-object v3
 
-    invoke-virtual {v4, v5}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/applications/autofill/AutofillPickerTrampolineActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v2}, Lcom/android/settings/applications/autofill/AutofillPickerTrampolineActivity;->startActivity(Landroid/content/Intent;)V
 
     invoke-virtual {p0}, Lcom/android/settings/applications/autofill/AutofillPickerTrampolineActivity;->finish()V
 

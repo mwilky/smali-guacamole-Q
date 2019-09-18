@@ -778,14 +778,14 @@
 
     :array_0
     .array-data 4
+        0x7f120e58
         0x7f120e56
-        0x7f120e54
     .end array-data
 
     :array_1
     .array-data 4
+        0x7f120e57
         0x7f120e55
-        0x7f120e53
     .end array-data
 .end method
 
