@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field protected final LDa:[B
+.field protected final UDa:[B
 
-.field protected final ODa:[B
+.field protected final XDa:[B
 
 
 # direct methods
@@ -24,13 +24,13 @@
 
     fill-array-data v0, :array_0
 
-    iput-object v0, p0, Lorg/bouncycastle/util/encoders/rtg;->LDa:[B
+    iput-object v0, p0, Lorg/bouncycastle/util/encoders/rtg;->UDa:[B
 
     const/16 v0, 0x80
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iput-object v0, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     invoke-virtual {p0}, Lorg/bouncycastle/util/encoders/rtg;->Xk()V
 
@@ -101,7 +101,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     array-length v3, v2
 
@@ -117,13 +117,13 @@
 
     :cond_0
     :goto_1
-    iget-object v1, p0, Lorg/bouncycastle/util/encoders/rtg;->LDa:[B
+    iget-object v1, p0, Lorg/bouncycastle/util/encoders/rtg;->UDa:[B
 
     array-length v2, v1
 
     if-ge v0, v2, :cond_1
 
-    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     aget-byte v1, v1, v0
 
@@ -136,7 +136,7 @@
     goto :goto_1
 
     :cond_1
-    iget-object p0, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object p0, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     const/16 v0, 0x41
 
@@ -246,7 +246,7 @@
     goto :goto_3
 
     :cond_2
-    iget-object v1, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object v1, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     add-int/lit8 v2, p2, 0x1
 
@@ -272,7 +272,7 @@
     goto :goto_4
 
     :cond_3
-    iget-object v1, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object v1, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     add-int/lit8 v3, v2, 0x1
 
@@ -370,7 +370,7 @@
     goto :goto_3
 
     :cond_2
-    iget-object v3, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object v3, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     add-int/lit8 v4, v1, 0x1
 
@@ -398,7 +398,7 @@
     goto :goto_4
 
     :cond_3
-    iget-object v3, p0, Lorg/bouncycastle/util/encoders/rtg;->ODa:[B
+    iget-object v3, p0, Lorg/bouncycastle/util/encoders/rtg;->XDa:[B
 
     add-int/lit8 v5, v4, 0x1
 
@@ -456,7 +456,7 @@
 
     and-int/lit16 v1, v1, 0xff
 
-    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->LDa:[B
+    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->UDa:[B
 
     ushr-int/lit8 v3, v1, 0x4
 
@@ -464,7 +464,7 @@
 
     invoke-virtual {p4, v2}, Ljava/io/OutputStream;->write(I)V
 
-    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->LDa:[B
+    iget-object v2, p0, Lorg/bouncycastle/util/encoders/rtg;->UDa:[B
 
     and-int/lit8 v1, v1, 0xf
 

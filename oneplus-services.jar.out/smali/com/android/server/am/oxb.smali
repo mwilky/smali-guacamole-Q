@@ -97,7 +97,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/oxb;->this$0:Lcom/android/server/am/OnePlusBGController;
 
-    sget-object p1, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Dga:Lcom/android/server/am/OnePlusBGController$SnapshotType;
+    sget-object p1, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Mga:Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
     invoke-virtual {p0, p1}, Lcom/android/server/am/OnePlusBGController;->zta(Lcom/android/server/am/OnePlusBGController$SnapshotType;)V
 

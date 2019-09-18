@@ -4,11 +4,11 @@
 
 
 # static fields
+.field public static final FEa:I = 0x1
+
+.field public static final GEa:I = 0x2
+
 .field public static final MAX:I = 0x3
-
-.field public static final wEa:I = 0x1
-
-.field public static final xEa:I = 0x2
 
 
 # direct methods

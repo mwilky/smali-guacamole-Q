@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic zAa:Ljava/lang/String;
+.field final synthetic IAa:Ljava/lang/String;
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/bio;->zAa:Ljava/lang/String;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/bio;->IAa:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 0
 
     :try_start_0
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/bio;->zAa:Ljava/lang/String;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/bio;->IAa:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 

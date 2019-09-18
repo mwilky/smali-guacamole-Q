@@ -17,15 +17,15 @@
 # instance fields
 .field private final keySize:I
 
-.field private final nka:Lorg/bouncycastle/asn1/x509/zta;
-
-.field private final oka:Ljava/lang/String;
-
 .field private params:Lorg/bouncycastle/asn1/dma/oif;
 
-.field private final pka:Lorg/bouncycastle/asn1/bvj;
+.field private final wka:Lorg/bouncycastle/asn1/x509/zta;
 
-.field private final qka:Ljava/lang/String;
+.field private final xka:Ljava/lang/String;
+
+.field private final yka:Lorg/bouncycastle/asn1/bvj;
+
+.field private final zka:Ljava/lang/String;
 
 
 # direct methods
@@ -40,15 +40,15 @@
 
     invoke-direct {v0, p1, v1}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ssp;)V
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->nka:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->wka:Lorg/bouncycastle/asn1/x509/zta;
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->oka:Ljava/lang/String;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->xka:Ljava/lang/String;
 
     iput p3, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->keySize:I
 
-    iput-object p4, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->pka:Lorg/bouncycastle/asn1/bvj;
+    iput-object p4, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->yka:Lorg/bouncycastle/asn1/bvj;
 
-    iput-object p5, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->qka:Ljava/lang/String;
+    iput-object p5, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->zka:Ljava/lang/String;
 
     return-void
 .end method
@@ -190,7 +190,7 @@
 
     iget v6, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->keySize:I
 
-    iget-object v7, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->nka:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object v7, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->wka:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-direct {v4, v5, p1, v6, v7}, Lorg/bouncycastle/asn1/dma/bvj;-><init>([BIILorg/bouncycastle/asn1/x509/zta;)V
 
@@ -198,7 +198,7 @@
 
     new-instance p1, Lorg/bouncycastle/asn1/dma/wtn;
 
-    iget-object v3, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->pka:Lorg/bouncycastle/asn1/bvj;
+    iget-object v3, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->yka:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v4, Lorg/bouncycastle/asn1/C;
 
@@ -334,7 +334,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->oka:Ljava/lang/String;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->xka:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -342,7 +342,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->qka:Ljava/lang/String;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/gck$zta;->zka:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

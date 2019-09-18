@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field rra:Lorg/bouncycastle/asn1/x509/ugm;
+.field Ara:Lorg/bouncycastle/asn1/x509/ugm;
 
 .field seq:Lorg/bouncycastle/asn1/obl;
 
@@ -107,7 +107,7 @@
 .method public getExtensions()Lorg/bouncycastle/asn1/x509/ugm;
     .locals 2
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/x509/e$zta;->rra:Lorg/bouncycastle/asn1/x509/ugm;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/x509/e$zta;->Ara:Lorg/bouncycastle/asn1/x509/ugm;
 
     if-nez v0, :cond_0
 
@@ -133,10 +133,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/e$zta;->rra:Lorg/bouncycastle/asn1/x509/ugm;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/e$zta;->Ara:Lorg/bouncycastle/asn1/x509/ugm;
 
     :cond_0
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/e$zta;->rra:Lorg/bouncycastle/asn1/x509/ugm;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/e$zta;->Ara:Lorg/bouncycastle/asn1/x509/ugm;
 
     return-object p0
 .end method

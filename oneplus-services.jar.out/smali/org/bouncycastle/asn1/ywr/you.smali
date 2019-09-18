@@ -122,7 +122,7 @@
     return-void
 .end method
 
-.method private gc(I)Lorg/bouncycastle/asn1/vdb;
+.method private fc(I)Lorg/bouncycastle/asn1/vdb;
     .locals 2
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ywr/you;->seq:Lorg/bouncycastle/asn1/obl;
@@ -203,7 +203,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/ywr/you;->gc(I)Lorg/bouncycastle/asn1/vdb;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/ywr/you;->fc(I)Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 
@@ -215,7 +215,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/ywr/you;->gc(I)Lorg/bouncycastle/asn1/vdb;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/ywr/you;->fc(I)Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 

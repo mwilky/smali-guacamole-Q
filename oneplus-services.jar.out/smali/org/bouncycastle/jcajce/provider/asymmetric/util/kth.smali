@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static iAa:Ljava/util/Map;
+.field private static rAa:Ljava/util/Map;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->iAa:Ljava/util/Map;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->rAa:Ljava/util/Map;
 
     invoke-static {}, Lorg/bouncycastle/crypto/sis/bio;->getNames()Ljava/util/Enumeration;
 
@@ -41,7 +41,7 @@
 
     if-eqz v2, :cond_0
 
-    sget-object v3, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->iAa:Ljava/util/Map;
+    sget-object v3, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->rAa:Ljava/util/Map;
 
     invoke-virtual {v2}, Lorg/bouncycastle/asn1/ibl/vju;->getCurve()Lyou/zta/sis/zta/rtg;
 
@@ -689,7 +689,7 @@
 
     invoke-direct {p0, v0, v6, v7}, Lyou/zta/sis/zta/rtg$rtg;-><init>(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->iAa:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->rAa:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -697,7 +697,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->iAa:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/kth;->rAa:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

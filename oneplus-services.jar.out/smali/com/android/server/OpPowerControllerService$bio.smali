@@ -123,21 +123,33 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$bio;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$900(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$cno;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    const/16 v1, 0xd
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v0, p0, Lcom/android/server/OpPowerControllerService$bio;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$900(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$cno;
 
     move-result-object v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    move-result-wide v1
+    move-result-object v0
 
-    const-string v3, "latest_public_domain_reachable"
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService$bio;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0, v3, v1, v2}, Landroid/provider/Settings$System;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$900(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$cno;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0xbb8
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$bio;->this$0:Lcom/android/server/OpPowerControllerService;
 

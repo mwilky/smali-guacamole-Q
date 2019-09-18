@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final Una:[B
+.field private static final coa:[B
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     new-array v0, v0, [B
 
-    sput-object v0, Lorg/bouncycastle/asn1/L;->Una:[B
+    sput-object v0, Lorg/bouncycastle/asn1/L;->coa:[B
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/lqr;->Tna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/lqr;->boa:Z
 
     if-eqz v0, :cond_0
 
@@ -102,11 +102,11 @@
 
     move-result v0
 
-    iget-boolean v1, p0, Lorg/bouncycastle/asn1/lqr;->Tna:Z
+    iget-boolean v1, p0, Lorg/bouncycastle/asn1/lqr;->boa:Z
 
     if-eqz v1, :cond_0
 
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
@@ -125,7 +125,7 @@
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
@@ -136,7 +136,7 @@
     return p0
 
     :cond_1
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
@@ -171,11 +171,11 @@
 
     move-result-object v0
 
-    iget-boolean v2, p0, Lorg/bouncycastle/asn1/lqr;->Tna:Z
+    iget-boolean v2, p0, Lorg/bouncycastle/asn1/lqr;->boa:Z
 
     if-eqz v2, :cond_0
 
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-virtual {p1, v1, p0}, Lorg/bouncycastle/asn1/ugm;->writeTag(II)V
 
@@ -202,7 +202,7 @@
     const/16 v1, 0x80
 
     :goto_0
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-virtual {p1, v1, p0}, Lorg/bouncycastle/asn1/ugm;->writeTag(II)V
 
@@ -211,9 +211,9 @@
     goto :goto_1
 
     :cond_2
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
-    sget-object v0, Lorg/bouncycastle/asn1/L;->Una:[B
+    sget-object v0, Lorg/bouncycastle/asn1/L;->coa:[B
 
     invoke-virtual {p1, v1, p0, v0}, Lorg/bouncycastle/asn1/ugm;->you(II[B)V
 

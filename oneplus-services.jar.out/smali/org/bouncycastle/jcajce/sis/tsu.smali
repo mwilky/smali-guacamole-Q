@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final HAa:[B
+.field private final QAa:[B
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/tsu;->HAa:[B
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/tsu;->QAa:[B
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public uj()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/tsu;->HAa:[B
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/tsu;->QAa:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 

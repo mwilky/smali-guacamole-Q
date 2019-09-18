@@ -9,37 +9,37 @@
 # static fields
 .field private static final BLOCK_SIZE:I = 0x8
 
-.field private static final Mwa:[I
+.field private static final Bwa:I = 0x10
 
-.field private static final Nwa:[I
+.field private static final Vwa:[I
 
-.field private static final Owa:[I
+.field private static final Wwa:[I
 
-.field private static final Pwa:[I
+.field private static final Xwa:[I
 
-.field private static final Qwa:[I
+.field private static final Ywa:[I
 
-.field private static final Rwa:I = 0x100
+.field private static final Zwa:[I
 
-.field private static final Swa:I = 0x12
+.field private static final _wa:I = 0x100
 
-.field private static final swa:I = 0x10
+.field private static final axa:I = 0x12
 
 
 # instance fields
-.field private final Hwa:[I
-
-.field private final Iwa:[I
-
-.field private final Jwa:[I
-
-.field private final Kwa:[I
-
-.field private Lwa:[B
-
 .field private final P:[I
 
-.field private ova:Z
+.field private final Qwa:[I
+
+.field private final Rwa:[I
+
+.field private final Swa:[I
+
+.field private final Twa:[I
+
+.field private Uwa:[B
+
+.field private xva:Z
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Mwa:[I
+    sput-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Vwa:[I
 
     const/16 v0, 0x100
 
@@ -60,25 +60,25 @@
 
     fill-array-data v1, :array_1
 
-    sput-object v1, Lorg/bouncycastle/crypto/rtg/tsu;->Nwa:[I
+    sput-object v1, Lorg/bouncycastle/crypto/rtg/tsu;->Wwa:[I
 
     new-array v1, v0, [I
 
     fill-array-data v1, :array_2
 
-    sput-object v1, Lorg/bouncycastle/crypto/rtg/tsu;->Owa:[I
+    sput-object v1, Lorg/bouncycastle/crypto/rtg/tsu;->Xwa:[I
 
     new-array v1, v0, [I
 
     fill-array-data v1, :array_3
 
-    sput-object v1, Lorg/bouncycastle/crypto/rtg/tsu;->Pwa:[I
+    sput-object v1, Lorg/bouncycastle/crypto/rtg/tsu;->Ywa:[I
 
     new-array v0, v0, [I
 
     fill-array-data v0, :array_4
 
-    sput-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
+    sput-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Zwa:[I
 
     return-void
 
@@ -1152,29 +1152,29 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->ova:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->xva:Z
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Lwa:[B
+    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Uwa:[B
 
     const/16 v0, 0x100
 
     new-array v1, v0, [I
 
-    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Hwa:[I
+    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
 
     new-array v1, v0, [I
 
-    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Iwa:[I
+    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Rwa:[I
 
     new-array v1, v0, [I
 
-    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Jwa:[I
+    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Swa:[I
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Kwa:[I
+    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Twa:[I
 
     const/16 v0, 0x12
 
@@ -1188,9 +1188,9 @@
 .method private irq([B)V
     .locals 9
 
-    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Nwa:[I
+    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Wwa:[I
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Hwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
 
     const/16 v2, 0x100
 
@@ -1198,25 +1198,25 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Owa:[I
+    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Xwa:[I
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Iwa:[I
-
-    invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Pwa:[I
-
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Jwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Rwa:[I
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
+    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Ywa:[I
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Kwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Swa:[I
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Mwa:[I
+    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Zwa:[I
+
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Twa:[I
+
+    invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    sget-object v0, Lorg/bouncycastle/crypto/rtg/tsu;->Vwa:[I
 
     iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->P:[I
 
@@ -1300,11 +1300,11 @@
 
     aget p1, p1, v1
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Hwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
 
     invoke-direct {p0, v0, p1, v1}, Lorg/bouncycastle/crypto/rtg/tsu;->ssp(II[I)V
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Hwa:[I
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
 
     const/16 v0, 0xfe
 
@@ -1312,27 +1312,27 @@
 
     aget p1, p1, v5
 
-    iget-object v2, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Iwa:[I
+    iget-object v2, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Rwa:[I
 
     invoke-direct {p0, v1, p1, v2}, Lorg/bouncycastle/crypto/rtg/tsu;->ssp(II[I)V
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Iwa:[I
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Rwa:[I
 
     aget v1, p1, v0
 
     aget p1, p1, v5
 
-    iget-object v2, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Jwa:[I
+    iget-object v2, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Swa:[I
 
     invoke-direct {p0, v1, p1, v2}, Lorg/bouncycastle/crypto/rtg/tsu;->ssp(II[I)V
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Jwa:[I
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Swa:[I
 
     aget v0, p1, v0
 
     aget p1, p1, v5
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Kwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Twa:[I
 
     invoke-direct {p0, v0, p1, v1}, Lorg/bouncycastle/crypto/rtg/tsu;->ssp(II[I)V
 
@@ -1401,7 +1401,7 @@
 
     if-ge v0, v1, :cond_0
 
-    invoke-direct {p0, p2}, Lorg/bouncycastle/crypto/rtg/tsu;->uc(I)I
+    invoke-direct {p0, p2}, Lorg/bouncycastle/crypto/rtg/tsu;->tc(I)I
 
     move-result v1
 
@@ -1413,7 +1413,7 @@
 
     xor-int/2addr p1, v1
 
-    invoke-direct {p0, p1}, Lorg/bouncycastle/crypto/rtg/tsu;->uc(I)I
+    invoke-direct {p0, p1}, Lorg/bouncycastle/crypto/rtg/tsu;->tc(I)I
 
     move-result v1
 
@@ -1478,7 +1478,7 @@
 
     if-ge v3, v4, :cond_0
 
-    invoke-direct {p0, p2}, Lorg/bouncycastle/crypto/rtg/tsu;->uc(I)I
+    invoke-direct {p0, p2}, Lorg/bouncycastle/crypto/rtg/tsu;->tc(I)I
 
     move-result v4
 
@@ -1490,7 +1490,7 @@
 
     xor-int/2addr v2, v4
 
-    invoke-direct {p0, v2}, Lorg/bouncycastle/crypto/rtg/tsu;->uc(I)I
+    invoke-direct {p0, v2}, Lorg/bouncycastle/crypto/rtg/tsu;->tc(I)I
 
     move-result v4
 
@@ -1539,16 +1539,16 @@
     return-void
 .end method
 
-.method private uc(I)I
+.method private tc(I)I
     .locals 3
 
-    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Hwa:[I
+    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Qwa:[I
 
     ushr-int/lit8 v1, p1, 0x18
 
     aget v0, v0, v1
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Iwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Rwa:[I
 
     ushr-int/lit8 v2, p1, 0x10
 
@@ -1558,7 +1558,7 @@
 
     add-int/2addr v0, v1
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Jwa:[I
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Swa:[I
 
     ushr-int/lit8 v2, p1, 0x8
 
@@ -1568,7 +1568,7 @@
 
     xor-int/2addr v0, v1
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Kwa:[I
+    iget-object p0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Twa:[I
 
     and-int/lit16 p1, p1, 0xff
 
@@ -1645,7 +1645,7 @@
     :goto_0
     if-lez v0, :cond_0
 
-    invoke-direct {p0, p2}, Lorg/bouncycastle/crypto/rtg/tsu;->uc(I)I
+    invoke-direct {p0, p2}, Lorg/bouncycastle/crypto/rtg/tsu;->tc(I)I
 
     move-result v1
 
@@ -1657,7 +1657,7 @@
 
     xor-int/2addr p1, v1
 
-    invoke-direct {p0, p1}, Lorg/bouncycastle/crypto/rtg/tsu;->uc(I)I
+    invoke-direct {p0, p1}, Lorg/bouncycastle/crypto/rtg/tsu;->tc(I)I
 
     move-result v1
 
@@ -1720,7 +1720,7 @@
 .method public final zta([BI[BI)I
     .locals 2
 
-    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Lwa:[B
+    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Uwa:[B
 
     if-eqz v0, :cond_3
 
@@ -1736,7 +1736,7 @@
 
     if-gt v0, v1, :cond_1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->ova:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/tsu;->xva:Z
 
     if-eqz v0, :cond_0
 
@@ -1787,7 +1787,7 @@
 
     if-eqz v0, :cond_0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->ova:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->xva:Z
 
     check-cast p2, Lorg/bouncycastle/crypto/wtn/cjf;
 
@@ -1795,9 +1795,9 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Lwa:[B
+    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Uwa:[B
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Lwa:[B
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/tsu;->Uwa:[B
 
     invoke-direct {p0, p1}, Lorg/bouncycastle/crypto/rtg/tsu;->irq([B)V
 

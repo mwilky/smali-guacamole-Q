@@ -136,6 +136,8 @@
 
 .field private static final MSG_FLUSH_EXCLUSIVE_WAKELOCK:I = 0xa
 
+.field private static final MSG_FLUSH_LATEST_PUBLIC_DOMAIN_REACHABLE:I = 0xd
+
 .field private static final MSG_INIT:I = 0x1
 
 .field private static final MSG_LEAVE_OPSM:I = 0x1e6c
@@ -2410,7 +2412,7 @@
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x50d007a
+    const v2, 0x50d007b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2418,7 +2420,7 @@
 
     iget-object v2, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    const v3, 0x50d0079
+    const v3, 0x50d007a
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private Kma:Lyou/zta/sis/zta/wtn;
+.field private Tma:Lyou/zta/sis/zta/wtn;
 
 .field private c:Lyou/zta/sis/zta/rtg;
 
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Kma:Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Tma:Lyou/zta/sis/zta/wtn;
 
     new-instance v0, Lorg/bouncycastle/asn1/C;
 
@@ -86,7 +86,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Kma:Lyou/zta/sis/zta/wtn;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Tma:Lyou/zta/sis/zta/wtn;
 
     if-nez v0, :cond_0
 
@@ -106,10 +106,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Kma:Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Tma:Lyou/zta/sis/zta/wtn;
 
     :cond_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Kma:Lyou/zta/sis/zta/wtn;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Tma:Lyou/zta/sis/zta/wtn;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

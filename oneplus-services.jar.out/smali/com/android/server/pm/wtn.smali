@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final HB:Ljava/util/Set;
+.field private static final IB:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -29,9 +29,9 @@
 
 
 # instance fields
-.field private final FB:Ljava/io/File;
+.field private final GB:Ljava/io/File;
 
-.field private GB:Ljava/util/ArrayList;
+.field private HB:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, v1}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/android/server/pm/wtn;->HB:Ljava/util/Set;
+    sput-object v0, Lcom/android/server/pm/wtn;->IB:Ljava/util/Set;
 
     return-void
 .end method
@@ -82,13 +82,13 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/android/server/pm/wtn;->FB:Ljava/io/File;
+    iput-object v0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/io/File;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 .method private Lb(Ljava/lang/String;)I
     .locals 2
 
-    iget-object p0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -138,7 +138,7 @@
 .method private Mb(Ljava/lang/String;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -175,7 +175,7 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    iget-object p0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
@@ -186,7 +186,7 @@
 .method private dma(Ljava/lang/String;I)V
     .locals 3
 
-    iget-object v0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -220,7 +220,7 @@
     return-void
 
     :cond_1
-    iget-object p0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/server/pm/wtn$zta;
 
@@ -370,7 +370,7 @@
     :catch_0
     :cond_6
     :try_start_2
-    iget-object v6, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     new-instance v8, Lcom/android/server/pm/wtn$zta;
 
@@ -459,7 +459,7 @@
 
     invoke-interface {v5, v8, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    iget-object v6, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -474,7 +474,7 @@
 
     const-string v9, "packageName"
 
-    iget-object v10, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object v10, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -488,7 +488,7 @@
 
     const-string v9, "versionCode"
 
-    iget-object v10, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object v10, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -584,7 +584,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/android/server/pm/wtn;->HB:Ljava/util/Set;
+    sget-object v0, Lcom/android/server/pm/wtn;->IB:Ljava/util/Set;
 
     iget-object v1, p2, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -723,7 +723,7 @@
 .method public checkAppHasDeleted(Ljava/lang/String;)Z
     .locals 1
 
-    iget-object p0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/pm/wtn;->HB:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -774,7 +774,7 @@
 
     new-instance v1, Ljava/io/File;
 
-    iget-object p0, p0, Lcom/android/server/pm/wtn;->FB:Ljava/io/File;
+    iget-object p0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/io/File;
 
     iget-object p1, p1, Landroid/content/pm/PackageParser$PackageLite;->packageName:Ljava/lang/String;
 
@@ -939,7 +939,7 @@
 
     new-instance p1, Ljava/io/File;
 
-    iget-object p0, p0, Lcom/android/server/pm/wtn;->FB:Ljava/io/File;
+    iget-object p0, p0, Lcom/android/server/pm/wtn;->GB:Ljava/io/File;
 
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 

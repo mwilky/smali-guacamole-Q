@@ -42,6 +42,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->handleEvaluateGameMode(ZZ)V
 
     return-void
@@ -52,6 +57,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/wtn$zta;->handleEvaluateReadMode(I)V
 
     return-void
@@ -98,6 +108,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->packageChanged(Ljava/lang/String;I)V
 
     return-void
@@ -108,6 +123,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->putSceneMode(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -118,6 +138,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/wtn$zta;->sendReadModeNotification(Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -138,6 +163,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->startEvaluateGameMode(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -148,6 +178,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->startEvaluateReadingMode(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -158,6 +193,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->startEvaluateSceneModes(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -176,6 +216,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->stopEvaluateSceneModes(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void
@@ -186,6 +231,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/wtn$zta;->updateDisableSceneScreenEffectFlag(I)V
 
     return-void
@@ -196,6 +246,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/wm/wtn$zta;->updateSceneScreenEffectFlag(I)V
 
     return-void
@@ -206,6 +261,11 @@
 
     iget-object p0, p0, Lcom/android/server/wm/gck;->dO:Lcom/android/server/wm/wtn$zta;
 
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/wm/wtn$zta;->updateSceneScreenEffectFlag(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/wm/ActivityRecord;)V
 
     return-void

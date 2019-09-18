@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field private ika:Ljava/security/SecureRandom;
-
 .field private q:Ljava/math/BigInteger;
+
+.field private rka:Ljava/security/SecureRandom;
 
 
 # direct methods
@@ -51,7 +51,7 @@
     move-result v0
 
     :cond_0
-    iget-object v1, p0, Lorg/bouncycastle/crypto/gck/cno;->ika:Ljava/security/SecureRandom;
+    iget-object v1, p0, Lorg/bouncycastle/crypto/gck/cno;->rka:Ljava/security/SecureRandom;
 
     invoke-static {v0, v1}, Lorg/bouncycastle/util/you;->zta(ILjava/security/SecureRandom;)Ljava/math/BigInteger;
 
@@ -101,7 +101,7 @@
 
     iput-object p1, p0, Lorg/bouncycastle/crypto/gck/cno;->q:Ljava/math/BigInteger;
 
-    iput-object p2, p0, Lorg/bouncycastle/crypto/gck/cno;->ika:Ljava/security/SecureRandom;
+    iput-object p2, p0, Lorg/bouncycastle/crypto/gck/cno;->rka:Ljava/security/SecureRandom;
 
     return-void
 .end method

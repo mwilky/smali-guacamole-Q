@@ -135,7 +135,7 @@
 
     if-eqz p2, :cond_3
 
-    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Aga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Jga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     goto :goto_2
 
@@ -552,7 +552,7 @@
 
     if-eqz v2, :cond_6
 
-    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Aga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Jga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     goto :goto_1
 
@@ -564,7 +564,7 @@
     :cond_7
     if-eqz v2, :cond_8
 
-    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Bga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Kga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     goto :goto_1
 
@@ -576,7 +576,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/OnePlusBGController$igw;->mType:Lcom/android/server/am/OnePlusBGController$ProcType;
 
-    sget-object v2, Lcom/android/server/am/OnePlusBGController$ProcType;->Bga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object v2, Lcom/android/server/am/OnePlusBGController$ProcType;->Kga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     if-ne p2, v2, :cond_9
 

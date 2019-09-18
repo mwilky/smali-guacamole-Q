@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final dAa:[Lorg/bouncycastle/asn1/bvj;
+.field public static final mAa:[Lorg/bouncycastle/asn1/bvj;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->ILa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->RLa:Lorg/bouncycastle/asn1/bvj;
 
     const/4 v2, 0x1
 
@@ -33,7 +33,7 @@
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/dsa/tsu;->dAa:[Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/dsa/tsu;->mAa:[Lorg/bouncycastle/asn1/bvj;
 
     return-void
 .end method
@@ -116,7 +116,7 @@
     move v1, v0
 
     :goto_0
-    sget-object v2, Lorg/bouncycastle/jcajce/provider/asymmetric/dsa/tsu;->dAa:[Lorg/bouncycastle/asn1/bvj;
+    sget-object v2, Lorg/bouncycastle/jcajce/provider/asymmetric/dsa/tsu;->mAa:[Lorg/bouncycastle/asn1/bvj;
 
     array-length v3, v2
 

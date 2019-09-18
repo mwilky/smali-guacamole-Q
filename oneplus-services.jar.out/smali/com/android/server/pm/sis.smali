@@ -19,6 +19,17 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final BB:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
             ">;"
@@ -80,34 +91,25 @@
 
 .field public static final qB:I = 0xf
 
-.field public static final rB:I = 0xe6
+.field public static final rB:I = 0x1e8
 
-.field public static final sB:I = 0x50
+.field public static final sB:I = 0xe6
 
 .field private static sConfigLock:Ljava/lang/Object; = null
 
-.field public static final tB:I = 0x2
+.field public static final tB:I = 0x50
 
-.field public static final uB:I = 0x1d7
+.field public static final uB:I = 0x2
 
-.field public static final vB:I = 0x1e6
+.field public static final vB:I = 0x1d7
 
-.field public static final wB:I = 0x14c
+.field public static final wB:I = 0x1e6
 
-.field public static final xB:I = 0x166
+.field public static final xB:I = 0x14c
 
-.field public static final yB:I = 0x186
+.field public static final yB:I = 0x166
 
-.field private static final zB:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final zB:I = 0x186
 
 
 # instance fields
@@ -164,9 +166,9 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/server/pm/sis;->zB:Ljava/util/Map;
+    sput-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
 
-    sget-object v0, Lcom/android/server/pm/sis;->zB:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
 
     const/4 v1, 0x2
 
@@ -178,7 +180,7 @@
 
     invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/sis;->zB:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
 
     const/4 v4, 0x1
 
@@ -190,7 +192,7 @@
 
     invoke-interface {v0, v5, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/sis;->zB:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
 
     const-string v6, "arm64-v8a"
 
@@ -200,17 +202,17 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
+    sput-object v0, Lcom/android/server/pm/sis;->BB:Ljava/util/Map;
 
-    sget-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/sis;->BB:Ljava/util/Map;
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/sis;->BB:Ljava/util/Map;
 
     invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
+    sget-object v0, Lcom/android/server/pm/sis;->BB:Ljava/util/Map;
 
     invoke-interface {v0, v2, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2775,7 +2777,7 @@
 .method public J(Ljava/lang/String;)I
     .locals 0
 
-    sget-object p0, Lcom/android/server/pm/sis;->zB:Ljava/util/Map;
+    sget-object p0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
 
     invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -3262,7 +3264,7 @@
 .method public o(I)Ljava/lang/String;
     .locals 0
 
-    sget-object p0, Lcom/android/server/pm/sis;->AB:Ljava/util/Map;
+    sget-object p0, Lcom/android/server/pm/sis;->BB:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

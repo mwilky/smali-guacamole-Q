@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private final Wfa:[[B
+.field private final ega:[[B
 
-.field private final aga:Ljava/io/InputStream;
+.field private final jga:Ljava/io/InputStream;
 
-.field private final bga:I
+.field private final kga:I
 
 
 # direct methods
@@ -29,15 +29,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
-    iput p2, p0, Lorg/bouncycastle/asn1/hmo;->bga:I
+    iput p2, p0, Lorg/bouncycastle/asn1/hmo;->kga:I
 
     const/16 p1, 0xb
 
     new-array p1, p1, [[B
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/hmo;->Wfa:[[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/hmo;->ega:[[B
 
     return-void
 .end method
@@ -56,10 +56,10 @@
     return-void
 .end method
 
-.method private Za(Z)V
+.method private _a(Z)V
     .locals 1
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     instance-of v0, p0, Lorg/bouncycastle/asn1/da;
 
@@ -205,7 +205,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
@@ -222,9 +222,9 @@
     :cond_0
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1}, Lorg/bouncycastle/asn1/hmo;->Za(Z)V
+    invoke-direct {p0, v1}, Lorg/bouncycastle/asn1/hmo;->_a(Z)V
 
-    iget-object v2, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object v2, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     invoke-static {v2, v0}, Lorg/bouncycastle/asn1/dma;->you(Ljava/io/InputStream;I)I
 
@@ -239,9 +239,9 @@
     move v1, v4
 
     :cond_1
-    iget-object v3, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object v3, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
-    iget v5, p0, Lorg/bouncycastle/asn1/hmo;->bga:I
+    iget v5, p0, Lorg/bouncycastle/asn1/hmo;->kga:I
 
     invoke-static {v3, v5}, Lorg/bouncycastle/asn1/dma;->zta(Ljava/io/InputStream;I)I
 
@@ -253,15 +253,15 @@
 
     new-instance v1, Lorg/bouncycastle/asn1/da;
 
-    iget-object v3, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object v3, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
-    iget v5, p0, Lorg/bouncycastle/asn1/hmo;->bga:I
+    iget v5, p0, Lorg/bouncycastle/asn1/hmo;->kga:I
 
     invoke-direct {v1, v3, v5}, Lorg/bouncycastle/asn1/da;-><init>(Ljava/io/InputStream;I)V
 
     new-instance v3, Lorg/bouncycastle/asn1/hmo;
 
-    iget p0, p0, Lorg/bouncycastle/asn1/hmo;->bga:I
+    iget p0, p0, Lorg/bouncycastle/asn1/hmo;->kga:I
 
     invoke-direct {v3, v1, p0}, Lorg/bouncycastle/asn1/hmo;-><init>(Ljava/io/InputStream;I)V
 
@@ -305,7 +305,7 @@
     :cond_5
     new-instance v4, Lorg/bouncycastle/asn1/ba;
 
-    iget-object v5, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object v5, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     invoke-direct {v4, v5, v3}, Lorg/bouncycastle/asn1/ba;-><init>(Ljava/io/InputStream;I)V
 
@@ -429,7 +429,7 @@
     if-eq v2, v0, :cond_d
 
     :try_start_0
-    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->Wfa:[[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->ega:[[B
 
     invoke-static {v2, v4, p0}, Lorg/bouncycastle/asn1/dma;->zta(ILorg/bouncycastle/asn1/ba;[[B)Lorg/bouncycastle/asn1/vdb;
 
@@ -470,7 +470,7 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     check-cast p0, Lorg/bouncycastle/asn1/ba;
 
@@ -493,7 +493,7 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     instance-of p0, p0, Lorg/bouncycastle/asn1/da;
 
@@ -567,7 +567,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/hmo;->aga:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/hmo;->jga:Ljava/io/InputStream;
 
     instance-of v1, v0, Lorg/bouncycastle/asn1/da;
 

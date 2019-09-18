@@ -152,7 +152,7 @@
 
     sget-object v2, Lyou/zta/sis/zta/sis;->ONE:Ljava/math/BigInteger;
 
-    sget-object v3, Lyou/zta/sis/zta/sis;->Lma:Ljava/math/BigInteger;
+    sget-object v3, Lyou/zta/sis/zta/sis;->Uma:Ljava/math/BigInteger;
 
     sget-object v4, Lyou/zta/sis/zta/sis;->ONE:Ljava/math/BigInteger;
 
@@ -546,7 +546,7 @@
     return-object p0
 
     :cond_2
-    sget-object v0, Lyou/zta/sis/zta/sis;->Lma:Ljava/math/BigInteger;
+    sget-object v0, Lyou/zta/sis/zta/sis;->Uma:Ljava/math/BigInteger;
 
     iget-object v2, p0, Lyou/zta/sis/zta/cno$tsu;->q:Ljava/math/BigInteger;
 

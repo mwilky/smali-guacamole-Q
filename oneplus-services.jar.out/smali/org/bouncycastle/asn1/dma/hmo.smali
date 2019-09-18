@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field private Zna:Lorg/bouncycastle/asn1/ear;
-
-.field private _na:Lorg/bouncycastle/asn1/dma/cno;
-
-.field private aoa:Lorg/bouncycastle/asn1/ear;
-
-.field private boa:Lorg/bouncycastle/asn1/ear;
-
 .field private certificates:Lorg/bouncycastle/asn1/ear;
+
+.field private hoa:Lorg/bouncycastle/asn1/ear;
+
+.field private ioa:Lorg/bouncycastle/asn1/dma/cno;
+
+.field private joa:Lorg/bouncycastle/asn1/ear;
+
+.field private koa:Lorg/bouncycastle/asn1/ear;
 
 .field private version:Lorg/bouncycastle/asn1/ywr;
 
@@ -44,7 +44,7 @@
 
     check-cast v0, Lorg/bouncycastle/asn1/ear;
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->Zna:Lorg/bouncycastle/asn1/ear;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->hoa:Lorg/bouncycastle/asn1/ear;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->_na:Lorg/bouncycastle/asn1/dma/cno;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->ioa:Lorg/bouncycastle/asn1/dma/cno;
 
     :goto_0
     invoke-interface {p1}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->aoa:Lorg/bouncycastle/asn1/ear;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->joa:Lorg/bouncycastle/asn1/ear;
 
     goto :goto_0
 
@@ -132,7 +132,7 @@
     :cond_2
     check-cast v0, Lorg/bouncycastle/asn1/ear;
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->boa:Lorg/bouncycastle/asn1/ear;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/hmo;->koa:Lorg/bouncycastle/asn1/ear;
 
     goto :goto_0
 
@@ -147,15 +147,15 @@
 
     iput-object p1, p0, Lorg/bouncycastle/asn1/dma/hmo;->version:Lorg/bouncycastle/asn1/ywr;
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/dma/hmo;->Zna:Lorg/bouncycastle/asn1/ear;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/dma/hmo;->hoa:Lorg/bouncycastle/asn1/ear;
 
-    iput-object p3, p0, Lorg/bouncycastle/asn1/dma/hmo;->_na:Lorg/bouncycastle/asn1/dma/cno;
+    iput-object p3, p0, Lorg/bouncycastle/asn1/dma/hmo;->ioa:Lorg/bouncycastle/asn1/dma/cno;
 
     iput-object p4, p0, Lorg/bouncycastle/asn1/dma/hmo;->certificates:Lorg/bouncycastle/asn1/ear;
 
-    iput-object p5, p0, Lorg/bouncycastle/asn1/dma/hmo;->aoa:Lorg/bouncycastle/asn1/ear;
+    iput-object p5, p0, Lorg/bouncycastle/asn1/dma/hmo;->joa:Lorg/bouncycastle/asn1/ear;
 
-    iput-object p6, p0, Lorg/bouncycastle/asn1/dma/hmo;->boa:Lorg/bouncycastle/asn1/ear;
+    iput-object p6, p0, Lorg/bouncycastle/asn1/dma/hmo;->koa:Lorg/bouncycastle/asn1/ear;
 
     return-void
 .end method
@@ -195,7 +195,7 @@
 .method public Lg()Lorg/bouncycastle/asn1/ear;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->aoa:Lorg/bouncycastle/asn1/ear;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->joa:Lorg/bouncycastle/asn1/ear;
 
     return-object p0
 .end method
@@ -203,7 +203,7 @@
 .method public Mg()Lorg/bouncycastle/asn1/ear;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->Zna:Lorg/bouncycastle/asn1/ear;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->hoa:Lorg/bouncycastle/asn1/ear;
 
     return-object p0
 .end method
@@ -219,7 +219,7 @@
 .method public getContentInfo()Lorg/bouncycastle/asn1/dma/cno;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->_na:Lorg/bouncycastle/asn1/dma/cno;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->ioa:Lorg/bouncycastle/asn1/dma/cno;
 
     return-object p0
 .end method
@@ -227,7 +227,7 @@
 .method public getSignerInfos()Lorg/bouncycastle/asn1/ear;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->boa:Lorg/bouncycastle/asn1/ear;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->koa:Lorg/bouncycastle/asn1/ear;
 
     return-object p0
 .end method
@@ -251,11 +251,11 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/hmo;->Zna:Lorg/bouncycastle/asn1/ear;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/hmo;->hoa:Lorg/bouncycastle/asn1/ear;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/hmo;->_na:Lorg/bouncycastle/asn1/dma/cno;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/hmo;->ioa:Lorg/bouncycastle/asn1/dma/cno;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
@@ -272,7 +272,7 @@
     invoke-virtual {v0, v3}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_0
-    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/hmo;->aoa:Lorg/bouncycastle/asn1/ear;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/hmo;->joa:Lorg/bouncycastle/asn1/ear;
 
     if-eqz v1, :cond_1
 
@@ -285,7 +285,7 @@
     invoke-virtual {v0, v3}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_1
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->boa:Lorg/bouncycastle/asn1/ear;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/hmo;->koa:Lorg/bouncycastle/asn1/ear;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 

@@ -94,7 +94,7 @@
 
     if-nez v2, :cond_8
 
-    sget-object v2, Lorg/bouncycastle/asn1/x509/t;->MMa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v2, Lorg/bouncycastle/asn1/x509/t;->VMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1, v2}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 

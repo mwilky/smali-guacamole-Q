@@ -47,7 +47,7 @@
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/lqr;->Tna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/lqr;->boa:Z
 
     if-eqz v0, :cond_0
 
@@ -96,11 +96,11 @@
 
     move-result v0
 
-    iget-boolean v1, p0, Lorg/bouncycastle/asn1/lqr;->Tna:Z
+    iget-boolean v1, p0, Lorg/bouncycastle/asn1/lqr;->boa:Z
 
     if-eqz v1, :cond_0
 
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
@@ -119,7 +119,7 @@
     :cond_0
     add-int/lit8 v0, v0, -0x1
 
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
@@ -130,7 +130,7 @@
     return p0
 
     :cond_1
-    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
@@ -149,7 +149,7 @@
         }
     .end annotation
 
-    iget v0, p0, Lorg/bouncycastle/asn1/lqr;->Sna:I
+    iget v0, p0, Lorg/bouncycastle/asn1/lqr;->aoa:I
 
     const/16 v1, 0xa0
 
@@ -163,7 +163,7 @@
 
     if-nez v0, :cond_5
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/lqr;->Tna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/lqr;->boa:Z
 
     if-nez v0, :cond_4
 

@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method private Is()[B
+.method private Ms()[B
     .locals 5
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/wtn;->time:[B
@@ -195,7 +195,7 @@
 .method mg()I
     .locals 1
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Is()[B
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Ms()[B
 
     move-result-object p0
 
@@ -220,7 +220,7 @@
         }
     .end annotation
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Is()[B
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Ms()[B
 
     move-result-object p0
 

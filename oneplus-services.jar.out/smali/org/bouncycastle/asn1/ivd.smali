@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final Ona:I = 0x3e8
+.field private static final Xna:I = 0x3e8
 
 
 # instance fields
-.field private final Nna:[Lorg/bouncycastle/asn1/ibl;
+.field private final Wna:[Lorg/bouncycastle/asn1/ibl;
 
 .field private final chunkSize:I
 
@@ -39,7 +39,7 @@
 
     invoke-direct {p0, p1}, Lorg/bouncycastle/asn1/ibl;-><init>([B)V
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/ivd;->Nna:[Lorg/bouncycastle/asn1/ibl;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/ivd;->Wna:[Lorg/bouncycastle/asn1/ibl;
 
     iput p3, p0, Lorg/bouncycastle/asn1/ivd;->chunkSize:I
 
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method private Js()Ljava/util/Vector;
+.method private Ns()Ljava/util/Vector;
     .locals 7
 
     new-instance v0, Ljava/util/Vector;
@@ -273,7 +273,7 @@
 .method static synthetic zta(Lorg/bouncycastle/asn1/ivd;)[Lorg/bouncycastle/asn1/ibl;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ivd;->Nna:[Lorg/bouncycastle/asn1/ibl;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ivd;->Wna:[Lorg/bouncycastle/asn1/ibl;
 
     return-object p0
 .end method
@@ -283,11 +283,11 @@
 .method public Bg()Ljava/util/Enumeration;
     .locals 1
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ivd;->Nna:[Lorg/bouncycastle/asn1/ibl;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ivd;->Wna:[Lorg/bouncycastle/asn1/ibl;
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/ivd;->Js()Ljava/util/Vector;
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/ivd;->Ns()Ljava/util/Vector;
 
     move-result-object p0
 

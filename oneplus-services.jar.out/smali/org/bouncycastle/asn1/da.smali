@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private ega:I
+.field private nga:I
 
-.field private fga:I
+.field private oga:I
 
-.field private gga:Z
+.field private pga:Z
 
-.field private hga:Z
+.field private qga:Z
 
 
 # direct methods
@@ -26,29 +26,29 @@
 
     const/4 p2, 0x0
 
-    iput-boolean p2, p0, Lorg/bouncycastle/asn1/da;->gga:Z
+    iput-boolean p2, p0, Lorg/bouncycastle/asn1/da;->pga:Z
 
     const/4 p2, 0x1
 
-    iput-boolean p2, p0, Lorg/bouncycastle/asn1/da;->hga:Z
+    iput-boolean p2, p0, Lorg/bouncycastle/asn1/da;->qga:Z
 
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result p2
 
-    iput p2, p0, Lorg/bouncycastle/asn1/da;->ega:I
+    iput p2, p0, Lorg/bouncycastle/asn1/da;->nga:I
 
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iput p1, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
-    iget p1, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iget p1, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
     if-ltz p1, :cond_0
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/da;->Bs()Z
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/da;->Fs()Z
 
     return-void
 
@@ -60,33 +60,33 @@
     throw p0
 .end method
 
-.method private Bs()Z
+.method private Fs()Z
     .locals 1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->gga:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->pga:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->hga:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->qga:Z
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lorg/bouncycastle/asn1/da;->ega:I
+    iget v0, p0, Lorg/bouncycastle/asn1/da;->nga:I
 
     if-nez v0, :cond_0
 
-    iget v0, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iget v0, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/da;->gga:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/da;->pga:Z
 
     invoke-virtual {p0, v0}, Lorg/bouncycastle/asn1/ga;->R(Z)V
 
     :cond_0
-    iget-boolean p0, p0, Lorg/bouncycastle/asn1/da;->gga:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/asn1/da;->pga:Z
 
     return p0
 .end method
@@ -96,9 +96,9 @@
 .method S(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/asn1/da;->hga:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/asn1/da;->qga:Z
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/da;->Bs()Z
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/da;->Fs()Z
 
     return-void
 .end method
@@ -111,7 +111,7 @@
         }
     .end annotation
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/da;->Bs()Z
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/da;->Fs()Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
     return p0
 
     :cond_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ga;->aga:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ga;->jga:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
@@ -130,13 +130,13 @@
 
     if-ltz v0, :cond_1
 
-    iget v1, p0, Lorg/bouncycastle/asn1/da;->ega:I
+    iget v1, p0, Lorg/bouncycastle/asn1/da;->nga:I
 
-    iget v2, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iget v2, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
-    iput v2, p0, Lorg/bouncycastle/asn1/da;->ega:I
+    iput v2, p0, Lorg/bouncycastle/asn1/da;->nga:I
 
-    iput v0, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iput v0, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
     return v1
 
@@ -156,7 +156,7 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->hga:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->qga:Z
 
     if-nez v0, :cond_4
 
@@ -167,7 +167,7 @@
     goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->gga:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/da;->pga:Z
 
     if-eqz v0, :cond_1
 
@@ -176,7 +176,7 @@
     return p0
 
     :cond_1
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ga;->aga:Ljava/io/InputStream;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ga;->jga:Ljava/io/InputStream;
 
     add-int/lit8 v1, p2, 0x2
 
@@ -188,7 +188,7 @@
 
     if-ltz p3, :cond_3
 
-    iget v0, p0, Lorg/bouncycastle/asn1/da;->ega:I
+    iget v0, p0, Lorg/bouncycastle/asn1/da;->nga:I
 
     int-to-byte v0, v0
 
@@ -196,29 +196,29 @@
 
     add-int/lit8 p2, p2, 0x1
 
-    iget v0, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iget v0, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
     int-to-byte v0, v0
 
     aput-byte v0, p1, p2
 
-    iget-object p1, p0, Lorg/bouncycastle/asn1/ga;->aga:Ljava/io/InputStream;
+    iget-object p1, p0, Lorg/bouncycastle/asn1/ga;->jga:Ljava/io/InputStream;
 
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/asn1/da;->ega:I
+    iput p1, p0, Lorg/bouncycastle/asn1/da;->nga:I
 
-    iget-object p1, p0, Lorg/bouncycastle/asn1/ga;->aga:Ljava/io/InputStream;
+    iget-object p1, p0, Lorg/bouncycastle/asn1/ga;->jga:Ljava/io/InputStream;
 
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iput p1, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
-    iget p0, p0, Lorg/bouncycastle/asn1/da;->fga:I
+    iget p0, p0, Lorg/bouncycastle/asn1/da;->oga:I
 
     if-ltz p0, :cond_2
 

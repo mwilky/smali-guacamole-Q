@@ -16,9 +16,9 @@
 # static fields
 .field protected static final TAG:Ljava/lang/String; = "OpCustomizeSettings"
 
-.field private static final cfa:Ljava/lang/String;
+.field private static final lfa:Ljava/lang/String;
 
-.field private static dfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+.field private static mfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->cfa:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->lfa:Ljava/lang/String;
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 .method private static getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
     .locals 2
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->dfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->mfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     if-nez v0, :cond_4
 
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings;->cfa:Ljava/lang/String;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings;->lfa:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,7 +71,7 @@
 
     invoke-static {v1, v0}, Lcom/oneplus/custom/utils/zta;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->cfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->lfa:Ljava/lang/String;
 
     const-string v1, "16859"
 
@@ -81,7 +81,7 @@
 
     if-nez v0, :cond_3
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->cfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->lfa:Ljava/lang/String;
 
     const-string v1, "17801"
 
@@ -94,7 +94,7 @@
     goto :goto_1
 
     :cond_0
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->cfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->lfa:Ljava/lang/String;
 
     const-string v1, "15801"
 
@@ -104,7 +104,7 @@
 
     if-nez v0, :cond_2
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->cfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->lfa:Ljava/lang/String;
 
     const-string v1, "15811"
 
@@ -138,10 +138,10 @@
     invoke-direct {v0}, Lcom/oneplus/custom/utils/you;-><init>()V
 
     :goto_2
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->dfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->mfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     :cond_4
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->dfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->mfa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     return-object v0
 .end method

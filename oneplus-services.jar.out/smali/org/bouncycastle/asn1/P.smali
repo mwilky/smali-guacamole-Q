@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final wka:[C
+.field private static final Fka:[C
 
 
 # instance fields
@@ -24,7 +24,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lorg/bouncycastle/asn1/P;->wka:[C
+    sput-object v0, Lorg/bouncycastle/asn1/P;->Fka:[C
 
     return-void
 
@@ -239,7 +239,7 @@
 
     if-eq v1, v2, :cond_0
 
-    sget-object v2, Lorg/bouncycastle/asn1/P;->wka:[C
+    sget-object v2, Lorg/bouncycastle/asn1/P;->Fka:[C
 
     aget-byte v3, p0, v1
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    sget-object v2, Lorg/bouncycastle/asn1/P;->wka:[C
+    sget-object v2, Lorg/bouncycastle/asn1/P;->Fka:[C
 
     aget-byte v3, p0, v1
 

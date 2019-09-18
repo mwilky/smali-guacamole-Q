@@ -80,17 +80,17 @@
 
 .field private static final UM:S = 0x19s
 
-.field private static final VI:Ljava/lang/String; = "network_restrict"
-
 .field private static VL:Ljava/io/FileDescriptor; = null
 
 .field private static final VM:S = 0x1as
 
-.field private static final WI:Landroid/net/Uri;
+.field private static final WI:Ljava/lang/String; = "network_restrict"
 
 .field private static final WL:Ljava/lang/String; = "_id"
 
 .field private static final WM:S = 0x1bs
+
+.field private static final XI:Landroid/net/Uri;
 
 .field private static final XL:Ljava/lang/String; = "pkg"
 
@@ -318,9 +318,9 @@
 
 .field private mContext:Landroid/content/Context;
 
-.field private mHandler:Landroid/os/Handler;
+.field private mFrontPackageListener:Lcom/android/server/OnePlusUtil$zta$you;
 
-.field private mL:Landroid/os/Handler;
+.field private mHandler:Landroid/os/Handler;
 
 .field private final mNetworkCallback:Landroid/net/ConnectivityManager$NetworkCallback;
 
@@ -350,13 +350,13 @@
 
 .field private mUserManager:Landroid/os/UserManager;
 
-.field private nL:Ljava/lang/Thread;
+.field private nL:Landroid/os/Handler;
 
-.field private oL:Landroid/net/NetworkRequest;
+.field private oL:Ljava/lang/Thread;
 
-.field private pL:Lcom/android/server/pm/PackageManagerService;
+.field private pL:Landroid/net/NetworkRequest;
 
-.field private qL:Lcom/android/server/OnePlusUtil$zta$you;
+.field private qL:Lcom/android/server/pm/PackageManagerService;
 
 .field private rL:Landroid/net/INetd;
 
@@ -397,7 +397,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/sis/vdb;->WI:Landroid/net/Uri;
+    sput-object v0, Lcom/android/server/sis/vdb;->XI:Landroid/net/Uri;
 
     const-string v1, "OP_SLA_NOTIFY_WIFI_SCORE"
 
@@ -559,7 +559,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
     const/4 v0, 0x0
 
@@ -659,7 +659,7 @@
 
     check-cast p1, Lcom/android/server/pm/PackageManagerService;
 
-    iput-object p1, p0, Lcom/android/server/sis/vdb;->pL:Lcom/android/server/pm/PackageManagerService;
+    iput-object p1, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/pm/PackageManagerService;
 
     iget-object p1, p0, Lcom/android/server/sis/vdb;->mContext:Landroid/content/Context;
 
@@ -727,7 +727,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/sis/vdb;->oL:Landroid/net/NetworkRequest;
+    iput-object p1, p0, Lcom/android/server/sis/vdb;->pL:Landroid/net/NetworkRequest;
 
     iget-object p1, p0, Lcom/android/server/sis/vdb;->mContext:Landroid/content/Context;
 
@@ -763,7 +763,7 @@
 
     invoke-direct {p2, p0, v1}, Lcom/android/server/sis/vdb$zta;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Looper;)V
 
-    iput-object p2, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iput-object p2, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {p0}, Lcom/android/server/sis/vdb;->registerSettingsCallbacks()V
 
@@ -822,7 +822,7 @@
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     :cond_0
-    iget-object p1, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     const/4 p2, 0x6
 
@@ -1189,7 +1189,7 @@
 
     invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v5, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v5, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     const/4 v7, 0x2
 
@@ -1309,7 +1309,7 @@
 
     if-ge v5, v6, :cond_1
 
-    iget-object v6, p0, Lcom/android/server/sis/vdb;->pL:Lcom/android/server/pm/PackageManagerService;
+    iget-object v6, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/pm/PackageManagerService;
 
     sget-object v7, Lcom/android/server/sis/vdb;->xN:Ljava/util/ArrayList;
 
@@ -1957,7 +1957,7 @@
     goto :goto_0
 
     :cond_4
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     const/4 p1, 0x5
 
@@ -2163,7 +2163,7 @@
 
     new-instance v2, Lcom/android/server/sis/ywr;
 
-    iget-object v3, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v3}, Lcom/android/server/sis/ywr;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2185,7 +2185,7 @@
 
     new-instance v2, Lcom/android/server/sis/qbh;
 
-    iget-object v4, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/sis/qbh;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2205,7 +2205,7 @@
 
     new-instance v2, Lcom/android/server/sis/oif;
 
-    iget-object v4, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/sis/oif;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2225,7 +2225,7 @@
 
     new-instance v2, Lcom/android/server/sis/bvj;
 
-    iget-object v4, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/sis/bvj;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2245,7 +2245,7 @@
 
     new-instance v2, Lcom/android/server/sis/ibl;
 
-    iget-object v4, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/sis/ibl;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2265,7 +2265,7 @@
 
     new-instance v2, Lcom/android/server/sis/gwm;
 
-    iget-object v4, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/sis/gwm;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2277,11 +2277,11 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/server/sis/vdb;->WI:Landroid/net/Uri;
+    sget-object v1, Lcom/android/server/sis/vdb;->XI:Landroid/net/Uri;
 
     new-instance v2, Lcom/android/server/sis/ugm;
 
-    iget-object v4, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object v4, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     invoke-direct {v2, p0, v4}, Lcom/android/server/sis/ugm;-><init>(Lcom/android/server/sis/vdb;Landroid/os/Handler;)V
 
@@ -2364,7 +2364,7 @@
     return p0
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->pL:Lcom/android/server/pm/PackageManagerService;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2384,7 +2384,7 @@
 .method static synthetic rtg(Lcom/android/server/sis/vdb;)Landroid/os/Handler;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     return-object p0
 .end method
@@ -3076,7 +3076,7 @@
 .method static synthetic vdb(Lcom/android/server/sis/vdb;)Landroid/net/NetworkRequest;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->oL:Landroid/net/NetworkRequest;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->pL:Landroid/net/NetworkRequest;
 
     return-object p0
 .end method
@@ -3113,7 +3113,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/android/server/sis/vdb;->WI:Landroid/net/Uri;
+    sget-object v3, Lcom/android/server/sis/vdb;->XI:Landroid/net/Uri;
 
     const/4 v4, 0x0
 
@@ -3506,13 +3506,13 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/sis/rtg;-><init>(Lcom/android/server/sis/vdb;)V
 
-    iput-object v0, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/OnePlusUtil$zta$you;
+    iput-object v0, p0, Lcom/android/server/sis/vdb;->mFrontPackageListener:Lcom/android/server/OnePlusUtil$zta$you;
 
     invoke-static {}, Lcom/android/server/OnePlusUtil$zta;->getInstance()Lcom/android/server/OnePlusUtil$zta;
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/OnePlusUtil$zta$you;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->mFrontPackageListener:Lcom/android/server/OnePlusUtil$zta$you;
 
     invoke-virtual {v0, p0}, Lcom/android/server/OnePlusUtil$zta;->zta(Lcom/android/server/OnePlusUtil$zta$you;)V
 
@@ -4206,7 +4206,7 @@
 .method public Kd()V
     .locals 11
 
-    iget-object v0, p0, Lcom/android/server/sis/vdb;->pL:Lcom/android/server/pm/PackageManagerService;
+    iget-object v0, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/pm/PackageManagerService;
 
     if-eqz v0, :cond_a
 
@@ -4599,7 +4599,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iget-object v0, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
@@ -4610,9 +4610,9 @@
 
     invoke-direct {v0, p0}, Lcom/android/server/sis/bio;-><init>(Lcom/android/server/sis/vdb;)V
 
-    iput-object v0, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
     invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
@@ -4691,7 +4691,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/sis/vdb;->pL:Lcom/android/server/pm/PackageManagerService;
+    iget-object v0, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/pm/PackageManagerService;
 
     const/4 v1, 0x0
 
@@ -4783,7 +4783,7 @@
     goto :goto_2
 
     :cond_1
-    iget-object v6, p0, Lcom/android/server/sis/vdb;->pL:Lcom/android/server/pm/PackageManagerService;
+    iget-object v6, p0, Lcom/android/server/sis/vdb;->qL:Lcom/android/server/pm/PackageManagerService;
 
     sget-object v7, Lcom/android/server/sis/vdb;->xN:Ljava/util/ArrayList;
 
@@ -5095,7 +5095,7 @@
 
     sput-object v0, Lcom/android/server/sis/vdb;->VL:Ljava/io/FileDescriptor;
 
-    iput-object v0, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
     :cond_0
     invoke-direct {p0}, Lcom/android/server/sis/vdb;->setOPSlaDisable()V
@@ -5150,7 +5150,7 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iget-object p1, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
     if-nez p1, :cond_2
 
@@ -5384,7 +5384,7 @@
     :goto_0
     iput-boolean p1, p0, Lcom/android/server/sis/vdb;->EL:Z
 
-    iget-object p1, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     const/16 v0, 0xa
 
@@ -5437,7 +5437,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/sis/vdb;->nL:Ljava/lang/Thread;
+    iget-object v0, p0, Lcom/android/server/sis/vdb;->oL:Ljava/lang/Thread;
 
     if-nez v0, :cond_1
 
@@ -5523,7 +5523,7 @@
 
     if-ne p1, v0, :cond_4
 
-    iget-object p1, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     const/4 v0, 0x5
 
@@ -5541,7 +5541,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :goto_0
-    iget-object p0, p0, Lcom/android/server/sis/vdb;->mL:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/android/server/sis/vdb;->nL:Landroid/os/Handler;
 
     const/4 p1, 0x4
 

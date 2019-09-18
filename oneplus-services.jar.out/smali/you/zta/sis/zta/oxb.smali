@@ -7,15 +7,15 @@
 
 
 # static fields
-.field static final JBa:Ljava/lang/String; = "bc_validity"
+.field static final SBa:Ljava/lang/String; = "bc_validity"
 
 
 # instance fields
-.field private SCa:Z
+.field private aDa:Z
 
-.field private TCa:Z
+.field private bDa:Z
 
-.field private UCa:Z
+.field private cDa:Z
 
 
 # direct methods
@@ -26,11 +26,11 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->SCa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->aDa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->TCa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->bDa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->UCa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->cDa:Z
 
     return-void
 .end method
@@ -40,7 +40,7 @@
 .method Ak()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->SCa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->aDa:Z
 
     return p0
 .end method
@@ -48,7 +48,7 @@
 .method Bk()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->UCa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->cDa:Z
 
     return p0
 .end method
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->TCa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->bDa:Z
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->SCa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->aDa:Z
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->UCa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->cDa:Z
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 .method zk()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->TCa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->bDa:Z
 
     return p0
 .end method

@@ -144,7 +144,7 @@
     return-void
 .end method
 
-.method private Hs()Ljava/lang/String;
+.method private Ls()Ljava/lang/String;
     .locals 6
 
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
@@ -232,7 +232,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v4}, Lorg/bouncycastle/asn1/wtn;->fc(I)Ljava/lang/String;
+    invoke-direct {p0, v4}, Lorg/bouncycastle/asn1/wtn;->ec(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -242,7 +242,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v1}, Lorg/bouncycastle/asn1/wtn;->fc(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lorg/bouncycastle/asn1/wtn;->ec(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -255,7 +255,7 @@
     return-object p0
 .end method
 
-.method private fc(I)Ljava/lang/String;
+.method private ec(I)Ljava/lang/String;
     .locals 1
 
     const/16 p0, 0xa
@@ -986,7 +986,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/wtn;->Hs()Ljava/lang/String;
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/wtn;->Ls()Ljava/lang/String;
 
     move-result-object p0
 

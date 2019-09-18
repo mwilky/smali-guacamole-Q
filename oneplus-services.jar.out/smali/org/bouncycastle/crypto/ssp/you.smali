@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final Uua:I = 0x14
+.field private static final cva:I = 0x14
 
 
 # direct methods
@@ -30,7 +30,7 @@
     move v2, v1
 
     :cond_0
-    iget-object v3, p0, Lorg/bouncycastle/crypto/cno;->ika:Ljava/security/SecureRandom;
+    iget-object v3, p0, Lorg/bouncycastle/crypto/cno;->rka:Ljava/security/SecureRandom;
 
     invoke-virtual {v3, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
 
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/cno;->ika:Ljava/security/SecureRandom;
+    iput-object v0, p0, Lorg/bouncycastle/crypto/cno;->rka:Ljava/security/SecureRandom;
 
     invoke-virtual {p1}, Lorg/bouncycastle/crypto/bvj;->getStrength()I
 

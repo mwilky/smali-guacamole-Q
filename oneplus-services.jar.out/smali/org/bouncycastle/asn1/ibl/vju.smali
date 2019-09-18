@@ -11,9 +11,9 @@
 
 
 # instance fields
-.field private Jsa:[B
+.field private Ssa:[B
 
-.field private Nsa:Lorg/bouncycastle/asn1/ibl/vdw;
+.field private Wsa:Lorg/bouncycastle/asn1/ibl/vdw;
 
 .field private curve:Lyou/zta/sis/zta/rtg;
 
@@ -175,7 +175,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/vju;->Jsa:[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/vju;->Ssa:[B
 
     return-void
 
@@ -226,7 +226,7 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->Jsa:[B
+    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->Ssa:[B
 
     invoke-static {p1}, Lyou/zta/sis/zta/you;->tsu(Lyou/zta/sis/zta/rtg;)Z
 
@@ -247,7 +247,7 @@
     invoke-direct {p2, p1}, Lorg/bouncycastle/asn1/ibl/vdw;-><init>(Ljava/math/BigInteger;)V
 
     :goto_0
-    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->Nsa:Lorg/bouncycastle/asn1/ibl/vdw;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->Wsa:Lorg/bouncycastle/asn1/ibl/vdw;
 
     goto :goto_1
 
@@ -462,7 +462,7 @@
 .method public getSeed()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Jsa:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Ssa:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -486,7 +486,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->Nsa:Lorg/bouncycastle/asn1/ibl/vdw;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->Wsa:Lorg/bouncycastle/asn1/ibl/vdw;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
@@ -494,7 +494,7 @@
 
     iget-object v2, p0, Lorg/bouncycastle/asn1/ibl/vju;->curve:Lyou/zta/sis/zta/rtg;
 
-    iget-object v3, p0, Lorg/bouncycastle/asn1/ibl/vju;->Jsa:[B
+    iget-object v3, p0, Lorg/bouncycastle/asn1/ibl/vju;->Ssa:[B
 
     invoke-direct {v1, v2, v3}, Lorg/bouncycastle/asn1/ibl/cgv;-><init>(Lyou/zta/sis/zta/rtg;[B)V
 
@@ -545,7 +545,7 @@
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->curve:Lyou/zta/sis/zta/rtg;
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Jsa:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Ssa:[B
 
     invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/ibl/cgv;-><init>(Lyou/zta/sis/zta/rtg;[B)V
 
@@ -555,7 +555,7 @@
 .method public yi()Lorg/bouncycastle/asn1/ibl/vdw;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Nsa:Lorg/bouncycastle/asn1/ibl/vdw;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Wsa:Lorg/bouncycastle/asn1/ibl/vdw;
 
     return-object p0
 .end method

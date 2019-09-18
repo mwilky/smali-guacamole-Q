@@ -137,7 +137,7 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Oea:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Xea:Ljava/lang/String;
 
     return-void
 .end method

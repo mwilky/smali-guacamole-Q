@@ -29,15 +29,15 @@
 
 .field public static final enum FOOT:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
-.field public static final enum Gga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
-
 .field public static final enum HOME:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
-
-.field public static final enum Hga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
 .field public static final enum NORMAL:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
 .field public static final enum POWER:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+
+.field public static final enum Pga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+
+.field public static final enum Qga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
 
 # direct methods
@@ -72,7 +72,7 @@
 
     invoke-direct {v0, v4, v3}, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Gga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sput-object v0, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Pga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     new-instance v0, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -102,7 +102,7 @@
 
     invoke-direct {v0, v7, v6}, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Hga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sput-object v0, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Qga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     new-instance v0, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -126,7 +126,7 @@
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Gga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Pga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     aput-object v1, v0, v3
 
@@ -138,7 +138,7 @@
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Hga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Qga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     aput-object v1, v0, v6
 

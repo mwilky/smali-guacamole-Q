@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field private Kla:Z
+.field private Tla:Z
 
-.field private Lla:Z
+.field private Ula:Z
 
-.field private Mla:Ljava/math/BigInteger;
+.field private Vla:Ljava/math/BigInteger;
 
-.field private Nla:[B
+.field private Wla:[B
 
-.field private Ola:Z
+.field private Xla:Z
 
-.field private Pla:Lorg/bouncycastle/x509/cno;
+.field private Yla:Lorg/bouncycastle/x509/cno;
 
 
 # direct methods
@@ -28,17 +28,17 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Kla:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Tla:Z
 
-    iput-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Lla:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Ula:Z
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iput-object v1, p0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
-    iput-object v1, p0, Lorg/bouncycastle/x509/kth;->Nla:[B
+    iput-object v1, p0, Lorg/bouncycastle/x509/kth;->Wla:[B
 
-    iput-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Ola:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Xla:Z
 
     return-void
 .end method
@@ -121,7 +121,7 @@
 .method public V(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/x509/kth;->Lla:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/x509/kth;->Ula:Z
 
     return-void
 .end method
@@ -129,7 +129,7 @@
 .method public W(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/x509/kth;->Kla:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/x509/kth;->Tla:Z
 
     return-void
 .end method
@@ -137,7 +137,7 @@
 .method public X(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/x509/kth;->Ola:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/x509/kth;->Xla:Z
 
     return-void
 .end method
@@ -145,7 +145,7 @@
 .method public Xf()Lorg/bouncycastle/x509/cno;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Pla:Lorg/bouncycastle/x509/cno;
+    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Yla:Lorg/bouncycastle/x509/cno;
 
     return-object p0
 .end method
@@ -153,7 +153,7 @@
 .method public Yf()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Nla:[B
+    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Wla:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -165,7 +165,7 @@
 .method public Zf()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -173,7 +173,7 @@
 .method public _f()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/x509/kth;->Lla:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/x509/kth;->Ula:Z
 
     return p0
 .end method
@@ -181,7 +181,7 @@
 .method public ag()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/x509/kth;->Kla:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/x509/kth;->Tla:Z
 
     return p0
 .end method
@@ -189,7 +189,7 @@
 .method public bg()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/x509/kth;->Ola:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/x509/kth;->Xla:Z
 
     return p0
 .end method
@@ -201,33 +201,33 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lorg/bouncycastle/x509/kth;->Kla:Z
+    iget-boolean v1, p0, Lorg/bouncycastle/x509/kth;->Tla:Z
 
-    iput-boolean v1, v0, Lorg/bouncycastle/x509/kth;->Kla:Z
+    iput-boolean v1, v0, Lorg/bouncycastle/x509/kth;->Tla:Z
 
-    iget-boolean v1, p0, Lorg/bouncycastle/x509/kth;->Lla:Z
+    iget-boolean v1, p0, Lorg/bouncycastle/x509/kth;->Ula:Z
 
-    iput-boolean v1, v0, Lorg/bouncycastle/x509/kth;->Lla:Z
+    iput-boolean v1, v0, Lorg/bouncycastle/x509/kth;->Ula:Z
 
-    iget-object v1, p0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iget-object v1, p0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
-    iput-object v1, v0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iput-object v1, v0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
-    iget-object v1, p0, Lorg/bouncycastle/x509/kth;->Pla:Lorg/bouncycastle/x509/cno;
+    iget-object v1, p0, Lorg/bouncycastle/x509/kth;->Yla:Lorg/bouncycastle/x509/cno;
 
-    iput-object v1, v0, Lorg/bouncycastle/x509/kth;->Pla:Lorg/bouncycastle/x509/cno;
+    iput-object v1, v0, Lorg/bouncycastle/x509/kth;->Yla:Lorg/bouncycastle/x509/cno;
 
-    iget-boolean v1, p0, Lorg/bouncycastle/x509/kth;->Ola:Z
+    iget-boolean v1, p0, Lorg/bouncycastle/x509/kth;->Xla:Z
 
-    iput-boolean v1, v0, Lorg/bouncycastle/x509/kth;->Ola:Z
+    iput-boolean v1, v0, Lorg/bouncycastle/x509/kth;->Xla:Z
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Nla:[B
+    iget-object p0, p0, Lorg/bouncycastle/x509/kth;->Wla:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
     move-result-object p0
 
-    iput-object p0, v0, Lorg/bouncycastle/x509/kth;->Nla:[B
+    iput-object p0, v0, Lorg/bouncycastle/x509/kth;->Wla:[B
 
     return-object v0
 .end method
@@ -239,7 +239,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/x509/kth;->Nla:[B
+    iput-object p1, p0, Lorg/bouncycastle/x509/kth;->Wla:[B
 
     return-void
 .end method
@@ -261,7 +261,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    sget-object v2, Lorg/bouncycastle/asn1/x509/gwm;->Kla:Lorg/bouncycastle/asn1/bvj;
+    sget-object v2, Lorg/bouncycastle/asn1/x509/gwm;->Tla:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v2}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -308,7 +308,7 @@
     :cond_3
     if-eqz v0, :cond_4
 
-    iget-object v2, p0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iget-object v2, p0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
     if-eqz v2, :cond_4
 
@@ -316,7 +316,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iget-object v2, p0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v2}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
@@ -329,11 +329,11 @@
     return v1
 
     :cond_4
-    iget-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Ola:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/x509/kth;->Xla:Z
 
     if-eqz v0, :cond_6
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Nla:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Wla:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -343,7 +343,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lorg/bouncycastle/x509/kth;->Nla:[B
+    iget-object v2, p0, Lorg/bouncycastle/x509/kth;->Wla:[B
 
     if-nez v2, :cond_5
 
@@ -384,7 +384,7 @@
 .method public sis(Ljava/math/BigInteger;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/x509/kth;->Mla:Ljava/math/BigInteger;
+    iput-object p1, p0, Lorg/bouncycastle/x509/kth;->Vla:Ljava/math/BigInteger;
 
     return-void
 .end method
@@ -392,7 +392,7 @@
 .method public zta(Lorg/bouncycastle/x509/cno;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/x509/kth;->Pla:Lorg/bouncycastle/x509/cno;
+    iput-object p1, p0, Lorg/bouncycastle/x509/kth;->Yla:Lorg/bouncycastle/x509/cno;
 
     return-void
 .end method

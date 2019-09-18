@@ -6,23 +6,23 @@
 # static fields
 .field public static final DEBUG:Z
 
+.field private static Hfa:Landroid/app/PendingIntent; = null
+
 .field public static final IN_USING:Z = true
+
+.field private static final Ifa:Ljava/lang/String; = "com.oneplus.android.screenOffCheckProcessState"
 
 .field public static final TAG:Ljava/lang/String; = "DozeManager"
 
 .field private static final Tn:Ljava/lang/String; = "deviceidle"
 
-.field private static mAlarmManager:Landroid/app/AlarmManager; = null
+.field private static mAlarmManager:Landroid/app/AlarmManager;
 
-.field private static mInstance:Lcom/oneplus/server/ssp; = null
+.field private static mInstance:Lcom/oneplus/server/ssp;
 
-.field private static mScreenOffIntent:Landroid/content/Intent; = null
+.field private static mScreenOffIntent:Landroid/content/Intent;
 
-.field private static screenOffCheckDelayTime:J = 0x0L
-
-.field private static yfa:Landroid/app/PendingIntent; = null
-
-.field private static final zfa:Ljava/lang/String; = "com.oneplus.android.screenOffCheckProcessState"
+.field private static screenOffCheckDelayTime:J
 
 
 # instance fields
@@ -80,6 +80,126 @@
     return-void
 .end method
 
+.method private As()V
+    .locals 4
+
+    invoke-direct {p0}, Lcom/oneplus/server/ssp;->zs()[Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-boolean v1, Lcom/oneplus/server/ssp;->DEBUG:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "handleAudioUid getMode="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {v2}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DozeManager"
+
+    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    if-eqz v0, :cond_3
+
+    iget-object v1, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_3
+
+    iget-object v1, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
+
+    invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v1, 0x0
+
+    :goto_0
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_3
+
+    aget-object v2, v0, v1
+
+    if-eqz v2, :cond_2
+
+    aget-object v2, v0, v1
+
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    aget-object v2, v0, v1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    const/16 v3, 0x2710
+
+    if-lt v2, v3, :cond_2
+
+    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->bc(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    invoke-static {v2}, Lcom/android/server/am/cgv;->c(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->cc(I)V
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return-void
+.end method
+
 .method private Tm()[Ljava/lang/String;
     .locals 2
 
@@ -117,7 +237,7 @@
 .method static synthetic access$100()Landroid/app/PendingIntent;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/server/ssp;->yfa:Landroid/app/PendingIntent;
+    sget-object v0, Lcom/oneplus/server/ssp;->Hfa:Landroid/app/PendingIntent;
 
     return-object v0
 .end method
@@ -130,7 +250,7 @@
     return-object v0
 .end method
 
-.method private cc(I)Z
+.method private bc(I)Z
     .locals 4
 
     const-string v0, "DozeManager"
@@ -229,7 +349,7 @@
     return p0
 .end method
 
-.method private dc(I)V
+.method private cc(I)V
     .locals 5
 
     iget-object v0, p0, Lcom/oneplus/server/ssp;->mActivityManager:Lcom/android/server/am/ActivityManagerService;
@@ -382,152 +502,6 @@
     return p0
 .end method
 
-.method private vs()[Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "get_silent_uid"
-
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, ":0"
-
-    :goto_0
-    invoke-direct {p0, v0}, Lcom/oneplus/server/ssp;->xc(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private ws()V
-    .locals 4
-
-    invoke-direct {p0}, Lcom/oneplus/server/ssp;->vs()[Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-boolean v1, Lcom/oneplus/server/ssp;->DEBUG:Z
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "handleAudioUid getMode="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
-
-    invoke-virtual {v2}, Landroid/media/AudioManager;->getMode()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "DozeManager"
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    if-eqz v0, :cond_3
-
-    iget-object v1, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_3
-
-    iget-object v1, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
-
-    invoke-virtual {v1}, Landroid/media/AudioManager;->getMode()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    if-eq v1, v2, :cond_3
-
-    const/4 v1, 0x0
-
-    :goto_0
-    array-length v2, v0
-
-    if-ge v1, v2, :cond_3
-
-    aget-object v2, v0, v1
-
-    if-eqz v2, :cond_2
-
-    aget-object v2, v0, v1
-
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    aget-object v2, v0, v1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/16 v3, 0x2710
-
-    if-lt v2, v3, :cond_2
-
-    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->cc(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-static {v2}, Lcom/android/server/am/cgv;->c(I)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->dc(I)V
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-.end method
-
 .method private xc(Ljava/lang/String;)[Ljava/lang/String;
     .locals 2
 
@@ -640,7 +614,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/ssp;->yfa:Landroid/app/PendingIntent;
+    sput-object v0, Lcom/oneplus/server/ssp;->Hfa:Landroid/app/PendingIntent;
 
     invoke-virtual {p2, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
@@ -649,6 +623,32 @@
     invoke-virtual {p1, p0, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
+.end method
+
+.method private zs()[Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "get_silent_uid"
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, ":0"
+
+    :goto_0
+    invoke-direct {p0, v0}, Lcom/oneplus/server/ssp;->xc(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public static zta(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
@@ -666,7 +666,7 @@
 .method static synthetic zta(Lcom/oneplus/server/ssp;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/server/ssp;->ws()V
+    invoke-direct {p0}, Lcom/oneplus/server/ssp;->As()V
 
     return-void
 .end method

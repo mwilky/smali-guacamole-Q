@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private Ila:Lorg/bouncycastle/asn1/bvj/tsu;
+.field private Rla:Lorg/bouncycastle/asn1/bvj/tsu;
 
-.field private Jla:Z
+.field private Sla:Z
 
 .field private c:Lorg/bouncycastle/asn1/x509/e$zta;
 
@@ -23,7 +23,7 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/ibl;->Ila:Lorg/bouncycastle/asn1/bvj/tsu;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/ibl;->Rla:Lorg/bouncycastle/asn1/bvj/tsu;
 
     return-void
 .end method
@@ -39,12 +39,12 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/ibl;->Ila:Lorg/bouncycastle/asn1/bvj/tsu;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/ibl;->Rla:Lorg/bouncycastle/asn1/bvj/tsu;
 
     return-void
 .end method
 
-.method private Xa(Z)Ljava/util/Set;
+.method private Ya(Z)Ljava/util/Set;
     .locals 4
 
     iget-object p0, p0, Lorg/bouncycastle/jce/provider/ibl;->c:Lorg/bouncycastle/asn1/x509/e$zta;
@@ -137,7 +137,7 @@
     return-object v0
 
     :cond_0
-    sget-object p1, Lorg/bouncycastle/asn1/x509/gwm;->Ila:Lorg/bouncycastle/asn1/bvj;
+    sget-object p1, Lorg/bouncycastle/asn1/x509/gwm;->Rla:Lorg/bouncycastle/asn1/bvj;
 
     invoke-direct {p0, p1}, Lorg/bouncycastle/jce/provider/ibl;->ssp(Lorg/bouncycastle/asn1/bvj;)Lorg/bouncycastle/asn1/x509/gwm;
 
@@ -241,7 +241,7 @@
 .method public getCertificateIssuer()Ljavax/security/auth/x500/X500Principal;
     .locals 2
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/ibl;->Ila:Lorg/bouncycastle/asn1/bvj/tsu;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/ibl;->Rla:Lorg/bouncycastle/asn1/bvj/tsu;
 
     const/4 v0, 0x0
 
@@ -272,7 +272,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/jce/provider/ibl;->Xa(Z)Ljava/util/Set;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/jce/provider/ibl;->Ya(Z)Ljava/util/Set;
 
     move-result-object p0
 
@@ -378,7 +378,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/jce/provider/ibl;->Xa(Z)Ljava/util/Set;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/jce/provider/ibl;->Ya(Z)Ljava/util/Set;
 
     move-result-object p0
 
@@ -468,7 +468,7 @@
 .method public hashCode()I
     .locals 1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/jce/provider/ibl;->Jla:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/jce/provider/ibl;->Sla:Z
 
     if-nez v0, :cond_0
 
@@ -480,7 +480,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/bouncycastle/jce/provider/ibl;->Jla:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/jce/provider/ibl;->Sla:Z
 
     :cond_0
     iget p0, p0, Lorg/bouncycastle/jce/provider/ibl;->hashValue:I
@@ -642,7 +642,7 @@
     goto :goto_1
 
     :cond_1
-    sget-object v5, Lorg/bouncycastle/asn1/x509/n;->Ila:Lorg/bouncycastle/asn1/bvj;
+    sget-object v5, Lorg/bouncycastle/asn1/x509/n;->Rla:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v4, v5}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 

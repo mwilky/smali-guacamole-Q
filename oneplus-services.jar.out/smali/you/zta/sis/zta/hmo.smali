@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ACa:Lyou/zta/sis/zta/wtn;
+.field final synthetic JCa:Lyou/zta/sis/zta/wtn;
 
-.field final synthetic _Ca:Z
+.field final synthetic iDa:Z
 
 .field final synthetic val$c:Lyou/zta/sis/zta/rtg;
 
@@ -33,9 +33,9 @@
 
     iput p1, p0, Lyou/zta/sis/zta/hmo;->val$width:I
 
-    iput-boolean p2, p0, Lyou/zta/sis/zta/hmo;->_Ca:Z
+    iput-boolean p2, p0, Lyou/zta/sis/zta/hmo;->iDa:Z
 
-    iput-object p3, p0, Lyou/zta/sis/zta/hmo;->ACa:Lyou/zta/sis/zta/wtn;
+    iput-object p3, p0, Lyou/zta/sis/zta/hmo;->JCa:Lyou/zta/sis/zta/wtn;
 
     iput-object p4, p0, Lyou/zta/sis/zta/hmo;->val$c:Lyou/zta/sis/zta/rtg;
 
@@ -138,7 +138,7 @@
 
     shl-int v0, v4, v0
 
-    iget-boolean v5, p0, Lyou/zta/sis/zta/hmo;->_Ca:Z
+    iget-boolean v5, p0, Lyou/zta/sis/zta/hmo;->iDa:Z
 
     invoke-direct {p0, p1, v0, v5}, Lyou/zta/sis/zta/hmo;->zta(Lyou/zta/sis/zta/ear;IZ)Z
 
@@ -195,7 +195,7 @@
 
     if-ne v0, v4, :cond_4
 
-    iget-object v1, p0, Lyou/zta/sis/zta/hmo;->ACa:Lyou/zta/sis/zta/wtn;
+    iget-object v1, p0, Lyou/zta/sis/zta/hmo;->JCa:Lyou/zta/sis/zta/wtn;
 
     invoke-virtual {v1}, Lyou/zta/sis/zta/wtn;->normalize()Lyou/zta/sis/zta/wtn;
 
@@ -208,7 +208,7 @@
     :cond_4
     if-nez v7, :cond_5
 
-    iget-object v8, p0, Lyou/zta/sis/zta/hmo;->ACa:Lyou/zta/sis/zta/wtn;
+    iget-object v8, p0, Lyou/zta/sis/zta/hmo;->JCa:Lyou/zta/sis/zta/wtn;
 
     aput-object v8, v5, v3
 
@@ -222,7 +222,7 @@
     :goto_3
     if-ne v0, v2, :cond_6
 
-    iget-object v2, p0, Lyou/zta/sis/zta/hmo;->ACa:Lyou/zta/sis/zta/wtn;
+    iget-object v2, p0, Lyou/zta/sis/zta/hmo;->JCa:Lyou/zta/sis/zta/wtn;
 
     invoke-virtual {v2}, Lyou/zta/sis/zta/wtn;->qk()Lyou/zta/sis/zta/wtn;
 
@@ -366,7 +366,7 @@
 
     :cond_b
     :goto_7
-    iget-boolean p0, p0, Lyou/zta/sis/zta/hmo;->_Ca:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/hmo;->iDa:Z
 
     if-eqz p0, :cond_e
 

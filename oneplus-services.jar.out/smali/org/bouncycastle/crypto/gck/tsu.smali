@@ -8,11 +8,11 @@
 
 
 # instance fields
-.field private final cza:Lorg/bouncycastle/crypto/gck/you;
-
-.field private ika:Ljava/security/SecureRandom;
-
 .field private key:Lorg/bouncycastle/crypto/wtn/ugm;
+
+.field private final lza:Lorg/bouncycastle/crypto/gck/you;
+
+.field private rka:Ljava/security/SecureRandom;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/gck/cno;-><init>()V
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iput-object v0, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
     invoke-interface {v4}, Lorg/bouncycastle/crypto/gck/you;->oif()Z
 
@@ -130,16 +130,16 @@
 
     if-eqz v4, :cond_0
 
-    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
     invoke-interface {v4, v1, v3, p1}, Lorg/bouncycastle/crypto/gck/you;->zta(Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iget-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
-    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->ika:Ljava/security/SecureRandom;
+    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->rka:Ljava/security/SecureRandom;
 
     invoke-interface {p1, v1, v4}, Lorg/bouncycastle/crypto/gck/you;->zta(Ljava/math/BigInteger;Ljava/security/SecureRandom;)V
 
@@ -149,7 +149,7 @@
     move-result-object p1
 
     :cond_1
-    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iget-object v4, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
     invoke-interface {v4}, Lorg/bouncycastle/crypto/gck/you;->dma()Ljava/math/BigInteger;
 
@@ -346,7 +346,7 @@
     :goto_1
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->cza:Lorg/bouncycastle/crypto/gck/you;
+    iget-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->lza:Lorg/bouncycastle/crypto/gck/you;
 
     invoke-interface {p1}, Lorg/bouncycastle/crypto/gck/you;->oif()Z
 
@@ -366,7 +366,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->ika:Ljava/security/SecureRandom;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/gck/tsu;->rka:Ljava/security/SecureRandom;
 
     return-void
 .end method
@@ -481,7 +481,7 @@
 
     if-eqz v0, :cond_5
 
-    sget-object v2, Lyou/zta/sis/zta/sis;->gNa:Ljava/math/BigInteger;
+    sget-object v2, Lyou/zta/sis/zta/sis;->pNa:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v2}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 

@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private pEa:Lorg/bouncycastle/asn1/x509/rtg;
+.field private AEa:Ljava/util/Date;
 
-.field private qEa:Ljava/util/Date;
+.field private yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
-.field private rEa:Ljava/util/Date;
+.field private zEa:Ljava/util/Date;
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iput-object p1, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     :try_start_0
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/x509/qbh;->rEa:Ljava/util/Date;
+    iput-object v0, p0, Lorg/bouncycastle/x509/qbh;->AEa:Ljava/util/Date;
 
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -79,7 +79,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/x509/qbh;->qEa:Ljava/util/Date;
+    iput-object p1, p0, Lorg/bouncycastle/x509/qbh;->zEa:Ljava/util/Date;
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -112,10 +112,10 @@
     return-void
 .end method
 
-.method private Xa(Z)Ljava/util/Set;
+.method private Ya(Z)Ljava/util/Set;
     .locals 4
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -382,7 +382,7 @@
 .method public getAttributes()[Lorg/bouncycastle/x509/ssp;
     .locals 4
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -428,7 +428,7 @@
 .method public getAttributes(Ljava/lang/String;)[Lorg/bouncycastle/x509/ssp;
     .locals 4
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -508,7 +508,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/x509/qbh;->Xa(Z)Ljava/util/Set;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/x509/qbh;->Ya(Z)Ljava/util/Set;
 
     move-result-object p0
 
@@ -523,7 +523,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/oif;->getEncoded()[B
 
@@ -535,7 +535,7 @@
 .method public getExtensionValue(Ljava/lang/String;)[B
     .locals 2
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -610,7 +610,7 @@
 
     new-instance v0, Lorg/bouncycastle/x509/zta;
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -636,7 +636,7 @@
 
     new-instance v0, Lorg/bouncycastle/x509/you;
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -654,7 +654,7 @@
 .method public getIssuerUniqueID()[Z
     .locals 6
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -733,7 +733,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/x509/qbh;->Xa(Z)Ljava/util/Set;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/x509/qbh;->Ya(Z)Ljava/util/Set;
 
     move-result-object p0
 
@@ -743,7 +743,7 @@
 .method public getNotAfter()Ljava/util/Date;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->rEa:Ljava/util/Date;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->AEa:Ljava/util/Date;
 
     return-object p0
 .end method
@@ -751,7 +751,7 @@
 .method public getNotBefore()Ljava/util/Date;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->qEa:Ljava/util/Date;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->zEa:Ljava/util/Date;
 
     return-object p0
 .end method
@@ -759,7 +759,7 @@
 .method public getSerialNumber()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -779,7 +779,7 @@
 .method public getSignature()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->Ah()Lorg/bouncycastle/asn1/n;
 
@@ -795,7 +795,7 @@
 .method public getVersion()I
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -878,13 +878,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object v0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/x509/rtg;->Jg()Lorg/bouncycastle/asn1/x509/zta;
 
     move-result-object v0
 
-    iget-object v1, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object v1, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 
@@ -900,7 +900,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object v0, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/x509/rtg;->Jg()Lorg/bouncycastle/asn1/x509/zta;
 
@@ -921,7 +921,7 @@
     invoke-virtual {p2, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
 
     :try_start_0
-    iget-object p1, p0, Lorg/bouncycastle/x509/qbh;->pEa:Lorg/bouncycastle/asn1/x509/rtg;
+    iget-object p1, p0, Lorg/bouncycastle/x509/qbh;->yEa:Lorg/bouncycastle/asn1/x509/rtg;
 
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/rtg;->zh()Lorg/bouncycastle/asn1/x509/ssp;
 

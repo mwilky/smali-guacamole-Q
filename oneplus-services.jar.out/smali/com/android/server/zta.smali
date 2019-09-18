@@ -839,6 +839,12 @@
 
     sget-object v0, Lcom/android/server/zta;->Eb:Ljava/util/Set;
 
+    const-string v1, "com.tencent.soter.soterserver"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    sget-object v0, Lcom/android/server/zta;->Eb:Ljava/util/Set;
+
     const-string v1, "com.google.android.apps.wellbeing"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z

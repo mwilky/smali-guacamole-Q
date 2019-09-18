@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private ika:Ljava/security/SecureRandom;
+.field private rka:Ljava/security/SecureRandom;
 
 .field private strength:I
 
@@ -15,7 +15,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/bvj;->ika:Ljava/security/SecureRandom;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/bvj;->rka:Ljava/security/SecureRandom;
 
     iput p2, p0, Lorg/bouncycastle/crypto/bvj;->strength:I
 
@@ -27,7 +27,7 @@
 .method public Ri()Ljava/security/SecureRandom;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/bvj;->ika:Ljava/security/SecureRandom;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/bvj;->rka:Ljava/security/SecureRandom;
 
     return-object p0
 .end method

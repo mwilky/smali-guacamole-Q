@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic _ja:J
+.field final synthetic ika:J
 
-.field final synthetic aka:Z
+.field final synthetic jka:Z
 
 .field final synthetic this$0:Lcom/android/server/i;
 
@@ -42,9 +42,9 @@
 
     iput-object p5, p0, Lcom/android/server/h;->val$reason:Ljava/lang/String;
 
-    iput-wide p6, p0, Lcom/android/server/h;->_ja:J
+    iput-wide p6, p0, Lcom/android/server/h;->ika:J
 
-    iput-boolean p8, p0, Lcom/android/server/h;->aka:Z
+    iput-boolean p8, p0, Lcom/android/server/h;->jka:Z
 
     iput-object p9, p0, Lcom/android/server/h;->val$dbox:Landroid/os/DropBoxManager;
 
@@ -142,7 +142,7 @@
 
     move-result-object v3
 
-    iget-wide v5, p0, Lcom/android/server/h;->_ja:J
+    iget-wide v5, p0, Lcom/android/server/h;->ika:J
 
     invoke-virtual {v3, v5, v6}, Lcom/android/internal/os/ProcessCpuTracker;->printCurrentState(J)Ljava/lang/String;
 
@@ -642,7 +642,7 @@
 
     :cond_4
     :goto_8
-    iget-boolean v0, p0, Lcom/android/server/h;->aka:Z
+    iget-boolean v0, p0, Lcom/android/server/h;->jka:Z
 
     if-eqz v0, :cond_5
 

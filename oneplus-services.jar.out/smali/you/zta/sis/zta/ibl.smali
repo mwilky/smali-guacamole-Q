@@ -7,23 +7,23 @@
 
 
 # static fields
-.field private static final CCa:[S
+.field private static final LCa:[S
 
-.field private static final DCa:[I
+.field private static final MCa:[I
 
-.field private static final ECa:[I
+.field private static final NCa:[I
 
-.field private static final FCa:[I
+.field private static final OCa:[I
 
-.field private static final GCa:[J
+.field private static final PCa:[J
 
-.field private static final HCa:Ljava/lang/String; = "0000000000000000000000000000000000000000000000000000000000000000"
+.field private static final QCa:Ljava/lang/String; = "0000000000000000000000000000000000000000000000000000000000000000"
 
-.field static final ICa:[B
+.field static final RCa:[B
 
 
 # instance fields
-.field private BCa:[J
+.field private KCa:[J
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     fill-array-data v1, :array_0
 
-    sput-object v1, Lyou/zta/sis/zta/ibl;->CCa:[S
+    sput-object v1, Lyou/zta/sis/zta/ibl;->LCa:[S
 
     const/16 v1, 0x80
 
@@ -44,19 +44,19 @@
 
     fill-array-data v2, :array_1
 
-    sput-object v2, Lyou/zta/sis/zta/ibl;->DCa:[I
+    sput-object v2, Lyou/zta/sis/zta/ibl;->MCa:[I
 
     new-array v2, v0, [I
 
     fill-array-data v2, :array_2
 
-    sput-object v2, Lyou/zta/sis/zta/ibl;->ECa:[I
+    sput-object v2, Lyou/zta/sis/zta/ibl;->NCa:[I
 
     new-array v1, v1, [I
 
     fill-array-data v1, :array_3
 
-    sput-object v1, Lyou/zta/sis/zta/ibl;->FCa:[I
+    sput-object v1, Lyou/zta/sis/zta/ibl;->OCa:[I
 
     const/16 v1, 0x200
 
@@ -64,13 +64,13 @@
 
     fill-array-data v1, :array_4
 
-    sput-object v1, Lyou/zta/sis/zta/ibl;->GCa:[J
+    sput-object v1, Lyou/zta/sis/zta/ibl;->PCa:[J
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_5
 
-    sput-object v0, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sput-object v0, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     return-void
 
@@ -1644,7 +1644,7 @@
 
     new-array p1, p1, [J
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     return-void
 .end method
@@ -1678,7 +1678,7 @@
 
     aput-wide v1, p1, v3
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     return-void
 
@@ -1711,7 +1711,7 @@
 
     new-array v8, v6, [J
 
-    iput-object v8, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object v8, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     sub-int/2addr v6, v4
 
@@ -1741,7 +1741,7 @@
     goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     add-int/lit8 v4, v6, -0x1
 
@@ -1783,7 +1783,7 @@
     goto :goto_3
 
     :cond_4
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aput-wide v5, v0, v4
 
@@ -1811,7 +1811,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     return-void
 .end method
@@ -1827,16 +1827,16 @@
 
     if-ne p3, v0, :cond_0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object p1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     goto :goto_0
 
     :cond_0
     new-array v0, p3, [J
 
-    iput-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v0, 0x0
 
@@ -1846,7 +1846,7 @@
     return-void
 .end method
 
-.method private Lc(I)I
+.method private Kc(I)I
     .locals 4
 
     add-int/lit8 p1, p1, 0x3e
@@ -1861,7 +1861,7 @@
     return p0
 
     :cond_1
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     add-int/lit8 p1, p1, -0x1
 
@@ -1884,10 +1884,10 @@
     return p0
 .end method
 
-.method private static Mc(I)J
+.method private static Lc(I)J
     .locals 6
 
-    sget-object v0, Lyou/zta/sis/zta/ibl;->CCa:[S
+    sget-object v0, Lyou/zta/sis/zta/ibl;->LCa:[S
 
     and-int/lit16 v1, p0, 0xff
 
@@ -1936,10 +1936,10 @@
     return-wide v0
 .end method
 
-.method private static Nc(I)J
+.method private static Mc(I)J
     .locals 6
 
-    sget-object v0, Lyou/zta/sis/zta/ibl;->FCa:[I
+    sget-object v0, Lyou/zta/sis/zta/ibl;->OCa:[I
 
     and-int/lit8 v1, p0, 0x7f
 
@@ -1968,10 +1968,10 @@
     return-wide v0
 .end method
 
-.method private static Oc(I)J
+.method private static Nc(I)J
     .locals 9
 
-    sget-object v0, Lyou/zta/sis/zta/ibl;->DCa:[I
+    sget-object v0, Lyou/zta/sis/zta/ibl;->MCa:[I
 
     and-int/lit8 v1, p0, 0x7f
 
@@ -2016,10 +2016,10 @@
     return-wide v0
 .end method
 
-.method private static Pc(I)J
+.method private static Oc(I)J
     .locals 6
 
-    sget-object v0, Lyou/zta/sis/zta/ibl;->ECa:[I
+    sget-object v0, Lyou/zta/sis/zta/ibl;->NCa:[I
 
     and-int/lit16 v1, p0, 0xff
 
@@ -2048,12 +2048,12 @@
     return-wide v0
 .end method
 
-.method private Qc(I)[J
+.method private Pc(I)[J
     .locals 2
 
     new-array v0, p1, [J
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v1, p0
 
@@ -2092,14 +2092,14 @@
 
     if-nez p0, :cond_1
 
-    sget-object p0, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sget-object p0, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     aget-byte p0, p0, v1
 
     goto :goto_0
 
     :cond_1
-    sget-object p1, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sget-object p1, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     aget-byte p0, p1, p0
 
@@ -2112,7 +2112,7 @@
 
     if-nez p1, :cond_3
 
-    sget-object p1, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sget-object p1, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     aget-byte p0, p1, p0
 
@@ -2121,7 +2121,7 @@
     goto :goto_0
 
     :cond_3
-    sget-object p0, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sget-object p0, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     aget-byte p0, p0, p1
 
@@ -2146,7 +2146,7 @@
 
     and-int/2addr v2, v3
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Oc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Nc(I)J
 
     move-result-wide v4
 
@@ -2160,7 +2160,7 @@
 
     and-int/2addr v2, v3
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Oc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Nc(I)J
 
     move-result-wide v4
 
@@ -2178,7 +2178,7 @@
 
     and-int/2addr p0, v3
 
-    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Oc(I)J
+    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Nc(I)J
 
     move-result-wide p0
 
@@ -2198,7 +2198,7 @@
 
     and-int/lit16 v0, v0, 0x1fff
 
-    invoke-static {v0}, Lyou/zta/sis/zta/ibl;->Nc(I)J
+    invoke-static {v0}, Lyou/zta/sis/zta/ibl;->Mc(I)J
 
     move-result-wide v0
 
@@ -2210,7 +2210,7 @@
 
     and-int/lit16 v2, v2, 0x1fff
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Nc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Mc(I)J
 
     move-result-wide v2
 
@@ -2228,7 +2228,7 @@
 
     and-int/lit16 v2, v2, 0x1fff
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Nc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Mc(I)J
 
     move-result-wide v2
 
@@ -2246,7 +2246,7 @@
 
     and-int/lit16 v2, v2, 0x1fff
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Nc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Mc(I)J
 
     move-result-wide v2
 
@@ -2264,7 +2264,7 @@
 
     and-int/lit16 p0, p0, 0x1fff
 
-    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Nc(I)J
+    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Mc(I)J
 
     move-result-wide p0
 
@@ -2284,7 +2284,7 @@
 
     and-long/2addr v0, p0
 
-    sget-object v2, Lyou/zta/sis/zta/ibl;->GCa:[J
+    sget-object v2, Lyou/zta/sis/zta/ibl;->PCa:[J
 
     long-to-int v3, p0
 
@@ -2590,7 +2590,7 @@
 
     and-int/2addr v2, v3
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Pc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Oc(I)J
 
     move-result-wide v4
 
@@ -2602,7 +2602,7 @@
 
     and-int/2addr v2, v3
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Pc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Oc(I)J
 
     move-result-wide v6
 
@@ -2616,7 +2616,7 @@
 
     and-int/2addr v0, v3
 
-    invoke-static {v0}, Lyou/zta/sis/zta/ibl;->Pc(I)J
+    invoke-static {v0}, Lyou/zta/sis/zta/ibl;->Oc(I)J
 
     move-result-wide v4
 
@@ -2634,7 +2634,7 @@
 
     and-int/2addr p0, v3
 
-    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Pc(I)J
+    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Oc(I)J
 
     move-result-wide p0
 
@@ -2651,7 +2651,7 @@
 
     long-to-int p2, p0
 
-    invoke-static {p2}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {p2}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v2
 
@@ -2659,7 +2659,7 @@
 
     long-to-int p0, p0
 
-    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {p0}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide p0
 
@@ -2866,7 +2866,7 @@
 
     if-eq p5, v0, :cond_0
 
-    sget-object v0, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sget-object v0, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     aget-byte p5, v0, p5
 
@@ -3302,9 +3302,9 @@
 
     if-nez v5, :cond_0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
-    iget-object p1, p1, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p1, p1, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 p3, 0x0
 
@@ -3313,9 +3313,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
-    iget-object v2, p1, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, p1, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v3, 0x0
 
@@ -3333,7 +3333,7 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     add-int/2addr p2, v6
 
@@ -3556,7 +3556,7 @@
 
     long-to-int p3, v2
 
-    invoke-static {p3}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {p3}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v2
 
@@ -3566,7 +3566,7 @@
 
     long-to-int p3, v0
 
-    invoke-static {p3}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {p3}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v0
 
@@ -3641,7 +3641,7 @@
 .method public Qj()Lyou/zta/sis/zta/ibl;
     .locals 6
 
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v0, v0
 
@@ -3672,7 +3672,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lyou/zta/sis/zta/ibl;->Qc(I)[J
+    invoke-direct {p0, v0}, Lyou/zta/sis/zta/ibl;->Pc(I)[J
 
     move-result-object p0
 
@@ -3692,7 +3692,7 @@
 .method public Sj()Z
     .locals 7
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v0, 0x0
 
@@ -3738,7 +3738,7 @@
 .method public Vj()Z
     .locals 6
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v0, p0
 
@@ -3769,7 +3769,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/ibl;
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->bio([J)[J
 
@@ -3783,7 +3783,7 @@
 .method copyTo([JI)V
     .locals 2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v0, p0
 
@@ -3826,11 +3826,11 @@
     :goto_0
     if-ge v2, v0, :cond_3
 
-    iget-object v3, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v3, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v3, v3, v2
 
-    iget-object v5, p1, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v5, p1, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v5, v5, v2
 
@@ -3854,7 +3854,7 @@
 .method public getLength()I
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length p0, p0
 
@@ -3875,7 +3875,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    iget-object v3, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v3, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v3, v3, v2
 
@@ -3906,7 +3906,7 @@
 .method public isZero()Z
     .locals 6
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v0, 0x0
 
@@ -3941,7 +3941,7 @@
 .method public oa(I)I
     .locals 6
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v0, p0
 
@@ -4024,7 +4024,7 @@
     :goto_0
     if-ge v1, p1, :cond_1
 
-    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     ushr-int/lit8 v3, v1, 0x1
 
@@ -4034,7 +4034,7 @@
 
     long-to-int v5, v2
 
-    invoke-static {v5}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {v5}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v5
 
@@ -4048,7 +4048,7 @@
 
     long-to-int v2, v2
 
-    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {v2}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v2
 
@@ -4089,7 +4089,7 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    iget-object v4, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v4, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     ushr-int/lit8 v5, v3, 0x1
 
@@ -4099,7 +4099,7 @@
 
     long-to-int v7, v4
 
-    invoke-static {v7}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {v7}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v7
 
@@ -4113,7 +4113,7 @@
 
     long-to-int v4, v4
 
-    invoke-static {v4}, Lyou/zta/sis/zta/ibl;->Mc(I)J
+    invoke-static {v4}, Lyou/zta/sis/zta/ibl;->Lc(I)J
 
     move-result-wide v4
 
@@ -4200,7 +4200,7 @@
 
     if-ne v6, v8, :cond_4
 
-    iget-object v3, v5, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v3, v5, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v8, v3, v7
 
@@ -4215,7 +4215,7 @@
     :cond_3
     new-array v3, v2, [J
 
-    iget-object v10, v4, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v10, v4, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v13, 0x0
 
@@ -4246,7 +4246,7 @@
 
     aput v3, v10, v8
 
-    iget-object v4, v4, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v4, v4, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {v4, v7, v15, v3, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -4332,7 +4332,7 @@
 
     invoke-static/range {v13 .. v18}, Lyou/zta/sis/zta/ibl;->ssp([JI[JIII)J
 
-    iget-object v5, v5, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v5, v5, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     new-array v11, v2, [J
 
@@ -4486,7 +4486,7 @@
     return-object p0
 
     :cond_0
-    iget-object v1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     add-int/lit8 v2, v0, -0x1
 
@@ -4561,7 +4561,7 @@
     :goto_2
     if-ltz v0, :cond_6
 
-    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v2, v2, v0
 
@@ -4617,7 +4617,7 @@
     :cond_0
     new-instance v1, Ljava/lang/StringBuffer;
 
-    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     add-int/lit8 v0, v0, -0x1
 
@@ -4634,7 +4634,7 @@
 
     if-ltz v0, :cond_2
 
-    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v2, v2, v0
 
@@ -4732,7 +4732,7 @@
 
     if-ne v4, v6, :cond_4
 
-    iget-object v1, v3, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v1, v3, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v6, v1, v5
 
@@ -4747,7 +4747,7 @@
     :cond_3
     new-array v1, v0, [J
 
-    iget-object v8, v2, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v8, v2, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v11, 0x0
 
@@ -4778,7 +4778,7 @@
 
     aput v1, v8, v6
 
-    iget-object v2, v2, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, v2, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {v2, v5, v15, v1, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -4864,7 +4864,7 @@
 
     invoke-static/range {v11 .. v16}, Lyou/zta/sis/zta/ibl;->ssp([JI[JIII)J
 
-    iget-object v3, v3, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v3, v3, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     shl-int/lit8 v7, v0, 0x3
 
@@ -4964,7 +4964,7 @@
 .method public tsu(I[I)V
     .locals 3
 
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v1, v0
 
@@ -4980,9 +4980,9 @@
 
     new-array p2, p1, [J
 
-    iput-object p2, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object p2, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {v0, v2, p0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -4993,7 +4993,7 @@
 .method public vk()I
     .locals 5
 
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v0, v0
 
@@ -5005,7 +5005,7 @@
     return p0
 
     :cond_1
-    iget-object v1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     add-int/lit8 v0, v0, -0x1
 
@@ -5031,7 +5031,7 @@
 .method public wk()I
     .locals 1
 
-    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v0, v0
 
@@ -5045,7 +5045,7 @@
 .method public you(I[I)Lyou/zta/sis/zta/ibl;
     .locals 2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->bio([J)[J
 
@@ -5133,7 +5133,7 @@
 
     if-ne v6, v12, :cond_4
 
-    iget-object v3, v4, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v3, v4, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v8, v3, v7
 
@@ -5146,7 +5146,7 @@
     :cond_3
     new-array v3, v2, [J
 
-    iget-object v10, v5, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v10, v5, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v4, 0x0
 
@@ -5213,7 +5213,7 @@
 
     new-array v8, v7, [J
 
-    iget-object v7, v4, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v7, v4, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v4, 0x0
 
@@ -5241,7 +5241,7 @@
 
     invoke-static/range {v7 .. v12}, Lyou/zta/sis/zta/ibl;->tsu([JI[JIII)V
 
-    iget-object v5, v5, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v5, v5, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {v5, v14, v15, v6, v13}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -5441,7 +5441,7 @@
 
     new-array v1, v1, [J
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v2, 0x0
 
@@ -5500,7 +5500,7 @@
 
     invoke-direct {v3, v2}, Lyou/zta/sis/zta/ibl;-><init>(I)V
 
-    iget-object v4, v3, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v4, v3, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v5, 0x0
 
@@ -5510,7 +5510,7 @@
 
     invoke-direct {p2, v2}, Lyou/zta/sis/zta/ibl;-><init>(I)V
 
-    iget-object v4, p2, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v4, p2, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const-wide/16 v6, 0x1
 
@@ -5588,7 +5588,7 @@
 
     aget-object v5, p1, p2
 
-    invoke-direct {v5, v2}, Lyou/zta/sis/zta/ibl;->Lc(I)I
+    invoke-direct {v5, v2}, Lyou/zta/sis/zta/ibl;->Kc(I)I
 
     move-result v5
 
@@ -5620,7 +5620,7 @@
 
     aget-object v7, v0, p2
 
-    invoke-direct {v7, v4}, Lyou/zta/sis/zta/ibl;->Lc(I)I
+    invoke-direct {v7, v4}, Lyou/zta/sis/zta/ibl;->Kc(I)I
 
     move-result v4
 
@@ -5715,7 +5715,7 @@
 
     if-ne v6, v8, :cond_4
 
-    iget-object v3, v5, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v3, v5, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     aget-wide v8, v3, v7
 
@@ -5730,7 +5730,7 @@
     :cond_3
     new-array v3, v2, [J
 
-    iget-object v10, v4, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v10, v4, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v13, 0x0
 
@@ -5761,7 +5761,7 @@
 
     aput v3, v10, v8
 
-    iget-object v4, v4, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v4, v4, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     invoke-static {v4, v7, v15, v3, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -5847,7 +5847,7 @@
 
     invoke-static/range {v13 .. v18}, Lyou/zta/sis/zta/ibl;->ssp([JI[JIII)J
 
-    iget-object v5, v5, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v5, v5, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     shl-int/lit8 v8, v2, 0x3
 
@@ -5958,22 +5958,22 @@
     :cond_0
     add-int v1, v0, p2
 
-    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object v2, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     array-length v2, v2
 
     if-le v1, v2, :cond_1
 
-    invoke-direct {p0, v1}, Lyou/zta/sis/zta/ibl;->Qc(I)[J
+    invoke-direct {p0, v1}, Lyou/zta/sis/zta/ibl;->Pc(I)[J
 
     move-result-object v1
 
-    iput-object v1, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iput-object v1, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     :cond_1
-    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p0, p0, Lyou/zta/sis/zta/ibl;->KCa:[J
 
-    iget-object p1, p1, Lyou/zta/sis/zta/ibl;->BCa:[J
+    iget-object p1, p1, Lyou/zta/sis/zta/ibl;->KCa:[J
 
     const/4 v1, 0x0
 

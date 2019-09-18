@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic KBa:I
+.field final synthetic TBa:I
 
-.field final synthetic MBa:[J
+.field final synthetic VBa:[J
 
-.field final synthetic PBa:I
+.field final synthetic YBa:I
 
-.field final synthetic QBa:[I
+.field final synthetic ZBa:[I
 
 .field final synthetic this$0:Lyou/zta/sis/zta/rtg$tsu;
 
@@ -35,13 +35,13 @@
 
     iput-object p1, p0, Lyou/zta/sis/zta/ssp;->this$0:Lyou/zta/sis/zta/rtg$tsu;
 
-    iput p2, p0, Lyou/zta/sis/zta/ssp;->KBa:I
+    iput p2, p0, Lyou/zta/sis/zta/ssp;->TBa:I
 
-    iput p3, p0, Lyou/zta/sis/zta/ssp;->PBa:I
+    iput p3, p0, Lyou/zta/sis/zta/ssp;->YBa:I
 
-    iput-object p4, p0, Lyou/zta/sis/zta/ssp;->MBa:[J
+    iput-object p4, p0, Lyou/zta/sis/zta/ssp;->VBa:[J
 
-    iput-object p5, p0, Lyou/zta/sis/zta/ssp;->QBa:[I
+    iput-object p5, p0, Lyou/zta/sis/zta/ssp;->ZBa:[I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,7 +53,7 @@
 .method public getSize()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/ssp;->KBa:I
+    iget p0, p0, Lyou/zta/sis/zta/ssp;->TBa:I
 
     return p0
 .end method
@@ -61,13 +61,13 @@
 .method public rtg(I)Lyou/zta/sis/zta/wtn;
     .locals 14
 
-    iget v0, p0, Lyou/zta/sis/zta/ssp;->PBa:I
+    iget v0, p0, Lyou/zta/sis/zta/ssp;->YBa:I
 
     invoke-static {v0}, Lyou/zta/sis/sis/kth;->za(I)[J
 
     move-result-object v0
 
-    iget v1, p0, Lyou/zta/sis/zta/ssp;->PBa:I
+    iget v1, p0, Lyou/zta/sis/zta/ssp;->YBa:I
 
     invoke-static {v1}, Lyou/zta/sis/sis/kth;->za(I)[J
 
@@ -80,7 +80,7 @@
     move v4, v3
 
     :goto_0
-    iget v5, p0, Lyou/zta/sis/zta/ssp;->KBa:I
+    iget v5, p0, Lyou/zta/sis/zta/ssp;->TBa:I
 
     if-ge v3, v5, :cond_1
 
@@ -95,13 +95,13 @@
     move v7, v2
 
     :goto_1
-    iget v8, p0, Lyou/zta/sis/zta/ssp;->PBa:I
+    iget v8, p0, Lyou/zta/sis/zta/ssp;->YBa:I
 
     if-ge v7, v8, :cond_0
 
     aget-wide v9, v0, v7
 
-    iget-object v11, p0, Lyou/zta/sis/zta/ssp;->MBa:[J
+    iget-object v11, p0, Lyou/zta/sis/zta/ssp;->VBa:[J
 
     add-int v12, v4, v7
 
@@ -149,7 +149,7 @@
 
     move-result v4
 
-    iget-object v5, p0, Lyou/zta/sis/zta/ssp;->QBa:[I
+    iget-object v5, p0, Lyou/zta/sis/zta/ssp;->ZBa:[I
 
     new-instance v6, Lyou/zta/sis/zta/ibl;
 
@@ -165,7 +165,7 @@
 
     move-result v4
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ssp;->QBa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/ssp;->ZBa:[I
 
     new-instance v5, Lyou/zta/sis/zta/ibl;
 

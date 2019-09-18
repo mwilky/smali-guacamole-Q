@@ -4,31 +4,31 @@
 
 
 # static fields
-.field static final ewa:Ljava/util/Hashtable;
+.field static Ata:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static final fwa:Ljava/util/Hashtable;
+.field static Bta:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static final gwa:Ljava/util/Hashtable;
+.field static final nwa:Ljava/util/Hashtable;
 
-.field static final hqa:Ljava/util/Vector;
+.field static final owa:Ljava/util/Hashtable;
 
-.field static final hwa:Ljava/util/Hashtable;
+.field static final pwa:Ljava/util/Hashtable;
 
-.field static kta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static final qqa:Ljava/util/Vector;
 
-.field static lta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static final qwa:Ljava/util/Hashtable;
 
-.field static mta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static tta:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static nta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static uta:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static ota:Lorg/bouncycastle/asn1/ibl/bud;
+.field static vta:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static pta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static wta:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static qta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static xta:Lorg/bouncycastle/asn1/ibl/bud;
 
-.field static rta:Lorg/bouncycastle/asn1/ibl/bud;
+.field static yta:Lorg/bouncycastle/asn1/ibl/bud;
 
 
 # direct methods
@@ -39,169 +39,169 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/zta;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->kta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->tta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/you;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/you;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->lta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->uta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/sis;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/sis;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->mta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->vta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/tsu;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/tsu;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->nta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->wta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/rtg;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/rtg;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->ota:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->xta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/ssp;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/ssp;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->pta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->yta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/cno;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/cno;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->qta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->Ata:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Lorg/bouncycastle/crypto/sis/kth;
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/sis/kth;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->rta:Lorg/bouncycastle/asn1/ibl/bud;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->Bta:Lorg/bouncycastle/asn1/ibl/bud;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->ewa:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->nwa:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->fwa:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->owa:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->gwa:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->pwa:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->hwa:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->qwa:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->hqa:Ljava/util/Vector;
+    sput-object v0, Lorg/bouncycastle/crypto/sis/bio;->qqa:Ljava/util/Vector;
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->kta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->tta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->kta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->tta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp192k1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->lta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->uta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->lta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->uta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp192r1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->mta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->vta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->mta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->vta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp224k1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->nta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->wta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->nta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->wta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp224r1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->ota:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->xta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->ota:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->xta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp256k1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->pta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->yta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->pta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->yta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp256r1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->qta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->Ata:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->qta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->Ata:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp384r1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->rta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->Bta:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->rta:Lorg/bouncycastle/asn1/ibl/bud;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->Bta:Lorg/bouncycastle/asn1/ibl/bud;
 
     const-string v2, "secp521r1"
 
     invoke-static {v2, v0, v1}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->lta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->uta:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "P-192"
 
     invoke-static {v1, v0}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->nta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->wta:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "P-224"
 
     invoke-static {v1, v0}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->pta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->yta:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "P-256"
 
     invoke-static {v1, v0}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->qta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->Ata:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "P-384"
 
     invoke-static {v1, v0}, Lorg/bouncycastle/crypto/sis/bio;->you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
 
-    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->rta:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/ywr/vdw;->Bta:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "P-521"
 
@@ -221,7 +221,7 @@
 .method public static dma(Lorg/bouncycastle/asn1/bvj;)Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->hwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->qwa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -235,7 +235,7 @@
 .method public static gck(Lorg/bouncycastle/asn1/bvj;)Lorg/bouncycastle/asn1/ibl/vju;
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->gwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->pwa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -261,7 +261,7 @@
 .method public static getByName(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->ewa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->nwa:Ljava/util/Hashtable;
 
     invoke-static {p0}, Lorg/bouncycastle/util/Strings;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
@@ -291,7 +291,7 @@
 .method public static getNames()Ljava/util/Enumeration;
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->hqa:Ljava/util/Vector;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->qqa:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->elements()Ljava/util/Enumeration;
 
@@ -331,7 +331,7 @@
 .method public static xa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->fwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->owa:Ljava/util/Hashtable;
 
     invoke-static {p0}, Lorg/bouncycastle/util/Strings;->toLowerCase(Ljava/lang/String;)Ljava/lang/String;
 
@@ -359,7 +359,7 @@
 .method static you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
     .locals 2
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->gwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->pwa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -371,11 +371,11 @@
 
     move-result-object p0
 
-    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->fwa:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/crypto/sis/bio;->owa:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p0, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object p1, Lorg/bouncycastle/crypto/sis/bio;->ewa:Ljava/util/Hashtable;
+    sget-object p1, Lorg/bouncycastle/crypto/sis/bio;->nwa:Ljava/util/Hashtable;
 
     invoke-virtual {p1, p0, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -392,15 +392,15 @@
 .method static you(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ibl/bud;)V
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->hqa:Ljava/util/Vector;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->qqa:Ljava/util/Vector;
 
     invoke-virtual {v0, p0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->hwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->qwa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->gwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->pwa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -408,11 +408,11 @@
 
     move-result-object p0
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->fwa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->owa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object p1, Lorg/bouncycastle/crypto/sis/bio;->ewa:Ljava/util/Hashtable;
+    sget-object p1, Lorg/bouncycastle/crypto/sis/bio;->nwa:Ljava/util/Hashtable;
 
     invoke-virtual {p1, p0, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -428,7 +428,7 @@
 .method static zta(Ljava/lang/String;Lorg/bouncycastle/asn1/ibl/bud;)V
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->hqa:Ljava/util/Vector;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->qqa:Ljava/util/Vector;
 
     invoke-virtual {v0, p0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
@@ -436,7 +436,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->ewa:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/crypto/sis/bio;->nwa:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

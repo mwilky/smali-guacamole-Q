@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private Gla:I
+.field private Pla:I
 
-.field private Hla:Ljava/util/Set;
+.field private Qla:Ljava/util/Set;
 
 
 # direct methods
@@ -22,11 +22,11 @@
 
     const/4 p1, 0x5
 
-    iput p1, p0, Lorg/bouncycastle/x509/sis;->Gla:I
+    iput p1, p0, Lorg/bouncycastle/x509/sis;->Pla:I
 
     sget-object p1, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
 
-    iput-object p1, p0, Lorg/bouncycastle/x509/sis;->Hla:Ljava/util/Set;
+    iput-object p1, p0, Lorg/bouncycastle/x509/sis;->Qla:Ljava/util/Set;
 
     invoke-virtual {p0, p2}, Lorg/bouncycastle/x509/tsu;->you(Lorg/bouncycastle/util/dma;)V
 
@@ -80,7 +80,7 @@
 .method public Wf()Ljava/util/Set;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/x509/sis;->Hla:Ljava/util/Set;
+    iget-object p0, p0, Lorg/bouncycastle/x509/sis;->Qla:Ljava/util/Set;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -128,7 +128,7 @@
 .method public getMaxPathLength()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/x509/sis;->Gla:I
+    iget p0, p0, Lorg/bouncycastle/x509/sis;->Pla:I
 
     return p0
 .end method
@@ -147,7 +147,7 @@
 
     invoke-direct {v0, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iput-object v0, p0, Lorg/bouncycastle/x509/sis;->Hla:Ljava/util/Set;
+    iput-object v0, p0, Lorg/bouncycastle/x509/sis;->Qla:Ljava/util/Set;
 
     :goto_0
     return-void
@@ -160,7 +160,7 @@
 
     if-lt p1, v0, :cond_0
 
-    iput p1, p0, Lorg/bouncycastle/x509/sis;->Gla:I
+    iput p1, p0, Lorg/bouncycastle/x509/sis;->Pla:I
 
     return-void
 
@@ -187,17 +187,17 @@
 
     check-cast v0, Lorg/bouncycastle/x509/sis;
 
-    iget v1, v0, Lorg/bouncycastle/x509/sis;->Gla:I
+    iget v1, v0, Lorg/bouncycastle/x509/sis;->Pla:I
 
-    iput v1, p0, Lorg/bouncycastle/x509/sis;->Gla:I
+    iput v1, p0, Lorg/bouncycastle/x509/sis;->Pla:I
 
     new-instance v1, Ljava/util/HashSet;
 
-    iget-object v0, v0, Lorg/bouncycastle/x509/sis;->Hla:Ljava/util/Set;
+    iget-object v0, v0, Lorg/bouncycastle/x509/sis;->Qla:Ljava/util/Set;
 
     invoke-direct {v1, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iput-object v1, p0, Lorg/bouncycastle/x509/sis;->Hla:Ljava/util/Set;
+    iput-object v1, p0, Lorg/bouncycastle/x509/sis;->Qla:Ljava/util/Set;
 
     :cond_0
     instance-of v0, p1, Ljava/security/cert/PKIXBuilderParameters;
@@ -210,7 +210,7 @@
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/x509/sis;->Gla:I
+    iput p1, p0, Lorg/bouncycastle/x509/sis;->Pla:I
 
     :cond_1
     return-void

@@ -97,7 +97,7 @@
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->jna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->sna:I
 
     invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/n;-><init>([BI)V
 
@@ -327,7 +327,7 @@
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget v1, p0, Lorg/bouncycastle/asn1/sis;->jna:I
+    iget v1, p0, Lorg/bouncycastle/asn1/sis;->sna:I
 
     invoke-static {v0, v1}, Lorg/bouncycastle/asn1/sis;->tsu([BI)[B
 

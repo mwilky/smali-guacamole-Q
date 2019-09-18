@@ -7,11 +7,11 @@
 
 
 # instance fields
+.field protected ICa:Lyou/zta/sis/zta/kth;
+
 .field protected offset:Lyou/zta/sis/zta/wtn;
 
 .field protected width:I
-
-.field protected zCa:Lyou/zta/sis/zta/kth;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     iput-object v0, p0, Lyou/zta/sis/zta/ywr;->offset:Lyou/zta/sis/zta/wtn;
 
-    iput-object v0, p0, Lyou/zta/sis/zta/ywr;->zCa:Lyou/zta/sis/zta/kth;
+    iput-object v0, p0, Lyou/zta/sis/zta/ywr;->ICa:Lyou/zta/sis/zta/kth;
 
     const/4 v0, -0x1
 
@@ -70,7 +70,7 @@
 .method public uk()Lyou/zta/sis/zta/kth;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ywr;->zCa:Lyou/zta/sis/zta/kth;
+    iget-object p0, p0, Lyou/zta/sis/zta/ywr;->ICa:Lyou/zta/sis/zta/kth;
 
     return-object p0
 .end method
@@ -78,7 +78,7 @@
 .method public zta(Lyou/zta/sis/zta/kth;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ywr;->zCa:Lyou/zta/sis/zta/kth;
+    iput-object p1, p0, Lyou/zta/sis/zta/ywr;->ICa:Lyou/zta/sis/zta/kth;
 
     return-void
 .end method

@@ -25,14 +25,6 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
-.field public static final enum Aja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum Bja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum Dja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
 .field public static final enum Eja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
 .field public static final enum Fja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
@@ -45,17 +37,25 @@
 
 .field public static final enum Jja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
+.field public static final enum Kja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Lja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Mja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Nja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Pja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Qja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Rja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
+.field public static final enum Sja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+
 .field public static final enum ns:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum vja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum wja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum xja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum yja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
-
-.field public static final enum zja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
 
 # direct methods
@@ -70,7 +70,7 @@
 
     invoke-direct {v0, v2, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->vja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Eja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -80,7 +80,7 @@
 
     invoke-direct {v0, v3, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->wja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Fja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -90,7 +90,7 @@
 
     invoke-direct {v0, v4, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->xja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Gja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -100,7 +100,7 @@
 
     invoke-direct {v0, v5, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->yja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Hja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -110,7 +110,7 @@
 
     invoke-direct {v0, v6, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->zja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Ija:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -130,7 +130,7 @@
 
     invoke-direct {v0, v8, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Aja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Jja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -140,7 +140,7 @@
 
     invoke-direct {v0, v9, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Bja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Kja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v0, v10, v9}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Lja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -160,7 +160,7 @@
 
     invoke-direct {v0, v11, v10}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Dja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Mja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -170,7 +170,7 @@
 
     invoke-direct {v0, v12, v11}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Eja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Nja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -180,7 +180,7 @@
 
     invoke-direct {v0, v13, v12}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Fja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -190,7 +190,7 @@
 
     invoke-direct {v0, v14, v13}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Gja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Pja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -200,7 +200,7 @@
 
     invoke-direct {v0, v15, v14}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Hja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Qja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -210,7 +210,7 @@
 
     invoke-direct {v0, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Ija:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Rja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
@@ -220,29 +220,29 @@
 
     invoke-direct {v0, v14, v15}, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Jja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Sja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     const/16 v0, 0x10
 
     new-array v0, v0, [Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
-    sget-object v14, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->vja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v14, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Eja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v14, v0, v1
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->wja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Fja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->xja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Gja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->yja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Hja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->zja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Ija:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v5
 
@@ -250,47 +250,47 @@
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Aja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Jja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v7
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Bja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Kja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v8
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Lja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v9
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Dja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Mja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v10
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Eja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Nja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v11
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Fja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v12
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Gja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Pja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     aput-object v1, v0, v13
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Hja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Qja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     const/16 v2, 0xd
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Ija:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Rja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     const/16 v2, 0xe
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Jja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;->Sja:Lcom/android/server/power/OnePlusStandbyAnalyzer$WIFI_WAKEUP_TYPE;
 
     const/16 v2, 0xf
 

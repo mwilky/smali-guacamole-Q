@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public RX:Lcom/oneplus/android/server/zta/sis/you$tsu;
+.field public VX:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
 .field public times:Ljava/lang/String;
 

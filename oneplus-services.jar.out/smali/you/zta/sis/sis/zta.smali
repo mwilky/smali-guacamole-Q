@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final FDa:J = 0x55555555L
+.field private static final ODa:J = 0x55555555L
 
-.field private static final GDa:J = 0x5555555555555555L
+.field private static final PDa:J = 0x5555555555555555L
 
-.field private static final HDa:J = -0x5555555555555556L
+.field private static final QDa:J = -0x5555555555555556L
 
 
 # direct methods

@@ -173,7 +173,7 @@
 
     const/16 p0, 0x20
 
-    invoke-static {v1, p0}, Lorg/bouncycastle/util/ssp;->oxb(Ljava/lang/String;I)Z
+    invoke-static {v1, p0}, Lorg/bouncycastle/util/ssp;->ear(Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -378,7 +378,7 @@
 
     const/16 p0, 0x80
 
-    invoke-static {v1, p0}, Lorg/bouncycastle/util/ssp;->oxb(Ljava/lang/String;I)Z
+    invoke-static {v1, p0}, Lorg/bouncycastle/util/ssp;->ear(Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -421,7 +421,7 @@
     return p0
 .end method
 
-.method private static oxb(Ljava/lang/String;I)Z
+.method private static ear(Ljava/lang/String;I)Z
     .locals 1
 
     const/4 v0, 0x0

@@ -185,7 +185,7 @@
 
     check-cast v6, Lyou/zta/sis/zta/zta/zta/ivd;
 
-    iget-object v7, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v7, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v8, 0x0
 
@@ -438,7 +438,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v5, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     iget-boolean v6, p0, Lyou/zta/sis/zta/wtn;->withCompression:Z
 
@@ -519,7 +519,7 @@
 
     check-cast v1, Lyou/zta/sis/zta/zta/zta/ivd;
 
-    iget-object v3, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v4, 0x0
 

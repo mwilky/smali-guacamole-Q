@@ -84,7 +84,7 @@
 
 .field private static final Pn:Ljava/lang/String; = "com.OPCS.action.debug"
 
-.field private static final QR:Ljava/lang/String; = "/persist/engineermode/screenontimebyhours"
+.field private static final QR:Ljava/lang/String; = "/mnt/vendor/persist/engineermode/screenontimebyhours"
 
 .field private static RQ:Z = false
 
@@ -11086,7 +11086,7 @@
 
     new-instance v2, Ljava/io/File;
 
-    const-string v3, "/persist/engineermode/screenontimebyhours"
+    const-string v3, "/mnt/vendor/persist/engineermode/screenontimebyhours"
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -11102,7 +11102,7 @@
 
     if-nez v3, :cond_0
 
-    const-string v0, "file not exists : /persist/engineermode/screenontimebyhours"
+    const-string v0, "file not exists : /mnt/vendor/persist/engineermode/screenontimebyhours"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 

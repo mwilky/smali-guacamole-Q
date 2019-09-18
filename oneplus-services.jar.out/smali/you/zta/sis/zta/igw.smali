@@ -18,11 +18,11 @@
 
 
 # instance fields
+.field final synthetic DCa:Z
+
+.field final synthetic ECa:Z
+
 .field final synthetic this$0:Lyou/zta/sis/zta/wtn;
-
-.field final synthetic uCa:Z
-
-.field final synthetic vCa:Z
 
 
 # direct methods
@@ -31,9 +31,9 @@
 
     iput-object p1, p0, Lyou/zta/sis/zta/igw;->this$0:Lyou/zta/sis/zta/wtn;
 
-    iput-boolean p2, p0, Lyou/zta/sis/zta/igw;->uCa:Z
+    iput-boolean p2, p0, Lyou/zta/sis/zta/igw;->DCa:Z
 
-    iput-boolean p3, p0, Lyou/zta/sis/zta/igw;->vCa:Z
+    iput-boolean p3, p0, Lyou/zta/sis/zta/igw;->ECa:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -79,7 +79,7 @@
 
     if-nez v0, :cond_4
 
-    iget-boolean v0, p0, Lyou/zta/sis/zta/igw;->uCa:Z
+    iget-boolean v0, p0, Lyou/zta/sis/zta/igw;->DCa:Z
 
     if-nez v0, :cond_3
 
@@ -99,7 +99,7 @@
     invoke-virtual {p1}, Lyou/zta/sis/zta/oxb;->Ck()V
 
     :cond_4
-    iget-boolean v0, p0, Lyou/zta/sis/zta/igw;->vCa:Z
+    iget-boolean v0, p0, Lyou/zta/sis/zta/igw;->ECa:Z
 
     if-eqz v0, :cond_6
 

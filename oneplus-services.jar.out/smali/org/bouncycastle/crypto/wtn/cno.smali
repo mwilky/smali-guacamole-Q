@@ -7,19 +7,19 @@
 
 
 # static fields
-.field private static final Tya:I = 0xa0
+.field private static final bza:I = 0xa0
 
 
 # instance fields
-.field private Kma:Ljava/math/BigInteger;
+.field private Tma:Ljava/math/BigInteger;
 
-.field private Sya:Lorg/bouncycastle/crypto/wtn/igw;
+.field private aza:Lorg/bouncycastle/crypto/wtn/igw;
 
-.field private Xma:Ljava/math/BigInteger;
-
-.field private Yma:I
+.field private fna:Ljava/math/BigInteger;
 
 .field private g:Ljava/math/BigInteger;
+
+.field private gna:I
 
 .field private l:I
 
@@ -52,7 +52,7 @@
 .method public constructor <init>(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;I)V
     .locals 8
 
-    invoke-static {p4}, Lorg/bouncycastle/crypto/wtn/cno;->Kc(I)I
+    invoke-static {p4}, Lorg/bouncycastle/crypto/wtn/cno;->Jc(I)I
 
     move-result v4
 
@@ -144,17 +144,17 @@
 
     iput-object p2, p0, Lorg/bouncycastle/crypto/wtn/cno;->g:Ljava/math/BigInteger;
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/cno;->Kma:Ljava/math/BigInteger;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/cno;->Tma:Ljava/math/BigInteger;
 
     iput-object p3, p0, Lorg/bouncycastle/crypto/wtn/cno;->q:Ljava/math/BigInteger;
 
-    iput p4, p0, Lorg/bouncycastle/crypto/wtn/cno;->Yma:I
+    iput p4, p0, Lorg/bouncycastle/crypto/wtn/cno;->gna:I
 
     iput p5, p0, Lorg/bouncycastle/crypto/wtn/cno;->l:I
 
-    iput-object p6, p0, Lorg/bouncycastle/crypto/wtn/cno;->Xma:Ljava/math/BigInteger;
+    iput-object p6, p0, Lorg/bouncycastle/crypto/wtn/cno;->fna:Ljava/math/BigInteger;
 
-    iput-object p7, p0, Lorg/bouncycastle/crypto/wtn/cno;->Sya:Lorg/bouncycastle/crypto/wtn/igw;
+    iput-object p7, p0, Lorg/bouncycastle/crypto/wtn/cno;->aza:Lorg/bouncycastle/crypto/wtn/igw;
 
     return-void
 
@@ -192,7 +192,7 @@
     return-void
 .end method
 
-.method private static Kc(I)I
+.method private static Jc(I)I
     .locals 1
 
     const/16 v0, 0xa0
@@ -218,7 +218,7 @@
 .method public eg()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->Xma:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->fna:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -226,7 +226,7 @@
 .method public ej()Lorg/bouncycastle/crypto/wtn/igw;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->Sya:Lorg/bouncycastle/crypto/wtn/igw;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->aza:Lorg/bouncycastle/crypto/wtn/igw;
 
     return-object p0
 .end method
@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lorg/bouncycastle/crypto/wtn/cno;->Kma:Ljava/math/BigInteger;
+    iget-object v2, p0, Lorg/bouncycastle/crypto/wtn/cno;->Tma:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v2}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
@@ -326,7 +326,7 @@
 .method public getM()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->Yma:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->gna:I
 
     return p0
 .end method
@@ -334,7 +334,7 @@
 .method public getP()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->Kma:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/cno;->Tma:Ljava/math/BigInteger;
 
     return-object p0
 .end method

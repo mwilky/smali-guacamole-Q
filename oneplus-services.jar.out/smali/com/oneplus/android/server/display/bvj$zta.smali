@@ -1,4 +1,4 @@
-.class Lcom/oneplus/android/server/display/oif$zta;
+.class Lcom/oneplus/android/server/display/bvj$zta;
 .super Ljava/lang/Object;
 .source ""
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/android/server/display/oif;
+    value = Lcom/oneplus/android/server/display/bvj;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,15 +39,15 @@
 
     new-array v0, v0, [F
 
-    iput-object v0, p0, Lcom/oneplus/android/server/display/oif$zta;->mResultMatrix:[F
+    iput-object v0, p0, Lcom/oneplus/android/server/display/bvj$zta;->mResultMatrix:[F
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/oneplus/android/server/display/qbh;)V
+.method synthetic constructor <init>(Lcom/oneplus/android/server/display/oif;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/display/oif$zta;-><init>()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/display/bvj$zta;-><init>()V
 
     return-void
 .end method
@@ -61,7 +61,7 @@
 
     check-cast p3, [F
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/android/server/display/oif$zta;->evaluate(F[F[F)[F
+    invoke-virtual {p0, p1, p2, p3}, Lcom/oneplus/android/server/display/bvj$zta;->evaluate(F[F[F)[F
 
     move-result-object p0
 
@@ -74,7 +74,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/oneplus/android/server/display/oif$zta;->mResultMatrix:[F
+    iget-object v1, p0, Lcom/oneplus/android/server/display/bvj$zta;->mResultMatrix:[F
 
     array-length v2, v1
 

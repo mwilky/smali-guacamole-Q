@@ -88,6 +88,27 @@
     goto/16 :goto_7
 
     :pswitch_0
+    iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    const-string p1, "latest_public_domain_reachable"
+
+    invoke-static {p0, p1, v0, v1}, Landroid/provider/Settings$System;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
+
+    goto/16 :goto_7
+
+    :pswitch_1
     :try_start_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -184,7 +205,7 @@
 
     goto/16 :goto_3
 
-    :pswitch_1
+    :pswitch_2
     new-instance p1, Lcom/android/server/OpPowerControllerService$bio;
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
@@ -195,7 +216,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_2
+    :pswitch_3
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
     move-result p0
@@ -212,7 +233,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_3
+    :pswitch_4
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4200(Lcom/android/server/OpPowerControllerService;)Landroid/app/Notification;
@@ -237,7 +258,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_4
+    :pswitch_5
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
@@ -311,7 +332,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_5
+    :pswitch_6
     new-instance p1, Lcom/oneplus/config/ConfigGrabber;
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
@@ -334,7 +355,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_6
+    :pswitch_7
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
@@ -434,7 +455,7 @@
 
     throw p0
 
-    :pswitch_7
+    :pswitch_8
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
@@ -861,7 +882,7 @@
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_e
-    :pswitch_8
+    :pswitch_9
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
@@ -911,7 +932,7 @@
 
     throw p0
 
-    :pswitch_9
+    :pswitch_a
     :try_start_5
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1021,7 +1042,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_a
+    :pswitch_b
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
     move-result p1
@@ -1117,7 +1138,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_b
+    :pswitch_c
     const-string p1, "persist.sys.op_power_first_boot"
 
     const-string v0, "0"
@@ -1376,13 +1397,16 @@
     :goto_7
     return-void
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_c
         :pswitch_b
         :pswitch_a
+        :pswitch_8
         :pswitch_9
         :pswitch_7
-        :pswitch_8
         :pswitch_6
         :pswitch_5
         :pswitch_4

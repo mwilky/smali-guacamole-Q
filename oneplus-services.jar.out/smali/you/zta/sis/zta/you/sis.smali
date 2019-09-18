@@ -11,7 +11,7 @@
 
 .field protected final parameters:Lyou/zta/sis/zta/you/tsu;
 
-.field protected final qDa:Lyou/zta/sis/zta/gck;
+.field protected final zDa:Lyou/zta/sis/zta/gck;
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     invoke-direct {v0, p1}, Lyou/zta/sis/zta/vdb;-><init>(Lyou/zta/sis/zta/cno;)V
 
-    iput-object v0, p0, Lyou/zta/sis/zta/you/sis;->qDa:Lyou/zta/sis/zta/gck;
+    iput-object v0, p0, Lyou/zta/sis/zta/you/sis;->zDa:Lyou/zta/sis/zta/gck;
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 .method public c()Lyou/zta/sis/zta/gck;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/sis;->qDa:Lyou/zta/sis/zta/gck;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/sis;->zDa:Lyou/zta/sis/zta/gck;
 
     return-object p0
 .end method

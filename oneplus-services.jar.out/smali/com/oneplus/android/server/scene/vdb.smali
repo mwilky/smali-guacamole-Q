@@ -213,7 +213,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/vdb;->mTitle:Landroid/widget/TextView;
 
-    const v2, 0x50d0051
+    const v2, 0x50d0052
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -238,7 +238,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/vdb;->mTitle:Landroid/widget/TextView;
 
-    const v2, 0x50d0053
+    const v2, 0x50d0054
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 

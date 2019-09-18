@@ -191,7 +191,7 @@
     return-void
 .end method
 
-.method private Xa(Z)[Lorg/bouncycastle/asn1/bvj;
+.method private Ya(Z)[Lorg/bouncycastle/asn1/bvj;
     .locals 4
 
     new-instance v0, Ljava/util/Vector;
@@ -372,7 +372,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/x509/ugm;->Xa(Z)[Lorg/bouncycastle/asn1/bvj;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/x509/ugm;->Ya(Z)[Lorg/bouncycastle/asn1/bvj;
 
     move-result-object p0
 
@@ -384,7 +384,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/x509/ugm;->Xa(Z)[Lorg/bouncycastle/asn1/bvj;
+    invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/x509/ugm;->Ya(Z)[Lorg/bouncycastle/asn1/bvj;
 
     move-result-object p0
 

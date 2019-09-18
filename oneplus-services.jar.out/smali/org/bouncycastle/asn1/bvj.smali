@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static final Ina:J = 0xffffffffffff80L
+.field private static final Rna:J = 0xffffffffffff80L
 
-.field private static final Jna:Ljava/util/concurrent/ConcurrentMap;
+.field private static final Sna:Ljava/util/concurrent/ConcurrentMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentMap<",
@@ -40,7 +40,7 @@
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/asn1/bvj;->Jna:Ljava/util/concurrent/ConcurrentMap;
+    sput-object v0, Lorg/bouncycastle/asn1/bvj;->Sna:Ljava/util/concurrent/ConcurrentMap;
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p2, v0}, Lorg/bouncycastle/asn1/bvj;->obl(Ljava/lang/String;I)Z
+    invoke-static {p2, v0}, Lorg/bouncycastle/asn1/bvj;->cjf(Ljava/lang/String;I)Z
 
     move-result v0
 
@@ -395,7 +395,7 @@
     :cond_1
     const/4 v0, 0x2
 
-    invoke-static {p0, v0}, Lorg/bouncycastle/asn1/bvj;->obl(Ljava/lang/String;I)Z
+    invoke-static {p0, v0}, Lorg/bouncycastle/asn1/bvj;->cjf(Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -404,6 +404,53 @@
     :cond_2
     :goto_0
     return v1
+.end method
+
+.method private static cjf(Ljava/lang/String;I)Z
+    .locals 5
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/lit8 v0, v0, -0x1
+
+    if-lt v0, p1, :cond_3
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0x30
+
+    if-gt v4, v3, :cond_1
+
+    const/16 v4, 0x39
+
+    if-gt v3, v4, :cond_1
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v4, 0x2e
+
+    if-ne v3, v4, :cond_2
+
+    if-nez v2, :cond_0
+
+    :cond_2
+    return v1
+
+    :cond_3
+    return v2
 .end method
 
 .method private declared-synchronized getBody()[B
@@ -558,53 +605,6 @@
     return-object p0
 .end method
 
-.method private static obl(Ljava/lang/String;I)Z
-    .locals 5
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    add-int/lit8 v0, v0, -0x1
-
-    if-lt v0, p1, :cond_3
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v3
-
-    const/16 v4, 0x30
-
-    if-gt v4, v3, :cond_1
-
-    const/16 v4, 0x39
-
-    if-gt v3, v4, :cond_1
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v4, 0x2e
-
-    if-ne v3, v4, :cond_2
-
-    if-nez v2, :cond_0
-
-    :cond_2
-    return v1
-
-    :cond_3
-    return v2
-.end method
-
 .method static wtn([B)Lorg/bouncycastle/asn1/bvj;
     .locals 2
 
@@ -612,7 +612,7 @@
 
     invoke-direct {v0, p0}, Lorg/bouncycastle/asn1/bvj$zta;-><init>([B)V
 
-    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Jna:Ljava/util/concurrent/ConcurrentMap;
+    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Sna:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v1, v0}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -920,7 +920,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj$zta;-><init>([B)V
 
-    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Jna:Ljava/util/concurrent/ConcurrentMap;
+    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Sna:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v1, v0}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -930,7 +930,7 @@
 
     if-nez v1, :cond_1
 
-    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Jna:Ljava/util/concurrent/ConcurrentMap;
+    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Sna:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v1, v0, p0}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

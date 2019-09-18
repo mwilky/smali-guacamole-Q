@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 5
 
     new-instance v0, Ljava/io/File;
 
@@ -74,35 +74,39 @@
 
     invoke-static {v0}, Lcom/android/server/engineer/qbh;->D(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_0
+    if-eqz v2, :cond_0
 
-    new-instance v0, Landroid/content/Intent;
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    const-string v2, "com.oem.engineermode.EngineerModeMain"
+    const-string v3, "com.oem.engineermode.EngineerModeMain"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v2, "com.oneplus.factorymode"
+    const-string v3, "com.oneplus.factorymode"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    const/high16 v2, 0x1000000
+    const/high16 v3, 0x1000000
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    const/high16 v2, 0x10000000
+    const/high16 v3, 0x10000000
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    const-string v2, "order"
+    const-string v3, "order"
 
-    const-string v3, "*#8020#"
+    const-string v4, "*#8020#"
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v3, "server_address"
+
+    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :try_start_0
     iget-object p0, p0, Lcom/android/server/engineer/gck;->this$0:Lcom/android/server/engineer/OneplusEngineerService;
@@ -111,9 +115,9 @@
 
     move-result-object p0
 
-    sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+    sget-object v0, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
 
-    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-virtual {p0, v2, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

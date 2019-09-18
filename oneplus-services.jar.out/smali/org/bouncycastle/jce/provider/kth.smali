@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private Nza:Ljava/security/KeyStore$ProtectionParameter;
+.field private DBa:Ljava/io/OutputStream;
 
-.field private uBa:Ljava/io/OutputStream;
+.field private EBa:Z
 
-.field private vBa:Z
+.field private Wza:Ljava/security/KeyStore$ProtectionParameter;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 .method public Z(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/jce/provider/kth;->vBa:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/jce/provider/kth;->EBa:Z
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 .method public getOutputStream()Ljava/io/OutputStream;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/kth;->uBa:Ljava/io/OutputStream;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/kth;->DBa:Ljava/io/OutputStream;
 
     return-object p0
 .end method
@@ -44,7 +44,7 @@
 .method public getProtectionParameter()Ljava/security/KeyStore$ProtectionParameter;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/kth;->Nza:Ljava/security/KeyStore$ProtectionParameter;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/kth;->Wza:Ljava/security/KeyStore$ProtectionParameter;
 
     return-object p0
 .end method
@@ -52,7 +52,7 @@
 .method public setOutputStream(Ljava/io/OutputStream;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/kth;->uBa:Ljava/io/OutputStream;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/kth;->DBa:Ljava/io/OutputStream;
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     invoke-direct {v0, p1}, Ljava/security/KeyStore$PasswordProtection;-><init>([C)V
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/kth;->Nza:Ljava/security/KeyStore$ProtectionParameter;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/kth;->Wza:Ljava/security/KeyStore$ProtectionParameter;
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 .method public xj()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/jce/provider/kth;->vBa:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/jce/provider/kth;->EBa:Z
 
     return p0
 .end method
@@ -80,7 +80,7 @@
 .method public zta(Ljava/security/KeyStore$ProtectionParameter;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/kth;->Nza:Ljava/security/KeyStore$ProtectionParameter;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/kth;->Wza:Ljava/security/KeyStore$ProtectionParameter;
 
     return-void
 .end method

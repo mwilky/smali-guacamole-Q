@@ -202,44 +202,6 @@
     throw p1
 .end method
 
-.method private Es()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    invoke-virtual {p0}, Lorg/bouncycastle/jce/provider/X509CertificateObject;->getEncoded()[B
-
-    move-result-object p0
-
-    const/4 v1, 0x1
-
-    move v2, v0
-
-    :goto_0
-    array-length v3, p0
-
-    if-ge v1, v3, :cond_0
-
-    aget-byte v3, p0, v1
-    :try_end_0
-    .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    mul-int/2addr v3, v1
-
-    add-int/2addr v2, v3
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v2
-
-    :catch_0
-    return v0
-.end method
-
 .method private Fc(Ljava/lang/String;)[B
     .locals 1
 
@@ -279,6 +241,44 @@
     const/4 p0, 0x0
 
     return-object p0
+.end method
+
+.method private Is()I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p0}, Lorg/bouncycastle/jce/provider/X509CertificateObject;->getEncoded()[B
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    move v2, v0
+
+    :goto_0
+    array-length v3, p0
+
+    if-ge v1, v3, :cond_0
+
+    aget-byte v3, p0, v1
+    :try_end_0
+    .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    mul-int/2addr v3, v1
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v2
+
+    :catch_0
+    return v0
 .end method
 
 .method private static cgv([B)Ljava/util/Collection;
@@ -1183,7 +1183,7 @@
         }
     .end annotation
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Gpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Ppa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -1682,7 +1682,7 @@
         }
     .end annotation
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Fpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Opa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -1938,55 +1938,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->dBa:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->ZAa:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->aBa:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->eBa:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->jBa:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->fBa:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->gBa:Ljava/lang/String;
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->mBa:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2002,7 +1954,7 @@
 
     if-nez v3, :cond_0
 
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->_Aa:Ljava/lang/String;
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->jBa:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2010,7 +1962,7 @@
 
     if-nez v3, :cond_0
 
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->bBa:Ljava/lang/String;
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->nBa:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2018,7 +1970,55 @@
 
     if-nez v3, :cond_0
 
-    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->cBa:Ljava/lang/String;
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->sBa:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->oBa:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->pBa:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->qBa:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->iBa:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->kBa:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lorg/bouncycastle/jce/provider/oif;->lBa:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2059,7 +2059,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lorg/bouncycastle/jce/provider/X509CertificateObject;->Es()I
+    invoke-direct {p0}, Lorg/bouncycastle/jce/provider/X509CertificateObject;->Is()I
 
     move-result v0
 
@@ -2390,7 +2390,7 @@
     goto :goto_3
 
     :cond_4
-    sget-object v5, Lorg/bouncycastle/asn1/kth/zta;->PIa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v5, Lorg/bouncycastle/asn1/kth/zta;->YIa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v4, v5}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -2411,7 +2411,7 @@
     goto :goto_3
 
     :cond_5
-    sget-object v5, Lorg/bouncycastle/asn1/kth/zta;->RIa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v5, Lorg/bouncycastle/asn1/kth/zta;->_Ia:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v4, v5}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -2432,7 +2432,7 @@
     goto :goto_3
 
     :cond_6
-    sget-object v5, Lorg/bouncycastle/asn1/kth/zta;->YIa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v5, Lorg/bouncycastle/asn1/kth/zta;->gJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v4, v5}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field DE:Z
+.field EE:Z
 
 .field mTime:J
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->DE:Z
+    iget-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->EE:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -139,7 +139,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->DE:Z
+    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->EE:Z
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->qf:Lcom/android/server/power/OnePlusStandbyAnalyzer$ywr;
 
@@ -165,7 +165,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->DE:Z
+    iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->EE:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -183,7 +183,7 @@
 
     invoke-static {v0}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->myLog(Ljava/lang/String;)V
 
-    iput-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->DE:Z
+    iput-boolean v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->EE:Z
 
     iget-object v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->qf:Lcom/android/server/power/OnePlusStandbyAnalyzer$ywr;
 
@@ -209,7 +209,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->DE:Z
+    iget-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->EE:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -223,7 +223,7 @@
     const/4 v0, 0x0
 
     :try_start_1
-    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->DE:Z
+    iput-boolean v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->EE:Z
 
     iget-wide v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$ssp;->mTime:J
 

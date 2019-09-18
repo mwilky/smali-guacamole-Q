@@ -323,7 +323,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/am/OnePlusBGController;->Fl:Z
 
-    sget-object v2, Lcom/android/server/am/OnePlusBGController$NetType;->yga:Lcom/android/server/am/OnePlusBGController$NetType;
+    sget-object v2, Lcom/android/server/am/OnePlusBGController$NetType;->Hga:Lcom/android/server/am/OnePlusBGController$NetType;
 
     iput-object v2, p0, Lcom/android/server/am/OnePlusBGController;->Gl:Lcom/android/server/am/OnePlusBGController$NetType;
 
@@ -522,7 +522,7 @@
 
     invoke-static {p1}, Lcom/android/server/am/OnePlusBGController;->myLog(Ljava/lang/String;)V
 
-    sget-object p1, Lcom/android/server/am/OnePlusBGController$NetType;->zga:Lcom/android/server/am/OnePlusBGController$NetType;
+    sget-object p1, Lcom/android/server/am/OnePlusBGController$NetType;->Iga:Lcom/android/server/am/OnePlusBGController$NetType;
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusBGController;->Gl:Lcom/android/server/am/OnePlusBGController$NetType;
 
@@ -1195,7 +1195,7 @@
 
     if-eqz v3, :cond_9
 
-    sget-object v3, Lcom/android/server/am/OnePlusBGController$AppBucketRanking;->tga:Lcom/android/server/am/OnePlusBGController$AppBucketRanking;
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$AppBucketRanking;->Cga:Lcom/android/server/am/OnePlusBGController$AppBucketRanking;
 
     if-eqz v12, :cond_8
 
@@ -2236,7 +2236,7 @@
 
     invoke-static {v3}, Lcom/android/server/am/OnePlusBGController;->myLog(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/android/server/am/OnePlusBGController$CleanType;->vga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$CleanType;->Ega:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/OnePlusBGController$bio;->zta(Lcom/android/server/am/OnePlusBGController$CleanType;)V
 
@@ -2595,7 +2595,7 @@
 
     check-cast v2, Lcom/android/server/am/OnePlusBGController$bio;
 
-    sget-object v3, Lcom/android/server/am/OnePlusBGController$CleanType;->uga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$CleanType;->Dga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/OnePlusBGController$bio;->zta(Lcom/android/server/am/OnePlusBGController$CleanType;)V
 
@@ -3393,7 +3393,7 @@
 
     invoke-static {v3}, Lcom/android/server/am/OnePlusBGController;->myLog(Ljava/lang/String;)V
 
-    sget-object v3, Lcom/android/server/am/OnePlusBGController$ProcType;->Aga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$ProcType;->Jga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     if-ne p2, v3, :cond_5
 
@@ -4151,7 +4151,7 @@
     sget-object v0, Lcom/android/server/am/OnePlusBGController$ProcType;->F:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     :goto_0
-    sget-object v1, Lcom/android/server/am/OnePlusBGController$ProcType;->Aga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object v1, Lcom/android/server/am/OnePlusBGController$ProcType;->Jga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     if-ne v0, v1, :cond_2
 

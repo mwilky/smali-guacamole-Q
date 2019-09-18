@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final Mta:Ljava/lang/String; = "    "
-
 .field private static final SAMPLE_SIZE:I = 0x20
+
+.field private static final Vta:Ljava/lang/String; = "    "
 
 
 # direct methods

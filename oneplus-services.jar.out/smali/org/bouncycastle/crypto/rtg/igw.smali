@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field private iv:[B
+.field private Aka:Lorg/bouncycastle/crypto/rtg;
 
-.field private oxa:Z
+.field private iv:[B
 
 .field private param:Lorg/bouncycastle/crypto/wtn/cjf;
 
-.field private pma:Z
+.field private xxa:Z
 
-.field private rka:Lorg/bouncycastle/crypto/rtg;
+.field private yma:Z
 
 
 # direct methods
@@ -42,11 +42,11 @@
 
     iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/igw;->iv:[B
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->rka:Lorg/bouncycastle/crypto/rtg;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->Aka:Lorg/bouncycastle/crypto/rtg;
 
     xor-int/lit8 p1, p2, 0x1
 
-    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->oxa:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->xxa:Z
 
     return-void
 
@@ -75,7 +75,7 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/igw;->pma:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/igw;->yma:Z
 
     if-nez v0, :cond_5
 
@@ -123,9 +123,9 @@
 
     invoke-static {p1, p2, v2, v6, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->rka:Lorg/bouncycastle/crypto/rtg;
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->Aka:Lorg/bouncycastle/crypto/rtg;
 
-    iget-boolean p2, p0, Lorg/bouncycastle/crypto/rtg/igw;->oxa:Z
+    iget-boolean p2, p0, Lorg/bouncycastle/crypto/rtg/igw;->xxa:Z
 
     const/4 p3, 0x1
 
@@ -195,7 +195,7 @@
     goto :goto_2
 
     :cond_0
-    iget-object v7, p0, Lorg/bouncycastle/crypto/rtg/igw;->rka:Lorg/bouncycastle/crypto/rtg;
+    iget-object v7, p0, Lorg/bouncycastle/crypto/rtg/igw;->Aka:Lorg/bouncycastle/crypto/rtg;
 
     invoke-interface {v7, v4, v6, v4, v6}, Lorg/bouncycastle/crypto/rtg;->zta([BI[BI)I
 
@@ -254,7 +254,7 @@
 .method public vju()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/rtg/igw;->rka:Lorg/bouncycastle/crypto/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/rtg/igw;->Aka:Lorg/bouncycastle/crypto/rtg;
 
     invoke-interface {p0}, Lorg/bouncycastle/crypto/rtg;->vju()Ljava/lang/String;
 
@@ -266,7 +266,7 @@
 .method public wrap([BII)[B
     .locals 11
 
-    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/igw;->pma:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/igw;->yma:Z
 
     if-eqz v0, :cond_4
 
@@ -304,9 +304,9 @@
 
     invoke-static {p1, p2, v2, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->rka:Lorg/bouncycastle/crypto/rtg;
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->Aka:Lorg/bouncycastle/crypto/rtg;
 
-    iget-boolean p2, p0, Lorg/bouncycastle/crypto/rtg/igw;->oxa:Z
+    iget-boolean p2, p0, Lorg/bouncycastle/crypto/rtg/igw;->xxa:Z
 
     iget-object p3, p0, Lorg/bouncycastle/crypto/rtg/igw;->param:Lorg/bouncycastle/crypto/wtn/cjf;
 
@@ -340,7 +340,7 @@
 
     invoke-static {v2, v1, v3, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget-object v5, p0, Lorg/bouncycastle/crypto/rtg/igw;->rka:Lorg/bouncycastle/crypto/rtg;
+    iget-object v5, p0, Lorg/bouncycastle/crypto/rtg/igw;->Aka:Lorg/bouncycastle/crypto/rtg;
 
     invoke-interface {v5, v3, v6, v3, v6}, Lorg/bouncycastle/crypto/rtg;->zta([BI[BI)I
 
@@ -414,7 +414,7 @@
 .method public zta(ZLorg/bouncycastle/crypto/kth;)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->pma:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/igw;->yma:Z
 
     instance-of p1, p2, Lorg/bouncycastle/crypto/wtn/hmo;
 

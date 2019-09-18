@@ -9,13 +9,13 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "OpSlaManager"
 
-.field private static final kL:Ljava/lang/String; = "android.net.conn.CONNECTIVITY_CHANGE"
+.field private static final lL:Ljava/lang/String; = "android.net.conn.CONNECTIVITY_CHANGE"
 
-.field private static final lL:Ljava/lang/String; = "android.net.network.CONNECTION_CHANGE"
+.field private static final mL:Ljava/lang/String; = "android.net.network.CONNECTION_CHANGE"
 
 
 # instance fields
-.field private jL:Lcom/android/server/sis/vdb;
+.field private kL:Lcom/android/server/sis/vdb;
 
 .field private mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
@@ -91,7 +91,7 @@
 .method static synthetic sis(Lcom/android/server/sis/sis;)Lcom/android/server/sis/vdb;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/sis/sis;->jL:Lcom/android/server/sis/vdb;
+    iget-object p0, p0, Lcom/android/server/sis/sis;->kL:Lcom/android/server/sis/vdb;
 
     return-object p0
 .end method
@@ -117,7 +117,7 @@
 .method public enableVerboseLogging(I)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/sis/sis;->jL:Lcom/android/server/sis/vdb;
+    iget-object p0, p0, Lcom/android/server/sis/sis;->kL:Lcom/android/server/sis/vdb;
 
     invoke-virtual {p0, p1}, Lcom/android/server/sis/vdb;->enableVerboseLogging(I)V
 
@@ -151,7 +151,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/android/server/sis/vdb;-><init>(Landroid/content/Context;Lcom/android/server/sis/vdb$sis;)V
 
-    iput-object p1, p0, Lcom/android/server/sis/sis;->jL:Lcom/android/server/sis/vdb;
+    iput-object p1, p0, Lcom/android/server/sis/sis;->kL:Lcom/android/server/sis/vdb;
 
     invoke-direct {p0}, Lcom/android/server/sis/sis;->qo()V
 
@@ -161,7 +161,7 @@
 .method public sendWifiScoreToKernel(I)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/sis/sis;->jL:Lcom/android/server/sis/vdb;
+    iget-object p0, p0, Lcom/android/server/sis/sis;->kL:Lcom/android/server/sis/vdb;
 
     invoke-virtual {p0, p1}, Lcom/android/server/sis/vdb;->sendWifiScoreToKernel(I)V
 

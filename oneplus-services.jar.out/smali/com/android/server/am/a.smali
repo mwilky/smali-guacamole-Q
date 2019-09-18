@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bka:Lcom/android/server/am/OnePlusMemoryTracker$zta;
+.field final synthetic kka:Lcom/android/server/am/OnePlusMemoryTracker$zta;
 
 .field final synthetic this$0:Lcom/android/server/am/OnePlusMemoryTracker;
 
@@ -26,7 +26,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/a;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
 
-    iput-object p3, p0, Lcom/android/server/am/a;->bka:Lcom/android/server/am/OnePlusMemoryTracker$zta;
+    iput-object p3, p0, Lcom/android/server/am/a;->kka:Lcom/android/server/am/OnePlusMemoryTracker$zta;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
@@ -316,7 +316,7 @@
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v7, v0, Lcom/android/server/am/a;->bka:Lcom/android/server/am/OnePlusMemoryTracker$zta;
+    iget-object v7, v0, Lcom/android/server/am/a;->kka:Lcom/android/server/am/OnePlusMemoryTracker$zta;
 
     invoke-virtual {v7}, Lcom/android/server/am/OnePlusMemoryTracker$zta;->toString()Ljava/lang/String;
 

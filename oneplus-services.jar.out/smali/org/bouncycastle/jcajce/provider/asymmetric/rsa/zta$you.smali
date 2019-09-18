@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field jka:Ljava/security/spec/PSSParameterSpec;
+.field ska:Ljava/security/spec/PSSParameterSpec;
 
 
 # direct methods
@@ -37,7 +37,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->jka:Ljava/security/spec/PSSParameterSpec;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->ska:Ljava/security/spec/PSSParameterSpec;
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
@@ -166,7 +166,7 @@
 
     check-cast p1, Ljava/security/spec/PSSParameterSpec;
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->jka:Ljava/security/spec/PSSParameterSpec;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->ska:Ljava/security/spec/PSSParameterSpec;
 
     return-void
 
@@ -275,7 +275,7 @@
 
     invoke-direct/range {v2 .. v7}, Ljava/security/spec/PSSParameterSpec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;II)V
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->jka:Ljava/security/spec/PSSParameterSpec;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->ska:Ljava/security/spec/PSSParameterSpec;
 
     return-void
 
@@ -415,7 +415,7 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->jka:Ljava/security/spec/PSSParameterSpec;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$you;->ska:Ljava/security/spec/PSSParameterSpec;
 
     return-object p0
 .end method

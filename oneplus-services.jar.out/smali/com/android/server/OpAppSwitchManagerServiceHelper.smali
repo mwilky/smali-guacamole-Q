@@ -154,6 +154,16 @@
     return p0
 .end method
 
+.method public getOposAdsSettings(Landroid/content/Context;)Z
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/OpAppSwitchManagerServiceHelper;->getAdsSettings(Landroid/content/Context;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public handleActivityPaused(Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;)V
     .locals 1
 

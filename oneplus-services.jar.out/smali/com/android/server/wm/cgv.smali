@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field final synthetic tT:Landroid/graphics/Rect;
-
 .field final synthetic this$0:Lcom/android/server/wm/OpScreenCompat;
 
-.field final synthetic uT:Lcom/android/server/wm/WindowState;
+.field final synthetic wT:Landroid/graphics/Rect;
 
-.field final synthetic vT:Z
+.field final synthetic xT:Lcom/android/server/wm/WindowState;
+
+.field final synthetic yT:Z
 
 
 # direct methods
@@ -33,11 +33,11 @@
 
     iput-object p1, p0, Lcom/android/server/wm/cgv;->this$0:Lcom/android/server/wm/OpScreenCompat;
 
-    iput-object p2, p0, Lcom/android/server/wm/cgv;->tT:Landroid/graphics/Rect;
+    iput-object p2, p0, Lcom/android/server/wm/cgv;->wT:Landroid/graphics/Rect;
 
-    iput-object p3, p0, Lcom/android/server/wm/cgv;->uT:Lcom/android/server/wm/WindowState;
+    iput-object p3, p0, Lcom/android/server/wm/cgv;->xT:Lcom/android/server/wm/WindowState;
 
-    iput-boolean p4, p0, Lcom/android/server/wm/cgv;->vT:Z
+    iput-boolean p4, p0, Lcom/android/server/wm/cgv;->yT:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,13 +50,13 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/wm/cgv;->tT:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/android/server/wm/cgv;->wT:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/server/wm/cgv;->tT:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/android/server/wm/cgv;->wT:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
@@ -76,11 +76,11 @@
     move-result v0
 
     :goto_0
-    iget-object v1, p0, Lcom/android/server/wm/cgv;->uT:Lcom/android/server/wm/WindowState;
+    iget-object v1, p0, Lcom/android/server/wm/cgv;->xT:Lcom/android/server/wm/WindowState;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
-    iget-boolean v2, p0, Lcom/android/server/wm/cgv;->vT:Z
+    iget-boolean v2, p0, Lcom/android/server/wm/cgv;->yT:Z
 
     invoke-interface {v1, v2, v0}, Landroid/view/IWindow;->enterScreenCompatMode(ZI)V
     :try_end_0

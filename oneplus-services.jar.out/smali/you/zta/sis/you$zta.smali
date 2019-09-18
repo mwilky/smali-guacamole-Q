@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private CBa:Z
+.field private LBa:Z
 
 .field private factor:Ljava/math/BigInteger;
 
@@ -26,14 +26,34 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lyou/zta/sis/you$zta;->CBa:Z
+    iput-boolean p1, p0, Lyou/zta/sis/you$zta;->LBa:Z
 
     iput-object p2, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
 
     return-void
 .end method
 
-.method private static Zs()Lyou/zta/sis/you$zta;
+.method static synthetic access$000()Lyou/zta/sis/you$zta;
+    .locals 1
+
+    invoke-static {}, Lyou/zta/sis/you$zta;->ct()Lyou/zta/sis/you$zta;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic access$200()Lyou/zta/sis/you$zta;
+    .locals 1
+
+    invoke-static {}, Lyou/zta/sis/you$zta;->dt()Lyou/zta/sis/you$zta;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private static ct()Lyou/zta/sis/you$zta;
     .locals 3
 
     new-instance v0, Lyou/zta/sis/you$zta;
@@ -47,7 +67,7 @@
     return-object v0
 .end method
 
-.method private static _s()Lyou/zta/sis/you$zta;
+.method private static dt()Lyou/zta/sis/you$zta;
     .locals 3
 
     new-instance v0, Lyou/zta/sis/you$zta;
@@ -57,26 +77,6 @@
     const/4 v2, 0x0
 
     invoke-direct {v0, v1, v2}, Lyou/zta/sis/you$zta;-><init>(ZLjava/math/BigInteger;)V
-
-    return-object v0
-.end method
-
-.method static synthetic access$000()Lyou/zta/sis/you$zta;
-    .locals 1
-
-    invoke-static {}, Lyou/zta/sis/you$zta;->Zs()Lyou/zta/sis/you$zta;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$200()Lyou/zta/sis/you$zta;
-    .locals 1
-
-    invoke-static {}, Lyou/zta/sis/you$zta;->_s()Lyou/zta/sis/you$zta;
-
-    move-result-object v0
 
     return-object v0
 .end method
@@ -108,7 +108,7 @@
 .method public Aj()Z
     .locals 1
 
-    iget-boolean v0, p0, Lyou/zta/sis/you$zta;->CBa:Z
+    iget-boolean v0, p0, Lyou/zta/sis/you$zta;->LBa:Z
 
     if-eqz v0, :cond_0
 
@@ -130,7 +130,7 @@
 .method public Bj()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/you$zta;->CBa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/you$zta;->LBa:Z
 
     return p0
 .end method

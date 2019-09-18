@@ -11,11 +11,11 @@
 
 
 # instance fields
-.field private transient bAa:Lorg/bouncycastle/crypto/wtn/bio;
-
 .field private transient dhSpec:Ljavax/crypto/spec/DHParameterSpec;
 
 .field private transient info:Lorg/bouncycastle/asn1/x509/c;
+
+.field private transient kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
 .field private y:Ljava/math/BigInteger;
 
@@ -64,7 +64,7 @@
     invoke-direct {v0, p1, v1}, Lorg/bouncycastle/crypto/wtn/bio;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
     :goto_0
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     invoke-direct {p1, v0, v1}, Lorg/bouncycastle/crypto/wtn/bio;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/crypto/wtn/bio;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     return-void
 .end method
@@ -282,7 +282,7 @@
 
     invoke-direct {v1, v2, v9}, Lorg/bouncycastle/crypto/wtn/bio;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     goto :goto_0
 
@@ -317,12 +317,12 @@
 
     invoke-direct {v0, v1, v8}, Lorg/bouncycastle/crypto/wtn/bio;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     :goto_0
     new-instance p1, Lorg/bouncycastle/jcajce/sis/you;
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/ssp;->getParameters()Lorg/bouncycastle/crypto/wtn/cno;
 
@@ -427,7 +427,7 @@
 
     invoke-direct {p1, v0, v1}, Lorg/bouncycastle/crypto/wtn/bio;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     :goto_3
     return-void
@@ -463,7 +463,7 @@
 
     iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->dhSpec:Ljavax/crypto/spec/DHParameterSpec;
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     return-void
 .end method
@@ -954,7 +954,7 @@
 .method public pj()Lorg/bouncycastle/crypto/wtn/bio;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->bAa:Lorg/bouncycastle/crypto/wtn/bio;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->kAa:Lorg/bouncycastle/crypto/wtn/bio;
 
     return-object p0
 .end method

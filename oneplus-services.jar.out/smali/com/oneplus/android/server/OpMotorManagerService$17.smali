@@ -352,7 +352,7 @@
 
     move-result v2
 
-    sput v2, Lcom/oneplus/android/server/rtg;->WU:I
+    sput v2, Lcom/oneplus/android/server/rtg;->ZU:I
 
     const/4 v2, 0x3
 
@@ -362,7 +362,7 @@
 
     move-result v2
 
-    sput v2, Lcom/oneplus/android/server/rtg;->XU:I
+    sput v2, Lcom/oneplus/android/server/rtg;->_U:I
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -382,7 +382,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v4, Lcom/oneplus/android/server/rtg;->WU:I
+    sget v4, Lcom/oneplus/android/server/rtg;->ZU:I
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -390,7 +390,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v4, Lcom/oneplus/android/server/rtg;->XU:I
+    sget v4, Lcom/oneplus/android/server/rtg;->_U:I
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

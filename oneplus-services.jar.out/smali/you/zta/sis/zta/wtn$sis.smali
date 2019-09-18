@@ -223,7 +223,7 @@
 
     if-ne v2, v0, :cond_2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v0, 0x0
 
@@ -324,13 +324,13 @@
     :cond_3
     iget-object v2, v0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v8, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v8, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v8, v8, v7
 
     iget-object v9, v1, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v1, v1, v7
 
@@ -627,13 +627,13 @@
     :cond_e
     iget-object v2, v0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v8, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v8, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v8, v8, v7
 
     iget-object v9, v1, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v1, v1, v7
 
@@ -926,7 +926,7 @@
 
     iget-object v0, p0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v4, v4, v2
 
@@ -987,7 +987,7 @@
     :cond_4
     iget-object v0, p0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v4, v4, v2
 
@@ -1088,7 +1088,7 @@
 
     iget-object v2, v0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v6, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v6, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v6, v6, v4
 
@@ -1350,7 +1350,7 @@
 
     iget-object v2, v0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v3, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v4, 0x0
 
@@ -1557,7 +1557,7 @@
     :cond_4
     iget-object v2, p1, Lyou/zta/sis/zta/wtn;->x:Lyou/zta/sis/zta/cno;
 
-    iget-object v3, p1, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, p1, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v4, 0x0
 
@@ -1580,7 +1580,7 @@
     :cond_5
     iget-object v3, p0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v5, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v5, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v5, v5, v4
 

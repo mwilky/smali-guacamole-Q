@@ -270,9 +270,9 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$cno;->this$0:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->xja:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;->Ria:Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;->_ia:Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;
 
     const/4 v1, 0x0
 

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field protected final ina:Z
-
 .field protected final octets:[B
+
+.field protected final rna:Z
 
 .field protected final tag:I
 
@@ -17,7 +17,7 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/vdb;-><init>()V
 
-    iput-boolean p1, p0, Lorg/bouncycastle/asn1/zta;->ina:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/asn1/zta;->rna:Z
 
     iput p2, p0, Lorg/bouncycastle/asn1/zta;->tag:I
 
@@ -353,7 +353,7 @@
 .method public hashCode()I
     .locals 2
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->ina:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->rna:Z
 
     iget v1, p0, Lorg/bouncycastle/asn1/zta;->tag:I
 
@@ -373,7 +373,7 @@
 .method public isConstructed()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/asn1/zta;->ina:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/asn1/zta;->rna:Z
 
     return p0
 .end method
@@ -500,7 +500,7 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->ina:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->rna:Z
 
     if-eqz v0, :cond_0
 
@@ -535,9 +535,9 @@
     :cond_0
     check-cast p1, Lorg/bouncycastle/asn1/zta;
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->ina:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->rna:Z
 
-    iget-boolean v2, p1, Lorg/bouncycastle/asn1/zta;->ina:Z
+    iget-boolean v2, p1, Lorg/bouncycastle/asn1/zta;->rna:Z
 
     if-ne v0, v2, :cond_1
 

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final MC:I = 0x200
+.field private static final OC:I = 0x200
 
 .field private static final TAG:Ljava/lang/String; = "FileUtils"
 

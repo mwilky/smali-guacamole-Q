@@ -15,19 +15,19 @@
 
 
 # static fields
-.field protected static final yCa:[Lyou/zta/sis/zta/cno;
+.field protected static final HCa:[Lyou/zta/sis/zta/cno;
 
 
 # instance fields
-.field protected curve:Lyou/zta/sis/zta/rtg;
+.field protected FCa:[Lyou/zta/sis/zta/cno;
 
-.field protected wCa:[Lyou/zta/sis/zta/cno;
+.field protected GCa:Ljava/util/Hashtable;
+
+.field protected curve:Lyou/zta/sis/zta/rtg;
 
 .field protected withCompression:Z
 
 .field protected x:Lyou/zta/sis/zta/cno;
-
-.field protected xCa:Ljava/util/Hashtable;
 
 .field protected y:Lyou/zta/sis/zta/cno;
 
@@ -40,7 +40,7 @@
 
     new-array v0, v0, [Lyou/zta/sis/zta/cno;
 
-    sput-object v0, Lyou/zta/sis/zta/wtn;->yCa:[Lyou/zta/sis/zta/cno;
+    sput-object v0, Lyou/zta/sis/zta/wtn;->HCa:[Lyou/zta/sis/zta/cno;
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/wtn;->xCa:Ljava/util/Hashtable;
+    iput-object v0, p0, Lyou/zta/sis/zta/wtn;->GCa:Ljava/util/Hashtable;
 
     iput-object p1, p0, Lyou/zta/sis/zta/wtn;->curve:Lyou/zta/sis/zta/rtg;
 
@@ -72,7 +72,7 @@
 
     iput-object p3, p0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iput-object p4, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iput-object p4, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     return-void
 .end method
@@ -170,7 +170,7 @@
     return-object p0
 
     :cond_5
-    sget-object p0, Lyou/zta/sis/zta/wtn;->yCa:[Lyou/zta/sis/zta/cno;
+    sget-object p0, Lyou/zta/sis/zta/wtn;->HCa:[Lyou/zta/sis/zta/cno;
 
     return-object p0
 .end method
@@ -697,7 +697,7 @@
 .method protected final gk()[Lyou/zta/sis/zta/cno;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     return-object p0
 .end method
@@ -797,13 +797,13 @@
 .method public jk()[Lyou/zta/sis/zta/cno;
     .locals 3
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     array-length v0, p0
 
     if-nez v0, :cond_0
 
-    sget-object p0, Lyou/zta/sis/zta/wtn;->yCa:[Lyou/zta/sis/zta/cno;
+    sget-object p0, Lyou/zta/sis/zta/wtn;->HCa:[Lyou/zta/sis/zta/cno;
 
     return-object p0
 
@@ -875,7 +875,7 @@
 
     if-ltz p1, :cond_1
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     array-length v0, p0
 
@@ -909,7 +909,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     array-length v0, p0
 
@@ -980,7 +980,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object p0, p0, v1
 
@@ -1186,7 +1186,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    iget-object v3, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     array-length v3, v3
 
@@ -1194,7 +1194,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    iget-object v3, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v3, v3, v2
 

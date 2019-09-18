@@ -41,6 +41,14 @@
 
     invoke-static {v0}, Lcom/android/server/policy/kth;->rtg(Lcom/android/server/policy/kth;)Lcom/android/server/policy/kth$zta;
 
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/policy/sis;->this$0:Lcom/android/server/policy/kth;
+
+    invoke-static {v0}, Lcom/android/server/policy/kth;->rtg(Lcom/android/server/policy/kth;)Lcom/android/server/policy/kth$zta;
+
     move-result-object v1
 
     const/4 v2, 0x0
@@ -53,5 +61,6 @@
 
     invoke-static {p0, v0}, Lcom/android/server/policy/kth;->zta(Lcom/android/server/policy/kth;Lcom/android/server/policy/kth$zta;)Lcom/android/server/policy/kth$zta;
 
+    :cond_0
     return-void
 .end method

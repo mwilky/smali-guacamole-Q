@@ -153,22 +153,22 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/ssp;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$400(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/gck;
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$400(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/dma;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/android/server/display/gck;->E(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/android/server/display/dma;->E(I)V
 
     goto :goto_2
 
     :cond_3
     iget-object p0, p0, Lcom/oneplus/android/server/display/ssp;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$100(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/oif;
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$100(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/bvj;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/oif;->setCustomColorTemperature()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->setCustomColorTemperature()V
 
     goto :goto_2
 

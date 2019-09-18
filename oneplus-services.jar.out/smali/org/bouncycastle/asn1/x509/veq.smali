@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private dra:[Lorg/bouncycastle/asn1/x509/oxb;
+.field private mra:[Lorg/bouncycastle/asn1/x509/oxb;
 
 .field private permitted:[Lorg/bouncycastle/asn1/x509/oxb;
 
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/veq;->dra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/veq;->mra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     goto :goto_0
 
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/veq;->dra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/veq;->mra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     return-void
 .end method
@@ -212,7 +212,7 @@
 .method public ci()[Lorg/bouncycastle/asn1/x509/oxb;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->dra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->mra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/x509/veq;->you([Lorg/bouncycastle/asn1/x509/oxb;)[Lorg/bouncycastle/asn1/x509/oxb;
 
@@ -257,7 +257,7 @@
     invoke-virtual {v0, v3}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_0
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->dra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->mra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     if-eqz p0, :cond_1
 

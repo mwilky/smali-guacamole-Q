@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final Bna:[B
-
-.field private static final Cna:[B
-
 .field public static final FALSE:Lorg/bouncycastle/asn1/tsu;
+
+.field private static final Kna:[B
+
+.field private static final Lna:[B
 
 .field public static final TRUE:Lorg/bouncycastle/asn1/tsu;
 
@@ -31,13 +31,13 @@
 
     aput-byte v3, v1, v2
 
-    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Bna:[B
+    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Kna:[B
 
     new-array v1, v0, [B
 
     aput-byte v2, v1, v2
 
-    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Cna:[B
+    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Lna:[B
 
     new-instance v1, Lorg/bouncycastle/asn1/tsu;
 
@@ -61,12 +61,12 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Bna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Kna:[B
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Cna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Lna:[B
 
     :goto_0
     iput-object p1, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
@@ -91,7 +91,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Cna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Lna:[B
 
     :goto_0
     iput-object p1, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
@@ -107,7 +107,7 @@
 
     if-ne v0, v1, :cond_1
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Bna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Kna:[B
 
     goto :goto_0
 

@@ -16,39 +16,39 @@
 
 
 # static fields
-.field public static final TBa:I = 0x0
+.field public static final bCa:I = 0x0
 
-.field public static final UBa:I = 0x1
+.field public static final cCa:I = 0x1
 
-.field public static final VBa:I = 0x2
+.field public static final dCa:I = 0x2
 
-.field public static final WBa:I = 0x3
+.field public static final eCa:I = 0x3
 
-.field public static final XBa:I = 0x4
+.field public static final fCa:I = 0x4
 
-.field public static final YBa:I = 0x5
+.field public static final gCa:I = 0x5
 
-.field public static final ZBa:I = 0x6
+.field public static final hCa:I = 0x6
 
-.field public static final _Ba:I = 0x7
+.field public static final iCa:I = 0x7
 
 
 # instance fields
-.field protected NBa:I
+.field protected Fya:Lyou/zta/sis/zta/bio;
 
-.field protected OBa:Lyou/zta/sis/zta/you/zta;
+.field protected WBa:I
 
-.field protected RBa:Lyou/zta/sis/you/you;
+.field protected XBa:Lyou/zta/sis/zta/you/zta;
 
-.field protected SBa:Ljava/math/BigInteger;
+.field protected _Ba:Lyou/zta/sis/you/you;
 
 .field protected a:Lyou/zta/sis/zta/cno;
+
+.field protected aCa:Ljava/math/BigInteger;
 
 .field protected b:Lyou/zta/sis/zta/cno;
 
 .field protected order:Ljava/math/BigInteger;
-
-.field protected wya:Lyou/zta/sis/zta/bio;
 
 
 # direct methods
@@ -59,15 +59,15 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lyou/zta/sis/zta/rtg;->NBa:I
+    iput v0, p0, Lyou/zta/sis/zta/rtg;->WBa:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->OBa:Lyou/zta/sis/zta/you/zta;
+    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->XBa:Lyou/zta/sis/zta/you/zta;
 
-    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->wya:Lyou/zta/sis/zta/bio;
+    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->Fya:Lyou/zta/sis/zta/bio;
 
-    iput-object p1, p0, Lyou/zta/sis/zta/rtg;->RBa:Lyou/zta/sis/you/you;
+    iput-object p1, p0, Lyou/zta/sis/zta/rtg;->_Ba:Lyou/zta/sis/you/you;
 
     return-void
 .end method
@@ -109,11 +109,11 @@
     :try_start_0
     new-instance v0, Lyou/zta/sis/zta/rtg$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/rtg;->NBa:I
+    iget v1, p0, Lyou/zta/sis/zta/rtg;->WBa:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/rtg;->OBa:Lyou/zta/sis/zta/you/zta;
+    iget-object v2, p0, Lyou/zta/sis/zta/rtg;->XBa:Lyou/zta/sis/zta/you/zta;
 
-    iget-object v3, p0, Lyou/zta/sis/zta/rtg;->wya:Lyou/zta/sis/zta/bio;
+    iget-object v3, p0, Lyou/zta/sis/zta/rtg;->Fya:Lyou/zta/sis/zta/bio;
 
     invoke-direct {v0, p0, v1, v2, v3}, Lyou/zta/sis/zta/rtg$sis;-><init>(Lyou/zta/sis/zta/rtg;ILyou/zta/sis/zta/you/zta;Lyou/zta/sis/zta/bio;)V
     :try_end_0
@@ -134,7 +134,7 @@
 .method protected Gj()Lyou/zta/sis/zta/bio;
     .locals 2
 
-    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->OBa:Lyou/zta/sis/zta/you/zta;
+    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->XBa:Lyou/zta/sis/zta/you/zta;
 
     instance-of v1, v0, Lyou/zta/sis/zta/you/you;
 
@@ -159,7 +159,7 @@
 .method public Ij()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg;->NBa:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg;->WBa:I
 
     return p0
 .end method
@@ -167,7 +167,7 @@
 .method public Jj()Lyou/zta/sis/zta/you/zta;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/rtg;->OBa:Lyou/zta/sis/zta/you/zta;
+    iget-object p0, p0, Lyou/zta/sis/zta/rtg;->XBa:Lyou/zta/sis/zta/you/zta;
 
     return-object p0
 .end method
@@ -305,7 +305,7 @@
 .method public getCofactor()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/rtg;->SBa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/rtg;->aCa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -313,7 +313,7 @@
 .method public getField()Lyou/zta/sis/you/you;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/rtg;->RBa:Lyou/zta/sis/you/you;
+    iget-object p0, p0, Lyou/zta/sis/zta/rtg;->_Ba:Lyou/zta/sis/you/you;
 
     return-object p0
 .end method
@@ -330,7 +330,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->wya:Lyou/zta/sis/zta/bio;
+    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->Fya:Lyou/zta/sis/zta/bio;
 
     if-nez v0, :cond_0
 
@@ -338,10 +338,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->wya:Lyou/zta/sis/zta/bio;
+    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->Fya:Lyou/zta/sis/zta/bio;
 
     :cond_0
-    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->wya:Lyou/zta/sis/zta/bio;
+    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->Fya:Lyou/zta/sis/zta/bio;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -953,7 +953,7 @@
     monitor-enter p1
 
     :try_start_0
-    iget-object p0, p1, Lyou/zta/sis/zta/wtn;->xCa:Ljava/util/Hashtable;
+    iget-object p0, p1, Lyou/zta/sis/zta/wtn;->GCa:Ljava/util/Hashtable;
 
     monitor-exit p1
     :try_end_0
@@ -1007,7 +1007,7 @@
     monitor-enter p1
 
     :try_start_0
-    iget-object p0, p1, Lyou/zta/sis/zta/wtn;->xCa:Ljava/util/Hashtable;
+    iget-object p0, p1, Lyou/zta/sis/zta/wtn;->GCa:Ljava/util/Hashtable;
 
     if-nez p0, :cond_0
 
@@ -1017,7 +1017,7 @@
 
     invoke-direct {p0, v0}, Ljava/util/Hashtable;-><init>(I)V
 
-    iput-object p0, p1, Lyou/zta/sis/zta/wtn;->xCa:Ljava/util/Hashtable;
+    iput-object p0, p1, Lyou/zta/sis/zta/wtn;->GCa:Ljava/util/Hashtable;
 
     :cond_0
     monitor-exit p1

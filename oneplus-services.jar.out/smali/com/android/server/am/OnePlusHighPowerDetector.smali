@@ -12606,7 +12606,7 @@
 
     iget-object v1, v9, Lcom/android/server/am/OnePlusHighPowerDetector;->Bq:Lcom/android/server/am/OnePlusBGController;
 
-    sget-object v2, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Cga:Lcom/android/server/am/OnePlusBGController$SnapshotType;
+    sget-object v2, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Lga:Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
     :goto_83
     invoke-virtual {v1, v2}, Lcom/android/server/am/OnePlusBGController;->you(Lcom/android/server/am/OnePlusBGController$SnapshotType;)V
@@ -12620,7 +12620,7 @@
 
     iget-object v1, v9, Lcom/android/server/am/OnePlusHighPowerDetector;->Bq:Lcom/android/server/am/OnePlusBGController;
 
-    sget-object v2, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Dga:Lcom/android/server/am/OnePlusBGController$SnapshotType;
+    sget-object v2, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Mga:Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
     goto :goto_83
 
@@ -20897,7 +20897,7 @@
     :cond_1
     sget-object v0, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v10, 0x50d00b0
+    const v10, 0x50d00b1
 
     invoke-virtual {v0, v10}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -20913,7 +20913,7 @@
 
     sget-object v11, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v12, 0x50d00af
+    const v12, 0x50d00b0
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -20946,7 +20946,7 @@
 
     move-result-object v11
 
-    const v12, 0x50d00ad
+    const v12, 0x50d00ae
 
     new-array v13, v9, [Ljava/lang/Object;
 
@@ -20965,7 +20965,7 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v13, "Notification # content:84738223 "
+    const-string v13, "Notification # content:84738224 "
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -21251,7 +21251,7 @@
 
     sget-object v5, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v6, 0x50d00ae
+    const v6, 0x50d00af
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -21266,7 +21266,7 @@
 
     sget-object v5, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v6, 0x50d0098
+    const v6, 0x50d0099
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -21284,7 +21284,7 @@
 
     sget-object v5, Lcom/android/server/am/OnePlusHighPowerDetector;->mContext:Landroid/content/Context;
 
-    const v7, 0x50d009b
+    const v7, 0x50d009c    # 6.6299E-36f
 
     invoke-virtual {v5, v7}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -24903,7 +24903,7 @@
 
     if-ne p0, p2, :cond_0
 
-    sget-object p0, Lcom/android/server/am/OnePlusBGController$NetType;->zga:Lcom/android/server/am/OnePlusBGController$NetType;
+    sget-object p0, Lcom/android/server/am/OnePlusBGController$NetType;->Iga:Lcom/android/server/am/OnePlusBGController$NetType;
 
     goto :goto_0
 

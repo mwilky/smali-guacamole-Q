@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field protected ika:Ljava/security/SecureRandom;
-
 .field private l:I
+
+.field protected rka:Ljava/security/SecureRandom;
 
 .field protected strength:I
 
@@ -43,7 +43,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->ika:Ljava/security/SecureRandom;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->rka:Ljava/security/SecureRandom;
 
     if-eqz v2, :cond_0
 
@@ -113,7 +113,7 @@
 
     iput p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->strength:I
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->ika:Ljava/security/SecureRandom;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->rka:Ljava/security/SecureRandom;
 
     return-void
 .end method
@@ -144,7 +144,7 @@
 
     iput p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->l:I
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->ika:Ljava/security/SecureRandom;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/zta;->rka:Ljava/security/SecureRandom;
 
     return-void
 

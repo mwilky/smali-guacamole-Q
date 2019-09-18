@@ -392,7 +392,7 @@
 
     move-result v0
 
-    const-string v1, "/persist/engineermode/screenontimebyhours"
+    const-string v1, "/mnt/vendor/persist/engineermode/screenontimebyhours"
 
     invoke-direct {p0, v1, v0}, Lcom/android/server/wm/OpPowerConsumpStats$qbh;->zta(Ljava/lang/String;F)V
     :try_end_0

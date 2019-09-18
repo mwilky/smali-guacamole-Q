@@ -27,18 +27,18 @@
 
 
 # instance fields
-.field final synthetic Vua:Ljava/lang/SecurityManager;
+.field final synthetic dva:Ljava/lang/SecurityManager;
 
-.field final synthetic Wua:Ljava/security/Permission;
+.field final synthetic eva:Ljava/security/Permission;
 
 
 # direct methods
 .method constructor <init>(Ljava/lang/SecurityManager;Ljava/security/Permission;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/bio;->Vua:Ljava/lang/SecurityManager;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/bio;->dva:Ljava/lang/SecurityManager;
 
-    iput-object p2, p0, Lorg/bouncycastle/crypto/bio;->Wua:Ljava/security/Permission;
+    iput-object p2, p0, Lorg/bouncycastle/crypto/bio;->eva:Ljava/security/Permission;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
 .method public run()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lorg/bouncycastle/crypto/bio;->Vua:Ljava/lang/SecurityManager;
+    iget-object v0, p0, Lorg/bouncycastle/crypto/bio;->dva:Ljava/lang/SecurityManager;
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/bio;->Wua:Ljava/security/Permission;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/bio;->eva:Ljava/security/Permission;
 
     invoke-virtual {v0, p0}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 

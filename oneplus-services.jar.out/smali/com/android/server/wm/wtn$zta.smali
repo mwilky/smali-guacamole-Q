@@ -598,7 +598,7 @@
     goto :goto_0
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->Gea:Z
+    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->Pea:Z
 
     if-eqz v0, :cond_1
 
@@ -647,7 +647,7 @@
 .end method
 
 .method public init(Lcom/android/server/wm/ActivityStack;Lcom/android/server/wm/ActivityStackSupervisor;)V
-    .locals 1
+    .locals 0
 
     iput-object p1, p0, Lcom/android/server/wm/wtn$zta;->mActivityStack:Lcom/android/server/wm/ActivityStack;
 
@@ -661,24 +661,6 @@
 
     iput-object p1, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    iget-object p0, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const/4 p1, -0x2
-
-    const-string p2, "0"
-
-    const-string v0, "game_mode_status"
-
-    invoke-static {p0, v0, p2, p1}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
-
-    const-string v0, "esport_mode_enabled"
-
-    invoke-static {p0, v0, p2, p1}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
-
     return-void
 .end method
 
@@ -687,7 +669,7 @@
 
     const/4 v0, 0x1
 
-    const v1, 0x50d0093
+    const v1, 0x50d0094
 
     if-eq p1, v0, :cond_1
 
@@ -702,7 +684,7 @@
     :cond_0
     iget-object p1, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    const v0, 0x50d008e
+    const v0, 0x50d008f
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -735,7 +717,7 @@
 .method public packageChanged(Ljava/lang/String;I)V
     .locals 2
 
-    sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->Gea:Z
+    sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->Pea:Z
 
     if-eqz p0, :cond_1
 
@@ -892,9 +874,9 @@
 .end method
 
 .method public sendReadModeNotification(Lcom/android/server/wm/ActivityRecord;)V
-    .locals 11
+    .locals 12
 
-    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->Gea:Z
+    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->Pea:Z
 
     if-nez v0, :cond_0
 
@@ -1113,7 +1095,7 @@
 
     iget-object v4, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    const v6, 0x50d0056
+    const v6, 0x50d0057
 
     new-array v7, v2, [Ljava/lang/Object;
 
@@ -1126,7 +1108,7 @@
     :cond_4
     iget-object v4, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    const v6, 0x50d0063
+    const v6, 0x50d0064
 
     new-array v7, v2, [Ljava/lang/Object;
 
@@ -1160,31 +1142,31 @@
 
     iget-object v6, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    sget v8, Lcom/oneplus/android/server/scene/ivd;->sNextRequestCode:I
+    sget v9, Lcom/oneplus/android/server/scene/ivd;->sNextRequestCode:I
 
-    add-int/lit8 v9, v8, 0x1
+    add-int/lit8 v10, v9, 0x1
 
-    sput v9, Lcom/oneplus/android/server/scene/ivd;->sNextRequestCode:I
+    sput v10, Lcom/oneplus/android/server/scene/ivd;->sNextRequestCode:I
 
-    const/high16 v9, 0x8000000
+    const/high16 v10, 0x8000000
 
-    invoke-static {v6, v8, v3, v9}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v6, v9, v3, v10}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v3
 
     new-instance v6, Landroid/app/Notification$Action$Builder;
 
-    iget-object v8, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
+    iget-object v9, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    const v10, 0x50d0061
+    const v11, 0x50d0062
 
-    invoke-virtual {v8, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v9, v11}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
-    const v10, 0x1080362
+    const v11, 0x1080362
 
-    invoke-direct {v6, v10, v8, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    invoke-direct {v6, v11, v9, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     invoke-virtual {v6}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
@@ -1192,13 +1174,19 @@
 
     new-instance v6, Landroid/content/Intent;
 
-    const-string v8, "com.oem.intent.action.GO_READ_MODE_SETTINGS"
+    const-string v9, "com.oem.intent.action.GO_READ_MODE_SETTINGS"
 
-    invoke-direct {v6, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+    iget-object v9, p1, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    invoke-virtual {v6, v7, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v6, v7, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p1}, Lcom/android/server/wm/ActivityRecord;->getUid()I
+
+    move-result p1
+
+    invoke-virtual {v6, v8, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     iget-object p1, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
@@ -1208,7 +1196,7 @@
 
     sput v8, Lcom/oneplus/android/server/scene/ivd;->sNextRequestCode:I
 
-    invoke-static {p1, v7, v6, v9}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p1, v7, v6, v10}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object p1
 
@@ -1216,13 +1204,13 @@
 
     iget-object v7, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    const v8, 0x50d0062
+    const v8, 0x50d0063
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-direct {v6, v10, v7, p1}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    invoke-direct {v6, v11, v7, p1}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
     invoke-virtual {v6}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
@@ -1238,7 +1226,7 @@
 
     iget-object v7, p0, Lcom/android/server/wm/wtn$zta;->mContext:Landroid/content/Context;
 
-    const v8, 0x50d0064
+    const v8, 0x50d0065
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1697,11 +1685,11 @@
 
     invoke-virtual {v2, v1, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    sget-boolean v1, Lcom/oneplus/android/server/scene/ivd;->Gea:Z
+    sget-boolean v1, Lcom/oneplus/android/server/scene/ivd;->Pea:Z
 
     if-eqz v1, :cond_3
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Oea:Ljava/lang/String;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Xea:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
@@ -1716,7 +1704,7 @@
     :cond_2
     iget-object v1, p2, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
-    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->Oea:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->Xea:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/android/server/wm/wtn$zta;->mActivityStack:Lcom/android/server/wm/ActivityStack;
 
@@ -1740,7 +1728,7 @@
 
     if-nez v1, :cond_3
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Hea:Ljava/util/ArrayList;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Qea:Ljava/util/ArrayList;
 
     iget-object v3, p2, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
 
@@ -1776,7 +1764,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/oneplus/android/server/scene/ivd;->Kea:I
+    sget v2, Lcom/oneplus/android/server/scene/ivd;->Tea:I
 
     int-to-long v2, v2
 
@@ -1809,7 +1797,7 @@
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lcom/oneplus/android/server/scene/ivd;->Oea:Ljava/lang/String;
+    sget-object p1, Lcom/oneplus/android/server/scene/ivd;->Xea:Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2528,6 +2516,10 @@
     invoke-static {p0, v3, v1, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     :goto_2
+    sget-boolean p0, Lcom/android/server/wm/wtn;->DBG:Z
+
+    if-eqz p0, :cond_3
+
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2554,5 +2546,6 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_3
     return-void
 .end method

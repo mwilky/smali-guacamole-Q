@@ -107,7 +107,7 @@
 
     if-ge v7, v8, :cond_1
 
-    sget-object v7, Lyou/zta/sis/zta/ibl;->ICa:[B
+    sget-object v7, Lyou/zta/sis/zta/ibl;->RCa:[B
 
     aget-byte v7, v7, v6
 

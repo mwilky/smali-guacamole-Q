@@ -229,7 +229,7 @@
         }
     .end annotation
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Gpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Ppa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -279,7 +279,7 @@
         }
     .end annotation
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Fpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Opa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 

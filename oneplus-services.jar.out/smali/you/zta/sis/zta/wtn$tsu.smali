@@ -79,7 +79,7 @@
 
     iget-object v2, v0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v3, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v4, 0x0
 
@@ -343,11 +343,11 @@
 
     :cond_4
     :goto_0
-    iget-object v12, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v12, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v12, v12, v9
 
-    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v1, v1, v9
 
@@ -643,13 +643,13 @@
     return-object v7
 
     :cond_10
-    iget-object v3, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v3, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v8, 0x0
 
     aget-object v3, v3, v8
 
-    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v1, v1, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v1, v1, v8
 
@@ -983,7 +983,7 @@
 
     iget-object v7, v0, Lyou/zta/sis/zta/wtn;->x:Lyou/zta/sis/zta/cno;
 
-    iget-object v8, v0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v8, v0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     array-length v9, v8
 
@@ -1367,7 +1367,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v5, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     iget-boolean v6, p0, Lyou/zta/sis/zta/wtn;->withCompression:Z
 
@@ -1653,7 +1653,7 @@
     throw p0
 
     :cond_3
-    iget-object v1, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v1, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v1, v1, v4
 
@@ -1858,7 +1858,7 @@
     return-object v9
 
     :cond_a
-    iget-object v1, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v1, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v1, v1, v4
 
@@ -2153,7 +2153,7 @@
 .method protected tk()Lyou/zta/sis/zta/cno;
     .locals 4
 
-    iget-object v0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v1, 0x1
 

@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static final Lma:Ljava/math/BigInteger;
-
 .field private static final ONE:Ljava/math/BigInteger;
+
+.field private static final Uma:Ljava/math/BigInteger;
 
 
 # instance fields
-.field private final Jma:Lorg/bouncycastle/crypto/tsu;
+.field private final Sma:Lorg/bouncycastle/crypto/tsu;
 
-.field private Kma:Ljava/math/BigInteger;
+.field private Tma:Ljava/math/BigInteger;
 
 .field private g:Ljava/math/BigInteger;
 
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Lma:Ljava/math/BigInteger;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Uma:Ljava/math/BigInteger;
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Jma:Lorg/bouncycastle/crypto/tsu;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Sma:Lorg/bouncycastle/crypto/tsu;
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     invoke-direct {p0, p1, p3}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;-><init>(Ljava/lang/String;Lorg/bouncycastle/crypto/dma;)V
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Jma:Lorg/bouncycastle/crypto/tsu;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Sma:Lorg/bouncycastle/crypto/tsu;
 
     return-void
 .end method
@@ -290,7 +290,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v1}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
@@ -304,7 +304,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Lma:Ljava/math/BigInteger;
+    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Uma:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
@@ -312,7 +312,7 @@
 
     if-ltz v1, :cond_2
 
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     sget-object v2, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->ONE:Ljava/math/BigInteger;
 
@@ -328,7 +328,7 @@
 
     iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->x:Ljava/math/BigInteger;
 
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v1, v2}, Ljava/math/BigInteger;->modPow(Ljava/math/BigInteger;Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
@@ -539,7 +539,7 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljavax/crypto/interfaces/DHPrivateKey;->getParams()Ljavax/crypto/spec/DHParameterSpec;
 
@@ -604,7 +604,7 @@
 
     move-result-object p3
 
-    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-virtual {p2}, Ljavax/crypto/spec/DHParameterSpec;->getG()Ljava/math/BigInteger;
 
@@ -615,7 +615,7 @@
     const/4 p2, 0x0
 
     :goto_0
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Dma:[B
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Mma:[B
 
     goto :goto_1
 
@@ -624,7 +624,7 @@
 
     if-eqz p3, :cond_2
 
-    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->nka:Lorg/bouncycastle/crypto/dma;
+    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->wka:Lorg/bouncycastle/crypto/dma;
 
     if-eqz p3, :cond_1
 
@@ -636,7 +636,7 @@
 
     move-result-object p3
 
-    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljavax/crypto/interfaces/DHPrivateKey;->getParams()Ljavax/crypto/spec/DHParameterSpec;
 
@@ -683,7 +683,7 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljavax/crypto/interfaces/DHPrivateKey;->getParams()Ljavax/crypto/spec/DHParameterSpec;
 
@@ -725,7 +725,7 @@
 .method protected tsu(Ljava/math/BigInteger;)[B
     .locals 3
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Kma:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/tsu;->Tma:Ljava/math/BigInteger;
 
     invoke-virtual {p0}, Ljava/math/BigInteger;->bitLength()I
 

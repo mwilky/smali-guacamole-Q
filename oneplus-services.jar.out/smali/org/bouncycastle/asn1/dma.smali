@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private final Vfa:Z
+.field private final dga:Z
 
-.field private final Wfa:[[B
+.field private final ega:[[B
 
 .field private final limit:I
 
@@ -44,13 +44,13 @@
 
     iput p2, p0, Lorg/bouncycastle/asn1/dma;->limit:I
 
-    iput-boolean p3, p0, Lorg/bouncycastle/asn1/dma;->Vfa:Z
+    iput-boolean p3, p0, Lorg/bouncycastle/asn1/dma;->dga:Z
 
     const/16 p1, 0xb
 
     new-array p1, p1, [[B
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/dma;->Wfa:[[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/dma;->ega:[[B
 
     return-void
 .end method
@@ -1075,7 +1075,7 @@
     throw p0
 
     :cond_4
-    iget-boolean p1, p0, Lorg/bouncycastle/asn1/dma;->Vfa:Z
+    iget-boolean p1, p0, Lorg/bouncycastle/asn1/dma;->dga:Z
 
     if-eqz p1, :cond_5
 
@@ -1147,7 +1147,7 @@
     return-object p0
 
     :cond_9
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma;->Wfa:[[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma;->ega:[[B
 
     invoke-static {p2, v2, p0}, Lorg/bouncycastle/asn1/dma;->zta(ILorg/bouncycastle/asn1/ba;[[B)Lorg/bouncycastle/asn1/vdb;
 

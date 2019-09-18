@@ -16,29 +16,29 @@
 
 
 # instance fields
-.field private cma:[Ljava/lang/Class;
-
-.field protected ema:Ljava/security/AlgorithmParameters;
-
-.field protected fma:Lorg/bouncycastle/crypto/ire;
-
 .field private final helper:Lorg/bouncycastle/jcajce/tsu/tsu;
 
 .field private iv:[B
 
 .field private ivSize:I
 
-.field protected kma:I
+.field private mma:[Ljava/lang/Class;
 
-.field protected lma:I
+.field protected nma:Ljava/security/AlgorithmParameters;
 
-.field protected mma:I
+.field protected oma:Lorg/bouncycastle/crypto/ire;
 
-.field protected nma:I
+.field protected tma:I
 
-.field private oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+.field protected uma:I
 
-.field private pma:Z
+.field protected vma:I
+
+.field protected wma:I
+
+.field private xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+
+.field private yma:Z
 
 
 # direct methods
@@ -63,19 +63,19 @@
 
     aput-object v2, v1, v3
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->cma:[Ljava/lang/Class;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->mma:[Ljava/lang/Class;
 
-    iput v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->kma:I
+    iput v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->tma:I
 
-    iput v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->lma:I
+    iput v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->uma:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     new-instance v0, Lorg/bouncycastle/jcajce/tsu/sis;
 
@@ -117,19 +117,19 @@
 
     aput-object v2, v1, v3
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->cma:[Ljava/lang/Class;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->mma:[Ljava/lang/Class;
 
-    iput v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->kma:I
+    iput v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->tma:I
 
-    iput v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->lma:I
+    iput v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->uma:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     new-instance v0, Lorg/bouncycastle/jcajce/tsu/sis;
 
@@ -137,7 +137,7 @@
 
     iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->helper:Lorg/bouncycastle/jcajce/tsu/tsu;
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     iput p2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ivSize:I
 
@@ -156,14 +156,14 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     if-eqz v0, :cond_2
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     :try_start_0
-    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->pma:Z
+    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->yma:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -172,15 +172,15 @@
     if-eqz p1, :cond_0
 
     :try_start_1
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
-    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p3}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->Df()[B
 
     move-result-object p3
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->size()I
 
@@ -213,15 +213,15 @@
 
     :cond_0
     :try_start_3
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
-    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p3}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->Df()[B
 
     move-result-object p3
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->size()I
 
@@ -252,7 +252,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->erase()V
 
@@ -286,7 +286,7 @@
     :catchall_0
     move-exception p1
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->erase()V
 
@@ -311,14 +311,14 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     if-eqz v0, :cond_1
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
     :try_start_0
-    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->pma:Z
+    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->yma:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -327,15 +327,15 @@
     if-eqz p1, :cond_0
 
     :try_start_1
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
-    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p3}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->Df()[B
 
     move-result-object p3
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->size()I
 
@@ -349,7 +349,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->erase()V
 
@@ -373,15 +373,15 @@
 
     :cond_0
     :try_start_3
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
-    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p3}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->Df()[B
 
     move-result-object p3
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->size()I
 
@@ -415,7 +415,7 @@
     :catchall_0
     move-exception p1
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;->erase()V
 
@@ -476,7 +476,7 @@
 .method protected engineGetParameters()Ljava/security/AlgorithmParameters;
     .locals 3
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
     if-nez v0, :cond_1
 
@@ -484,7 +484,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     invoke-interface {v0}, Lorg/bouncycastle/crypto/ire;->vju()Ljava/lang/String;
 
@@ -514,9 +514,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
     new-instance v1, Ljavax/crypto/spec/IvParameterSpec;
 
@@ -545,7 +545,7 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
     return-object p0
 .end method
@@ -566,7 +566,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->cma:[Ljava/lang/Class;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->mma:[Ljava/lang/Class;
 
     array-length v3, v2
 
@@ -621,7 +621,7 @@
 
     :cond_2
     :goto_2
-    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->ema:Ljava/security/AlgorithmParameters;
+    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->nma:Ljava/security/AlgorithmParameters;
 
     invoke-virtual {p0, p1, p2, v0, p4}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->engineInit(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;Ljava/security/SecureRandom;)V
 
@@ -678,7 +678,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     invoke-interface {v0}, Lorg/bouncycastle/crypto/ire;->vju()Ljava/lang/String;
 
@@ -807,14 +807,14 @@
     if-ne p1, v0, :cond_7
 
     :try_start_0
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     invoke-interface {p1, p4, p2}, Lorg/bouncycastle/crypto/ire;->zta(ZLorg/bouncycastle/crypto/kth;)V
 
-    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     :goto_1
-    iput-boolean p4, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->pma:Z
+    iput-boolean p4, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->yma:Z
 
     goto :goto_3
 
@@ -833,19 +833,19 @@
     goto :goto_4
 
     :cond_8
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     invoke-interface {p1, v1, p2}, Lorg/bouncycastle/crypto/ire;->zta(ZLorg/bouncycastle/crypto/kth;)V
 
-    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     :goto_2
-    iput-boolean v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->pma:Z
+    iput-boolean v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->yma:Z
 
     goto :goto_3
 
     :cond_9
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     invoke-interface {p1, p4, p2}, Lorg/bouncycastle/crypto/ire;->zta(ZLorg/bouncycastle/crypto/kth;)V
 
@@ -853,12 +853,12 @@
 
     invoke-direct {p1}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     goto :goto_1
 
     :cond_a
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     invoke-interface {p1, v1, p2}, Lorg/bouncycastle/crypto/ire;->zta(ZLorg/bouncycastle/crypto/kth;)V
 
@@ -866,7 +866,7 @@
 
     invoke-direct {p1}, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -961,7 +961,7 @@
     const-string v0, "Unknown key type "
 
     :try_start_0
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     const/4 v2, 0x0
 
@@ -976,7 +976,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     array-length v3, p1
 
@@ -1224,7 +1224,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     if-eqz p0, :cond_0
 
@@ -1247,7 +1247,7 @@
 .method protected engineUpdate([BII)[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->xma:Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher$zta;
 
     if-eqz p0, :cond_0
 
@@ -1283,7 +1283,7 @@
     if-eqz p1, :cond_1
 
     :try_start_0
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     const/4 v1, 0x0
 
@@ -1298,7 +1298,7 @@
     return-object p0
 
     :cond_0
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->fma:Lorg/bouncycastle/crypto/ire;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BaseWrapCipher;->oma:Lorg/bouncycastle/crypto/ire;
 
     array-length v0, p1
 

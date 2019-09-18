@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private lla:Ljava/lang/Exception;
+.field private ula:Ljava/lang/Exception;
 
 
 # direct methods
@@ -192,7 +192,7 @@
     :cond_3
     if-nez v1, :cond_5
 
-    iget-object p1, p0, Lorg/bouncycastle/jce/provider/wtn;->lla:Ljava/lang/Exception;
+    iget-object p1, p0, Lorg/bouncycastle/jce/provider/wtn;->ula:Ljava/lang/Exception;
 
     if-eqz p1, :cond_5
 
@@ -206,7 +206,7 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/wtn;->lla:Ljava/lang/Exception;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/wtn;->ula:Ljava/lang/Exception;
 
     invoke-virtual {p0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
@@ -228,7 +228,7 @@
     :cond_5
     if-nez v1, :cond_7
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/wtn;->lla:Ljava/lang/Exception;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/wtn;->ula:Ljava/lang/Exception;
 
     if-eqz p0, :cond_6
 
@@ -474,7 +474,7 @@
     .catch Lorg/bouncycastle/jce/provider/AnnotatedException; {:try_start_4 .. :try_end_4} :catch_4
 
     :try_start_5
-    sget-object v2, Lorg/bouncycastle/asn1/x509/gwm;->Gpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v2, Lorg/bouncycastle/asn1/x509/gwm;->Ppa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v2}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -593,7 +593,7 @@
     :catch_4
     move-exception p2
 
-    iput-object p2, p0, Lorg/bouncycastle/jce/provider/wtn;->lla:Ljava/lang/Exception;
+    iput-object p2, p0, Lorg/bouncycastle/jce/provider/wtn;->ula:Ljava/lang/Exception;
 
     :cond_5
     if-nez v1, :cond_6

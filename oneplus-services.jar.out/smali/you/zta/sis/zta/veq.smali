@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final JBa:Ljava/lang/String; = "bc_wtnaf"
+.field static final SBa:Ljava/lang/String; = "bc_wtnaf"
 
 
 # direct methods
@@ -159,12 +159,12 @@
 
     if-nez p3, :cond_0
 
-    sget-object p0, Lyou/zta/sis/zta/obl;->OCa:[Lyou/zta/sis/zta/vju;
+    sget-object p0, Lyou/zta/sis/zta/obl;->XCa:[Lyou/zta/sis/zta/vju;
 
     goto :goto_0
 
     :cond_0
-    sget-object p0, Lyou/zta/sis/zta/obl;->QCa:[Lyou/zta/sis/zta/vju;
+    sget-object p0, Lyou/zta/sis/zta/obl;->ZCa:[Lyou/zta/sis/zta/vju;
 
     :goto_0
     move-object v5, p0

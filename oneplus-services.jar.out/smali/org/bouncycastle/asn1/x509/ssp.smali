@@ -10,15 +10,15 @@
 
 .field private holder:Lorg/bouncycastle/asn1/x509/cjf;
 
-.field private jpa:Lorg/bouncycastle/asn1/x509/you;
-
-.field private kpa:Lorg/bouncycastle/asn1/x509/sis;
-
-.field private lpa:Lorg/bouncycastle/asn1/n;
-
 .field private serialNumber:Lorg/bouncycastle/asn1/ywr;
 
 .field private signature:Lorg/bouncycastle/asn1/x509/zta;
+
+.field private spa:Lorg/bouncycastle/asn1/x509/you;
+
+.field private tpa:Lorg/bouncycastle/asn1/x509/sis;
+
+.field private upa:Lorg/bouncycastle/asn1/n;
 
 .field private version:Lorg/bouncycastle/asn1/ywr;
 
@@ -99,7 +99,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lorg/bouncycastle/asn1/x509/ssp;->jpa:Lorg/bouncycastle/asn1/x509/you;
+    iput-object v2, p0, Lorg/bouncycastle/asn1/x509/ssp;->spa:Lorg/bouncycastle/asn1/x509/you;
 
     add-int/lit8 v2, v0, 0x2
 
@@ -135,7 +135,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lorg/bouncycastle/asn1/x509/ssp;->kpa:Lorg/bouncycastle/asn1/x509/sis;
+    iput-object v2, p0, Lorg/bouncycastle/asn1/x509/ssp;->tpa:Lorg/bouncycastle/asn1/x509/sis;
 
     add-int/lit8 v2, v0, 0x5
 
@@ -174,7 +174,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->lpa:Lorg/bouncycastle/asn1/n;
+    iput-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->upa:Lorg/bouncycastle/asn1/n;
 
     goto :goto_2
 
@@ -282,7 +282,7 @@
 .method public Bh()Lorg/bouncycastle/asn1/x509/sis;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/ssp;->kpa:Lorg/bouncycastle/asn1/x509/sis;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/ssp;->tpa:Lorg/bouncycastle/asn1/x509/sis;
 
     return-object p0
 .end method
@@ -314,7 +314,7 @@
 .method public getIssuer()Lorg/bouncycastle/asn1/x509/you;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/ssp;->jpa:Lorg/bouncycastle/asn1/x509/you;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/ssp;->spa:Lorg/bouncycastle/asn1/x509/you;
 
     return-object p0
 .end method
@@ -322,7 +322,7 @@
 .method public getIssuerUniqueID()Lorg/bouncycastle/asn1/n;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/ssp;->lpa:Lorg/bouncycastle/asn1/n;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/ssp;->upa:Lorg/bouncycastle/asn1/n;
 
     return-object p0
 .end method
@@ -379,7 +379,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->jpa:Lorg/bouncycastle/asn1/x509/you;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->spa:Lorg/bouncycastle/asn1/x509/you;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
@@ -391,7 +391,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->kpa:Lorg/bouncycastle/asn1/x509/sis;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->tpa:Lorg/bouncycastle/asn1/x509/sis;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
@@ -399,7 +399,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->lpa:Lorg/bouncycastle/asn1/n;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/ssp;->upa:Lorg/bouncycastle/asn1/n;
 
     if-eqz v1, :cond_1
 

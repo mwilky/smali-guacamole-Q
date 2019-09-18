@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field protected final bza:I
+.field protected final ADa:Ljava/math/BigInteger;
 
-.field protected final rDa:Ljava/math/BigInteger;
+.field protected final BDa:Ljava/math/BigInteger;
 
-.field protected final sDa:Ljava/math/BigInteger;
+.field protected final CDa:Ljava/math/BigInteger;
 
-.field protected final tDa:Ljava/math/BigInteger;
+.field protected final DDa:Ljava/math/BigInteger;
 
-.field protected final uDa:Ljava/math/BigInteger;
+.field protected final EDa:Ljava/math/BigInteger;
 
-.field protected final vDa:Ljava/math/BigInteger;
+.field protected final FDa:Ljava/math/BigInteger;
 
-.field protected final wDa:Ljava/math/BigInteger;
+.field protected final GDa:Ljava/math/BigInteger;
 
-.field protected final xDa:Ljava/math/BigInteger;
+.field protected final HDa:Ljava/math/BigInteger;
 
-.field protected final yDa:Ljava/math/BigInteger;
+.field protected final kza:I
 
 
 # direct methods
@@ -37,35 +37,35 @@
 
     invoke-static {p4, v0}, Lyou/zta/sis/zta/you/tsu;->zta([Ljava/math/BigInteger;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lyou/zta/sis/zta/you/tsu;->rDa:Ljava/math/BigInteger;
+    iput-object p1, p0, Lyou/zta/sis/zta/you/tsu;->ADa:Ljava/math/BigInteger;
 
-    iput-object p2, p0, Lyou/zta/sis/zta/you/tsu;->sDa:Ljava/math/BigInteger;
+    iput-object p2, p0, Lyou/zta/sis/zta/you/tsu;->BDa:Ljava/math/BigInteger;
 
     const/4 p1, 0x0
 
     aget-object p2, p3, p1
 
-    iput-object p2, p0, Lyou/zta/sis/zta/you/tsu;->tDa:Ljava/math/BigInteger;
+    iput-object p2, p0, Lyou/zta/sis/zta/you/tsu;->CDa:Ljava/math/BigInteger;
 
     const/4 p2, 0x1
 
     aget-object p3, p3, p2
 
-    iput-object p3, p0, Lyou/zta/sis/zta/you/tsu;->uDa:Ljava/math/BigInteger;
+    iput-object p3, p0, Lyou/zta/sis/zta/you/tsu;->DDa:Ljava/math/BigInteger;
 
     aget-object p1, p4, p1
 
-    iput-object p1, p0, Lyou/zta/sis/zta/you/tsu;->vDa:Ljava/math/BigInteger;
+    iput-object p1, p0, Lyou/zta/sis/zta/you/tsu;->EDa:Ljava/math/BigInteger;
 
     aget-object p1, p4, p2
 
-    iput-object p1, p0, Lyou/zta/sis/zta/you/tsu;->wDa:Ljava/math/BigInteger;
+    iput-object p1, p0, Lyou/zta/sis/zta/you/tsu;->FDa:Ljava/math/BigInteger;
 
-    iput-object p5, p0, Lyou/zta/sis/zta/you/tsu;->xDa:Ljava/math/BigInteger;
+    iput-object p5, p0, Lyou/zta/sis/zta/you/tsu;->GDa:Ljava/math/BigInteger;
 
-    iput-object p6, p0, Lyou/zta/sis/zta/you/tsu;->yDa:Ljava/math/BigInteger;
+    iput-object p6, p0, Lyou/zta/sis/zta/you/tsu;->HDa:Ljava/math/BigInteger;
 
-    iput p7, p0, Lyou/zta/sis/zta/you/tsu;->bza:I
+    iput p7, p0, Lyou/zta/sis/zta/you/tsu;->kza:I
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 .method public Ik()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->rDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->ADa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -134,7 +134,7 @@
 .method public Jk()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/you/tsu;->bza:I
+    iget p0, p0, Lyou/zta/sis/zta/you/tsu;->kza:I
 
     return p0
 .end method
@@ -142,7 +142,7 @@
 .method public Kk()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->xDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->GDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -150,7 +150,7 @@
 .method public Lk()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->yDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->HDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -158,7 +158,7 @@
 .method public Mk()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->sDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->BDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -170,13 +170,13 @@
 
     new-array v0, v0, [Ljava/math/BigInteger;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/you/tsu;->tDa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/you/tsu;->CDa:Ljava/math/BigInteger;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->uDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->DDa:Ljava/math/BigInteger;
 
     const/4 v1, 0x1
 
@@ -188,7 +188,7 @@
 .method public Ok()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->tDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->CDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -196,7 +196,7 @@
 .method public Pk()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->uDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->DDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -208,13 +208,13 @@
 
     new-array v0, v0, [Ljava/math/BigInteger;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/you/tsu;->vDa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/you/tsu;->EDa:Ljava/math/BigInteger;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->wDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->FDa:Ljava/math/BigInteger;
 
     const/4 v1, 0x1
 
@@ -226,7 +226,7 @@
 .method public Rk()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->vDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->EDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -234,7 +234,7 @@
 .method public Sk()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->wDa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/you/tsu;->FDa:Ljava/math/BigInteger;
 
     return-object p0
 .end method

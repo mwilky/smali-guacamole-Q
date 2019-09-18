@@ -4,21 +4,21 @@
 
 
 # static fields
-.field public static final kna:I = 0x80
+.field public static final Ana:I = 0x1
 
-.field public static final lna:I = 0x40
+.field public static final tna:I = 0x80
 
-.field public static final mna:I = 0x20
+.field public static final una:I = 0x40
 
-.field public static final nna:I = 0x10
+.field public static final vna:I = 0x20
 
-.field public static final ona:I = 0x8
+.field public static final wna:I = 0x10
 
-.field public static final pna:I = 0x4
+.field public static final xna:I = 0x8
 
-.field public static final qna:I = 0x2
+.field public static final yna:I = 0x4
 
-.field public static final rna:I = 0x1
+.field public static final zna:I = 0x2
 
 
 # direct methods

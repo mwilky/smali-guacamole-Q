@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final efa:Ljava/lang/String; = "net.oneplus.wallpaperresources"
+.field private static final nfa:Ljava/lang/String; = "net.oneplus.wallpaperresources"
 
 
 # direct methods
@@ -42,7 +42,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->Pja:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->Yja:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     goto :goto_0
 
@@ -492,27 +492,27 @@
     goto :goto_0
 
     :pswitch_0
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Vja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->dka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :pswitch_1
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Uja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->cka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :pswitch_2
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Tja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->bka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :pswitch_3
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Sja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->aka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
     :cond_0
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Rja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->_ja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 
@@ -527,7 +527,7 @@
     goto :goto_0
 
     :cond_3
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Qja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Zja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     goto :goto_0
 

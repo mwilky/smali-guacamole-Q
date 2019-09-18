@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final Bma:Ljava/lang/Class;
+.field static final Kma:Ljava/lang/Class;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sput-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     return-void
 .end method
@@ -35,7 +35,7 @@
 .method static rj()Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
@@ -63,7 +63,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     const/4 v1, 0x2
 
@@ -156,7 +156,7 @@
 .method static you(Ljava/lang/Class;)Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     if-ne v0, p0, :cond_0
 
@@ -174,7 +174,7 @@
 .method static you(Ljava/security/spec/AlgorithmParameterSpec;)Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
@@ -204,7 +204,7 @@
     .end annotation
 
     :try_start_0
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     const-string v1, "getTLen"
 
@@ -216,7 +216,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lorg/bouncycastle/jcajce/you/tsu/cno;->Bma:Ljava/lang/Class;
+    sget-object v1, Lorg/bouncycastle/jcajce/you/tsu/cno;->Kma:Ljava/lang/Class;
 
     const-string v3, "getIV"
 

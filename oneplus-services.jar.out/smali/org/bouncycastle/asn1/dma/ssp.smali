@@ -4,13 +4,13 @@
 
 
 # instance fields
+.field Ioa:Lorg/bouncycastle/asn1/x509/c;
+
 .field attributes:Lorg/bouncycastle/asn1/ear;
 
 .field subject:Lorg/bouncycastle/asn1/bvj/tsu;
 
 .field version:Lorg/bouncycastle/asn1/ywr;
-
-.field zoa:Lorg/bouncycastle/asn1/x509/c;
 
 
 # direct methods
@@ -39,7 +39,7 @@
 
     iput-object p1, p0, Lorg/bouncycastle/asn1/dma/ssp;->subject:Lorg/bouncycastle/asn1/bvj/tsu;
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/dma/ssp;->zoa:Lorg/bouncycastle/asn1/x509/c;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/dma/ssp;->Ioa:Lorg/bouncycastle/asn1/x509/c;
 
     iput-object p3, p0, Lorg/bouncycastle/asn1/dma/ssp;->attributes:Lorg/bouncycastle/asn1/ear;
 
@@ -104,7 +104,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lorg/bouncycastle/asn1/dma/ssp;->zoa:Lorg/bouncycastle/asn1/x509/c;
+    iput-object v1, p0, Lorg/bouncycastle/asn1/dma/ssp;->Ioa:Lorg/bouncycastle/asn1/x509/c;
 
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->size()I
 
@@ -139,7 +139,7 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/ssp;->zoa:Lorg/bouncycastle/asn1/x509/c;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/ssp;->Ioa:Lorg/bouncycastle/asn1/x509/c;
 
     if-eqz p0, :cond_1
 
@@ -273,7 +273,7 @@
 .method public Zg()Lorg/bouncycastle/asn1/x509/c;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/ssp;->zoa:Lorg/bouncycastle/asn1/x509/c;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/ssp;->Ioa:Lorg/bouncycastle/asn1/x509/c;
 
     return-object p0
 .end method
@@ -317,7 +317,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/ssp;->zoa:Lorg/bouncycastle/asn1/x509/c;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/ssp;->Ioa:Lorg/bouncycastle/asn1/x509/c;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 

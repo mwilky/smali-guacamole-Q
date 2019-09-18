@@ -302,7 +302,7 @@
     :goto_0
     iget-object v1, p0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v5, 0x0
 
@@ -382,7 +382,7 @@
 
     if-ne v0, v5, :cond_3
 
-    iget-object v0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object v0, v0, v4
 
@@ -497,7 +497,7 @@
 
     if-ne v0, v6, :cond_4
 
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object p0, p0, v4
 
@@ -572,7 +572,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lyou/zta/sis/zta/sis;->Lma:Ljava/math/BigInteger;
+    sget-object v1, Lyou/zta/sis/zta/sis;->Uma:Ljava/math/BigInteger;
 
     invoke-virtual {v1, v0}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
@@ -619,7 +619,7 @@
     return v2
 
     :cond_1
-    sget-object v1, Lyou/zta/sis/zta/sis;->fNa:Ljava/math/BigInteger;
+    sget-object v1, Lyou/zta/sis/zta/sis;->oNa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, v0}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
@@ -770,7 +770,7 @@
     :goto_0
     iget-object v1, p0, Lyou/zta/sis/zta/wtn;->y:Lyou/zta/sis/zta/cno;
 
-    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object v4, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     const/4 v5, 0x0
 

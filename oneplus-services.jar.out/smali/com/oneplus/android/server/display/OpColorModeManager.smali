@@ -16,7 +16,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "OpColorModeManager"
 
-.field private static final faa:I
+.field private static final laa:I
 
 
 # instance fields

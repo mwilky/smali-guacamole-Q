@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected ika:Ljava/security/SecureRandom;
+.field protected rka:Ljava/security/SecureRandom;
 
 .field protected strength:I
 
@@ -27,7 +27,7 @@
 
     new-array v0, v0, [B
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/cno;->ika:Ljava/security/SecureRandom;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/cno;->rka:Ljava/security/SecureRandom;
 
     invoke-virtual {p0, v0}, Ljava/security/SecureRandom;->nextBytes([B)V
 
@@ -41,7 +41,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/cno;->ika:Ljava/security/SecureRandom;
+    iput-object v0, p0, Lorg/bouncycastle/crypto/cno;->rka:Ljava/security/SecureRandom;
 
     invoke-virtual {p1}, Lorg/bouncycastle/crypto/bvj;->getStrength()I
 

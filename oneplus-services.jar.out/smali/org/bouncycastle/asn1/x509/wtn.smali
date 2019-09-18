@@ -8,7 +8,9 @@
 
 .field public static final AFFILIATION_CHANGED:I = 0x3
 
-.field public static final Ana:I = 0xa
+.field public static final Apa:I = 0x8
+
+.field private static final Bpa:[Ljava/lang/String;
 
 .field public static final CA_COMPROMISE:I = 0x2
 
@@ -16,7 +18,23 @@
 
 .field public static final CESSATION_OF_OPERATION:I = 0x5
 
-.field public static final Jja:I = 0x0
+.field public static final Cna:I = 0x1
+
+.field public static final Dna:I = 0x2
+
+.field public static final Ena:I = 0x3
+
+.field private static final Fka:Ljava/util/Hashtable;
+
+.field public static final Fna:I = 0x4
+
+.field public static final Gna:I = 0x5
+
+.field public static final Hna:I = 0x6
+
+.field public static final Ina:I = 0x9
+
+.field public static final Jna:I = 0xa
 
 .field public static final KEY_COMPROMISE:I = 0x1
 
@@ -26,27 +44,9 @@
 
 .field public static final SUPERSEDED:I = 0x4
 
-.field public static final UNSPECIFIED:I = 0x0
+.field public static final Sja:I
 
-.field public static final rpa:I = 0x8
-
-.field private static final spa:[Ljava/lang/String;
-
-.field public static final tna:I = 0x1
-
-.field public static final una:I = 0x2
-
-.field public static final vna:I = 0x3
-
-.field private static final wka:Ljava/util/Hashtable;
-
-.field public static final wna:I = 0x4
-
-.field public static final xna:I = 0x5
-
-.field public static final yna:I = 0x6
-
-.field public static final zna:I = 0x9
+.field public static final UNSPECIFIED:I
 
 
 # instance fields
@@ -83,13 +83,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->spa:[Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->Bpa:[Ljava/lang/String;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->wka:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->Fka:Ljava/util/Hashtable;
 
     return-void
 .end method
@@ -153,7 +153,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->wka:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->Fka:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
@@ -161,7 +161,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->wka:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->Fka:Ljava/util/Hashtable;
 
     new-instance v2, Lorg/bouncycastle/asn1/x509/wtn;
 
@@ -170,7 +170,7 @@
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    sget-object p0, Lorg/bouncycastle/asn1/x509/wtn;->wka:Ljava/util/Hashtable;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/wtn;->Fka:Ljava/util/Hashtable;
 
     invoke-virtual {p0, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -223,7 +223,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lorg/bouncycastle/asn1/x509/wtn;->spa:[Ljava/lang/String;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/wtn;->Bpa:[Ljava/lang/String;
 
     aget-object p0, v0, p0
 

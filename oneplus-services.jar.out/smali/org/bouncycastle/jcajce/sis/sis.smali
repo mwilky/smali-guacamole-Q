@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final cna:Lorg/bouncycastle/asn1/x509/zta;
+.field private static final lna:Lorg/bouncycastle/asn1/x509/zta;
 
 
 # instance fields
-.field private bna:Lorg/bouncycastle/asn1/x509/zta;
+.field private kna:Lorg/bouncycastle/asn1/x509/zta;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ssp;)V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/sis/sis;->cna:Lorg/bouncycastle/asn1/x509/zta;
+    sput-object v0, Lorg/bouncycastle/jcajce/sis/sis;->lna:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
@@ -33,7 +33,7 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Ljavax/crypto/spec/PBEKeySpec;-><init>([C[BII)V
 
-    iput-object p5, p0, Lorg/bouncycastle/jcajce/sis/sis;->bna:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p5, p0, Lorg/bouncycastle/jcajce/sis/sis;->kna:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
@@ -43,7 +43,7 @@
 .method public hg()Lorg/bouncycastle/asn1/x509/zta;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/sis;->bna:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/sis;->kna:Lorg/bouncycastle/asn1/x509/zta;
 
     return-object p0
 .end method
@@ -51,9 +51,9 @@
 .method public ig()Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/sis/sis;->cna:Lorg/bouncycastle/asn1/x509/zta;
+    sget-object v0, Lorg/bouncycastle/jcajce/sis/sis;->lna:Lorg/bouncycastle/asn1/x509/zta;
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/sis;->bna:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/sis;->kna:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/oif;->equals(Ljava/lang/Object;)Z
 

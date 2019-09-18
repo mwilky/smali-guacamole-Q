@@ -68,7 +68,7 @@
     const/4 p0, 0x0
 
     :goto_0
-    invoke-static {v0, v1, v2, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$300(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Z)V
+    invoke-static {v0, v1, v2, p0}, Lcom/android/server/wm/OPAppSwitchManagerService;->access$600(Lcom/android/server/wm/OPAppSwitchManagerService;Lcom/android/server/wm/ActivityRecord;Lcom/android/server/wm/ActivityRecord;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

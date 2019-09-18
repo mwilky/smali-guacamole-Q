@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private Poa:Ljava/math/BigInteger;
+.field private Yoa:Ljava/math/BigInteger;
 
-.field private Qoa:Ljava/math/BigInteger;
+.field private Zoa:Ljava/math/BigInteger;
 
-.field private Roa:Ljava/math/BigInteger;
+.field private _oa:Ljava/math/BigInteger;
 
-.field private Soa:Ljava/math/BigInteger;
+.field private apa:Ljava/math/BigInteger;
 
-.field private Toa:Ljava/math/BigInteger;
+.field private bpa:Ljava/math/BigInteger;
 
-.field private Uoa:Lorg/bouncycastle/asn1/obl;
+.field private cpa:Lorg/bouncycastle/asn1/obl;
 
 .field private modulus:Ljava/math/BigInteger;
 
@@ -33,7 +33,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Uoa:Lorg/bouncycastle/asn1/obl;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->cpa:Lorg/bouncycastle/asn1/obl;
 
     const-wide/16 v0, 0x0
 
@@ -49,15 +49,15 @@
 
     iput-object p3, p0, Lorg/bouncycastle/asn1/dma/obl;->privateExponent:Ljava/math/BigInteger;
 
-    iput-object p4, p0, Lorg/bouncycastle/asn1/dma/obl;->Poa:Ljava/math/BigInteger;
+    iput-object p4, p0, Lorg/bouncycastle/asn1/dma/obl;->Yoa:Ljava/math/BigInteger;
 
-    iput-object p5, p0, Lorg/bouncycastle/asn1/dma/obl;->Qoa:Ljava/math/BigInteger;
+    iput-object p5, p0, Lorg/bouncycastle/asn1/dma/obl;->Zoa:Ljava/math/BigInteger;
 
-    iput-object p6, p0, Lorg/bouncycastle/asn1/dma/obl;->Roa:Ljava/math/BigInteger;
+    iput-object p6, p0, Lorg/bouncycastle/asn1/dma/obl;->_oa:Ljava/math/BigInteger;
 
-    iput-object p7, p0, Lorg/bouncycastle/asn1/dma/obl;->Soa:Ljava/math/BigInteger;
+    iput-object p7, p0, Lorg/bouncycastle/asn1/dma/obl;->apa:Ljava/math/BigInteger;
 
-    iput-object p8, p0, Lorg/bouncycastle/asn1/dma/obl;->Toa:Ljava/math/BigInteger;
+    iput-object p8, p0, Lorg/bouncycastle/asn1/dma/obl;->bpa:Ljava/math/BigInteger;
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Uoa:Lorg/bouncycastle/asn1/obl;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->cpa:Lorg/bouncycastle/asn1/obl;
 
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Poa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Yoa:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -172,7 +172,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Qoa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Zoa:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -184,7 +184,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Roa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->_oa:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -196,7 +196,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Soa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->apa:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -208,7 +208,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->Toa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/obl;->bpa:Ljava/math/BigInteger;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->hasMoreElements()Z
 
@@ -222,7 +222,7 @@
 
     check-cast p1, Lorg/bouncycastle/asn1/obl;
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/dma/obl;->Uoa:Lorg/bouncycastle/asn1/obl;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/dma/obl;->cpa:Lorg/bouncycastle/asn1/obl;
 
     :cond_2
     return-void
@@ -309,7 +309,7 @@
 .method public kh()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Toa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->bpa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -317,7 +317,7 @@
 .method public lh()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Roa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->_oa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -325,7 +325,7 @@
 .method public mh()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Soa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->apa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -333,7 +333,7 @@
 .method public nh()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Poa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Yoa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -341,7 +341,7 @@
 .method public oh()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Qoa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Zoa:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -441,7 +441,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->Uoa:Lorg/bouncycastle/asn1/obl;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/obl;->cpa:Lorg/bouncycastle/asn1/obl;
 
     if-eqz p0, :cond_0
 

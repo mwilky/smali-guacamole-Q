@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/android/server/scene/cgv;->Sa(Z)V
+    value = Lcom/oneplus/android/server/scene/cgv;->Ta(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

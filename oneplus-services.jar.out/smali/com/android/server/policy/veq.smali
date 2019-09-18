@@ -7,39 +7,39 @@
 
 
 # static fields
-.field private static final ND:J = 0x2bcL
+.field private static final OD:J = 0x2bcL
 
-.field private static final OD:J = 0x1f4L
+.field private static final PD:J = 0x1f4L
 
-.field private static final PD:J = 0x7d0L
+.field private static final QD:J = 0x7d0L
 
 .field private static final TAG:Ljava/lang/String; = "OpScreenshotImprovement"
 
 
 # instance fields
-.field private BD:Lcom/android/server/policy/OpPhoneWindowManager;
-
-.field private CD:Z
+.field private CD:Lcom/android/server/policy/OpPhoneWindowManager;
 
 .field private DD:Z
 
-.field private ED:J
+.field private ED:Z
 
 .field private FD:J
 
 .field private final FLAG_INTERACTIVE:I
 
-.field private GD:Z
+.field private GD:J
 
 .field private HD:Z
 
-.field private JD:J
+.field private JD:Z
 
-.field private KD:Z
+.field private KD:J
 
-.field private LD:J
+.field private LD:Z
 
 .field private MD:J
+
+.field private ND:J
 
 .field private mContext:Landroid/content/Context;
 
@@ -56,7 +56,7 @@
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/server/policy/veq;->MD:J
+    iput-wide v0, p0, Lcom/android/server/policy/veq;->ND:J
 
     iput-object p1, p0, Lcom/android/server/policy/veq;->mContext:Landroid/content/Context;
 
@@ -74,7 +74,7 @@
 
     check-cast v0, Lcom/android/server/policy/OpPhoneWindowManager;
 
-    iput-object v0, p0, Lcom/android/server/policy/veq;->BD:Lcom/android/server/policy/OpPhoneWindowManager;
+    iput-object v0, p0, Lcom/android/server/policy/veq;->CD:Lcom/android/server/policy/OpPhoneWindowManager;
 
     sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -95,15 +95,15 @@
 
     if-eqz p1, :cond_0
 
-    iget-boolean p1, p0, Lcom/android/server/policy/veq;->CD:Z
+    iget-boolean p1, p0, Lcom/android/server/policy/veq;->DD:Z
 
     if-eqz p1, :cond_0
 
-    iget-boolean p1, p0, Lcom/android/server/policy/veq;->HD:Z
+    iget-boolean p1, p0, Lcom/android/server/policy/veq;->JD:Z
 
     if-eqz p1, :cond_0
 
-    iget-boolean p1, p0, Lcom/android/server/policy/veq;->KD:Z
+    iget-boolean p1, p0, Lcom/android/server/policy/veq;->LD:Z
 
     if-nez p1, :cond_0
 
@@ -111,7 +111,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/android/server/policy/veq;->ED:J
+    iget-wide v2, p0, Lcom/android/server/policy/veq;->FD:J
 
     const-wide/16 v4, 0x2bc
 
@@ -121,7 +121,7 @@
 
     if-gtz p1, :cond_0
 
-    iget-wide v2, p0, Lcom/android/server/policy/veq;->JD:J
+    iget-wide v2, p0, Lcom/android/server/policy/veq;->KD:J
 
     add-long/2addr v2, v4
 
@@ -131,7 +131,7 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lcom/android/server/policy/veq;->GD:Z
+    iput-boolean p1, p0, Lcom/android/server/policy/veq;->HD:Z
 
     :cond_0
     return-void
@@ -173,7 +173,7 @@
     const/4 v4, 0x0
 
     :goto_0
-    iget-boolean v6, v0, Lcom/android/server/policy/veq;->CD:Z
+    iget-boolean v6, v0, Lcom/android/server/policy/veq;->DD:Z
 
     const-wide/16 v7, 0x64
 
@@ -185,15 +185,15 @@
 
     if-eqz v6, :cond_3
 
-    iget-boolean v6, v0, Lcom/android/server/policy/veq;->KD:Z
+    iget-boolean v6, v0, Lcom/android/server/policy/veq;->LD:Z
 
     if-nez v6, :cond_3
 
-    iget-wide v5, v0, Lcom/android/server/policy/veq;->ED:J
+    iget-wide v5, v0, Lcom/android/server/policy/veq;->FD:J
 
     move v15, v3
 
-    iget-wide v2, v0, Lcom/android/server/policy/veq;->MD:J
+    iget-wide v2, v0, Lcom/android/server/policy/veq;->ND:J
 
     sub-long/2addr v5, v2
 
@@ -212,7 +212,7 @@
 
     move-result-wide v2
 
-    iget-wide v5, v0, Lcom/android/server/policy/veq;->ED:J
+    iget-wide v5, v0, Lcom/android/server/policy/veq;->FD:J
 
     add-long/2addr v5, v9
 
@@ -236,17 +236,17 @@
 
     if-ne v3, v2, :cond_6
 
-    iget-boolean v5, v0, Lcom/android/server/policy/veq;->GD:Z
+    iget-boolean v5, v0, Lcom/android/server/policy/veq;->HD:Z
 
     if-eqz v5, :cond_6
 
     if-nez v4, :cond_5
 
-    iput-wide v13, v0, Lcom/android/server/policy/veq;->MD:J
+    iput-wide v13, v0, Lcom/android/server/policy/veq;->ND:J
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/android/server/policy/veq;->GD:Z
+    iput-boolean v1, v0, Lcom/android/server/policy/veq;->HD:Z
 
     :cond_5
     new-instance v0, Ljava/lang/Long;
@@ -258,19 +258,19 @@
     return-object v0
 
     :cond_6
-    iget-boolean v5, v0, Lcom/android/server/policy/veq;->DD:Z
+    iget-boolean v5, v0, Lcom/android/server/policy/veq;->ED:Z
 
     if-eqz v5, :cond_8
 
-    iget-boolean v5, v0, Lcom/android/server/policy/veq;->KD:Z
+    iget-boolean v5, v0, Lcom/android/server/policy/veq;->LD:Z
 
     if-nez v5, :cond_8
 
-    iget-wide v5, v0, Lcom/android/server/policy/veq;->FD:J
+    iget-wide v5, v0, Lcom/android/server/policy/veq;->GD:J
 
     move/from16 v16, v3
 
-    iget-wide v2, v0, Lcom/android/server/policy/veq;->MD:J
+    iget-wide v2, v0, Lcom/android/server/policy/veq;->ND:J
 
     sub-long/2addr v5, v2
 
@@ -289,7 +289,7 @@
 
     move-result-wide v2
 
-    iget-wide v5, v0, Lcom/android/server/policy/veq;->FD:J
+    iget-wide v5, v0, Lcom/android/server/policy/veq;->GD:J
 
     add-long/2addr v5, v9
 
@@ -317,7 +317,7 @@
 
     if-ne v1, v2, :cond_a
 
-    iget-boolean v1, v0, Lcom/android/server/policy/veq;->GD:Z
+    iget-boolean v1, v0, Lcom/android/server/policy/veq;->HD:Z
 
     if-eqz v1, :cond_a
 
@@ -325,7 +325,7 @@
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/android/server/policy/veq;->GD:Z
+    iput-boolean v1, v0, Lcom/android/server/policy/veq;->HD:Z
 
     :cond_a
     const/4 v0, 0x0
@@ -380,7 +380,7 @@
 
     if-eqz p2, :cond_5
 
-    iget-boolean p2, p0, Lcom/android/server/policy/veq;->CD:Z
+    iget-boolean p2, p0, Lcom/android/server/policy/veq;->DD:Z
 
     if-nez p2, :cond_5
 
@@ -392,17 +392,17 @@
 
     if-nez p2, :cond_5
 
-    iput-boolean v0, p0, Lcom/android/server/policy/veq;->CD:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/veq;->DD:Z
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/android/server/policy/veq;->ED:J
+    iput-wide p1, p0, Lcom/android/server/policy/veq;->FD:J
 
-    iput-boolean v1, p0, Lcom/android/server/policy/veq;->GD:Z
+    iput-boolean v1, p0, Lcom/android/server/policy/veq;->HD:Z
 
-    iget-boolean p1, p0, Lcom/android/server/policy/veq;->GD:Z
+    iget-boolean p1, p0, Lcom/android/server/policy/veq;->HD:Z
 
     if-eqz p1, :cond_5
 
@@ -411,14 +411,14 @@
     goto :goto_2
 
     :cond_2
-    iput-boolean v1, p0, Lcom/android/server/policy/veq;->CD:Z
+    iput-boolean v1, p0, Lcom/android/server/policy/veq;->DD:Z
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getEventTime()J
 
     move-result-wide p1
 
     :goto_2
-    iput-wide p1, p0, Lcom/android/server/policy/veq;->MD:J
+    iput-wide p1, p0, Lcom/android/server/policy/veq;->ND:J
 
     goto :goto_3
 
@@ -431,7 +431,7 @@
 
     if-eqz p2, :cond_5
 
-    iget-boolean p2, p0, Lcom/android/server/policy/veq;->HD:Z
+    iget-boolean p2, p0, Lcom/android/server/policy/veq;->JD:Z
 
     if-nez p2, :cond_5
 
@@ -443,28 +443,28 @@
 
     if-nez p2, :cond_5
 
-    iput-boolean v0, p0, Lcom/android/server/policy/veq;->HD:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/veq;->JD:Z
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
 
     move-result-wide v1
 
-    iput-wide v1, p0, Lcom/android/server/policy/veq;->JD:J
+    iput-wide v1, p0, Lcom/android/server/policy/veq;->KD:J
 
-    iput-boolean v0, p0, Lcom/android/server/policy/veq;->DD:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/veq;->ED:Z
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/android/server/policy/veq;->FD:J
+    iput-wide p1, p0, Lcom/android/server/policy/veq;->GD:J
 
     goto :goto_3
 
     :cond_4
-    iput-boolean v1, p0, Lcom/android/server/policy/veq;->HD:Z
+    iput-boolean v1, p0, Lcom/android/server/policy/veq;->JD:Z
 
-    iput-boolean v1, p0, Lcom/android/server/policy/veq;->DD:Z
+    iput-boolean v1, p0, Lcom/android/server/policy/veq;->ED:Z
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
 
@@ -482,7 +482,7 @@
 
     if-eqz p2, :cond_0
 
-    iget-boolean p2, p0, Lcom/android/server/policy/veq;->KD:Z
+    iget-boolean p2, p0, Lcom/android/server/policy/veq;->LD:Z
 
     if-nez p2, :cond_0
 
@@ -496,13 +496,13 @@
 
     const/4 p2, 0x1
 
-    iput-boolean p2, p0, Lcom/android/server/policy/veq;->KD:Z
+    iput-boolean p2, p0, Lcom/android/server/policy/veq;->LD:Z
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/android/server/policy/veq;->LD:J
+    iput-wide p1, p0, Lcom/android/server/policy/veq;->MD:J
 
     :cond_0
     return-void
@@ -513,7 +513,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/policy/veq;->KD:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/veq;->LD:Z
 
     return-void
 .end method
@@ -521,21 +521,21 @@
 .method public interceptScreenshotChord()V
     .locals 7
 
-    iget-boolean v0, p0, Lcom/android/server/policy/veq;->KD:Z
+    iget-boolean v0, p0, Lcom/android/server/policy/veq;->LD:Z
 
     if-eqz v0, :cond_3
 
     const/4 v0, 0x0
 
-    iget-boolean v1, p0, Lcom/android/server/policy/veq;->CD:Z
+    iget-boolean v1, p0, Lcom/android/server/policy/veq;->DD:Z
 
     const/4 v2, 0x1
 
     if-eqz v1, :cond_1
 
-    iget-wide v3, p0, Lcom/android/server/policy/veq;->ED:J
+    iget-wide v3, p0, Lcom/android/server/policy/veq;->FD:J
 
-    iget-wide v5, p0, Lcom/android/server/policy/veq;->LD:J
+    iget-wide v5, p0, Lcom/android/server/policy/veq;->MD:J
 
     cmp-long v1, v3, v5
 
@@ -555,9 +555,9 @@
     goto :goto_1
 
     :cond_0
-    iget-wide v3, p0, Lcom/android/server/policy/veq;->LD:J
+    iget-wide v3, p0, Lcom/android/server/policy/veq;->MD:J
 
-    iget-wide v5, p0, Lcom/android/server/policy/veq;->ED:J
+    iget-wide v5, p0, Lcom/android/server/policy/veq;->FD:J
 
     cmp-long v1, v3, v5
 
@@ -577,14 +577,14 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/android/server/policy/veq;->CD:Z
+    iget-boolean v0, p0, Lcom/android/server/policy/veq;->DD:Z
 
     if-eqz v0, :cond_2
 
-    iput-boolean v2, p0, Lcom/android/server/policy/veq;->GD:Z
+    iput-boolean v2, p0, Lcom/android/server/policy/veq;->HD:Z
 
     :cond_2
-    iget-object p0, p0, Lcom/android/server/policy/veq;->BD:Lcom/android/server/policy/OpPhoneWindowManager;
+    iget-object p0, p0, Lcom/android/server/policy/veq;->CD:Lcom/android/server/policy/OpPhoneWindowManager;
 
     invoke-virtual {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->postScreenshotRunnable()V
 

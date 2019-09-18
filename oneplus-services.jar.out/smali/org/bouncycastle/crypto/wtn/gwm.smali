@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private dva:Lorg/bouncycastle/crypto/wtn/ibl;
+.field private mva:Lorg/bouncycastle/crypto/wtn/ibl;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {p0, p2, v0}, Lorg/bouncycastle/crypto/bvj;-><init>(Ljava/security/SecureRandom;I)V
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/gwm;->dva:Lorg/bouncycastle/crypto/wtn/ibl;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/gwm;->mva:Lorg/bouncycastle/crypto/wtn/ibl;
 
     return-void
 .end method
@@ -31,7 +31,7 @@
 .method public dg()Lorg/bouncycastle/crypto/wtn/ibl;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/gwm;->dva:Lorg/bouncycastle/crypto/wtn/ibl;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/gwm;->mva:Lorg/bouncycastle/crypto/wtn/ibl;
 
     return-object p0
 .end method

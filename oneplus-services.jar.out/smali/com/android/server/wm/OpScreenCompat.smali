@@ -900,7 +900,7 @@
 
     move-result v10
 
-    if-ge v9, v10, :cond_f
+    if-ge v9, v10, :cond_e
 
     invoke-virtual {v1, v9}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -937,7 +937,7 @@
     const/4 v12, 0x0
 
     :goto_1
-    if-ge v12, v11, :cond_e
+    if-ge v12, v11, :cond_d
 
     invoke-virtual {v10, v12}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1004,7 +1004,7 @@
     const/4 v11, 0x0
 
     :goto_2
-    if-ge v11, v10, :cond_e
+    if-ge v11, v10, :cond_d
 
     invoke-virtual {v8, v11}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1071,7 +1071,7 @@
     const/4 v11, 0x0
 
     :goto_3
-    if-ge v11, v10, :cond_e
+    if-ge v11, v10, :cond_d
 
     invoke-virtual {v8, v11}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1142,7 +1142,7 @@
     const/4 v11, 0x0
 
     :goto_4
-    if-ge v11, v10, :cond_e
+    if-ge v11, v10, :cond_d
 
     invoke-virtual {v8, v11}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1227,7 +1227,7 @@
     const/4 v11, 0x0
 
     :goto_6
-    if-ge v11, v10, :cond_e
+    if-ge v11, v10, :cond_d
 
     invoke-virtual {v8, v11}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1290,7 +1290,7 @@
     const/4 v11, 0x0
 
     :goto_7
-    if-ge v11, v10, :cond_e
+    if-ge v11, v10, :cond_d
 
     invoke-virtual {v8, v11}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
@@ -1326,32 +1326,11 @@
     goto :goto_7
 
     :cond_d
-    sget-boolean v8, Lcom/android/server/wm/OpQuickReplyInjector;->IS_QUICK_REPLY_ENABLED:Z
-
-    if-eqz v8, :cond_e
-
-    const-string v8, "op_quick_reply_ime_package_config"
-
-    const-string v11, "name"
-
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v8, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_e
-
-    invoke-static {v10}, Lcom/android/server/wm/OpQuickReplyInjector;->setIMEPackageList(Lorg/json/JSONObject;)V
-
-    :cond_e
     add-int/lit8 v9, v9, 0x1
 
     goto/16 :goto_0
 
-    :cond_f
+    :cond_e
     sget-object v1, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatLock:Ljava/lang/Object;
 
     monitor-enter v1
@@ -1364,52 +1343,52 @@
 
     move-result v8
 
-    if-lez v8, :cond_10
+    if-lez v8, :cond_f
 
     iput-object v2, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatDefaultEnabledList:Ljava/util/ArrayList;
 
-    :cond_10
+    :cond_f
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_10
+
+    iput-object v3, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatDefaultFullscreenList:Ljava/util/ArrayList;
+
+    :cond_10
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     if-lez v2, :cond_11
 
-    iput-object v3, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatDefaultFullscreenList:Ljava/util/ArrayList;
+    iput-object v4, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatThirdPartyAppList:Ljava/util/ArrayList;
 
     :cond_11
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     if-lez v2, :cond_12
 
-    iput-object v4, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatThirdPartyAppList:Ljava/util/ArrayList;
+    iput-object v5, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatIgnoreCutoutList:Ljava/util/ArrayList;
 
     :cond_12
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
     if-lez v2, :cond_13
 
-    iput-object v5, v0, Lcom/android/server/wm/OpScreenCompat;->mScreenCompatIgnoreCutoutList:Ljava/util/ArrayList;
-
-    :cond_13
-    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_14
-
     iput-object v6, v0, Lcom/android/server/wm/OpScreenCompat;->mDisplayCompat2kList:Ljava/util/ArrayList;
 
-    :cond_14
+    :cond_13
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    if-lez v2, :cond_16
+    if-lez v2, :cond_15
 
     iget-object v2, v0, Lcom/android/server/wm/OpScreenCompat;->mDisplayCompatFhdList:Ljava/util/ArrayList;
 
@@ -1419,7 +1398,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-nez v2, :cond_15
+    if-nez v2, :cond_14
 
     :try_start_2
     const-string v2, "OpScreenCompat"
@@ -1445,11 +1424,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_15
+    :cond_14
     :goto_8
     iput-object v7, v0, Lcom/android/server/wm/OpScreenCompat;->mDisplayCompatFhdList:Ljava/util/ArrayList;
 
-    :cond_16
+    :cond_15
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1642,7 +1621,7 @@
     :goto_2
     iget-object v3, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/les;
 
-    iget-boolean v3, v3, Lcom/android/server/wm/les;->FT:Z
+    iget-boolean v3, v3, Lcom/android/server/wm/les;->KT:Z
 
     if-eq v3, v1, :cond_5
 
@@ -2165,7 +2144,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, v0, Lcom/android/server/wm/les;->FT:Z
+    iget-boolean v0, v0, Lcom/android/server/wm/les;->KT:Z
 
     if-eqz v0, :cond_2
 
@@ -2203,7 +2182,7 @@
     :goto_0
     iget-object p0, p0, Lcom/android/server/wm/OpScreenCompat;->mOpScreenDecor:Lcom/android/server/wm/les;
 
-    iget p0, p0, Lcom/android/server/wm/les;->GT:I
+    iget p0, p0, Lcom/android/server/wm/les;->LT:I
 
     monitor-exit v0
 

@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/lqr;->this$0:Lcom/android/server/wm/veq;
 
-    iget-object v0, v0, Lcom/android/server/wm/veq;->HS:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/server/wm/veq;->IS:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
@@ -51,13 +51,13 @@
 
     iget-object p0, p0, Lcom/android/server/wm/lqr;->this$0:Lcom/android/server/wm/veq;
 
-    iget-object p0, p0, Lcom/android/server/wm/veq;->HS:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/server/wm/veq;->IS:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p0
 
-    sput p0, Lcom/android/server/wm/veq;->bT:I
+    sput p0, Lcom/android/server/wm/veq;->eT:I
 
     sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v0, Lcom/android/server/wm/veq;->bT:I
+    sget v0, Lcom/android/server/wm/veq;->eT:I
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

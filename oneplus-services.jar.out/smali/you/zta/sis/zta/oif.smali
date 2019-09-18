@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final JBa:Ljava/lang/String; = "bc_fixed_point"
+.field public static final SBa:Ljava/lang/String; = "bc_fixed_point"
 
 
 # direct methods

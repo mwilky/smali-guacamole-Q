@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private final Xma:Ljava/math/BigInteger;
+.field private final fna:Ljava/math/BigInteger;
 
-.field private final Yma:I
+.field private final gna:I
 
-.field private Zma:Lorg/bouncycastle/crypto/wtn/igw;
+.field private hna:Lorg/bouncycastle/crypto/wtn/igw;
 
 .field private final q:Ljava/math/BigInteger;
 
@@ -83,9 +83,9 @@
 
     iput-object p2, p0, Lorg/bouncycastle/jcajce/sis/you;->q:Ljava/math/BigInteger;
 
-    iput-object p4, p0, Lorg/bouncycastle/jcajce/sis/you;->Xma:Ljava/math/BigInteger;
+    iput-object p4, p0, Lorg/bouncycastle/jcajce/sis/you;->fna:Ljava/math/BigInteger;
 
-    iput p5, p0, Lorg/bouncycastle/jcajce/sis/you;->Yma:I
+    iput p5, p0, Lorg/bouncycastle/jcajce/sis/you;->gna:I
 
     return-void
 .end method
@@ -125,7 +125,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/you;->Zma:Lorg/bouncycastle/crypto/wtn/igw;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/you;->hna:Lorg/bouncycastle/crypto/wtn/igw;
 
     return-void
 .end method
@@ -147,15 +147,15 @@
 
     iget-object v3, p0, Lorg/bouncycastle/jcajce/sis/you;->q:Ljava/math/BigInteger;
 
-    iget v4, p0, Lorg/bouncycastle/jcajce/sis/you;->Yma:I
+    iget v4, p0, Lorg/bouncycastle/jcajce/sis/you;->gna:I
 
     invoke-virtual {p0}, Ljavax/crypto/spec/DHParameterSpec;->getL()I
 
     move-result v5
 
-    iget-object v6, p0, Lorg/bouncycastle/jcajce/sis/you;->Xma:Ljava/math/BigInteger;
+    iget-object v6, p0, Lorg/bouncycastle/jcajce/sis/you;->fna:Ljava/math/BigInteger;
 
-    iget-object v7, p0, Lorg/bouncycastle/jcajce/sis/you;->Zma:Lorg/bouncycastle/crypto/wtn/igw;
+    iget-object v7, p0, Lorg/bouncycastle/jcajce/sis/you;->hna:Lorg/bouncycastle/crypto/wtn/igw;
 
     move-object v0, v8
 
@@ -167,7 +167,7 @@
 .method public eg()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/you;->Xma:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/you;->fna:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -175,7 +175,7 @@
 .method public getM()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/jcajce/sis/you;->Yma:I
+    iget p0, p0, Lorg/bouncycastle/jcajce/sis/you;->gna:I
 
     return p0
 .end method

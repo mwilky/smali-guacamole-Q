@@ -15,15 +15,15 @@
 
 
 # static fields
-.field private static final Yja:I = 0x0
+.field private static final gka:I = 0x0
 
-.field private static final Zja:I = 0x1
+.field private static final hka:I = 0x1
 
 
 # instance fields
-.field private final Wja:I
+.field private final eka:I
 
-.field private Xja:Z
+.field private fka:Z
 
 .field final synthetic this$0:Lcom/android/server/OpPowerControllerService;
 
@@ -47,9 +47,9 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/server/irq;->Xja:Z
+    iput-boolean p1, p0, Lcom/android/server/irq;->fka:Z
 
-    iput p2, p0, Lcom/android/server/irq;->Wja:I
+    iput p2, p0, Lcom/android/server/irq;->eka:I
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 .method public If()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/irq;->Xja:Z
+    iget-boolean p0, p0, Lcom/android/server/irq;->fka:Z
 
     return p0
 .end method
@@ -67,7 +67,7 @@
 .method public run()V
     .locals 4
 
-    iget v0, p0, Lcom/android/server/irq;->Wja:I
+    iget v0, p0, Lcom/android/server/irq;->eka:I
 
     if-nez v0, :cond_0
 
@@ -82,7 +82,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/irq;->Xja:Z
+    iput-boolean v0, p0, Lcom/android/server/irq;->fka:Z
 
     goto :goto_1
 
@@ -101,7 +101,7 @@
 
     :cond_1
     :goto_1
-    iget-boolean v0, p0, Lcom/android/server/irq;->Xja:Z
+    iget-boolean v0, p0, Lcom/android/server/irq;->fka:Z
 
     if-eqz v0, :cond_2
 

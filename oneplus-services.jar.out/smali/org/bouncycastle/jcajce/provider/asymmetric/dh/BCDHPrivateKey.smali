@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private transient aAa:Lorg/bouncycastle/crypto/wtn/kth;
-
 .field private transient attrCarrier:Lorg/bouncycastle/jcajce/provider/asymmetric/util/wtn;
 
 .field private transient dhSpec:Ljavax/crypto/spec/DHParameterSpec;
 
 .field private transient info:Lorg/bouncycastle/asn1/dma/vdb;
+
+.field private transient jAa:Lorg/bouncycastle/crypto/wtn/kth;
 
 .field private x:Ljava/math/BigInteger;
 
@@ -323,7 +323,7 @@
     invoke-direct {v0, v1, v8}, Lorg/bouncycastle/crypto/wtn/kth;-><init>(Ljava/math/BigInteger;Lorg/bouncycastle/crypto/wtn/cno;)V
 
     :goto_0
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey;->aAa:Lorg/bouncycastle/crypto/wtn/kth;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey;->jAa:Lorg/bouncycastle/crypto/wtn/kth;
 
     return-void
 
@@ -825,7 +825,7 @@
 .method pj()Lorg/bouncycastle/crypto/wtn/kth;
     .locals 6
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey;->aAa:Lorg/bouncycastle/crypto/wtn/kth;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPrivateKey;->jAa:Lorg/bouncycastle/crypto/wtn/kth;
 
     if-eqz v0, :cond_0
 

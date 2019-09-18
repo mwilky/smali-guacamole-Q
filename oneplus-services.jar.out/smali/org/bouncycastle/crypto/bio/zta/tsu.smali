@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final Lya:I = -0x1f000000
+.field private static final Uya:I = -0x1f000000
 
-.field private static final Mya:J = -0x1f00000000000000L
+.field private static final Vya:J = -0x1f00000000000000L
 
 
 # direct methods

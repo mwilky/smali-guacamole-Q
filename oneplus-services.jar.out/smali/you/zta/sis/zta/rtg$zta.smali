@@ -190,7 +190,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->SBa:Ljava/math/BigInteger;
+    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->aCa:Ljava/math/BigInteger;
 
     if-eqz v0, :cond_1
 

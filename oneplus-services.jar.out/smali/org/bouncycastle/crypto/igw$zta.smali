@@ -19,7 +19,7 @@
 
 .field public static final EC_IMPLICITLY_CA:Lorg/bouncycastle/crypto/igw$zta;
 
-.field public static final Xua:Lorg/bouncycastle/crypto/igw$zta;
+.field public static final fva:Lorg/bouncycastle/crypto/igw$zta;
 
 
 # instance fields
@@ -60,7 +60,7 @@
 
     invoke-direct {v0, v2, v1}, Lorg/bouncycastle/crypto/igw$zta;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
-    sput-object v0, Lorg/bouncycastle/crypto/igw$zta;->Xua:Lorg/bouncycastle/crypto/igw$zta;
+    sput-object v0, Lorg/bouncycastle/crypto/igw$zta;->fva:Lorg/bouncycastle/crypto/igw$zta;
 
     return-void
 .end method

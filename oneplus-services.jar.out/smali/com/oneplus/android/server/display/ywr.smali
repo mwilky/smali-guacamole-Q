@@ -1,455 +1,126 @@
-.class Lcom/oneplus/android/server/display/ywr;
-.super Ljava/lang/Object;
+.class public final Lcom/oneplus/android/server/display/ywr;
+.super Lcom/android/server/ServiceThread;
 .source ""
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
+# static fields
+.field private static sHandler:Landroid/os/Handler;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field private static sInstance:Lcom/oneplus/android/server/display/ywr;
+
+
+# instance fields
+.field private mCount:I
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const-string v1, "oneplus.colorgamut"
+
+    const/4 v2, -0x3
+
+    invoke-direct {p0, v1, v2, v0}, Lcom/android/server/ServiceThread;-><init>(Ljava/lang/String;IZ)V
+
+    iput v0, p0, Lcom/oneplus/android/server/display/ywr;->mCount:I
 
     return-void
 .end method
 
-.method public static sis([F[F)[F
-    .locals 0
+.method private static ensureThreadLocked()V
+    .locals 3
 
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/ywr;->you([F[F)[F
+    sget-object v0, Lcom/oneplus/android/server/display/ywr;->sInstance:Lcom/oneplus/android/server/display/ywr;
 
-    return-object p1
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/oneplus/android/server/display/ywr;
+
+    invoke-direct {v0}, Lcom/oneplus/android/server/display/ywr;-><init>()V
+
+    sput-object v0, Lcom/oneplus/android/server/display/ywr;->sInstance:Lcom/oneplus/android/server/display/ywr;
+
+    sget-object v0, Lcom/oneplus/android/server/display/ywr;->sInstance:Lcom/oneplus/android/server/display/ywr;
+
+    invoke-virtual {v0}, Lcom/android/server/ServiceThread;->start()V
+
+    sget-object v0, Lcom/oneplus/android/server/display/ywr;->sInstance:Lcom/oneplus/android/server/display/ywr;
+
+    invoke-virtual {v0}, Lcom/android/server/ServiceThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    const-wide/32 v1, 0x80000
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Looper;->setTraceTag(J)V
+
+    new-instance v0, Landroid/os/Handler;
+
+    sget-object v1, Lcom/oneplus/android/server/display/ywr;->sInstance:Lcom/oneplus/android/server/display/ywr;
+
+    invoke-virtual {v1}, Lcom/android/server/ServiceThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    sput-object v0, Lcom/oneplus/android/server/display/ywr;->sHandler:Landroid/os/Handler;
+
+    :cond_0
+    return-void
 .end method
 
-.method public static you([F)[F
-    .locals 6
+.method public static get()Lcom/oneplus/android/server/display/ywr;
+    .locals 2
 
-    const/4 v0, 0x3
+    const-class v0, Lcom/oneplus/android/server/display/ywr;
 
-    new-array v0, v0, [F
+    monitor-enter v0
 
-    const/4 v1, 0x0
+    :try_start_0
+    invoke-static {}, Lcom/oneplus/android/server/display/ywr;->ensureThreadLocked()V
 
-    aget v2, p0, v1
+    sget-object v1, Lcom/oneplus/android/server/display/ywr;->sInstance:Lcom/oneplus/android/server/display/ywr;
 
-    const/4 v3, 0x2
+    monitor-exit v0
 
-    aget v4, p0, v3
+    return-object v1
 
-    mul-float/2addr v2, v4
+    :catchall_0
+    move-exception v1
 
-    const/4 v4, 0x1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    aget v5, p0, v4
-
-    div-float/2addr v2, v5
-
-    aput v2, v0, v1
-
-    aget v2, p0, v3
-
-    aput v2, v0, v4
-
-    aget v1, p0, v1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    sub-float/2addr v2, v1
-
-    aget v1, p0, v4
-
-    sub-float/2addr v2, v1
-
-    aget v1, p0, v3
-
-    mul-float/2addr v2, v1
-
-    aget p0, p0, v4
-
-    div-float/2addr v2, p0
-
-    aput v2, v0, v3
-
-    return-object v0
+    throw v1
 .end method
 
-.method public static you([F[F)[F
-    .locals 8
+.method public static getHandler()Landroid/os/Handler;
+    .locals 2
 
-    const/4 v0, 0x0
+    const-class v0, Lcom/oneplus/android/server/display/ywr;
 
-    aget v1, p1, v0
+    monitor-enter v0
 
-    const/4 v2, 0x1
+    :try_start_0
+    invoke-static {}, Lcom/oneplus/android/server/display/ywr;->ensureThreadLocked()V
 
-    aget v3, p1, v2
+    sget-object v1, Lcom/oneplus/android/server/display/ywr;->sHandler:Landroid/os/Handler;
 
-    const/4 v4, 0x2
+    monitor-exit v0
 
-    aget v5, p1, v4
+    return-object v1
 
-    aget v6, p0, v0
+    :catchall_0
+    move-exception v1
 
-    mul-float/2addr v6, v1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v7, 0x3
-
-    aget v7, p0, v7
-
-    mul-float/2addr v7, v3
-
-    add-float/2addr v6, v7
-
-    const/4 v7, 0x6
-
-    aget v7, p0, v7
-
-    mul-float/2addr v7, v5
-
-    add-float/2addr v6, v7
-
-    aput v6, p1, v0
-
-    aget v0, p0, v2
-
-    mul-float/2addr v0, v1
-
-    const/4 v6, 0x4
-
-    aget v6, p0, v6
-
-    mul-float/2addr v6, v3
-
-    add-float/2addr v0, v6
-
-    const/4 v6, 0x7
-
-    aget v6, p0, v6
-
-    mul-float/2addr v6, v5
-
-    add-float/2addr v0, v6
-
-    aput v0, p1, v2
-
-    aget v0, p0, v4
-
-    mul-float/2addr v0, v1
-
-    const/4 v1, 0x5
-
-    aget v1, p0, v1
-
-    mul-float/2addr v1, v3
-
-    add-float/2addr v0, v1
-
-    const/16 v1, 0x8
-
-    aget p0, p0, v1
-
-    mul-float/2addr p0, v5
-
-    add-float/2addr v0, p0
-
-    aput v0, p1, v4
-
-    return-object p1
-.end method
-
-.method public static zta([F)[F
-    .locals 24
-
-    move-object/from16 v0, p0
-
-    const/4 v1, 0x0
-
-    aget v2, v0, v1
-
-    const/4 v3, 0x3
-
-    aget v4, v0, v3
-
-    const/4 v5, 0x6
-
-    aget v6, v0, v5
-
-    const/4 v7, 0x1
-
-    aget v8, v0, v7
-
-    const/4 v9, 0x4
-
-    aget v10, v0, v9
-
-    const/4 v11, 0x7
-
-    aget v12, v0, v11
-
-    const/4 v13, 0x2
-
-    aget v14, v0, v13
-
-    const/4 v15, 0x5
-
-    aget v16, v0, v15
-
-    const/16 v17, 0x8
-
-    aget v18, v0, v17
-
-    mul-float v19, v10, v18
-
-    mul-float v20, v12, v16
-
-    sub-float v19, v19, v20
-
-    mul-float v20, v12, v14
-
-    mul-float v21, v8, v18
-
-    sub-float v20, v20, v21
-
-    mul-float v21, v8, v16
-
-    mul-float v22, v10, v14
-
-    sub-float v21, v21, v22
-
-    mul-float v22, v2, v19
-
-    mul-float v23, v4, v20
-
-    add-float v22, v22, v23
-
-    mul-float v23, v6, v21
-
-    add-float v22, v22, v23
-
-    array-length v0, v0
-
-    new-array v0, v0, [F
-
-    div-float v19, v19, v22
-
-    aput v19, v0, v1
-
-    div-float v20, v20, v22
-
-    aput v20, v0, v7
-
-    div-float v21, v21, v22
-
-    aput v21, v0, v13
-
-    mul-float v1, v6, v16
-
-    mul-float v7, v4, v18
-
-    sub-float/2addr v1, v7
-
-    div-float v1, v1, v22
-
-    aput v1, v0, v3
-
-    mul-float v18, v18, v2
-
-    mul-float v1, v6, v14
-
-    sub-float v18, v18, v1
-
-    div-float v18, v18, v22
-
-    aput v18, v0, v9
-
-    mul-float/2addr v14, v4
-
-    mul-float v16, v16, v2
-
-    sub-float v14, v14, v16
-
-    div-float v14, v14, v22
-
-    aput v14, v0, v15
-
-    mul-float v1, v4, v12
-
-    mul-float v3, v6, v10
-
-    sub-float/2addr v1, v3
-
-    div-float v1, v1, v22
-
-    aput v1, v0, v5
-
-    mul-float/2addr v6, v8
-
-    mul-float/2addr v12, v2
-
-    sub-float/2addr v6, v12
-
-    div-float v6, v6, v22
-
-    aput v6, v0, v11
-
-    mul-float/2addr v2, v10
-
-    mul-float/2addr v4, v8
-
-    sub-float/2addr v2, v4
-
-    div-float v2, v2, v22
-
-    aput v2, v0, v17
-
-    return-object v0
-.end method
-
-.method public static zta([F[F)[F
-    .locals 25
-
-    const/4 v0, 0x0
-
-    aget v1, p0, v0
-
-    const/4 v2, 0x1
-
-    aget v3, p0, v2
-
-    const/4 v4, 0x2
-
-    aget v5, p0, v4
-
-    const/4 v6, 0x3
-
-    aget v7, p0, v6
-
-    const/4 v8, 0x4
-
-    aget v9, p0, v8
-
-    const/4 v10, 0x5
-
-    aget v11, p0, v10
-
-    aget v12, p1, v0
-
-    aget v13, p1, v2
-
-    const/high16 v14, 0x3f800000    # 1.0f
-
-    sub-float v15, v14, v1
-
-    div-float v16, v15, v3
-
-    sub-float v17, v14, v5
-
-    div-float v18, v17, v7
-
-    sub-float v19, v14, v9
-
-    div-float v20, v19, v11
-
-    sub-float v21, v14, v12
-
-    div-float v21, v21, v13
-
-    div-float v22, v1, v3
-
-    div-float v23, v5, v7
-
-    div-float v24, v9, v11
-
-    div-float/2addr v12, v13
-
-    sub-float v21, v21, v16
-
-    sub-float v23, v23, v22
-
-    mul-float v21, v21, v23
-
-    sub-float v12, v12, v22
-
-    sub-float v18, v18, v16
-
-    mul-float v13, v12, v18
-
-    sub-float v21, v21, v13
-
-    sub-float v20, v20, v16
-
-    mul-float v20, v20, v23
-
-    sub-float v24, v24, v22
-
-    mul-float v18, v18, v24
-
-    sub-float v20, v20, v18
-
-    div-float v21, v21, v20
-
-    mul-float v24, v24, v21
-
-    sub-float v12, v12, v24
-
-    div-float v12, v12, v23
-
-    sub-float/2addr v14, v12
-
-    sub-float v14, v14, v21
-
-    div-float v13, v14, v3
-
-    div-float v16, v12, v7
-
-    div-float v18, v21, v11
-
-    const/16 v10, 0x9
-
-    new-array v10, v10, [F
-
-    mul-float/2addr v1, v13
-
-    aput v1, v10, v0
-
-    aput v14, v10, v2
-
-    sub-float/2addr v15, v3
-
-    mul-float/2addr v13, v15
-
-    aput v13, v10, v4
-
-    mul-float v5, v5, v16
-
-    aput v5, v10, v6
-
-    aput v12, v10, v8
-
-    sub-float v17, v17, v7
-
-    mul-float v16, v16, v17
-
-    const/4 v0, 0x5
-
-    aput v16, v10, v0
-
-    mul-float v9, v9, v18
-
-    const/4 v0, 0x6
-
-    aput v9, v10, v0
-
-    const/4 v0, 0x7
-
-    aput v21, v10, v0
-
-    sub-float v19, v19, v11
-
-    mul-float v18, v18, v19
-
-    const/16 v0, 0x8
-
-    aput v18, v10, v0
-
-    return-object v10
+    throw v1
 .end method

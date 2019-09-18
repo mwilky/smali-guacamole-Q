@@ -726,7 +726,7 @@
     iput-boolean v4, p0, Lcom/android/server/am/OnePlusBGController$bio;->sl:Z
 
     :cond_2
-    sget-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->vga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Ega:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     if-ne p1, v0, :cond_3
 
@@ -848,7 +848,7 @@
     :cond_0
     move-wide v4, p2
 
-    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Aga:Lcom/android/server/am/OnePlusBGController$ProcType;
+    sget-object p2, Lcom/android/server/am/OnePlusBGController$ProcType;->Jga:Lcom/android/server/am/OnePlusBGController$ProcType;
 
     if-ne p1, p2, :cond_1
 
@@ -891,7 +891,7 @@
 
     invoke-static {p2}, Lcom/android/server/am/OnePlusBGController;->myLog(Ljava/lang/String;)V
 
-    sget-object p2, Lcom/android/server/am/OnePlusBGController$CleanType;->wga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object p2, Lcom/android/server/am/OnePlusBGController$CleanType;->Fga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/server/am/OnePlusBGController$bio;->zta(Lcom/android/server/am/OnePlusBGController$CleanType;)V
@@ -1008,7 +1008,7 @@
 
     invoke-static {p2}, Lcom/android/server/am/OnePlusBGController;->myLog(Ljava/lang/String;)V
 
-    sget-object p2, Lcom/android/server/am/OnePlusBGController$CleanType;->wga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object p2, Lcom/android/server/am/OnePlusBGController$CleanType;->Fga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     goto :goto_0
 

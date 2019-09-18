@@ -151,7 +151,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/x509/zgw;-><init>(Lorg/bouncycastle/asn1/x509/q;)V
 
-    sget-object v1, Lorg/bouncycastle/asn1/x509/gwm;->Dpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/x509/gwm;->Mpa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 

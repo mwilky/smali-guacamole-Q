@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private final JCa:Ljava/math/BigInteger;
+.field private final SCa:Ljava/math/BigInteger;
 
 .field private final scale:I
 
@@ -21,7 +21,7 @@
 
     if-ltz p2, :cond_0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iput-object p1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iput p2, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -79,7 +79,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iget v2, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -101,7 +101,7 @@
 .method public compareTo(Ljava/math/BigInteger;)I
     .locals 1
 
-    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iget p0, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -121,7 +121,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, p1}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
@@ -155,9 +155,9 @@
     :cond_1
     check-cast p1, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
-    iget-object v3, p1, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v3, p1, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, v3}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
@@ -191,7 +191,7 @@
 .method public hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v0}, Ljava/math/BigInteger;->hashCode()I
 
@@ -237,7 +237,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, p1}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
@@ -255,7 +255,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1}, Ljava/math/BigInteger;->negate()Ljava/math/BigInteger;
 
@@ -282,7 +282,7 @@
     :cond_0
     new-instance v1, Lyou/zta/sis/zta/zgw;
 
-    iget-object p0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     sub-int v0, p1, v0
 
@@ -323,7 +323,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, p1}, Ljava/math/BigInteger;->shiftLeft(I)Ljava/math/BigInteger;
 
@@ -341,7 +341,7 @@
 
     invoke-direct {p0, p1}, Lyou/zta/sis/zta/zgw;->ssp(Lyou/zta/sis/zta/zgw;)V
 
-    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iget v1, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -351,7 +351,7 @@
 
     new-instance v1, Lyou/zta/sis/zta/zgw;
 
-    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v0, p1}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
@@ -369,7 +369,7 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iget v2, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -395,7 +395,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {p0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
@@ -408,7 +408,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iget v2, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -420,7 +420,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v2, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v2}, Ljava/math/BigInteger;->signum()I
 
@@ -546,9 +546,9 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
-    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, p1}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
@@ -566,7 +566,7 @@
 .method public xk()Ljava/math/BigInteger;
     .locals 1
 
-    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     iget p0, p0, Lyou/zta/sis/zta/zgw;->scale:I
 
@@ -610,9 +610,9 @@
 
     invoke-direct {p0, p1}, Lyou/zta/sis/zta/zgw;->ssp(Lyou/zta/sis/zta/zgw;)V
 
-    iget-object p0, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p0, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
-    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {p0, p1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
@@ -628,9 +628,9 @@
 
     new-instance v0, Lyou/zta/sis/zta/zgw;
 
-    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object v1, p0, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
-    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->JCa:Ljava/math/BigInteger;
+    iget-object p1, p1, Lyou/zta/sis/zta/zgw;->SCa:Ljava/math/BigInteger;
 
     invoke-virtual {v1, p1}, Ljava/math/BigInteger;->add(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 

@@ -636,7 +636,7 @@
 
     move-result-object v0
 
-    sget-object v2, Lyou/zta/sis/zta/sis;->Lma:Ljava/math/BigInteger;
+    sget-object v2, Lyou/zta/sis/zta/sis;->Uma:Ljava/math/BigInteger;
 
     invoke-virtual {v0, v2}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 

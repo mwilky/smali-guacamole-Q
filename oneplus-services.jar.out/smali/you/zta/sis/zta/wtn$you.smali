@@ -130,7 +130,7 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object p0, p0, v6
 
@@ -163,7 +163,7 @@
     goto :goto_1
 
     :cond_2
-    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->wCa:[Lyou/zta/sis/zta/cno;
+    iget-object p0, p0, Lyou/zta/sis/zta/wtn;->FCa:[Lyou/zta/sis/zta/cno;
 
     aget-object p0, p0, v6
 

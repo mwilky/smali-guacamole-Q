@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private Qna:I
+.field private Zna:I
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iput v0, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     return-void
 .end method
@@ -29,7 +29,7 @@
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iput p1, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iput p1, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     return-void
 .end method
@@ -55,12 +55,12 @@
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iput p1, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     return-void
 .end method
 
-.method private Ks()I
+.method private Os()I
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -68,7 +68,7 @@
         }
     .end annotation
 
-    iget v0, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iget v0, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     if-gez v0, :cond_1
 
@@ -108,10 +108,10 @@
     goto :goto_0
 
     :cond_0
-    iput v0, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iput v0, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     :cond_1
-    iget p0, p0, Lorg/bouncycastle/asn1/Y;->Qna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/Y;->Zna:I
 
     return p0
 .end method
@@ -126,7 +126,7 @@
         }
     .end annotation
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/Y;->Ks()I
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/Y;->Os()I
 
     move-result p0
 
@@ -153,7 +153,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/Y;->Ks()I
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/Y;->Os()I
 
     move-result v1
 

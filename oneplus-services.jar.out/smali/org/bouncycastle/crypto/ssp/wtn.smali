@@ -4,19 +4,19 @@
 
 
 # static fields
-.field public static final gva:I = 0x1
+.field public static final pva:I = 0x1
 
-.field public static final hva:I = 0x2
+.field public static final qva:I = 0x2
 
-.field public static final iva:I = 0x3
+.field public static final rva:I = 0x3
 
 
 # instance fields
 .field private digest:Lorg/bouncycastle/crypto/qbh;
 
-.field private dna:I
+.field private mna:I
 
-.field private fva:I
+.field private ova:I
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     move-result v0
 
-    iput v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->fva:I
+    iput v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->ova:I
 
     check-cast p1, Lorg/bouncycastle/crypto/oif;
 
@@ -43,7 +43,7 @@
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->dna:I
+    iput p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->mna:I
 
     return-void
 
@@ -80,7 +80,7 @@
 .method private vju(II)[B
     .locals 11
 
-    iget v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->dna:I
+    iget v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->mna:I
 
     new-array v0, v0, [B
 
@@ -114,7 +114,7 @@
 
     if-eqz v4, :cond_1
 
-    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->dna:I
+    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->mna:I
 
     array-length p1, p1
 
@@ -161,7 +161,7 @@
 
     if-eqz v5, :cond_3
 
-    iget v5, p0, Lorg/bouncycastle/crypto/ssp/wtn;->dna:I
+    iget v5, p0, Lorg/bouncycastle/crypto/ssp/wtn;->mna:I
 
     array-length v4, v4
 
@@ -218,11 +218,11 @@
 
     invoke-static {v4, v2, v5, p1, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->dna:I
+    iget p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->mna:I
 
     new-array p1, p1, [B
 
-    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->fva:I
+    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->ova:I
 
     add-int/2addr p2, v4
 
@@ -300,7 +300,7 @@
     :goto_6
     array-length v8, v5
 
-    iget v9, p0, Lorg/bouncycastle/crypto/ssp/wtn;->dna:I
+    iget v9, p0, Lorg/bouncycastle/crypto/ssp/wtn;->mna:I
 
     div-int/2addr v8, v9
 
@@ -317,7 +317,7 @@
     :cond_7
     add-int/lit8 v7, v6, -0x1
 
-    iget v8, p0, Lorg/bouncycastle/crypto/ssp/wtn;->fva:I
+    iget v8, p0, Lorg/bouncycastle/crypto/ssp/wtn;->ova:I
 
     if-ne v6, p2, :cond_8
 

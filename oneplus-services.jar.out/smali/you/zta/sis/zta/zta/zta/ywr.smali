@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final Q:Ljava/math/BigInteger;
+.field private static final CCa:[I
 
-.field private static final tCa:[I
+.field public static final Q:Ljava/math/BigInteger;
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lyou/zta/sis/zta/zta/zta/ywr;->tCa:[I
+    sput-object v0, Lyou/zta/sis/zta/zta/zta/ywr;->CCa:[I
 
     return-void
 
@@ -283,7 +283,7 @@
     return-object p0
 
     :cond_1
-    sget-object p0, Lyou/zta/sis/zta/zta/zta/ywr;->tCa:[I
+    sget-object p0, Lyou/zta/sis/zta/zta/zta/ywr;->CCa:[I
 
     invoke-static {v2, p0, v2}, Lyou/zta/sis/zta/zta/zta/dma;->tsu([I[I[I)V
 

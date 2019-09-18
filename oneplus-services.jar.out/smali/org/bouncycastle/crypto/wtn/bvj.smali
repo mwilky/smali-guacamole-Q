@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private Jsa:[B
+.field private Ssa:[B
 
 .field private counter:I
 
-.field private fya:I
+.field private oya:I
 
 
 # direct methods
@@ -31,11 +31,11 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Jsa:[B
+    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Ssa:[B
 
     iput p2, p0, Lorg/bouncycastle/crypto/wtn/bvj;->counter:I
 
-    iput p3, p0, Lorg/bouncycastle/crypto/wtn/bvj;->fya:I
+    iput p3, p0, Lorg/bouncycastle/crypto/wtn/bvj;->oya:I
 
     return-void
 .end method
@@ -65,9 +65,9 @@
     return v1
 
     :cond_1
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Jsa:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Ssa:[B
 
-    iget-object p1, p1, Lorg/bouncycastle/crypto/wtn/bvj;->Jsa:[B
+    iget-object p1, p1, Lorg/bouncycastle/crypto/wtn/bvj;->Ssa:[B
 
     invoke-static {p0, p1}, Lorg/bouncycastle/util/zta;->sis([B[B)Z
 
@@ -87,7 +87,7 @@
 .method public getSeed()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Jsa:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Ssa:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -99,7 +99,7 @@
 .method public gj()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->fya:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->oya:I
 
     return p0
 .end method
@@ -109,7 +109,7 @@
 
     iget v0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->counter:I
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Jsa:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Ssa:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->hashCode([B)I
 

@@ -95,6 +95,8 @@
 
 .field private mStatusBarManager:Landroid/app/StatusBarManager;
 
+.field mSystemReady:Z
+
 .field private mUserManager:Landroid/os/UserManager;
 
 .field public mc:Ljava/util/ArrayList;
@@ -193,6 +195,8 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/qbh;->pc:Z
+
+    iput-boolean v0, p0, Lcom/android/server/qbh;->mSystemReady:Z
 
     iput v0, p0, Lcom/android/server/qbh;->qc:I
 
@@ -871,11 +875,15 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    iget-object p0, p0, Lcom/android/server/qbh;->rc:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/android/server/qbh;->rc:Landroid/content/Intent;
 
-    const/high16 v0, 0x20000000
+    const/high16 v1, 0x20000000
 
-    invoke-virtual {p0, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/qbh;->mSystemReady:Z
 
     return-void
 .end method
@@ -1269,11 +1277,18 @@
 .method public updateGpsRequstPackage(Z)V
     .locals 13
 
+    iget-boolean v0, p0, Lcom/android/server/qbh;->mSystemReady:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     iget-object p1, p0, Lcom/android/server/qbh;->mLocationManager:Landroid/location/LocationManager;
 
@@ -1287,7 +1302,7 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    :cond_0
+    :cond_1
     iget-object p1, p0, Lcom/android/server/qbh;->mc:Ljava/util/ArrayList;
 
     monitor-enter p1
@@ -1295,7 +1310,7 @@
     :try_start_0
     sget-boolean v1, Lcom/android/server/qbh;->DEBUG:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     sget-object v1, Lcom/android/server/qbh;->TAG:Ljava/lang/String;
 
@@ -1323,7 +1338,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
@@ -1336,7 +1351,7 @@
 
     const v4, 0xdac1
 
-    if-lez v3, :cond_3
+    if-lez v3, :cond_4
 
     iget-object v3, p0, Lcom/android/server/qbh;->nc:Ljava/util/ArrayList;
 
@@ -1344,7 +1359,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     iget-object v1, p0, Lcom/android/server/qbh;->mHandler:Lcom/android/server/qbh$zta;
 
@@ -1352,7 +1367,7 @@
 
     sget-boolean v1, Lcom/android/server/qbh;->DEBUG:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     sget-object v1, Lcom/android/server/qbh;->TAG:Ljava/lang/String;
 
@@ -1392,12 +1407,12 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
+    :cond_3
     monitor-exit p1
 
     return-void
 
-    :cond_3
+    :cond_4
     iget-wide v5, p0, Lcom/android/server/qbh;->oc:J
 
     sub-long v5, v1, v5
@@ -1410,7 +1425,7 @@
 
     const-wide/16 v9, 0x320
 
-    if-gez v3, :cond_4
+    if-gez v3, :cond_5
 
     iget v1, p0, Lcom/android/server/qbh;->qc:I
 
@@ -1422,7 +1437,7 @@
 
     const/4 v2, 0x3
 
-    if-gt v1, v2, :cond_6
+    if-gt v1, v2, :cond_7
 
     iget-object v1, p0, Lcom/android/server/qbh;->mHandler:Lcom/android/server/qbh$zta;
 
@@ -1430,12 +1445,12 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     iget-boolean v3, p0, Lcom/android/server/qbh;->pc:Z
 
     const/4 v6, 0x0
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     iget-wide v11, p0, Lcom/android/server/qbh;->oc:J
 
@@ -1443,22 +1458,22 @@
 
     cmp-long v1, v1, v9
 
-    if-gez v1, :cond_5
+    if-gez v1, :cond_6
 
     iget-object v1, p0, Lcom/android/server/qbh;->mHandler:Lcom/android/server/qbh$zta;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    :cond_5
+    :cond_6
     iput v6, p0, Lcom/android/server/qbh;->qc:I
 
-    :cond_6
+    :cond_7
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
     iget-object v0, p0, Lcom/android/server/qbh;->mc:Ljava/util/ArrayList;
 
@@ -1466,13 +1481,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     iget-object v0, p0, Lcom/android/server/qbh;->mc:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    :cond_7
+    :cond_8
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
@@ -1485,7 +1500,7 @@
 
     goto :goto_1
 
-    :cond_8
+    :cond_9
     iget-object v1, p0, Lcom/android/server/qbh;->mHandler:Lcom/android/server/qbh$zta;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeMessages(I)V

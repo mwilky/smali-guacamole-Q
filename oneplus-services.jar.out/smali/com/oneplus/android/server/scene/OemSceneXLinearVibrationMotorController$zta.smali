@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final Tea:I
-
 .field final Yg:I
+
+.field final bfa:I
 
 .field final mPkgName:Ljava/lang/String;
 
@@ -30,7 +30,7 @@
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->mPkgName:Ljava/lang/String;
 
-    iput p2, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Tea:I
+    iput p2, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->bfa:I
 
     iput p3, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Yg:I
 
@@ -58,7 +58,7 @@
 .method public pf()I
     .locals 0
 
-    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Tea:I
+    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->bfa:I
 
     return p0
 .end method
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Tea:I
+    iget v1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->bfa:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

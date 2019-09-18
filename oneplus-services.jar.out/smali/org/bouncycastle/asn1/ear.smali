@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private Rna:Z
+.field private _na:Z
 
 .field private set:Ljava/util/Vector;
 
@@ -37,7 +37,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     :goto_0
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/cno;->size()I
@@ -98,7 +98,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
 
@@ -120,7 +120,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     :goto_0
     array-length v1, p1
@@ -604,7 +604,7 @@
 .method ng()Lorg/bouncycastle/asn1/vdb;
     .locals 3
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     if-eqz v0, :cond_0
 
@@ -697,13 +697,13 @@
 .method protected sort()V
     .locals 9
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Rna:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->_na:Z
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
 

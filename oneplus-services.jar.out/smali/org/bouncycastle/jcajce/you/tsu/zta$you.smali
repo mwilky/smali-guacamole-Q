@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private mka:Lorg/bouncycastle/asn1/you/kth;
+.field private vka:Lorg/bouncycastle/asn1/you/kth;
 
 
 # direct methods
@@ -37,7 +37,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/oif;->getEncoded()[B
 
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/oif;->getEncoded()[B
 
@@ -96,7 +96,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     goto :goto_0
 
@@ -121,7 +121,7 @@
 
     invoke-direct {v0, v1, p1}, Lorg/bouncycastle/asn1/you/kth;-><init>([BI)V
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     :goto_0
     return-void
@@ -168,7 +168,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     return-void
 .end method
@@ -191,7 +191,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     return-void
 
@@ -240,13 +240,13 @@
 
     new-instance p1, Lorg/bouncycastle/jcajce/sis/zta;
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/you/kth;->getNonce()[B
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/you/kth;->Kg()I
 
@@ -265,7 +265,7 @@
 
     new-instance p1, Ljavax/crypto/spec/IvParameterSpec;
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/you/kth;->getNonce()[B
 
@@ -308,7 +308,7 @@
 
     if-eqz p1, :cond_4
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/you/kth;->toASN1Primitive()Lorg/bouncycastle/asn1/vdb;
 
@@ -323,13 +323,13 @@
     :cond_4
     new-instance p1, Lorg/bouncycastle/jcajce/sis/zta;
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/you/kth;->getNonce()[B
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->mka:Lorg/bouncycastle/asn1/you/kth;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/you/tsu/zta$you;->vka:Lorg/bouncycastle/asn1/you/kth;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/you/kth;->Kg()I
 

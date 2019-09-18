@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field jka:Ljavax/crypto/spec/OAEPParameterSpec;
+.field ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->jka:Ljavax/crypto/spec/OAEPParameterSpec;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
     invoke-virtual {v1}, Ljavax/crypto/spec/OAEPParameterSpec;->getDigestAlgorithm()Ljava/lang/String;
 
@@ -48,7 +48,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->jka:Ljavax/crypto/spec/OAEPParameterSpec;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
     invoke-virtual {v1}, Ljavax/crypto/spec/OAEPParameterSpec;->getMGFParameters()Ljava/security/spec/AlgorithmParameterSpec;
 
@@ -76,7 +76,7 @@
 
     invoke-direct {v2, v3, v4}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->jka:Ljavax/crypto/spec/OAEPParameterSpec;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
     invoke-virtual {p0}, Ljavax/crypto/spec/OAEPParameterSpec;->getPSource()Ljavax/crypto/spec/PSource;
 
@@ -170,7 +170,7 @@
 
     check-cast p1, Ljavax/crypto/spec/OAEPParameterSpec;
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->jka:Ljavax/crypto/spec/OAEPParameterSpec;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
     return-void
 
@@ -281,7 +281,7 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Ljavax/crypto/spec/OAEPParameterSpec;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/security/spec/AlgorithmParameterSpec;Ljavax/crypto/spec/PSource;)V
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->jka:Ljavax/crypto/spec/OAEPParameterSpec;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
     return-void
 
@@ -423,7 +423,7 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->jka:Ljavax/crypto/spec/OAEPParameterSpec;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/zta$zta;->ska:Ljavax/crypto/spec/OAEPParameterSpec;
 
     return-object p0
 .end method
