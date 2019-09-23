@@ -400,6 +400,39 @@
     return-void
 .end method
 
+.method private apnEditorFinish()V
+    .locals 3
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/settings/network/ApnEditor;->mIsFromHM:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->ACTION_IS_DATA_CHANGED:Ljava/lang/String;
+
+    iget-boolean v2, p0, Lcom/android/settings/network/ApnEditor;->mIsPreferenceChanged:Z
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, v0}, Lcom/android/settings/network/ApnEditor;->setResult(ILandroid/content/Intent;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+
+    return-void
+.end method
+
 .method private apnTypesMatch([Ljava/lang/String;Ljava/lang/String;)Z
     .locals 8
 
@@ -3881,7 +3914,7 @@
 
     invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->disableAllFields()V
 
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mName:Landroidx/preference/EditTextPreference;
+    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mApn:Landroidx/preference/EditTextPreference;
 
     invoke-virtual {v1, v9}, Landroidx/preference/EditTextPreference;->setEnabled(Z)V
 
@@ -3984,7 +4017,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->apnEditorFinish()V
 
     :cond_2
     const/4 v0, 0x1
@@ -4029,7 +4062,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->apnEditorFinish()V
 
     :cond_2
     return v1
@@ -4037,7 +4070,7 @@
     :cond_3
     invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->deleteApn()V
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->apnEditorFinish()V
 
     return v1
 .end method

@@ -1085,6 +1085,11 @@
 
     move-result-object v0
 
+    if-nez p2, :cond_0
+
+    return-object p1
+
+    :cond_0
     const/4 v1, 0x1
 
     const-string v2, "notification_sound"
@@ -1093,7 +1098,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_2
 
     const-string v3, "mms_notification"
 
@@ -1101,28 +1106,28 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const-string v3, "alarm_alert"
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     const/4 v1, 0x4
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     :goto_0
     const/4 v1, 0x2
 
-    :cond_2
+    :cond_3
     :goto_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1156,7 +1161,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     invoke-static {p0, p2}, Lcom/oneplus/settings/utils/OPNotificationUtils;->restoreRingtoneIfNotExist(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -1166,18 +1171,18 @@
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     const-string v4, "ringtone_2"
 
     invoke-static {p0, v4}, Lcom/oneplus/settings/utils/OPNotificationUtils;->restoreRingtoneIfNotExist(Landroid/content/Context;Ljava/lang/String;)V
 
-    :cond_3
+    :cond_4
     invoke-virtual {p2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_5
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1191,14 +1196,14 @@
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     nop
 
     invoke-virtual {p2, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1212,7 +1217,7 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1223,7 +1228,7 @@
 
     move-result-object p1
 
-    :cond_6
+    :cond_7
     :goto_2
     return-object p1
 .end method

@@ -2655,11 +2655,11 @@
 
     move-result v5
 
-    const-string v6, "/op1/ringtones/"
+    const-string v6, "/op1/"
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_2
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_1
 
     const-string v5, "/system/product/media/audio/"
 
@@ -2673,16 +2673,13 @@
 
     move-result v5
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_3
 
     :cond_1
-    if-ne v2, v3, :cond_5
-
-    :cond_2
     return-object p1
 
-    :cond_3
-    if-eqz v4, :cond_f
+    :cond_2
+    if-eqz v4, :cond_d
 
     const-string v5, "/product/media/audio/"
 
@@ -2690,20 +2687,17 @@
 
     move-result v5
 
-    if-nez v5, :cond_4
+    if-nez v5, :cond_d
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_5
-
-    :cond_4
-    if-ne v2, v3, :cond_5
+    if-eqz v5, :cond_3
 
     goto/16 :goto_6
 
-    :cond_5
+    :cond_3
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v5
@@ -2762,13 +2756,13 @@
 
     const-string v13, "is_ringtone"
 
-    if-eqz v9, :cond_9
+    if-eqz v9, :cond_7
 
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v16
 
-    if-eqz v16, :cond_9
+    if-eqz v16, :cond_7
 
     move-object/from16 v17, v12
 
@@ -2784,7 +2778,7 @@
 
     invoke-direct {v11}, Landroid/content/ContentValues;-><init>()V
 
-    if-ne v2, v3, :cond_6
+    if-ne v2, v3, :cond_4
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2794,16 +2788,16 @@
 
     goto :goto_1
 
-    :cond_6
-    if-eq v2, v7, :cond_8
+    :cond_4
+    if-eq v2, v7, :cond_6
 
     const/16 v7, 0x8
 
-    if-ne v2, v7, :cond_7
+    if-ne v2, v7, :cond_5
 
     goto :goto_0
 
-    :cond_7
+    :cond_5
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -2812,7 +2806,7 @@
 
     goto :goto_1
 
-    :cond_8
+    :cond_6
     :goto_0
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2833,7 +2827,7 @@
 
     goto :goto_4
 
-    :cond_9
+    :cond_7
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
@@ -2850,7 +2844,7 @@
 
     invoke-virtual {v5, v11, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ne v2, v3, :cond_a
+    if-ne v2, v3, :cond_8
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2860,16 +2854,16 @@
 
     goto :goto_3
 
-    :cond_a
-    if-eq v2, v7, :cond_c
+    :cond_8
+    if-eq v2, v7, :cond_a
 
     const/16 v7, 0x8
 
-    if-ne v2, v7, :cond_b
+    if-ne v2, v7, :cond_9
 
     goto :goto_2
 
-    :cond_b
+    :cond_9
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -2878,7 +2872,7 @@
 
     goto :goto_3
 
-    :cond_c
+    :cond_a
     :goto_2
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2920,12 +2914,12 @@
     move-result-object v3
 
     :goto_4
-    if-eqz v9, :cond_d
+    if-eqz v9, :cond_b
 
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    :cond_d
-    if-lez p4, :cond_e
+    :cond_b
+    if-lez p4, :cond_c
 
     add-int/lit8 v5, p4, -0x1
 
@@ -2933,13 +2927,13 @@
 
     goto :goto_5
 
-    :cond_e
+    :cond_c
     invoke-static {v0, v2, v3}, Lcom/oneplus/settings/ringtone/OPRingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
     :goto_5
     return-object v3
 
-    :cond_f
+    :cond_d
     :goto_6
     return-object p1
 .end method
