@@ -25,17 +25,3 @@
 
     return-void
 .end method
-
-
-# virtual methods
-.method public onBluetoothManagerInitialized(Landroid/content/Context;Lcom/android/settingslib/bluetooth/LocalBluetoothManager;)V
-    .locals 0
-
-    invoke-static {}, Lcom/oneplus/volume/OpOutputChooser;->access$100()Lcom/android/settingslib/bluetooth/BluetoothUtils$ErrorListener;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lcom/android/settingslib/bluetooth/BluetoothUtils;->setErrorListener(Lcom/android/settingslib/bluetooth/BluetoothUtils$ErrorListener;)V
-
-    return-void
-.end method

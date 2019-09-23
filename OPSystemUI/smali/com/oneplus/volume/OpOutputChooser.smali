@@ -244,14 +244,6 @@
     return-void
 .end method
 
-.method static synthetic access$100()Lcom/android/settingslib/bluetooth/BluetoothUtils$ErrorListener;
-    .locals 1
-
-    sget-object v0, Lcom/oneplus/volume/OpOutputChooser;->mErrorListener:Lcom/android/settingslib/bluetooth/BluetoothUtils$ErrorListener;
-
-    return-object v0
-.end method
-
 .method static synthetic access$200()Z
     .locals 1
 
@@ -303,13 +295,15 @@
 .end method
 
 .method public static getLocalBtManager(Landroid/content/Context;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
-    .locals 1
+    .locals 0
 
-    sget-object v0, Lcom/oneplus/volume/OpOutputChooser;->mOnInitCallback:Lcom/android/settingslib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;
+    const-class p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
-    invoke-static {p0, v0}, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;->getInstance(Landroid/content/Context;Lcom/android/settingslib/bluetooth/LocalBluetoothManager$BluetoothManagerCallback;)Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
+    invoke-static {p0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
+
+    check-cast p0, Lcom/android/settingslib/bluetooth/LocalBluetoothManager;
 
     return-object p0
 .end method

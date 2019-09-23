@@ -501,7 +501,15 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Ljava/lang/String;
+.method static synthetic access$300(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconVisible:Z
+
+    return p0
+.end method
+
+.method static synthetic access$400(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Ljava/lang/String;
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->getSlotBluetooth()Ljava/lang/String;
@@ -511,7 +519,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)I
+.method static synthetic access$500(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconId:I
@@ -519,7 +527,7 @@
     return p0
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Ljava/lang/String;
+.method static synthetic access$600(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothContentDescription:Ljava/lang/String;
@@ -527,20 +535,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Lcom/android/systemui/statusbar/phone/StatusBarIconController;
+.method static synthetic access$700(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Lcom/android/systemui/statusbar/phone/StatusBarIconController;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mIconController:Lcom/android/systemui/statusbar/phone/StatusBarIconController;
 
     return-object p0
-.end method
-
-.method static synthetic access$700(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconVisible:Z
-
-    return p0
 .end method
 
 .method static synthetic access$800(Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;)V
@@ -816,9 +816,9 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetooth:Lcom/android/systemui/statusbar/policy/BluetoothController;
 
-    const-string v1, "OpPhoneStatusBarPolicy"
+    const/4 v1, -0x1
 
-    const/4 v2, -0x1
+    const-string v2, "OpPhoneStatusBarPolicy"
 
     const/4 v3, 0x0
 
@@ -869,22 +869,22 @@
 
     move-result v5
 
-    if-eq v5, v2, :cond_2
+    if-eq v5, v1, :cond_2
 
     invoke-direct {p0, v5}, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->getBluetoothBatteryIcon(I)I
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
     invoke-direct {p0, v5}, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->getBluetoothBatteryIcon(I)I
 
-    move-result v2
+    move-result v1
 
     goto :goto_1
 
     :cond_2
-    sget v2, Lcom/android/systemui/R$drawable;->stat_sys_data_bluetooth_connected:I
+    sget v1, Lcom/android/systemui/R$drawable;->stat_sys_data_bluetooth_connected:I
 
     goto :goto_1
 
@@ -901,9 +901,9 @@
 
     move-object v8, v5
 
-    move v5, v2
+    move v5, v1
 
-    move v2, v4
+    move v1, v4
 
     move-object v4, v8
 
@@ -912,7 +912,7 @@
     :cond_4
     const-string v0, "BluetoothController == null"
 
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     sget v0, Lcom/android/systemui/R$drawable;->stat_sys_data_bluetooth:I
 
@@ -924,16 +924,38 @@
 
     move-result-object v4
 
-    move v5, v2
+    move v5, v1
 
-    move v2, v0
+    move v1, v0
 
     move v0, v3
 
     :goto_1
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "OpUpdateBluetooth, "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v7, ", "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget v6, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconId:I
 
-    if-ne v6, v2, :cond_5
+    if-ne v6, v1, :cond_5
 
     iget-boolean v6, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconVisible:Z
 
@@ -947,7 +969,7 @@
 
     if-ne v6, v5, :cond_5
 
-    if-eqz v4, :cond_8
+    if-eqz v4, :cond_7
 
     iget-object v6, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothContentDescription:Ljava/lang/String;
 
@@ -955,13 +977,9 @@
 
     move-result v6
 
-    if-nez v6, :cond_8
+    if-nez v6, :cond_7
 
     :cond_5
-    sget-boolean v6, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->DEBUG_ONEPLUS:Z
-
-    if-eqz v6, :cond_7
-
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "updateBluetooth"
@@ -990,11 +1008,27 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string v7, " mIconId="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconId:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     const-string v7, " iconId="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, " mConnected="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v7, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothConnected:Z
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v7, " connected="
 
@@ -1002,11 +1036,41 @@
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v7, " visible="
+    const-string v7, " mVisible="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v7, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconVisible:Z
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v7, ", visible="
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v7, " mDescrip="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v7, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothContentDescription:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, ", descrip="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " mLevel="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothBatteryLevel:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v7, " batteryLevel="
 
@@ -1018,10 +1082,9 @@
 
     move-result-object v6
 
-    invoke-static {v1, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
-    iput v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconId:I
+    iput v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconId:I
 
     iput-boolean v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothIconVisible:Z
 
@@ -1031,9 +1094,9 @@
 
     iput-object v4, p0, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->mBluetoothContentDescription:Ljava/lang/String;
 
+    :cond_7
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->postShowBT()V
 
-    :cond_8
     return-void
 .end method
 

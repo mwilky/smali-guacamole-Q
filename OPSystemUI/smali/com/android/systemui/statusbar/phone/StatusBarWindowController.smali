@@ -919,10 +919,21 @@
 
     :cond_3
     :goto_2
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
+    iget-boolean v0, p1, Lcom/android/systemui/statusbar/phone/StatusBarWindowController$State;->backdropShowing:Z
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Lcom/oneplus/util/OpUtils;->isHomeApp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    :cond_4
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->mLpChanged:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -935,7 +946,7 @@
 
     goto :goto_3
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->mLpChanged:Landroid/view/WindowManager$LayoutParams;
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
@@ -949,7 +960,7 @@
     :goto_3
     iget-boolean p1, p1, Lcom/android/systemui/statusbar/phone/StatusBarWindowController$State;->dozing:Z
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->mLpChanged:Landroid/view/WindowManager$LayoutParams;
 
@@ -963,7 +974,7 @@
 
     goto :goto_4
 
-    :cond_5
+    :cond_6
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->mLpChanged:Landroid/view/WindowManager$LayoutParams;
 
     iget p1, p0, Landroid/view/WindowManager$LayoutParams;->privateFlags:I

@@ -1148,8 +1148,19 @@
 .end method
 
 .method private final updateBluetooth()V
-    .locals 0
+    .locals 2
 
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "PhoneStatusBarPolicy"
+
+    const-string v1, "updateBluetooth"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     invoke-super {p0}, Lcom/oneplus/systemui/statusbar/phone/OpPhoneStatusBarPolicy;->OpUpdateBluetooth()V
 
     return-void

@@ -12,8 +12,3 @@
     accessFlags = 0x609
     name = "BluetoothManagerCallback"
 .end annotation
-
-
-# virtual methods
-.method public abstract onBluetoothManagerInitialized(Landroid/content/Context;Lcom/android/settingslib/bluetooth/LocalBluetoothManager;)V
-.end method
