@@ -5714,6 +5714,14 @@
     goto :goto_4
 
     :cond_e
+    const v5, 0x6
+    
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
+
+    move-result-wide v8
+
+    invoke-direct {p0, v8, v9}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
+
     invoke-static {p1}, Lcom/android/server/policy/OpPowerKeyLaunchInjector;->interceptPowerKeyDown(Landroid/view/KeyEvent;)Z
 
     move-result v5
