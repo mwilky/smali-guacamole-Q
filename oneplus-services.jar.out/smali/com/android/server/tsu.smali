@@ -42,7 +42,11 @@
     .locals 6
 
     :try_start_0
-    invoke-static {}, Lcom/android/server/rtg;->access$700()[Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/server/tsu;->this$0:Lcom/android/server/rtg;
+
+    invoke-static {v0}, Lcom/android/server/rtg;->cno(Lcom/android/server/rtg;)V
+
+    invoke-static {}, Lcom/android/server/rtg;->access$800()[Ljava/lang/String;
 
     move-result-object v0
 

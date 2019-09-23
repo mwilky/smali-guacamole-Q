@@ -271,12 +271,20 @@
     return v0
 .end method
 
-.method static synthetic access$700()[Ljava/lang/String;
+.method static synthetic access$800()[Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/android/server/rtg;->Tb:[Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method static synthetic cno(Lcom/android/server/rtg;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/rtg;->fl()V
+
+    return-void
 .end method
 
 .method private dl()V
@@ -1157,8 +1165,6 @@
 
     :cond_0
     iput-object p1, p0, Lcom/android/server/rtg;->mContext:Landroid/content/Context;
-
-    invoke-direct {p0}, Lcom/android/server/rtg;->fl()V
 
     iget p1, p0, Lcom/android/server/rtg;->Nb:I
 
