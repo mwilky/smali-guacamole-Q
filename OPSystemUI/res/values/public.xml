@@ -4753,6 +4753,7 @@
     <public type="dimen" name="picture_in_picture_button_start_margin" id="0x7f0705ce" />
     <public type="dimen" name="picture_in_picture_button_width" id="0x7f0705cf" />
     <public type="dimen" name="op_keuguard_message_area_and_emergency_textsize" id="0x7f07051f" />
+    <public type="dimen" name="quick_qs_total_height_tweak" id="0x7f070798" />
     <public type="drawable" name="$$face_dialog_dark_to_checkmark__10__0" id="0x7f080000" />
     <public type="drawable" name="$$face_dialog_dark_to_checkmark__11__0" id="0x7f080001" />
     <public type="drawable" name="$$face_dialog_dark_to_checkmark__11__1" id="0x7f080002" />
@@ -9991,6 +9992,7 @@
     <public type="layout" name="zen_mode_turn_on_dialog_container" id="0x7f0d01ff" />
     <public type="layout" name="global_actions_column_seascape" id="0x7f0d005c" />
     <public type="layout" name="global_actions_grid_seascape" id="0x7f0d005f" />
+    <public type="layout" name="quick_settings_brightness_dialog_mod" id="0x7f0d0200" />
     <public type="mipmap" name="ic_daydreams" id="0x7f0e0000" />
     <public type="mipmap" name="ic_launcher_dreams" id="0x7f0e0001" />
     <public type="plurals" name="abc_slice_duration_days" id="0x7f0f0000" />
