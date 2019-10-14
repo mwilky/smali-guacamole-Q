@@ -104,7 +104,7 @@
 
     iput-object v0, p0, Lcom/android/settings/UsageStatsActivity;->mPm:Landroid/content/pm/PackageManager;
 
-    const v0, 0x7f0a0727
+    const v0, 0x7f0a0728
 
     invoke-virtual {p0, v0}, Lcom/android/settings/UsageStatsActivity;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    const v1, 0x7f0a0536
+    const v1, 0x7f0a0537
 
     invoke-virtual {p0, v1}, Lcom/android/settings/UsageStatsActivity;->findViewById(I)Landroid/view/View;
 

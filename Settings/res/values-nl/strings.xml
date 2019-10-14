@@ -1289,7 +1289,7 @@ Als je je telefoon weer wilt gebruiken, moet je de fabrieksinstellingen herstell
     <string name="data_summary_format">%1$s gebr. sinds %2$s</string>
     <string name="data_switch_started">Schakelen naar simkaart voor mobiele data, dit kan even duren…</string>
     <string name="data_switch_warning_text">Toegang tot gegevens wijzigen stopt alle LTE-diensten. Wenst u verder te gaan?</string>
-    <string name="data_switch_warning_title">Gegevens op sim%1$s selecteren</string>
+    <string name="data_switch_warning_title">Select Data in SIM%1$s</string>
     <string name="data_usage_accounting">Het door de provider berekende dataverbruik kan afwijken van de berekening van je apparaat.</string>
     <string name="data_usage_app">Appgebruik</string>
     <string name="data_usage_app_info_label">APP-INFO</string>
@@ -1775,6 +1775,7 @@ Neem contact op met de beheerder van je organisatie voor meer informatie."</stri
     <string name="failed_to_open_app_settings_toast">Instellingen openen voor %1$s mislukt</string>
     <string name="fcc_equipment_id">Apparatuur-ID</string>
     <string name="feature_flags_dashboard_title">Functievlaggen</string>
+    <string name="feature_not_support_split_screen">Deze functie wordt niet ondersteund in gesplitst scherm.</string>
     <string name="filter">Filter</string>
     <string name="filter_all_apps">Alle apps</string>
     <string name="filter_apps_all">Alle apps</string>
@@ -2890,7 +2891,7 @@ Hierdoor kan de app ook 'Niet storen' in- of uitschakelen en gerelateerde instel
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Pocket mode</string>
     <string name="oneplus_aod_smart_display_calendar_event">Agendagebeurtenis</string>
     <string name="oneplus_aod_smart_display_music_info">Mediaspeler</string>
-    <string name="oneplus_aod_smart_display_title">Slimme weergave</string>
+    <string name="oneplus_aod_smart_display_title">Contextuele informatie</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Compatibiliteitsmodus</string>
     <string name="oneplus_app_display_fullscreen">Modus volledig scherm</string>
@@ -2908,7 +2909,7 @@ Hierdoor kan de app ook 'Niet storen' in- of uitschakelen en gerelateerde instel
     <string name="oneplus_app_network_settings">Controle dataverbruik</string>
     <string name="oneplus_app_notification_allow_led">LED Aan</string>
     <string name="oneplus_app_notification_not_allow_led">LED Uit</string>
-    <string name="oneplus_app_ops_title">Toestemmingen voor apps</string>
+    <string name="oneplus_app_ops_title">App toelatingen</string>
     <string name="oneplus_app_uninstall_remark">Gelieve bovenstaande betalingapps te installeren om Quick Pay te gebruiken</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">App meldingen, parallelle apps, machtigingen</string>
@@ -3001,10 +3002,11 @@ Batterij sparen schakelt automatisch uit wanneer het toestel oplaadt."</string>
     <string name="oneplus_connected_devices_count">Er zijn %1$s toestellen verbonden</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, casten, afdrukken</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; apparaatverbinding</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESSOR</string>
     <string name="oneplus_custom_time">Aangepaste periode</string>
     <string name="oneplus_customization">Navigatiebalk aanpassen</string>
     <string name="oneplus_customization_summary">Lang drukken, dubbeltikken</string>
+    <string name="oneplus_customization_summary_hide_navbar">Lang drukken, dubbeltikken, de navigatiebalk verbergen</string>
     <string name="oneplus_data_usage_control_title">Controle dataverbruik</string>
     <string name="oneplus_dc_dimming_summary">DC-dimmen past de helderheid van het scherm aan door het vermogen van het scherm te wijzigen. Indien ingeschakeld, flikkert het scherm minder bij een lage helderheid. In sommige gevallen kunnen er echter ook afwijkende kleuren worden weergegeven.</string>
     <string name="oneplus_dc_dimming_title">DC-dimmen</string>
@@ -3070,7 +3072,7 @@ Batterij sparen schakelt automatisch uit wanneer het toestel oplaadt."</string>
     <string name="oneplus_earphone">Hoofdtelefoon</string>
     <string name="oneplus_earphone_mode">Hoofdtelefoon modus</string>
     <string name="oneplus_emergency_rescue_settings">Noodhulp</string>
-    <string name="oneplus_emergency_rescue_settings_summary">Automatisch noodoproep maken dor snel te drukken op de aan/uit-knop</string>
+    <string name="oneplus_emergency_rescue_settings_summary">Automatisch noodoproep maken door snel op de aan-uitknop te drukken</string>
     <string name="oneplus_emergency_tap_power_gesture_tips">Beschikbaar na het wijzigen van de instellingen van de AAN-UITKNOP van noodhulp</string>
     <string name="oneplus_enroll_fingerprint_tips_summary">"1.Voer uw vingerafdruk elke keer dat de beschermlaag wordt vervangen opnieuw in om te zorgen dat de vingerafdruk beschikbaar is
 
@@ -3157,8 +3159,8 @@ Let op: Gezichtsontgrendeling is minder veilig dan het gebruik van een vingerafd
     <string name="oneplus_forum_award_summary">Deze community is van jou. Alleen jij bepaalt waar we naartoe gaan. Samen definiëren en verfijnen we hem. Door codes te herstructureren en te schrijven. Dit is voor jou. Bedankt om samen met ons te dromen!</string>
     <string name="oneplus_forum_award_title">Award</string>
     <string name="oneplus_fullscreen_back_guide_summary">Veeg naar binnen vanaf de linkeronder- of rechteronderrand van het scherm</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Veeg omhoog vanaf de linker- of rechterkant van de onderkant van het scherm</string>
-    <string name="oneplus_fullscreen_back_guide_title">Vorige</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Veeg aan de onderzijde van het scherm aan de linker- of rechterzijde omhoog</string>
+    <string name="oneplus_fullscreen_back_guide_title">Terug</string>
     <string name="oneplus_fullscreen_disable_this_feature">Deze functie kan niet worden gebruikt wanneer navigatiegebaren zijn ingeschakeld.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Laat ons het gebaar proberen dat de knop terug vervangt.
 Veeg omhoog van de linker- of rechterzijde van de bodem van het scherm."</string>
@@ -3170,7 +3172,7 @@ Om op elk moment naar het Home-scherm te gaan, veeg omhoog vanaf de onderste cen
     <string name="oneplus_fullscreen_gesture_guide_multitask">Voor recente apps, veeg omhoog vanaf de onderzijde van het scherm en pauzeer.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Navigatiegebaren worden ingeschakeld</string>
     <string name="oneplus_fullscreen_home_guide_summary">Veeg omhoog vanaf de onderrand van het scherm</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Veeg omhoog vanaf het midden van de onderrand van het scherm</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Veeg omhoog vanaf de onderste centrale rand van het scherm</string>
     <string name="oneplus_fullscreen_home_guide_title">Home</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Navigatiegebaren kunnen nog steeds vanaf de onderrand van het scherm worden geactiveerd, veeg van de linker- of rechterrand om terug te gaan</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Net als bij portret gebruikt u navigatiegebaren nog steeds vanaf de onderzijde van het apparaat</string>
@@ -3183,7 +3185,7 @@ Om op elk moment naar het Home-scherm te gaan, veeg omhoog vanaf de onderste cen
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">Veeg omhoog vanaf het midden van de onderrand van het scherm en sleep uw vinger vervolgens naar links of rechts</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Schakelen tussen recente apps</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Veeg omhoog vanaf de onderrand van het scherm en pauzeer</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Veeg omhoog vanaf het midden van de onderrand van het scherm en pauzeer</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Veeg omhoog vanaf de onderste centrale rand van het scherm en pauzeer</string>
     <string name="oneplus_fullscreen_recent_guide_title">Recente apps</string>
     <string name="oneplus_functional_terms">ALGEMENE VOORWAARDEN</string>
     <string name="oneplus_game_haptic_feedback_summary">Voeg haptische feedback toe om uw game-ervaring levendiger te maken. Bluetooth-hoofdtelefoons worden nog niet ondersteund.</string>
@@ -3264,6 +3266,10 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_intelligently_select_best_wifi">Selecteer op slimme wijze het beste Wi‑Fi-netwerk</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Selecteer op slimme wijze het beste Wi‑Fi-netwerk en maak verbinding door de connectiviteit en signaalsterkte van Wi‑Fi-netwerken te detecteren en te analyseren</string>
     <string name="oneplus_intensely">Sterk</string>
+    <string name="oneplus_is_turn_on_feature">Weet u zeker dat u deze functie wilt inschakelen?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Wanneer de functie is ingeschakeld, kunnen de volgende situaties zich af en toe voordoen:
+1.Sommige delen van het scherm wijken af
+2.Adaptieve helderheid werkt niet naar behoren"</string>
     <string name="oneplus_lab_dislike">Nee</string>
     <string name="oneplus_lab_features">LABFUNCTIES</string>
     <string name="oneplus_lab_feedback_toast">Bedankt voor uw feedback!</string>
@@ -3361,7 +3367,7 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_notification_channel_summary_low">Minder belangrijke zonder geluid of trillingen</string>
     <string name="oneplus_notification_dialog_never_mode">Nooit</string>
     <string name="oneplus_notification_dialog_ringtone">Notificatie beltoon</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Alleen in geluidsmodus</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Altijd</string>
     <string name="oneplus_notification_dots">Meldingsstippen</string>
     <string name="oneplus_notification_instrucitons">Zelfstudie voor gebruikers</string>
@@ -3369,11 +3375,11 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_notification_ringtone_mode">Alleen in geluidsmodus</string>
     <string name="oneplus_notification_ringtone_silent_mode">Altijd</string>
     <string name="oneplus_notification_ringtone_title">Notificatie beltoon in hoofdtelefoon</string>
-    <string name="oneplus_notification_silence_title">Overig</string>
+    <string name="oneplus_notification_silence_title">Andere</string>
     <string name="oneplus_notification_sound_default">Standaard melding</string>
     <string name="oneplus_notification_ways">Weergavemodus</string>
     <string name="oneplus_notification_ways_title">Hoe worden meldingen getoond</string>
-    <string name="oneplus_notifications">Meldingen</string>
+    <string name="oneplus_notifications">Notificaties</string>
     <string name="oneplus_notifications_3rd_calls">Meldingen voor oproepen van derden</string>
     <string name="oneplus_notifications_3rd_calls_summary">De spraak- of video-oproepen van socialemedia-apps worden getoond als meldingen</string>
     <string name="oneplus_notifications_and_vibration">Geluid en trilling bij melding</string>
@@ -3568,7 +3574,8 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">niet storen, onderbreken, onderbreking, pauze, modus</string>
     <string name="oneplus_search_keyword_swap_navkeys">knoppen wisselen</string>
     <string name="oneplus_search_keyword_switch">overzetten,gegevensmigratie</string>
-    <string name="oneplus_search_keyword_theme_settings">VERGRENDELSCHERM AANPASSEN, achtergronden, klokstijl, vingerafdrukanimatie, Horizon Light, SYSTEEM AANPASSEN, accentkleur, vorm, lettertype, toon, pictogrampakket</string>
+    <string name="oneplus_search_keyword_theme_settings">VERGRENDELSCHERM AANPASSEN, achtergrond, klokstijl, vingerafdrukanimatie, Horizon Light, SYSTEEM AANPASSEN, accentkleur, vorm, lettertype, toon, pictogrampakket, verlichtend licht, genuanceerd donker, levendige tinten</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">VERGRENDELSCHERM AANPASSEN, achtergrond, klokstijl, vingerafdrukanimatie, Horizon Light, SYSTEEM AANPASSEN, accentkleur, vorm, lettertype, toon, pictogrampakket, verlichtend licht, genuanceerd donker, levendige tinten, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">schermafdruk</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">meldingen,ervaring,programma,verbetering</string>
@@ -3632,7 +3639,7 @@ Opmerking:
     <string name="oneplus_smart_wifi_connection">slimme Wi‑Fi-verbinding</string>
     <string name="oneplus_sms">Sms</string>
     <string name="oneplus_sms_and_vibration">Beltoon en trilling bij sms</string>
-    <string name="oneplus_snooze_options_title">Meldingen uitstellen vanuit het vervolgkeuzescherm</string>
+    <string name="oneplus_snooze_options_title">Meldingen uitstellen vanuit het meldingsscherm</string>
     <string name="oneplus_sound_and_vibrate">Geluid &amp; vibratie</string>
     <string name="oneplus_sound_settings_summary">Niet storen, hoofdtelefoonmodus</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3644,7 +3651,7 @@ Opmerking:
     <string name="oneplus_suspension_notice">Mededeling</string>
     <string name="oneplus_suspension_notice_summary">Apps toestaan aankondigingsmeldingen te tonen</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Overschakelen</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Het wijzigen van de resolutie kan ertoe leiden dat sommige achtergrondapps sluiten. Wilt u de wijziging bevestigen?</string>
     <string name="oneplus_switch_screen_lock_type">Het type schermvergrendeling wordt gewijzigd, gelieve te wachten...</string>
     <string name="oneplus_system_data_summary">Inclusief accountinfo, contactpersonen, gegevens apps</string>
@@ -3665,10 +3672,11 @@ Opmerking:
     <string name="oneplus_theme_clock">Klokstijl</string>
     <string name="oneplus_theme_clock_snake_action">AMBIENT DISPLAY INSCHAKELEN</string>
     <string name="oneplus_theme_clock_snake_tip">Deze functie is beschikbaar wanneer ambient display is ingeschakeld</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Wijzigingen verwijderen?</string>
     <string name="oneplus_theme_drop_title">Bewerkingsmodus afsluiten</string>
     <string name="oneplus_theme_entrance_summary">Achtergronden, accentkleur, lettertype, toon</string>
-    <string name="oneplus_theme_entrance_title">Aanpassen</string>
+    <string name="oneplus_theme_entrance_title">Aanpassing</string>
     <string name="oneplus_theme_fingerprint">Vingerafdrukanimatie</string>
     <string name="oneplus_theme_fingerprint_snake_action">VINGERAFDRUK INSCHAKELEN</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Deze functie is beschikbaar wanneer vingerafdruk is ingeschakeld</string>
@@ -3679,9 +3687,10 @@ Opmerking:
     <string name="oneplus_theme_preset">Vooraf ingesteld thema</string>
     <string name="oneplus_theme_preset_color">Levendige tinten</string>
     <string name="oneplus_theme_preset_dark">Genuanceerd donker</string>
-    <string name="oneplus_theme_preset_light">Verlichting</string>
+    <string name="oneplus_theme_preset_light">Verlichtend licht</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">"Vooraf ingestelde thema's beschikken over een breed scala aan achtergronden, accentkleur, toon, etc."</string>
+    <string name="oneplus_theme_preset_summary">"Vooraf ingestelde thema's beschikken over een breed scala aan accentkleuren, tonen, etc."</string>
+    <string name="oneplus_theme_preset_summary_tmp">"Vooraf ingestelde thema's beschikken over een breed scala aan achtergronden, accentkleuren, tonen, etc."</string>
     <string name="oneplus_theme_shape">Vorm</string>
     <string name="oneplus_theme_shape_effect_round">Rond</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Ronde rechthoek</string>
@@ -3708,7 +3717,7 @@ Opmerking:
     <string name="oneplus_tools_summary_U30">Game-modus, pocket mode, gepland in-/uitschakelen</string>
     <string name="oneplus_tools_summary_no_gamingmode">App-vergrendeling, parallelle apps</string>
     <string name="oneplus_tools_title">"Hulpprogramma 's"</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus-account, andere accounts</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Standaard-apps, toestemmingen</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert slider, navigatie en gebaren</string>
     <string name="oneplus_top_level_cloud_h2_summary">Gegevens synchroniseren met de cloud, Zoek mijn telefoon</string>
@@ -3723,6 +3732,8 @@ Opmerking:
     <string name="oneplus_top_level_system_summary">Taal en toetsenbord, tijd, resetten, systeemupdates</string>
     <string name="oneplus_touch_vibrate">Trilling bij aanraken</string>
     <string name="oneplus_turn_off_time">Tot</string>
+    <string name="oneplus_turn_on_feature_cancel">ANNULEREN</string>
+    <string name="oneplus_turn_on_feature_ok">INSCHAKELEN</string>
     <string name="oneplus_turn_on_time">Van</string>
     <string name="oneplus_uninstatll_multi_app_msg">Alle gegevens in de parallelle app worden gewist bij het verwijderen. Bent u zeker dat u wilt verwijderen?</string>
     <string name="oneplus_uninstatll_multi_app_title">Parallelle %1$s</string>
@@ -3789,6 +3800,7 @@ De instellingen van uw router worden niet gewijzigd als u het netwerk als verbor
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Kies eerst een back-upschermvergrendeling</string>
     <string name="op_cloud_service_summary">"Synchroniseer uw contacten, notities, foto's enz."</string>
     <string name="op_cloud_service_title">Cloud Service</string>
     <string name="op_confirm_enable_oem_unlock_text">WAARSCHUWING: Apparaatbescherming en verificatiefuncties, zoals vingerafdrukbetaling en de geavanceerde DRM-toets werken mogelijk niet als OEM ontgrendeld is.</string>
@@ -3800,13 +3812,21 @@ De instellingen van uw router worden niet gewijzigd als u het netwerk als verbor
     <string name="op_default_apps_summary">Start, browser</string>
     <string name="op_default_luncher_title">Launcher</string>
     <string name="op_dnd_summary">Niet storen</string>
+    <string name="op_face_unlock_set_unlock_password">Gezichtsontgrendeling + wachtwoord</string>
+    <string name="op_face_unlock_set_unlock_pattern">Gezichtsontgrendeling + patroon</string>
+    <string name="op_face_unlock_set_unlock_pin">Gezichtsontgrendeling + pincode</string>
+    <string name="op_face_unlock_skip_face">Doorgaan zonder gezichtsontgrendeling</string>
     <string name="op_failed_to_get_data">Gegevens ophalen mislukt</string>
     <string name="op_fetch_data_in_process">Laden</string>
     <string name="op_fragment">Kort</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">Apps met groot energieverbruik beheren</string>
     <string name="op_light_mode_title">Licht</string>
     <string name="op_linked_launch_summary">Apps beheren die in de achtergrond gestart worden</string>
     <string name="op_linked_launch_title">Automatisch starten apps</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Stel een wachtwoord in om Gezichtsontgrendeling te gebruiken</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Stel een patroon in om Gezichtsontgrendeling te gebruiken</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Stel een pincode in om Gezichtsontgrendeling te gebruiken</string>
     <string name="op_not_disturb">Niet Storen voorkeuren</string>
     <string name="op_not_disturb_summary">Oproepen en meldingen dempen en vibratie uitschakelen, uitgezonderd voor alarmen</string>
     <string name="op_oneplus_roaming_summary">Voorziet diensten voor wereldwijde Internettoegang</string>
@@ -5019,7 +5039,7 @@ Probeer het met een snellere ^3 of gebruik deze ^4 voor draagbare opslag."</stri
     <string name="summary_range_verbal_combination">%1$s t/m %2$s</string>
     <string name="summary_voice_network">VoLTE-, Wi-Fi-bellen</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Wifi-bellen</string>
+    <string name="summary_voice_wfc_only">Bellen met Wi-Fi</string>
     <string name="support_summary">Help-artikelen, bel- en chatsupport, aan de slag</string>
     <string name="swipe_direction_ltr">Veeg naar rechts om te sluiten of naar links voor het menu</string>
     <string name="swipe_direction_rtl">Veeg naar links om te sluiten of naar rechts voor het menu</string>

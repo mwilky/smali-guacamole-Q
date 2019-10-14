@@ -49,17 +49,17 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {v0}, Lcom/android/settings/network/ApnSettings;->access$1300(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
+    invoke-static {v0}, Lcom/android/settings/network/ApnSettings;->access$1200(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/settings/network/ApnSettings$RestoreApnProcessHandler;->this$0:Lcom/android/settings/network/ApnSettings;
 
-    invoke-static {}, Lcom/android/settings/network/ApnSettings;->access$1400()Landroid/net/Uri;
+    invoke-static {}, Lcom/android/settings/network/ApnSettings;->access$1300()Landroid/net/Uri;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/android/settings/network/ApnSettings;->access$1500(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-static {v1, v2}, Lcom/android/settings/network/ApnSettings;->access$1400(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v1
 

@@ -3,13 +3,9 @@
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">Dar turite %1$d bandymus (-ų)</item>
         <item quantity="one">Dar turite %1$d bandymą</item>
-        <item quantity="few">Dar turite %1$d bandymus (-ų)</item>
-        <item quantity="many">Dar turite %1$d bandymus (-ų)</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Bandykite dar kartą po %d sek.</item>
         <item quantity="one">Bandykite dar kartą po %d sek.</item>
-        <item quantity="few">Bandykite dar kartą po %d sek.</item>
-        <item quantity="many">Bandykite dar kartą po %d sek.</item>
     </plurals>
 </resources>

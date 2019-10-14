@@ -327,7 +327,7 @@ Col·loca els dispositius a prop (normalment encarant-los per la part posterior)
     <string name="aod_horizon_light_effect_4">Daurat</string>
     <string name="aod_horizon_light_effect_5">McLaren</string>
     <string name="aod_horizon_light_select">SELECCIONEU EL COLOR</string>
-    <string name="aod_horizon_light_snake_action">ACTIVEU</string>
+    <string name="aod_horizon_light_snake_action">ACTIVA</string>
     <string name="aod_horizon_light_snake_tip">"Aquesta funció estarà disponible quan s'activi Notificacions noves"</string>
     <string name="apn_apn">APN</string>
     <string name="apn_auth_type">"Tipus d'autenticació"</string>
@@ -1099,7 +1099,7 @@ Selecció"</string>
     <string name="color_none">Cap</string>
     <string name="color_orange">Taronja</string>
     <string name="color_picker_accent_color_message">"Seleccioneu un color d'accent"</string>
-    <string name="color_picker_default">Per defecte</string>
+    <string name="color_picker_default">Predeterminat</string>
     <string name="color_picker_led_color_message">Seleccioneu el color del LED</string>
     <string name="color_picker_message_default">Trieu el vostre color preferit.</string>
     <string name="color_picker_unknown_label">Desconegut</string>
@@ -1775,6 +1775,7 @@ Per obtenir més informació, contacta amb l'administrador de la teva organitzac
     <string name="failed_to_open_app_settings_toast">"No s'ha pogut obrir la configuració de: %1$s"</string>
     <string name="fcc_equipment_id">"Id. de l'equip"</string>
     <string name="feature_flags_dashboard_title">Marques de funcions</string>
+    <string name="feature_not_support_split_screen">Aquesta funció no és compatible amb la pantalla dividida.</string>
     <string name="filter">Filtra</string>
     <string name="filter_all_apps">Totes les aplicacions</string>
     <string name="filter_apps_all">Totes les aplicacions</string>
@@ -2890,7 +2891,7 @@ L'aplicació també podrà activar i desactivar el mode No molestis i canviar la
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Mode de butxaca</string>
     <string name="oneplus_aod_smart_display_calendar_event">Esdeveniment de calendari</string>
     <string name="oneplus_aod_smart_display_music_info">Reproductor multimèdia</string>
-    <string name="oneplus_aod_smart_display_title">Pantalla intel·ligent</string>
+    <string name="oneplus_aod_smart_display_title">Informació contextual</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Mode de compatibilitat</string>
     <string name="oneplus_app_display_fullscreen">Mode de pantalla completa</string>
@@ -2908,7 +2909,7 @@ L'aplicació també podrà activar i desactivar el mode No molestis i canviar la
     <string name="oneplus_app_network_settings">"Control d'ús de dades"</string>
     <string name="oneplus_app_notification_allow_led">LED activat</string>
     <string name="oneplus_app_notification_not_allow_led">LED desactivat</string>
-    <string name="oneplus_app_ops_title">"Permisos d'aplicacions"</string>
+    <string name="oneplus_app_ops_title">"Permisos de l'app"</string>
     <string name="oneplus_app_uninstall_remark">Instal·leu les aplicacions de pagament que es mostren a dalt per fer servir el pagament ràpid</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">"Notificacions d'aplicacions, Aplicacions paral·leles, permisos"</string>
@@ -3001,10 +3002,11 @@ L'estalviador de bateria es desactiva automàticament quan el dispositiu s'està
     <string name="oneplus_connected_devices_count">Hi ha %1$s dispositius connectats</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, emissió, impressió</string>
     <string name="oneplus_connected_devices_dashboard_title">Connexió Bluetooth i de dispositius</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESSADOR</string>
     <string name="oneplus_custom_time">Interval de temps personalitzat</string>
     <string name="oneplus_customization">Personalització de la barra de navegació</string>
-    <string name="oneplus_customization_summary">Pulsació llarga, doble pulsació</string>
+    <string name="oneplus_customization_summary">Manteniu premut, toqueu dos cops</string>
+    <string name="oneplus_customization_summary_hide_navbar">"Si manteniu premut i toqueu dos cops, s'oculta la barra de navegació"</string>
     <string name="oneplus_data_usage_control_title">"Control d'ús de dades"</string>
     <string name="oneplus_dc_dimming_summary">"L'atenuació DC ajustarà la brillantor de la pantalla canviant l'alimentació del circuit de la pantalla. En activar-lo, reduirà els parpellejos de la pantalla a una brillantar baixa. Tanmateix, açò pot provocar que apareixin colors anòmals en alguns casos."</string>
     <string name="oneplus_dc_dimming_title">Atenuació DC</string>
@@ -3142,7 +3144,7 @@ Consell de seguretat: el desbloqueig facial és menys segur que l'empremta digit
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND avançada</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Primer és necessari habilitar el Mode de joc per utilitzar el Mode Fnatic</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">"Es prioritza la força del senyal de la targeta SIM principal per minimitzar la interferència amb els jocs de baixa latència. Com a resultat, s'inhabilitarà la targeta SIM secundària, i no es rebran trucades o missatges."</string>
-    <string name="oneplus_fnatic_mode_network_introduction_summary">"Millora l'estabilitat de la connexió de xarxa"</string>
+    <string name="oneplus_fnatic_mode_network_introduction_summary">"Millorar l'estabilitat de la connexió de xarxa"</string>
     <string name="oneplus_fnatic_mode_network_introduction_title">Millora de xarxa</string>
     <string name="oneplus_fnatic_mode_summary">Potencieu la vostra experiència de joc</string>
     <string name="oneplus_fnatic_mode_summary_2">Un mode de joc avançat, creat per pioners de jocs</string>
@@ -3157,7 +3159,7 @@ Consell de seguretat: el desbloqueig facial és menys segur que l'empremta digit
     <string name="oneplus_forum_award_summary">Aquesta comunitat és vostra. Només podeu definir el nostre curs. Junts, podem definir i refinar. Suprimint versions de software i escrivint codis. Això és per a vós. Gràcies per somiar amb nosaltres!</string>
     <string name="oneplus_forum_award_title">Premi</string>
     <string name="oneplus_fullscreen_back_guide_summary">Feu lliscar el dit cap a dins des de la vora inferior esquerra o dreta de la pantalla</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">"Feu lliscar el dit cap amunt des de la dreta o l'esquerra de la part inferior de la pantalla"</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Feu lliscar el dit des del costat esquerre o dret de la part inferior de la pantalla</string>
     <string name="oneplus_fullscreen_back_guide_title">Enrere</string>
     <string name="oneplus_fullscreen_disable_this_feature">Aquesta funció no es pot utilitzar si els gests de navegació estan habilitats.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Provem de fer el gest que substitueix el botó Enrere. 
@@ -3170,7 +3172,7 @@ Per anar a la pantalla d'inici en qualsevol moment, feu lliscar el dit cap amunt
     <string name="oneplus_fullscreen_gesture_guide_multitask">Per a aplicacions recents, feu lliscar el dit cap amunt des de baix de la pantalla i pauseu.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">"Els gestos de navegació s'activaran"</string>
     <string name="oneplus_fullscreen_home_guide_summary">Feu lliscar el dit cap amunt des de la vora inferior de la pantalla</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Feu lliscar el dit cap amunt des de la part inferior central de la pantalla</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Feu lliscar el dit cap amunt des del centre de la vora inferior de la pantalla</string>
     <string name="oneplus_fullscreen_home_guide_title">Inici</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Encara es poden activar els gestos de navegació des de la vora inferior de la pantalla. Feu lliscar el dit des de la vora esquerra o dreta per tornar enrere</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">"Igual que en el mode de retrat, els gests de navegació s'executen des de la part inferior del dispositiu"</string>
@@ -3264,6 +3266,10 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_intelligently_select_best_wifi">Selecciona de manera intel·ligent la millor Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Selecciona de manera intel·ligent i connecta la millor Wi‑Fi detectant i analitzant la connectivitat i la cobertura de les xarxes Wi‑Fi</string>
     <string name="oneplus_intensely">Forta</string>
+    <string name="oneplus_is_turn_on_feature">Esteu segur que voleu activar aquesta funció?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Quan estigui activada, és possible que es produeixin les següents situacions ocasionals:
+1.Algunes àrees de visualització de la pantalla són anòmales
+2.La brillantor adaptativa no funcionarà correctament"</string>
     <string name="oneplus_lab_dislike">"No m'agrada"</string>
     <string name="oneplus_lab_features">FUNCIONS DEL LABORATORI</string>
     <string name="oneplus_lab_feedback_toast">Gràcies pels vostres comentaris!</string>
@@ -3324,7 +3330,7 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_network_dashboard_title">Wi-Fi i internet</string>
     <string name="oneplus_network_datausage_restrict_title">Ús de dades inhabilitat</string>
     <string name="oneplus_network_wifi_restrict_title">Desactivació de la Wi‑Fi</string>
-    <string name="oneplus_never_auto">Desactivat</string>
+    <string name="oneplus_never_auto">Inhabilitat</string>
     <string name="oneplus_night_mode_brightness">Lleugeresa</string>
     <string name="oneplus_night_mode_brightness_strong">El més fosc</string>
     <string name="oneplus_night_mode_color_temperature">Temperatura de color</string>
@@ -3361,7 +3367,7 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_notification_channel_summary_low">Notificacions menys importants sense so o vibració</string>
     <string name="oneplus_notification_dialog_never_mode">Mai</string>
     <string name="oneplus_notification_dialog_ringtone">To de trucada per a notificacions</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Només en mode de to</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Sempre</string>
     <string name="oneplus_notification_dots">Punts de notificació</string>
     <string name="oneplus_notification_instrucitons">"Tutorial d'ús"</string>
@@ -3420,7 +3426,7 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_preference_settings_manual_open">Estat</string>
     <string name="oneplus_preference_settings_turn_off_time">Fins a les</string>
     <string name="oneplus_preference_settings_turn_on">Activa No molesteu</string>
-    <string name="oneplus_preference_settings_turn_on_time">Des de les</string>
+    <string name="oneplus_preference_settings_turn_on_time">De</string>
     <string name="oneplus_prior_to_use_you_need_to">Abans de fer-ho servir, heu de:</string>
     <string name="oneplus_privacy_policy">Política de privacitat</string>
     <string name="oneplus_product_info_introduce">Informació del dispositiu &amp; Targeta de garantia</string>
@@ -3568,7 +3574,8 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">no molesteu, interrompre, interrupció, descans, mode</string>
     <string name="oneplus_search_keyword_swap_navkeys">intercanvia botons</string>
     <string name="oneplus_search_keyword_switch">transferència,migració de dades</string>
-    <string name="oneplus_search_keyword_theme_settings">"PERSONALITZACIÓ DE LA PANTALLA DE BLOQUEIG, Fons de pantalla, Estil del rellotge, Animació d'emprempta digital, Horizon light, PERSONALITZACIÓ DEL SISTEMA, Color d'accent, Forma, Tipus de lletra, To, Paquet d'icones"</string>
+    <string name="oneplus_search_keyword_theme_settings">"PERSONALITZACIÓ DE LA PANTALLA DE BLOQUEIG, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, PERSONALITZACIÓ DEL SISTEMA, Color d'accent, Forma, Tipus de lletra, To, Packet d'icones, Llum d'il·luminació, Fosc amb matisos, Tints vibrants"</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">"PERSONALITZACIÓ DE LA PANTALLA DE BLOQUEIG, Fons de pantalla, Estil de rellotge, Animació d'empremta digital, Horizon Light, PERSONALITZACIÓ DEL SISTEMA, Color d'accent, Forma, Tipus de lletra, To, Packet d'icones, Llum d'il·luminació, Fosc amb matisos, Tints vibrants, McLaren"</string>
     <string name="oneplus_search_keyword_three_screenshots">captura de pantalla</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notificacions,experiència,programa,millora</string>
@@ -3632,7 +3639,7 @@ Nota:
     <string name="oneplus_smart_wifi_connection">connexió Wi‑Fi intel·ligent</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">"To de notificació d'SMS i vibració"</string>
-    <string name="oneplus_snooze_options_title">Repetir notificacions des de la pantalla desplegable</string>
+    <string name="oneplus_snooze_options_title">Repeteix les notificacions des de la pantalla de notificacions</string>
     <string name="oneplus_sound_and_vibrate">So &amp; vibració</string>
     <string name="oneplus_sound_settings_summary">"No molesteu, mode d'auriculars"</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3665,6 +3672,7 @@ Nota:
     <string name="oneplus_theme_clock">Estil de rellotge</string>
     <string name="oneplus_theme_clock_snake_action">ACTIVEU LA PANTALLA AMBIENT</string>
     <string name="oneplus_theme_clock_snake_tip">"Aquesta funció estarà disponible quan s'activi la pantalla ambient"</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Voleu descartar les modificacions?</string>
     <string name="oneplus_theme_drop_title">"Surt del mode d'edició"</string>
     <string name="oneplus_theme_entrance_summary">"Fons de pantalla, color d'accent, tipus de lletra, to"</string>
@@ -3673,7 +3681,7 @@ Nota:
     <string name="oneplus_theme_fingerprint_snake_action">"ACTIVEU L'EMPREMTA DIGITAL"</string>
     <string name="oneplus_theme_fingerprint_snake_tip">"Aquesta funció estarà disponible quan s'activi l'empremta digital"</string>
     <string name="oneplus_theme_font">Tipus de lletra</string>
-    <string name="oneplus_theme_font_content">Compartir la millor tecnologia del món, sempre comptant amb tu</string>
+    <string name="oneplus_theme_font_content">Compartir la millor tecnologia del món, sempre comptant amb vós</string>
     <string name="oneplus_theme_icon_pack">"Paquet d'icones"</string>
     <string name="oneplus_theme_lock_screen_customization">PERSONALITZACIÓ DE LA PANTALLA DE BLOQUEIG</string>
     <string name="oneplus_theme_preset">Tema predeterminat</string>
@@ -3681,7 +3689,8 @@ Nota:
     <string name="oneplus_theme_preset_dark">Fosc amb matisos</string>
     <string name="oneplus_theme_preset_light">Llum que il·lumina</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">"Els temes preconfigurats ofereixen una amplia gama de fons de pantalla, color d'accent, to, etc"</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">Forma</string>
     <string name="oneplus_theme_shape_effect_round">Rodona</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Rectangle rodó</string>
@@ -3708,7 +3717,7 @@ Nota:
     <string name="oneplus_tools_summary_U30">Mode de joc, mode de butxaca, engegada i apagament programats</string>
     <string name="oneplus_tools_summary_no_gamingmode">"Bloquejador d'aplicacions, aplicacions paral·leles"</string>
     <string name="oneplus_tools_title">Utilitats</string>
-    <string name="oneplus_top_level_accounts_summary">Compte de OnePlus, altres comptes</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Aplicacions predeterminades, permisos</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, barra i gestos de navegació</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sincronitzar dades amb el núvol, Troba el meu telèfon</string>
@@ -3717,12 +3726,14 @@ Nota:
     <string name="oneplus_top_level_display_summary">"Barra d'estat, pantalla ambient, mode nocturn, mode lectura"</string>
     <string name="oneplus_top_level_network_summary">SIM, xarxa mòbil, ús de dades, punt de connexió</string>
     <string name="oneplus_top_level_privacy_summary">Permisos, dades personals</string>
-    <string name="oneplus_top_level_security_dashboard_summary">"Empremta digital, Face Unlock, rescat d'emergència"</string>
+    <string name="oneplus_top_level_security_dashboard_summary">"Empremta digital, Desbloqueig facial, rescat d'emergència"</string>
     <string name="oneplus_top_level_security_summary">"Empremta digital, Desbloqueig facial, rescat d'emergència"</string>
     <string name="oneplus_top_level_sound_summary">"No molesteu, mode d'auriculars, to de trucada"</string>
     <string name="oneplus_top_level_system_summary">Idioma i teclat, hora, reiniciar, actualitzacions del sistema</string>
     <string name="oneplus_touch_vibrate">Vibració en tocar</string>
     <string name="oneplus_turn_off_time">Fins a les</string>
+    <string name="oneplus_turn_on_feature_cancel">CANCEL·LA</string>
+    <string name="oneplus_turn_on_feature_ok">ACTIVA</string>
     <string name="oneplus_turn_on_time">De</string>
     <string name="oneplus_uninstatll_multi_app_msg">"S'esborraran totes les dades de l'aplicació paral·lela si la desinstal·leu. Segur que la voleu desinstal·lar?"</string>
     <string name="oneplus_uninstatll_multi_app_title">%1$s paral·lel</string>
@@ -3736,7 +3747,7 @@ Nota: el desbloqueig facial pot ser menys segur que el d'empremta digital, PIN o
     <string name="oneplus_user_agreement">"Acord de llicència d'usuari final"</string>
     <string name="oneplus_user_enjoy_plan_title">"Participa al programa d'experiència de l'usuari"</string>
     <string name="oneplus_vibrate">Vibració</string>
-    <string name="oneplus_vibrate_dynamic_mode">Dinàmic</string>
+    <string name="oneplus_vibrate_dynamic_mode">Dinàmica</string>
     <string name="oneplus_vibrate_intensity">Intensitat de la vibració</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibra en tocar</string>
     <string name="oneplus_vibrate_rhythm">Patró de vibració</string>
@@ -3789,6 +3800,7 @@ La configuració de la xarxa com a oculta no canviarà la configuració del vost
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CCUC</string>
+    <string name="op_choose_lock_generic_title">Escolliu primer un bloqueig de pantalla per a la còpia de seguretat</string>
     <string name="op_cloud_service_summary">Sincronitzeu els contactes, notes, fotos, etc.</string>
     <string name="op_cloud_service_title">Cloud Service</string>
     <string name="op_confirm_enable_oem_unlock_text">"ADVERTIMENT: És possible que les funcions de protecció i verificació del dispositiu, com ara el pagament amb empremta i la clau DRM avançada no funcionin amb l'OEM desbloquejat."</string>
@@ -3800,13 +3812,21 @@ La configuració de la xarxa com a oculta no canviarà la configuració del vost
     <string name="op_default_apps_summary">Inici, navegador</string>
     <string name="op_default_luncher_title">Aplicació inicial</string>
     <string name="op_dnd_summary">No molesteu</string>
+    <string name="op_face_unlock_set_unlock_password">Desbloqueig facial + Contrasenya</string>
+    <string name="op_face_unlock_set_unlock_pattern">Desbloqueig facial + Patró</string>
+    <string name="op_face_unlock_set_unlock_pin">Desbloqueig facial + PIN</string>
+    <string name="op_face_unlock_skip_face">Continua sense el desbloqueig facial</string>
     <string name="op_failed_to_get_data">"No s'han pogut recuperar les dades"</string>
     <string name="op_fetch_data_in_process">Carregant</string>
     <string name="op_fragment">Curt</string>
+    <string name="op_gamespace">Espai de joc</string>
     <string name="op_high_power_app_manager">"Aplicacions d'alt comsum de bateria"</string>
     <string name="op_light_mode_title">Llum</string>
     <string name="op_linked_launch_summary">"Gestió d'aplicacions que es poden executar en segon pla"</string>
     <string name="op_linked_launch_title">"Execució automàtica d'apps"</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Per utilitzar el Desbloqueig facial, configureu una contrasenya</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Per utilitzar el Desbloqueig facial, configureu un patró</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Per utilitzar el Desbloqueig facial, configureu un PIN</string>
     <string name="op_not_disturb">Preferències de \"No molesteu\"</string>
     <string name="op_not_disturb_summary">Silencia les trucades i les notificacions, i activa la vibració, exceptuant les alarmes</string>
     <string name="op_oneplus_roaming_summary">"Ofereix serveis globals d'accés a internet"</string>
@@ -4310,7 +4330,7 @@ Aquesta configuració afecta tots els usuaris del telèfon."</string>
     <string name="scanning_status_text_wifi_on_ble_off">La cerca de xarxes Wi‑Fi està activada i la cerca de dispositius Bluetooth està desactivada</string>
     <string name="scanning_status_text_wifi_on_ble_on">Tant la cerca de xarxes Wi‑Fi com la de dispositius Bluetooth estan activades</string>
     <string name="schedule_reminders">"Notificacions d'esdeveniments"</string>
-    <string name="screen_color_mode_advanced">Avançat</string>
+    <string name="screen_color_mode_advanced">Avançats</string>
     <string name="screen_color_mode_advanced_settings">Configuració avançada</string>
     <string name="screen_color_mode_vivid">Intens</string>
     <string name="screen_compatibility_label">Compatibilitat amb la pantalla</string>

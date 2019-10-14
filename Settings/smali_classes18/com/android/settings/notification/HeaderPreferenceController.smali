@@ -283,7 +283,7 @@
 
     iget-object v2, p0, Lcom/android/settings/notification/HeaderPreferenceController;->mFragment:Lcom/android/settings/dashboard/DashboardFragment;
 
-    const v3, 0x7f0a023a
+    const v3, 0x7f0a023b
 
     invoke-virtual {v0, v3}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 

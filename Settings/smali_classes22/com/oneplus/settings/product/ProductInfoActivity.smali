@@ -123,7 +123,7 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f0a0300
+    const v4, 0x7f0a0301
 
     const/4 v5, 0x0
 
@@ -371,7 +371,7 @@
 
     :cond_5
     :goto_5
-    const v1, 0x7f0a03b5
+    const v1, 0x7f0a03b6
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/product/ProductInfoActivity;->findViewById(I)Landroid/view/View;
 
@@ -381,7 +381,7 @@
 
     iput-object v1, p0, Lcom/oneplus/settings/product/ProductInfoActivity;->mViewPager:Landroidx/viewpager/widget/ViewPager;
 
-    const v1, 0x7f0a06c6
+    const v1, 0x7f0a06c7
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/product/ProductInfoActivity;->findViewById(I)Landroid/view/View;
 

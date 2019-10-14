@@ -202,10 +202,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Ljava/lang/Class;)V
 
-    const-class v0, Lcom/android/settings/gestures/DoubleTapPowerSettings;
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Ljava/lang/Class;)V
-
     const-class v0, Lcom/android/settings/gestures/DoubleTapScreenSettings;
 
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Ljava/lang/Class;)V
@@ -223,10 +219,6 @@
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Ljava/lang/Class;)V
 
     const-class v0, Lcom/android/settings/gestures/PickupGestureSettings;
-
-    invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Ljava/lang/Class;)V
-
-    const-class v0, Lcom/android/settings/gestures/PreventRingingGestureSettings;
 
     invoke-virtual {p0, v0}, Lcom/android/settingslib/search/SearchIndexableResourcesBase;->addIndex(Ljava/lang/Class;)V
 

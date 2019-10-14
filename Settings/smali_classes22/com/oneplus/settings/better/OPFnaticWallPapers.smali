@@ -287,7 +287,7 @@
 .method private initMediaPlayer()V
     .locals 4
 
-    const v0, 0x7f0a027b
+    const v0, 0x7f0a027c
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -416,7 +416,7 @@
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
-    const v1, 0x7f0a0756
+    const v1, 0x7f0a0757
 
     invoke-virtual {p0, v1}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -424,7 +424,7 @@
 
     check-cast v1, Landroid/view/TextureView;
 
-    const v2, 0x7f0a0753
+    const v2, 0x7f0a0754
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -434,7 +434,7 @@
 
     iput-object v2, p0, Lcom/oneplus/settings/better/OPFnaticWallPapers;->imageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0a074f
+    const v2, 0x7f0a0750
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 .method private initViews()V
     .locals 4
 
-    const v0, 0x7f0a027d
+    const v0, 0x7f0a027e
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -470,7 +470,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/better/OPFnaticWallPapers;->mWallPaperLayout:Landroid/view/View;
 
-    const v0, 0x7f0a02cc
+    const v0, 0x7f0a02cd
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -506,7 +506,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a042d
+    const v0, 0x7f0a042e
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -524,7 +524,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a027f
+    const v0, 0x7f0a0280
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPFnaticWallPapers;->findViewById(I)Landroid/view/View;
 
@@ -567,7 +567,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a027c
+    const v3, 0x7f0a027d
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -315,7 +315,7 @@
     <string name="animator_duration_scale_title">קנה מידה למשך זמן אנימציה</string>
     <string name="another_migration_already_in_progress">העברה אחרת מתבצעת כבר.</string>
     <string name="aod_clock_analog">אנלוגי</string>
-    <string name="aod_clock_default">ברירת מחדל</string>
+    <string name="aod_clock_default">מחדלי</string>
     <string name="aod_clock_mcl">McLaren</string>
     <string name="aod_clock_minimalism">מינימליזם</string>
     <string name="aod_clock_none">ללא</string>
@@ -327,7 +327,7 @@
     <string name="aod_horizon_light_effect_4">זהב</string>
     <string name="aod_horizon_light_effect_5">McLaren</string>
     <string name="aod_horizon_light_select">בחר צבע</string>
-    <string name="aod_horizon_light_snake_action">הפעל</string>
+    <string name="aod_horizon_light_snake_action">הפעלה</string>
     <string name="aod_horizon_light_snake_tip">מאפיין זה יהיה זמין כאשר האפשרות \"התראות חדשות\" מופעלת</string>
     <string name="apn_apn">APN</string>
     <string name="apn_auth_type">סוג אימות</string>
@@ -1099,7 +1099,7 @@
     <string name="color_none">ללא</string>
     <string name="color_orange">כתום</string>
     <string name="color_picker_accent_color_message">בחר צבע הדגשה</string>
-    <string name="color_picker_default">ברירת מחדל</string>
+    <string name="color_picker_default">מחדלי</string>
     <string name="color_picker_led_color_message">בחר צבע LED</string>
     <string name="color_picker_message_default">בחר את הצבע המועדף עליך.</string>
     <string name="color_picker_unknown_label">לא ידוע</string>
@@ -1775,6 +1775,7 @@
     <string name="failed_to_open_app_settings_toast">פתיחת הגדרות עבור %1$s נכשלה</string>
     <string name="fcc_equipment_id">זיהוי ציוד</string>
     <string name="feature_flags_dashboard_title">סימוני תכונות</string>
+    <string name="feature_not_support_split_screen">פונקציה זאת אינה נתמכת במסך מפוצל.</string>
     <string name="filter">סינון</string>
     <string name="filter_all_apps">כל האפליקציות</string>
     <string name="filter_apps_all">כל האפליקציות</string>
@@ -2889,7 +2890,7 @@
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">מצב כיס</string>
     <string name="oneplus_aod_smart_display_calendar_event">אירוע בלוח השנה</string>
     <string name="oneplus_aod_smart_display_music_info">נגן מדיה</string>
-    <string name="oneplus_aod_smart_display_title">תצוגה חכמה</string>
+    <string name="oneplus_aod_smart_display_title">מידע קונטקסטואלי</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">מצב תאימות</string>
     <string name="oneplus_app_display_fullscreen">מצב מסך מלא</string>
@@ -2999,10 +3000,11 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_connected_devices_count">ישנם %1$s מכשירים מחוברים</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, שדר מסך, הדפסה</string>
     <string name="oneplus_connected_devices_dashboard_title">חיבור התקן ו-Bluetooth</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">מעבד</string>
     <string name="oneplus_custom_time">טווח זמנים מותאם אישית</string>
     <string name="oneplus_customization">התאמה אישית של סרגל הניווט</string>
     <string name="oneplus_customization_summary">לחיצה ארוכה, הקשה כפולה</string>
+    <string name="oneplus_customization_summary_hide_navbar">לחיצה ארוכה, הקשה כפולה, הסתרת סרגל הניווט</string>
     <string name="oneplus_data_usage_control_title">בקרת שימוש בנתונים</string>
     <string name="oneplus_dc_dimming_summary">עמעום DC יתאים את עוצמת הבהירות של המסך על ידי שינוי עצמת המתח של המסך. בזמן ההפעלה, הבהוב המסך יפחת בבהירות נמוכה. אולם תופעה זו עשויה לגרום להצגת צבעים לא רגילים במקרים מסוימים.</string>
     <string name="oneplus_dc_dimming_title">עמעום DC</string>
@@ -3047,7 +3049,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_double_tap_power_gesture_camera">מצלמה</string>
     <string name="oneplus_double_tap_power_gesture_wallet">כרטיסים מגנטיים (ארנק)</string>
     <string name="oneplus_doze_summary_801">הצג שעון ומידע אחר על מסך ההמתנה</string>
-    <string name="oneplus_doze_title">תצוגה סביבתית</string>
+    <string name="oneplus_doze_title">תצוגת אמביינט</string>
     <string name="oneplus_doze_title_801">תצוגה סביבתית</string>
     <string name="oneplus_draw_gesture_start_none">ללא</string>
     <string name="oneplus_draw_m_start_app">צייר M</string>
@@ -3140,7 +3142,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_fnatic_mode_disturb_introduction_title">DND מתקדם</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">כדי להשתמש במצב Fnatic יש להפעיל תחילה מצב משחק</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">עוצמת השידור של כרטיס ה-SIM הראשי מקבל עדיפות על מנת לצמצם הפרעות במהלך השהיות במשחק. כתוצאה מכך, כרטיס ה-SIM המשני יושבת, ולא יתקבלו שיחות הוא הודעות.</string>
-    <string name="oneplus_fnatic_mode_network_introduction_summary">משפר את היציבות של חיבור הרשת</string>
+    <string name="oneplus_fnatic_mode_network_introduction_summary">שפר את היציבות של חיבור הרשת</string>
     <string name="oneplus_fnatic_mode_network_introduction_title">שיפור הרשת</string>
     <string name="oneplus_fnatic_mode_summary">שדרג את חוויית המשחקים שלך</string>
     <string name="oneplus_fnatic_mode_summary_2">מצב מתקדם למשחקים, נוצר על ידי חלוצי esports</string>
@@ -3156,7 +3158,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_forum_award_title">פרס</string>
     <string name="oneplus_fullscreen_back_guide_summary">החלק פנימה מהקצה השמאלי התחתון או מהקצה הימני התחתון של המסך</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">החלק מעלה מצד ימין או שמאל של החלק התחתון של המסך</string>
-    <string name="oneplus_fullscreen_back_guide_title">חזרה</string>
+    <string name="oneplus_fullscreen_back_guide_title">הקודם</string>
     <string name="oneplus_fullscreen_disable_this_feature">לא ניתן להשתמש בתכונה זו כשמחוות הניווט מופעלות.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"בואו ננסה להשתמש במחווה שמחליפה את הלחצן האחורי.
 החליקו כלפי מעלה מהצד השמאלי או הימני בתחתית המסך."</string>
@@ -3168,7 +3170,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_fullscreen_gesture_guide_multitask">ליישומים עדכניים, החליקו כלפי מעלה מהחלק התחתון של המסך והפסק.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">מחוות ניווט יהיו זמינות</string>
     <string name="oneplus_fullscreen_home_guide_summary">החלק כלפי מעלה מהקצה התחתון של המסך</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">החלק מעלה ממרכז הקצה התחתון של המסך</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">החלק מעלה מהקצה התחתון המרכזי של המסך</string>
     <string name="oneplus_fullscreen_home_guide_title">דף הבית</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">עדיין ניתן להפעיל מחוות ניווט מהקצה התחתון של המסך, החלק מהקצה השמאלי או הימני כדי לחזור</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">מחוות הניווט מתבצעות מתחתית המכשיר, כמו במצב אנכי</string>
@@ -3177,11 +3179,11 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_fullscreen_mode_title">מצב מסך מלא</string>
     <string name="oneplus_fullscreen_previous_app_guide_summary">החלק שמאלה או ימינה באזור הפס התחתון</string>
     <string name="oneplus_fullscreen_previous_app_guide_summary_deprecated">החלק ממרכז החלק התחתון של המסך לכיוון ימין מעלה, ולאחר מכן שחרר את האצבע</string>
-    <string name="oneplus_fullscreen_previous_app_guide_title">החלפה בין יישומים אחרונים</string>
+    <string name="oneplus_fullscreen_previous_app_guide_title">מעבר בין היישומים האחרונים</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">החלק מהקצה התחתון של המסך בכיוון מעלה, ולאחר מכן זרוק שמאלה או ימינה</string>
-    <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">החלפה בין יישומים אחרונים</string>
+    <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">מעבר בין היישומים האחרונים</string>
     <string name="oneplus_fullscreen_recent_guide_summary">החלק כלפי מעלה מהקצה התחתון של המסך והשהה</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">החלק מעלה ממרכז הקצה התחתון של המסך והשהה</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">החלק מעלה מהקצה התחתון המרכזי של המסך והשהה</string>
     <string name="oneplus_fullscreen_recent_guide_title">יישומים אחרונים</string>
     <string name="oneplus_functional_terms">תנאים והתניות</string>
     <string name="oneplus_game_haptic_feedback_summary">הוסף משוב haptic כדי להפוך את חוויית המשחק שלך לעוצמתית יותר. אוזניות בלוטוס אינן נתמכות בשלב זה.</string>
@@ -3215,7 +3217,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_gesture_of_answer_call_summary">מענה אוטומטי לשיחות נכנסות על ידי העלאת הטלפון לאוזן</string>
     <string name="oneplus_gesture_of_answer_call_title">מענה לשיחות באמצעות הבעה</string>
     <string name="oneplus_gesture_start_learning">התחל בלמידה</string>
-    <string name="oneplus_gesture_to_answer_summary">מענה אוטומטי לשיחות נכנסות על ידי הרמת הטלפון לאוזן</string>
+    <string name="oneplus_gesture_to_answer_summary">מענה אוטומטי לשיחות נכנסות על ידי העלאת הטלפון לאוזן</string>
     <string name="oneplus_gesture_to_answer_title">הרמה כדי לענות</string>
     <string name="oneplus_gesture_to_control_call_info">שליטה אוטומטית בשיחות באמצעות הרמת הטלפון לאוזן</string>
     <string name="oneplus_gesture_to_control_calls_summary">מענה אוטומטי לשיחות או העברה לאזניות באמצעות מחווה</string>
@@ -3262,6 +3264,10 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_intelligently_select_best_wifi">בוחר באופן חכם את ה-Wi‑Fi הטוב ביותר.</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">בוחר ומתחבר באופן חכם אל ה-Wi‑Fi הטוב ביותר באמצעות זיהוי וניתוח הקישוריות ועוצמת האות של רשתות Wi‑Fi</string>
     <string name="oneplus_intensely">חזק</string>
+    <string name="oneplus_is_turn_on_feature">האם אתה בטוח שברצונך להפעיל תכונה זאת?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"כאשר היא מופעלת, המצבים הבאים עלולים להתרחש:
+1.אזורים מסוימים של תצוגת המסך לא יהיו תקינים
+2.הבהירות האדפטיבית לא תפעל כהלכה"</string>
     <string name="oneplus_lab_dislike">לא אהבתי</string>
     <string name="oneplus_lab_features">תכונות מעבדה</string>
     <string name="oneplus_lab_feedback_toast">תודה על המשוב שלך!</string>
@@ -3359,7 +3365,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_notification_channel_summary_low">הודעות חשובות פחות ללא צליל או רטט</string>
     <string name="oneplus_notification_dialog_never_mode">לעולם לא</string>
     <string name="oneplus_notification_dialog_ringtone">צליל התראות</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">רק במצב צלצול</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">תמיד</string>
     <string name="oneplus_notification_dots">Notification dots</string>
     <string name="oneplus_notification_instrucitons">מדריך למשתמש</string>
@@ -3417,8 +3423,8 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_preference_settings_custom_time">Auto-Toggle</string>
     <string name="oneplus_preference_settings_manual_open">מצב</string>
     <string name="oneplus_preference_settings_turn_off_time">אל</string>
-    <string name="oneplus_preference_settings_turn_on">הפעל את \"אל תפריע\"</string>
-    <string name="oneplus_preference_settings_turn_on_time">מאת</string>
+    <string name="oneplus_preference_settings_turn_on">"הפעל את 'אל תפריע'"</string>
+    <string name="oneplus_preference_settings_turn_on_time">מ-</string>
     <string name="oneplus_prior_to_use_you_need_to">לפני השימוש, עליך</string>
     <string name="oneplus_privacy_policy">מדיניות פרטיות</string>
     <string name="oneplus_product_info_introduce">פרטי המכשיר וכרטיס אחריות</string>
@@ -3523,10 +3529,10 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_screen_refresh_rate_auto_summary">חלק ביותר בקצב רענון מהיר יותר</string>
     <string name="oneplus_screen_refresh_rate_info">ככל שקצב רענון המסך מהיר יותר, כך חוויית המסך תהיה חלקה יותר. ב- 90 הרץ, קצב הרענון יוחלף באופן דינמי בהתאם לתרחישים.</string>
     <string name="oneplus_screen_resolution_adjust">רזולוציה</string>
-    <string name="oneplus_screen_resolution_adjust_1080p_summary">תצוגה מעולה, צריכת חשמל מופחתת (2340×1080)</string>
+    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent display, lower power consumption (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">בורר אוטומטי</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">עבור באופן אוטומטי לרזולוציה המתאימה</string>
-    <string name="oneplus_screen_resolution_adjust_other_summary">בהירות מרבית, צריכת חשמל מוגברת (3120×1440)</string>
+    <string name="oneplus_screen_resolution_adjust_other_summary">Maximum clarity, increased power consumption (3120×1440)</string>
     <string name="oneplus_search_keyword_about_settings">שם התקן, גרסת אנדרואיד, מספר בניית קוד, דגם, CPU, אחסון, RAM, ROM, מצלמה, פיקסל, מסך</string>
     <string name="oneplus_search_keyword_accent_color">צבע</string>
     <string name="oneplus_search_keyword_app_lock">נעילה,פין,סיסמאות</string>
@@ -3565,7 +3571,8 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">נא לא’ להפריע, להפסיק, הפרעה, הפסקה, מצב</string>
     <string name="oneplus_search_keyword_swap_navkeys">החלף מקשים</string>
     <string name="oneplus_search_keyword_switch">העברה, העברת נתונים</string>
-    <string name="oneplus_search_keyword_theme_settings">התאמה אישית של נעילת מסך, רקעים, סגנון שעון, הנפשה של טביעת אצבע, Horizon light, התאמה אישית של מערכת, צבע הדגשה, צורה, גופן, צליל, ערכת סמלים</string>
+    <string name="oneplus_search_keyword_theme_settings">התאמה אישית של נעילת מסך, רקעים, סגנון שעון, הנפשה של טביעת אצבע, Horizon light, התאמה אישית של מערכת, צבע הדגשה, צורה, גופן, צליל, ערכת סמלים, אור תאורה, רקע כהה, גוונים חזקים</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">התאמה אישית של נעילת מסך, רקעים, סגנון שעון, הנפשה של טביעת אצבע, Horizon light, התאמה אישית של מערכת, צבע הדגשה, צורה, גופן, צליל, ערכת סמלים, אור תאורה, רקע כהה, גוונים חזקים, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">צילום מסך</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">הודעות, ניסיון, תכנית, שיפור</string>
@@ -3625,11 +3632,11 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_simcard_title">כרטיס SIM</string>
     <string name="oneplus_sleep_standby_summary">משפר את חיי הסוללה (למשל, על ידי השבתת חיבורי רשת) כשאתה ישן. הדבר עלול למנוע מיישומים קבלת התראות בזמן.</string>
     <string name="oneplus_sleep_standby_title">מיטוב מצב שינה ומצב המתנה</string>
-    <string name="oneplus_smart_background_management_title">הפעל מצב נמנום &amp; אגרסיבי</string>
+    <string name="oneplus_smart_background_management_title">מצב נמנום אגרסיבי ומצב שינה של היישום</string>
     <string name="oneplus_smart_wifi_connection">חיבור Wi‑Fi חכם</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">צלצול ורטט של SMS</string>
-    <string name="oneplus_snooze_options_title">השהה התראות מהווילון</string>
+    <string name="oneplus_snooze_options_title">השהה התראות מווילון ההתראות</string>
     <string name="oneplus_sound_and_vibrate">צלילים ורטט</string>
     <string name="oneplus_sound_settings_summary">נא לא להפריע, מצב אוזניות</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3637,11 +3644,11 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_stop_run">בצע עצירה</string>
     <string name="oneplus_storage">אחסון</string>
     <string name="oneplus_sunrise_sunset">הפעל אוטומטית משקיעה עד זריחה</string>
-    <string name="oneplus_supported_apps">אפליקציות נתמכות</string>
+    <string name="oneplus_supported_apps">יישומים נתמכים</string>
     <string name="oneplus_suspension_notice">התראה</string>
     <string name="oneplus_suspension_notice_summary">אפשר לאפליקציות להציג התראות</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">החלפה</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">החלפת הרזולוציה עלולה לגרום לסגירת כמה אפליקציות רקע. מאשר החלפה?</string>
     <string name="oneplus_switch_screen_lock_type">משנה את סוג נעילת המסך, אנא המתן...</string>
     <string name="oneplus_system_data_summary">כולל פרטי חשבונות, אנשי קשר, ונתוני יישומים</string>
@@ -3662,6 +3669,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_theme_clock">סגנון השעון</string>
     <string name="oneplus_theme_clock_snake_action">הפעל תצוגת אמביינט</string>
     <string name="oneplus_theme_clock_snake_tip">מאפיין זה יהיה זמין כשתצוגת אמביינט מופעלת</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">לבטל שינויים?</string>
     <string name="oneplus_theme_drop_title">יציאה ממצב עריכה</string>
     <string name="oneplus_theme_entrance_summary">רקעים, צבע הדגשה, גופן, צליל</string>
@@ -3670,15 +3678,16 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_theme_fingerprint_snake_action">הפעל טביעת אצבע</string>
     <string name="oneplus_theme_fingerprint_snake_tip">תכונה זאת זמינה כאשר טביעת אצבע מופעלת</string>
     <string name="oneplus_theme_font">גופן</string>
-    <string name="oneplus_theme_font_content">לשתף עם העולם את הטכנולוגיה הטובה ביותר, יד ביד אתך</string>
+    <string name="oneplus_theme_font_content">לשתף עם העולם את הטכנולוגיה הטובה ביותר, יד ביד איתך</string>
     <string name="oneplus_theme_icon_pack">ערכת סמלים</string>
     <string name="oneplus_theme_lock_screen_customization">נעל התאמה אישית של מסך</string>
     <string name="oneplus_theme_preset">ערכת נושא מוגדרת מראש</string>
     <string name="oneplus_theme_preset_color">גוונים חזקים</string>
     <string name="oneplus_theme_preset_dark">רקע כהה</string>
-    <string name="oneplus_theme_preset_light">אור תאורה</string>
+    <string name="oneplus_theme_preset_light">הארת התאורה</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">ערכות נושא כוללות מגוון רחב של רקעים, צבע הדגשה, גוון וכדומה</string>
+    <string name="oneplus_theme_preset_summary">ערכות נושא מוגדרות מראש כוללות מגוון רחב של רקעים, צבע הדגשה, גוונים וכדומה</string>
+    <string name="oneplus_theme_preset_summary_tmp">ערכות נושא מוגדרות מראש כוללות מגוון רחב של רקעים, צבע הדגשה, גוונים וכדומה</string>
     <string name="oneplus_theme_shape">צורה</string>
     <string name="oneplus_theme_shape_effect_round">עגול</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">מלבן מעוגל</string>
@@ -3689,7 +3698,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_theme_tone">גוון</string>
     <string name="oneplus_theme_tone_effect_color">צבעוני</string>
     <string name="oneplus_theme_tone_effect_dark">כהה</string>
-    <string name="oneplus_theme_tone_effect_light">בהיר</string>
+    <string name="oneplus_theme_tone_effect_light">קל</string>
     <string name="oneplus_theme_tone_effect_title">בחר גוון</string>
     <string name="oneplus_theme_wallpaper">רקעים</string>
     <string name="oneplus_three_screenshots_enable_summary">החלק עם שלוש אצבעות על המסך כדי לבצע צילום מסך</string>
@@ -3705,7 +3714,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_tools_summary_U30">מצב משחקים, מצב כיס, הפעלה מתוזמנת/כיבוי מתוזמן</string>
     <string name="oneplus_tools_summary_no_gamingmode">נועל האפליקציות, אפליקציות מקבילות</string>
     <string name="oneplus_tools_title">שירותים</string>
-    <string name="oneplus_top_level_accounts_summary">חשבון OnePlus, חשבונות אחרים</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">יישומי ברירת מחדל, הרשאות</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">מחוון התראה, סרגל ניווט ומחוות</string>
     <string name="oneplus_top_level_cloud_h2_summary">סנכרון נתונים עם ענן, מצא את הטלפון שלי</string>
@@ -3719,7 +3728,9 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_top_level_sound_summary">נא לא להפריע, מצב אוזנייה, צלצול</string>
     <string name="oneplus_top_level_system_summary">שפה ולוח מקשים, זמן, איפוס, עדכוני מערכת</string>
     <string name="oneplus_touch_vibrate">רטט במגע</string>
-    <string name="oneplus_turn_off_time">עד</string>
+    <string name="oneplus_turn_off_time">אל</string>
+    <string name="oneplus_turn_on_feature_cancel">ביטול</string>
+    <string name="oneplus_turn_on_feature_ok">הפעלה</string>
     <string name="oneplus_turn_on_time">מ-</string>
     <string name="oneplus_uninstatll_multi_app_msg">כל הנתונים בתוך היישום המקביל יימחקו בעת הסרת ההתקנה. האם אתה בטוח שברצונך להסיר את ההתקנה?</string>
     <string name="oneplus_uninstatll_multi_app_title">%1$s מקביל</string>
@@ -3786,6 +3797,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">בחר נעילת מסך לגיבוי תחילה</string>
     <string name="op_cloud_service_summary">"סנכרן את אנשי הקשר, הפתקים, התמונות שלך וכו'."</string>
     <string name="op_cloud_service_title">שירות ענן</string>
     <string name="op_confirm_enable_oem_unlock_text">אזהרה: ייתכן שתכונות הגנה ואימות של התקן, למשל, תשלום באמצעות טביעות אצבע ומפתח DRM מתקדם לא יפעלו כאשר OEM אינו נעול.</string>
@@ -3797,13 +3809,21 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="op_default_apps_summary">בית, דפדפן</string>
     <string name="op_default_luncher_title">אפליקציית בית</string>
     <string name="op_dnd_summary">נא לא להפריע</string>
+    <string name="op_face_unlock_set_unlock_password">שחרור נעילה באמצעות פנים + סיסמה</string>
+    <string name="op_face_unlock_set_unlock_pattern">שחרור נעילה באמצעות פנים + תבנית</string>
+    <string name="op_face_unlock_set_unlock_pin">שחרור נעילה באמצעות פנים + קוד PIN</string>
+    <string name="op_face_unlock_skip_face">המשך ללא שחרור נעילה באמצעות פנים</string>
     <string name="op_failed_to_get_data">אחזור נתונים נכשל</string>
     <string name="op_fetch_data_in_process">טוען</string>
     <string name="op_fragment">קצר</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">אפליקציות המשתמשות במתח חשמלי גבוה</string>
     <string name="op_light_mode_title">בהיר</string>
     <string name="op_linked_launch_summary">נהל יישומים מקושרים שרשאים לפעול ברקע</string>
     <string name="op_linked_launch_title">הפעלה אוטומטית של יישומים</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר סיסמה</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר תבנית</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר קוד PIN</string>
     <string name="op_not_disturb">העדפות נא לא להפריע</string>
     <string name="op_not_disturb_summary">השתקת שיחות והתראות וכיבוי רטט, למעט שעון מעורר</string>
     <string name="op_oneplus_roaming_summary">מעניק שירותי גישה גלובלית לאינטרנט</string>
@@ -5122,7 +5142,7 @@ Voice over Wi-Fi:‏ %3$s
     <string name="touch_filtered_warning">יש אפליקציה שמסתירה את בקשת ההרשאה, ולכן להגדרות אין אפשרות לאמת את התשובה.</string>
     <string name="touch_sounds_title">צלילי מגע</string>
     <string name="touchscreen_camera_gesture_summary">צייר O כדי להפעיל את המצלמה</string>
-    <string name="touchscreen_camera_gesture_title">הפעלת מצלמה</string>
+    <string name="touchscreen_camera_gesture_title">הפעל מצלמה</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">הקש על המסך פעמיים כדי להעיר את המכשיר</string>
     <string name="touchscreen_double_tap_to_wake_gesture_title">לחץ לחיצה כפולה כדי להעיר</string>
     <string name="touchscreen_flashlight_gesture_summary">צייר V כדי להפעיל או לכבות את הפנס</string>

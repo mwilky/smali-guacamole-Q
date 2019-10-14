@@ -152,7 +152,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a06f2
+    const v1, 0x7f0a06f3
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -160,7 +160,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a0691
+    const v2, 0x7f0a0692
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -168,7 +168,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f0a02ee
+    const v3, 0x7f0a02ef
 
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -178,7 +178,7 @@
 
     if-nez v0, :cond_2
 
-    const v4, 0x7f12138b
+    const v4, 0x7f12138c
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(I)V
 

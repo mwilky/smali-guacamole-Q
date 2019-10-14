@@ -1149,6 +1149,8 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ringtone/OPRingtoneBaseActivity;->mVibrator:Landroid/os/Vibrator;
 
+    if-eqz v0, :cond_0
+
     invoke-virtual {v0}, Landroid/os/Vibrator;->cancel()V
 
     :cond_0

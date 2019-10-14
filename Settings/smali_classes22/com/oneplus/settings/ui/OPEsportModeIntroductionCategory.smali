@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    const v0, 0x7f0a024b
+    const v0, 0x7f0a024c
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -101,7 +101,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPEsportModeIntroductionCategory;->mEsportmodeIntroductionImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a024c
+    const v0, 0x7f0a024d
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

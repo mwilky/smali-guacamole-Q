@@ -117,7 +117,7 @@
 
     const/16 v2, 0x3e9
 
-    invoke-static {v1, v2}, Lcom/android/settings/network/ApnSettings;->access$1200(Lcom/android/settings/network/ApnSettings;I)V
+    invoke-static {v1, v2}, Lcom/android/settings/network/ApnSettings;->access$1100(Lcom/android/settings/network/ApnSettings;I)V
 
     iget-object v1, p0, Lcom/android/settings/network/ApnSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/network/ApnSettings;
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121217
+    const v2, 0x7f121218
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

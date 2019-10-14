@@ -187,7 +187,7 @@
     return-void
 
     :cond_3
-    const v3, 0x7f1212b9
+    const v3, 0x7f1212ba
 
     const/4 v4, 0x0
 

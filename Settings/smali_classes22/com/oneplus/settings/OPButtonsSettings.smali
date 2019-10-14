@@ -630,7 +630,7 @@
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f030098
+    const v15, 0x7f03009a
 
     if-eqz v14, :cond_0
 
@@ -638,27 +638,27 @@
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009c
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
     goto :goto_0
 
     :cond_0
-    const v15, 0x7f03009c
+    const v15, 0x7f03009e
 
     :goto_0
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeDoubleTapAction:Landroidx/preference/ListPreference;
 
     if-eqz v14, :cond_1
 
-    const v15, 0x7f030098
+    const v15, 0x7f03009a
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeDoubleTapAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009c
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -667,13 +667,13 @@
 
     if-eqz v14, :cond_2
 
-    const v15, 0x7f03013f
+    const v15, 0x7f03009a
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mMenuLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f030140
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -682,13 +682,13 @@
 
     if-eqz v14, :cond_3
 
-    const v15, 0x7f03013f
+    const v15, 0x7f03009a
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mMenuDoubleTapAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009c
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -697,13 +697,13 @@
 
     if-eqz v14, :cond_4
 
-    const v15, 0x7f030098
+    const v15, 0x7f03009a
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mBackLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f030140
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -712,13 +712,13 @@
 
     if-eqz v14, :cond_5
 
-    const v15, 0x7f030098
+    const v15, 0x7f03009a
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mBackDoubleTapAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009c
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -737,13 +737,13 @@
 
     move-result v0
 
-    const v1, 0x7f030086
+    const v1, 0x7f030088
 
-    const v2, 0x7f030082
+    const v2, 0x7f030084
 
-    const v3, 0x7f03009d
+    const v3, 0x7f03009f
 
-    const v4, 0x7f030099
+    const v4, 0x7f03009b
 
     if-nez v0, :cond_1
 
@@ -783,13 +783,13 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v5, 0x7f030083
+    const v5, 0x7f030085
 
     invoke-virtual {v0, v5}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v5, 0x7f030087
+    const v5, 0x7f030089
 
     invoke-virtual {v0, v5}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -798,13 +798,13 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v5, 0x7f03009a
+    const v5, 0x7f03009c
 
     invoke-virtual {v0, v5}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v5, 0x7f03009e
+    const v5, 0x7f0300a0
 
     invoke-virtual {v0, v5}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -948,13 +948,13 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f030081
+    const v1, 0x7f030083
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f030085
+    const v1, 0x7f030087
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -963,13 +963,13 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f030098
+    const v1, 0x7f03009a
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f03009c
+    const v1, 0x7f03009e
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -984,13 +984,13 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f030084
+    const v1, 0x7f030086
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f030088
+    const v1, 0x7f03008a
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -999,13 +999,13 @@
     :cond_3
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f03009b
+    const v1, 0x7f03009d
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v0, p0, Lcom/oneplus/settings/OPButtonsSettings;->mHomeLongPressAction:Landroidx/preference/ListPreference;
 
-    const v1, 0x7f03009f
+    const v1, 0x7f0300a1
 
     invoke-virtual {v0, v1}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 

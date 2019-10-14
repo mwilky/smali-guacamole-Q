@@ -90,7 +90,7 @@
 
     iget-object v2, p0, Lcom/android/settings/network/OPCallingPlusPreferenceController;->mPreference:Landroidx/preference/Preference;
 
-    const v3, 0x7f1214f1
+    const v3, 0x7f1214f2
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -103,7 +103,7 @@
 
     iget-object v2, p0, Lcom/android/settings/network/OPCallingPlusPreferenceController;->mPreference:Landroidx/preference/Preference;
 
-    const v3, 0x7f1214f2
+    const v3, 0x7f1214f3
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -116,7 +116,7 @@
 
     iget-object v2, p0, Lcom/android/settings/network/OPCallingPlusPreferenceController;->mPreference:Landroidx/preference/Preference;
 
-    const v3, 0x7f1214f3
+    const v3, 0x7f1214f4
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 

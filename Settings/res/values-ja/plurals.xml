@@ -218,9 +218,11 @@
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">チャンスはあと %1$d 回</item>
+        <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">%d 秒後にもう一度試してください。</item>
+        <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s 個のアプリ</item>

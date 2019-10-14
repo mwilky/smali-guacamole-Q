@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a048e
+    const v0, 0x7f0a048f
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -205,15 +205,15 @@
 
     move-result v0
 
-    const v1, 0x7f0a0219
+    const v1, 0x7f0a021a
 
     if-eq v0, v1, :cond_2
 
-    const v1, 0x7f0a033f
+    const v1, 0x7f0a0340
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a0341
+    const v1, 0x7f0a0342
 
     if-eq v0, v1, :cond_0
 
@@ -351,7 +351,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    const v0, 0x7f0a033f
+    const v0, 0x7f0a0340
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -363,7 +363,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0341
+    const v0, 0x7f0a0342
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -375,7 +375,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0340
+    const v0, 0x7f0a0341
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -385,7 +385,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->mSwipeUpButton:Landroid/widget/RadioButton;
 
-    const v0, 0x7f0a0342
+    const v0, 0x7f0a0343
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -395,7 +395,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->mPressPowerkeyButton:Landroid/widget/RadioButton;
 
-    const v0, 0x7f0a04c4
+    const v0, 0x7f0a04c5
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -405,7 +405,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->mLottieAnim:Lcom/airbnb/lottie/LottieAnimationView;
 
-    const v0, 0x7f0a0219
+    const v0, 0x7f0a021a
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/faceunlock/OPFaceUnlockModeSettingsActivity;->findViewById(I)Landroid/view/View;
 

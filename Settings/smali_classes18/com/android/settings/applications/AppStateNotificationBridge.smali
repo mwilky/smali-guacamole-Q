@@ -393,7 +393,7 @@
 
     const/4 v0, 0x1
 
-    const v1, 0x7f0a0640
+    const v1, 0x7f0a0641
 
     if-ne p2, v1, :cond_1
 
@@ -433,7 +433,7 @@
     return-object v0
 
     :cond_1
-    const v1, 0x7f0a063f
+    const v1, 0x7f0a0640
 
     if-ne p2, v1, :cond_3
 
@@ -807,7 +807,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a069b
+    const v1, 0x7f0a069c
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

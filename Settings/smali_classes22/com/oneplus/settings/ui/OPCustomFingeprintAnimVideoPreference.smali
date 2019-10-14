@@ -495,13 +495,13 @@
 
     const v5, 0x7f080532
 
-    const v6, 0x7f120f1a
+    const v6, 0x7f120f1b
 
     const v7, 0x7f080531
 
     const v8, 0x7f080530
 
-    const v9, 0x7f120f18
+    const v9, 0x7f120f19
 
     const/4 v10, 0x2
 
@@ -525,7 +525,7 @@
 
     iget-object v9, p0, Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference;->mContext:Landroid/content/Context;
 
-    const v13, 0x7f120f1b
+    const v13, 0x7f120f1c
 
     invoke-virtual {v9, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -580,7 +580,7 @@
 
     iget-object v9, p0, Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference;->mContext:Landroid/content/Context;
 
-    const v13, 0x7f120f19
+    const v13, 0x7f120f1a
 
     invoke-virtual {v9, v13}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1044,7 +1044,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a0751
+    const v0, 0x7f0a0752
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1056,7 +1056,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v1, 0x7f0a0750
+    const v1, 0x7f0a0751
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1094,7 +1094,7 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     :goto_0
-    const v3, 0x7f0a0756
+    const v3, 0x7f0a0757
 
     invoke-virtual {p1, v3}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1102,7 +1102,7 @@
 
     check-cast v3, Landroid/view/TextureView;
 
-    const v4, 0x7f0a0753
+    const v4, 0x7f0a0754
 
     invoke-virtual {p1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1110,7 +1110,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    const v5, 0x7f0a0752
+    const v5, 0x7f0a0753
 
     invoke-virtual {p1, v5}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1118,7 +1118,7 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    const v6, 0x7f0a074f
+    const v6, 0x7f0a0750
 
     invoke-virtual {p1, v6}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1140,7 +1140,7 @@
 
     invoke-virtual {v3, v7}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    const v7, 0x7f0a01b1
+    const v7, 0x7f0a01b2
 
     invoke-virtual {p1, v7}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

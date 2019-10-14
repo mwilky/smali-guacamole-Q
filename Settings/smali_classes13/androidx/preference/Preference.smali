@@ -2004,7 +2004,7 @@
 
     :cond_a
     :goto_3
-    const v8, 0x7f0a02f0
+    const v8, 0x7f0a02f1
 
     invoke-virtual {p1, v8}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

@@ -273,12 +273,10 @@
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">Još uvijek imate %1$d prilika</item>
         <item quantity="one">Još uvijek imate %1$d priliku</item>
-        <item quantity="few">Još uvijek imate %1$d priliku</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Pokušajte ponovno za %d sekundi.</item>
         <item quantity="one">Pokušajte ponovno za %d sekundi.</item>
-        <item quantity="few">Pokušajte ponovno za %d sekundu.</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplikacija</item>

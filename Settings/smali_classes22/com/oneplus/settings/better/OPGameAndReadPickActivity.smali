@@ -102,7 +102,7 @@
 .method private initView()V
     .locals 5
 
-    const v0, 0x7f0a0480
+    const v0, 0x7f0a0481
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPGameAndReadPickActivity;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    const v0, 0x7f0a03a1
+    const v0, 0x7f0a03a2
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/better/OPGameAndReadPickActivity;->findViewById(I)Landroid/view/View;
 

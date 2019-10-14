@@ -340,6 +340,7 @@
     <item type="id" name="colors_row_1" />
     <item type="id" name="colors_row_2" />
     <item type="id" name="colors_row_3" />
+    <item type="id" name="colorvalue_pick" />
     <item type="id" name="column" />
     <item type="id" name="comp_description" />
     <item type="id" name="config_list" />

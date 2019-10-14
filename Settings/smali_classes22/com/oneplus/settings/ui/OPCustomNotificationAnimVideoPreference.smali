@@ -971,7 +971,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a0751
+    const v0, 0x7f0a0752
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -985,7 +985,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v1, 0x7f0a0750
+    const v1, 0x7f0a0751
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1023,7 +1023,7 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     :goto_0
-    const v3, 0x7f0a0756
+    const v3, 0x7f0a0757
 
     invoke-virtual {p1, v3}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1031,7 +1031,7 @@
 
     check-cast v3, Landroid/view/TextureView;
 
-    const v4, 0x7f0a0753
+    const v4, 0x7f0a0754
 
     invoke-virtual {p1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1039,7 +1039,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    const v5, 0x7f0a0752
+    const v5, 0x7f0a0753
 
     invoke-virtual {p1, v5}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1047,7 +1047,7 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    const v6, 0x7f0a074f
+    const v6, 0x7f0a0750
 
     invoke-virtual {p1, v6}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1069,7 +1069,7 @@
 
     invoke-virtual {v3, v7}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    const v7, 0x7f0a01b1
+    const v7, 0x7f0a01b2
 
     invoke-virtual {p1, v7}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1256,7 +1256,7 @@
 .end method
 
 .method public saveSelectedAnim()V
-    .locals 2
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
 
@@ -1272,6 +1272,74 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->setAnimStyle(I)V
 
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mAnims:Ljava/util/List;
+
+    iget v1, p0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference;->mSelectedIndex:I
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;
+
+    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomNotificationAnimVideoPreference$AnimEntity;->animIndex:I
+
+    const-string v1, "status"
+
+    const-string v2, "horizon"
+
+    if-eqz v0, :cond_4
+
+    const/4 v3, 0x1
+
+    if-eq v0, v3, :cond_3
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_2
+
+    const/4 v3, 0x3
+
+    if-eq v0, v3, :cond_1
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "purple"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "gold"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    const-string v0, "red"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_4
+    const-string v0, "blue"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    nop
+
+    :goto_0
     return-void
 .end method
 

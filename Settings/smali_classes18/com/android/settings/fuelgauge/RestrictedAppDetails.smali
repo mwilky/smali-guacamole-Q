@@ -122,7 +122,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121220
+    const v2, 0x7f121221
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -357,7 +357,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12121e
+    const v2, 0x7f12121f
 
     invoke-virtual {v1, v2}, Lcom/oneplus/settings/widget/OPFooterPreference;->setTitle(I)V
 
@@ -573,7 +573,7 @@
 
     move-object/from16 v12, v16
 
-    const v11, 0x7f12121f
+    const v11, 0x7f121220
 
     invoke-virtual {v1, v11, v12}, Lcom/android/settings/fuelgauge/RestrictedAppDetails;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

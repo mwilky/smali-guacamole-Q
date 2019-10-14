@@ -90,6 +90,24 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isO2()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "double_tap_power_gesture"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_3
+    const-string v1, "camera_double_tap_power_gesture"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :goto_1
     return-object v0
 .end method
 

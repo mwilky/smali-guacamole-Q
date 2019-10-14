@@ -136,13 +136,13 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    const v2, 0x7f12104f
+    const v2, 0x7f121050
 
     :cond_1
     :goto_0
     invoke-virtual {p0, v2}, Lcom/android/settings/password/ChooseLockPattern;->setTitle(I)V
 
-    const v3, 0x7f0a0187
+    const v3, 0x7f0a0188
 
     invoke-virtual {p0, v3}, Lcom/android/settings/password/ChooseLockPattern;->findViewById(I)Landroid/view/View;
 

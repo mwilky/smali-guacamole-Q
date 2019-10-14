@@ -224,7 +224,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->setSelectable(Z)V
 
-    const v2, 0x7f0a069c
+    const v2, 0x7f0a069d
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 

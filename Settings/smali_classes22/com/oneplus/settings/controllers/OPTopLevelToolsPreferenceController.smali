@@ -73,7 +73,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPTopLevelToolsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120f9a
+    const v1, 0x7f120f9b
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -84,7 +84,7 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPTopLevelToolsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120f99
+    const v1, 0x7f120f9a
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPTopLevelToolsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120f9d
+    const v1, 0x7f120f9e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -114,7 +114,7 @@
     :cond_4
     iget-object v0, p0, Lcom/oneplus/settings/controllers/OPTopLevelToolsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120f9b
+    const v1, 0x7f120f9c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

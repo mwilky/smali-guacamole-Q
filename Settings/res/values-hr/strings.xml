@@ -969,7 +969,7 @@ Audio"</string>
     <string name="bugreport_in_power_summary">Prikaži gumb u izborniku napajanja za izradu izvješća o programskim pogreškama</string>
     <string name="build_number">Broj međuverzije</string>
     <string name="built_in_app_updates_summary">Dopušta da OnePlus provjerava nova ažuriranja ugrađene aplikacije i da ih šalje vama kako bi se poboljšala stabilnost aplikacije</string>
-    <string name="built_in_app_updates_title">Ažuriranje ugrađene aplikacije</string>
+    <string name="built_in_app_updates_title">Ažuriranje ugrađenje aplikacije</string>
     <string name="builtin_keyboard_settings_summary">Postavke fizičke tipkovnice</string>
     <string name="builtin_keyboard_settings_title">Fizička tipkovnica</string>
     <string name="button_confirm_convert_fbe">Izbriši i pretvori</string>
@@ -1775,6 +1775,7 @@ Više pojedinosti zatražite od administratora svoje organizacije."</string>
     <string name="failed_to_open_app_settings_toast">Otvaranje postavki za aplikaciju %1$s nije uspjelo</string>
     <string name="fcc_equipment_id">ID opreme</string>
     <string name="feature_flags_dashboard_title">Oznake značajki</string>
+    <string name="feature_not_support_split_screen">Ova funkcija nije podržana u podijeljenom ekranu.</string>
     <string name="filter">Filtar</string>
     <string name="filter_all_apps">Sve aplikacije</string>
     <string name="filter_apps_all">Sve aplikacije</string>
@@ -1918,7 +1919,7 @@ Kada uključite automatsku izradu sigurnosnih kopija, podaci uređaja i aplikaci
     <string name="hardkeyboard_category">Postavke fizičke tipkovnice</string>
     <string name="hardware_info">Model i hardver</string>
     <string name="hardware_keys_action_assist">Pomoćnik za pretraživanje</string>
-    <string name="hardware_keys_action_camera">Otvaranje fotoaparata</string>
+    <string name="hardware_keys_action_camera">Otvori fotoaparat</string>
     <string name="hardware_keys_action_last_app">Otvori posljednju korištenu aplikaciju</string>
     <string name="hardware_keys_action_menu">Otvaranje/zatvaranje izbornika</string>
     <string name="hardware_keys_action_nothing">Nema radnje</string>
@@ -2890,7 +2891,7 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne ometaj i p
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Džepni način</string>
     <string name="oneplus_aod_smart_display_calendar_event">Kalendarski događaj</string>
     <string name="oneplus_aod_smart_display_music_info">Medijski reproduktor</string>
-    <string name="oneplus_aod_smart_display_title">Pametni zaslon</string>
+    <string name="oneplus_aod_smart_display_title">Kontekstualne informacije</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Način kompatibilnosti</string>
     <string name="oneplus_app_display_fullscreen">Način cijelog zaslona</string>
@@ -3001,10 +3002,11 @@ Aplikacija će također moći uključiti ili isključiti značajku Ne ometaj i p
     <string name="oneplus_connected_devices_count">Spojeno uređaja: %1$s</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, snimanje, ispis</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth i veze uređaja</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESOR</string>
     <string name="oneplus_custom_time">Zadani vremenski raspon</string>
     <string name="oneplus_customization">Prilagodba navigacijske trake</string>
     <string name="oneplus_customization_summary">Dugi pritisak, dvostruki dodir</string>
+    <string name="oneplus_customization_summary_hide_navbar">Dugi pritisak, dvostruki dodir, skrivanje navigacijske trake</string>
     <string name="oneplus_data_usage_control_title">Kontrola korištenja podataka</string>
     <string name="oneplus_dc_dimming_summary">DC prigušenje prilagođava svjetlinu zaslona mijenjanjem jačine struje zaslona. Kada je omogućeno, smanjit će treperenje zaslona na niskoj svjetlini. To može dovesti do nenormalnog prikaza boja u određenim slučajevima.</string>
     <string name="oneplus_dc_dimming_title">DC prigušenje</string>
@@ -3264,6 +3266,10 @@ Napomena: Otisak prsta može biti manje siguran od snažnog obrasca ili PIN-a"</
     <string name="oneplus_intelligently_select_best_wifi">Inteligentno odaberi najbolju Wi‑Fi mrežu</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Inteligentno odaberi i poveži se na najbolju Wi‑Fi mrežu otkrivanjem i analiziranjem veze i jačine signala Wi‑Fi mreža</string>
     <string name="oneplus_intensely">Jako</string>
+    <string name="oneplus_is_turn_on_feature">Jeste li sigurni da želite uključiti tu značajku?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Kada je uključena, mogu se ponekad dogoditi sljedeće situacije:
+1. Neka područja prikaza na zaslonu su abnormalna
+2. Prilagođavanje osvjetljenja neće raditi ispravno"</string>
     <string name="oneplus_lab_dislike">Ne sviđa mi se</string>
     <string name="oneplus_lab_features">Laboratorijske značajke</string>
     <string name="oneplus_lab_feedback_toast">Hvala vam na povratnim informacijama!</string>
@@ -3361,7 +3367,7 @@ Napomena: Otisak prsta može biti manje siguran od snažnog obrasca ili PIN-a"</
     <string name="oneplus_notification_channel_summary_low">Manje važno bez zvuka ili vibracija</string>
     <string name="oneplus_notification_dialog_never_mode">Nikada</string>
     <string name="oneplus_notification_dialog_ringtone">Ton zvona obavijesti</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Samo u načinu zvona</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Uvijek</string>
     <string name="oneplus_notification_dots">Točke obavijesti</string>
     <string name="oneplus_notification_instrucitons">Korisnički priručnik</string>
@@ -3526,10 +3532,10 @@ Napomena: Otisak prsta može biti manje siguran od snažnog obrasca ili PIN-a"</
     <string name="oneplus_screen_refresh_rate_auto_summary">Izuzetno ujednačeno pri većim brzinama osvježavanja</string>
     <string name="oneplus_screen_refresh_rate_info">Što je viša brzina osvježavanja zaslona, to je ujednačeniji prikaz zaslona. Na 90 Hz brzina osvježavanja dinamički se određuje temeljem scenarija rada.</string>
     <string name="oneplus_screen_resolution_adjust">Rezolucija</string>
-    <string name="oneplus_screen_resolution_adjust_1080p_summary">Odličan prikaz, niža potrošnja energije (2340×1080)</string>
+    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent display, lower power consumption (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Automatska promjena</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Automatski prijelaz na odgovarajuću rezoluciju</string>
-    <string name="oneplus_screen_resolution_adjust_other_summary">Maksimalna jasnoća, povećana potrošnja energije (3120×1440)</string>
+    <string name="oneplus_screen_resolution_adjust_other_summary">Maximum clarity, increased power consumption (3120×1440)</string>
     <string name="oneplus_search_keyword_about_settings">naziv uređaja, verzija androida, broj međuverzije, model, CPU, pohrana, RAM, ROM, fotoaparat, piksel, zaslon</string>
     <string name="oneplus_search_keyword_accent_color">boja</string>
     <string name="oneplus_search_keyword_app_lock">zaključavanje,PIN,lozinke</string>
@@ -3568,7 +3574,8 @@ Napomena: Otisak prsta može biti manje siguran od snažnog obrasca ili PIN-a"</
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ne ometaj, prekid, prekidanje, način</string>
     <string name="oneplus_search_keyword_swap_navkeys">zamjena tipki</string>
     <string name="oneplus_search_keyword_switch">prijenos,migracija podataka</string>
-    <string name="oneplus_search_keyword_theme_settings">PRILAGOĐAVANJE ZAKLJUČANOG ZASLONA, pozadine, stil sata, animacija otiska prsta, Horizon Light PRILAGOĐAVANJE SUSTAVA, boja naglašavanja, oblik, font, ton, paket ikona</string>
+    <string name="oneplus_search_keyword_theme_settings">PRILAGOĐAVANJE ZAKLJUČANOG ZASLONA, Pozadine, Stil sata, Animacija otiska prsta, Horizon Light, PRILAGOĐAVANJE SUSTAVA, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, Osvjetljenje, Nijansirana tamna, Živopisni preljevi</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PRILAGOĐAVANJE ZAKLJUČANOG ZASLONA, Pozadine, Stil sata, Animacija otiska prsta, Horizon Light, PRILAGOĐAVANJE SUSTAVA, Boja naglašavanja, Oblik, Font, Ton, Paket ikona, Osvjetljenje, Nijansirana tamna, Živopisni preljevi, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">snimka zaslona</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">obavijesti,iskustvo,program,poboljšanje</string>
@@ -3632,7 +3639,7 @@ Napomena:
     <string name="oneplus_smart_wifi_connection">pametna Wi‑Fi veza</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">Zvono i vibracija SMS-a</string>
-    <string name="oneplus_snooze_options_title">Odložite obavijesti na povlačećem oblaku</string>
+    <string name="oneplus_snooze_options_title">Odložite obavijesti na oblaku za obavijesti</string>
     <string name="oneplus_sound_and_vibrate">Zvuk i vibracije</string>
     <string name="oneplus_sound_settings_summary">Ne ometaj, način slušalica</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3644,7 +3651,7 @@ Napomena:
     <string name="oneplus_suspension_notice">Najave</string>
     <string name="oneplus_suspension_notice_summary">Dopusti aplikacijama da prikazuje najave</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Promijeni</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Prekidač</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Promjena rezolucije može rezultirati zatvaranjem nekih pozadinskih aplikacija. Želite li potvrditi promjenu?</string>
     <string name="oneplus_switch_screen_lock_type">Promjena vrste zaključavanja zaslona, pričekajte...</string>
     <string name="oneplus_system_data_summary">Uključujući informacije računa, kontakte, podatke aplikacija</string>
@@ -3665,6 +3672,7 @@ Napomena:
     <string name="oneplus_theme_clock">Stil sata</string>
     <string name="oneplus_theme_clock_snake_action">UKLJUČI AMBIJENTALNI ZASLON</string>
     <string name="oneplus_theme_clock_snake_tip">Ta će značajka biti dostupna kada se uključi ambijentalni zaslon</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Odbaciti izmjene?</string>
     <string name="oneplus_theme_drop_title">Napuštanje uređivanja</string>
     <string name="oneplus_theme_entrance_summary">Pozadina, boja naglašavanja, font, ton</string>
@@ -3681,7 +3689,8 @@ Napomena:
     <string name="oneplus_theme_preset_dark">Nijansirana tamna</string>
     <string name="oneplus_theme_preset_light">Osvjetljenje</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Zadane teme dolaze s velikim izborom pozadina, boja naglašavanja, tonova itd.</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">Oblik</string>
     <string name="oneplus_theme_shape_effect_round">Zaobljeno</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Zaobljeni pravokutnik</string>
@@ -3690,9 +3699,9 @@ Napomena:
     <string name="oneplus_theme_shape_effect_title">ODABERI OBLIK</string>
     <string name="oneplus_theme_system_customization">PRILAGODBA SUSTAVA</string>
     <string name="oneplus_theme_tone">Ton</string>
-    <string name="oneplus_theme_tone_effect_color">Šareno</string>
+    <string name="oneplus_theme_tone_effect_color">Šarena</string>
     <string name="oneplus_theme_tone_effect_dark">Tamno</string>
-    <string name="oneplus_theme_tone_effect_light">Svijetlo</string>
+    <string name="oneplus_theme_tone_effect_light">Lagano</string>
     <string name="oneplus_theme_tone_effect_title">ODABERI TON</string>
     <string name="oneplus_theme_wallpaper">Pozadine</string>
     <string name="oneplus_three_screenshots_enable_summary">S tri prsta prijeđite po zaslonu kako biste napravili snimku zaslona</string>
@@ -3708,7 +3717,7 @@ Napomena:
     <string name="oneplus_tools_summary_U30">Način igranja, džepni način, planirano isključivanje/uključivanje</string>
     <string name="oneplus_tools_summary_no_gamingmode">Blokiranje aplikacije, paralelne aplikacije</string>
     <string name="oneplus_tools_title">Uslužni programi</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus račun, drugi račun</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Zadane aplikacije, dozvole</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Klizač upozorenja, navigacijska traka i geste</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sinkronizacija podataka na oblak, Pronađi moj telefon</string>
@@ -3723,6 +3732,8 @@ Napomena:
     <string name="oneplus_top_level_system_summary">Jezik i tipkovnica, vrijeme, ponovno postavljanje, ažuriranje sustava</string>
     <string name="oneplus_touch_vibrate">Vibracija dodira</string>
     <string name="oneplus_turn_off_time">Do</string>
+    <string name="oneplus_turn_on_feature_cancel">OTKAŽI</string>
+    <string name="oneplus_turn_on_feature_ok">UKLJUČI</string>
     <string name="oneplus_turn_on_time">Od</string>
     <string name="oneplus_uninstatll_multi_app_msg">Nakon deinstaliranja svi podaci unutar paralelne aplikacije bit će izbrisani. Jeste li sigurni da želite deinstalirati?</string>
     <string name="oneplus_uninstatll_multi_app_title">Paralelna aplikacija %1$s</string>
@@ -3789,6 +3800,7 @@ Postavljanje mreže kao skrivene neće promijeniti postavke usmjerivača."</stri
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Prvo odaberite sigurnosno zaključavanje zaslona</string>
     <string name="op_cloud_service_summary">Sinkronizacija kontakata, bilješki, fotografija itd.</string>
     <string name="op_cloud_service_title">Usluge u oblaku</string>
     <string name="op_confirm_enable_oem_unlock_text">UPOZORENJE: Značajke zaštite uređaja i provjere, npr. plaćanje otiskom prsta i napredni DRM ključ, možda neće raditi dok je OEM otključan.</string>
@@ -3800,13 +3812,21 @@ Postavljanje mreže kao skrivene neće promijeniti postavke usmjerivača."</stri
     <string name="op_default_apps_summary">Početak, preglednik</string>
     <string name="op_default_luncher_title">Početna aplikacija</string>
     <string name="op_dnd_summary">Ne ometaj</string>
+    <string name="op_face_unlock_set_unlock_password">Otključavanje licem + lozinka</string>
+    <string name="op_face_unlock_set_unlock_pattern">Otključavanje licem + uzorak</string>
+    <string name="op_face_unlock_set_unlock_pin">Otključavanje licem + PIN</string>
+    <string name="op_face_unlock_skip_face">Nastavi bez otključavanja licem</string>
     <string name="op_failed_to_get_data">Nije uspjelo pribavljanje podataka</string>
     <string name="op_fetch_data_in_process">Učitavanje</string>
     <string name="op_fragment">Kratko</string>
+    <string name="op_gamespace">Prostor za igru</string>
     <string name="op_high_power_app_manager">Aplikacije s visokom potrošnjom energije</string>
     <string name="op_light_mode_title">Svijetlo</string>
     <string name="op_linked_launch_summary">Upravljanje aplikacijama može se pokrenuti u pozadini</string>
     <string name="op_linked_launch_title">Automatsko pokretanje aplikacija</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Da biste se koristili otključavanjem licem, postavite lozinku</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Da biste se koristili otključavanjem licem, postavite uzorak</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Da biste se koristili otključavanjem licem, postavite PIN</string>
     <string name="op_not_disturb">Postavke za \"Ne ometaj\"</string>
     <string name="op_not_disturb_summary">Isključite pozive, upozorenja i vibraciju, osim za alarme</string>
     <string name="op_oneplus_roaming_summary">Pružanje globalnih usluga pristupa internetu</string>
@@ -3830,7 +3850,7 @@ Postavljanje mreže kao skrivene neće promijeniti postavke usmjerivača."</stri
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Pronađi senzor otiska prsta na gumbu početne stranice</string>
     <string name="op_security_settings_title">Sigurnost i otisak prsta</string>
     <string name="op_sim_card_with_slotid">SIM %1$s</string>
-    <string name="op_sim_cord">SIM i mreža</string>
+    <string name="op_sim_cord">SIM &amp; mreža</string>
     <string name="op_sim_cord_summary">Zadana SIM kartica, iskorištena pojasna širina</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
     <string name="op_sms_ringtone">SMS melodija zvona</string>

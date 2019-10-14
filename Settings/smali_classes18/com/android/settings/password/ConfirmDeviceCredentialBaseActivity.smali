@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a03b1
+    const v1, 0x7f0a03b2
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 
@@ -298,7 +298,7 @@
 
     if-ne v1, v3, :cond_3
 
-    const v1, 0x7f0a0187
+    const v1, 0x7f0a0188
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->findViewById(I)Landroid/view/View;
 

@@ -165,33 +165,44 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_9
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+    invoke-static {p1}, Lcom/oneplus/settings/others/OPToolsSettings;->access$000(Landroid/content/Context;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-nez v1, :cond_a
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const-string v1, "game_space"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_a
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportQuickReply()Z
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
     move-result v1
 
     if-eqz v1, :cond_b
 
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_b
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportQuickReply()Z
 
     move-result v1
 
     if-eqz v1, :cond_c
 
-    :cond_b
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_d
+
+    :cond_c
     const-string v1, "oneplus_quick_replay"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_c
+    :cond_d
     return-object v0
 .end method
 

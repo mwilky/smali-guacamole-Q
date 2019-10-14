@@ -110,7 +110,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    const v0, 0x7f0a0187
+    const v0, 0x7f0a0188
 
     invoke-virtual {p0, v0}, Lcom/android/settings/password/SetupChooseLockPassword;->findViewById(I)Landroid/view/View;
 

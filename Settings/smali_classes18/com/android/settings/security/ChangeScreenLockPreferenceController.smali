@@ -430,7 +430,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f1215f6
+    const v0, 0x7f1215f7
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -438,7 +438,7 @@
 
     :cond_1
     :goto_0
-    const v0, 0x7f1215f7
+    const v0, 0x7f1215f8
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -482,21 +482,21 @@
     goto :goto_1
 
     :cond_3
-    const v0, 0x7f1215f8
+    const v0, 0x7f1215f9
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
 
     goto :goto_1
 
     :cond_4
-    const v0, 0x7f1215fa
+    const v0, 0x7f1215fb
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
 
     goto :goto_1
 
     :cond_5
-    const v0, 0x7f1215f9
+    const v0, 0x7f1215fa
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setSummary(I)V
 

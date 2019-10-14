@@ -60,7 +60,7 @@
 
     iget-object v2, p1, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardRenderer$ConditionalCardHolder;->itemView:Landroid/view/View;
 
-    const v3, 0x7f0a0276
+    const v3, 0x7f0a0277
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +98,7 @@
 
     iget-object v0, p1, Lcom/android/settings/homepage/contextualcards/conditional/ConditionContextualCardRenderer$ConditionalCardHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f0a0181
+    const v1, 0x7f0a0182
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -208,7 +208,7 @@
 
     invoke-virtual {v9, v4}, Lcom/android/settingslib/widget/apppreference/AppPreference;->setEnabled(Z)V
 
-    const v10, 0x7f121910
+    const v10, 0x7f121911
 
     invoke-virtual {p0, v10}, Lcom/android/settings/notification/ZenAccessSettings;->getString(I)Ljava/lang/String;
 
@@ -361,7 +361,7 @@
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/widget/EmptyTextSettings;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f121911
+    const v0, 0x7f121912
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ZenAccessSettings;->setEmptyText(I)V
 

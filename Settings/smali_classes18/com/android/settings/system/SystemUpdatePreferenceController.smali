@@ -372,9 +372,20 @@
 
     if-eqz v2, :cond_0
 
+    :try_start_0
     invoke-direct {p0, v1}, Lcom/android/settings/system/SystemUpdatePreferenceController;->ciActionOnSysUpdate(Landroid/os/PersistableBundle;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    invoke-virtual {v2}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
 
     :cond_0
+    :goto_0
     const/4 v0, 0x0
 
     return v0

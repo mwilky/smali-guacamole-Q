@@ -534,7 +534,7 @@
 
     iget-object v13, v1, Lcom/android/settings/deviceinfo/StorageSettings;->mInternalSummary:Lcom/android/settings/deviceinfo/StorageSummaryPreference;
 
-    const v14, 0x7f12147d
+    const v14, 0x7f12147e
 
     invoke-virtual {v1, v14}, Lcom/android/settings/deviceinfo/StorageSettings;->getText(I)Ljava/lang/CharSequence;
 
@@ -564,7 +564,7 @@
 
     iget-object v12, v1, Lcom/android/settings/deviceinfo/StorageSettings;->mInternalSummary:Lcom/android/settings/deviceinfo/StorageSummaryPreference;
 
-    const v13, 0x7f12148c
+    const v13, 0x7f12148d
 
     const/4 v14, 0x1
 
@@ -676,7 +676,7 @@
 
     move-result-object v13
 
-    const v14, 0x7f121479
+    const v14, 0x7f12147a
 
     invoke-virtual {v13, v14}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -867,7 +867,7 @@
 
     if-ne v4, v5, :cond_2
 
-    const v3, 0x7f121450
+    const v3, 0x7f121451
 
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getDiskId()Ljava/lang/String;
 
@@ -926,7 +926,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f121479
+    const v5, 0x7f12147a
 
     invoke-virtual {v4, v5}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -1048,7 +1048,7 @@
 
     if-eqz v1, :cond_8
 
-    const v1, 0x7f121452
+    const v1, 0x7f121453
 
     invoke-static {p0, v1, v0}, Lcom/android/settings/deviceinfo/StorageSettings$DiskInitFragment;->show(Landroidx/fragment/app/Fragment;ILjava/lang/String;)V
 
@@ -1081,7 +1081,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f121465
+    const v4, 0x7f121466
 
     invoke-virtual {v3, v4}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 

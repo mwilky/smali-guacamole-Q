@@ -134,7 +134,7 @@
 
     iget-object v0, p0, Lcom/android/settings/users/RestrictedProfileSettings;->mHeaderView:Landroid/view/View;
 
-    const v1, 0x7f0a01d7
+    const v1, 0x7f0a01d8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f121182
+    const v5, 0x7f121183
 
     iget-object v7, p0, Lcom/android/settings/users/RestrictedProfileSettings;->mUser:Landroid/os/UserHandle;
 

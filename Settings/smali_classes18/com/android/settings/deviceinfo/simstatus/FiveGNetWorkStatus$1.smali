@@ -51,14 +51,14 @@
     :cond_0
     iget-object v1, p0, Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus$1;->this$0:Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;
 
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;->access$100(Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;)V
+    invoke-static {v1}, Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;->access$600(Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;)V
 
     goto :goto_0
 
     :cond_1
     iget-object v1, p0, Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus$1;->this$0:Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;
 
-    invoke-static {v1}, Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;->access$000(Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;)V
+    invoke-static {v1}, Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;->access$500(Lcom/android/settings/deviceinfo/simstatus/FiveGNetWorkStatus;)V
 
     nop
 

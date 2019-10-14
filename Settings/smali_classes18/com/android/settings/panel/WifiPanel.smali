@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lcom/android/settings/panel/WifiPanel;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f12188f
+    const v1, 0x7f121890
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -124,7 +124,7 @@
 
     iget-object v0, p0, Lcom/android/settings/panel/WifiPanel;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f12188f
+    const v1, 0x7f121890
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

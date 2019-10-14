@@ -969,7 +969,7 @@
     <string name="bugreport_in_power_summary">電源メニューにバグレポートを取得するボタンを表示する</string>
     <string name="build_number">ビルド番号</string>
     <string name="built_in_app_updates_summary">OnePlus に内蔵アプリ更新プログラムを確認させ、アプリの安定性を改善することが目的の内蔵アプリ更新プログラムをユーザーにプッシュさせます。</string>
-    <string name="built_in_app_updates_title">内蔵アプリ更新プログラム</string>
+    <string name="built_in_app_updates_title">組み込みアプリの更新</string>
     <string name="builtin_keyboard_settings_summary">物理キーボードの設定</string>
     <string name="builtin_keyboard_settings_title">物理キーボード</string>
     <string name="button_confirm_convert_fbe">消去して変換</string>
@@ -1099,7 +1099,7 @@
     <string name="color_none">なし</string>
     <string name="color_orange">オレンジ</string>
     <string name="color_picker_accent_color_message">アクセントカラーを選択</string>
-    <string name="color_picker_default">既定</string>
+    <string name="color_picker_default">デフォルト</string>
     <string name="color_picker_led_color_message">LED の色を選択</string>
     <string name="color_picker_message_default">お好みの色を選択してください。</string>
     <string name="color_picker_unknown_label">不明</string>
@@ -1123,7 +1123,7 @@
     <string name="condition_cellular_title">モバイルデータ OFF</string>
     <string name="condition_cloud_summary">クリックして、クラウドサービスを使用して、データロスが発生しないことを保証します</string>
     <string name="condition_cloud_title">クラウドサービスの使用を開始</string>
-    <string name="condition_cloud_turn_off">閉じる</string>
+    <string name="condition_cloud_turn_off">却下</string>
     <string name="condition_device_muted_action_turn_on_sound">通知音を ON にする</string>
     <string name="condition_device_muted_summary">通話と通知</string>
     <string name="condition_device_muted_title">着信音をミュートに設定</string>
@@ -1775,6 +1775,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="failed_to_open_app_settings_toast">%1$sの設定を開くことができませんでした</string>
     <string name="fcc_equipment_id">装置ID</string>
     <string name="feature_flags_dashboard_title">機能フラグ</string>
+    <string name="feature_not_support_split_screen">この機能は分割表示ではサポートされていません。</string>
     <string name="filter">フィルタ</string>
     <string name="filter_all_apps">すべてのアプリ</string>
     <string name="filter_apps_all">すべてのアプリ</string>
@@ -2068,7 +2069,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="keywords_date_and_time">時計、24 時間</string>
     <string name="keywords_default_apps">アプリ、デフォルト</string>
     <string name="keywords_default_browser">デフォルト、デフォルトブラウザー</string>
-    <string name="keywords_default_links">デフォルト</string>
+    <string name="keywords_default_links">既定</string>
     <string name="keywords_default_payment_app">お支払い, デフォルト</string>
     <string name="keywords_default_phone_app">電話、ダイヤラー、デフォルト</string>
     <string name="keywords_device_feedback">バグ</string>
@@ -2889,8 +2890,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_summary">携帯電話をポケットに入れている際に誤って画面にタップしたり、指紋による操作を行ったりするのを防ぎます</string>
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">ポケットモード</string>
     <string name="oneplus_aod_smart_display_calendar_event">カレンダーイベント</string>
-    <string name="oneplus_aod_smart_display_music_info">メディアプレーヤー</string>
-    <string name="oneplus_aod_smart_display_title">スマートディスプレイ</string>
+    <string name="oneplus_aod_smart_display_music_info">メディアプレイヤー</string>
+    <string name="oneplus_aod_smart_display_title">コンテキストに基づいた情報</string>
     <string name="oneplus_app_alipay">アリペイ</string>
     <string name="oneplus_app_display_compatibility">互換モード</string>
     <string name="oneplus_app_display_fullscreen">全画面表示モード</string>
@@ -3001,10 +3002,11 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_connected_devices_count">接続済みのデバイスが %1$s 個あります</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC、キャスト、印刷</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; デバイス接続</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">プロセッサー</string>
     <string name="oneplus_custom_time">カスタム時間範囲</string>
     <string name="oneplus_customization">ナビゲーションバーのカスタマイズ</string>
     <string name="oneplus_customization_summary">長押し、ダブルタップ</string>
+    <string name="oneplus_customization_summary_hide_navbar">長押し、ダブルタップ、ナビゲーションバー非表示</string>
     <string name="oneplus_data_usage_control_title">データ使用量の制御</string>
     <string name="oneplus_dc_dimming_summary">DC 減光機能では、画面の回路電力を変更することで、画面の明るさを調節します。これを有効にすると、暗い画面でのちらつきが抑えられます。ただし、異常な色が表示される場合があります。</string>
     <string name="oneplus_dc_dimming_title">DC 減光</string>
@@ -3157,7 +3159,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_forum_award_summary">このコミュニティはあなたのものです。あなただけが私たちの進路を決めることができます。私たちは一緒に定義し、改良します。ビルドを壊し、コードを書きます。どうぞ受け取ってください。一緒に夢を見ていただきありがとうございます!</string>
     <string name="oneplus_forum_award_title">受賞</string>
     <string name="oneplus_fullscreen_back_guide_summary">画面の右から左下に向かって内側にスワイプ</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">画面下の左端または右端から上にスワイプしてください</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">画面下の左端または右端から上方向にスワイプ</string>
     <string name="oneplus_fullscreen_back_guide_title">戻る</string>
     <string name="oneplus_fullscreen_disable_this_feature">この機能はナビゲーションジェスチャーが有効な場合には使用できません。</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"戻るボタンを入れ替えるジェスチャーを使ってみましょう。
@@ -3169,8 +3171,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
 好きな時にホーム画面に移動し、画面の中央下側から上にスワイプしてください。"</string>
     <string name="oneplus_fullscreen_gesture_guide_multitask">最近使用したアプリを表示するには、画面下側から上にスワイプして停止します。</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">ナビゲーションジェスチャーが有効になります</string>
-    <string name="oneplus_fullscreen_home_guide_summary">画面の下から上にスワイプ</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">画面の下端中央から上にスワイプしてください</string>
+    <string name="oneplus_fullscreen_home_guide_summary">画面の下端から上にスワイプしてください</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">画面の下端中央から上方向にスワイプ</string>
     <string name="oneplus_fullscreen_home_guide_title">ホーム</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">ナビゲーションジェスチャーはまだ画面の下からトリガーできます。左か右からスワイプして、戻ってください。</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">ポートレートと同様、ナビゲーションジェスチャーは依然としてデバイス下部から開始します</string>
@@ -3182,8 +3184,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_fullscreen_previous_app_guide_title">最近使用したアプリを切り替える</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">画面の下端から上にスワイプし、左または右にスライドさせてください</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">最近使用したアプリを切り替える</string>
-    <string name="oneplus_fullscreen_recent_guide_summary">画面の下から上にスワイプし、一時停止</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">一時停止するには、画面の下端中央から上にスワイプしてください</string>
+    <string name="oneplus_fullscreen_recent_guide_summary">画面の下端から上にスワイプして一時停止してください</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">画面の下端中央から上方向にスワイプして一時停止</string>
     <string name="oneplus_fullscreen_recent_guide_title">最近使用したアプリ</string>
     <string name="oneplus_functional_terms">利用規約</string>
     <string name="oneplus_game_haptic_feedback_summary">より臨場感のあるゲーム操作を可能にするため、触覚フィードバックを追加してください。Bluetooth ヘッドフォンはまだサポートされていません。</string>
@@ -3217,7 +3219,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_gesture_of_answer_call_summary">耳の所まで携帯電話を持ち上げると自動的に着信に応答する</string>
     <string name="oneplus_gesture_of_answer_call_title">ジェスチャーで着信に応答する</string>
     <string name="oneplus_gesture_start_learning">学習を開始</string>
-    <string name="oneplus_gesture_to_answer_summary">携帯電話を耳元まで持ち上げると自動的に着信に応答します</string>
+    <string name="oneplus_gesture_to_answer_summary">耳の所まで携帯電話を持ち上げると自動的に着信に応答する</string>
     <string name="oneplus_gesture_to_answer_title">持ち上げて応答</string>
     <string name="oneplus_gesture_to_control_call_info">携帯電話を耳元まで持ち上げることで、通話を自動的に制御します</string>
     <string name="oneplus_gesture_to_control_calls_summary">ジェスチャーによって、自動的に着信に応答したり、通話を携帯電話の受話口に切り替えたりします</string>
@@ -3264,6 +3266,10 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_intelligently_select_best_wifi">接続状態の最も優れた Wi‑Fi をインテリジェントに選択</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Wi‑Fi ネットワークの接続性と電波強度を検知および分析することで、接続状態の最も優れた Wi‑Fi をインテリジェントに選択し、これに接続します</string>
     <string name="oneplus_intensely">強く</string>
+    <string name="oneplus_is_turn_on_feature">この機能をオンにしてもよろしいですか？</string>
+    <string name="oneplus_is_turn_on_feature_summary">"この機能をオンにすると、次のような状況が発生することがあります。
+1. 画面ディスプレイの一部の領域に異常が発生する
+2. 自動輝度調整が適切に動作しなくなる"</string>
     <string name="oneplus_lab_dislike">気に入らない</string>
     <string name="oneplus_lab_features">ラボ機能</string>
     <string name="oneplus_lab_feedback_toast">ご意見をありがとうございました！</string>
@@ -3359,9 +3365,9 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_notification_advance_settings">詳細通知設定</string>
     <string name="oneplus_notification_alert_title">重要</string>
     <string name="oneplus_notification_channel_summary_low">重要性の低い通知は、サウンドまたはバイブを使用しません</string>
-    <string name="oneplus_notification_dialog_never_mode">通知しない</string>
+    <string name="oneplus_notification_dialog_never_mode">なし</string>
     <string name="oneplus_notification_dialog_ringtone">通知着信音</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">着信音モードでのみ</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">常時</string>
     <string name="oneplus_notification_dots">通知ドット</string>
     <string name="oneplus_notification_instrucitons">ユーザーチュートリアル</string>
@@ -3568,7 +3574,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">妨害禁止、割り込み、中断、休憩、モード</string>
     <string name="oneplus_search_keyword_swap_navkeys">ボタンの入れ替え</string>
     <string name="oneplus_search_keyword_switch">転送、データ移行</string>
-    <string name="oneplus_search_keyword_theme_settings">ロック画面のカスタマイゼーション、壁紙、クロックスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック</string>
+    <string name="oneplus_search_keyword_theme_settings">ロック画面のカスタマイゼーション、壁紙、クロックスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック、照明、微妙に異なる暗さ、鮮やかな色合い</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ロック画面のカスタマイゼーション、壁紙、クロックスタイル、指紋アニメーション、Horizon Light、システムカスタマイゼーション、アクセントカラー、シェイプ、フォント、トーン、アイコンパック、照明、微妙に異なる暗さ、鮮やかな色合い、McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">スクリーン ショット</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">通知、経験、プログラム、改善</string>
@@ -3632,7 +3639,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_smart_wifi_connection">スマートな Wi‑Fi 接続</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS の着信音とバイブ</string>
-    <string name="oneplus_snooze_options_title">プルダウンシェードから通知をスヌーズする</string>
+    <string name="oneplus_snooze_options_title">通知シェードから通知をスヌーズする</string>
     <string name="oneplus_sound_and_vibrate">音声 &amp; バイブ</string>
     <string name="oneplus_sound_settings_summary">マナーモード、イヤホンモード</string>
     <string name="oneplus_sound_tuner">ドルビーアトモス</string>
@@ -3644,7 +3651,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_suspension_notice">ポップアップ通知</string>
     <string name="oneplus_suspension_notice_summary">アプリがポップアップ通知を表示することを許可する</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">切り替える</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">解像度を切り替える際に、一部のバックグラウンドアプリが閉じられる場合があります。切り替えてもよろしいですか？</string>
     <string name="oneplus_switch_screen_lock_type">画面ロックの種類を切り替え中です。お待ちください...</string>
     <string name="oneplus_system_data_summary">アカウント情報、連絡先、アプリのデータなど</string>
@@ -3656,8 +3663,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_system_stability_summary">OnePlus にシステムログへの匿名アクセスを許可してください。エラー発生時に、ログを含むバグレポートを送信することを許可してください。ログはシステムエラーの分析および安定性の向上のためにのみ使用されます</string>
     <string name="oneplus_system_stability_title">システム安定性プログラム</string>
     <string name="oneplus_system_vibrate">システムバイブレーション</string>
-    <string name="oneplus_theme_accent_color">アクセントカラー</string>
-    <string name="oneplus_theme_accent_color_customization">カスタマイゼーション</string>
+    <string name="oneplus_theme_accent_color">アクセント カラー</string>
+    <string name="oneplus_theme_accent_color_customization">カスタマイズ</string>
     <string name="oneplus_theme_accent_color_presetcolor">プリセットカラー</string>
     <string name="oneplus_theme_accent_color_select">アクセントカラーを選択</string>
     <string name="oneplus_theme_apply_summary">このテーマを適用した後、カスタマイゼーションオプションは上書きされます</string>
@@ -3665,10 +3672,11 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_theme_clock">クロックスタイル</string>
     <string name="oneplus_theme_clock_snake_action">アンビエントディスプレイをオンにする</string>
     <string name="oneplus_theme_clock_snake_tip">この機能はアンビエントディスプレイがオンのときに使用できます</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">変更を破棄しますか？</string>
     <string name="oneplus_theme_drop_title">編集モードを終了</string>
     <string name="oneplus_theme_entrance_summary">壁紙、アクセントカラー、フォント、トーン</string>
-    <string name="oneplus_theme_entrance_title">カスタマイゼーション</string>
+    <string name="oneplus_theme_entrance_title">カスタマイズ</string>
     <string name="oneplus_theme_fingerprint">指紋アニメーション</string>
     <string name="oneplus_theme_fingerprint_snake_action">指紋をオンにする</string>
     <string name="oneplus_theme_fingerprint_snake_tip">この機能は指紋認証がオンのときに使用できます</string>
@@ -3681,7 +3689,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_theme_preset_dark">微妙に異なる暗さ</string>
     <string name="oneplus_theme_preset_light">照明</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">プリセットテーマには、さまざまな壁紙、アクセントカラー、トーンなどが付属します</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">シェイプ</string>
     <string name="oneplus_theme_shape_effect_round">丸</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">角丸長方形</string>
@@ -3691,8 +3700,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_theme_system_customization">システムカスタマイゼーション</string>
     <string name="oneplus_theme_tone">トーン</string>
     <string name="oneplus_theme_tone_effect_color">カラフル</string>
-    <string name="oneplus_theme_tone_effect_dark">ダーク</string>
-    <string name="oneplus_theme_tone_effect_light">ライト</string>
+    <string name="oneplus_theme_tone_effect_dark">暗い</string>
+    <string name="oneplus_theme_tone_effect_light">弱く</string>
     <string name="oneplus_theme_tone_effect_title">トーンを選択</string>
     <string name="oneplus_theme_wallpaper">壁紙</string>
     <string name="oneplus_three_screenshots_enable_summary">スクリーンショットを撮るには、画面を 3 本の指でスワイプします</string>
@@ -3708,21 +3717,23 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_tools_summary_U30">ゲームモード、ポケットモード、スケジュール設定された電源オン/オフ</string>
     <string name="oneplus_tools_summary_no_gamingmode">アプリロッカー、パラレルアプリ</string>
     <string name="oneplus_tools_title">ユーティリティ</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus アカウント、その他のアカウント</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">デフォルトのアプリ、アクセス権限</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider、ナビゲーション、ジェスチャー</string>
     <string name="oneplus_top_level_cloud_h2_summary">クラウドとデータを同期、携帯電話を見つける</string>
     <string name="oneplus_top_level_cloud_o2_summary">クラウドとデータを同期</string>
     <string name="oneplus_top_level_connected_summary">NFC、キャスト、タップ＆ペイ</string>
-    <string name="oneplus_top_level_display_summary">ステータスバー、アンビエントディスプレイ、おやすみモード、閲覧モード</string>
+    <string name="oneplus_top_level_display_summary">ステータスバー、アンビエントディスプレイ、ナイトモード、読書モード</string>
     <string name="oneplus_top_level_network_summary">SIM、モバイルネットワーク、データ使用量、ホットスポット</string>
     <string name="oneplus_top_level_privacy_summary">アクセス権限、個人データ</string>
-    <string name="oneplus_top_level_security_dashboard_summary">指紋、フェイスアンロック、緊急救援</string>
+    <string name="oneplus_top_level_security_dashboard_summary">指紋、顔認証、緊急救助</string>
     <string name="oneplus_top_level_security_summary">指紋、顔認証、緊急救助</string>
     <string name="oneplus_top_level_sound_summary">サイレントモード、イヤホンモード、着信音</string>
     <string name="oneplus_top_level_system_summary">言語およびキーボード、時間、リセット、システムの更新</string>
     <string name="oneplus_touch_vibrate">タッチ時のバイブ</string>
     <string name="oneplus_turn_off_time">終了時刻</string>
+    <string name="oneplus_turn_on_feature_cancel">キャンセル</string>
+    <string name="oneplus_turn_on_feature_ok">オンにする</string>
     <string name="oneplus_turn_on_time">開始時刻</string>
     <string name="oneplus_uninstatll_multi_app_msg">アンインストールすると、パラレルアプリ内のすべてのデータが消去されます。アンインストールしてもよろしいですか？</string>
     <string name="oneplus_uninstatll_multi_app_title">パラレル %1$s</string>
@@ -3745,7 +3756,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_vibration_settings_soc_tri_state_summary">アラーム以外の着信音や通知音が鳴らなくなり、バイブのみに設定されます</string>
     <string name="oneplus_vibration_summary">アラームが常に鳴ります</string>
     <string name="oneplus_video_enhancer">ビデオエンハンサー</string>
-    <string name="oneplus_video_enhancer_footer">再生中のビデオの色を強化します</string>
+    <string name="oneplus_video_enhancer_footer">再生中のビデオの色を強化します。</string>
     <string name="oneplus_video_enhancer_summary">再生中のビデオの色を強化します。</string>
     <string name="oneplus_volume_keys_adjust">音量ボタンを使用して、調整してください</string>
     <string name="oneplus_volume_keys_adjust_media">メディアの音量</string>
@@ -3789,6 +3800,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">バックアップ用の画面ロック方法をまず選択してください</string>
     <string name="op_cloud_service_summary">連絡先、メモ、写真などを同期します</string>
     <string name="op_cloud_service_title">クラウドサービス</string>
     <string name="op_confirm_enable_oem_unlock_text">警告: デバイス保護および検証機能（例: 指紋認証支払いや高度な DRM キー）は、OEM のロック解除中に動作しない可能性があります。</string>
@@ -3800,13 +3812,21 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_default_apps_summary">ホーム、ブラウザ</string>
     <string name="op_default_luncher_title">ホームアプリ</string>
     <string name="op_dnd_summary">おやすみモード</string>
+    <string name="op_face_unlock_set_unlock_password">顔認証 + パスワード</string>
+    <string name="op_face_unlock_set_unlock_pattern">顔認証 + パターン</string>
+    <string name="op_face_unlock_set_unlock_pin">顔認証 + PIN</string>
+    <string name="op_face_unlock_skip_face">顔認証を使用せずに続行</string>
     <string name="op_failed_to_get_data">データを取得できませんでした。</string>
     <string name="op_fetch_data_in_process">読み込み中</string>
     <string name="op_fragment">短い</string>
+    <string name="op_gamespace">ゲームスペース</string>
     <string name="op_high_power_app_manager">電力消費の激しいアプリの管理</string>
     <string name="op_light_mode_title">明るい</string>
     <string name="op_linked_launch_summary">管理アプリケーションはバックグラウンドで起動することができます</string>
     <string name="op_linked_launch_title">アプリの自動起動</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">顔認証を使用するには、パスワードを設定してください</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">顔認証を使用するには、パターンを設定してください</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">顔認証を使用するには、PIN を設定してください</string>
     <string name="op_not_disturb">おやすみモード設定</string>
     <string name="op_not_disturb_summary">アラーム以外の着信や通知をミュートして、バイブをオフにします</string>
     <string name="op_oneplus_roaming_summary">グローバルなインターネットアクセスサービスを提供します</string>
@@ -3814,7 +3834,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_primary_charm_purple_label">深紫</string>
     <string name="op_primary_dark_green_label">ダークグリーン</string>
     <string name="op_primary_default_label">青</string>
-    <string name="op_primary_fashion_pink_label">紫色</string>
+    <string name="op_primary_fashion_pink_label">紫</string>
     <string name="op_primary_golden_label">ブラウン</string>
     <string name="op_primary_grass_green_label">ライトグリーン</string>
     <string name="op_primary_lemon_yellow_label">オレンジ</string>
@@ -4310,7 +4330,7 @@ UT インターフェース: %5$s"</string>
     <string name="scanning_status_text_wifi_on_ble_off">Wi‑Fi スキャンが ON、Bluetooth スキャンが OFF です</string>
     <string name="scanning_status_text_wifi_on_ble_on">Wi‑Fi と Bluetooth の両方のスキャンが ON です</string>
     <string name="schedule_reminders">イベントのリマインダー</string>
-    <string name="screen_color_mode_advanced">詳細</string>
+    <string name="screen_color_mode_advanced">詳細設定</string>
     <string name="screen_color_mode_advanced_settings">詳細設定</string>
     <string name="screen_color_mode_vivid">鮮やか</string>
     <string name="screen_compatibility_label">画面の互換性</string>

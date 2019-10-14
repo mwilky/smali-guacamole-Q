@@ -68,7 +68,7 @@
 
     iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsPowerRoleController;->mSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    const v1, 0x7f121655
+    const v1, 0x7f121656
 
     invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setTitle(I)V
 
@@ -114,7 +114,7 @@
 
     iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsPowerRoleController;->mSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    const v1, 0x7f121646
+    const v1, 0x7f121647
 
     invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 
@@ -175,7 +175,7 @@
 
     iget-object v2, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsPowerRoleController;->mSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    const v3, 0x7f121645
+    const v3, 0x7f121646
 
     invoke-virtual {v2, v3}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 
@@ -333,7 +333,7 @@
     :cond_6
     iget-object v0, p0, Lcom/android/settings/connecteddevice/usb/UsbDetailsPowerRoleController;->mSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    const v2, 0x7f121646
+    const v2, 0x7f121647
 
     invoke-virtual {v0, v2}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 

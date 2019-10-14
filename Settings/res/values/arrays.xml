@@ -762,6 +762,18 @@
         <item>Pink</item>
         <item>Red</item>
     </string-array>
+    <integer-array name="config_5g_signal_rsrp_thresholds">
+        <item>-110</item>
+        <item>-90</item>
+        <item>-80</item>
+        <item>-30</item>
+    </integer-array>
+    <integer-array name="config_5g_signal_snr_thresholds">
+        <item>-5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </integer-array>
     <array name="config_order_audio_and_caption_services" />
     <array name="config_order_display_services" />
     <array name="config_order_interaction_control_services" />
@@ -1222,10 +1234,6 @@
         <item>@string/hardware_keys_action_shelf</item>
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="hardware_keys_action_entries_nogms">
         <item>@string/hardware_keys_action_nothing</item>
@@ -1238,10 +1246,6 @@
         <item>@string/hardware_keys_action_shelf</item>
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="hardware_keys_action_entries_nogms_quickpay">
         <item>@string/hardware_keys_action_nothing</item>
@@ -1254,10 +1258,6 @@
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
         <item>@string/oneplus_quickpay</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="hardware_keys_action_entries_quickpay">
         <item>@string/hardware_keys_action_nothing</item>
@@ -1272,10 +1272,6 @@
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
         <item>@string/oneplus_quickpay</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="hardware_keys_action_values">
         <item>0</item>
@@ -1289,11 +1285,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="hardware_keys_action_values_nogms">
         <item>0</item>
@@ -1306,11 +1297,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="hardware_keys_action_values_nogms_quickpay">
         <item>0</item>
@@ -1323,11 +1309,6 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="hardware_keys_action_values_quickpay">
         <item>0</item>
@@ -1342,11 +1323,6 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="hdcp_checking_summaries">
         <item>Never use HDCP checking</item>
@@ -1458,10 +1434,6 @@
         <item>@string/hardware_keys_action_shelf</item>
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_entries_nogms">
         <item>@string/hardware_keys_action_nothing</item>
@@ -1471,10 +1443,6 @@
         <item>@string/hardware_keys_action_shelf</item>
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_entries_nogms_quickpay">
         <item>@string/hardware_keys_action_nothing</item>
@@ -1484,10 +1452,6 @@
         <item>@string/hardware_keys_action_shelf</item>
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_entries_quickpay">
         <item>@string/hardware_keys_action_nothing</item>
@@ -1498,10 +1462,6 @@
         <item>@string/hardware_keys_action_shelf</item>
         <item>@string/hardware_keys_action_notification_center</item>
         <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-        <item>@string/hardware_keys_action_previous_app</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_values">
         <item>0</item>
@@ -1512,11 +1472,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_values_nogms">
         <item>0</item>
@@ -1526,11 +1481,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_values_nogms_quickpay">
         <item>0</item>
@@ -1540,11 +1490,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="navigation_bar_keys_action_values_quickpay">
         <item>0</item>
@@ -1555,11 +1500,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
     </string-array>
     <string-array name="oneplus_19_2nd_projects">
         <item>@string/oneplus_oneplus_model_ee145</item>
@@ -1695,6 +1635,7 @@
         <item>深圳市万普拉斯科技有限公司</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_company_fat">
+        <item>掌阅科技股份有限公司</item>
         <item>东莞市讯怡电子科技有限公司</item>
         <item>网易（杭州）网络有限公司</item>
         <item>高德软件有限公司</item>
@@ -1733,6 +1674,7 @@
         <item>谷歌</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_company_gua">
+        <item>掌阅科技股份有限公司</item>
         <item>东莞市讯怡电子科技有限公司</item>
         <item>淘宝（中国）软件有限公司</item>
         <item>深圳前海新之江信息技术有限公司</item>
@@ -1771,45 +1713,46 @@
         <item>谷歌</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_company_hotdog">
-        <item>收发邮件</item>
-        <item>生活服务</item>
-        <item>社交媒体</item>
-        <item>订票旅行</item>
-        <item>购物软件</item>
-        <item>收听音频内容</item>
-        <item>网页浏览</item>
-        <item>观看视频</item>
-        <item>观看视频</item>
-        <item>购物软件</item>
-        <item>收听音频内容</item>
-        <item>购物软件</item>
-        <item>阅读服务</item>
-        <item>短视频服务</item>
-        <item>金融服务</item>
-        <item>生活服务</item>
-        <item>生活服务</item>
-        <item>记录事项</item>
-        <item>数学计算</item>
-        <item>音频录制</item>
-        <item>短信卡券</item>
-        <item>桌面图标</item>
-        <item>查看天气</item>
-        <item>数据迁移</item>
-        <item>桌面图标</item>
-        <item>桌面图标</item>
-        <item>社区讨论</item>
-        <item>桌面天气</item>
-        <item>桌面图标</item>
-        <item>同步通讯录、短信等</item>
-        <item>桌面图标</item>
-        <item>桌面图标</item>
-        <item>境外上网服务</item>
-        <item>游戏服务</item>
-        <item>彩蛋</item>
-        <item>联系人同步</item>
-        <item>应用运行支持</item>
+        <item>掌阅科技股份有限公司</item>
+        <item>网易（杭州）网络有限公司</item>
+        <item>高德信息技术有限公司</item>
+        <item>微梦创科网络科技（中国）有限公司</item>
+        <item>携程计算机技术（上海）有限公司</item>
+        <item>北京京东世纪贸易有限公司</item>
+        <item>上海证大喜马拉雅网络科技有限公司</item>
+        <item>优视科技（中国）有限公司</item>
+        <item>腾讯科技（北京）有限公司</item>
+        <item>北京优酷科技有限公司</item>
+        <item>淘宝（中国）软件有限公司</item>
+        <item>杭州乐读科技有限公司</item>
+        <item>深圳前海新之江信息技术有限公司</item>
+        <item>北京达佳互联信息技术有限公司</item>
+        <item>招商银行股份有限公司</item>
+        <item>汉海信息技术（上海）有限公司</item>
+        <item>高德软件有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>深圳市万普拉斯科技有限公司</item>
+        <item>东莞市讯怡电子科技有限公司</item>
+        <item>谷歌</item>
+        <item>谷歌</item>
+        <item>谷歌</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_company_new">
+        <item>掌阅科技股份有限公司</item>
         <item>东莞市讯怡电子科技有限公司</item>
         <item>高德软件有限公司</item>
         <item>广州网易计算机系统有限公司</item>
@@ -1905,6 +1848,7 @@
         <item>数据迁移</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_function_fat">
+        <item>阅读服务</item>
         <item>游戏服务</item>
         <item>收发邮件</item>
         <item>地图导航</item>
@@ -1943,6 +1887,7 @@
         <item>Google组件</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_function_gua">
+        <item>阅读服务</item>
         <item>游戏服务</item>
         <item>购物软件</item>
         <item>购物软件</item>
@@ -1981,45 +1926,46 @@
         <item>彩蛋</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_function_hotdog">
-        <item>网易（杭州）网络有限公司</item>
-        <item>高德信息技术有限公司</item>
-        <item>微梦创科网络科技（中国）有限公司</item>
-        <item>携程计算机技术（上海）有限公司</item>
-        <item>北京京东世纪贸易有限公司</item>
-        <item>上海证大喜马拉雅网络科技有限公司</item>
-        <item>优视科技（中国）有限公司</item>
-        <item>腾讯科技（北京）有限公司</item>
-        <item>北京优酷科技有限公司</item>
-        <item>淘宝（中国）软件有限公司</item>
-        <item>杭州乐读科技有限公司</item>
-        <item>深圳前海新之江信息技术有限公司</item>
-        <item>掌阅科技股份有限公司</item>
-        <item>北京达佳互联信息技术有限公司</item>
-        <item>招商银行股份有限公司</item>
-        <item>汉海信息技术（上海）有限公司</item>
-        <item>高德软件有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>深圳市万普拉斯科技有限公司</item>
-        <item>东莞市讯怡电子科技有限公司</item>
-        <item>谷歌</item>
-        <item>谷歌</item>
-        <item>谷歌</item>
+        <item>阅读服务</item>
+        <item>收发邮件</item>
+        <item>生活服务</item>
+        <item>社交媒体</item>
+        <item>订票旅行</item>
+        <item>购物软件</item>
+        <item>收听音频内容</item>
+        <item>网页浏览</item>
+        <item>观看视频</item>
+        <item>观看视频</item>
+        <item>购物软件</item>
+        <item>收听音频内容</item>
+        <item>购物软件</item>
+        <item>短视频服务</item>
+        <item>金融服务</item>
+        <item>生活服务</item>
+        <item>生活服务</item>
+        <item>记录事项</item>
+        <item>数学计算</item>
+        <item>音频录制</item>
+        <item>短信卡券</item>
+        <item>桌面图标</item>
+        <item>查看天气</item>
+        <item>数据迁移</item>
+        <item>桌面图标</item>
+        <item>桌面图标</item>
+        <item>社区讨论</item>
+        <item>桌面天气</item>
+        <item>桌面图标</item>
+        <item>同步通讯录、短信等</item>
+        <item>桌面图标</item>
+        <item>桌面图标</item>
+        <item>境外上网服务</item>
+        <item>游戏服务</item>
+        <item>彩蛋</item>
+        <item>联系人同步</item>
+        <item>应用运行支持</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_function_new">
+        <item>阅读服务</item>
         <item>游戏服务</item>
         <item>地图导航</item>
         <item>收听音乐</item>
@@ -2115,6 +2061,7 @@
         <item>一加搬家</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_name_fat">
+        <item>阅读</item>
         <item>游戏中心</item>
         <item>邮箱大师</item>
         <item>高德地图</item>
@@ -2129,7 +2076,7 @@
         <item>今日头条</item>
         <item>爱奇艺</item>
         <item>天猫</item>
-        <item>喜马拉雅 FM</item>
+        <item>喜马拉雅听书</item>
         <item>抖音</item>
         <item>高德出行服务</item>
         <item>国际上网</item>
@@ -2153,6 +2100,7 @@
         <item>Google合作伙伴设置</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_name_gua">
+        <item>阅读</item>
         <item>游戏中心</item>
         <item>手机淘宝</item>
         <item>拼多多</item>
@@ -2169,7 +2117,7 @@
         <item>高德出行服务</item>
         <item>网易邮箱大师</item>
         <item>QQ阅读</item>
-        <item>喜马拉雅</item>
+        <item>喜马拉雅听书</item>
         <item>优酷视频</item>
         <item>腾讯视频</item>
         <item>国际上网</item>
@@ -2191,6 +2139,7 @@
         <item>PAINT.APK</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_name_hotdog">
+        <item>阅读</item>
         <item>网易邮箱大师</item>
         <item>高德地图</item>
         <item>微博</item>
@@ -2203,7 +2152,6 @@
         <item>手机淘宝</item>
         <item>网易云音乐</item>
         <item>拼多多</item>
-        <item>阅读</item>
         <item>快手</item>
         <item>招商银行</item>
         <item>大众点评</item>
@@ -2230,6 +2178,7 @@
         <item>Google 合作伙伴设置</item>
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_name_new">
+        <item>阅读</item>
         <item>游戏中心</item>
         <item>高德地图</item>
         <item>网易云音乐</item>
@@ -2251,7 +2200,7 @@
         <item>一加社区</item>
         <item>爱奇艺</item>
         <item>抖音短视频</item>
-        <item>喜马拉雅FM</item>
+        <item>喜马拉雅听书</item>
         <item>天猫</item>
         <item>高德出行服务</item>
         <item>国际上网</item>
@@ -3248,32 +3197,5 @@
         <item>zen_mode_from_contacts</item>
         <item>zen_mode_from_starred</item>
         <item>zen_mode_from_none</item>
-    </string-array>
-    <string-array name="navigation_bar_keys_recents_action_entries">
-        <item>@string/hardware_keys_action_default_double_recents</item>
-        <item>@string/hardware_keys_action_menu</item>
-        <item>@string/hardware_keys_action_assist</item>
-        <item>@string/hardware_keys_action_turn_off_screen</item>
-        <item>@string/hardware_keys_action_voice_search</item>
-        <item>@string/hardware_keys_action_shelf</item>
-        <item>@string/hardware_keys_action_notification_center</item>
-        <item>@string/oneplus_hardware_keys_action_split_screen</item>
-        <item>@string/hardware_keys_action_kill</item>
-        <item>@string/hardware_keys_action_screenshot</item>
-        <item>@string/hardware_keys_action_app</item>
-    </string-array>
-    <string-array name="navigation_bar_keys_recents_action_values">
-        <item>0</item>
-        <item>1</item>
-        <item>3</item>
-        <item>4</item>
-        <item>6</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
     </string-array>
 </resources>

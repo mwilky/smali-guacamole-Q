@@ -1,5 +1,5 @@
 .class Lcom/oneplus/settings/OPColorPickerActivity$ViewAdapter;
-.super Lcom/android/internal/widget/PagerAdapter;
+.super Landroidx/viewpager/widget/PagerAdapter;
 .source "OPColorPickerActivity.java"
 
 
@@ -42,7 +42,7 @@
 
     iput-object p1, p0, Lcom/oneplus/settings/OPColorPickerActivity$ViewAdapter;->this$0:Lcom/oneplus/settings/OPColorPickerActivity;
 
-    invoke-direct {p0}, Lcom/android/internal/widget/PagerAdapter;-><init>()V
+    invoke-direct {p0}, Landroidx/viewpager/widget/PagerAdapter;-><init>()V
 
     iput-object p2, p0, Lcom/oneplus/settings/OPColorPickerActivity$ViewAdapter;->datas:Ljava/util/List;
 

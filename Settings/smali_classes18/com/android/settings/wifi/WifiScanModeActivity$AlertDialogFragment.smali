@@ -94,7 +94,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f12185d
+    const v1, 0x7f12185e
 
     invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiScanModeActivity$AlertDialogFragment;->getString(I)Ljava/lang/String;
 
@@ -103,7 +103,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f12185f
+    const v1, 0x7f121860
 
     const/4 v2, 0x1
 
@@ -124,7 +124,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12185b
+    const v1, 0x7f12185c
 
     new-instance v2, Lcom/android/settings/wifi/WifiScanModeActivity$AlertDialogFragment$2;
 
@@ -134,7 +134,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12185c
+    const v1, 0x7f12185d
 
     new-instance v2, Lcom/android/settings/wifi/WifiScanModeActivity$AlertDialogFragment$1;
 

@@ -1775,6 +1775,7 @@ Ta kontakt med administratoren for organisasjonen for mer informasjon."</string>
     <string name="failed_to_open_app_settings_toast">Kunne ikke åpne innstillingene for %1$s</string>
     <string name="fcc_equipment_id">Utstyrs-ID</string>
     <string name="feature_flags_dashboard_title">Funksjonsflagg</string>
+    <string name="feature_not_support_split_screen">Funksjonen støttes ikke i delt skjerm-modus.</string>
     <string name="filter">Filter</string>
     <string name="filter_all_apps">Alle apper</string>
     <string name="filter_apps_all">Alle apper</string>
@@ -1918,7 +1919,7 @@ Når du slår på automatisk sikkerhetskopiering, lagres app- og enhetsdata auto
     <string name="hardkeyboard_category">Innstillinger for fysisk tastatur</string>
     <string name="hardware_info">Modell og maskinvare</string>
     <string name="hardware_keys_action_assist">Søkemotor</string>
-    <string name="hardware_keys_action_camera">Åpne kameraet</string>
+    <string name="hardware_keys_action_camera">Åpne kamera</string>
     <string name="hardware_keys_action_last_app">Åpne sist brukte app</string>
     <string name="hardware_keys_action_menu">Åpne/lukke meny</string>
     <string name="hardware_keys_action_nothing">Ingen handling</string>
@@ -2068,7 +2069,7 @@ Du kan endre dette senere fra Innstillinger > Apper og varsler."</string>
     <string name="keywords_date_and_time">klokke, militær</string>
     <string name="keywords_default_apps">apper, standard</string>
     <string name="keywords_default_browser">standard, standard nettleser</string>
-    <string name="keywords_default_links">standard</string>
+    <string name="keywords_default_links">standardinnstilling</string>
     <string name="keywords_default_payment_app">betaling, standard</string>
     <string name="keywords_default_phone_app">telefon, talltastatur, standard</string>
     <string name="keywords_device_feedback">Feil</string>
@@ -2890,7 +2891,7 @@ Dette gir også appen muligheten til å slå Ikke forstyrr av eller på samt end
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Lommemodus</string>
     <string name="oneplus_aod_smart_display_calendar_event">Kalenderhendelse</string>
     <string name="oneplus_aod_smart_display_music_info">Mediespiller</string>
-    <string name="oneplus_aod_smart_display_title">Smart-visning</string>
+    <string name="oneplus_aod_smart_display_title">Kontekstuell informasjon</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Kompatibilitetsmodus</string>
     <string name="oneplus_app_display_fullscreen">Fullskjermsmodus</string>
@@ -3001,10 +3002,11 @@ Batterisparing slås automatisk av når enheten lader."</string>
     <string name="oneplus_connected_devices_count">%1$s enheter er tilkoblet</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, cast, utskrift</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; enhetstilkobling</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROSESSOR</string>
     <string name="oneplus_custom_time">Egendefinert tidsperiode</string>
     <string name="oneplus_customization">Tilpasning av navigasjonslinjen</string>
     <string name="oneplus_customization_summary">Trykk lenge, trykk to ganger</string>
+    <string name="oneplus_customization_summary_hide_navbar">Langt trykk, dobbelttrykk, skjul navigasjonslinjen</string>
     <string name="oneplus_data_usage_control_title">Kontroll over dataforbruk</string>
     <string name="oneplus_dc_dimming_summary">DC-demping justerer lysstyrken på skjermen ved å endre kretsstrømmen på skjermen. Når aktivert, vil den redusere skjermflimmer ved lav lysstyrke. Men dette kan føre til at det vises unormale farger i enkelte tilfeller.</string>
     <string name="oneplus_dc_dimming_title">DC-demping</string>
@@ -3143,10 +3145,10 @@ Forsiktig: Ansiktsgjenkjenning er mindre sikkert enn fingeravtrykk og passord"</
     <string name="oneplus_fnatic_mode_enable_introduction_title">Spillmodus må aktiveres først for å kunne bruke Fnatisk modus</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Primære signalstyrke for SIM-kortet prioriteres for å minimere interferens for lav latens spill. Resultatet er at det sekundære SIM-kortet deaktiveres og samtaler eller meldinger mottas ikke.</string>
     <string name="oneplus_fnatic_mode_network_introduction_summary">Forbedre stabiliteten til nettverkstilkoblingen</string>
-    <string name="oneplus_fnatic_mode_network_introduction_title">Nettverksforbedring</string>
+    <string name="oneplus_fnatic_mode_network_introduction_title">Nettverk ekstrautstyr</string>
     <string name="oneplus_fnatic_mode_summary">Superlad din spillerfaring</string>
     <string name="oneplus_fnatic_mode_summary_2">En avansert spillmodus opprettet av esports-pionerer</string>
-    <string name="oneplus_fnatic_mode_title">Fnatisk modus</string>
+    <string name="oneplus_fnatic_mode_title">Fnatic-modus</string>
     <string name="oneplus_fnatic_mode_unlock_wallpapers">You har låst opp %1$s spesielle bakgrunner</string>
     <string name="oneplus_fnatic_mode_view_in_wallpapers">Vis i bakgrunner</string>
     <string name="oneplus_fnatic_mode_wallpapers_added">%1$s bakgrunner lagt til</string>
@@ -3170,7 +3172,7 @@ For å gå til hjemskjermen når du måtte ønske det, sveip oppover fra midten 
     <string name="oneplus_fullscreen_gesture_guide_multitask">For å se nylig brukte apper, sveip oppover fra bunnen av skjermen og pause.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Bevegelser for navigering aktiveres</string>
     <string name="oneplus_fullscreen_home_guide_summary">Sveip opp fra nedre kanten av skjermen</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Sveip fra den midten av den nedre kanten av skjermen</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Sveip opp fra nedre kanten på midten av skjermen</string>
     <string name="oneplus_fullscreen_home_guide_title">Hjem</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Navigasjonsbevegelser kan fremdeles utløses fra nedre kanten av skjermen. Sveipå fra venstre eller høyre kant for å gå tilbake</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Samme som stående, navigasjonsbevegelser skjer fremdeles fra nederst på enheten</string>
@@ -3264,6 +3266,10 @@ Merk: Fingeravtrykket kan være mindre sikkert enn et sterkt mønster eller PIN-
     <string name="oneplus_intelligently_select_best_wifi">Velg beste Wi‑Fi på intelligent vis</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Velg beste Wi‑Fi på intelligent vis ved å oppdage og analysere Wi‑Fi-nettverkenes tilkobling og signalstyrke</string>
     <string name="oneplus_intensely">Sterk</string>
+    <string name="oneplus_is_turn_on_feature">Er du sikker på at du vil slå på denne funksjonen?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Når den er slått på, kan følgende situasjoner oppstå av og til:
+1.Noen områder på skjermen er unormale
+2.Adaptiv lysstyrke vil ikke fungere ordentlig"</string>
     <string name="oneplus_lab_dislike">Misliker</string>
     <string name="oneplus_lab_features">LAB-FUNKSJONER</string>
     <string name="oneplus_lab_feedback_toast">Takk for tilbakemeldingen!</string>
@@ -3361,7 +3367,7 @@ Merk: Fingeravtrykket kan være mindre sikkert enn et sterkt mønster eller PIN-
     <string name="oneplus_notification_channel_summary_low">Mindre viktige de uten lyd eller vibrasjoner</string>
     <string name="oneplus_notification_dialog_never_mode">Aldri</string>
     <string name="oneplus_notification_dialog_ringtone">Varselringetone</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Bare i ringemodus</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Alltid</string>
     <string name="oneplus_notification_dots">Varselprikker</string>
     <string name="oneplus_notification_instrucitons">Brukeropplæring</string>
@@ -3369,7 +3375,7 @@ Merk: Fingeravtrykket kan være mindre sikkert enn et sterkt mønster eller PIN-
     <string name="oneplus_notification_ringtone_mode">Kun i ringemodus</string>
     <string name="oneplus_notification_ringtone_silent_mode">Alltid</string>
     <string name="oneplus_notification_ringtone_title">Varselringetone i hodetelefonene</string>
-    <string name="oneplus_notification_silence_title">Annen</string>
+    <string name="oneplus_notification_silence_title">Annet</string>
     <string name="oneplus_notification_sound_default">Standardmelding</string>
     <string name="oneplus_notification_ways">Visningsmodus</string>
     <string name="oneplus_notification_ways_title">Slik vises varsler</string>
@@ -3526,10 +3532,10 @@ Merk: Fingeravtrykket kan være mindre sikkert enn et sterkt mønster eller PIN-
     <string name="oneplus_screen_refresh_rate_auto_summary">Ultra jevn ved høyere oppdateringshastighet</string>
     <string name="oneplus_screen_refresh_rate_info">Jo høyere skjermoppdateringshastighet, jo jevnere skjermopplevelse, Ved 90 Hz skiftes oppdateringshastigheten automatisk basert på scenarioer.</string>
     <string name="oneplus_screen_resolution_adjust">Oppløsning</string>
-    <string name="oneplus_screen_resolution_adjust_1080p_summary">Utmerket vise, lavere strømforbruk (2340 × 1080)</string>
+    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent display, lower power consumption (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Autobryter</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Bytt til den aktuelle oppløsning automatisk</string>
-    <string name="oneplus_screen_resolution_adjust_other_summary">Maksimal klarhet økt strøm forbruk (3120×1440)</string>
+    <string name="oneplus_screen_resolution_adjust_other_summary">Maximum clarity, increased power consumption (3120×1440)</string>
     <string name="oneplus_search_keyword_about_settings">enhetsnavn, android-versjon, build-nummer, modell, CPU, lagring, RAM, ROM, kamera, piksel, skjerm</string>
     <string name="oneplus_search_keyword_accent_color">farge</string>
     <string name="oneplus_search_keyword_app_lock">lås,PIN-kode, passord</string>
@@ -3568,7 +3574,8 @@ Merk: Fingeravtrykket kan være mindre sikkert enn et sterkt mønster eller PIN-
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ikke ’t forstyrre, avbryte, avbrytelse, brudd, modus</string>
     <string name="oneplus_search_keyword_swap_navkeys">bytt knapper</string>
     <string name="oneplus_search_keyword_switch">overføring,dataoverføring</string>
-    <string name="oneplus_search_keyword_theme_settings">TILPASNING AV LÅSESKJERMEN, bakgrunner, klokkestil, animasjon med fingeravtrykk, horisontalt lys, TILPASNING AV SYSTEMET, aksentfarge, form, font, tone, ikonpakke</string>
+    <string name="oneplus_search_keyword_theme_settings">TILPASNING AV LÅSESKJERMEN, bakgrunner, klokkestil, animasjon med fingeravtrykk, horisontalt lys, TILPASNING AV SYSTEMET, aksentfarge, form, font, tone, ikonpakke, Nyanserte mørke, vibrerende fargetoner</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">TILPASNING AV LÅSESKJERMEN, bakgrunner, klokkestil, animasjon med fingeravtrykk, horisontalt lys, TILPASNING AV SYSTEMET, aksentfarge, form, font, tone, ikonpakke, Nyanserte mørke, vibrerende fargetoner, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">skjermbilde</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">varsler,erfaring,program,forbedring</string>
@@ -3632,7 +3639,7 @@ Merk:
     <string name="oneplus_smart_wifi_connection">smart Wi‑Fi-forbindelse</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS-ringetone og vibrasjon</string>
-    <string name="oneplus_snooze_options_title">Snooze varsling</string>
+    <string name="oneplus_snooze_options_title">Slå av varsler fra varslings skjermen</string>
     <string name="oneplus_sound_and_vibrate">Lyd &amp; vibrering</string>
     <string name="oneplus_sound_settings_summary">Ikke forstyrr, øretelefonmodus</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3665,7 +3672,8 @@ Merk:
     <string name="oneplus_theme_clock">Klokkestil</string>
     <string name="oneplus_theme_clock_snake_action">SLÅ PÅ AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">Denne funksjonen er tilgjengelig når ambient display er på</string>
-    <string name="oneplus_theme_drop_summary">Forkaste endringer?</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_drop_summary">Forkast endringer?</string>
     <string name="oneplus_theme_drop_title">Avslutt redigeringsmodus</string>
     <string name="oneplus_theme_entrance_summary">Bakgrunner, aksentfage, font, tone</string>
     <string name="oneplus_theme_entrance_title">Brukertilpasning</string>
@@ -3673,7 +3681,7 @@ Merk:
     <string name="oneplus_theme_fingerprint_snake_action">SLÅ PÅ FINGERAVTRYKK</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Denne funksjonen vil være tilgjengelig når fingeravtrykket er på</string>
     <string name="oneplus_theme_font">Font</string>
-    <string name="oneplus_theme_font_content">Del den beste teknologien med verden, hånd i hånd med du</string>
+    <string name="oneplus_theme_font_content">Del den beste teknologien med verden, hånd-i-hånd med deg</string>
     <string name="oneplus_theme_icon_pack">Ikonpakke</string>
     <string name="oneplus_theme_lock_screen_customization">TILPASNING AV LÅSESKJERMEN</string>
     <string name="oneplus_theme_preset">Forhåndsinnstilt tema</string>
@@ -3681,7 +3689,8 @@ Merk:
     <string name="oneplus_theme_preset_dark">Nøyansert mørk</string>
     <string name="oneplus_theme_preset_light">Lysende lys</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Forhåndsinnstilte temaer har et bredt utvalg av bakgrunnsbilder, aksentfarge, tone osv</string>
+    <string name="oneplus_theme_preset_summary">Forhåndsinnstilte temaer kommer med et bredt utvalg av aksent farger, toner osv</string>
+    <string name="oneplus_theme_preset_summary_tmp">Forhåndsinnstilte temaer kommer med et bredt utvalg av bakgrunnsbilder, aksent farger, toner osv</string>
     <string name="oneplus_theme_shape">Form</string>
     <string name="oneplus_theme_shape_effect_round">Rund</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Rund rektangulær</string>
@@ -3692,7 +3701,7 @@ Merk:
     <string name="oneplus_theme_tone">Tone</string>
     <string name="oneplus_theme_tone_effect_color">Fargerik</string>
     <string name="oneplus_theme_tone_effect_dark">Mørk</string>
-    <string name="oneplus_theme_tone_effect_light">Lys</string>
+    <string name="oneplus_theme_tone_effect_light">Lett</string>
     <string name="oneplus_theme_tone_effect_title">VELG TONE</string>
     <string name="oneplus_theme_wallpaper">Bakgrunner</string>
     <string name="oneplus_three_screenshots_enable_summary">Sveip med tre fingre på skjermen for å ta skjermbilde</string>
@@ -3708,7 +3717,7 @@ Merk:
     <string name="oneplus_tools_summary_U30">Spillmodus, lommemodus, tidsbestemt strøm på/av</string>
     <string name="oneplus_tools_summary_no_gamingmode">App-skap, parallelle apper</string>
     <string name="oneplus_tools_title">Verktøy</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus-konto, andre kontoer</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Standard apper, tillatelser</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Varselsglidebryter &amp; bevegelser</string>
     <string name="oneplus_top_level_cloud_h2_summary">Synkroniser data med nettsky, Finn telefonen</string>
@@ -3723,6 +3732,8 @@ Merk:
     <string name="oneplus_top_level_system_summary">Språk &amp; tastatur, klokkeslett, tilbakestill, systemoppdateringer</string>
     <string name="oneplus_touch_vibrate">Berøringsvibrasjon</string>
     <string name="oneplus_turn_off_time">Til</string>
+    <string name="oneplus_turn_on_feature_cancel">AVBRYT</string>
+    <string name="oneplus_turn_on_feature_ok">SLÅ PÅ</string>
     <string name="oneplus_turn_on_time">Fra</string>
     <string name="oneplus_uninstatll_multi_app_msg">Alle data i den parallelle appen slettes ved avinstallasjon. Er du sikker på at du ønsker å avinstallere?</string>
     <string name="oneplus_uninstatll_multi_app_title">Parallell %1$s</string>
@@ -3745,7 +3756,7 @@ Merk: Ansiktsgjenkjenning kan være mindre sikkert enn fingeravtrykk, PIN eller 
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Anrop og varslinger er stille og satt til vibrering, unntatt alarmer</string>
     <string name="oneplus_vibration_summary">Alarmen vil alltid ringe</string>
     <string name="oneplus_video_enhancer">Forbedring av video</string>
-    <string name="oneplus_video_enhancer_footer">Forsterk fargen under videoavspilling</string>
+    <string name="oneplus_video_enhancer_footer">Forbedrer fargene under videoavspilling</string>
     <string name="oneplus_video_enhancer_summary">Forbedrer fargene under videoavspilling</string>
     <string name="oneplus_volume_keys_adjust">Bruk volumknappene til å justere</string>
     <string name="oneplus_volume_keys_adjust_media">Mediavolum</string>
@@ -3789,6 +3800,7 @@ Skjuling av nettverket vil ikke endre ruterinnstillingene dine."</string>
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Velg en sikkerhetskopilås først</string>
     <string name="op_cloud_service_summary">Synkroniser kontakter, notater, bilder osv.</string>
     <string name="op_cloud_service_title">Cloud Service</string>
     <string name="op_confirm_enable_oem_unlock_text">ADVARSEL: Enhetens beskyttelses- og verifiseringsfunksjonene, f.eks. fingeravtrykksbetaling og avansert DRM-tast fungerer ikke mens OEM er ulåst.</string>
@@ -3800,13 +3812,21 @@ Skjuling av nettverket vil ikke endre ruterinnstillingene dine."</string>
     <string name="op_default_apps_summary">Hjem, nettleser</string>
     <string name="op_default_luncher_title">Hjem-app</string>
     <string name="op_dnd_summary">Ikke forstyrr</string>
+    <string name="op_face_unlock_set_unlock_password">Ansiktsgjenkjenning + passord</string>
+    <string name="op_face_unlock_set_unlock_pattern">Ansiktsgjenkjenning + mønster</string>
+    <string name="op_face_unlock_set_unlock_pin">Ansiktsgjenkjenning + PIN-kode</string>
+    <string name="op_face_unlock_skip_face">Fortsett uten ansiktet opplåsing</string>
     <string name="op_failed_to_get_data">Kunne ikke hente data</string>
     <string name="op_fetch_data_in_process">Laster inn</string>
     <string name="op_fragment">Kort</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">Håndtering av strømhungrige apper</string>
     <string name="op_light_mode_title">Lys</string>
     <string name="op_linked_launch_summary">Apphåndtering kan tilkobles oppstart i bakgrunnen</string>
     <string name="op_linked_launch_title">Autostart av apper</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">å bruke ansikt slåsing, sett passord</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">å bruke ansikt slåsing, sett mønster</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">å bruke ansikt slåsing, sett PIN-kode</string>
     <string name="op_not_disturb">Ikke forstyrr-innstillinger</string>
     <string name="op_not_disturb_summary">Demp anrop og varslinger, og skru av vibrasjon, bortsett fra alarmer</string>
     <string name="op_oneplus_roaming_summary">Gi globale internettjenester</string>
@@ -3830,7 +3850,7 @@ Skjuling av nettverket vil ikke endre ruterinnstillingene dine."</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Finn fingeravtrykksensoren på hjemknappen</string>
     <string name="op_security_settings_title">Sikkerhet &amp; fingeravtrykk</string>
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
-    <string name="op_sim_cord">SIM &amp; nettverk</string>
+    <string name="op_sim_cord">SIM &amp;-nettverk</string>
     <string name="op_sim_cord_summary">Standard SIM-kort, bruk av båndbredde</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
     <string name="op_sms_ringtone">SMS-ringetone</string>
@@ -5017,7 +5037,7 @@ Prøv å bruke et raskere ^3, eller bruk ^4 som bærbar lagring i stedet."</stri
     <string name="summary_range_verbal_combination">%1$s til %2$s</string>
     <string name="summary_voice_network">VoLTE, Wi-Fi-samtaler</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Ring via Wi-Fi</string>
+    <string name="summary_voice_wfc_only">Ring via WiFi</string>
     <string name="support_summary">Hjelpeartikler, telefon og chat, kom i gang</string>
     <string name="swipe_direction_ltr">Sveip til høyre for å avvise eller til venstre for å vise menyen</string>
     <string name="swipe_direction_rtl">Sveip til venstre for å avvise eller til høyre for å vise menyen</string>
@@ -5029,7 +5049,7 @@ Prøv å bruke et raskere ^3, eller bruk ^4 som bærbar lagring i stedet."</stri
     <string name="switch_off_text">Av</string>
     <string name="switch_on_text">På</string>
     <string name="switch_skin_doing">Endrer tema...</string>
-    <string name="switch_theme_has_success">Fullstendig</string>
+    <string name="switch_theme_has_success">Fullført</string>
     <string name="sync_active">Synkroniserer</string>
     <string name="sync_automatically">Auto-synkronisering av appdata</string>
     <string name="sync_calendar">Kalender</string>
@@ -5125,7 +5145,7 @@ Synkroniser på Google-måten, slik at du har tilgang til kontaktene dine, avtal
     <string name="touch_filtered_warning">Fordi en app skjuler tillatelsesforespørselen, kan ikke Innstillinger bekrefte svaret ditt.</string>
     <string name="touch_sounds_title">Berøringslyder</string>
     <string name="touchscreen_camera_gesture_summary">Tegn en O for å åpne kameraet</string>
-    <string name="touchscreen_camera_gesture_title">Åpne kameraet</string>
+    <string name="touchscreen_camera_gesture_title">Åpne kamera</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">Trykk på skjermen to ganger for å vekke enheten</string>
     <string name="touchscreen_double_tap_to_wake_gesture_title">Dobbelttrykk for å vekke</string>
     <string name="touchscreen_flashlight_gesture_summary">Tegn en V for å slå lommelykt av/på</string>

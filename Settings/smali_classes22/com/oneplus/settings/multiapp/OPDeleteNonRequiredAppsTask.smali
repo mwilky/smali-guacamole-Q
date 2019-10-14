@@ -122,9 +122,9 @@
 
     iput-object p3, p0, Lcom/oneplus/settings/multiapp/OPDeleteNonRequiredAppsTask;->mIInputMethodManager:Lcom/android/internal/view/IInputMethodManager;
 
-    const v0, 0x7f0300e6
+    const v0, 0x7f0300e8
 
-    const v1, 0x7f03005f
+    const v1, 0x7f030061
 
     iget-object v2, p0, Lcom/oneplus/settings/multiapp/OPDeleteNonRequiredAppsTask;->mContext:Landroid/content/Context;
 

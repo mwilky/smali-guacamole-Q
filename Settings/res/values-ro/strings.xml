@@ -318,7 +318,7 @@ Nu trebuie decât să apropiați cele două dispozitive (de obicei, așezându-l
     <string name="aod_clock_default">Implicit</string>
     <string name="aod_clock_mcl">McLaren</string>
     <string name="aod_clock_minimalism">Minimalism</string>
-    <string name="aod_clock_none">Niciunul</string>
+    <string name="aod_clock_none">Niciuna</string>
     <string name="aod_clock_select_style_text">Selectați stilul ceasului</string>
     <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Albastru</string>
@@ -327,7 +327,7 @@ Nu trebuie decât să apropiați cele două dispozitive (de obicei, așezându-l
     <string name="aod_horizon_light_effect_4">Auriu</string>
     <string name="aod_horizon_light_effect_5">McLaren</string>
     <string name="aod_horizon_light_select">SELECTARE CULOARE</string>
-    <string name="aod_horizon_light_snake_action">PORNIRE</string>
+    <string name="aod_horizon_light_snake_action">ACTIVARE</string>
     <string name="aod_horizon_light_snake_tip">Această funcție va fi disponibilă atunci când este activat „Notificări noi”</string>
     <string name="apn_apn">APN</string>
     <string name="apn_auth_type">Tip de autentificare</string>
@@ -1775,6 +1775,7 @@ Pentru mai multe detalii, contactați administratorul organizației."</string>
     <string name="failed_to_open_app_settings_toast">Deschiderea setărilor pentru %1$s a eșuat</string>
     <string name="fcc_equipment_id">ID echipament</string>
     <string name="feature_flags_dashboard_title">Semnalări ale funcției</string>
+    <string name="feature_not_support_split_screen">Această funcție nu este acceptată în ecran divizat.</string>
     <string name="filter">Filtrați</string>
     <string name="filter_all_apps">Toate aplicațiile</string>
     <string name="filter_apps_all">Toate aplicațiile</string>
@@ -2890,7 +2891,7 @@ Astfel, aplicația va putea să activeze sau să dezactiveze starea Nu deranja �
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Mod buzunar</string>
     <string name="oneplus_aod_smart_display_calendar_event">Eveniment din calendar</string>
     <string name="oneplus_aod_smart_display_music_info">Player media</string>
-    <string name="oneplus_aod_smart_display_title">Afișajul inteligent</string>
+    <string name="oneplus_aod_smart_display_title">Informații contextuale</string>
     <string name="oneplus_app_alipay">AliPay</string>
     <string name="oneplus_app_display_compatibility">Mod compatibilitate</string>
     <string name="oneplus_app_display_fullscreen">Mod ecran complet</string>
@@ -3001,10 +3002,11 @@ Economizorul de baterie se oprește automat când aparatul se încarcă."</strin
     <string name="oneplus_connected_devices_count">Sunt %1$s dispozitive conectate</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, distribuție, imprimare</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; conexiune dispozitiv</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESOR</string>
     <string name="oneplus_custom_time">Interval de timp personalizat</string>
     <string name="oneplus_customization">Personalizare bară de navigare</string>
     <string name="oneplus_customization_summary">Apăsare lungă, atingere dublă</string>
+    <string name="oneplus_customization_summary_hide_navbar">Apăsare lungă, atingere dublă, ascundere bară de navigare</string>
     <string name="oneplus_data_usage_control_title">Control utilizare date</string>
     <string name="oneplus_dc_dimming_summary">Reducerea luminozității prin reducerea energiei va ajusta luminozitatea ecranului prin schimbarea puterii circuitului ecranului. Când este activată, reduce pâlpâirea ecranului la o luminozitate scăzută. Totuși, în unele cazuri, acest lucru poate determina apariția unor culori neobișnuite.</string>
     <string name="oneplus_dc_dimming_title">Reducerea luminozității prin reducerea energiei</string>
@@ -3264,6 +3266,10 @@ Notă: Amprenta dvs. poate fi mai puțin sigură decât un model dificil sau PIN
     <string name="oneplus_intelligently_select_best_wifi">Selectarea inteligentă a celei mai bune rețele Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Se selectează inteligent cea mai bună rețea Wi‑Fi și se stabilește conexiunea cu aceasta, în urma detectării și analizei conectivității și a intensității semnalului diferitelor rețele Wi‑Fi</string>
     <string name="oneplus_intensely">Puternic</string>
+    <string name="oneplus_is_turn_on_feature">Sigur doriți să activați această funcție?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Dacă este activată, ocazional pot apărea următoarele situații:
+1. Unele zone ale ecranului se afișează greșit
+2. Luminozitatea adaptivă nu funcționează corect"</string>
     <string name="oneplus_lab_dislike">Nu-mi place</string>
     <string name="oneplus_lab_features">CARACTERISTICI DE LABORATOR</string>
     <string name="oneplus_lab_feedback_toast">Vă mulțumim pentru feedback-ul dvs.!</string>
@@ -3361,7 +3367,7 @@ Notă: Amprenta dvs. poate fi mai puțin sigură decât un model dificil sau PIN
     <string name="oneplus_notification_channel_summary_low">Cele mai puțin importante fără sunet și vibrații</string>
     <string name="oneplus_notification_dialog_never_mode">Niciodată</string>
     <string name="oneplus_notification_dialog_ringtone">Ton de apel notificări</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Numai în modul ton de apel</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Întotdeauna</string>
     <string name="oneplus_notification_dots">Puncte notificare</string>
     <string name="oneplus_notification_instrucitons">Tutorial utilizator</string>
@@ -3568,7 +3574,8 @@ Notă: Amprenta dvs. poate fi mai puțin sigură decât un model dificil sau PIN
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">nu deranjează, întrerupt, întrerupere, pauză, mod</string>
     <string name="oneplus_search_keyword_swap_navkeys">schimbarea butoanelor</string>
     <string name="oneplus_search_keyword_switch">transfer, migrare date</string>
-    <string name="oneplus_search_keyword_theme_settings">PERSONALIZARE ECRAN BLOCAT, Wallpaper-uri, Stil ceas, Animație amprente digitale, Horizon light, PERSONALIZARE SISTEM, Accent culoare, Formă, Font, Ton, Pachetul de pictograme</string>
+    <string name="oneplus_search_keyword_theme_settings">PERSONALIZARE ECRAN DE BLOCARE, Wallpaperuri, Stil ceas, Animație amprente digitale, Horizon light, PERSONALIZARE SISTEM, Accentuare culoare, Formă, Font, Ton, Pachetul de pictograme, Lumini, Întunecat nuanțat, Nuanțe vii</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PERSONALIZARE ECRAN DE BLOCARE, Wallpaperuri, Stil ceas, Animație amprente digitale, Horizon light, PERSONALIZARE SISTEM, Accentuare culoare, Formă, Font, Ton, Pachetul de pictograme, Lumini, Întunecat nuanțat, Nuanțe vii, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">captură de ecran</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notificări, experiență, program, optimizare</string>
@@ -3598,7 +3605,7 @@ Notă:
     <string name="oneplus_select_fingerprint_animation_effect_3">Dungă</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">Ondulație</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
-    <string name="oneplus_select_fingerprint_animation_effect_none">Niciunul</string>
+    <string name="oneplus_select_fingerprint_animation_effect_none">Niciuna</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">Selectarea efectului de animație al amprentei</string>
     <string name="oneplus_service_messaging_summary">Permiteți OnePlus să furnizeze servicii rapide de mesagerie cloud pentru a asigura o experiență optimizată a produsului</string>
     <string name="oneplus_service_messaging_title">Serviciu de mesagerie OnePlus</string>
@@ -3632,7 +3639,7 @@ Notă:
     <string name="oneplus_smart_wifi_connection">conexiune Wi‑Fi inteligentă</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">Ton SMS și vibrații</string>
-    <string name="oneplus_snooze_options_title">Amânarea notificărilor din sertarul de sus</string>
+    <string name="oneplus_snooze_options_title">Amânarea notificărilor din sertarul de notificări</string>
     <string name="oneplus_sound_and_vibrate">Sunet și vibrații</string>
     <string name="oneplus_sound_settings_summary">Nu deranjați, mod cască</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3665,6 +3672,7 @@ Notă:
     <string name="oneplus_theme_clock">Stil ceas</string>
     <string name="oneplus_theme_clock_snake_action">ACTIVARE AFIȘAJ AMBIANT</string>
     <string name="oneplus_theme_clock_snake_tip">Această funcție va fi disponibilă atunci când afișajul ambiant este activat</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Renunțați la modificări?</string>
     <string name="oneplus_theme_drop_title">Ieșire din modul editare</string>
     <string name="oneplus_theme_entrance_summary">Wallpaper-uri, Accent culoare, Font, Ton</string>
@@ -3681,7 +3689,8 @@ Notă:
     <string name="oneplus_theme_preset_dark">Întunecat nuanțat</string>
     <string name="oneplus_theme_preset_light">Lumini</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Temele presetate vin cu o gamă largă de wallpaperuri, culori de accent, tonuri etc.</string>
+    <string name="oneplus_theme_preset_summary">Temele presetate vin cu o gamă largă de culori de accent, tonuri etc.</string>
+    <string name="oneplus_theme_preset_summary_tmp">Temele presetate vin cu o gamă largă de wallpaperuri, culori de accent, tonuri etc.</string>
     <string name="oneplus_theme_shape">Formă</string>
     <string name="oneplus_theme_shape_effect_round">Rotund</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Dreptunghi cu colțuri rotunde</string>
@@ -3692,7 +3701,7 @@ Notă:
     <string name="oneplus_theme_tone">Ton</string>
     <string name="oneplus_theme_tone_effect_color">Colorat</string>
     <string name="oneplus_theme_tone_effect_dark">Întunecat</string>
-    <string name="oneplus_theme_tone_effect_light">Luminos</string>
+    <string name="oneplus_theme_tone_effect_light">Ușor</string>
     <string name="oneplus_theme_tone_effect_title">SELECTARE TON</string>
     <string name="oneplus_theme_wallpaper">Wallpaper-uri</string>
     <string name="oneplus_three_screenshots_enable_summary">Glisați cu trei degete pe ecran pentru a face o captură de ecran</string>
@@ -3708,7 +3717,7 @@ Notă:
     <string name="oneplus_tools_summary_U30">Mod jocuri, mod buzunar, pornire/oprire programată</string>
     <string name="oneplus_tools_summary_no_gamingmode">App locker, aplicații paralele</string>
     <string name="oneplus_tools_title">Utilități</string>
-    <string name="oneplus_top_level_accounts_summary">Cont OnePlus, alte conturi</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Aplicații implicite, permisiuni</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert slider, bară de navigare și gesturi</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sincronizare date cu cloud, găsirea telefonului</string>
@@ -3723,9 +3732,11 @@ Notă:
     <string name="oneplus_top_level_system_summary">Limbă și tastatură, oră, resetare, actualizări de sistem</string>
     <string name="oneplus_touch_vibrate">Vibrații la atingere</string>
     <string name="oneplus_turn_off_time">Până la</string>
+    <string name="oneplus_turn_on_feature_cancel">ANULARE</string>
+    <string name="oneplus_turn_on_feature_ok">ACTIVARE</string>
     <string name="oneplus_turn_on_time">De la</string>
     <string name="oneplus_uninstatll_multi_app_msg">Toate datele din aplicația paralelă vor fi șterse la dezinstalare. Sigur doriți să dezinstalați?</string>
-    <string name="oneplus_uninstatll_multi_app_title">Aplicație %1$s paralelă</string>
+    <string name="oneplus_uninstatll_multi_app_title">%1$s paralelă</string>
     <string name="oneplus_uninstatll_multi_main_app_msg">Toate datele din această aplicație și din aplicația paralelă asociată vor fi șterse la dezinstalare. Sigur doriți să dezinstalați?</string>
     <string name="oneplus_unknown_ringtone">Ton de apel necunoscut</string>
     <string name="oneplus_use_faceunlock_and_fingerprint_settings_summary">"Utilizați Deblocare facială împreună cu amprenta pentru o experiență de deblocare mai rapidă și mai ușoară. Tot ce trebuie să faceți este să vă porniți telefonul și să vă uitați la el, apoi veți putea utiliza această funcție.
@@ -3789,6 +3800,7 @@ Setarea rețelei drept ascunsă nu modifică setările routerului."</string>
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Întâi alegeți o metodă alternativă de blocare a ecranului</string>
     <string name="op_cloud_service_summary">Vă sincronizează contactele, notele, fotografiile etc.</string>
     <string name="op_cloud_service_title">Serviciul de cloud</string>
     <string name="op_confirm_enable_oem_unlock_text">AVERTISMENT: Caracteristicile de protecție și verificare a dispozitivului, de exemplu, plata cu amprentă și tasta avansată DRM nu pot funcționa cu OEM deblocat.</string>
@@ -3800,13 +3812,21 @@ Setarea rețelei drept ascunsă nu modifică setările routerului."</string>
     <string name="op_default_apps_summary">Pagina principală, browser</string>
     <string name="op_default_luncher_title">Aplicație Pagină principală</string>
     <string name="op_dnd_summary">Nu deranjați</string>
+    <string name="op_face_unlock_set_unlock_password">Deblocare facială + Parolă</string>
+    <string name="op_face_unlock_set_unlock_pattern">Deblocare facială + Model</string>
+    <string name="op_face_unlock_set_unlock_pin">Deblocare facială + PIN</string>
+    <string name="op_face_unlock_skip_face">Continuare fără deblocare facială</string>
     <string name="op_failed_to_get_data">Nu s-a reușit recuperarea datelor</string>
     <string name="op_fetch_data_in_process">Se încarcă</string>
     <string name="op_fragment">Scurt</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">Aplicații mari consumatoare de energie</string>
     <string name="op_light_mode_title">Luminos</string>
     <string name="op_linked_launch_summary">Gestionarea aplicațiilor poate fi legată de lansarea din fundal</string>
     <string name="op_linked_launch_title">Lansare automată aplicații</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Pentru a folosi Deblocarea facială, setați parola</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Pentru a folosi Deblocarea facială, setați modelul</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Pentru a folosi Deblocarea facială, setați codul PIN</string>
     <string name="op_not_disturb">Preferințe Nu deranjați</string>
     <string name="op_not_disturb_summary">Închide sunetul apelurilor și notificărilor și oprește vibrațiile, cu excepția alarmelor</string>
     <string name="op_oneplus_roaming_summary">Oferă servicii de acces Internet globale</string>

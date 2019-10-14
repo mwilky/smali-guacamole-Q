@@ -218,12 +218,31 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
+
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
+
+    invoke-static {v0}, Lcom/oneplus/settings/ui/OPCustomClockPreference;->access$100(Lcom/oneplus/settings/ui/OPCustomClockPreference;)Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;
+
+    move-result-object v0
+
     iget-object v0, v0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x4
 
     invoke-virtual {v0, v2}, Lcom/oneplus/settings/ui/RadiusImageView;->setVisibility(I)V
 
+    :cond_5
     iget-object v0, p2, Lcom/oneplus/settings/ui/OPCustomClockPreference$ClockViewHolder;->imageViewMask:Lcom/oneplus/settings/ui/RadiusImageView;
 
     const/4 v2, 0x0
@@ -247,7 +266,7 @@
 
     move-result v3
 
-    if-ge v0, v3, :cond_6
+    if-ge v0, v3, :cond_7
 
     iget-object v3, p0, Lcom/oneplus/settings/ui/OPCustomClockPreference$ChooseStyleAdapter;->this$0:Lcom/oneplus/settings/ui/OPCustomClockPreference;
 
@@ -261,13 +280,13 @@
 
     check-cast v3, Lcom/oneplus/settings/ui/OPCustomClockPreference$ItemEntity;
 
-    if-ne p1, v0, :cond_5
+    if-ne p1, v0, :cond_6
 
     move v4, v1
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     move v4, v2
 
     :goto_2
@@ -277,7 +296,7 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     return-void
 .end method
 

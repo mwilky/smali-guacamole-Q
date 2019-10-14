@@ -183,6 +183,7 @@
 
     const/4 v0, 0x0
 
+    :try_start_0
     iget-object v1, p0, Lcom/android/settings/applications/RecentAppsPreferenceController;->mRecentApps:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -209,25 +210,51 @@
     if-eqz v3, :cond_0
 
     iget-object v4, p0, Lcom/android/settings/applications/RecentAppsPreferenceController;->mAppEntitiesController:Lcom/android/settingslib/widget/AppEntitiesHeaderController;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     add-int/lit8 v5, v0, 0x1
 
+    :try_start_1
     invoke-virtual {v4, v0, v3}, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->setAppEntity(ILcom/android/settingslib/widget/AppEntityInfo;)Lcom/android/settingslib/widget/AppEntitiesHeaderController;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     move v0, v5
 
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, v0
+
+    move v0, v5
+
+    goto :goto_3
+
     :cond_0
+    :goto_1
     const/4 v4, 0x3
 
     if-ne v0, v4, :cond_1
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_1
     goto :goto_0
 
     :cond_2
-    :goto_1
+    :goto_2
+    goto :goto_4
+
+    :catch_1
+    move-exception v1
+
+    :goto_3
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_4
     return-void
 .end method
 
@@ -300,7 +327,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/RecentAppsPreferenceController;->mRecentAppsPreference:Lcom/android/settingslib/widget/LayoutPreference;
 
-    const v1, 0x7f0a047f
+    const v1, 0x7f0a0480
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -312,7 +339,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211ed
+    const v2, 0x7f1211ee
 
     invoke-virtual {v1, v2}, Lcom/android/settingslib/widget/AppEntitiesHeaderController;->setHeaderTitleRes(I)Lcom/android/settingslib/widget/AppEntitiesHeaderController;
 

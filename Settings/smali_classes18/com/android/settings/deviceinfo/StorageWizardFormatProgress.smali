@@ -77,7 +77,7 @@
 
     iput-boolean v1, p0, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->mFormatPrivate:Z
 
-    const v1, 0x7f121496
+    const v1, 0x7f121497
 
     new-array v3, v0, [Ljava/lang/CharSequence;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {p0, v1, v3}, Lcom/android/settings/deviceinfo/StorageWizardFormatProgress;->setHeaderText(I[Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f121495
+    const v1, 0x7f121496
 
     new-array v0, v0, [Ljava/lang/CharSequence;
 

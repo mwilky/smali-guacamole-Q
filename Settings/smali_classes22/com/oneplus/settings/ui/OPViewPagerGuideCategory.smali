@@ -368,7 +368,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a02b5
+    const v3, 0x7f0a02b6
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -382,7 +382,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 
-    const v4, 0x7f0a02b3
+    const v4, 0x7f0a02b4
 
     invoke-virtual {v2, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -396,7 +396,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(I)V
 
-    const v5, 0x7f0a02b2
+    const v5, 0x7f0a02b3
 
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -474,7 +474,7 @@
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a04d2
+    const v0, 0x7f0a04d3
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -482,7 +482,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mDotContainer:Landroid/view/View;
 
-    const v0, 0x7f0a04f8
+    const v0, 0x7f0a04f9
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -492,7 +492,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mPage0:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a04f9
+    const v0, 0x7f0a04fa
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -514,7 +514,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v0, 0x7f0a04d1
+    const v0, 0x7f0a04d2
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -522,7 +522,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ui/OPViewPagerGuideCategory;->mViewPagerContainer:Landroid/view/View;
 
-    const v0, 0x7f0a04d4
+    const v0, 0x7f0a04d5
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -571,7 +571,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    const v2, 0x7f0a02b2
+    const v2, 0x7f0a02b3
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -13,11 +13,11 @@
     .end annotation
 .end field
 
-.field static final PASSWORD_SCANNER_BUTTON_ID:I = 0x7f0a0512
+.field static final PASSWORD_SCANNER_BUTTON_ID:I = 0x7f0a0513
 
 .field private static final REQUEST_CODE_WIFI_DPP_ENROLLEE_QR_CODE_SCANNER:I = 0x0
 
-.field static final SSID_SCANNER_BUTTON_ID:I = 0x7f0a064f
+.field static final SSID_SCANNER_BUTTON_ID:I = 0x7f0a0650
 
 .field static final SUBMIT_BUTTON_ID:I = 0x1020019
     .annotation build Landroidx/annotation/VisibleForTesting;
@@ -206,7 +206,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a064e
+    const v2, 0x7f0a064f
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -250,8 +250,8 @@
     .sparse-switch
         0x1020019 -> :sswitch_3
         0x102001a -> :sswitch_2
-        0x7f0a0512 -> :sswitch_1
-        0x7f0a064f -> :sswitch_0
+        0x7f0a0513 -> :sswitch_1
+        0x7f0a0650 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -349,7 +349,7 @@
 
     iput-object v5, p0, Lcom/android/settings/wifi/AddNetworkFragment;->mCancelBtn:Landroid/widget/Button;
 
-    const v5, 0x7f0a064f
+    const v5, 0x7f0a0650
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -357,7 +357,7 @@
 
     check-cast v5, Landroid/widget/ImageButton;
 
-    const v6, 0x7f0a0512
+    const v6, 0x7f0a0513
 
     invoke-virtual {v1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

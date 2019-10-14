@@ -14,4 +14,7 @@
         <intent android:action="oneplus.intent.action.ONEPLUS_LAB_FEATURE" />
     </Preference>
     <Preference android:icon="@drawable/op_quick_reply_icon" android:persistent="false" android:title="@string/oneplus_quick_reply" android:key="oneplus_quick_replay" android:fragment="com.oneplus.settings.im.OPQuickReplySettings" />
+    <Preference android:icon="@drawable/op_ic_settings_gaming_mode" android:persistent="false" android:title="@string/op_gamespace" android:key="game_space">
+        <intent android:action="oneplus.intent.action.GAME_SPACE" />
+    </Preference>
 </PreferenceScreen>

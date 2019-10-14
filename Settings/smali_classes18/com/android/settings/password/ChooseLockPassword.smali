@@ -144,7 +144,7 @@
     :cond_0
     if-eqz v1, :cond_1
 
-    const v3, 0x7f12104e
+    const v3, 0x7f12104f
 
     invoke-virtual {p0, v3}, Lcom/android/settings/password/ChooseLockPassword;->getText(I)Ljava/lang/CharSequence;
 
@@ -154,7 +154,7 @@
     :goto_0
     invoke-virtual {p0, v2}, Lcom/android/settings/password/ChooseLockPassword;->setTitle(Ljava/lang/CharSequence;)V
 
-    const v3, 0x7f0a0187
+    const v3, 0x7f0a0188
 
     invoke-virtual {p0, v3}, Lcom/android/settings/password/ChooseLockPassword;->findViewById(I)Landroid/view/View;
 

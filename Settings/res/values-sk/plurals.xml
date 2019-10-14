@@ -327,14 +327,10 @@
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">Zostáva %1$d pokusov</item>
         <item quantity="one">Zostáva %1$d pokus</item>
-        <item quantity="few">Zostávajú %1$d pokusy</item>
-        <item quantity="many">Zostáva %1$d pokusov</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Skúste znova o %d sekúnd.</item>
         <item quantity="one">Skúste znova o %d sekundu.</item>
-        <item quantity="few">Skúste znova o %d sekundy.</item>
-        <item quantity="many">Skúste znova o %d sekúnd.</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s aplikácií</item>

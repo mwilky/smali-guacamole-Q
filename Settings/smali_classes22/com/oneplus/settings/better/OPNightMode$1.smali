@@ -49,7 +49,7 @@
 
     const/4 v2, 0x1
 
-    const v3, 0x7f121566
+    const v3, 0x7f121567
 
     if-nez v1, :cond_1
 

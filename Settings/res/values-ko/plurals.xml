@@ -218,9 +218,11 @@
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">아직 %1$d번의 기회가 있습니다.</item>
+        <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">%d초 후 다시 시도하십시오.</item>
+        <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">앱 %s개</item>

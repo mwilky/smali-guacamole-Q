@@ -204,7 +204,7 @@
 
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    const v5, 0x7f0a06a0
+    const v5, 0x7f0a06a1
 
     invoke-virtual {p0, v5}, Lcom/android/settings/widget/SwitchBar;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
 
     invoke-virtual {v5, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
 
-    const v6, 0x7f0a06a1
+    const v6, 0x7f0a06a2
 
     invoke-virtual {p0, v6}, Lcom/android/settings/widget/SwitchBar;->findViewById(I)Landroid/view/View;
 
@@ -270,9 +270,9 @@
 
     invoke-virtual {p0, v5}, Lcom/android/settings/widget/SwitchBar;->setBackgroundColor(I)V
 
-    const v5, 0x7f1214fe
+    const v5, 0x7f1214ff
 
-    const v6, 0x7f1214fd
+    const v6, 0x7f1214fe
 
     invoke-virtual {p0, v5, v6}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 
@@ -282,7 +282,7 @@
 
     invoke-virtual {p0, v5}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
 
-    const v5, 0x7f0a05a4
+    const v5, 0x7f0a05a5
 
     invoke-virtual {p0, v5}, Lcom/android/settings/widget/SwitchBar;->findViewById(I)Landroid/view/View;
 

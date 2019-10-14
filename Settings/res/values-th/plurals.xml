@@ -218,9 +218,11 @@
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">คุณยังมีโอกาสอีก %1$d ครั้ง</item>
+        <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">ลองใหม่อีกครั้งในอีก %d วินาที</item>
+        <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s แอป</item>

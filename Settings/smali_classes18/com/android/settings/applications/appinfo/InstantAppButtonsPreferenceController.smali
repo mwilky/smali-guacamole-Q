@@ -131,7 +131,7 @@
 .method private initButtons(Landroid/view/View;)V
     .locals 5
 
-    const v0, 0x7f0a0322
+    const v0, 0x7f0a0323
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -147,7 +147,7 @@
 
     check-cast v1, Landroid/widget/Button;
 
-    const v2, 0x7f0a0361
+    const v2, 0x7f0a0362
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -284,7 +284,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/appinfo/InstantAppButtonsPreferenceController;->mPreference:Lcom/android/settingslib/widget/LayoutPreference;
 
-    const v1, 0x7f0a0324
+    const v1, 0x7f0a0325
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 

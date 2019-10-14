@@ -1775,6 +1775,7 @@ Pomáha to chrániť dáta v stratených alebo ukradnutých zariadeniach. Vyža
     <string name="failed_to_open_app_settings_toast">Nastavenia aplikácie %1$s sa nepodarilo otvoriť</string>
     <string name="fcc_equipment_id">ID zariadenia</string>
     <string name="feature_flags_dashboard_title">Experimentálne funkcie</string>
+    <string name="feature_not_support_split_screen">Táto funkcia nie je v režime rozdelenej obrazovky podporovaná.</string>
     <string name="filter">Filtrovať</string>
     <string name="filter_all_apps">Všetky aplikácie</string>
     <string name="filter_apps_all">Všetky aplikácie</string>
@@ -2890,7 +2891,7 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť nastavenie Nerušiť
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Režim Pocket</string>
     <string name="oneplus_aod_smart_display_calendar_event">Udalosť v kalendári</string>
     <string name="oneplus_aod_smart_display_music_info">Prehrávač médií</string>
-    <string name="oneplus_aod_smart_display_title">Inteligentné zobrazenie</string>
+    <string name="oneplus_aod_smart_display_title">Kontextové informácie</string>
     <string name="oneplus_app_alipay">AliPay</string>
     <string name="oneplus_app_display_compatibility">Režim kompatibility</string>
     <string name="oneplus_app_display_fullscreen">Režim na celú obrazovku</string>
@@ -3001,10 +3002,11 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť nastavenie Nerušiť
     <string name="oneplus_connected_devices_count">Počet pripojených zariadení: %1$s</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, vysielanie, tlač</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth a pripojenie zariadenia</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESOR</string>
     <string name="oneplus_custom_time">Vlastný časový rozsah</string>
     <string name="oneplus_customization">Prispôsobenie navigačného panela</string>
     <string name="oneplus_customization_summary">Dlhé stlačenie, dvojité ťuknutie</string>
+    <string name="oneplus_customization_summary_hide_navbar">Dlhé stlačenie, dvojité ťuknutie, skryť navigačný panel</string>
     <string name="oneplus_data_usage_control_title">Kontrola používania dát</string>
     <string name="oneplus_dc_dimming_summary">Zníženie jasu znížením energie upraví jas obrazovky zmenu napájania obvodov obrazovky. Po zapnutí obmedzí mihotanie obrazovky pri nízkom jase. Toto však môže spôsobiť v niektorých prípadoch zobrazenie nezvyklých farieb.</string>
     <string name="oneplus_dc_dimming_title">Zníženie jasu znížením energie</string>
@@ -3049,7 +3051,7 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť nastavenie Nerušiť
     <string name="oneplus_double_tap_power_gesture_camera">Kamera</string>
     <string name="oneplus_double_tap_power_gesture_wallet">Potiahnutie karty (Peňaženka)</string>
     <string name="oneplus_doze_summary_801">Zobraziť na pohotovostnej obrazovke hodiny a iné informácie</string>
-    <string name="oneplus_doze_title">Ambientné zobrazenie</string>
+    <string name="oneplus_doze_title">Ambient display</string>
     <string name="oneplus_doze_title_801">Ambientné zobrazenie</string>
     <string name="oneplus_draw_gesture_start_none">Žiadne</string>
     <string name="oneplus_draw_m_start_app">Nakreslite M</string>
@@ -3264,6 +3266,10 @@ Poznámka: Váš odtlačok prsta môže byť menej bezpečný ako zložitý vzor
     <string name="oneplus_intelligently_select_best_wifi">Inteligentne vybrať najlepšiu sieť Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Inteligentne vyberie a pripojí sa k najlepšej sieti Wi‑Fi zistením a analýzou pripojenia a sily signálu sietí Wi‑Fi</string>
     <string name="oneplus_intensely">Silné</string>
+    <string name="oneplus_is_turn_on_feature">Naozaj chcete zapnúť túto funkciu?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Po zapnutí tejto funkcie môže občas dôjsť k nasledovným situáciám:
+1.Niektoré oblasti obrazovky budú nesprávne
+2.Adaptívny jas nebude fungovať správne"</string>
     <string name="oneplus_lab_dislike">Nepáči</string>
     <string name="oneplus_lab_features">LABORATÓRNE FUNKCIE</string>
     <string name="oneplus_lab_feedback_toast">Ďakujeme vám za vašu spätnú väzbu!</string>
@@ -3361,7 +3367,7 @@ Poznámka: Váš odtlačok prsta môže byť menej bezpečný ako zložitý vzor
     <string name="oneplus_notification_channel_summary_low">Menej dôležité oznámenia bez zvuku alebo vibrácie</string>
     <string name="oneplus_notification_dialog_never_mode">Nikdy</string>
     <string name="oneplus_notification_dialog_ringtone">Zvonenie oznámení</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Len v režime zvonenia</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Vždy</string>
     <string name="oneplus_notification_dots">Body oznámení</string>
     <string name="oneplus_notification_instrucitons">Návod pre používateľa</string>
@@ -3568,7 +3574,8 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">nerušiť, prerušiť, prerušenie, prestávka, režim</string>
     <string name="oneplus_search_keyword_swap_navkeys">vymeniť tlačidlá</string>
     <string name="oneplus_search_keyword_switch">prenos,migrácia dát</string>
-    <string name="oneplus_search_keyword_theme_settings">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, tapety, štýl hodín, animácia odtlačku prsta, Horizon light, PRISPÔSOBENIE SYSTÉMU, farba zvýraznenia, tvar, písmo, odtieň, balík ikon</string>
+    <string name="oneplus_search_keyword_theme_settings">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, PRISPÔSOBENIE SYSTÉMU, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, PRISPÔSOBENIE SYSTÉMU, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">snímka obrazovky</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">oznámenia,skúsenosť,program,zlepšovanie</string>
@@ -3665,6 +3672,7 @@ Poznámka:
     <string name="oneplus_theme_clock">Štýl hodín</string>
     <string name="oneplus_theme_clock_snake_action">ZAPNÚŤ AMBIENTNÉ ZOBRAZENIE</string>
     <string name="oneplus_theme_clock_snake_tip">Táto funkcia bude dostupná len pri zapnutom ambientnom zobrazení</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Zahodiť zmeny?</string>
     <string name="oneplus_theme_drop_title">Ukončiť režim úprav</string>
     <string name="oneplus_theme_entrance_summary">Tapety, farba zvýraznenia, písmo, odtieň</string>
@@ -3681,7 +3689,8 @@ Poznámka:
     <string name="oneplus_theme_preset_dark">Jemná tmavá</string>
     <string name="oneplus_theme_preset_light">Svetlo podsvietenia</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Prednastavené motívy obsahujú širokú paletu tapiet, farieb zvýraznenia, odtieňov atď.</string>
+    <string name="oneplus_theme_preset_summary">Prednastavené motívy obsahujú širokú paletu farieb zvýraznenia, odtieňov atď.</string>
+    <string name="oneplus_theme_preset_summary_tmp">Prednastavené motívy obsahujú širokú paletu tapiet, farieb zvýraznenia, odtieňov atď.</string>
     <string name="oneplus_theme_shape">Tvar</string>
     <string name="oneplus_theme_shape_effect_round">Okrúhly</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Zaoblený obdĺžnik</string>
@@ -3690,9 +3699,9 @@ Poznámka:
     <string name="oneplus_theme_shape_effect_title">VYBRAŤ TVAR</string>
     <string name="oneplus_theme_system_customization">PRISPÔSOBENIE SYSTÉMU</string>
     <string name="oneplus_theme_tone">Odtieň</string>
-    <string name="oneplus_theme_tone_effect_color">Farebný</string>
+    <string name="oneplus_theme_tone_effect_color">Farebné</string>
     <string name="oneplus_theme_tone_effect_dark">Tmavý</string>
-    <string name="oneplus_theme_tone_effect_light">Svetlý</string>
+    <string name="oneplus_theme_tone_effect_light">Ľahké</string>
     <string name="oneplus_theme_tone_effect_title">VYBRAŤ ODTIEŇ</string>
     <string name="oneplus_theme_wallpaper">Tapety</string>
     <string name="oneplus_three_screenshots_enable_summary">Ak chcete urobiť snímku obrazovku, potiahnite po nej tromi prstami</string>
@@ -3708,7 +3717,7 @@ Poznámka:
     <string name="oneplus_tools_summary_U30">Herný režim, vreckový režim, naplánované zapnutie/vypnutie</string>
     <string name="oneplus_tools_summary_no_gamingmode">Zámok aplikácií, paralelné aplikácie</string>
     <string name="oneplus_tools_title">Nástroje</string>
-    <string name="oneplus_top_level_accounts_summary">Účet OnePlus, iné účty</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Predvolené aplikácie, povolenia</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, navigačný panel a gestá</string>
     <string name="oneplus_top_level_cloud_h2_summary">Synchronizácia dát s cloudom, funkcia Nájsť môj telefón</string>
@@ -3722,7 +3731,9 @@ Poznámka:
     <string name="oneplus_top_level_sound_summary">Režim Nerušiť, slúchadlá, zvonenie</string>
     <string name="oneplus_top_level_system_summary">Jazyk a klávesnica, čas, resetovanie, aktualizácie systému</string>
     <string name="oneplus_touch_vibrate">Vibrovanie pri dotyku</string>
-    <string name="oneplus_turn_off_time">Do</string>
+    <string name="oneplus_turn_off_time">Komu</string>
+    <string name="oneplus_turn_on_feature_cancel">ZRUŠIŤ</string>
+    <string name="oneplus_turn_on_feature_ok">ZAPNÚŤ</string>
     <string name="oneplus_turn_on_time">Od</string>
     <string name="oneplus_uninstatll_multi_app_msg">Po odinštalovaní sa vymažú všetky údaje v paralelnej aplikácii. Skutočne ju chcete odinštalovať?</string>
     <string name="oneplus_uninstatll_multi_app_title">Paralelná aplikácia %1$s</string>
@@ -3745,7 +3756,7 @@ Poznámka: Funkcia Odomknúť tvárou je menej bezpečná ako odtlačok prsta, P
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Volania a oznámenia budú stíšené a nastavené len na vibrácie s výnimkou budíkov</string>
     <string name="oneplus_vibration_summary">Budík bude vždy zvoniť</string>
     <string name="oneplus_video_enhancer">Vylepšenie videa</string>
-    <string name="oneplus_video_enhancer_footer">Vylepší farby počas prehrávania videa</string>
+    <string name="oneplus_video_enhancer_footer">Zlepšiť farbu pri prehrávaní videí</string>
     <string name="oneplus_video_enhancer_summary">Zlepšiť farbu pri prehrávaní videí</string>
     <string name="oneplus_volume_keys_adjust">Upravte pomocou tlačidiel hlasitosti</string>
     <string name="oneplus_volume_keys_adjust_media">Hlasitosť médií</string>
@@ -3789,6 +3800,7 @@ Nastavenie siete ako skrytej nezmení nastavenia vášho smerovača."</string>
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Najprv vyberte záložný zámok obrazovky</string>
     <string name="op_cloud_service_summary">Synchronizácia kontaktov, poznámok, fotografií a iných.</string>
     <string name="op_cloud_service_title">Služba Cloud</string>
     <string name="op_confirm_enable_oem_unlock_text">VAROVANIE: Zabezpečenie zariadenia a funkcie overenia, napr. platba odtlačkom prsta a rozšírený DRM kľúč nebudú fungovať po OEM odomknutí.</string>
@@ -3800,13 +3812,21 @@ Nastavenie siete ako skrytej nezmení nastavenia vášho smerovača."</string>
     <string name="op_default_apps_summary">Spúšťač, prehliadač</string>
     <string name="op_default_luncher_title">Aplikácia spúšťača</string>
     <string name="op_dnd_summary">Nerušiť</string>
+    <string name="op_face_unlock_set_unlock_password">Odomknúť tvárou + heslo</string>
+    <string name="op_face_unlock_set_unlock_pattern">Odomknúť tvárou + vzor</string>
+    <string name="op_face_unlock_set_unlock_pin">Odomknúť tvárou + kód PIN</string>
+    <string name="op_face_unlock_skip_face">Pokračovať bez funkcie Odomknúť tvárou</string>
     <string name="op_failed_to_get_data">Nepodarilo sa načítať údaje</string>
     <string name="op_fetch_data_in_process">Prebieha načítavanie</string>
     <string name="op_fragment">Krátke</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">Správca aplikácií náročných na energiu</string>
     <string name="op_light_mode_title">Svetlý</string>
     <string name="op_linked_launch_summary">Manage apps can be linked launch in the background</string>
     <string name="op_linked_launch_title">Automatické spustenie aplikácie</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Na použitie funkcie Odomknúť tvárou, nastavte najprv heslo</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Na použitie funkcie Odomknúť tvárou, nastavte najprv vzor</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Na použitie funkcie Odomknúť tvárou, nastavte najprv kód PIN</string>
     <string name="op_not_disturb">Vlastnosti režimu Nerušiť</string>
     <string name="op_not_disturb_summary">Stíšiť volania a oznámenia a vypnúť vibrácie, s výnimkou budíkov</string>
     <string name="op_oneplus_roaming_summary">Poskytuje služby globálneho prístupu na internet</string>

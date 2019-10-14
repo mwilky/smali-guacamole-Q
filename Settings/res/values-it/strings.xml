@@ -356,7 +356,7 @@ L'amministratore ha la possibilità di monitorare e gestire impostazioni, access
     <string name="apn_user">Nome utente</string>
     <string name="app2sd_alert_continue">CONTINUA</string>
     <string name="app2sd_alert_message">ATTENZIONE</string>
-    <string name="app2sd_alert_title">"In caso di utilizzo di un'app archiviata sulla SD card, è necessario smontare prima di espellere l'unità SD al fine di evitare errori involontari. Continuare?"</string>
+    <string name="app2sd_alert_title">"In caso di utilizzo di un'app archiviata sulla scheda SD, è necessario smontare prima di espellere l'unità SD al fine di evitare errori involontari. Continuare?"</string>
     <string name="app_and_notification_dashboard_summary">App recenti, app predefinite</string>
     <string name="app_and_notification_dashboard_title">App e notifiche</string>
     <string name="app_cellular_data_usage">Utilizzo dati delle app</string>
@@ -382,7 +382,7 @@ L'amministratore ha la possibilità di monitorare e gestire impostazioni, access
     <string name="app_list_memory_use">Utilizzo di app</string>
     <string name="app_list_preference_none">Nessuna</string>
     <string name="app_memory_use">Memoria usata</string>
-    <string name="app_moved_message">"Applicazione spostata sulla SD card. Questa operazione potrebbe provocare errori imprevisti. Assicurarsi di smontare prima di espellere l'unità SD."</string>
+    <string name="app_moved_message">"Applicazione spostata sulla scheda SD. Questa operazione potrebbe provocare errori imprevisti. Assicurarsi di smontare prima di espellere l'unità SD."</string>
     <string name="app_name_label">App</string>
     <string name="app_names_concatenation_template_2">%1$s, %2$s</string>
     <string name="app_names_concatenation_template_3">%1$s, %2$s, %3$s</string>
@@ -1775,6 +1775,7 @@ Per ulteriori informazioni, rivolgiti all'amministratore dell'organizzazione."</
     <string name="failed_to_open_app_settings_toast">Impossibile aprire le impostazioni di %1$s</string>
     <string name="fcc_equipment_id">ID attrezzatura</string>
     <string name="feature_flags_dashboard_title">Flag di funzioni</string>
+    <string name="feature_not_support_split_screen">Questa funzione non è supportata in dividi schermo.</string>
     <string name="filter">Filtra</string>
     <string name="filter_all_apps">Tutte le app</string>
     <string name="filter_apps_all">Tutte le app</string>
@@ -2890,7 +2891,7 @@ L'app potrà anche attivare o disattivare la funzione Non disturbare e modificar
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Modalità tasca</string>
     <string name="oneplus_aod_smart_display_calendar_event">Evento in calendario</string>
     <string name="oneplus_aod_smart_display_music_info">Lettore multimediale</string>
-    <string name="oneplus_aod_smart_display_title">Display intelligente</string>
+    <string name="oneplus_aod_smart_display_title">Informazioni contestuali</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Modalità compatibilità</string>
     <string name="oneplus_app_display_fullscreen">Modalità schermo intero</string>
@@ -2905,7 +2906,7 @@ L'app potrà anche attivare o disattivare la funzione Non disturbare e modificar
     <string name="oneplus_app_locker_switch">Nascondi contenuti notifiche</string>
     <string name="oneplus_app_locker_switch_summary">I contenuti delle notifiche saranno nascosti per le app con App Locker abilitato</string>
     <string name="oneplus_app_locker_title">App Locker</string>
-    <string name="oneplus_app_network_settings">"Controllo dell'utilizzo dei dati"</string>
+    <string name="oneplus_app_network_settings">Controllo utilizzo dati</string>
     <string name="oneplus_app_notification_allow_led">LED on</string>
     <string name="oneplus_app_notification_not_allow_led">LED off</string>
     <string name="oneplus_app_ops_title">Autorizzazioni app</string>
@@ -3001,10 +3002,11 @@ La funzione di risparmio batteria è disattivata automaticamente quando il dispo
     <string name="oneplus_connected_devices_count">%1$s dispositivi connessi</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, casting, stampa</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth e connessione dispositivo</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESSORE</string>
     <string name="oneplus_custom_time">Intervallo di tempo personalizzato</string>
     <string name="oneplus_customization">Personalizzazione della barra di navigazione</string>
-    <string name="oneplus_customization_summary">Pressione prolungata, doppio tocco</string>
+    <string name="oneplus_customization_summary">Premi a lungo, doppio tocco</string>
+    <string name="oneplus_customization_summary_hide_navbar">Premi a lungo, doppio tocco, nascondi la barra di navigazione</string>
     <string name="oneplus_data_usage_control_title">Controllo utilizzo dati</string>
     <string name="oneplus_dc_dimming_summary">La funzione di oscuramento DC consentirà di regolare il grado di luminosità dello schermo cambiando la potenza del circuito dello schermo. Una volta abilitata, la funzione ridurrà lo sfarfallio dello schermo a bassa luminosità, ma ciò potrebbe comportare anomalie nei colori visualizzati in talune circostanze.</string>
     <string name="oneplus_dc_dimming_title">Oscuramento DC</string>
@@ -3049,7 +3051,7 @@ La funzione di risparmio batteria è disattivata automaticamente quando il dispo
     <string name="oneplus_double_tap_power_gesture_camera">Fotocamera</string>
     <string name="oneplus_double_tap_power_gesture_wallet">Cambia scheda (Portafoglio)</string>
     <string name="oneplus_doze_summary_801">"Visualizza l'orologio e altre informazioni sulla schermata di standby"</string>
-    <string name="oneplus_doze_title">Display ambient</string>
+    <string name="oneplus_doze_title">Schermo Ambient</string>
     <string name="oneplus_doze_title_801">Display Ambiente</string>
     <string name="oneplus_draw_gesture_start_none">Nessuno</string>
     <string name="oneplus_draw_m_start_app">Disegna M</string>
@@ -3154,10 +3156,10 @@ Attenzione: lo sblocco tramite Face Unlock è meno sicuro dell'impronta digitale
     <string name="oneplus_font_style">Carattere</string>
     <string name="oneplus_font_switch">Cambio carattere</string>
     <string name="oneplus_force_factory_reset_summary">"La funzione di inserimento della password all'avvio è attivata, la memoria interna verrà cancellata"</string>
-    <string name="oneplus_forum_award_summary">Questa comunità è la tua. Solo tu sei in grado di definire la nostra linea di azione. Insieme, definiamo e perfezioniamo. Rimuoviamo le versioni ormai scadute per poi aggiornarle e scriviamo codici. Tutto questo è per te. Grazie di sognare con noi!</string>
+    <string name="oneplus_forum_award_summary">Questa comunità è la tua. Solo tu sei in grado di definire la nostra linea di azione. Insieme, definiamo e perfezioniamo. Implementiamo versioni e scriviamo codici. Tutto questo è per te. Grazie per sognare con noi!</string>
     <string name="oneplus_forum_award_title">Premio</string>
     <string name="oneplus_fullscreen_back_guide_summary">Scorri verso il centro dal margine inferiore destro o sinistro dello schermo</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">"Scorri verso l'alto dalla parte sinistra o destra del margine inferiore dello schermo"</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">"Scorrere verso l'alto dalla parte sinistra o destra della parte inferiore dello schermo"</string>
     <string name="oneplus_fullscreen_back_guide_title">Indietro</string>
     <string name="oneplus_fullscreen_disable_this_feature">Questa funzionalità non sarà disponibile quando i gesti per la navigazione sono abilitati.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Proviamo a utilizzare il gesto che sostituisce il pulsante indietro.
@@ -3170,7 +3172,7 @@ Per andare alla schermata home in qualsiasi momento, scorri verso l'alto dal bor
     <string name="oneplus_fullscreen_gesture_guide_multitask">"Per le app recenti, scorri verso l'alto dal basso dello schermo e sospendi."</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">I gesti per la navigazione saranno attivati</string>
     <string name="oneplus_fullscreen_home_guide_summary">"Scorri verso l'alto dal margine inferiore dello schermo"</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">"Scorri verso l'alto dal margine inferiore al centro dello schermo"</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">"Scorrere verso l'alto dal bordo inferiore centrale dello schermo"</string>
     <string name="oneplus_fullscreen_home_guide_title">Home</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">È sempre possibile attivare i gesti di navigazione dal margine inferiore dello schermo. Per tornare indietro, scorri dal margine destro o sinistro</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Come per la modalità ritratto, i gesti per la navigazione partono comunque dalla parte inferiore del dispositivo</string>
@@ -3183,7 +3185,7 @@ Per andare alla schermata home in qualsiasi momento, scorri verso l'alto dal bor
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">"Scorri il dito dal margine inferiore dello schermo verso l'alto e poi verso destra o sinistra"</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Cambia app recenti</string>
     <string name="oneplus_fullscreen_recent_guide_summary">"Scorri verso l'alto dal margine inferiore dello schermo e metti in pausa"</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">"Scorri verso l'alto dal margine inferiore al centro dello schermo e metti in pausa"</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">"Scorrere verso l'alto dal bordo inferiore centro dello schermo e sospendere"</string>
     <string name="oneplus_fullscreen_recent_guide_title">App recenti</string>
     <string name="oneplus_functional_terms">TERMINI E CONDIZIONI</string>
     <string name="oneplus_game_haptic_feedback_summary">"Aggiungi un feedback aptico per rendere l'esperienza di gioco ancora più vivida. Le cuffie Bluetooth non sono ancora supportate."</string>
@@ -3264,6 +3266,10 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_intelligently_select_best_wifi">Seleziona in modo intelligente il Wi‑Fi migliore</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Seleziona e connetti in modo intelligente i migliori Wi‑Fi rilevando e analizzando la connettività e la potenza del segnale delle reti Wi‑Fi</string>
     <string name="oneplus_intensely">Forte</string>
+    <string name="oneplus_is_turn_on_feature">Attivare questa funzione?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Quando è attivata, possono verificarsi talvolta le seguenti situazioni:
+1.Alcune aree dello schermo sono anomale
+2.La luminosità adattiva non funziona correttamente"</string>
     <string name="oneplus_lab_dislike">Non mi piace</string>
     <string name="oneplus_lab_features">FUNZIONI LAB</string>
     <string name="oneplus_lab_feedback_toast">Grazie per il tuo feedback!</string>
@@ -3361,7 +3367,7 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_notification_channel_summary_low">Notifiche meno importanti senza suono o vibrazione</string>
     <string name="oneplus_notification_dialog_never_mode">Mai</string>
     <string name="oneplus_notification_dialog_ringtone">Suono di notifica</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Solo in modalità squillo</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Sempre</string>
     <string name="oneplus_notification_dots">Punti di notifica</string>
     <string name="oneplus_notification_instrucitons">"Tutorial per l'utente"</string>
@@ -3381,7 +3387,7 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_notifications_meet">Meet</string>
     <string name="oneplus_o2_contributors">Collaboratori OxygenOS</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Conferma</string>
-    <string name="oneplus_opfinger_input_completed_sub">"Configurazione dell'impronta digitale completata. Fare clic su \"conferma\" per continuare"</string>
+    <string name="oneplus_opfinger_input_completed_sub">"Configurazione dell'impronta digitale completata. Fai clic su \"conferma\" per continuare"</string>
     <string name="oneplus_opfinger_input_completed_title">Registrazione completata</string>
     <string name="oneplus_opfinger_input_failed_sub">"La registrazione dell'impronta digitale è fallita, premi lentamente il dito sul lettore di impronte digitali per completare correttamente la registrazione"</string>
     <string name="oneplus_opfinger_input_failed_title">Operazione fallita</string>
@@ -3472,7 +3478,7 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_reading_mode_ask">Chiedi ogni volta</string>
     <string name="oneplus_reading_mode_auto_summary">La modalità lettura si attiverà automaticamente quando queste app sono aperte e si disattiverà quando sono chiuse</string>
     <string name="oneplus_reading_mode_available">Nessun effetto</string>
-    <string name="oneplus_reading_mode_block_peek_notifications">Blocca le notifiche rapide</string>
+    <string name="oneplus_reading_mode_block_peek_notifications">Blocca tutte le notifiche rapide</string>
     <string name="oneplus_reading_mode_chromatic">Effetto cromatico</string>
     <string name="oneplus_reading_mode_default_state">stato predefinito</string>
     <string name="oneplus_reading_mode_manual_settings">Impostazioni manuali</string>
@@ -3568,7 +3574,8 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">non non’t disturbare, interrompere, interruzione, pausa, modalità</string>
     <string name="oneplus_search_keyword_swap_navkeys">scambiare tasti</string>
     <string name="oneplus_search_keyword_switch">trasferire, migrazione dei dati</string>
-    <string name="oneplus_search_keyword_theme_settings">PERSONALIZZAZIONE BLOCCO SCHERMO, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, PERSONALIZZAZIONE SISTEMA, Colore principale, Forma, Carattere, Tono, Pacchetto icone</string>
+    <string name="oneplus_search_keyword_theme_settings">PERSONALIZZAZIONE SCHERMATA DI BLOCCO, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, PERSONALIZZAZIONE SISTEMA, Colore evidenziatore, Forma, Carattere, Tono, Pacchetto icone, Luce di illuminazione, Scuro sfumato, Tinte vivaci</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PERSONALIZZAZIONE SCHERMATA DI BLOCCO, Sfondi, Stile orologio, Animazione impronta digitale, Horizon Light, PERSONALIZZAZIONE SISTEMA, Colore evidenziatore, Forma, Carattere, Tono, Pacchetto icone, Luce di illuminazione, Scuro sfumato, Tinte vivaci, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifiche, esperienza, programma, miglioramento</string>
@@ -3631,7 +3638,7 @@ Nota:
     <string name="oneplus_smart_wifi_connection">connessione intelligente Wi‑Fi</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">Suoneria e vibrazione SMS</string>
-    <string name="oneplus_snooze_options_title">"Posponi le notifiche dall'ombreggiatura a discesa"</string>
+    <string name="oneplus_snooze_options_title">"Posponi le notifiche dall'ombreggiatura di notifica"</string>
     <string name="oneplus_sound_and_vibrate">Suono e vibrazione</string>
     <string name="oneplus_sound_settings_summary">Modalità Non disturbare e auricolari</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3643,7 +3650,7 @@ Nota:
     <string name="oneplus_suspension_notice">Heads-up</string>
     <string name="oneplus_suspension_notice_summary">Consentire alle app di mostrare notifica degli heads-up</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Cambia</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Cambiando risoluzione, alcune app in background potrebbero chiudersi. Cambiare?</string>
     <string name="oneplus_switch_screen_lock_type">Cambio del tipo di schermata di blocco. Attendi...</string>
     <string name="oneplus_system_data_summary">Comprese informazioni sugli account, contatti, dati delle app</string>
@@ -3655,7 +3662,7 @@ Nota:
     <string name="oneplus_system_stability_summary">"Consenti a OnePlus di accedere ai log di sistema in modo anonimo. In caso di errore, consentire una segnalazione di bug con i log da inviare. I log saranno utilizzati solo nell'analisi degli errori di sistema e nei miglioramenti di stabilità"</string>
     <string name="oneplus_system_stability_title">Programma stabilità sistema</string>
     <string name="oneplus_system_vibrate">Vibrazione di sistema</string>
-    <string name="oneplus_theme_accent_color">Colore principale</string>
+    <string name="oneplus_theme_accent_color">Colore evidenziatore</string>
     <string name="oneplus_theme_accent_color_customization">PERSONALIZZAZIONE</string>
     <string name="oneplus_theme_accent_color_presetcolor">PREIMPOSTA COLORE</string>
     <string name="oneplus_theme_accent_color_select">SELEZIONA COLORE PRINCIPALE</string>
@@ -3664,6 +3671,7 @@ Nota:
     <string name="oneplus_theme_clock">Stile orologio</string>
     <string name="oneplus_theme_clock_snake_action">ATTIVA DISPLAY AMBIENT</string>
     <string name="oneplus_theme_clock_snake_tip">Questa funzione sarà disponibile quando display ambient è attivo</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Rimuovere modifiche?</string>
     <string name="oneplus_theme_drop_title">Esci dalla modalità di modifica</string>
     <string name="oneplus_theme_entrance_summary">Sfondi, colore principale, carattere, tono</string>
@@ -3680,7 +3688,8 @@ Nota:
     <string name="oneplus_theme_preset_dark">Scuro sfumato</string>
     <string name="oneplus_theme_preset_light">Luce di illuminazione</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">"I temi preimpostati dispongono di un'ampia gamma di sfondi, colori evidenziatore, sfumature, ecc."</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">Forma</string>
     <string name="oneplus_theme_shape_effect_round">Cerchio</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Rettangolo circolare</string>
@@ -3691,7 +3700,7 @@ Nota:
     <string name="oneplus_theme_tone">Tono</string>
     <string name="oneplus_theme_tone_effect_color">A colori</string>
     <string name="oneplus_theme_tone_effect_dark">Scuro</string>
-    <string name="oneplus_theme_tone_effect_light">Luce</string>
+    <string name="oneplus_theme_tone_effect_light">Leggero</string>
     <string name="oneplus_theme_tone_effect_title">SELEZIONA TONO</string>
     <string name="oneplus_theme_wallpaper">Sfondi</string>
     <string name="oneplus_three_screenshots_enable_summary">Sfiora lo schermo con tre dita per catturare uno screenshot</string>
@@ -3707,7 +3716,7 @@ Nota:
     <string name="oneplus_tools_summary_U30">Modalità di gioco, pagamento rapido, accensione/spegnimento programmati</string>
     <string name="oneplus_tools_summary_no_gamingmode">App Locker, app parallele</string>
     <string name="oneplus_tools_title">Utilità</string>
-    <string name="oneplus_top_level_accounts_summary">Account OnePlus, altri account</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">App predefinite, autorizzazioni</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert slider, barra di navigazione &amp; gesti</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sincronizzazione dati con cloud, Trova il mio telefono</string>
@@ -3722,6 +3731,8 @@ Nota:
     <string name="oneplus_top_level_system_summary">Lingua &amp; tastiera, ora, ripristino, aggiornamenti di sistema</string>
     <string name="oneplus_touch_vibrate">Vibrazione al tocco</string>
     <string name="oneplus_turn_off_time">A</string>
+    <string name="oneplus_turn_on_feature_cancel">ANNULLA</string>
+    <string name="oneplus_turn_on_feature_ok">ATTIVA</string>
     <string name="oneplus_turn_on_time">Da</string>
     <string name="oneplus_uninstatll_multi_app_msg">"Tutti i dati dell'app parallela saranno cancellati al momento della disinstallazione. Disinstallare?"</string>
     <string name="oneplus_uninstatll_multi_app_title">%1$s parallele</string>
@@ -3788,6 +3799,7 @@ Impostare la rete come nascosta non cambierà le impostazioni del router."</stri
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Scegli prima un blocco schermo di backup</string>
     <string name="op_cloud_service_summary">Sincronizza contatti, note, foto, ecc.</string>
     <string name="op_cloud_service_title">Servizio Cloud</string>
     <string name="op_confirm_enable_oem_unlock_text">AVVERTENZA: le funzioni di protezione e verifica dispositivo, ad es. Pagamento con impronte digitali e chiave DRM avanzata potrebbero non funzionare mentre OEM è sbloccato.</string>
@@ -3799,13 +3811,21 @@ Impostare la rete come nascosta non cambierà le impostazioni del router."</stri
     <string name="op_default_apps_summary">Launcher, browser</string>
     <string name="op_default_luncher_title">Launcher</string>
     <string name="op_dnd_summary">Non disturbare</string>
+    <string name="op_face_unlock_set_unlock_password">Face Unlock + Password</string>
+    <string name="op_face_unlock_set_unlock_pattern">Face Unlock + Motivo</string>
+    <string name="op_face_unlock_set_unlock_pin">Face Unlock + PIN</string>
+    <string name="op_face_unlock_skip_face">Prosegui senza Face Unlock</string>
     <string name="op_failed_to_get_data">Impossibile recuperare i dati</string>
     <string name="op_fetch_data_in_process">Caricamento</string>
     <string name="op_fragment">Breve</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">Gestore di applicazioni ad alto consumo di batteria</string>
     <string name="op_light_mode_title">Chiaro</string>
     <string name="op_linked_launch_summary">Il gestore di applicazioni può essere lanciato sullo sfondo</string>
     <string name="op_linked_launch_title">Lancio automatico applicazioni</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Per utilizzare Face Unlock, imposta la password</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Per utilizzare Face Unlock, imposta il motivo</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Per utilizzare Face Unlock, imposta il PIN</string>
     <string name="op_not_disturb">Preferenze Non Disturbare</string>
     <string name="op_not_disturb_summary">"Disattiva l'audio di chiamate e notifiche e spegni la vibrazione, tranne per gli allarmi"</string>
     <string name="op_oneplus_roaming_summary">Fornire servizi di accesso a Internet globali</string>
@@ -5030,7 +5050,7 @@ Prova a usare un dispositivo ^3 più veloce oppure usa ^4 come memoria portatile
     <string name="switch_off_text">Off</string>
     <string name="switch_on_text">On</string>
     <string name="switch_skin_doing">Modifica tema in corso...</string>
-    <string name="switch_theme_has_success">Completo</string>
+    <string name="switch_theme_has_success">Operazione completata</string>
     <string name="sync_active">Sincronizzazione attiva</string>
     <string name="sync_automatically">Sincronizz. automatica</string>
     <string name="sync_calendar">Calendario</string>
@@ -5957,7 +5977,7 @@ Consetirlo a tutte le app che vogliono eseguire la ricerca?"</string>
     <string name="wizard_finish">Fine</string>
     <string name="wizard_next">Avanti</string>
     <string name="work_alarm_ringtone_title">Suoneria della sveglia di lavoro predefinita</string>
-    <string name="work_life_balance">Equilibrio tra vita privata e vita lavorativa</string>
+    <string name="work_life_balance">Equilibrio vita privata/lavoro</string>
     <string name="work_mode_label">Profilo di lavoro</string>
     <string name="work_mode_off_summary">Le app e le notifiche sono disattivate</string>
     <string name="work_mode_on_summary">Gestito dalla tua organizzazione</string>

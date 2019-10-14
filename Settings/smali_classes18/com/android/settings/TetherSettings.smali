@@ -585,7 +585,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121647
+    const v1, 0x7f121648
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -715,7 +715,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f12152a
+    const v3, 0x7f12152b
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -732,7 +732,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f12152c
+    const v4, 0x7f12152d
 
     new-array v5, v0, [Ljava/lang/Object;
 
@@ -748,7 +748,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f12152b
+    const v5, 0x7f12152c
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -779,7 +779,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f12152e
+    const v3, 0x7f12152f
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -789,7 +789,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f12152d
+    const v4, 0x7f12152e
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -860,19 +860,60 @@
 
     check-cast v2, Landroid/bluetooth/BluetoothPan;
 
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "bluetoothPan : "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "TetheringSettings"
+
+    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz v2, :cond_3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "bluetooth pan is tethering on : "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/bluetooth/BluetoothPan;->isTetheringOn()Z
+
+    move-result v6
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
     const/16 v4, 0xc
 
     const/4 v5, 0x1
 
-    if-ne v1, v4, :cond_3
+    if-ne v1, v4, :cond_4
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothPan;->isTetheringOn()Z
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     iget-object v3, p0, Lcom/android/settings/TetherSettings;->mBluetoothTether:Landroidx/preference/SwitchPreference;
 
@@ -888,7 +929,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-object v4, p0, Lcom/android/settings/TetherSettings;->mBluetoothTether:Landroidx/preference/SwitchPreference;
 
     iget-boolean v6, p0, Lcom/android/settings/TetherSettings;->mDataSaverEnabled:Z
@@ -1268,7 +1309,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121538
+    const v1, 0x7f121539
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPFooterPreference;->setTitle(I)V
 
@@ -1673,7 +1714,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12153c
+    const v1, 0x7f12153d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

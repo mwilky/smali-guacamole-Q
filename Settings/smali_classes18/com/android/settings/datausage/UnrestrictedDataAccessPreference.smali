@@ -254,7 +254,7 @@
 
     invoke-virtual {v3, p1}, Lcom/android/settingslib/RestrictedPreferenceHelper;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v3, 0x7f0a05a4
+    const v3, 0x7f0a05a5
 
     invoke-virtual {p1, v3}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -453,7 +453,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f121219
+    const v0, 0x7f12121a
 
     invoke-virtual {p0, v0}, Lcom/android/settings/datausage/UnrestrictedDataAccessPreference;->setSummary(I)V
 

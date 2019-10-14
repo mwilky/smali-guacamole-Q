@@ -132,8 +132,15 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/OPCustomFingerprintAnimSettings;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->onBackPressed()V
 
+    :cond_0
     return-void
 .end method
 
@@ -148,8 +155,15 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/OPCustomFingerprintAnimSettings;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->onBackPressed()V
 
+    :cond_0
     return-void
 .end method
 

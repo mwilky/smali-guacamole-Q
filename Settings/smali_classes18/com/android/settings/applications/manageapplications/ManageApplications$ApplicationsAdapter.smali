@@ -1267,7 +1267,7 @@
 
     iget v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->mLastSortMode:I
 
-    const v1, 0x7f0a0641
+    const v1, 0x7f0a0642
 
     if-ne v0, v1, :cond_0
 
@@ -2207,7 +2207,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0a063f
+    .packed-switch 0x7f0a0640
         :pswitch_2
         :pswitch_1
         :pswitch_0
@@ -2324,7 +2324,7 @@
 
     if-ne v1, v0, :cond_0
 
-    const v0, 0x7f0a063f
+    const v0, 0x7f0a0640
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 
@@ -2339,7 +2339,7 @@
 
     if-ne v0, v1, :cond_1
 
-    const v0, 0x7f0a0640
+    const v0, 0x7f0a0641
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 
@@ -2354,7 +2354,7 @@
 
     if-ne v0, v1, :cond_2
 
-    const v0, 0x7f0a063e
+    const v0, 0x7f0a063f
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 

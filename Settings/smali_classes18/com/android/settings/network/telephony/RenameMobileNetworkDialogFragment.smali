@@ -356,7 +356,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
-    const v0, 0x7f0a041d
+    const v0, 0x7f0a041e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -482,7 +482,7 @@
 
     :cond_3
     :goto_1
-    const v3, 0x7f0a04d7
+    const v3, 0x7f0a04d8
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -504,7 +504,7 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v5, 0x7f0a044c
+    const v5, 0x7f0a044d
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -528,7 +528,7 @@
     :goto_2
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v6, 0x7f0a044d
+    const v6, 0x7f0a044e
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

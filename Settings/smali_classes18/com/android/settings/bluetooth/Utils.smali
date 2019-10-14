@@ -67,7 +67,7 @@
     :goto_0
     if-nez v0, :cond_1
 
-    const v1, 0x7f1215ce
+    const v1, 0x7f1215cf
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

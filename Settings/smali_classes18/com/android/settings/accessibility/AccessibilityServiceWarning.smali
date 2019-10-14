@@ -119,7 +119,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a051e
+    const v2, 0x7f0a051f
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -149,7 +149,7 @@
 
     nop
 
-    const v4, 0x7f0a051d
+    const v4, 0x7f0a051e
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -183,7 +183,7 @@
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v3, 0x7f0a0522
+    const v3, 0x7f0a0523
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +191,7 @@
 
     check-cast v3, Landroid/widget/Button;
 
-    const v5, 0x7f0a0521
+    const v5, 0x7f0a0522
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0232
+    const v2, 0x7f0a0233
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -301,7 +301,7 @@
     move-result-object v3
 
     :goto_1
-    const v6, 0x7f0a051f
+    const v6, 0x7f0a0520
 
     invoke-virtual {v1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +311,7 @@
 
     invoke-virtual {v6, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v7, 0x7f0a0520
+    const v7, 0x7f0a0521
 
     invoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -335,7 +335,7 @@
 
     invoke-virtual {v7, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v4, 0x7f0a0523
+    const v4, 0x7f0a0524
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -343,7 +343,7 @@
 
     check-cast v4, Landroid/widget/Button;
 
-    const v5, 0x7f0a0524
+    const v5, 0x7f0a0525
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -458,7 +458,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f12156c
+    const v3, 0x7f12156d
 
     invoke-static {v0, v3, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

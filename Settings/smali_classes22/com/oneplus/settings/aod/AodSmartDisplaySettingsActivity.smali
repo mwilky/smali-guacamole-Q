@@ -129,13 +129,13 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a03b1
+    const v3, 0x7f0a03b2
 
     invoke-virtual {v2, v3, v1}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
-    const v3, 0x7f0a069c
+    const v3, 0x7f0a069d
 
     invoke-virtual {p0, v3}, Lcom/oneplus/settings/aod/AodSmartDisplaySettingsActivity;->findViewById(I)Landroid/view/View;
 

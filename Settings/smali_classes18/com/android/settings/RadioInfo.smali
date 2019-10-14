@@ -3324,7 +3324,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211bd
+    const v2, 0x7f1211be
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3347,7 +3347,7 @@
     goto :goto_0
 
     :cond_0
-    const v3, 0x7f1211aa
+    const v3, 0x7f1211ab
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3356,15 +3356,6 @@
     goto :goto_0
 
     :cond_1
-    const v3, 0x7f1211a7
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    :cond_2
     const v3, 0x7f1211a8
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -3373,8 +3364,17 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     const v3, 0x7f1211a9
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_3
+    const v3, 0x7f1211aa
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3413,13 +3413,13 @@
 
     move-result-wide v7
 
-    const v9, 0x7f1211ae
+    const v9, 0x7f1211af
 
     invoke-virtual {v0, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    const v10, 0x7f1211ac
+    const v10, 0x7f1211ad
 
     invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3778,7 +3778,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v8, 0x7f1211af
+    const v8, 0x7f1211b0
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3808,7 +3808,7 @@
 
     invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v9, 0x7f1211a6
+    const v9, 0x7f1211a7
 
     invoke-virtual {v0, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4092,7 +4092,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1211bd
+    const v1, 0x7f1211be
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4111,15 +4111,6 @@
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f1211b5
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
     const v2, 0x7f1211b6
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -4128,8 +4119,17 @@
 
     goto :goto_0
 
+    :cond_1
+    const v2, 0x7f1211b7
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_0
+
     :cond_2
-    const v2, 0x7f1211b4
+    const v2, 0x7f1211b5
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4216,7 +4216,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1211bd
+    const v1, 0x7f1211be
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4342,7 +4342,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211bd
+    const v2, 0x7f1211be
 
     if-nez v1, :cond_0
 
@@ -4429,7 +4429,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1211bd
+    const v2, 0x7f1211be
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4452,7 +4452,7 @@
     goto :goto_0
 
     :cond_0
-    const v3, 0x7f1211bb
+    const v3, 0x7f1211bc
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4461,7 +4461,7 @@
     goto :goto_0
 
     :cond_1
-    const v3, 0x7f1211b9
+    const v3, 0x7f1211ba
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4470,7 +4470,7 @@
     goto :goto_0
 
     :cond_2
-    const v3, 0x7f1211ba
+    const v3, 0x7f1211bb
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4491,7 +4491,7 @@
 
     iget-object v3, p0, Lcom/android/settings/RadioInfo;->roamingState:Landroid/widget/TextView;
 
-    const v4, 0x7f1211b7
+    const v4, 0x7f1211b8
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -4500,7 +4500,7 @@
     :cond_3
     iget-object v3, p0, Lcom/android/settings/RadioInfo;->roamingState:Landroid/widget/TextView;
 
-    const v4, 0x7f1211b8
+    const v4, 0x7f1211b9
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -4554,7 +4554,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v6, 0x7f1211ad
+    const v6, 0x7f1211ae
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4574,7 +4574,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v5, 0x7f1211ab
+    const v5, 0x7f1211ac
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -4794,7 +4794,7 @@
 
     sput-object v0, Lcom/android/settings/RadioInfo;->mPhoneIndexLabels:[Ljava/lang/String;
 
-    const v0, 0x7f0a0302
+    const v0, 0x7f0a0303
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4804,7 +4804,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mDeviceId:Landroid/widget/TextView;
 
-    const v0, 0x7f0a044a
+    const v0, 0x7f0a044b
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4814,7 +4814,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->number:Landroid/widget/TextView;
 
-    const v0, 0x7f0a066f
+    const v0, 0x7f0a0670
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4824,7 +4824,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mSubscriptionId:Landroid/widget/TextView;
 
-    const v0, 0x7f0a01d0
+    const v0, 0x7f0a01d1
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4834,7 +4834,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mDds:Landroid/widget/TextView;
 
-    const v0, 0x7f0a030d
+    const v0, 0x7f0a030e
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4854,7 +4854,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->callState:Landroid/widget/TextView;
 
-    const v0, 0x7f0a04d5
+    const v0, 0x7f0a04d6
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4864,7 +4864,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->operatorName:Landroid/widget/TextView;
 
-    const v0, 0x7f0a05b2
+    const v0, 0x7f0a05b3
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4874,7 +4874,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->roamingState:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02ab
+    const v0, 0x7f0a02ac
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4884,7 +4884,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->gsmState:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02a4
+    const v0, 0x7f0a02a5
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4894,7 +4894,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->gprsState:Landroid/widget/TextView;
 
-    const v0, 0x7f0a075c
+    const v0, 0x7f0a075d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4904,7 +4904,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->voiceNetwork:Landroid/widget/TextView;
 
-    const v0, 0x7f0a01ba
+    const v0, 0x7f0a01bb
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4914,7 +4914,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->dataNetwork:Landroid/widget/TextView;
 
-    const v0, 0x7f0a01cf
+    const v0, 0x7f0a01d0
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4924,7 +4924,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->dBm:Landroid/widget/TextView;
 
-    const v0, 0x7f0a041b
+    const v0, 0x7f0a041c
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4944,7 +4944,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mCfi:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03a4
+    const v0, 0x7f0a03a5
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4964,7 +4964,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mCellInfo:Landroid/widget/TextView;
 
-    const v0, 0x7f0a05f9
+    const v0, 0x7f0a05fa
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4974,7 +4974,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->sent:Landroid/widget/TextView;
 
-    const v0, 0x7f0a058a
+    const v0, 0x7f0a058b
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4984,7 +4984,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->received:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0636
+    const v0, 0x7f0a0637
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -4994,7 +4994,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->smsc:Landroid/widget/EditText;
 
-    const v0, 0x7f0a0212
+    const v0, 0x7f0a0213
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5004,7 +5004,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->dnsCheckState:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0532
+    const v0, 0x7f0a0533
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5014,7 +5014,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mPingHostnameV4:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0533
+    const v0, 0x7f0a0534
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5024,7 +5024,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mPingHostnameV6:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02eb
+    const v0, 0x7f0a02ec
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5034,7 +5034,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mHttpClientTest:Landroid/widget/TextView;
 
-    const v0, 0x7f0a052c
+    const v0, 0x7f0a052d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5044,7 +5044,7 @@
 
     iput-object v0, p0, Lcom/android/settings/RadioInfo;->mPhyChanConfig:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0543
+    const v0, 0x7f0a0544
 
     invoke-virtual {p0, v0}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5072,7 +5072,7 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    const v3, 0x7f0a0526
+    const v3, 0x7f0a0527
 
     invoke-virtual {p0, v3}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5118,7 +5118,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
 
-    const v1, 0x7f0a075f
+    const v1, 0x7f0a0760
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5128,7 +5128,7 @@
 
     iput-object v1, p0, Lcom/android/settings/RadioInfo;->imsVolteProvisionedSwitch:Landroid/widget/Switch;
 
-    const v1, 0x7f0a0767
+    const v1, 0x7f0a0768
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5138,7 +5138,7 @@
 
     iput-object v1, p0, Lcom/android/settings/RadioInfo;->imsVtProvisionedSwitch:Landroid/widget/Switch;
 
-    const v1, 0x7f0a0770
+    const v1, 0x7f0a0771
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5148,7 +5148,7 @@
 
     iput-object v1, p0, Lcom/android/settings/RadioInfo;->imsWfcProvisionedSwitch:Landroid/widget/Switch;
 
-    const v1, 0x7f0a0221
+    const v1, 0x7f0a0222
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5219,7 +5219,7 @@
     :goto_0
     invoke-virtual {v1, v5}, Landroid/widget/Switch;->setVisibility(I)V
 
-    const v1, 0x7f0a021f
+    const v1, 0x7f0a0220
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5269,7 +5269,7 @@
     invoke-virtual {v1, v4}, Landroid/widget/Switch;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f0a0589
+    const v1, 0x7f0a058a
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5279,7 +5279,7 @@
 
     iput-object v1, p0, Lcom/android/settings/RadioInfo;->radioPowerOnSwitch:Landroid/widget/Switch;
 
-    const v1, 0x7f0a020e
+    const v1, 0x7f0a020f
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5289,7 +5289,7 @@
 
     iput-object v1, p0, Lcom/android/settings/RadioInfo;->mDownlinkKbps:Landroid/widget/TextView;
 
-    const v1, 0x7f0a072c
+    const v1, 0x7f0a072d
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5301,7 +5301,7 @@
 
     invoke-direct {p0, v6, v6}, Lcom/android/settings/RadioInfo;->updateBandwidths(II)V
 
-    const v1, 0x7f0a0534
+    const v1, 0x7f0a0535
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5317,7 +5317,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0735
+    const v1, 0x7f0a0736
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5333,7 +5333,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0592
+    const v1, 0x7f0a0593
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5349,7 +5349,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0213
+    const v1, 0x7f0a0214
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5381,7 +5381,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0713
+    const v1, 0x7f0a0714
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5397,7 +5397,7 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a044f
+    const v1, 0x7f0a0450
 
     invoke-virtual {p0, v1}, Lcom/android/settings/RadioInfo;->findViewById(I)Landroid/view/View;
 
@@ -5474,7 +5474,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f1211b1
+    const v2, 0x7f1211b2
 
     invoke-interface {p1, v1, v1, v0, v2}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -5486,7 +5486,7 @@
 
     const/4 v2, 0x2
 
-    const v3, 0x7f1211b2
+    const v3, 0x7f1211b3
 
     invoke-interface {p1, v1, v2, v0, v3}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -5498,7 +5498,7 @@
 
     const/4 v2, 0x3
 
-    const v3, 0x7f1211b3
+    const v3, 0x7f1211b4
 
     invoke-interface {p1, v1, v2, v0, v3}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -5522,7 +5522,7 @@
 
     const/4 v2, 0x4
 
-    const v3, 0x7f1211b0
+    const v3, 0x7f1211b1
 
     invoke-interface {p1, v1, v2, v0, v3}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -5535,7 +5535,7 @@
     :cond_0
     const/4 v2, 0x5
 
-    const v3, 0x7f1211c5
+    const v3, 0x7f1211c6
 
     invoke-interface {p1, v1, v2, v0, v3}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -5612,14 +5612,14 @@
     goto :goto_0
 
     :cond_0
-    const v3, 0x7f1211c5
+    const v3, 0x7f1211c6
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 
     goto :goto_0
 
     :cond_1
-    const v3, 0x7f1211c6
+    const v3, 0x7f1211c7
 
     invoke-interface {v0, v3}, Landroid/view/MenuItem;->setTitle(I)Landroid/view/MenuItem;
 

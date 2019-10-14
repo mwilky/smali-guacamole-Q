@@ -226,6 +226,8 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/aod/AodSmartDisplaySettingsFragment;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
 
+    if-eqz v0, :cond_0
+
     const v1, 0x7f120bb7
 
     invoke-virtual {v0, v1, v1}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
@@ -240,6 +242,7 @@
 
     invoke-virtual {v0, p0}, Lcom/android/settings/widget/SwitchBar;->addOnSwitchChangeListener(Lcom/android/settings/widget/SwitchBar$OnSwitchChangeListener;)V
 
+    :cond_0
     invoke-virtual {p0}, Lcom/oneplus/settings/aod/AodSmartDisplaySettingsFragment;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -286,7 +289,7 @@
 
     iget-boolean v1, p0, Lcom/oneplus/settings/aod/AodSmartDisplaySettingsFragment;->mAodSmartDisplayCurState:Z
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     iget-object v2, p0, Lcom/oneplus/settings/aod/AodSmartDisplaySettingsFragment;->mMusicPreference:Landroidx/preference/SwitchPreference;
 
@@ -298,7 +301,7 @@
 
     invoke-virtual {v1, v2}, Landroidx/preference/SwitchPreference;->setEnabled(Z)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 

@@ -24,7 +24,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="aod_clock_default">Numatytasis</string>
     <string name="aod_clock_mcl">McLaren</string>
     <string name="aod_clock_minimalism">Minimalizmas</string>
-    <string name="aod_clock_none">Nėra</string>
+    <string name="aod_clock_none">Nenurodyta</string>
     <string name="aod_clock_select_style_text">Rinktis laikrodžio stilių</string>
     <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Mėlyna</string>
@@ -67,7 +67,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="bugreport_capturing_text">Gali užtrukti keletą minučių</string>
     <string name="bugreport_capturing_title">Pranešimas apie užfiksuotą klaidą</string>
     <string name="built_in_app_updates_summary">Leisti „OnePlus“ ieškoti ir siūlyti integruotųjų programų naujinius, kuriais siekiama pagerinti programų stabilumą</string>
-    <string name="built_in_app_updates_title">Integruotųjų programų naujiniai</string>
+    <string name="built_in_app_updates_title">Integruotosios programos naujiniai</string>
     <string name="buttons_brightness_summary">Įjunkite jutiklinių mygtukų foninį apšvietimą</string>
     <string name="buttons_brightness_title">Foninis apšvietimas</string>
     <string name="buttons_enable_on_screen_navkeys_summary">Įjungti programinės įrangos ekraninę naršymo juostą</string>
@@ -80,7 +80,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="camera_application_title">Kameros programėlė</string>
     <string name="close_dialog">GERAI</string>
     <string name="color_picker_accent_color_message">Pasirinkti pagrindinę spalvą</string>
-    <string name="color_picker_default">Numatytasis parametras</string>
+    <string name="color_picker_default">Numatytasis</string>
     <string name="color_picker_led_color_message">Pasirinkti LED spalvą</string>
     <string name="color_picker_message_default">Pasirinkite norimą spalvą.</string>
     <string name="color_picker_unknown_label">Nežinoma</string>
@@ -115,6 +115,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="enabled_fingerprint_unlock_summary_disabled">Atrakinimą piršto antspaudu įjungti galima tik nustačius pagrindinį ekrano užraktą</string>
     <string name="enabled_fingerprint_unlock_summary_enabled">Įrenginį atrakinkite piršto antspaudu</string>
     <string name="exception_hints">Pakeitus vaizdo formatą gali atsirasti rodymo klaidų.</string>
+    <string name="feature_not_support_split_screen">Perskirtame ekrane ši funkcija nepalaikoma.</string>
     <string name="fingerprint_add_fingerprint">Įkelti piršto antspaudą</string>
     <string name="fingerprint_add_fingerprint_summary">Uždėkite pirštą ant jutiklio ir, pajutę vibraciją, nukelkite.</string>
     <string name="fingerprint_allset">Viskas nustatyta!</string>
@@ -168,7 +169,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="keywords_assist_input">numatytasis, asistentas</string>
     <string name="keywords_dark_mode">tamsaus režimo spalva</string>
     <string name="keywords_default_browser">numatytoji, numatytoji naršyklė</string>
-    <string name="keywords_default_links">numatytoji</string>
+    <string name="keywords_default_links">numatytasis parametras</string>
     <string name="keywords_default_phone_app">telefonas, rinkimo priemonė, numatytoji</string>
     <string name="keywords_emergency_app">pagalba, ledas, programa, numatytoji</string>
     <string name="keywords_more_default_sms_app">teksto žinutė, teksto žinutės, žinutės, žinučių siuntimas, numatytoji</string>
@@ -215,7 +216,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Kišeninis režimas</string>
     <string name="oneplus_aod_smart_display_calendar_event">Kalendoriaus įvykis</string>
     <string name="oneplus_aod_smart_display_music_info">Medijos leistuvas</string>
-    <string name="oneplus_aod_smart_display_title">Išmanusis ekranas</string>
+    <string name="oneplus_aod_smart_display_title">Kontekstinė informacija</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Suderinamumo režimas</string>
     <string name="oneplus_app_display_fullscreen">Viso ekrano režimas</string>
@@ -233,7 +234,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="oneplus_app_network_settings">Duomenų naudojimo valdymas</string>
     <string name="oneplus_app_notification_allow_led">Įjungti LED</string>
     <string name="oneplus_app_notification_not_allow_led">Išjungti LED</string>
-    <string name="oneplus_app_ops_title">Programų leidimai</string>
+    <string name="oneplus_app_ops_title">Programėlės leidimai</string>
     <string name="oneplus_app_uninstall_remark">Kad galėtumėte naudoti greitojo apmokėjimo funkciją, įdiekite nurodytas mokėjimų programėles</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">Programėlių pranešimai, lygiagrečiosios programėlės, leidimai</string>
@@ -253,7 +254,7 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="oneplus_auto_disconect_the_ap">Jei joks įrenginys neprijungtas, po 5 minučių interneto taškas išsijungs automatiškai.</string>
     <string name="oneplus_auto_open_app_none">Nenurodyta</string>
     <string name="oneplus_auto_open_app_other_applications">KITOS PROGRAMĖLĖS</string>
-    <string name="oneplus_auto_open_app_recommended">REKOMENDUOJAMA</string>
+    <string name="oneplus_auto_open_app_recommended">REKOMENDUOJAMAS</string>
     <string name="oneplus_auto_open_specified_app">Automatiškai atidaryti nurodytą programėlę</string>
     <string name="oneplus_auto_play">Automatinis paleidimas</string>
     <string name="oneplus_auto_play_summary">Automatiškai tęsti muzikos atkūrimą prijungiant ausines</string>
@@ -326,10 +327,11 @@ Ar tikrai norite įjungti šią funkciją?"</string>
     <string name="oneplus_connected_devices_count">Prijungti %1$s įrenginių</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, perduoti, spausdinti</string>
     <string name="oneplus_connected_devices_dashboard_title">„Bluetooth“ &amp; įrenginio jungtis</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESORIUS</string>
     <string name="oneplus_custom_time">Pasirinktinis laiko intervalas</string>
     <string name="oneplus_customization">Naršymo juostos pritaikymas</string>
     <string name="oneplus_customization_summary">Ilgas paspaudimas, bakstelėjimas dukart</string>
+    <string name="oneplus_customization_summary_hide_navbar">Ilgas paspaudimas, dvigubas bakstelėjimas, slėpti naršymo juostą</string>
     <string name="oneplus_data_usage_control_title">Duomenų naudojimo valdymas</string>
     <string name="oneplus_dc_dimming_summary">DC pritemdymas sureguliuoja ekrano ryškumą pakeisdamas ekrano grandinės maitinimą. Įjungus šią funkciją sumažinamas ekrano mirgėjimas esant mažam ryškumui. Tačiau dėl to tam tikrais atvejais gali būti netinkamai atkuriamos spalvos.</string>
     <string name="oneplus_dc_dimming_title">DC pritemdymas</string>
@@ -414,7 +416,7 @@ Dėmesio. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto ants
     <string name="oneplus_face_unlock_assistive_lighting_summary">Tais atvejais, kai kamerai nepavyksta atpažinti jūsų veido, ekranas nušvis, kad kamera jus galėtų atpažinti.</string>
     <string name="oneplus_face_unlock_assistive_lighting_title">Pagalbinis apšvietimas naudojant atrakinimo veidu funkciją</string>
     <string name="oneplus_face_unlock_choose_default_method">Numatytasis atrakinimo veidu būdas</string>
-    <string name="oneplus_face_unlock_choose_default_mode">Numatytasis atrakinimo būdas yra „Atrakinimas veidu“</string>
+    <string name="oneplus_face_unlock_choose_default_mode">Numatytasis atrakinimo būdas yra „Atrakinimas pagal veidą“</string>
     <string name="oneplus_face_unlock_choose_swipe_up_mode">Atrakinimas perbraukiant į viršų</string>
     <string name="oneplus_face_unlock_choose_swipe_up_mode_summary">Tai bus naudinga, kai nepavyks atrakinti naudojant pirštų atspaudą ar kitą ekrano užrakinimo būdą</string>
     <string name="oneplus_face_unlock_choose_use_power_button_mode">Atrakinimas paspaudžiant maitinimo mygtuką</string>
@@ -467,7 +469,7 @@ Dėmesio. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto ants
     <string name="oneplus_fnatic_mode_disturb_introduction_title">Išplėstinis DND</string>
     <string name="oneplus_fnatic_mode_enable_introduction_title">Kad galėtumėte naudotis „Fnatic“ režimą, pirmiausia būtina įjungti žaidimų režimą</string>
     <string name="oneplus_fnatic_mode_network_introduction_dual4g_summary">Pagrindinės SIM kortelės signalo stiprumui teikiama pirmenybė, kad būtų sumažinta trukdžių žaidžiant sparčius žaidimus. Dėl to pagalbinė SIM kortelė bus išjungta, o skambučiai ar žinutės nebus priimami.</string>
-    <string name="oneplus_fnatic_mode_network_introduction_summary">Pagerinti tinklo ryšio stabilumą</string>
+    <string name="oneplus_fnatic_mode_network_introduction_summary">Gerinti tinklo ryšio stabilumą</string>
     <string name="oneplus_fnatic_mode_network_introduction_title">Tinklo pagerinimas</string>
     <string name="oneplus_fnatic_mode_summary">Sustiprinkite žaidimo pojūčius</string>
     <string name="oneplus_fnatic_mode_summary_2">Patobulintas žaidimų režimas, kurį sukūrė el. sporto pradininkai</string>
@@ -482,7 +484,7 @@ Dėmesio. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto ants
     <string name="oneplus_forum_award_summary">Ši bendruomenė yra jūsų. Tik jūs galite nuspręsti, kuriuo keliu trauksime. Kartu mes sprendžiame ir tobuliname. Ieškome naujovių ir rašome kodus. Viskas dėl jūsų. Dėkojame, kad svajojate kartu su mumis!</string>
     <string name="oneplus_forum_award_title">Premija</string>
     <string name="oneplus_fullscreen_back_guide_summary">Braukite į vidų nuo apatinio kairiojo arba apatinio dešiniojo ekrano krašto</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Braukite aukštyn nuo ekrano apačios kairėje arba dešinėje</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Perbraukti aukštyn iš ekrano apačios kairės arba dešinės pusės</string>
     <string name="oneplus_fullscreen_back_guide_title">Atgal</string>
     <string name="oneplus_fullscreen_disable_this_feature">Šios funkcijos naudoti negalima, kai įjungti naršymo gestai.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Išbandykite gestą, kuris pakeičia grįžties mygtuką.
@@ -495,7 +497,7 @@ Kad bet kuriuo metu grįžtumėte į pagrindinį ekraną, perbraukite nuo ekrano
     <string name="oneplus_fullscreen_gesture_guide_multitask">Kad pamatytumėte paskutines naudotas programėles, perbraukite nuo ekrano apačios aukštyn ir sustokite.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Bus įjungti naršymo gestai</string>
     <string name="oneplus_fullscreen_home_guide_summary">Braukite aukštyn nuo apatinio ekrano krašto</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Braukite aukštyn nuo apatinio ekrano krašto centre</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Perbraukti aukštyn nuo ekrano apačios vidurio</string>
     <string name="oneplus_fullscreen_home_guide_title">Pradžia</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Naršymo gestus vis tiek galima naudoti apatiniame ekrano krašte; braukite nuo kairiojo ar dešiniojo krašto, kad sugrįžtumėte</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Kaip ir veikiant stačiajam režimui, naršymo gestai atliekami iš įrenginio apačios</string>
@@ -508,7 +510,7 @@ Kad bet kuriuo metu grįžtumėte į pagrindinį ekraną, perbraukite nuo ekrano
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">Braukite aukštyn nuo apatinio ekrano krašto, tada brūkštelėkite į kairę ar dešinę</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Perjungti vėliausias programas</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Braukite aukštyn nuo apatinio ekrano krašto ir pristabdykite</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Braukite aukštyn nuo apatinio ekrano krašto centre ir pristabdykite</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Perbraukti aukštyn nuo ekrano apačios vidurio ir sustoti</string>
     <string name="oneplus_fullscreen_recent_guide_title">Paskutinės naudotos programėlės</string>
     <string name="oneplus_functional_terms">NUOSTATOS IR SĄLYGOS</string>
     <string name="oneplus_game_haptic_feedback_summary">Pridėkite lietimo atsaką, kad žaidžiant įspūdžiai būtų didesni. „Bluetooth“ ausinės kol kas nepalaikomos.</string>
@@ -542,7 +544,7 @@ Kad bet kuriuo metu grįžtumėte į pagrindinį ekraną, perbraukite nuo ekrano
     <string name="oneplus_gesture_of_answer_call_summary">Atsiliepti į įeinančius skambučius automatiškai, prie ausies pridėjus telefoną</string>
     <string name="oneplus_gesture_of_answer_call_title">Atsiliepti gestu</string>
     <string name="oneplus_gesture_start_learning">Pradėti mokymąsi</string>
-    <string name="oneplus_gesture_to_answer_summary">Atsiliepkite į skambučius automatiškai pakeldami telefoną prie ausinės</string>
+    <string name="oneplus_gesture_to_answer_summary">Atsiliepti į įeinančius skambučius automatiškai, prie ausies pridėjus telefoną</string>
     <string name="oneplus_gesture_to_answer_title">Pakelti ir atsiliepti</string>
     <string name="oneplus_gesture_to_control_call_info">Automatiškai valdyti skambučius pakeliant telefoną prie ausies</string>
     <string name="oneplus_gesture_to_control_calls_summary">Automatiškai atsiliepti į skambučius arba įjungti ausinę gestu</string>
@@ -589,6 +591,10 @@ Pastaba. Jūsų piršto atspaudas gali būti ne toks saugus kaip sudėtinga taš
     <string name="oneplus_intelligently_select_best_wifi">Išmaniai pasirinkti geriausią „Wi‑Fi“</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Išmaniai pasirinkti ir prisijungti prie geriausio „Wi‑Fi“ aptikus ir išanalizavus „Wi‑Fi“ ryšius ir signalo stiprumą.</string>
     <string name="oneplus_intensely">Stipri</string>
+    <string name="oneplus_is_turn_on_feature">Ar tikrai norite įjungti šią funkciją?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Kai ji įjungta, kartais galite susidurti su šiai nesklandumais:
+1. Kai kurios ekrano dalys rodomos netinkamai
+2. Prisitaikantis ryškumas veikia netinkamai"</string>
     <string name="oneplus_lab_dislike">Nepatinka</string>
     <string name="oneplus_lab_features">LABORATORINĖS FUNKCIJOS</string>
     <string name="oneplus_lab_feedback_toast">Dėkojame už atsiliepimą!</string>
@@ -686,7 +692,7 @@ Pastaba. Jūsų piršto atspaudas gali būti ne toks saugus kaip sudėtinga taš
     <string name="oneplus_notification_channel_summary_low">Mažiau svarbūs be jokio garso ar vibracijos</string>
     <string name="oneplus_notification_dialog_never_mode">Niekada</string>
     <string name="oneplus_notification_dialog_ringtone">Pranešimo skambėjimo garsas</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Tik skambėjimo režimu</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Visada</string>
     <string name="oneplus_notification_dots">Pranešimo taškai</string>
     <string name="oneplus_notification_instrucitons">Naudotojo mokymo priemonės</string>
@@ -850,7 +856,7 @@ Pastaba. Jūsų piršto atspaudas gali būti ne toks saugus kaip sudėtinga taš
     <string name="oneplus_screen_refresh_rate_60hz_summary">Mažiau sklandus su ilgesne akumuliatorius veikimo trukme</string>
     <string name="oneplus_screen_refresh_rate_auto_summary">Ypač sklandus, esant didesniam naujinimo dažniui</string>
     <string name="oneplus_screen_refresh_rate_info">Kuo didesnis ekrano naujinimo dažnis, tuo sklandesnis vaizdas. Esant 90 Hz nustatymui, naujinimo dažnis bus dinamiškai keičiamas pagal scenarijus.</string>
-    <string name="oneplus_screen_resolution_adjust">Raiška</string>
+    <string name="oneplus_screen_resolution_adjust">Skiriamoji geba</string>
     <string name="oneplus_screen_resolution_adjust_1080p_summary">Puikus vaizdas, mažesnės energijos sąnaudos (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Automatinis perjungimas</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Automatiškai perjungti į tinkamą skiriamąją gebą</string>
@@ -893,7 +899,8 @@ Pastaba. Jūsų piršto atspaudas gali būti ne toks saugus kaip sudėtinga taš
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">Netrukdyti’t, pertraukti, pertraukimas, nutraukimas, režimas</string>
     <string name="oneplus_search_keyword_swap_navkeys">sukeisti mygtukus</string>
     <string name="oneplus_search_keyword_switch">perkelti, duomenų perkėlimas</string>
-    <string name="oneplus_search_keyword_theme_settings">UŽRAKINTO EKRANO PRITAIKYMAS, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon light“, SISTEMOS PRITAIKYMAS, dekoratyvinė spalva, forma, šriftas, atspalvis, piktogramų paketas</string>
+    <string name="oneplus_search_keyword_theme_settings">UŽRAKINTO EKRANO PRITAIKYMAS, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon light“, SISTEMOS PRITAIKYMAS, dekoratyvinė spalva, forma, šriftas, atspalvis, piktogramų paketas, apšvietimo lemputė, tamsi su atspalviu, ryškūs atspalviai</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">UŽRAKINTO EKRANO PRITAIKYMAS, ekrano fonai, laikrodžio stilius, pirštų atspaudų animacija, „Horizon light“, SISTEMOS PRITAIKYMAS, dekoratyvinė spalva, forma, šriftas, atspalvis, piktogramų paketas, apšvietimo lemputė, tamsi su atspalviu, ryškūs atspalviai, „McLaren“</string>
     <string name="oneplus_search_keyword_three_screenshots">ekrano kopija</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">pranešimai, patirtis, programa, tobulinimas</string>
@@ -923,7 +930,7 @@ Pastaba.
     <string name="oneplus_select_fingerprint_animation_effect_3">Juosta</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">Raibuliai</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
-    <string name="oneplus_select_fingerprint_animation_effect_none">Nėra</string>
+    <string name="oneplus_select_fingerprint_animation_effect_none">Nenurodyta</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">Pasirinkti piršto antspaudo animacijos efektą</string>
     <string name="oneplus_service_messaging_summary">Leisti „OnePlus“ siūlyti jums skubias debesų žinučių paslaugas, kad būtų patogiau naudotis gaminiu</string>
     <string name="oneplus_service_messaging_title">„OnePlus“ paslaugų žinutės</string>
@@ -957,7 +964,7 @@ Pastaba.
     <string name="oneplus_smart_wifi_connection">Išmanusis „Wi‑Fi“ ryšys</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS skambėjimo tonas ir vibracija</string>
-    <string name="oneplus_snooze_options_title">Atidėjimo pranešimai iš užtraukiamų žaliuzių</string>
+    <string name="oneplus_snooze_options_title">Atidėjimo pranešimai iš pranešimų skydelio</string>
     <string name="oneplus_sound_and_vibrate">Garsas &amp; vibracija</string>
     <string name="oneplus_sound_settings_summary">Netrukdyti, ausinių režimas</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -969,7 +976,7 @@ Pastaba.
     <string name="oneplus_suspension_notice">Perspėjimas</string>
     <string name="oneplus_suspension_notice_summary">Leisti programėlėms rodyti priminimo pranešimus</string>
     <string name="oneplus_switch">„OnePlus Switch“</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Perjungti</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">„Switch“</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Pakeitus skiriamąją gebą gali užsidaryti kai kurios foninės programėlės. Ar patvirtinate keitimą?</string>
     <string name="oneplus_switch_screen_lock_type">Keičiamas ekrano užrakto tipas, palaukite…</string>
     <string name="oneplus_system_data_summary">Įskaitant informaciją apie paskyras, kontaktus, programėlių duomenis</string>
@@ -990,6 +997,7 @@ Pastaba.
     <string name="oneplus_theme_clock">Laikrodžio stilius</string>
     <string name="oneplus_theme_clock_snake_action">ĮJUNGTI APLINKOS EKRANĄ</string>
     <string name="oneplus_theme_clock_snake_tip">Ši funkcija veiks įjungus aplinkos ekraną</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Atmesti pakeitimus?</string>
     <string name="oneplus_theme_drop_title">Uždaryti redagavimo režimą</string>
     <string name="oneplus_theme_entrance_summary">Ekrano fonai, dekoratyvinė spalva, šriftas, atspalvis</string>
@@ -1006,7 +1014,8 @@ Pastaba.
     <string name="oneplus_theme_preset_dark">Tamsi su atspalviu</string>
     <string name="oneplus_theme_preset_light">Apšvietimo lemputė</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Iš anksto nustatytos temos siūlomos su įvairiausiais ekrano fonais, dekoravimo spalvomis ir pan.</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">Forma</string>
     <string name="oneplus_theme_shape_effect_round">Apvali</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Suapvalinta kvadratinė</string>
@@ -1033,7 +1042,7 @@ Pastaba.
     <string name="oneplus_tools_summary_U30">Žaidimo režimas, kišeninis režimas, suplanuotas įjungimas / išjungimas</string>
     <string name="oneplus_tools_summary_no_gamingmode">„App locker“, lygiagrečiosios programos</string>
     <string name="oneplus_tools_title">Paslaugos</string>
-    <string name="oneplus_top_level_accounts_summary">„OnePlus“ paskyra, kitos paskyros</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Numatytosios programos, leidimai</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">„Alert Slider“, naršymo juosta ir gestai</string>
     <string name="oneplus_top_level_cloud_h2_summary">Duomenų sinchronizavimas su debesimi, ieškoti mano telefono</string>
@@ -1048,6 +1057,8 @@ Pastaba.
     <string name="oneplus_top_level_system_summary">Kalba ir klaviatūra, laikas, nustatyti iš naujo, sistemos naujiniai</string>
     <string name="oneplus_touch_vibrate">Lietimo vibracija</string>
     <string name="oneplus_turn_off_time">Iki</string>
+    <string name="oneplus_turn_on_feature_cancel">ATŠAUKTI</string>
+    <string name="oneplus_turn_on_feature_ok">ĮJUNGTI</string>
     <string name="oneplus_turn_on_time">Nuo</string>
     <string name="oneplus_uninstatll_multi_app_msg">Šalinant, visi lygiagrečiosios programėlės duomenys bus ištrinti. Ar tikrai norite išdiegti?</string>
     <string name="oneplus_uninstatll_multi_app_title">Lygiagrečioji %1$s</string>
@@ -1061,7 +1072,7 @@ Pastaba. Atrakinimo veidu funkcija neužtikrina tokio saugumo kaip piršto antsp
     <string name="oneplus_user_agreement">Galutinio naudojo licencijos sutartis</string>
     <string name="oneplus_user_enjoy_plan_title">Prisijungti prie naudotojo patirties programos</string>
     <string name="oneplus_vibrate">Vibracija</string>
-    <string name="oneplus_vibrate_dynamic_mode">Dinaminis</string>
+    <string name="oneplus_vibrate_dynamic_mode">Dinaminė</string>
     <string name="oneplus_vibrate_intensity">Vibracijos intensyvumas</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibruoti bakstelint</string>
     <string name="oneplus_vibrate_rhythm">Vibracijos būdas</string>
@@ -1113,6 +1124,7 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Pirma pasirinkite atsarginį ekrano užraktą</string>
     <string name="op_cloud_service_summary">Sinchronizuoti jūsų kontaktus, užrašus, nuotraukas ir kt.</string>
     <string name="op_cloud_service_title">Debesų paslauga</string>
     <string name="op_confirm_enable_oem_unlock_text">ĮSPĖJIMAS. Įrenginio apsaugos ir tikrinimo funkcijos, pvz., apmokėjimo naudojant piršto antspaudą funkcija ir išplėstinis DRM raktas gali neveikti, kol OEM yra atrakintas.</string>
@@ -1124,13 +1136,21 @@ Nustačius tinklą kaip paslėptą, jūsų nustatyti maršrutizatoriaus parametr
     <string name="op_default_apps_summary">Pradžia, naršyklė</string>
     <string name="op_default_luncher_title">Pagrindinė programėlė</string>
     <string name="op_dnd_summary">Netrukdyti</string>
+    <string name="op_face_unlock_set_unlock_password">Atrakinimas veidu ir slaptažodis</string>
+    <string name="op_face_unlock_set_unlock_pattern">Atrakinimas veidu ir taškų derinys</string>
+    <string name="op_face_unlock_set_unlock_pin">Atrakinimas veidu ir PIN</string>
+    <string name="op_face_unlock_skip_face">Tęsti be atrakinimo veidu</string>
     <string name="op_failed_to_get_data">Gauti duomenų nepavyko</string>
     <string name="op_fetch_data_in_process">Įkeliama</string>
     <string name="op_fragment">Trumpas</string>
+    <string name="op_gamespace">Žaidimų erdvė</string>
     <string name="op_high_power_app_manager">Daug energijos vartojančios programėlės</string>
     <string name="op_light_mode_title">Šviesi</string>
     <string name="op_linked_launch_summary">Tvarkomos programėlės gali būti paleistos fone</string>
     <string name="op_linked_launch_title">Automatinis programėlių paleidimas</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Jei norite naudoti atrakinimą veidu, nustatykite slaptažodį</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Jei norite naudoti atrakinimą veidu, nustatykite taškų derinį</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Jei norite naudoti atrakinimą veidu, nustatykite PIN</string>
     <string name="op_not_disturb">„Netrukdyti“ nuostatos</string>
     <string name="op_not_disturb_summary">Nutildyti skambučius ir pranešimus bei išjungti vibraciją, išskyrus aliarmus</string>
     <string name="op_oneplus_roaming_summary">Teikti visuotines interneto prieigos paslaugas</string>

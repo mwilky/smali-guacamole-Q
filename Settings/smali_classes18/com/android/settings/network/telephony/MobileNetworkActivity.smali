@@ -266,7 +266,7 @@
     invoke-virtual {p0, v0}, Lcom/android/settings/network/telephony/MobileNetworkActivity;->setContentView(I)V
 
     :goto_0
-    const v0, 0x7f0a03dd
+    const v0, 0x7f0a03de
 
     invoke-virtual {p0, v0}, Lcom/android/settings/network/telephony/MobileNetworkActivity;->findViewById(I)Landroid/view/View;
 
@@ -454,7 +454,7 @@
 
     invoke-virtual {p1, v2}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
 
-    const v3, 0x7f0a03b1
+    const v3, 0x7f0a03b2
 
     invoke-direct {p0, p2}, Lcom/android/settings/network/telephony/MobileNetworkActivity;->buildFragmentTag(I)Ljava/lang/String;
 

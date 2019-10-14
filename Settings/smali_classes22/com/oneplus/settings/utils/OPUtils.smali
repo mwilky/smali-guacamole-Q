@@ -3557,7 +3557,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300aa
+    const v1, 0x7f0300ac
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -3628,7 +3628,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300bd
+    const v1, 0x7f0300bf
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -4031,6 +4031,34 @@
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
+.end method
+
+.method public static isLandscapeScreen(Landroid/content/Context;)Z
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v1, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    return v2
 .end method
 
 .method public static isLargerFontSize(Landroid/content/Context;)Z
@@ -4451,7 +4479,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300a0
+    const v1, 0x7f0300a2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -4852,7 +4880,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0300a6
+    const v3, 0x7f0300a8
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -5720,7 +5748,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300bf
+    const v1, 0x7f0300c1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -6687,7 +6715,7 @@
 
     move-result-object v11
 
-    const v13, 0x7f0300c4
+    const v13, 0x7f0300c6
 
     invoke-virtual {v11, v13}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

@@ -173,7 +173,7 @@
 
     iget-object v0, p0, Lcom/android/settings/privacy/PrivacyDashboardFragment;->mProgressHeader:Landroid/view/View;
 
-    const v1, 0x7f0a0565
+    const v1, 0x7f0a0566
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

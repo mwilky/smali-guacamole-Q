@@ -554,19 +554,19 @@
 
     invoke-direct {v0}, Lcom/android/settingslib/widget/BarChartInfo$Builder;-><init>()V
 
-    const v1, 0x7f1210cf
+    const v1, 0x7f1210d0
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/BarChartInfo$Builder;->setTitle(I)Lcom/android/settingslib/widget/BarChartInfo$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1210cd
+    const v1, 0x7f1210ce
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/BarChartInfo$Builder;->setDetails(I)Lcom/android/settingslib/widget/BarChartInfo$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1210ce
+    const v1, 0x7f1210cf
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/BarChartInfo$Builder;->setEmptyText(I)Lcom/android/settingslib/widget/BarChartInfo$Builder;
 

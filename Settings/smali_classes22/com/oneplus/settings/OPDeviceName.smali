@@ -160,7 +160,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a0451
+    const v1, 0x7f0a0452
 
     if-ne v0, v1, :cond_1
 
@@ -272,7 +272,7 @@
 
     sget-object v1, Lcom/oneplus/settings/OPDeviceName;->mView:Landroid/view/View;
 
-    const v2, 0x7f0a01f6
+    const v2, 0x7f0a01f7
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -442,7 +442,7 @@
 
     sget-object v0, Lcom/oneplus/settings/OPDeviceName;->mView:Landroid/view/View;
 
-    const v2, 0x7f0a0451
+    const v2, 0x7f0a0452
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -520,7 +520,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f121847
+    const v4, 0x7f121848
 
     if-eqz v2, :cond_2
 

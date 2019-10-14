@@ -76,7 +76,7 @@
 .end method
 
 .method private applyTheme(I)V
-    .locals 3
+    .locals 5
 
     const-string v0, "oem_special_theme"
 
@@ -94,14 +94,25 @@
     const/4 v2, 0x0
 
     invoke-static {v1, v0, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     const/4 v1, 0x1
 
+    const-string v2, "status"
+
+    const-string v3, "pre_theme"
+
     if-ne p1, v1, :cond_0
 
+    :try_start_1
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableDarkThemes(Landroid/content/Context;)V
+
+    const-string v0, "dark"
+
+    invoke-static {v3, v2, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -112,24 +123,32 @@
 
     invoke-static {v0}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableLightThemes(Landroid/content/Context;)V
 
+    const-string v0, "simple"
+
+    invoke-static {v3, v2, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 
     :cond_1
-    const/4 v2, 0x3
+    const/4 v4, 0x3
 
-    if-ne p1, v2, :cond_2
+    if-ne p1, v4, :cond_2
 
-    iget-object v2, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableMclThemes(Landroid/content/Context;)V
+    invoke-static {v4}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableMclThemes(Landroid/content/Context;)V
 
-    iget-object v2, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/oneplus/settings/OPThemeSettings;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-static {v2, v0, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    invoke-static {v4, v0, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    const-string v0, "mcl"
+
+    invoke-static {v3, v2, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -138,12 +157,16 @@
 
     invoke-static {v0}, Lcom/oneplus/settings/utils/OPThemeUtils;->enableColorfulThemes(Landroid/content/Context;)V
 
+    const-string v0, "color"
+
+    invoke-static {v3, v2, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
     :goto_0
     const-string v0, "oneplus_theme_preset"
 
     invoke-static {v0, p1}, Lcom/oneplus/settings/utils/OPUtils;->sendAppTracker(Ljava/lang/String;I)V
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_1
 
@@ -171,7 +194,7 @@
 .method private updateThemeSummary(I)V
     .locals 2
 
-    const v0, 0x7f120f7b
+    const v0, 0x7f120f7c
 
     if-eqz p1, :cond_3
 
@@ -196,7 +219,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mThemeModePreference:Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;
 
-    const v1, 0x7f120f7c
+    const v1, 0x7f120f7d
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->setSummary(I)V
 
@@ -205,7 +228,7 @@
     :cond_1
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mThemeModePreference:Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;
 
-    const v1, 0x7f120f79
+    const v1, 0x7f120f7a
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->setSummary(I)V
 
@@ -214,7 +237,7 @@
     :cond_2
     iget-object v0, p0, Lcom/oneplus/settings/OPThemeSettings;->mThemeModePreference:Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;
 
-    const v1, 0x7f120f7a
+    const v1, 0x7f120f7b
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPThemePresetDialogPreference;->setSummary(I)V
 

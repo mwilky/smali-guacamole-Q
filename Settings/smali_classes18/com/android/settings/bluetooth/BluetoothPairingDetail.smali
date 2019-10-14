@@ -482,6 +482,12 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
     iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothPairingDetail;->mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-virtual {v1, v0}, Landroid/bluetooth/BluetoothAdapter;->setName(Ljava/lang/String;)Z
@@ -491,6 +497,7 @@
     :cond_1
     invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothPairingDetail;->finish()V
 
+    :cond_2
     :goto_0
     return-void
 .end method

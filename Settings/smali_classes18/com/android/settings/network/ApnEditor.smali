@@ -1757,7 +1757,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f030096
+    const v4, 0x7f030098
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -3200,733 +3200,738 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 14
+    .locals 16
 
-    invoke-super {p0, p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
+    move-object/from16 v0, p0
 
-    const v0, 0x7f160013
+    invoke-super/range {p0 .. p1}, Lcom/android/settings/SettingsPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->addPreferencesFromResource(I)V
+    const v1, 0x7f160013
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->addPreferencesFromResource(I)V
 
-    move-result-object v0
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->getResources()Landroid/content/res/Resources;
 
-    const v1, 0x7f12014f
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    const v2, 0x7f12014f
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    sput-object v0, Lcom/android/settings/network/ApnEditor;->sNotSet:Ljava/lang/String;
+    move-result-object v1
 
-    const-string v0, "apn_name"
+    sput-object v1, Lcom/android/settings/network/ApnEditor;->sNotSet:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_name"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mName:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_apn"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mName:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_apn"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mApn:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_http_proxy"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mApn:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_http_proxy"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mProxy:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_http_port"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mProxy:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_http_port"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mPort:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_user"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mPort:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_user"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mUser:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_server"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mUser:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_server"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mServer:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_password"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mServer:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_password"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mPassword:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_mms_proxy"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mPassword:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_mms_proxy"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMmsProxy:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_mms_port"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMmsProxy:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_mms_port"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMmsPort:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_mmsc"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMmsPort:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_mmsc"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMmsc:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_mcc"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMmsc:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_mcc"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMcc:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_mnc"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMcc:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_mnc"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMnc:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "apn_type"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMnc:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "apn_type"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
-    check-cast v0, Landroidx/preference/EditTextPreference;
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mApnType:Landroidx/preference/EditTextPreference;
+    check-cast v1, Landroidx/preference/EditTextPreference;
 
-    const-string v0, "auth_type"
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mApnType:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    const-string v1, "auth_type"
 
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/ListPreference;
-
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mAuthType:Landroidx/preference/ListPreference;
-
-    const-string v0, "apn_protocol"
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/ListPreference;
-
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mProtocol:Landroidx/preference/ListPreference;
-
-    const-string v0, "apn_roaming_protocol"
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/ListPreference;
-
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mRoamingProtocol:Landroidx/preference/ListPreference;
-
-    const-string v0, "carrier_enabled"
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/SwitchPreference;
-
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mCarrierEnabled:Landroidx/preference/SwitchPreference;
-
-    const-string v0, "bearer_multi"
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/preference/MultiSelectListPreference;
-
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mBearerMulti:Landroidx/preference/MultiSelectListPreference;
-
-    iget-object v0, p0, Lcom/android/settings/network/ApnEditor;->mBearerMulti:Landroidx/preference/MultiSelectListPreference;
-
-    const v1, 0x7f120616
-
-    invoke-virtual {v0, v1}, Landroidx/preference/MultiSelectListPreference;->setPositiveButtonText(I)V
-
-    iget-object v0, p0, Lcom/android/settings/network/ApnEditor;->mBearerMulti:Landroidx/preference/MultiSelectListPreference;
-
-    const v1, 0x7f120611
-
-    invoke-virtual {v0, v1}, Landroidx/preference/MultiSelectListPreference;->setNegativeButtonText(I)V
-
-    const-string v0, "mvno_type"
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v1
 
     check-cast v1, Landroidx/preference/ListPreference;
 
-    iput-object v1, p0, Lcom/android/settings/network/ApnEditor;->mMvnoType:Landroidx/preference/ListPreference;
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mAuthType:Landroidx/preference/ListPreference;
 
-    const-string v1, "mvno_match_data"
+    const-string v1, "apn_protocol"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/preference/ListPreference;
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mProtocol:Landroidx/preference/ListPreference;
+
+    const-string v1, "apn_roaming_protocol"
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/preference/ListPreference;
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mRoamingProtocol:Landroidx/preference/ListPreference;
+
+    const-string v1, "carrier_enabled"
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/preference/SwitchPreference;
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mCarrierEnabled:Landroidx/preference/SwitchPreference;
+
+    const-string v1, "bearer_multi"
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/preference/MultiSelectListPreference;
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mBearerMulti:Landroidx/preference/MultiSelectListPreference;
+
+    iget-object v1, v0, Lcom/android/settings/network/ApnEditor;->mBearerMulti:Landroidx/preference/MultiSelectListPreference;
+
+    const v2, 0x7f120616
+
+    invoke-virtual {v1, v2}, Landroidx/preference/MultiSelectListPreference;->setPositiveButtonText(I)V
+
+    iget-object v1, v0, Lcom/android/settings/network/ApnEditor;->mBearerMulti:Landroidx/preference/MultiSelectListPreference;
+
+    const v2, 0x7f120611
+
+    invoke-virtual {v1, v2}, Landroidx/preference/MultiSelectListPreference;->setNegativeButtonText(I)V
+
+    const-string v1, "mvno_type"
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v2
 
-    check-cast v2, Landroidx/preference/EditTextPreference;
+    check-cast v2, Landroidx/preference/ListPreference;
 
-    iput-object v2, p0, Lcom/android/settings/network/ApnEditor;->mMvnoMatchData:Landroidx/preference/EditTextPreference;
+    iput-object v2, v0, Lcom/android/settings/network/ApnEditor;->mMvnoType:Landroidx/preference/ListPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->getIntent()Landroid/content/Intent;
+    const-string v2, "mvno_match_data"
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lcom/android/settings/network/ApnEditor;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v3
 
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    check-cast v3, Landroidx/preference/EditTextPreference;
 
-    move-result v4
+    iput-object v3, v0, Lcom/android/settings/network/ApnEditor;->mMvnoMatchData:Landroidx/preference/EditTextPreference;
 
-    if-eqz v4, :cond_0
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->getIntent()Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->finish()V
 
     return-void
 
     :cond_0
-    const/4 v4, -0x1
+    const/4 v5, -0x1
 
-    const-string v5, "sub_id"
+    const-string v6, "sub_id"
 
-    invoke-virtual {v2, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v3, v6, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v4
+    move-result v5
 
-    iput v4, p0, Lcom/android/settings/network/ApnEditor;->mSubId:I
-
-    const/4 v4, 0x0
-
-    iput-boolean v4, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApn:Z
+    iput v5, v0, Lcom/android/settings/network/ApnEditor;->mSubId:I
 
     const/4 v5, 0x0
 
-    iput-object v5, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+    iput-boolean v5, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApn:Z
 
-    iput-object v5, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
+    const/4 v6, 0x0
+
+    iput-object v6, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+
+    iput-object v6, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
 
     nop
 
-    const-string v5, "carrier_config"
+    const-string v7, "carrier_config"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/network/ApnEditor;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/telephony/CarrierConfigManager;
-
-    if-eqz v5, :cond_2
-
-    iget v6, p0, Lcom/android/settings/network/ApnEditor;->mSubId:I
-
-    invoke-virtual {v5, v6}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_2
-
-    const-string v7, "read_only_apn_types_string_array"
-
-    invoke-virtual {v6, v7}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v0, v7}, Lcom/android/settings/network/ApnEditor;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v7
 
-    iput-object v7, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+    check-cast v7, Landroid/telephony/CarrierConfigManager;
 
-    iget-object v7, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+    if-eqz v7, :cond_2
 
-    invoke-static {v7}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
+    iget v8, v0, Lcom/android/settings/network/ApnEditor;->mSubId:I
 
-    move-result v7
+    invoke-virtual {v7, v8}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
 
-    if-nez v7, :cond_1
+    move-result-object v8
 
-    iget-object v7, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+    if-eqz v8, :cond_2
 
-    array-length v8, v7
+    const-string v9, "read_only_apn_types_string_array"
 
-    move v9, v4
+    invoke-virtual {v8, v9}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v9
+
+    iput-object v9, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+
+    iget-object v9, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+
+    invoke-static {v9}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_1
+
+    iget-object v9, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+
+    array-length v10, v9
+
+    move v11, v5
 
     :goto_0
-    if-ge v9, v8, :cond_1
+    if-ge v11, v10, :cond_1
 
-    aget-object v10, v7, v9
+    aget-object v12, v9, v11
 
-    sget-object v11, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
+    sget-object v13, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
 
-    new-instance v12, Ljava/lang/StringBuilder;
+    new-instance v14, Ljava/lang/StringBuilder;
 
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v13, "onCreate: read only APN type: "
+    const-string v15, "onCreate: read only APN type: "
 
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v14
 
-    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
     :cond_1
-    const-string v7, "read_only_apn_fields_string_array"
+    const-string v9, "read_only_apn_fields_string_array"
 
-    invoke-virtual {v6, v7}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v8, v9}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    iput-object v7, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
+    iput-object v9, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
 
     :cond_2
-    const/4 v6, 0x0
+    const/4 v8, 0x0
 
-    const-string v7, "android.intent.action.EDIT"
+    const-string v9, "android.intent.action.EDIT"
 
-    invoke-virtual {v3, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v9
 
-    const-string v8, "android.intent.action.INSERT"
+    const-string v10, "android.intent.action.INSERT"
 
-    const/4 v9, 0x1
+    const/4 v11, 0x1
 
-    if-eqz v7, :cond_3
+    if-eqz v9, :cond_3
 
-    invoke-virtual {v2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    invoke-virtual {v3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v6
+    move-result-object v8
 
-    sget-object v0, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
+    sget-object v1, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
-    invoke-virtual {v6, v0}, Landroid/net/Uri;->isPathPrefixMatch(Landroid/net/Uri;)Z
+    invoke-virtual {v8, v1}, Landroid/net/Uri;->isPathPrefixMatch(Landroid/net/Uri;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_5
 
-    sget-object v0, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Edit request not for carrier table. Uri: "
+    const-string v5, "Edit request not for carrier table. Uri: "
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->finish()V
 
     return-void
 
     :cond_3
-    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_10
+    if-eqz v9, :cond_10
 
-    invoke-virtual {v2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    invoke-virtual {v3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v7
+    move-result-object v9
 
-    iput-object v7, p0, Lcom/android/settings/network/ApnEditor;->mCarrierUri:Landroid/net/Uri;
+    iput-object v9, v0, Lcom/android/settings/network/ApnEditor;->mCarrierUri:Landroid/net/Uri;
 
-    iget-object v7, p0, Lcom/android/settings/network/ApnEditor;->mCarrierUri:Landroid/net/Uri;
+    iget-object v9, v0, Lcom/android/settings/network/ApnEditor;->mCarrierUri:Landroid/net/Uri;
 
-    sget-object v10, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
+    sget-object v12, Landroid/provider/Telephony$Carriers;->CONTENT_URI:Landroid/net/Uri;
 
-    invoke-virtual {v7, v10}, Landroid/net/Uri;->isPathPrefixMatch(Landroid/net/Uri;)Z
+    invoke-virtual {v9, v12}, Landroid/net/Uri;->isPathPrefixMatch(Landroid/net/Uri;)Z
 
-    move-result v7
+    move-result v9
 
-    if-nez v7, :cond_4
+    if-nez v9, :cond_4
 
-    sget-object v0, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
+    sget-object v1, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "Insert request not for carrier table. Uri: "
+    const-string v5, "Insert request not for carrier table. Uri: "
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/settings/network/ApnEditor;->mCarrierUri:Landroid/net/Uri;
+    iget-object v5, v0, Lcom/android/settings/network/ApnEditor;->mCarrierUri:Landroid/net/Uri;
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->finish()V
 
     return-void
 
     :cond_4
-    iput-boolean v9, p0, Lcom/android/settings/network/ApnEditor;->mNewApn:Z
+    iput-boolean v11, v0, Lcom/android/settings/network/ApnEditor;->mNewApn:Z
 
-    invoke-virtual {v2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMvnoTypeStr:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMvnoTypeStr:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mMvnoMatchDataStr:Ljava/lang/String;
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mMvnoMatchDataStr:Ljava/lang/String;
 
     :cond_5
-    if-eqz v6, :cond_6
+    iput-object v6, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/network/ApnEditor;->getApnDataFromUri(Landroid/net/Uri;)Lcom/android/settings/network/ApnEditor$ApnData;
+    if-eqz v8, :cond_6
 
-    move-result-object v0
+    invoke-virtual {v0, v8}, Lcom/android/settings/network/ApnEditor;->getApnDataFromUri(Landroid/net/Uri;)Lcom/android/settings/network/ApnEditor$ApnData;
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+
+    :cond_6
+    iget-object v1, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+
+    if-nez v1, :cond_7
+
+    new-instance v1, Lcom/android/settings/network/ApnEditor$ApnData;
+
+    sget-object v2, Lcom/android/settings/network/ApnEditor;->sProjection:[Ljava/lang/String;
+
+    array-length v2, v2
+
+    invoke-direct {v1, v2}, Lcom/android/settings/network/ApnEditor$ApnData;-><init>(I)V
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+
+    invoke-virtual {v4, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->setDefaultData()V
+
+    :cond_7
+    const-string v1, "phone"
+
+    invoke-virtual {v0, v1}, Lcom/android/settings/network/ApnEditor;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telephony/TelephonyManager;
+
+    iput-object v1, v0, Lcom/android/settings/network/ApnEditor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    iget-object v1, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+
+    const/16 v2, 0x17
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v2, v6}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(ILjava/lang/Integer;)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    if-ne v1, v11, :cond_8
+
+    move v1, v11
 
     goto :goto_1
 
-    :cond_6
-    new-instance v0, Lcom/android/settings/network/ApnEditor$ApnData;
+    :cond_8
+    move v1, v5
 
-    sget-object v1, Lcom/android/settings/network/ApnEditor;->sProjection:[Ljava/lang/String;
-
-    array-length v1, v1
-
-    invoke-direct {v0, v1}, Lcom/android/settings/network/ApnEditor$ApnData;-><init>(I)V
-
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
-
-    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->setDefaultData()V
-
-    :cond_7
     :goto_1
-    const-string v0, "phone"
+    sget-object v2, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnEditor;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    check-cast v0, Landroid/telephony/TelephonyManager;
+    const-string v9, "onCreate: EDITED "
 
-    iput-object v0, p0, Lcom/android/settings/network/ApnEditor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x17
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v6
 
-    move-result-object v7
+    invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0, v1, v7}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(ILjava/lang/Integer;)Ljava/lang/Integer;
+    if-nez v1, :cond_a
 
-    move-result-object v0
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    const/16 v6, 0x18
 
-    move-result v0
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-ne v0, v9, :cond_8
+    move-result-object v9
 
-    move v0, v9
+    invoke-virtual {v2, v6, v9}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(ILjava/lang/Integer;)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
+
+    iget-object v6, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+
+    const/16 v9, 0xf
+
+    invoke-virtual {v6, v9}, Lcom/android/settings/network/ApnEditor$ApnData;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v0, v2, v6}, Lcom/android/settings/network/ApnEditor;->apnTypesMatch([Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_9
+
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
+
+    const/16 v6, 0x1a
+
+    invoke-virtual {v2, v6}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-ne v2, v11, :cond_a
+
+    :cond_9
+    sget-object v2, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
+
+    const-string v6, "onCreate: apnTypesMatch; read-only APN"
+
+    invoke-static {v2, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput-boolean v11, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApn:Z
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->disableAllFields()V
 
     goto :goto_2
 
-    :cond_8
-    move v0, v4
+    :cond_a
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
 
+    invoke-static {v2}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Lcom/android/settings/network/ApnEditor;->disableFields([Ljava/lang/String;)V
+
+    :cond_b
     :goto_2
-    sget-object v1, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    const/16 v6, 0x19
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string v8, "onCreate: EDITED "
+    move-result-object v9
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6, v9}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(ILjava/lang/Integer;)Ljava/lang/Integer;
 
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object v7
+    move-result v2
 
-    invoke-static {v1, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eq v2, v11, :cond_c
 
-    if-nez v0, :cond_a
-
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
-
-    const/16 v7, 0x18
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-virtual {v1, v7, v8}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(ILjava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnTypes:[Ljava/lang/String;
-
-    iget-object v7, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
-
-    const/16 v8, 0xf
-
-    invoke-virtual {v7, v8}, Lcom/android/settings/network/ApnEditor$ApnData;->getString(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {p0, v1, v7}, Lcom/android/settings/network/ApnEditor;->apnTypesMatch([Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
-
-    const/16 v7, 0x1a
-
-    invoke-virtual {v1, v7}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-ne v1, v9, :cond_a
-
-    :cond_9
-    sget-object v1, Lcom/android/settings/network/ApnEditor;->TAG:Ljava/lang/String;
-
-    const-string v7, "onCreate: apnTypesMatch; read-only APN"
-
-    invoke-static {v1, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput-boolean v9, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApn:Z
-
-    invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->disableAllFields()V
+    move v2, v11
 
     goto :goto_3
 
-    :cond_a
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_b
-
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApnFields:[Ljava/lang/String;
-
-    invoke-direct {p0, v1}, Lcom/android/settings/network/ApnEditor;->disableFields([Ljava/lang/String;)V
-
-    :cond_b
-    :goto_3
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mApnData:Lcom/android/settings/network/ApnEditor$ApnData;
-
-    const/16 v7, 0x19
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    invoke-virtual {v1, v7, v8}, Lcom/android/settings/network/ApnEditor$ApnData;->getInteger(ILjava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-eq v1, v9, :cond_c
-
-    move v1, v9
-
-    goto :goto_4
-
     :cond_c
-    move v1, v4
+    move v2, v5
+
+    :goto_3
+    iput-boolean v2, v0, Lcom/android/settings/network/ApnEditor;->mDeletableApn:Z
+
+    const/4 v2, 0x0
 
     :goto_4
-    iput-boolean v1, p0, Lcom/android/settings/network/ApnEditor;->mDeletableApn:Z
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
-    const/4 v1, 0x0
+    move-result-object v6
 
-    :goto_5
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+    invoke-virtual {v6}, Landroidx/preference/PreferenceScreen;->getPreferenceCount()I
 
-    move-result-object v7
+    move-result v6
 
-    invoke-virtual {v7}, Landroidx/preference/PreferenceScreen;->getPreferenceCount()I
+    if-ge v2, v6, :cond_d
 
-    move-result v7
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
-    if-ge v1, v7, :cond_d
+    move-result-object v6
 
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
+    invoke-virtual {v6, v2}, Landroidx/preference/PreferenceScreen;->getPreference(I)Landroidx/preference/Preference;
 
-    move-result-object v7
+    move-result-object v6
 
-    invoke-virtual {v7, v1}, Landroidx/preference/PreferenceScreen;->getPreference(I)Landroidx/preference/Preference;
+    invoke-virtual {v6, v0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    move-result-object v7
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {v7, p0}, Landroidx/preference/Preference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_5
+    goto :goto_4
 
     :cond_d
     if-nez p1, :cond_e
 
-    move v1, v9
+    move v2, v11
 
-    goto :goto_6
+    goto :goto_5
 
     :cond_e
-    move v1, v4
+    move v2, v5
 
-    :goto_6
-    invoke-virtual {p0, v1}, Lcom/android/settings/network/ApnEditor;->fillUI(Z)V
+    :goto_5
+    invoke-virtual {v0, v2}, Lcom/android/settings/network/ApnEditor;->fillUI(Z)V
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_f
+    if-eqz v2, :cond_f
 
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->ACTION_FROM:Ljava/lang/String;
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->ACTION_FROM:Ljava/lang/String;
 
-    invoke-virtual {v2, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {v3, v2, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result v2
 
-    iput-boolean v1, p0, Lcom/android/settings/network/ApnEditor;->mIsFromHM:Z
+    iput-boolean v2, v0, Lcom/android/settings/network/ApnEditor;->mIsFromHM:Z
 
-    iget-boolean v1, p0, Lcom/android/settings/network/ApnEditor;->mIsFromHM:Z
+    iget-boolean v2, v0, Lcom/android/settings/network/ApnEditor;->mIsFromHM:Z
 
-    if-eqz v1, :cond_f
+    if-eqz v2, :cond_f
 
-    iput-boolean v4, p0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApn:Z
+    iput-boolean v5, v0, Lcom/android/settings/network/ApnEditor;->mReadOnlyApn:Z
 
-    invoke-direct {p0}, Lcom/android/settings/network/ApnEditor;->disableAllFields()V
+    invoke-direct/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->disableAllFields()V
 
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mApn:Landroidx/preference/EditTextPreference;
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mApn:Landroidx/preference/EditTextPreference;
 
-    invoke-virtual {v1, v9}, Landroidx/preference/EditTextPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v11}, Landroidx/preference/EditTextPreference;->setEnabled(Z)V
 
-    iget-object v1, p0, Lcom/android/settings/network/ApnEditor;->mProtocol:Landroidx/preference/ListPreference;
+    iget-object v2, v0, Lcom/android/settings/network/ApnEditor;->mProtocol:Landroidx/preference/ListPreference;
 
-    invoke-virtual {v1, v9}, Landroidx/preference/ListPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v11}, Landroidx/preference/ListPreference;->setEnabled(Z)V
 
     :cond_f
     return-void
 
     :cond_10
-    invoke-virtual {p0}, Lcom/android/settings/network/ApnEditor;->finish()V
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/network/ApnEditor;->finish()V
 
     return-void
 .end method

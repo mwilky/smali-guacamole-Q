@@ -150,7 +150,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300c3
+    const v1, 0x7f0300c5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -164,7 +164,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300c5
+    const v1, 0x7f0300c7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -218,7 +218,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300c4
+    const v1, 0x7f0300c6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -470,7 +470,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030083
+    const v1, 0x7f030085
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -484,7 +484,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030087
+    const v1, 0x7f030089
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -501,7 +501,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030084
+    const v1, 0x7f030086
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -515,7 +515,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030088
+    const v1, 0x7f03008a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1043,7 +1043,7 @@
 
     iget-object v2, p0, Lcom/oneplus/settings/quickpay/QuickPaySettings;->mActivity:Lcom/android/settings/SettingsActivity;
 
-    const v3, 0x7f120f94
+    const v3, 0x7f120f95
 
     invoke-virtual {v2, v3}, Lcom/android/settings/SettingsActivity;->getString(I)Ljava/lang/String;
 
@@ -1057,7 +1057,7 @@
 
     iget-object v2, p0, Lcom/oneplus/settings/quickpay/QuickPaySettings;->mActivity:Lcom/android/settings/SettingsActivity;
 
-    const v3, 0x7f120f93
+    const v3, 0x7f120f94
 
     invoke-virtual {v2, v3}, Lcom/android/settings/SettingsActivity;->getString(I)Ljava/lang/String;
 
@@ -1705,7 +1705,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300c4
+    const v1, 0x7f0300c6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

@@ -318,7 +318,7 @@ Il vous suffit de rapprocher les appareil (en les plaçant dos à dos), puis d'a
     <string name="aod_clock_default">Par défaut</string>
     <string name="aod_clock_mcl">McLaren</string>
     <string name="aod_clock_minimalism">Minimalisme</string>
-    <string name="aod_clock_none">Aucun</string>
+    <string name="aod_clock_none">Aucune</string>
     <string name="aod_clock_select_style_text">"Sélectionner le style de l'horloge"</string>
     <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Bleu</string>
@@ -969,7 +969,7 @@ Bluetooth"</string>
     <string name="bugreport_in_power_summary">Afficher un bouton dans le menu de démarrage permettant de créer un rapport de bug</string>
     <string name="build_number">Numéro de build</string>
     <string name="built_in_app_updates_summary">"Autoriser OnePlus à rechercher des mises à jour d'applications intégrées pour une meilleure stabilité des applications"</string>
-    <string name="built_in_app_updates_title">"Mises à jour d'applications intégrées"</string>
+    <string name="built_in_app_updates_title">"Mises à jour de l'application intégrées"</string>
     <string name="builtin_keyboard_settings_summary">Paramètres du clavier physique</string>
     <string name="builtin_keyboard_settings_title">Clavier physique</string>
     <string name="button_confirm_convert_fbe">Effacer et chiffrer</string>
@@ -1775,6 +1775,7 @@ Pour en savoir plus, contactez l'administrateur de votre entreprise."</string>
     <string name="failed_to_open_app_settings_toast">"Échec de l'ouverture des paramètres de l'application %1$s."</string>
     <string name="fcc_equipment_id">"ID de l'équipement"</string>
     <string name="feature_flags_dashboard_title">Fonctionnalités expérimentales</string>
+    <string name="feature_not_support_split_screen">"Cette fonction n'est pas prise en charge en écran partagé."</string>
     <string name="filter">Filtrer</string>
     <string name="filter_all_apps">Toutes les applis</string>
     <string name="filter_apps_all">Toutes les applications</string>
@@ -2068,7 +2069,7 @@ Vous pouvez modifier cette option ultérieurement dans Paramètres > Applicatio
     <string name="keywords_date_and_time">horloge, militaire</string>
     <string name="keywords_default_apps">applications, par défaut</string>
     <string name="keywords_default_browser">par défaut, navigateur par défaut</string>
-    <string name="keywords_default_links">par défaut</string>
+    <string name="keywords_default_links">Par défaut</string>
     <string name="keywords_default_payment_app">paiement, par défaut</string>
     <string name="keywords_default_phone_app">téléphone, composeur, par défaut</string>
     <string name="keywords_device_feedback">bug</string>
@@ -2888,12 +2889,12 @@ L'application pourra aussi activer ou désactiver le mode Ne pas déranger, et m
     <string name="oneplus_always_show_navigation_bar_summary">Toujours afficher la barre de navigation</string>
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_summary">"Évitez d'utiliser accidentellement l'écran tactile et les opérations d'empreintes digitales lorsque le téléphone est dans votre poche"</string>
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Mode poche</string>
-    <string name="oneplus_aod_smart_display_calendar_event">Événement du calendrier</string>
-    <string name="oneplus_aod_smart_display_music_info">Lecteur audio</string>
-    <string name="oneplus_aod_smart_display_title">Affichage intelligent</string>
+    <string name="oneplus_aod_smart_display_calendar_event">"Événement de l'Agenda"</string>
+    <string name="oneplus_aod_smart_display_music_info">Lecteur multimédia</string>
+    <string name="oneplus_aod_smart_display_title">Informations contextuelles</string>
     <string name="oneplus_app_alipay">Alipay</string>
-    <string name="oneplus_app_display_compatibility">Mode compatibilité</string>
-    <string name="oneplus_app_display_fullscreen">Mode Plein écran</string>
+    <string name="oneplus_app_display_compatibility">Mode de compatibilité</string>
+    <string name="oneplus_app_display_fullscreen">Mode plein écran</string>
     <string name="oneplus_app_display_fullscreen_summary">"Si le contenu de l'application est couvert par la zone de l'encoche, veuillez basculer en mode par défaut"</string>
     <string name="oneplus_app_display_fullscreen_title">Applications à afficher en plein écran</string>
     <string name="oneplus_app_list">Liste des applications</string>
@@ -2908,7 +2909,7 @@ L'application pourra aussi activer ou désactiver le mode Ne pas déranger, et m
     <string name="oneplus_app_network_settings">"Contrôle d'utilisation des données"</string>
     <string name="oneplus_app_notification_allow_led">LED activée</string>
     <string name="oneplus_app_notification_not_allow_led">LED désactivée</string>
-    <string name="oneplus_app_ops_title">"Autorisations d'applications"</string>
+    <string name="oneplus_app_ops_title">"Autorisations de l'appli"</string>
     <string name="oneplus_app_uninstall_remark">Veuillez installer les applications de paiement ci-dessus pour utiliser le paiement rapide</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">"Notifications d'appel, applications parralèles, permissions"</string>
@@ -2928,7 +2929,7 @@ L'application pourra aussi activer ou désactiver le mode Ne pas déranger, et m
     <string name="oneplus_auto_disconect_the_ap">"Le Point d'accès se désactive automatiquement au bout de 5 minutes en l'absence de connexion de périphérique."</string>
     <string name="oneplus_auto_open_app_none">Aucune</string>
     <string name="oneplus_auto_open_app_other_applications">AUTRES APPLICATIONS</string>
-    <string name="oneplus_auto_open_app_recommended">RECOMMANDÉE</string>
+    <string name="oneplus_auto_open_app_recommended">RECOMMANDÉ</string>
     <string name="oneplus_auto_open_specified_app">Ouvrez automatiquement l’application indiquée</string>
     <string name="oneplus_auto_play">Lecture automatique</string>
     <string name="oneplus_auto_play_summary">Reprend automatiquement la lecture de la musique quand des écouteurs sont connectés</string>
@@ -3004,7 +3005,8 @@ L'économiseur de batterie se désactive automatiquement quand votre téléphone
     <string name="oneplus_cpu">PROCESSEUR</string>
     <string name="oneplus_custom_time">Plage horaire personnalisée</string>
     <string name="oneplus_customization">Personnalisation de la barre de navigation</string>
-    <string name="oneplus_customization_summary">Appui long, double tapotage</string>
+    <string name="oneplus_customization_summary">Appui long, double appui</string>
+    <string name="oneplus_customization_summary_hide_navbar">Appui long, double appui et masquer la barre de navigation</string>
     <string name="oneplus_data_usage_control_title">"Contrôle d'utilisation des données"</string>
     <string name="oneplus_dc_dimming_summary">"La gradation DC réglera la luminosité de l'écran en changeant son alimentation. Une fois activée, cela réduira le scintillement de l'écran lors d'une faible luminosité. Néanmoins, cela risque de mener à des couleurs d'affichage inhabituelles."</string>
     <string name="oneplus_dc_dimming_title">Gradation DC</string>
@@ -3108,7 +3110,7 @@ Attention : la reconnaissance faciale est moins sécurisée qu'une empreinte dig
     <string name="oneplus_file_not_exist">"Le fichier n'existe pas !"</string>
     <string name="oneplus_finger_input_error_tips">"Erreur lors de l'enregistrement de l'empreinte digitale. Veuillez réessayer"</string>
     <string name="oneplus_finger_input_fail_tips">Échec de la saisie. Veuillez ajuster la position et réessayer</string>
-    <string name="oneplus_finger_print_anim_save">ENREGISTRER</string>
+    <string name="oneplus_finger_print_anim_save">ÉCONOMISER</string>
     <string name="oneplus_fingerprint">Empreinte digitale</string>
     <string name="oneplus_fingerprint_acquired_imager_dirty">"La zone d'identification d'empreinte est sale. Veuillez l'essuyer et essayer à nouveau."</string>
     <string name="oneplus_fingerprint_acquired_partial">"Empreinte digitale partielle détectée. Veuillez couvrir complètement la zone d'identification d'empreinte."</string>
@@ -3169,7 +3171,7 @@ Vous pouvez les désactiver en réactivant la barre de navigation dans les param
 Pour vous rendre à tout moment sur l'écran d'accueil, balayez vers le haut depuis le centre du bas de l'écran."</string>
     <string name="oneplus_fullscreen_gesture_guide_multitask">"Pour les applications récentes, balayez vers le haut depuis le bas de l'écran et marquez une pause."</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Les gestes de navigation seront activés</string>
-    <string name="oneplus_fullscreen_home_guide_summary">"Balayez vers le haut depuis le bas de l'écran"</string>
+    <string name="oneplus_fullscreen_home_guide_summary">"Balayez vers le haut depuis la partie inférieure de l'écran"</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">"Balayez vers le haut depuis le centre de la partie inférieure de l'écran"</string>
     <string name="oneplus_fullscreen_home_guide_title">Accueil</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">"Les gestes de navigation peuvent toujours être déclenchés depuis le bas de l'écran, veuillez balayer depuis la gauche ou la droite pour revenir en arrière"</string>
@@ -3182,7 +3184,7 @@ Pour vous rendre à tout moment sur l'écran d'accueil, balayez vers le haut dep
     <string name="oneplus_fullscreen_previous_app_guide_title">Basculer entre les applications récentes</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">"Balayez vers le haut depuis le bas de l'écran, puis déplacez-le vivement vers la gauche ou la droite"</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Basculer entre les applications récentes</string>
-    <string name="oneplus_fullscreen_recent_guide_summary">"Balayez vers le haut depuis le bord inférieur de l'écran, puis attendez"</string>
+    <string name="oneplus_fullscreen_recent_guide_summary">"Balayez vers le haut de l'écran puis attendez"</string>
     <string name="oneplus_fullscreen_recent_guide_summary_deprecated">"Balayez vers le haut depuis le centre de la partie inférieure de l'écran puis attendez"</string>
     <string name="oneplus_fullscreen_recent_guide_title">Applications récentes</string>
     <string name="oneplus_functional_terms">CONDITIONS GÉNÉRALES</string>
@@ -3217,8 +3219,8 @@ Pour vous rendre à tout moment sur l'écran d'accueil, balayez vers le haut dep
     <string name="oneplus_gesture_of_answer_call_summary">"Répondez automatiquement aux appels entrants simplement en portant le téléphone à l'oreille"</string>
     <string name="oneplus_gesture_of_answer_call_title">"Répondez d'un geste aux appels"</string>
     <string name="oneplus_gesture_start_learning">"Démarrer l'apprentissage"</string>
-    <string name="oneplus_gesture_to_answer_summary">Répondez automatiquement aux appels entrants en soulevant le téléphone à votre oreille</string>
-    <string name="oneplus_gesture_to_answer_title">Augmenter pour répondre</string>
+    <string name="oneplus_gesture_to_answer_summary">"Répondez automatiquement aux appels entrants simplement en portant le téléphone à l'oreille"</string>
+    <string name="oneplus_gesture_to_answer_title">Soulever pour répondre</string>
     <string name="oneplus_gesture_to_control_call_info">Commandez automatiquement les appels en soulevant le téléphone à votre oreille</string>
     <string name="oneplus_gesture_to_control_calls_summary">"Répondre automatiquement aux appels ou basculer vers l'écouteur au moyen d'un geste"</string>
     <string name="oneplus_gesture_to_control_calls_title">Soulever pour répondre/basculer</string>
@@ -3264,6 +3266,10 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_intelligently_select_best_wifi">Sélectionnez intelligemment le meilleur Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Sélectionnez et connectez intelligemment les meilleurs réseaux Wi‑Fi en détectant et analysant la connectivité et la puissance du signal des réseaux Wi‑Fi</string>
     <string name="oneplus_intensely">Fortes</string>
+    <string name="oneplus_is_turn_on_feature">Souhaitez-vous vraiment activer cette fonctionnalité ?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Une fois activée, les situations suivantes risquent de se produire de temps en temps :
+1.Certaines zones de l'écran ne s'affichent pas correctement
+2.La luminosité adaptative ne fonctionne pas correctement"</string>
     <string name="oneplus_lab_dislike">"Je n'aime pas"</string>
     <string name="oneplus_lab_features">FONCTIONNALITÉS LAB.</string>
     <string name="oneplus_lab_feedback_toast">Merci pour vos retours!</string>
@@ -3361,7 +3367,7 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_notification_channel_summary_low">Les moins importantes sans aucun son ni vibration</string>
     <string name="oneplus_notification_dialog_never_mode">Jamais</string>
     <string name="oneplus_notification_dialog_ringtone">Sonnerie des notifications</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Uniquement en mode sonnerie</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Toujours</string>
     <string name="oneplus_notification_dots">Points de notification</string>
     <string name="oneplus_notification_instrucitons">"Tutoriel d'utilisateur"</string>
@@ -3419,7 +3425,7 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_preference_settings_custom_time">Basculement automatique</string>
     <string name="oneplus_preference_settings_manual_open">État</string>
     <string name="oneplus_preference_settings_turn_off_time">À</string>
-    <string name="oneplus_preference_settings_turn_on">Activer la fonction Ne pas déranger</string>
+    <string name="oneplus_preference_settings_turn_on">Activer Ne pas déranger</string>
     <string name="oneplus_preference_settings_turn_on_time">De</string>
     <string name="oneplus_prior_to_use_you_need_to">Avant utilisation, vous devez ：</string>
     <string name="oneplus_privacy_policy">Politique de confidentialité</string>
@@ -3448,7 +3454,7 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_quick_turn_on_assistant_app_summary">"Maintenez enfoncée la touche d'alimentation pendant 0,5 s pour activer l'application d'assistance, et pendant 3 s pour mettre hors tension le téléphone."</string>
     <string name="oneplus_quick_turn_on_camera">"Activation rapide de l'appareil photo"</string>
     <string name="oneplus_quickpay">Paiement rapide</string>
-    <string name="oneplus_quickpay_confirm_changehomebutton">"Voulez-vous vraiment changer l'action pression longue sur le bouton Accueil de \"%1$s\" à \"Paiement rapide\" ?"</string>
+    <string name="oneplus_quickpay_confirm_changehomebutton">"Voulez-vous vraiment changer l'action pression longue sur le bouton Accueil de \"%1$s\" à \"Jeu rapide\" ?"</string>
     <string name="oneplus_quickpay_entry_summary">Appuyez et maintenez le bouton Accueil pour lancer le paiement rapide</string>
     <string name="oneplus_quickpay_instructions">Instructions</string>
     <string name="oneplus_quickpay_lock_swtch_summary">Appuyez et maintenez le bouton Accueil avec un doigt enregistré pour lancer le paiement rapide quand le téléphone est verrouillé.</string>
@@ -3493,7 +3499,7 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_recognized_bluetooth_car_kits">Véhicule Bluetooth détecté</string>
     <string name="oneplus_recognized_bluetooth_car_kits_no_devices">Aucun véhicule Bluetooth, vous pouvez ajouter manuellement un nouvel appareil ci-dessous</string>
     <string name="oneplus_recommended_opening">Recommandé</string>
-    <string name="oneplus_reenroll_fingerprint_tips">"Veuillez entrer à nouveau votre empreinte digitale après le remplacement du film de protection sur le téléphoneafin de garantir la précision de l'empreinte"</string>
+    <string name="oneplus_reenroll_fingerprint_tips">"Veuillez entrer à nouveau votre empreinte digitale après le remplacement du film de protection du téléphone afin de garantir la précision de l'empreinte"</string>
     <string name="oneplus_regulatory_information">Vérification</string>
     <string name="oneplus_remove">SUPPRIMER</string>
     <string name="oneplus_rename_fingerprint_list">"Renommer l'empreinte digitale"</string>
@@ -3526,10 +3532,10 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_screen_refresh_rate_auto_summary">Ultrafluide à une fréquence d’actualisation plus élevée</string>
     <string name="oneplus_screen_refresh_rate_info">"Plus la fréquence d’actualisation de l'écran est élevée, plus l'expérience d'affichage est fluide. À 90 Hz, la fréquence d’actualisation sera modifiée de manière dynamique selon la situation."</string>
     <string name="oneplus_screen_resolution_adjust">Résolution</string>
-    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent affichage, consommation plus faible (2 340 × 1 080)</string>
+    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent display, lower power consumption (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">Commutation automatique</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">Commuter automatiquement sur la résolution appropriée</string>
-    <string name="oneplus_screen_resolution_adjust_other_summary">Netteté maximale, consomation accrue (3 120 × 1 440)</string>
+    <string name="oneplus_screen_resolution_adjust_other_summary">Maximum clarity, increased power consumption (3120×1440)</string>
     <string name="oneplus_search_keyword_about_settings">"nom de l'appareil, version Android, numéro de fabrication, modèle, CPU, mémoire, RAM, ROM, appareil photo, pixel, écran"</string>
     <string name="oneplus_search_keyword_accent_color">couleur</string>
     <string name="oneplus_search_keyword_app_lock">verrouiller, code PIN, mots de passe</string>
@@ -3568,10 +3574,11 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ne pas déranger’, interrompre, interruption, pause, mode</string>
     <string name="oneplus_search_keyword_swap_navkeys">permuter les boutons</string>
     <string name="oneplus_search_keyword_switch">transférer, migration de données</string>
-    <string name="oneplus_search_keyword_theme_settings">"PERSONNALISATION DE L'ÉCRAN DE VERROUILLAGE, fonds d'écran, style de l'horloge, animation d'empreinte digitale, Horizon light, PERSONNALISATION SYSTÈME, couleur d'accentuation, forme, police, tonalité, package d'icônes"</string>
+    <string name="oneplus_search_keyword_theme_settings">"PERSONNALISATION DE L'ÉCRAN DE VERROUILLAGE, fonds d'écran, style d'Horloge, animation d'Empreinte digitale, Horizon Light, PERSONNALISATION SYSTÈME, couleur d'accentuation, forme, police, tonalité, pack d'icônes, lumière d'illumination, sombre nuancé et teintes dynamiques"</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">"PERSONNALISATION DE L'ÉCRAN DE VERROUILLAGE, fonds d'écran, style d'Horloge, animation Empreinte digitale, Horizon Light, PERSONNALISATION SYSTÈME, couleur d'accentuation, forme, police, tonalité, pack d'icônes, lumière d'illumination, sombre nuancé, teintes dynamiques et McLaren"</string>
     <string name="oneplus_search_keyword_three_screenshots">"capture d'écran"</string>
     <string name="oneplus_search_keyword_timer_boot" />
-    <string name="oneplus_search_keyword_user_experience">notifications, expérience, programme, amélioration</string>
+    <string name="oneplus_search_keyword_user_experience">notifications, experience, programme, amélioration</string>
     <string name="oneplus_search_keyword_wallpaper_settings">"fond d'écran, écran verrouillé"</string>
     <string name="oneplus_search_keyword_wifi_direct">direct, P2P, connexion</string>
     <string name="oneplus_search_keyword_wifi_display_settings_screen">diffuser</string>
@@ -3598,7 +3605,7 @@ Remarque :
     <string name="oneplus_select_fingerprint_animation_effect_3">Bande</string>
     <string name="oneplus_select_fingerprint_animation_effect_4">Cascade</string>
     <string name="oneplus_select_fingerprint_animation_effect_mcl">McLaren</string>
-    <string name="oneplus_select_fingerprint_animation_effect_none">Aucun</string>
+    <string name="oneplus_select_fingerprint_animation_effect_none">Aucune</string>
     <string name="oneplus_select_fingerprint_animation_effect_title">Sélectionnez l’effet d’animation des empreintes digitales</string>
     <string name="oneplus_service_messaging_summary">Autoriser OnePlus à fournir de rapides services de messagerie dans le Cloud pour vous garantir une expérience de produit optimisé</string>
     <string name="oneplus_service_messaging_title">OnePlus Service Messaging</string>
@@ -3632,7 +3639,7 @@ Remarque :
     <string name="oneplus_smart_wifi_connection">connexion Wi‑Fi intelligente</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">Sonnerie et vibration des SMS</string>
-    <string name="oneplus_snooze_options_title">Répéter les notifications de la zone masquée déroulante</string>
+    <string name="oneplus_snooze_options_title">Répéter les notifications de la zone masquée de notifications</string>
     <string name="oneplus_sound_and_vibrate">Sons et vibrations</string>
     <string name="oneplus_sound_settings_summary">Ne pas déranger, mode écouteurs</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3644,7 +3651,7 @@ Remarque :
     <string name="oneplus_suspension_notice">Supérieur</string>
     <string name="oneplus_suspension_notice_summary">Autoriser les applications à afficher des notifications supérieures</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">Commuter</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">La commutation de la résolution peut provoquer la fermeture de certaines applications en arrière-plan. Confirmez-vous la commutation ?</string>
     <string name="oneplus_switch_screen_lock_type">"Changement du type d'écran de verrouillage. Veuillez patienter..."</string>
     <string name="oneplus_system_data_summary">Y compris les infos de compte, contacts, données utilisateur</string>
@@ -3665,6 +3672,7 @@ Remarque :
     <string name="oneplus_theme_clock">"Style d'horloge"</string>
     <string name="oneplus_theme_clock_snake_action">"ACTIVER L'AFFICHAGE AMBIANT"</string>
     <string name="oneplus_theme_clock_snake_tip">"Cette fonctionnalité sera disponible lorsque l'affichage ambiant est activé"</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Annuler les modifications ?</string>
     <string name="oneplus_theme_drop_title">Quitter le mode retouche</string>
     <string name="oneplus_theme_entrance_summary">"Fonds d'écran, couleur d'accentuation, police, tonalité"</string>
@@ -3673,7 +3681,7 @@ Remarque :
     <string name="oneplus_theme_fingerprint_snake_action">ACTIVER LES EMPREINTES DIGITALES</string>
     <string name="oneplus_theme_fingerprint_snake_tip">"Cette fonctionnalité est disponible lors que la fonction d'empreinte digitale est activée"</string>
     <string name="oneplus_theme_font">Police</string>
-    <string name="oneplus_theme_font_content">Partage la meilleure technologie avec le monde, en étroite collaboration</string>
+    <string name="oneplus_theme_font_content">Partage la meilleure technologie avec le monde, main dans la main</string>
     <string name="oneplus_theme_icon_pack">"Pack d'icônes"</string>
     <string name="oneplus_theme_lock_screen_customization">"PERSONNALISATION DE L'ÉCRAN DE VERROUILLAGE"</string>
     <string name="oneplus_theme_preset">Thème prédéfini</string>
@@ -3681,7 +3689,8 @@ Remarque :
     <string name="oneplus_theme_preset_dark">Sombre nuancé</string>
     <string name="oneplus_theme_preset_light">"Lumière d'illumination"</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">"Des thèmes présélectionnés sont offerts avec une large gamme d'arrière-plans, de couleurs accentuées, de tonalités, etc."</string>
+    <string name="oneplus_theme_preset_summary">"Des thèmes présélectionnés sont disponibles avec une large gamme de couleurs d'accentuation, de tonalités, etc."</string>
+    <string name="oneplus_theme_preset_summary_tmp">"Des thèmes présélectionnés sont disponibles avec une large gamme de fonds d'écran, de couleurs d'accentuation, de tonalités, etc."</string>
     <string name="oneplus_theme_shape">Forme</string>
     <string name="oneplus_theme_shape_effect_round">Rond</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Rectangle carré</string>
@@ -3692,7 +3701,7 @@ Remarque :
     <string name="oneplus_theme_tone">Tonalité</string>
     <string name="oneplus_theme_tone_effect_color">En couleur</string>
     <string name="oneplus_theme_tone_effect_dark">Sombre</string>
-    <string name="oneplus_theme_tone_effect_light">Clair</string>
+    <string name="oneplus_theme_tone_effect_light">Légères</string>
     <string name="oneplus_theme_tone_effect_title">SÉLECTIONNER LA TONALITÉ</string>
     <string name="oneplus_theme_wallpaper">"Fonds d'écran"</string>
     <string name="oneplus_three_screenshots_enable_summary">"Faites glisser trois doigts sur l'écran pour prendre une capture"</string>
@@ -3708,13 +3717,13 @@ Remarque :
     <string name="oneplus_tools_summary_U30">Mode En jeu, mode Poche, marche/arrêt programmés</string>
     <string name="oneplus_tools_summary_no_gamingmode">"Verrouilleur d'applications, applications parallèles"</string>
     <string name="oneplus_tools_title">Utilitaires</string>
-    <string name="oneplus_top_level_accounts_summary">Compte OnePlus, autres comptes</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Applications par défaut, permissions</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">"Curseur d'alerte, barre de navigation et gestes"</string>
     <string name="oneplus_top_level_cloud_h2_summary">Synchroniser les données dans le Cloud, Rechercher mon téléphone</string>
     <string name="oneplus_top_level_cloud_o2_summary">Synchroniser les données dans le Cloud</string>
     <string name="oneplus_top_level_connected_summary">NFC, diffusion, appuyer et payer</string>
-    <string name="oneplus_top_level_display_summary">"Barre d'état, affichage ambiant, mode Nuit, mode lecture"</string>
+    <string name="oneplus_top_level_display_summary">"Barre d'état, affichage ambiant, mode nuit, mode lecture"</string>
     <string name="oneplus_top_level_network_summary">"Carte SIM, réseau mobile, usage de données, point d'accès"</string>
     <string name="oneplus_top_level_privacy_summary">Permissions, données personnelles</string>
     <string name="oneplus_top_level_security_dashboard_summary">"Empreinte digitale, reconnaissance faciale, appel d'urgence"</string>
@@ -3723,6 +3732,8 @@ Remarque :
     <string name="oneplus_top_level_system_summary">Langue et clavier, heure, réinitialisation, mises à jour système</string>
     <string name="oneplus_touch_vibrate">Vibration tactile</string>
     <string name="oneplus_turn_off_time">À</string>
+    <string name="oneplus_turn_on_feature_cancel">ANNULER</string>
+    <string name="oneplus_turn_on_feature_ok">ACTIVER</string>
     <string name="oneplus_turn_on_time">De</string>
     <string name="oneplus_uninstatll_multi_app_msg">"Toutes les données de l'application parallèle seront écrasées si vous la désinstallez. Voulez-vous désinstaller ?"</string>
     <string name="oneplus_uninstatll_multi_app_title">%1$s parallèle</string>
@@ -3740,12 +3751,12 @@ Remarque : la reconnaissance faciale peut être moins sécurisée qu'une emprei
     <string name="oneplus_vibrate_intensity">Intensité des vibrations</string>
     <string name="oneplus_vibrate_on_touch_intensity">Vibration en cas de tapotement</string>
     <string name="oneplus_vibrate_rhythm">Séquence de vibrations</string>
-    <string name="oneplus_vibrate_strength">Séquence et intensité de vibrationz</string>
+    <string name="oneplus_vibrate_strength">Séquence et intensité de vibrations</string>
     <string name="oneplus_vibration_settings_soc_tri_state">Vibrations</string>
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Désactiver les sons pour les appels et les notifications et définir sur vibrations uniquement, sauf pour les alarmes</string>
     <string name="oneplus_vibration_summary">"L'alarme sonne toujours"</string>
     <string name="oneplus_video_enhancer">Améliorateur de vidéo</string>
-    <string name="oneplus_video_enhancer_footer">Améliorez la couleur pendant la lecture de vidéos</string>
+    <string name="oneplus_video_enhancer_footer">Améliore les couleurs lors de la lecture des vidéos</string>
     <string name="oneplus_video_enhancer_summary">Améliore les couleurs lors de la lecture des vidéos</string>
     <string name="oneplus_volume_keys_adjust">Veuillez ajuster au moyen des boutons du volume</string>
     <string name="oneplus_volume_keys_adjust_media">Volume multimédia</string>
@@ -3785,10 +3796,11 @@ La configuration du réseau comme étant masqué ne change pas les paramètres d
     <string name="op_advanced_settings">Avancé</string>
     <string name="op_android_mode_cannot_change_color_accent">Le thème par défaut ne peut utiliser que le thème de couleur système</string>
     <string name="op_app_already_uninstalled">Désinstaller</string>
-    <string name="op_audio_settings">Egaliseur audio</string>
+    <string name="op_audio_settings">Tuner audio</string>
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">"Choisissez d'abord un écran de verrouillage de sauvegarde"</string>
     <string name="op_cloud_service_summary">Synchronisez vos contacts, notes, photos, etc.</string>
     <string name="op_cloud_service_title">Service Cloud</string>
     <string name="op_confirm_enable_oem_unlock_text">"ATTENTION : les caractéristiques de protection et de vérification de l'appareil, par exemple, le paiement par empreinte digitale et les clés DRM peuvent ne pas fonctionner lorsque l'appareil OEM est déverrouillé."</string>
@@ -3800,13 +3812,21 @@ La configuration du réseau comme étant masqué ne change pas les paramètres d
     <string name="op_default_apps_summary">Accueil, navigateur</string>
     <string name="op_default_luncher_title">"Application d'accueil"</string>
     <string name="op_dnd_summary">Ne pas déranger</string>
+    <string name="op_face_unlock_set_unlock_password">Déverouillage facial + mot de passe</string>
+    <string name="op_face_unlock_set_unlock_pattern">Déverouillage facial + motif</string>
+    <string name="op_face_unlock_set_unlock_pin">Déverouillage facial + code PIN</string>
+    <string name="op_face_unlock_skip_face">Continuer sans Déverrouillage facial</string>
     <string name="op_failed_to_get_data">Échec de la récupération des données</string>
     <string name="op_fetch_data_in_process">Chargement</string>
     <string name="op_fragment">Court</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">"Applications à consommation d'énergie élevée"</string>
     <string name="op_light_mode_title">Lumineux</string>
     <string name="op_linked_launch_summary">Gérer les applications qui peuvent être lancées en arrière-plan</string>
     <string name="op_linked_launch_title">"Auto-lancement d'applications"</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Pour utiliser le Déverrouillage facial, définissez le mot de passe</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Pour utiliser le Déverrouillage facial, définissez le motif</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Pour utiliser le Déverrouillage facial, définissez le code PIN</string>
     <string name="op_not_disturb">Préférences de Ne pas déranger</string>
     <string name="op_not_disturb_summary">"Mettre vos appels et vos notifications en sourdine et désactiver les vibrations, à l'exception des alarmes"</string>
     <string name="op_oneplus_roaming_summary">"Offre des services d'accès mondial à Internet"</string>
@@ -3830,7 +3850,7 @@ La configuration du réseau comme étant masqué ne change pas les paramètres d
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">"Localisez le capteur d'empreintes digitales sur le bouton accueil"</string>
     <string name="op_security_settings_title">Sécurité et empreinte digitale</string>
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
-    <string name="op_sim_cord">SIM et réseau</string>
+    <string name="op_sim_cord">SIM &amp; réseau</string>
     <string name="op_sim_cord_summary">Carte SIM par défaut, utilisation de la bande passante</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
     <string name="op_sms_ringtone">Sonnerie SMS</string>

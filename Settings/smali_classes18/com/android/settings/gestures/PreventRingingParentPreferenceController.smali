@@ -53,17 +53,17 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f121141
+    const v1, 0x7f121142
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f12113f
+    const v1, 0x7f121140
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f121143
+    const v1, 0x7f121144
 
     nop
 

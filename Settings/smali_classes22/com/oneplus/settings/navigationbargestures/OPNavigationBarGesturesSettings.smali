@@ -582,7 +582,7 @@
 
     iget-object v4, p0, Lcom/oneplus/settings/navigationbargestures/OPNavigationBarGesturesSettings;->mbuttonLayoutPref:Lcom/android/settingslib/widget/LayoutPreference;
 
-    const v7, 0x7f0a038c
+    const v7, 0x7f0a038d
 
     invoke-virtual {v4, v7}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 

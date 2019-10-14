@@ -476,7 +476,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a02f8
+    const v2, 0x7f0a02f9
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -488,7 +488,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0300c8
+    const v4, 0x7f0300ca
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1172,7 +1172,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->mListView:Landroid/widget/ListView;
 
-    const v0, 0x7f0a02f6
+    const v0, 0x7f0a02f7
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->findViewById(I)Landroid/view/View;
 
@@ -1182,7 +1182,7 @@
 
     iput-object v0, p0, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->mNofileView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02f7
+    const v0, 0x7f0a02f8
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/ringtone/OPLocalRingtonePickerActivity;->findViewById(I)Landroid/view/View;
 

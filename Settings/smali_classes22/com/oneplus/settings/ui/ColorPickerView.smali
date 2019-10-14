@@ -232,15 +232,19 @@
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
     :cond_1
-    iget-object v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePaint:Landroid/graphics/Paint;
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
 
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    const/high16 v2, 0x40400000    # 3.0f
+
+    mul-float v3, v1, v2
+
+    mul-float/2addr v1, v2
+
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v2
 
     iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHue:F
 
@@ -248,47 +252,75 @@
 
     move-result-object v2
 
-    new-instance v3, Landroid/graphics/RectF;
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHue:F
 
-    invoke-direct {v3}, Landroid/graphics/RectF;-><init>()V
+    iget-object v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueRect:Landroid/graphics/RectF;
 
-    iget v4, v2, Landroid/graphics/Point;->x:I
+    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
 
-    int-to-float v4, v4
+    move-result v4
 
-    sub-float/2addr v4, v1
-
-    iput v4, v3, Landroid/graphics/RectF;->left:F
-
-    iget v4, v2, Landroid/graphics/Point;->x:I
-
-    int-to-float v4, v4
-
-    add-float/2addr v4, v1
-
-    iput v4, v3, Landroid/graphics/RectF;->right:F
-
-    iget v4, v0, Landroid/graphics/RectF;->top:F
-
-    iget v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iget v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
 
     sub-float/2addr v4, v5
 
-    iput v4, v3, Landroid/graphics/RectF;->top:F
+    iget v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
 
-    iget v4, v0, Landroid/graphics/RectF;->bottom:F
+    sub-float/2addr v4, v5
 
-    iget v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    mul-float/2addr v3, v4
 
-    add-float/2addr v4, v5
+    const/high16 v4, 0x43b40000    # 360.0f
 
-    iput v4, v3, Landroid/graphics/RectF;->bottom:F
+    div-float/2addr v3, v4
 
-    iget v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
+    iget-object v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueRect:Landroid/graphics/RectF;
 
-    iget-object v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorPaint:Landroid/graphics/Paint;
+    iget v4, v4, Landroid/graphics/RectF;->left:F
 
-    invoke-virtual {p1, v3, v4, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+    add-float/2addr v3, v4
+
+    iget v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    div-float/2addr v4, v5
+
+    add-float/2addr v3, v4
+
+    new-instance v4, Landroid/graphics/RectF;
+
+    invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
+
+    iput v3, v4, Landroid/graphics/RectF;->left:F
+
+    iget v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
+
+    add-float/2addr v5, v3
+
+    iput v5, v4, Landroid/graphics/RectF;->right:F
+
+    iget v5, v0, Landroid/graphics/RectF;->top:F
+
+    iget v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+
+    sub-float/2addr v5, v6
+
+    iput v5, v4, Landroid/graphics/RectF;->top:F
+
+    iget v5, v0, Landroid/graphics/RectF;->bottom:F
+
+    iget v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+
+    add-float/2addr v5, v6
+
+    iput v5, v4, Landroid/graphics/RectF;->bottom:F
+
+    iget v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
+
+    iget-object v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v4, v5, v5, v6}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method
@@ -358,9 +390,17 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
 
-    iget-object v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatPaint:Landroid/graphics/Paint;
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
 
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    const/high16 v2, 0x40400000    # 3.0f
+
+    mul-float v3, v1, v2
+
+    mul-float/2addr v1, v2
+
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     iget v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSat:F
 
@@ -370,6 +410,14 @@
 
     move-result v1
 
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
+
+    sub-float/2addr v1, v2
+
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
+
+    sub-float/2addr v1, v2
+
     mul-float/2addr v0, v1
 
     iget-object v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatValRect:Landroid/graphics/RectF;
@@ -378,49 +426,51 @@
 
     add-float/2addr v0, v1
 
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    div-float/2addr v1, v2
+
+    add-float/2addr v0, v1
+
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
+    iput v0, v1, Landroid/graphics/RectF;->left:F
+
     iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
 
-    const/high16 v3, 0x40000000    # 2.0f
+    add-float/2addr v2, v0
 
-    div-float/2addr v2, v3
+    iput v2, v1, Landroid/graphics/RectF;->right:F
 
-    sub-float v3, v0, v2
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
 
-    iput v3, v1, Landroid/graphics/RectF;->left:F
+    iget v2, v2, Landroid/graphics/RectF;->top:F
 
-    add-float v3, v0, v2
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    iput v3, v1, Landroid/graphics/RectF;->right:F
+    sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
+    iput v2, v1, Landroid/graphics/RectF;->top:F
 
-    iget v3, v3, Landroid/graphics/RectF;->top:F
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
 
-    iget v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iget v2, v2, Landroid/graphics/RectF;->bottom:F
 
-    sub-float/2addr v3, v4
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    iput v3, v1, Landroid/graphics/RectF;->top:F
+    add-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
+    iput v2, v1, Landroid/graphics/RectF;->bottom:F
 
-    iget v3, v3, Landroid/graphics/RectF;->bottom:F
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
 
-    iget v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorPaint:Landroid/graphics/Paint;
 
-    add-float/2addr v3, v4
-
-    iput v3, v1, Landroid/graphics/RectF;->bottom:F
-
-    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
-
-    iget-object v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v1, v3, v3, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v1, v2, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method
@@ -542,9 +592,17 @@
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
 
-    iget-object v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValPaint:Landroid/graphics/Paint;
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
 
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    const/high16 v2, 0x40400000    # 3.0f
+
+    mul-float v3, v1, v2
+
+    mul-float/2addr v1, v2
+
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     iget v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mVal:F
 
@@ -558,6 +616,14 @@
 
     move-result v0
 
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
+
+    sub-float/2addr v0, v2
+
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
+
+    sub-float/2addr v0, v2
+
     mul-float/2addr v1, v0
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
@@ -566,49 +632,51 @@
 
     add-float/2addr v1, v0
 
+    iget v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    div-float/2addr v0, v2
+
+    add-float/2addr v1, v0
+
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
+    iput v1, v0, Landroid/graphics/RectF;->left:F
+
     iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
 
-    const/high16 v3, 0x40000000    # 2.0f
+    add-float/2addr v2, v1
 
-    div-float/2addr v2, v3
+    iput v2, v0, Landroid/graphics/RectF;->right:F
 
-    sub-float v3, v1, v2
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
 
-    iput v3, v0, Landroid/graphics/RectF;->left:F
+    iget v2, v2, Landroid/graphics/RectF;->top:F
 
-    add-float v3, v1, v2
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    iput v3, v0, Landroid/graphics/RectF;->right:F
+    sub-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
+    iput v2, v0, Landroid/graphics/RectF;->top:F
 
-    iget v3, v3, Landroid/graphics/RectF;->top:F
+    iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
 
-    iget v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iget v2, v2, Landroid/graphics/RectF;->bottom:F
 
-    sub-float/2addr v3, v4
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    iput v3, v0, Landroid/graphics/RectF;->top:F
+    add-float/2addr v2, v3
 
-    iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
+    iput v2, v0, Landroid/graphics/RectF;->bottom:F
 
-    iget v3, v3, Landroid/graphics/RectF;->bottom:F
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
 
-    iget v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorPaint:Landroid/graphics/Paint;
 
-    add-float/2addr v3, v4
-
-    iput v3, v0, Landroid/graphics/RectF;->bottom:F
-
-    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
-
-    iget-object v4, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v3, v3, v4}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v0, v2, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
     return-void
 .end method
@@ -916,115 +984,105 @@
 
     iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPanelSpacing:F
 
-    const v1, 0x7f0702ab
+    const v2, 0x7f0702ab
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMarginTop:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMarginTop:F
 
-    const v1, 0x7f0702a9
+    const v2, 0x7f0702a9
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMarginLeft:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMarginLeft:F
 
-    const v1, 0x7f0701a6
+    const v2, 0x7f0701a6
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePanelHeight:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePanelHeight:F
 
-    const v1, 0x7f070507
+    const v2, 0x7f070507
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVPanelHeight:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVPanelHeight:F
 
-    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPanelWidth:F
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPanelWidth:F
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMinWidth:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMinWidth:F
 
-    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePanelHeight:F
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePanelHeight:F
 
-    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVPanelHeight:F
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVPanelHeight:F
 
-    add-float/2addr v1, v2
+    add-float/2addr v2, v3
 
-    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPanelSpacing:F
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPanelSpacing:F
 
-    add-float/2addr v1, v2
+    add-float/2addr v2, v3
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMinHeight:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMinHeight:F
 
-    const v1, 0x7f0701a8
+    const v2, 0x7f0701a8
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorCornerRadius:F
 
-    const v1, 0x7f0701a9
+    const v2, 0x7f0701a9
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBlurRadius:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBlurRadius:F
 
-    const v1, 0x7f0701a7
+    const v2, 0x7f0701a7
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
 
-    const v1, 0x7f060200
+    const v2, 0x7f060200
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorColor:I
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorColor:I
 
-    const v1, 0x7f0701a5
+    const v2, 0x7f0701a5
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
 
-    const v1, 0x7f0701a4
+    const v2, 0x7f0701a4
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v2
-
-    iget v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mIndicatorBorderWidth:F
-
-    add-float/2addr v1, v2
+    iput v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
 
     iput v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPadding:F
 
@@ -1641,13 +1699,21 @@
 .end method
 
 .method private setupHueRect()V
-    .locals 9
+    .locals 8
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mDrawingRect:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
     iget v2, v0, Landroid/graphics/RectF;->top:F
+
+    iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    mul-float/2addr v3, v4
+
+    add-float/2addr v2, v3
 
     iget v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePanelHeight:F
 
@@ -1673,14 +1739,6 @@
 
     iget v6, v6, Landroid/graphics/RectF;->left:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
-
-    const/high16 v8, 0x40000000    # 2.0f
-
-    div-float/2addr v7, v8
-
-    sub-float/2addr v6, v7
-
     iput v6, v5, Landroid/graphics/RectF;->left:F
 
     iget-object v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueTouchRect:Landroid/graphics/RectF;
@@ -1688,12 +1746,6 @@
     iget-object v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueRect:Landroid/graphics/RectF;
 
     iget v6, v6, Landroid/graphics/RectF;->right:F
-
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
-
-    div-float/2addr v7, v8
-
-    add-float/2addr v6, v7
 
     iput v6, v5, Landroid/graphics/RectF;->right:F
 
@@ -1703,11 +1755,9 @@
 
     iget v6, v6, Landroid/graphics/RectF;->top:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
+    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
 
-    div-float/2addr v7, v8
-
-    sub-float/2addr v6, v7
+    add-float/2addr v6, v7
 
     iput v6, v5, Landroid/graphics/RectF;->top:F
 
@@ -1717,19 +1767,13 @@
 
     iget v6, v6, Landroid/graphics/RectF;->bottom:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueIndicatorWidth:F
-
-    div-float/2addr v7, v8
-
-    add-float/2addr v6, v7
-
     iput v6, v5, Landroid/graphics/RectF;->bottom:F
 
     return-void
 .end method
 
 .method private setupSatValRect()V
-    .locals 10
+    .locals 9
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mDrawingRect:Landroid/graphics/RectF;
 
@@ -1805,14 +1849,6 @@
 
     iget v6, v6, Landroid/graphics/RectF;->top:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    const/high16 v9, 0x40800000    # 4.0f
-
-    div-float/2addr v7, v9
-
-    sub-float/2addr v6, v7
-
     iput v6, v5, Landroid/graphics/RectF;->top:F
 
     iget-object v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatValTouchRect:Landroid/graphics/RectF;
@@ -1820,12 +1856,6 @@
     iget-object v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatValRect:Landroid/graphics/RectF;
 
     iget v6, v6, Landroid/graphics/RectF;->bottom:F
-
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v9
-
-    add-float/2addr v6, v7
 
     iput v6, v5, Landroid/graphics/RectF;->bottom:F
 
@@ -1863,12 +1893,6 @@
 
     iget v3, v3, Landroid/graphics/RectF;->left:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v8
-
-    sub-float/2addr v3, v7
-
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatTouchRect:Landroid/graphics/RectF;
@@ -1876,12 +1900,6 @@
     iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
 
     iget v3, v3, Landroid/graphics/RectF;->right:F
-
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v8
-
-    add-float/2addr v3, v7
 
     iput v3, v2, Landroid/graphics/RectF;->right:F
 
@@ -1891,12 +1909,6 @@
 
     iget v3, v3, Landroid/graphics/RectF;->top:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v9
-
-    sub-float/2addr v3, v7
-
     iput v3, v2, Landroid/graphics/RectF;->top:F
 
     iget-object v2, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatTouchRect:Landroid/graphics/RectF;
@@ -1904,12 +1916,6 @@
     iget-object v3, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSatRect:Landroid/graphics/RectF;
 
     iget v3, v3, Landroid/graphics/RectF;->bottom:F
-
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v9
-
-    add-float/2addr v3, v7
 
     iput v3, v2, Landroid/graphics/RectF;->bottom:F
 
@@ -1943,12 +1949,6 @@
 
     iget v6, v6, Landroid/graphics/RectF;->left:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v8
-
-    sub-float/2addr v6, v7
-
     iput v6, v5, Landroid/graphics/RectF;->left:F
 
     iget-object v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValTouchRect:Landroid/graphics/RectF;
@@ -1956,12 +1956,6 @@
     iget-object v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
 
     iget v6, v6, Landroid/graphics/RectF;->right:F
-
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v8
-
-    add-float/2addr v6, v7
 
     iput v6, v5, Landroid/graphics/RectF;->right:F
 
@@ -1971,12 +1965,6 @@
 
     iget v6, v6, Landroid/graphics/RectF;->top:F
 
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v9
-
-    sub-float/2addr v6, v7
-
     iput v6, v5, Landroid/graphics/RectF;->top:F
 
     iget-object v5, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValTouchRect:Landroid/graphics/RectF;
@@ -1984,12 +1972,6 @@
     iget-object v6, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mValRect:Landroid/graphics/RectF;
 
     iget v6, v6, Landroid/graphics/RectF;->bottom:F
-
-    iget v7, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mSVIndicatorWidth:F
-
-    div-float/2addr v7, v9
-
-    add-float/2addr v6, v7
 
     iput v6, v5, Landroid/graphics/RectF;->bottom:F
 
@@ -2321,6 +2303,42 @@
     sub-float/2addr v1, v2
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
+
+    iget-object v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mDrawingRect:Landroid/graphics/RectF;
+
+    iget v0, v0, Landroid/graphics/RectF;->bottom:F
+
+    iget-object v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mDrawingRect:Landroid/graphics/RectF;
+
+    iget v1, v1, Landroid/graphics/RectF;->top:F
+
+    sub-float/2addr v0, v1
+
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mMarginTop:F
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    mul-float/2addr v1, v2
+
+    sub-float/2addr v0, v1
+
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mPanelSpacing:F
+
+    mul-float/2addr v1, v2
+
+    sub-float/2addr v0, v1
+
+    iget v1, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHueInidcatorOffset:F
+
+    mul-float/2addr v1, v2
+
+    sub-float/2addr v0, v1
+
+    const/high16 v1, 0x40400000    # 3.0f
+
+    div-float/2addr v0, v1
+
+    iput v0, p0, Lcom/oneplus/settings/ui/ColorPickerView;->mHuePanelHeight:F
 
     invoke-direct {p0}, Lcom/oneplus/settings/ui/ColorPickerView;->setupSatValRect()V
 

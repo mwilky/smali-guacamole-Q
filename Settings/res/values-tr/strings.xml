@@ -1123,7 +1123,7 @@ Seçimi"</string>
     <string name="condition_cellular_title">Mobil veri kapalı</string>
     <string name="condition_cloud_summary">"Verilerinizin kaybolmamasını sağlamak amacıyla Bulut Servisi'ni kullanmak için tıklayın"</string>
     <string name="condition_cloud_title">Bulut Servisini kullanmaya başla</string>
-    <string name="condition_cloud_turn_off">KAPAT</string>
+    <string name="condition_cloud_turn_off">İPTAL</string>
     <string name="condition_device_muted_action_turn_on_sound">Sesi aç</string>
     <string name="condition_device_muted_summary">Çağrılar ve bildirimler için</string>
     <string name="condition_device_muted_title">Telefon zilinin sesi kapatıldı</string>
@@ -1775,6 +1775,7 @@ Daha ayrıntılı bilgi için kuruluş yöneticinizle iletişime geçin."</strin
     <string name="failed_to_open_app_settings_toast">%1$s ayarları açılamadı</string>
     <string name="fcc_equipment_id">Cihaz Kimliği</string>
     <string name="feature_flags_dashboard_title">Özellik işaretleri</string>
+    <string name="feature_not_support_split_screen">Bu fonksiyon bölünmüş ekranda desteklenmiyor.</string>
     <string name="filter">Filtre</string>
     <string name="filter_all_apps">Tüm uygulamalar</string>
     <string name="filter_apps_all">Tüm uygulamalar</string>
@@ -2890,7 +2891,7 @@ Bu izin, uygulamaya, Rahatsız Etmeyin ayarını açma veya kapatma ve ilgili ay
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Cep modu</string>
     <string name="oneplus_aod_smart_display_calendar_event">Takvim etkinliği</string>
     <string name="oneplus_aod_smart_display_music_info">Medya oynatıcı</string>
-    <string name="oneplus_aod_smart_display_title">Akıllı ekran</string>
+    <string name="oneplus_aod_smart_display_title">İçerik bilgisi</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Uyumluluk modu</string>
     <string name="oneplus_app_display_fullscreen">Tam ekran modu</string>
@@ -3001,10 +3002,11 @@ Pil tasarrufu, cihazınız şarj olduğunda otomatik olarak kapanır."</string>
     <string name="oneplus_connected_devices_count">%1$s cihaz bağlı</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, yayınlama, yazdırma</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; cihaz bağlantısı</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">İŞLEMCİ</string>
     <string name="oneplus_custom_time">Özel zaman aralığı</string>
     <string name="oneplus_customization">Gezinti çubuğu özelleştirmesi</string>
-    <string name="oneplus_customization_summary">Uzun basma, çift dokunma</string>
+    <string name="oneplus_customization_summary">Uzun bas, iki kez dokun</string>
+    <string name="oneplus_customization_summary_hide_navbar">Uzun bas, iki kez dokun, gezinti çubuğunu gizle</string>
     <string name="oneplus_data_usage_control_title">Veri kullanım denetimi</string>
     <string name="oneplus_dc_dimming_summary">DC karartma özelliği, ekranın devre gücünü değiştirerek ekran parlaklığını ayarlar. Etkinleştirildiğinde düşük çözünürlükteki ekran titreşimlerini azaltır. Ancak bu işlem bazı durumlarda renklerde anormallik oluşmasına neden olabilir.</string>
     <string name="oneplus_dc_dimming_title">DC karartma</string>
@@ -3049,7 +3051,7 @@ Pil tasarrufu, cihazınız şarj olduğunda otomatik olarak kapanır."</string>
     <string name="oneplus_double_tap_power_gesture_camera">Kamera</string>
     <string name="oneplus_double_tap_power_gesture_wallet">Kartları okut (Cüzdan)</string>
     <string name="oneplus_doze_summary_801">Bekleme ekranında saati ve diğer bilgileri görüntüleyin</string>
-    <string name="oneplus_doze_title">Ortam ekranı</string>
+    <string name="oneplus_doze_title">Bildirim ekranı</string>
     <string name="oneplus_doze_title_801">Ortam ekranı</string>
     <string name="oneplus_draw_gesture_start_none">Hiçbiri</string>
     <string name="oneplus_draw_m_start_app">M Çizin</string>
@@ -3157,7 +3159,7 @@ Dikkat: Yüz ile kilit açma özelliği parmak izi veya parola kullanımı kadar
     <string name="oneplus_forum_award_summary">Bu topluluk sizindir. Rotamızı sadece siz belirleyebilirsiniz. Hep birlikte belirliyor ve geliştiriyoruz. Sürüm geliştirme ve kod yazma. Bu sizin için. Bizimle birlikte hayal kurduğunuz için teşekkür ederiz!</string>
     <string name="oneplus_forum_award_title">Ödül</string>
     <string name="oneplus_fullscreen_back_guide_summary">Ekranı sol veya sağ alt kenarından içe doğru kaydırın</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Ekranı alt kısmından sola veya sağa doğru kaydırın</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">Ekranın alt kısmından sola veya sağa doğru kaydırın</string>
     <string name="oneplus_fullscreen_back_guide_title">Geri</string>
     <string name="oneplus_fullscreen_disable_this_feature">Gezinme hareketleri etkinleştirildiğinde bu özellik kullanılamaz.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Geri düğmesinin yerini alan hareketin kullanımını deneyin.
@@ -3169,7 +3171,7 @@ Ekrana gitmek için, parmağınızı ekranın alt orta köşesinden yukarıya do
     <string name="oneplus_fullscreen_gesture_guide_multitask">Son uygulamalar için, parmağınızı ekranın alt kısmından yukarıya doğru kaydırın ve basılı tutun.</string>
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Gezinme hareketleri etkinleştirilecek</string>
     <string name="oneplus_fullscreen_home_guide_summary">Ekranı alt kenarından yukarı kaydırın</string>
-    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Ekranı alt orta kenarından yukarıya doğru kaydırın</string>
+    <string name="oneplus_fullscreen_home_guide_summary_deprecated">Ekranın alt ortasından yukarıya doğru kaydırın</string>
     <string name="oneplus_fullscreen_home_guide_title">Ana sayfa</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Gezinti hareketleri hâlâ ekranın alt kenarından tetiklenebilir, geri gitmek için lütfen sol veya sağ kenardan kaydırın</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Dikey pozisyonda olduğu gibi gezinti hareketleri yine cihazın alt kısmından yapılır</string>
@@ -3182,7 +3184,7 @@ Ekrana gitmek için, parmağınızı ekranın alt orta köşesinden yukarıya do
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">Ekranın alt kenarından yukarı kaydırın ve ardından sola veya sağa itin</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">Son uygulamalar arasında geçiş yap</string>
     <string name="oneplus_fullscreen_recent_guide_summary">Ekranı alt kenarından yukarı kaydırın ve duraklatın</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Ekranı alt orta kenarından yukarı kaydırın ve duraklatın</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">Ekranın alt ortasından yukarıya doğru kaydırın ve basılı tutun</string>
     <string name="oneplus_fullscreen_recent_guide_title">Son uygulamalar</string>
     <string name="oneplus_functional_terms">ŞARTLAR VE KOŞULLAR</string>
     <string name="oneplus_game_haptic_feedback_summary">Oyun deneyiminizi daha canlı hale getirmek için dokunsal geri bildirim ekleyin. Bluetooth mikrofonlu kulaklıklar henüz desteklenmemektedir.</string>
@@ -3216,7 +3218,7 @@ Ekrana gitmek için, parmağınızı ekranın alt orta köşesinden yukarıya do
     <string name="oneplus_gesture_of_answer_call_summary">Gelen aramaları telefonu kulağınıza götürerek otomatik olarak yanıtlayın</string>
     <string name="oneplus_gesture_of_answer_call_title">Aramaları kısa yol kullanarak cevapla</string>
     <string name="oneplus_gesture_start_learning">Öğrenmeye Başla</string>
-    <string name="oneplus_gesture_to_answer_summary">Telefonu kulağınıza kaldırarak gelen aramaları otomatik olarak yanıtlayın</string>
+    <string name="oneplus_gesture_to_answer_summary">Gelen aramaları telefonu kulağınıza götürerek otomatik olarak yanıtlayın</string>
     <string name="oneplus_gesture_to_answer_title">Yanıtlamak için kaldır</string>
     <string name="oneplus_gesture_to_control_call_info">Telefonu kulağınıza kaldırarak aramaları otomatik olarak kontrol edin</string>
     <string name="oneplus_gesture_to_control_calls_summary">Hareket ile otomatik olarak aramaları yanıtlayın veya kulaklığa geçiş yapın</string>
@@ -3263,6 +3265,10 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_intelligently_select_best_wifi">En iyi Wi‑Fi akıllı bir şekilde seçilsin</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">"Wi‑Fi ağlarının bağlanabilirliği ve sinyal gücü analiz edilerek en iyi Wi‑Fi akıllı bir şekilde seçilsin ve Wi‑Fi'ye bağlanılsın"</string>
     <string name="oneplus_intensely">Güçlü</string>
+    <string name="oneplus_is_turn_on_feature">Bu özelliği açmak istediğinizden emin misiniz?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"Bu özellik açıkken, ara sıra aşağıdaki durumlar ortaya çıkabilir:
+1.Ekran görüntüsünün bazı alanları anormal
+2.Uyarlamalı parlaklık düzgün çalışmaz"</string>
     <string name="oneplus_lab_dislike">Beğenmedim</string>
     <string name="oneplus_lab_features">LAB ÖZELLİKLERİ</string>
     <string name="oneplus_lab_feedback_toast">Geri bildiriminiz için teşekkür ederiz!</string>
@@ -3304,7 +3310,7 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_mode_choose">Mod seçimi</string>
     <string name="oneplus_mode_settings">Alert Slider ayarları</string>
     <string name="oneplus_moderate">Orta</string>
-    <string name="oneplus_more">Daha fazla</string>
+    <string name="oneplus_more">Diğer</string>
     <string name="oneplus_motion_sensor_settings_title">Sistem kısayolları</string>
     <string name="oneplus_multi_app">Paralel Uygulamalar</string>
     <string name="oneplus_multi_app_disable_apps">Desteklenen uygulamalar</string>
@@ -3358,9 +3364,9 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_notification_advance_settings">Gelişmiş bildirim ayarları</string>
     <string name="oneplus_notification_alert_title">Önemli</string>
     <string name="oneplus_notification_channel_summary_low">Ses veya titreşim içermeyen daha az önemli bildirimler</string>
-    <string name="oneplus_notification_dialog_never_mode">Asla</string>
+    <string name="oneplus_notification_dialog_never_mode">Hiçbir zaman</string>
     <string name="oneplus_notification_dialog_ringtone">Bildirim zil sesi</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">Yalnızca zil sesi modunda</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">Her zaman</string>
     <string name="oneplus_notification_dots">Bildirim noktaları</string>
     <string name="oneplus_notification_instrucitons">Kullanıcı eğitimi</string>
@@ -3419,7 +3425,7 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_preference_settings_manual_open">Durum</string>
     <string name="oneplus_preference_settings_turn_off_time">Bitiş</string>
     <string name="oneplus_preference_settings_turn_on">Rahatsız Etmeyin özelliğini açın</string>
-    <string name="oneplus_preference_settings_turn_on_time">Başlangıç</string>
+    <string name="oneplus_preference_settings_turn_on_time">Başlama</string>
     <string name="oneplus_prior_to_use_you_need_to">Kullanmadan önce yapmanız gerekenler:</string>
     <string name="oneplus_privacy_policy">Gizlilik Politikası</string>
     <string name="oneplus_product_info_introduce">Cihaz bilgileri &amp; Garanti kartı</string>
@@ -3567,7 +3573,8 @@ Not: Parmak iziniz güçlü bir desen veya PIN'den daha az güvenli olabilir"</s
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">rahatsız etmeyin, kesilme, kesinti, kesme, mod</string>
     <string name="oneplus_search_keyword_swap_navkeys">değiştirme düğmeleri</string>
     <string name="oneplus_search_keyword_switch">aktarma,veri taşıma</string>
-    <string name="oneplus_search_keyword_theme_settings">KİLİT EKRANI ÖZELLEŞTİRME, Duvar kağıtları, Saat stili, Parmak izi animasyonu, Horizon light, SİSTEM ÖZELLEŞTİRME, Vurgu rengi, Şekil, Yazı tipi, Ton, Simge paketi</string>
+    <string name="oneplus_search_keyword_theme_settings">KİLİT EKRANI ÖZELLEŞTİRME, Duvar kağıtları, Saat stili, Parmak izi animasyonu, Horizon Light, SİSTEM ÖZELLEŞTİRME, Vurgu rengi, Şekil, Yazı tipi, Ton, Simge paketi, Aydınlatma ışığı, Hafif koyu, Canlı renk tonları</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">KİLİT EKRANI ÖZELLEŞTİRME, Duvar kağıtları, Saat stili, Parmak izi animasyonu, Horizon Light, SİSTEM ÖZELLEŞTİRME, Vurgu rengi, Şekil, Yazı tipi, Ton, Simge paketi, Aydınlatma ışığı, Hafif koyu, Canlı renk tonları, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">ekran görüntüsü</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">bildirimler,deneyim,program,iyileştirme</string>
@@ -3631,7 +3638,7 @@ Not:
     <string name="oneplus_smart_wifi_connection">Akıllı Wi‑Fi bağlantısı</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS zil sesi ve titreşim</string>
-    <string name="oneplus_snooze_options_title">Açılan menü gölgesindeki bildirimleri ertele</string>
+    <string name="oneplus_snooze_options_title">Bildirim gölgesindeki bildirimleri ertele</string>
     <string name="oneplus_sound_and_vibrate">Ses ve titreşim</string>
     <string name="oneplus_sound_settings_summary">Rahatsız Etmeyin, kulaklık modu</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3664,10 +3671,11 @@ Not:
     <string name="oneplus_theme_clock">Saat stili</string>
     <string name="oneplus_theme_clock_snake_action">ORTAM EKRANINI AÇ</string>
     <string name="oneplus_theme_clock_snake_tip">Bu özellik, ortam ekranı açıkken kullanılabilir olacaktır</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Değişiklikler iptal edilsin mi?</string>
     <string name="oneplus_theme_drop_title">Düzenleme modundan çık</string>
     <string name="oneplus_theme_entrance_summary">Duvar kağıtları, vurgu rengi, yazı tipi, ton</string>
-    <string name="oneplus_theme_entrance_title">Özelleştirme</string>
+    <string name="oneplus_theme_entrance_title">Kişiselleştirme</string>
     <string name="oneplus_theme_fingerprint">Parmak izi animasyonu</string>
     <string name="oneplus_theme_fingerprint_snake_action">PARMAK İZİNİ AÇ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">Bu özellik parmak izi açıkken kullanılabilir</string>
@@ -3680,7 +3688,8 @@ Not:
     <string name="oneplus_theme_preset_dark">İnce koyu</string>
     <string name="oneplus_theme_preset_light">Aydınlatma ışığı</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Önceden ayarlanmış temalar çeşitli duvar kağıtları, vurgu rengi, ton vb. ile birlikte gelir</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">Şekil</string>
     <string name="oneplus_theme_shape_effect_round">Yuvarlak</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Yuvarlak köşeli dikdörtgen</string>
@@ -3691,7 +3700,7 @@ Not:
     <string name="oneplus_theme_tone">Ton</string>
     <string name="oneplus_theme_tone_effect_color">Renkli</string>
     <string name="oneplus_theme_tone_effect_dark">Koyu</string>
-    <string name="oneplus_theme_tone_effect_light">Açık</string>
+    <string name="oneplus_theme_tone_effect_light">Hafif</string>
     <string name="oneplus_theme_tone_effect_title">TON SEÇ</string>
     <string name="oneplus_theme_wallpaper">Duvar kağıtları</string>
     <string name="oneplus_three_screenshots_enable_summary">Ekran görüntüsü almak için üç parmağınızı ekran üzerinde kaydırın</string>
@@ -3707,7 +3716,7 @@ Not:
     <string name="oneplus_tools_summary_U30">Oyun modu, cep modu, programlı güç açma/kapama</string>
     <string name="oneplus_tools_summary_no_gamingmode">Uygulama kilidi, paralel uygulamalar</string>
     <string name="oneplus_tools_title">Yardımcı programlar</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus hesabı, diğer hesaplar</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Varsayılan uygulamalar, izinler</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, gezinti çubuğu ve hareketler</string>
     <string name="oneplus_top_level_cloud_h2_summary">Verileri Bulut ile senkronize etme, Telefonumu Bul</string>
@@ -3722,9 +3731,11 @@ Not:
     <string name="oneplus_top_level_system_summary">Dil ve klavye, saat, sıfırlama, sistem güncellemeleri</string>
     <string name="oneplus_touch_vibrate">Dokunma titreşimi</string>
     <string name="oneplus_turn_off_time">Bitiş</string>
+    <string name="oneplus_turn_on_feature_cancel">İPTAL</string>
+    <string name="oneplus_turn_on_feature_ok">AÇ</string>
     <string name="oneplus_turn_on_time">Başlama</string>
     <string name="oneplus_uninstatll_multi_app_msg">Kaldırma işleminden sonra paralel uygulamadaki tüm veriler silinecektir. Uygulamayı kaldırmak istediğinizden emin misiniz?</string>
-    <string name="oneplus_uninstatll_multi_app_title">Paralel %1$s</string>
+    <string name="oneplus_uninstatll_multi_app_title">Paralel %1$s uygulaması</string>
     <string name="oneplus_uninstatll_multi_main_app_msg">Kaldırma işleminden sonra bu uygulamadaki ve ilişkili paralel uygulamadaki tüm veriler silinecektir. Uygulamayı kaldırmak istediğinizden emin misiniz?</string>
     <string name="oneplus_unknown_ringtone">Bilinmeyen zil sesi</string>
     <string name="oneplus_use_faceunlock_and_fingerprint_settings_summary">"Daha hızlı ve daha rahat bir kilit açma deneyimi için parmak izinin yanında Yüz Kilidi kullanın. Tek yapmanız gereken, telefonunuzu uyandırmak ve telefona bakmaktır, bundan sonra telefonu kullanabileceksiniz.
@@ -3744,7 +3755,7 @@ Not: Yüz Kilidi parmak izi, PIN veya diğer ekran kilidi seçeneklerinden daha 
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Alarmlar dışındaki tüm aramalar ve bildirimler sessize alınır ve sadece titreşim moduna ayarlanır</string>
     <string name="oneplus_vibration_summary">Alarmlar her zaman çalar</string>
     <string name="oneplus_video_enhancer">Video geliştirici</string>
-    <string name="oneplus_video_enhancer_footer">Video oynatırken rengi iyileştirin</string>
+    <string name="oneplus_video_enhancer_footer">Videoları oynatılırken renkleri artırır</string>
     <string name="oneplus_video_enhancer_summary">Videoları oynatılırken renkleri artırır</string>
     <string name="oneplus_volume_keys_adjust">Ayarlamak için ses düğmelerini kullanın</string>
     <string name="oneplus_volume_keys_adjust_media">Medya sesi</string>
@@ -3788,6 +3799,7 @@ Ağın gizli olarak ayarlanması yönlendiricinizin ayarlarını değiştirmeyec
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Önce yedek bir ekran kilidi seçin</string>
     <string name="op_cloud_service_summary">Kişilerinizi, notlarınızı, fotoğraflarınızı vb. eşitleyin</string>
     <string name="op_cloud_service_title">Bulut Servisi</string>
     <string name="op_confirm_enable_oem_unlock_text">UYARI: Parmakizi ile ödeme ve gelişmiş DRM anahtarı gibi aygıt koruma ve doğrulama özellikleri OEM açıkken çalışmayabilir.</string>
@@ -3799,13 +3811,21 @@ Ağın gizli olarak ayarlanması yönlendiricinizin ayarlarını değiştirmeyec
     <string name="op_default_apps_summary">Başlangıç, tarayıcı</string>
     <string name="op_default_luncher_title">Başlangıç uygulaması</string>
     <string name="op_dnd_summary">Rahatsız Etmeyin</string>
+    <string name="op_face_unlock_set_unlock_password">Yüz ile Kilit Açma + Şifre</string>
+    <string name="op_face_unlock_set_unlock_pattern">Yüz ile Kilit Açma + Desen</string>
+    <string name="op_face_unlock_set_unlock_pin">Yüz ile Kilit Açma + PIN</string>
+    <string name="op_face_unlock_skip_face">Yüz tanıma kilidi olmadan devam et</string>
     <string name="op_failed_to_get_data">Veri alınamadı</string>
     <string name="op_fetch_data_in_process">Yükleniyor</string>
     <string name="op_fragment">Kısa</string>
+    <string name="op_gamespace">Oyun Alanı</string>
     <string name="op_high_power_app_manager">Fazla enerji tüketen uygulamalar yöneticisi</string>
     <string name="op_light_mode_title">Açık</string>
     <string name="op_linked_launch_summary">Arka planda çalışacak uygulamaları yönetebilirsiniz</string>
     <string name="op_linked_launch_title">Uygulamaları otomatik çalıştır</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">Yüz ile Kilit Açmayı kullanmak için, şifre ayarlayın</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">Yüz ile Kilit Açmayı kullanmak için, desen ayarlayın</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">Yüz ile Kilit Açmayı kullanmak için, PIN ayarlayın</string>
     <string name="op_not_disturb">\"Rahatsız Etmeyin\" mod tercihleri</string>
     <string name="op_not_disturb_summary">Alarmlar hariç, aramaları ve bildirimleri sessize al ve titreşimi kapat</string>
     <string name="op_oneplus_roaming_summary">Küresel internet erişim hizmetleri sağlar</string>
@@ -3829,7 +3849,7 @@ Ağın gizli olarak ayarlanması yönlendiricinizin ayarlarını değiştirmeyec
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Lütfen parmağınızı ana düğme üzerindeki parmak izi sensörüne yerleştirin</string>
     <string name="op_security_settings_title">Güvenlik &amp; Parmak İzi</string>
     <string name="op_sim_card_with_slotid">SIM  %1$s</string>
-    <string name="op_sim_cord">SIM kart ve ağ</string>
+    <string name="op_sim_cord">SIM Kart &amp; ağ</string>
     <string name="op_sim_cord_summary">Varsayılan SIM kartı, bant genişliği kullanımı</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
     <string name="op_sms_ringtone">SMS zil sesi</string>
@@ -5018,7 +5038,7 @@ Daha hızlı bir ^3 kullanmayı deneyin veya bunun yerine bu ^4 birimini taşın
     <string name="summary_range_verbal_combination">%1$s ile %2$s arası</string>
     <string name="summary_voice_network">VoLTE, Wi-Fi Araması</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Wi-Fi ile Arama</string>
+    <string name="summary_voice_wfc_only">Wi-Fi Aranıyor</string>
     <string name="support_summary">Yardım makaleleri, telefon ve sohbet, başlarken</string>
     <string name="swipe_direction_ltr">Menüyü kapatmak için sağa, göstermek için sola kaydırın</string>
     <string name="swipe_direction_rtl">Menüyü kapatmak için sola, göstermek için sağa kaydırın</string>

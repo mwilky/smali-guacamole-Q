@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121651
+    const v2, 0x7f121652
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -77,7 +77,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121656
+    const v2, 0x7f121657
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -93,7 +93,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12164b
+    const v2, 0x7f12164c
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -109,7 +109,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121653
+    const v2, 0x7f121654
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12164e    # 1.941831E38f
+    const v2, 0x7f12164f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

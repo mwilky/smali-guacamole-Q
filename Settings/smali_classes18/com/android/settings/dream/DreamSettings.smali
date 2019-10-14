@@ -93,22 +93,22 @@
 
     if-eq p0, v0, :cond_0
 
-    const v0, 0x7f121299
+    const v0, 0x7f12129a
 
     return v0
 
     :cond_0
-    const v0, 0x7f121297
+    const v0, 0x7f121298
 
     return v0
 
     :cond_1
-    const v0, 0x7f121296
+    const v0, 0x7f121297
 
     return v0
 
     :cond_2
-    const v0, 0x7f12129b
+    const v0, 0x7f12129c
 
     return v0
 .end method
@@ -261,7 +261,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f12129a
+    const v0, 0x7f12129b
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

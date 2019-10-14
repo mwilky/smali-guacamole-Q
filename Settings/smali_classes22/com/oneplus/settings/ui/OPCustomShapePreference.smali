@@ -469,7 +469,7 @@
 
     invoke-super/range {p0 .. p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v2, 0x7f0a01b3
+    const v2, 0x7f0a01b4
 
     invoke-virtual {v1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -503,7 +503,7 @@
 
     invoke-virtual {v4, v5}, Lcom/oneplus/lib/widget/recyclerview/OPRecyclerView;->addOPItemDecoration(Lcom/oneplus/lib/widget/recyclerview/OPItemDecoration;)V
 
-    const v4, 0x7f0a04f8
+    const v4, 0x7f0a04f9
 
     invoke-virtual {v1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -511,7 +511,7 @@
 
     iput-object v4, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mIndicator1:Landroid/view/View;
 
-    const v4, 0x7f0a04f9
+    const v4, 0x7f0a04fa
 
     invoke-virtual {v1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -551,7 +551,7 @@
 
     invoke-interface {v7, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const v7, 0x7f0a0551
+    const v7, 0x7f0a0552
 
     invoke-virtual {v1, v7}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -609,7 +609,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mAdaptiveAirplane:Landroid/view/View;
 
-    const v8, 0x7f0a057e
+    const v8, 0x7f0a057f
 
     invoke-virtual {v6, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -619,7 +619,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mQuicklySettingsGroup:Landroid/view/ViewGroup;
 
-    const v8, 0x7f0a0443
+    const v8, 0x7f0a0444
 
     invoke-virtual {v6, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -629,7 +629,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mNotificationGroup:Landroid/view/ViewGroup;
 
-    const v8, 0x7f0a0642
+    const v8, 0x7f0a0643
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -639,7 +639,7 @@
 
     iput-object v8, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSoundPanelGroup:Landroid/view/ViewGroup;
 
-    const v8, 0x7f0a0541
+    const v8, 0x7f0a0542
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -655,7 +655,7 @@
 
     move-result-object v9
 
-    const v10, 0x7f120f80
+    const v10, 0x7f120f81
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -673,7 +673,7 @@
 
     move-result-object v11
 
-    const v12, 0x7f120f82
+    const v12, 0x7f120f83
 
     invoke-virtual {v11, v12}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -691,7 +691,7 @@
 
     move-result-object v13
 
-    const v14, 0x7f120f83
+    const v14, 0x7f120f84
 
     invoke-virtual {v13, v14}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -709,7 +709,7 @@
 
     move-result-object v15
 
-    const v14, 0x7f120f81
+    const v14, 0x7f120f82
 
     invoke-virtual {v15, v14}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -833,7 +833,7 @@
 .end method
 
 .method public saveSelectedShape()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mItemEntities:Ljava/util/List;
 
@@ -877,5 +877,100 @@
 
     invoke-static {v0, v1}, Lcom/oneplus/settings/utils/OPThemeUtils;->setCurrentShape(Landroid/content/Context;I)V
 
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mItemEntities:Ljava/util/List;
+
+    iget v1, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSelectedIndex:I
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;
+
+    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;->index:I
+
+    const-string v1, "status"
+
+    const-string v2, "shape"
+
+    const/4 v3, 0x1
+
+    if-ne v0, v3, :cond_0
+
+    const-string v0, "round"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mItemEntities:Ljava/util/List;
+
+    iget v3, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSelectedIndex:I
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;
+
+    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;->index:I
+
+    const/4 v3, 0x2
+
+    if-ne v0, v3, :cond_1
+
+    const-string v0, "square"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mItemEntities:Ljava/util/List;
+
+    iget v3, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSelectedIndex:I
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;
+
+    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;->index:I
+
+    const/4 v3, 0x3
+
+    if-ne v0, v3, :cond_2
+
+    const-string v0, "teardrop"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mItemEntities:Ljava/util/List;
+
+    iget v3, p0, Lcom/oneplus/settings/ui/OPCustomShapePreference;->mSelectedIndex:I
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;
+
+    iget v0, v0, Lcom/oneplus/settings/ui/OPCustomShapePreference$ItemEntity;->index:I
+
+    const/4 v3, 0x4
+
+    if-ne v0, v3, :cond_3
+
+    const-string v0, "rectangle"
+
+    invoke-static {v2, v1, v0}, Lcom/oneplus/settings/utils/OPUtils;->sendAnalytics(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    :goto_0
     return-void
 .end method

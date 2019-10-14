@@ -47,7 +47,7 @@
 
     sget-object v1, Lcom/android/settings/UserCredentialsSettings$Credential$Type;->USER_KEY:Lcom/android/settings/UserCredentialsSettings$Credential$Type;
 
-    const v2, 0x7f0a018d
+    const v2, 0x7f0a018e
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -55,7 +55,7 @@
 
     sget-object v1, Lcom/android/settings/UserCredentialsSettings$Credential$Type;->USER_CERTIFICATE:Lcom/android/settings/UserCredentialsSettings$Credential$Type;
 
-    const v2, 0x7f0a018c
+    const v2, 0x7f0a018d
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -63,7 +63,7 @@
 
     sget-object v1, Lcom/android/settings/UserCredentialsSettings$Credential$Type;->CA_CERTIFICATE:Lcom/android/settings/UserCredentialsSettings$Credential$Type;
 
-    const v2, 0x7f0a018a
+    const v2, 0x7f0a018b
 
     invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f0a057b
+    const v1, 0x7f0a057c
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
     :goto_0
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
-    const v1, 0x7f0a0189
+    const v1, 0x7f0a018a
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -227,7 +227,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121674
+    const v1, 0x7f121675
 
     const/4 v2, 0x1
 
@@ -280,7 +280,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121676
+    const v1, 0x7f121677
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 

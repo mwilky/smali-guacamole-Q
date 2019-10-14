@@ -330,7 +330,7 @@
 .method public setContentView(I)V
     .locals 2
 
-    const v0, 0x7f0a0185
+    const v0, 0x7f0a0186
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/SettingsBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -355,7 +355,7 @@
 .method public setContentView(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f0a0185
+    const v0, 0x7f0a0186
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/SettingsBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -371,7 +371,7 @@
 .method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 1
 
-    const v0, 0x7f0a0185
+    const v0, 0x7f0a0186
 
     invoke-virtual {p0, v0}, Lcom/android/settings/core/SettingsBaseActivity;->findViewById(I)Landroid/view/View;
 

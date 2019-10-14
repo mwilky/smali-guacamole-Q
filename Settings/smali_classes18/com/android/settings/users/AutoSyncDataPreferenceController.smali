@@ -184,6 +184,10 @@
 
     iget-object v1, p0, Lcom/android/settings/users/AutoSyncDataPreferenceController;->mUserHandle:Landroid/os/UserHandle;
 
+    if-eqz v1, :cond_0
+
+    nop
+
     invoke-virtual {v1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v1
@@ -194,5 +198,6 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
 
+    :cond_0
     return-void
 .end method

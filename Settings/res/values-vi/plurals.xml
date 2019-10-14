@@ -218,9 +218,11 @@
     </plurals>
     <plurals name="oneplus_applock_wrong_pattern_warning">
         <item quantity="other">Bạn còn %1$d cơ hội</item>
+        <item quantity="one">You still have %1$d chance</item>
     </plurals>
     <plurals name="oneplus_lockpattern_too_many_failed_confirmation_attempts_footer">
         <item quantity="other">Hãy thử lại trong %d giây.</item>
+        <item quantity="one">Try again in %d second.</item>
     </plurals>
     <plurals name="permission_bar_chart_label">
         <item quantity="other">%s ứng dụng</item>

@@ -166,7 +166,7 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    const v1, 0x7f0a0724
+    const v1, 0x7f0a0725
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -190,7 +190,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1217eb
+    const v4, 0x7f1217ec
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

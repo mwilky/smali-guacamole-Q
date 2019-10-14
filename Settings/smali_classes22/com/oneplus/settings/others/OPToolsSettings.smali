@@ -25,6 +25,8 @@
 
 .field private static final KEY_APP_LOCKER:Ljava/lang/String; = "oneplus_app_locker"
 
+.field private static final KEY_ONEPLUS_GAME_SPACE:Ljava/lang/String; = "game_space"
+
 .field private static final KEY_ONEPLUS_GAMING_MODE:Ljava/lang/String; = "gaming_mode"
 
 .field private static final KEY_ONEPLUS_LABORATORY_SETTINGS:Ljava/lang/String; = "oneplus_laboratory_settings"
@@ -60,6 +62,8 @@
 .field private mChallenge:J
 
 .field private mContext:Landroid/content/Context;
+
+.field private mGameSpacePreference:Landroidx/preference/Preference;
 
 .field private mGotoAppLockerClick:Z
 
@@ -111,6 +115,61 @@
     return-void
 .end method
 
+.method static synthetic access$000(Landroid/content/Context;)Z
+    .locals 1
+
+    invoke-static {p0}, Lcom/oneplus/settings/others/OPToolsSettings;->isNeedShowGameSpace(Landroid/content/Context;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private static isNeedShowGameSpace(Landroid/content/Context;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "game_space_hide_icon"
+
+    const/4 v3, -0x2
+
+    invoke-static {v0, v2, v1, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "isNeedShowGameSpace value:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "OPOthersSettings"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    move v1, v2
+
+    :cond_0
+    return v1
+.end method
+
 .method private launchChooseOrConfirmLock(I)V
     .locals 8
 
@@ -126,7 +185,7 @@
 
     invoke-direct {v1, v2, p0}, Lcom/android/settings/password/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroidx/fragment/app/Fragment;)V
 
-    const v2, 0x7f12107e
+    const v2, 0x7f12107f    # 1.9415294E38f
 
     invoke-virtual {p0, v2}, Lcom/oneplus/settings/others/OPToolsSettings;->getString(I)Ljava/lang/String;
 
@@ -400,7 +459,7 @@
 
     iget-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mTimerShutdownPreference:Landroidx/preference/Preference;
 
-    const v2, 0x7f120f90
+    const v2, 0x7f120f91
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -547,6 +606,14 @@
     invoke-virtual {v2, v1}, Landroidx/preference/PreferenceScreen;->removePreference(Landroidx/preference/Preference;)Z
 
     :cond_d
+    const-string v1, "game_space"
+
+    invoke-virtual {p0, v1}, Lcom/oneplus/settings/others/OPToolsSettings;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mGameSpacePreference:Landroidx/preference/Preference;
+
     return-void
 .end method
 
@@ -871,9 +938,40 @@
 .end method
 
 .method public onResume()V
-    .locals 0
+    .locals 2
 
     invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->onResume()V
 
+    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mGameSpacePreference:Landroidx/preference/Preference;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/oneplus/settings/others/OPToolsSettings;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/settings/others/OPToolsSettings;->isNeedShowGameSpace(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mGameSpacePreference:Landroidx/preference/Preference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/settings/others/OPToolsSettings;->mGameSpacePreference:Landroidx/preference/Preference;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setVisible(Z)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

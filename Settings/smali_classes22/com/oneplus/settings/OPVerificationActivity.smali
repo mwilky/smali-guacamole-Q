@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1211f6
+    const v1, 0x7f1211f7
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setTitle(I)V
 
@@ -53,7 +53,7 @@
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPVerificationActivity;->setContentView(I)V
 
-    const v0, 0x7f0a0594
+    const v0, 0x7f0a0595
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/OPVerificationActivity;->findViewById(I)Landroid/view/View;
 

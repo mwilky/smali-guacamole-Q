@@ -589,7 +589,7 @@
     :cond_8
     iget-object v4, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1214d6
+    const v5, 0x7f1214d7
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

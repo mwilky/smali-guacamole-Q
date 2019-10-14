@@ -122,7 +122,7 @@
 .method private configureDragAndDrop(Landroid/view/View;)V
     .locals 3
 
-    const v0, 0x7f0a021c
+    const v0, 0x7f0a021d
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/settings/OPColorPickerActivity;->initDarkView(Landroid/view/View;)V
+    value = Lcom/oneplus/settings/OPColorPickerActivity;->initLightView(Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

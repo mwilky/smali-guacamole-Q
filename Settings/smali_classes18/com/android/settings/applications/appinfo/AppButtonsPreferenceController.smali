@@ -800,7 +800,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1215c8
+    const v1, 0x7f1215c9
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2310,7 +2310,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f0300a5
+    const v4, 0x7f0300a7
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 

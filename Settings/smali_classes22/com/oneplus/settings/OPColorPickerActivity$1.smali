@@ -3,7 +3,7 @@
 .source "OPColorPickerActivity.java"
 
 # interfaces
-.implements Lcom/android/internal/widget/ViewPager$OnPageChangeListener;
+.implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
 
 
 # annotations

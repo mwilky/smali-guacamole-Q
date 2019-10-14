@@ -320,7 +320,7 @@
     <string name="aod_clock_minimalism">ಕನಿಷ್ಟತೆ</string>
     <string name="aod_clock_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="aod_clock_select_style_text">ಗಡಿಯಾರ ಶೈಲಿ ಆಯ್ಕೆಮಾಡಿ</string>
-    <string name="aod_horizon_light">ಹರೈಸಲ್ ಲೈಟ್</string>
+    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">ನೀಲಿ</string>
     <string name="aod_horizon_light_effect_2">ಕೆಂಪು</string>
     <string name="aod_horizon_light_effect_3">ನೇರಳೆ</string>
@@ -969,7 +969,7 @@
     <string name="bugreport_in_power_summary">ದೋಷ ವರದಿ ಮಾಡಲು ಪವರ್ ಮೆನುನಲ್ಲಿ ಬಟನ್ ತೋರಿಸು</string>
     <string name="build_number">ಬಿಲ್ಡ್ ಸಂಖ್ಯೆ</string>
     <string name="built_in_app_updates_summary">ಆ್ಯಪ್ ಸ್ಥಿರತೆಯನ್ನು ಸುಧಾರಿಸುವ ಸಲುವಾಗಿ ಬಿಲ್ಟ್ ಇನ್ ಆ್ಯಪ್ ಪರಿಷ್ಕರಣೆಗಳನ್ನು ಪರಿಶೀಲಿಸಿ, ನಿಮಗೆ ಕಳುಹಿಸಲು OnePlus ಗೆ ಅನುಮತಿಸಿ</string>
-    <string name="built_in_app_updates_title">ಬಿಲ್ಟ್ ಇನ್ ಆ್ಯಪ್ ಪರಿಷ್ಕರಣೆಗಳು</string>
+    <string name="built_in_app_updates_title">ಬಿಲ್ಟ್ ಇನ್ ಪರಿಷ್ಕರಣೆಗಳು</string>
     <string name="builtin_keyboard_settings_summary">ಭೌತಿಕ ಕೀಬೋರ್ಡ್‌ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="builtin_keyboard_settings_title">ಭೌತಿಕ ಕೀಬೋರ್ಡ್‌</string>
     <string name="button_confirm_convert_fbe">ಅಳಿಸಿ ಮತ್ತು ಪರಿವರ್ತಿಸು</string>
@@ -1775,6 +1775,7 @@
     <string name="failed_to_open_app_settings_toast">%1$s ಗಾಗಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="fcc_equipment_id">ಸಲಕರಣೆ ID</string>
     <string name="feature_flags_dashboard_title">ವೈಶಿಷ್ಟ್ಯ ಫ್ಲ್ಯಾಗ್‌ಗಳು</string>
+    <string name="feature_not_support_split_screen">ಈ ಕಾರ್ಯವು ಸ್ಪ್ಲಿಟ್ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
     <string name="filter">ಫಿಲ್ಟರ್‌</string>
     <string name="filter_all_apps">ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
     <string name="filter_apps_all">ಎಲ್ಲಾ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
@@ -2890,9 +2891,9 @@
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">ಪಾಕೆಟ್ ಮೋಡ್</string>
     <string name="oneplus_aod_smart_display_calendar_event">ಕ್ಯಾಲೆಂಡರ್ ಈವೆಂಟ್</string>
     <string name="oneplus_aod_smart_display_music_info">ಮೀಡಿಯಾ ಪ್ಲೇಯರ್</string>
-    <string name="oneplus_aod_smart_display_title">ಸ್ಮಾರ್ಟ್ ಡಿಸ್‌ಪ್ಲೇ</string>
+    <string name="oneplus_aod_smart_display_title">ಒಪ್ಪಂದದ ಮಾಹಿತಿ</string>
     <string name="oneplus_app_alipay">Alipay</string>
-    <string name="oneplus_app_display_compatibility">ಕಂಪ್ಯಾಟಿಬಿಲಿಟಿ ಮೋಡ್</string>
+    <string name="oneplus_app_display_compatibility">ಹೊಂದಾಣಿಕೆಯ ಮೋಡ್</string>
     <string name="oneplus_app_display_fullscreen">ಪೂರ್ಣತೆರೆಯ ಮೋಡ್</string>
     <string name="oneplus_app_display_fullscreen_summary">ಆ್ಯಪ್‌ನ ವಿಷಯವು ನಾಚ್ ಪ್ರದೇಶದಿಂದ ಆವರಿಸಲ್ಪಟ್ಟಿದ್ದರೆ, ದಯವಿಟ್ಟು ಡೀಫಾಲ್ಟ್ ಮೋಡ್‌ಗೆ ಬದಲಿಸಿ</string>
     <string name="oneplus_app_display_fullscreen_title">ಪೂರ್ಣತೆರೆಯಲ್ಲಿ ತೋರಿಸಲು ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
@@ -2909,7 +2910,7 @@
     <string name="oneplus_app_notification_allow_led">LED ಆನ್ ಆಗಿದೆ</string>
     <string name="oneplus_app_notification_not_allow_led">LED ಆಫ್ ಆಗಿದೆ</string>
     <string name="oneplus_app_ops_title">ಆ್ಯಪ್ ಅನುಮತಿಗಳು</string>
-    <string name="oneplus_app_uninstall_remark">ಕ್ವಿಕ್ ಪೇ ಬಳಸಲು ದಯವಿಟ್ಟು ಮೇಲಿನ ಪೇಮೆಂಟ್ ಆಪ್ಸ್ ಅನುಸ್ಥಾಪಿಸಿಕೊಳ್ಳಿ</string>
+    <string name="oneplus_app_uninstall_remark">Quick Pay ಬಳಸಲು ದಯವಿಟ್ಟು ಮೇಲಿನ ಪೇಮೆಂಟ್ ಆಪ್ಸ್ ಅನುಸ್ಥಾಪಿಸಿಕೊಳ್ಳಿ</string>
     <string name="oneplus_app_wechat">Wechat</string>
     <string name="oneplus_applications_settings_summary">ಆಪ್‌ ಸೂಚನೆಗಳು, ಸಮಾನಾಂತರ ಆಪ್‌ಗಳು, ಅನುಮತಿಗಳು</string>
     <string name="oneplus_applock_at_least_four_points">ಕನಿಷ್ಠ 4 ಪಾಯಿಂಟ್‌ಗಳಲ್ಲಿ ಸೇರಿಸಲು ರಚಿಸಿ</string>
@@ -2928,7 +2929,7 @@
     <string name="oneplus_auto_disconect_the_ap">ಯಾವುದೇ ಸಾಧನಗಳು ಸಂಪರ್ಕಗೊಳ್ಳದಿದ್ದರೆ, ಹಾಟ್‌ಸ್ಪಾಟ್ 5 ನಿಮಿಷಗಳ ನಂತರ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಆಫ್ ಆಗುತ್ತದೆ.</string>
     <string name="oneplus_auto_open_app_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="oneplus_auto_open_app_other_applications">ಇತರೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು</string>
-    <string name="oneplus_auto_open_app_recommended">ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ</string>
+    <string name="oneplus_auto_open_app_recommended">ಶಿಫಾರಸು ಮಾಡಿರುವುದು</string>
     <string name="oneplus_auto_open_specified_app">ಸೂಚಿಸಿದ ಆ್ಯಪ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತೆರೆಯಿರಿ</string>
     <string name="oneplus_auto_play">ಆಟೊ ಪ್ಲೇ</string>
     <string name="oneplus_auto_play_summary">ಇಯರ್‌ಫೊನ್ ಸಂಪರ್ಕಿಸುವಾಗ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮ್ಯೂಸಿಕ್ ಪ್ಲೇಬ್ಯಾಕ್ ರೆಸ್ಯೂಮ್ ಮಾಡಿ</string>
@@ -3001,10 +3002,11 @@
     <string name="oneplus_connected_devices_count">ಇಲ್ಲಿ %1$s ಸಾಧನಗಳು ಸಂಪರ್ಕಿಸಲ್ಪಟ್ಟಿವೆ</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, ಕ್ಯಾಸ್ಟ್, ಪ್ರಿಂಟಿಂಗ್</string>
     <string name="oneplus_connected_devices_dashboard_title">ಬ್ಲೂಟೂತ್ &amp; ಸಾಧನದ ಸಂಪರ್ಕ</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">ಪ್ರಾಸೆಸರ್</string>
     <string name="oneplus_custom_time">ಸಮಯ ವ್ಯಾಪ್ತಿ ಗ್ರಾಹಕೀಯಗೊಳಿಸಿ</string>
     <string name="oneplus_customization">ನ್ಯಾವಿಗೇಶನ್ ಬಾರ್ ಕಸ್ಟಮೈಸೇಶನ್</string>
-    <string name="oneplus_customization_summary">ದೀರ್ಘವಾಗಿ ಒತ್ತಿ, ಎರಡುಬಾರಿ ಒತ್ತಿರಿ</string>
+    <string name="oneplus_customization_summary">ದೀರ್ಘವಾಗಿ ಒತ್ತಿರಿ, ಎರಡುಬಾರಿ ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="oneplus_customization_summary_hide_navbar">ದೀರ್ಘವಾಗಿ ಒತ್ತಿರಿ, ಎರಡು ಬಾರಿ ಟ್ಯಾಪ್ ಮಾಡಿ, ನ್ಯಾವಿಗೇಶನ್ ಪಟ್ಟಿಯನ್ನು ಮರೆಮಾಡಿ</string>
     <string name="oneplus_data_usage_control_title">ಡೇಟಾ ಬಳಕೆ ನಿಯಂತ್ರಣ</string>
     <string name="oneplus_dc_dimming_summary">DC ಮಂದಗೊಳಿಸುವಿಕೆಯು ಪರದೆಯ ಸರ್ಕ್ಯೂಟ್ ಸಾಮರ್ಥ್ಯವನ್ನು ಬದಲಾಯಿಸುವ ಮೂಲಕ ಪರದೆಯ ಪ್ರಕಾಶಮಾನತೆಯನ್ನು ಸರಿಹೊಂದಿಸುತ್ತದೆ. ಇದು ಸಕ್ರಿಯಗೊಂಡಿರುವಾಗ, ಪರದೆಯ ಫ್ಲಿಕ್ಕರ್‌ಗಳನ್ನು ಕಡಿಮೆ ಪ್ರಕಾಶಮಾನತೆಯಲ್ಲಿ ಕಡಿಮೆ ಮಾಡುತ್ತದೆ. ಆದರೆ ಇದು ಕೆಲವು ಸಂದರ್ಭಗಳಲ್ಲಿ ಅಸಹಜ ಬಣ್ಣಗಳು ಪ್ರದರ್ಶನಗೊಳ್ಳುವುದಕ್ಕೆ ಕಾರಣವಾಗಬಹುದು.</string>
     <string name="oneplus_dc_dimming_title">DC ಮಂದಗೊಳಿಸುವಿಕೆ</string>
@@ -3049,7 +3051,7 @@
     <string name="oneplus_double_tap_power_gesture_camera">ಕ್ಯಾಮರಾ</string>
     <string name="oneplus_double_tap_power_gesture_wallet">ಕಾರ್ಡ್‌ಗಳನ್ನು ಸ್ವೈಪ್ ಮಾಡಿ (ವ್ಯಾಲೆಟ್)</string>
     <string name="oneplus_doze_summary_801">ಸ್ಟಾಂಡ್‌ಬೈ ಸ್ಕ್ರೀನ್‌ನಲ್ಲಿ ಗಡಿಯಾರ ಮತ್ತು ಇತರೆ ಮಾಹಿತಿಯನ್ನು ತೋರಿಸಿ</string>
-    <string name="oneplus_doze_title">ಅನುಕೂಲಕರ ಪ್ರದರ್ಶಕ</string>
+    <string name="oneplus_doze_title">ಪರಿವೇಷ್ಟಕ ಪ್ರದರ್ಶನ</string>
     <string name="oneplus_doze_title_801">ಪರಿವೇಷ್ಟಕ ಪ್ರದರ್ಶನ</string>
     <string name="oneplus_draw_gesture_start_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="oneplus_draw_m_start_app">M ಬರೆಯುವುದು</string>
@@ -3157,7 +3159,7 @@
     <string name="oneplus_forum_award_summary">ಈ ಸಮುದಾಯ ನಿಮ್ಮದು. ನೀವು ಮಾತ್ರವೇ ನಮ್ಮ ಅಧ್ಯಾಯವನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಬಹುದು. ಒಟ್ಟಿಗೆ, ನೀವು ವ್ಯಾಖ್ಯಾನಿಸುತ್ತೇವೆ ಮತ್ತು ಪರಿಷ್ಕರಿಸುತ್ತೇವೆ. ಆವೃತ್ತಿಗಳನ್ನು ನಕಲಿಸುತ್ತೇವೆ ಮತ್ತು ಕೋಡ್‌ಗಳನ್ನು ರೈಟ್ ಮಾಡುತ್ತೇವೆ. ಇದೆಲ್ಲವೂ ನಿಮಗಾಗಿ. ನಮ್ಮ ಕನಸನ್ನು ಸಾಕಾರಗೊಳಿಸುವಲ್ಲಿನ ನಿಮ್ಮ ಬೆಂಬಲಕ್ಕೆ ಧನ್ಯವಾದಗಳು!</string>
     <string name="oneplus_forum_award_title">ಬಹುಮಾನ</string>
     <string name="oneplus_fullscreen_back_guide_summary">ಪರದೆಯ ಕೆಳಗಿನ ಎಡ ಅಂಚಿನಿಂದ ಅಥವಾ ಕೆಳಗಿನ ಬಲ ಅಂಚಿನಿಂದ ಒಳಮುಖವಾಗಿ ಸ್ವೈಪ್ ಮಾಡಿ</string>
-    <string name="oneplus_fullscreen_back_guide_summary_deprecated">ಪರದೆಯ ಕೆಳಭಾಗದ ಎಡ ಅಥವಾ ಬಲ ಅಂಚಿನಿಂದ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
+    <string name="oneplus_fullscreen_back_guide_summary_deprecated">ಪರದೆಯ ಕೆಳಭಾಗದ ಎಡ ಅಥವಾ ಬಲ ಬದಿಯಿಂದ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="oneplus_fullscreen_back_guide_title">ಹಿಂದೆ</string>
     <string name="oneplus_fullscreen_disable_this_feature">ನ್ಯಾವಿಗೇಶನ್ ಗೆಶ್ಚರ್‌ಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"ಬನ್ನಿ ಹಿಂದಿನ ಬಟನ್ ಮರುಸ್ಥಾನಗೊಳಿಸುವ ಗೆಶ್ಚರ್‌ಗಳನ್ನು ಬಳಸುವ ಮೂಲಕ ಪ್ರಯತ್ನಿಸೋಣ.
@@ -3183,7 +3185,7 @@
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_summary">ಪರದೆಯ ಕೆಳಗಿನ ಅಂಚಿನಿಂದ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ ತದನಂತರ ಅದನ್ನು ಎಡಗಡೆ ಅಥವಾ ಬಲಭಾಗಕ್ಕೆ ಎಸೆಯಿರಿ</string>
     <string name="oneplus_fullscreen_previous_app_no_bar_guide_title">ಇತ್ತೀಚಿನ ಆ್ಯಪ್‌ಗಳ ನಡುವೆ ಬದಲಿಸಿ</string>
     <string name="oneplus_fullscreen_recent_guide_summary">ಪರದೆಯ ಕೆಳ ಅಂಚಿನಿಂದ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ ಮತ್ತು ವಿರಾಮಗೊಳಿಸಿ</string>
-    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">ಪರದೆಯ ಕೆಳ ಮಧ್ಯದ ಅಂಚಿನಿಂದ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ ಮತ್ತು ವಿರಾಮಗೊಳಿಸಿ</string>
+    <string name="oneplus_fullscreen_recent_guide_summary_deprecated">ಪರದೆಯ ಕೆಳ ಮಧ್ಯದ ಅಂಚಿನಿಂದ ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ ಮತ್ತು ವಿರಮಿಸಿ</string>
     <string name="oneplus_fullscreen_recent_guide_title">ಇತ್ತೀಚಿನ ಆಪ್‌ಗಳು</string>
     <string name="oneplus_functional_terms">ನಿಬಂಧನೆಗಳು ಮತ್ತು ಷರತ್ತುಗಳು</string>
     <string name="oneplus_game_haptic_feedback_summary">ನಿಮ್ಮ ಗೇಮಿಂಗ್ ಅನುಭವವನ್ನು ಹೆಚ್ಚು ಎದ್ದುಕಾಣುವಂತೆ ಮಾಡಲು ಸುಸ್ಪಷ್ಟ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಸೇರಿಸಿ. ಬ್ಲೂಟೂತ್ ಹೆಡ್‌ಫೋನ್‌ಗಳು ಇನ್ನೂ ಬೆಂಬಲಿತವಾಗಿಲ್ಲ.</string>
@@ -3217,7 +3219,7 @@
     <string name="oneplus_gesture_of_answer_call_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
     <string name="oneplus_gesture_of_answer_call_title">ಗೆಸ್ಚೂರ್ ಮೂಲಕ ಕರೆಗಳಿಗೆ ಉತ್ತರಿಸಿ</string>
     <string name="oneplus_gesture_start_learning">ಕಲಿಯಲು ಪ್ರಾರಂಭಿಸಿ</string>
-    <string name="oneplus_gesture_to_answer_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಕಿವಿಯ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
+    <string name="oneplus_gesture_to_answer_summary">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಹತ್ತಿರಕ್ಕೆ ಎತ್ತಿಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಒಳಬರುವ ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ</string>
     <string name="oneplus_gesture_to_answer_title">ಉತ್ತರಿಸಲು ಫೋನ್ ಮೇಲೆತ್ತಿ</string>
     <string name="oneplus_gesture_to_control_call_info">ಫೋನ್ ಅನ್ನು ನಿಮ್ಮ ಕಿವಿಯ ಹತ್ತಿರಕ್ಕೆ ಹಿಡಿದುಕೊಳ್ಳುವ ಮೂಲಕ ಕರೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನಿಯಂತ್ರಿಸಿ</string>
     <string name="oneplus_gesture_to_control_calls_summary">ಕರೆಗಳಿಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಉತ್ತರಿಸಿ ಅಥವಾ ಸನ್ನೆ ಮಾಡುವ ಮೂಲಕ ಇಯರ್‌ಪೀಸ್ ಮೋಡ್‌ಗೆ ಬದಲಾಯಿಸಿ</string>
@@ -3264,6 +3266,10 @@
     <string name="oneplus_intelligently_select_best_wifi">ಉತ್ತಮ Wi‑Fi ಸಂಪರ್ಕವನ್ನು ಚತುರತೆಯಿಂದ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Wi‑Fi ನೆಟ್‌ವರ್ಕ್‌ಗಳ ಸಂಪರ್ಕತೆ ಮತ್ತು ಸಿಗ್ನಲ್ ಸಾಮರ್ಥ್ಯವನ್ನು ಪತ್ತೆಹಚ್ಚುವ ಮೂಲಕ ಮತ್ತು ವಿಶ್ಲೇಷಿಸುವ ಮೂಲಕ ಉತ್ತಮವಾದ Wi‑Fi ಸಂಪರ್ಕವನ್ನು ಚತುರತೆಯಿಂದ ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಅದಕ್ಕೆ ಸಂಪರ್ಕ ಹೊಂದಿರಿ</string>
     <string name="oneplus_intensely">ಬಲಿಷ್ಟ</string>
+    <string name="oneplus_is_turn_on_feature">ನೀವು ಈ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಆನ್ ಮಾಡಲು ಖಚಿತವಾಗಿ ಬಯಸುತ್ತೀರಾ?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"ಇದನ್ನು ಆನ್ ಮಾಡಿರುವಾಗ, ಈ ಸಂದರ್ಭಗಳು ಆಗಾಗ್ಗೆ ಎದುರಾಗಬಹುದು:
+1.ಪರದೆಯ ಪ್ರದರ್ಶನದ ಕೆಲವು ಪ್ರದೇಶಗಳು ಸರಿಯಾಗಿಲ್ಲದಿರಬಹುದು
+2.ಹೊಂದಾಣಿಕೆಯ ಪ್ರಕಾಶಮಾನತೆಯು ಸರಿಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದಿಲ್ಲ"</string>
     <string name="oneplus_lab_dislike">ಇಷ್ಟವಿಲ್ಲ</string>
     <string name="oneplus_lab_features">ಲ್ಯಾಬ್ ವೈಶಿಷ್ಟ್ಯಗಳು</string>
     <string name="oneplus_lab_feedback_toast">ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಗೆ ಧನ್ಯವಾದಗಳು!</string>
@@ -3305,7 +3311,7 @@
     <string name="oneplus_mode_choose">ಮೋಡ್ ಆಯ್ಕೆ</string>
     <string name="oneplus_mode_settings">ಅಲರ್ಟ್ ಸ್ಲೈಡರ್ ಸೆಟ್ಟಿಂಗ್ಸ್</string>
     <string name="oneplus_moderate">ಮಧ್ಯಮ</string>
-    <string name="oneplus_more">ಹೆಚ್ಚು</string>
+    <string name="oneplus_more">ಇನ್ನಷ್ಟು</string>
     <string name="oneplus_motion_sensor_settings_title">ಸಿಸ್ಟಂ ಭಂಗಿಗಳು</string>
     <string name="oneplus_multi_app">ಸಮಾಂತರ ಆಪ್‌ಗಳು</string>
     <string name="oneplus_multi_app_disable_apps">ಬೆಂಬಲಿತ ಆಪ್‌ಗಳು</string>
@@ -3361,7 +3367,7 @@
     <string name="oneplus_notification_channel_summary_low">ಯಾವುದೇ ಶಬ್ದ ಅಥವಾ ಕಂಪನವಿಲ್ಲದೆಯೇ ಕಡಿಮೆ ಪ್ರಾಮುಖ್ಯತೆಯುಳ್ಳದ್ದು</string>
     <string name="oneplus_notification_dialog_never_mode">ಎಂದಿಗೂ ಇಲ್ಲ</string>
     <string name="oneplus_notification_dialog_ringtone">ನೋಟಿಫಿಕೇಶನ್ ರಿಂಗ್‌ಟೋನ್</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">ರಿಂಗ್ ಮೋಡ್‌ನಲ್ಲಿ ಮಾತ್ರ</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">ಯಾವಾಗಲೂ</string>
     <string name="oneplus_notification_dots">ನೊಟಿಫಿಕೇಶನ್ ಡಾಟ್‌ಗಳು</string>
     <string name="oneplus_notification_instrucitons">ಬಳಕೆದಾರ ಟ್ಯುಟೋರಿಯಲ್</string>
@@ -3373,7 +3379,7 @@
     <string name="oneplus_notification_sound_default">ಡಿಫಾಲ್ಟ್ ನೋಟಿಫಿಕೇಶನ್</string>
     <string name="oneplus_notification_ways">ಪ್ರದರ್ಶನದ ಮೋಡ್</string>
     <string name="oneplus_notification_ways_title">ಸೂಚನೆಗಳನ್ನು ಹೇಗೆ ತೋರಿಸಬೇಕು</string>
-    <string name="oneplus_notifications">ಅಧಿಸೂಚನೆಗಳು</string>
+    <string name="oneplus_notifications">ನೋಟಿಫಿಕೇಶನ್‌ಗಳು</string>
     <string name="oneplus_notifications_3rd_calls">ಥರ್ಡ್ ಪಾರ್ಟಿ ಕರೆಗಳಿಗಾಗಿನ ಸೂಚನೆಗಳು</string>
     <string name="oneplus_notifications_3rd_calls_summary">ಸಾಮಾಜಿಕ ಆಪ್‌ಗಳಿಂದ ಬರುವ ಧ್ವನಿ ಅಥವಾ ವೀಡಿಯೊ ಕರೆಗಳನ್ನು ಸೂಚನೆಗಳ ರೂಪದಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ</string>
     <string name="oneplus_notifications_and_vibration">ಅಧಿಸೂಚನೆಯ ಶಬ್ಧ ಮತ್ತು ಕಂಪನ</string>
@@ -3493,7 +3499,7 @@
     <string name="oneplus_recognized_bluetooth_car_kits">ಗುರುತಿಸಲಾದ ವಾಹನದ ಬ್ಲೂಟೂತ್</string>
     <string name="oneplus_recognized_bluetooth_car_kits_no_devices">ಯಾವುದೇ ವಾಹನದ ಬ್ಲೂಟೂತ್ ಇಲ್ಲ, ನೀವು ಕೆಳಗೆ ಹೊಸ ಸಾಧನಗಳನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಸೇರಿಸಬಹುದು</string>
     <string name="oneplus_recommended_opening">ಶಿಫಾರಸು ಮಾಡಿದೆ</string>
-    <string name="oneplus_reenroll_fingerprint_tips">ಬೆರಳುಮುದ್ರೆಯ ನಿಖರತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಮೊಬೈಲ್ ಫೋನ್‌ನ ಸಂರಕ್ಷಣಾತ್ಮಕ ಫಿಲ್ಮಂ ಬದಲಾಯಿಸಿದ ನಂತರ ನಿಮ್ಮ ಬೆರಳುಮುದ್ರೆಯನ್ನು ಮರು ನಮೂದಿಸಿ</string>
+    <string name="oneplus_reenroll_fingerprint_tips">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ನಿಖರತೆಯನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಮೊಬೈಲ್ ಫೋನ್‌ನ ಸಂರಕ್ಷಣಾತ್ಮಕ ಫಿಲ್ಮಂ ಬದಲಾಯಿಸಿದ ನಂತರ ನಿಮ್ಮ ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಅನ್ನು ಮರು ನಮೂದಿಸಿ</string>
     <string name="oneplus_regulatory_information">ಪರಿಶೀಲನೆ</string>
     <string name="oneplus_remove">ತೆಗೆಯಿರಿ</string>
     <string name="oneplus_rename_fingerprint_list">ಬೆರಳಮುದ್ರೆ ಮರುಹೆಸರಿಸಿ</string>
@@ -3526,10 +3532,10 @@
     <string name="oneplus_screen_refresh_rate_auto_summary">ಅತ್ಯಧಿಕ ರಿಫ್ರೆಶ್ ದರದೊಂದಿಗೆ ಅತ್ಯಂತ ಸುಲಲಿತ</string>
     <string name="oneplus_screen_refresh_rate_info">ಸ್ಕ್ರೀನ್ ರಿಫ್ರೆಶ್ ದರವು ಹೆಚ್ಚಾದಷ್ಟೂ, ಪರದೆಯ ಅನುಭವವು ನವಿರಾಗಿರುತ್ತದೆ. 90Hz ನಲ್ಲಿ, ಸನ್ನಿವೇಶಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ರಿಫ್ರೆಶ್ ದರವು ಡೈನಮಿಕಲಿ ಬದಲಾಯಿಸಲ್ಪಡುತ್ತದೆ.</string>
     <string name="oneplus_screen_resolution_adjust">ರೆಸಲ್ಯೂಶನ್</string>
-    <string name="oneplus_screen_resolution_adjust_1080p_summary">ಅತ್ಯುತ್ತಮ ಪ್ರದರ್ಶನ, ಕಡಿಮೆ ಪವರ್ ಬಳಕೆ (2340×1080)</string>
+    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent display, lower power consumption (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">ಸ್ವಯಂ ಬದಲಾವಣೆ</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">ಸೂಕ್ತ ರೆಸಲ್ಯೂಶನ್‌ಗೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಿ</string>
-    <string name="oneplus_screen_resolution_adjust_other_summary">ಗರಿಷ್ಟ ಸ್ಪಷ್ಟತೆ, ಹೆಚ್ಚಿಸಿದ ಪವರ್ ಬಳಕೆ (3120×1440)</string>
+    <string name="oneplus_screen_resolution_adjust_other_summary">Maximum clarity, increased power consumption (3120×1440)</string>
     <string name="oneplus_search_keyword_about_settings">ಸಾಧನದ ಹೆಸರು, ಆಂಡ್ರಾಯ್ಡ್ ಆವೃತ್ತಿ, ಆವೃತ್ತಿ ಸಂಖ್ಯೆ, ಮಾಡೆಲ್, CPU, ಸಂಗ್ರಹಣೆ, RAM, ROM, ಕ್ಯಾಮರಾ, ಪಿಕ್ಸೆಲ್, ಪರದೆ</string>
     <string name="oneplus_search_keyword_accent_color">ಬಣ್ಣ</string>
     <string name="oneplus_search_keyword_app_lock">ಲಾಕ್,PIN,ಪಾಸ್‌ವರ್ಡ್‌ಗಳು</string>
@@ -3568,7 +3574,8 @@
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ಅಡಚಣೆ ಮಾಡಬೇಡಿ, ತೊಂದರೆ ನೀಡಬೇಡಿ, ಅಡಚಣೆ ಮಾಡದಿರಿ, ವಿರಾಮ, ಮೋಡ್</string>
     <string name="oneplus_search_keyword_swap_navkeys">ಸ್ವಾಪ್ ಬಟನ್‌ಗಳು</string>
     <string name="oneplus_search_keyword_switch">ವರ್ಗಾವಣೆ,ಡೇಟಾ ವಲಸೆ</string>
-    <string name="oneplus_search_keyword_theme_settings">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಶನ್, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರದ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆ್ಯನಿಮೇಶನ್, ಹರೈಸನ್ ಲೈಟ್, ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್</string>
+    <string name="oneplus_search_keyword_theme_settings">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಶನ್, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರದ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆ್ಯನಿಮೇಶನ್, Horizon light, ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಹೊಳೆಯುವ ಬೆಳಕು, ಸೂಕ್ಷ್ಮವಾದ ಗಾಢಬಣ್ಣ, ರೋಮಾಂಚಕ ಟಿಂಟ್‌ಗಳು</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಶನ್, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರದ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆ್ಯನಿಮೇಶನ್, Horizon light, ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಹೊಳೆಯುವ ಬೆಳಕು, ಸೂಕ್ಷ್ಮವಾದ ಗಾಢಬಣ್ಣ, ರೋಮಾಂಚಕ ಟಿಂಟ್‌ಗಳು, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">ಸ್ಕ್ರೀನ್‌ಶಾಟ್</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ಅಧಿಸೂಚನೆಗಳು,ಅನುಭವ,ಪ್ರೋಗ್ರಾಂ,ಸುಧಾರಣೆ</string>
@@ -3632,7 +3639,7 @@
     <string name="oneplus_smart_wifi_connection">ಸ್ಮಾರ್ಟ್ Wi‑Fi ಸಂಪರ್ಕ</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS ರಿಂಗ್‌ಟೋನ್ ಮತ್ತು ಕಂಪನ</string>
-    <string name="oneplus_snooze_options_title">ಪುಲ್-ಡೌನ್ ಶೇಡ್‌ನಿಂದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ನೂಜ್ ಮಾಡಿ</string>
+    <string name="oneplus_snooze_options_title">ಅಧಿಸೂಚನೆ ಶೇಡ್‌ನಿಂದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಸ್ನೂಜ್ ಮಾಡಿ</string>
     <string name="oneplus_sound_and_vibrate">ಸೌಂಡ್ &amp; ವೈಬ್ರೇಶನ್</string>
     <string name="oneplus_sound_settings_summary">ತೊಂದರೆ ಮಾಡಬೇಡ, ಇಯರ್‌ಫೋನ್ ಮೋಡ್</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3644,7 +3651,7 @@
     <string name="oneplus_suspension_notice">ಹೆಡ್ಸ್ ಅಪ್</string>
     <string name="oneplus_suspension_notice_summary">ಆಪ್‌ಗಳು ಹೆಡ್ಸ್ ಅಪ್ ಸೂಚನೆಯನ್ನು ತೋರಿಸಲು ಅವಕಾಶ ನೀಡುತ್ತದೆ</string>
     <string name="oneplus_switch">OnePlus ಸ್ವಿಚ್</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">ಬದಲಾಯಿಸಿ</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">ಸ್ವಿಚ್</string>
     <string name="oneplus_switch_resolution_kill_process_tips">ರೆಸಲ್ಯೂಶನ್ ಬದಲಿಸುವುದರಿಂದ ಕೆಲವು ಹಿನ್ನೆಲೆ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು ಕಾರ್ಯಾಚರಣೆಯನ್ನು ನಿಲ್ಲಿಸಬಹುದು. ನೀವು ಬದಲಾವಣೆಯನ್ನು ಖಚಿತಪಡಿಸುವಿರಾ?</string>
     <string name="oneplus_switch_screen_lock_type">ಸ್ಕ್ರೀನ್ ಲಾಕ್ ವಿಧ ಸ್ವಿಚ್ ಮಾಡಲಾಗುತ್ತಿದೆ, ದಯವಿಟ್ಟು ಕಾಯಿರಿ...</string>
     <string name="oneplus_system_data_summary">ಖಾತೆಗಳ ಮಾಹಿತಿ, ಸಂಪರ್ಕಗಳು, ಆಪ್ಸ್ ಡೇಟಾಗಳನ್ನು ಒಳಗೊಂಡು</string>
@@ -3656,7 +3663,7 @@
     <string name="oneplus_system_stability_summary">ಸಿಸ್ಟಂ ಲಾಗ್‌ಗಳಿಗೆ ಅನಾಮಧೇಯವಾಗಿ ಪ್ರವೇಶಿಸಲು OnePlus ಗೆ ಅನುಮತಿಸಿ. ದೋಷ ಎದುರಾದಲ್ಲಿ, ಲಾಗ್‌ಗಳ ಜೊತೆಗೆ ದೋಷದ ವರದಿಯನ್ನು ಸಲ್ಲಿಸಲು ಅನುಮತಿಸಿ. ಲಾಗ್‌ಗಳನ್ನು ಸಿಸ್ಟಂ ದೋಷ ವಿಶ್ಲೇಷಣೆ ಮತ್ತು ಸ್ಥಿರತೆ ಸುಧಾರಣೆಗಳಲ್ಲಿ ಮಾತ್ರವೇ ಬಳಸಲಾಗುತ್ತದೆ</string>
     <string name="oneplus_system_stability_title">ಸಿಸ್ಟಂ ಸ್ಥಿರತೆ ಪ್ರೋಗ್ರಾಂ</string>
     <string name="oneplus_system_vibrate">ಸಿಸ್ಟಂ ಕಂಪನ</string>
-    <string name="oneplus_theme_accent_color">ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ</string>
+    <string name="oneplus_theme_accent_color">ಮಿಶ್ರಿತ ಬಣ್ಣ</string>
     <string name="oneplus_theme_accent_color_customization">ಕಸ್ಟಮೈಸೇಶನ್</string>
     <string name="oneplus_theme_accent_color_presetcolor">ಬಣ್ಣವನ್ನು ಪ್ರೀಸೆಟ್ ಮಾಡಿ</string>
     <string name="oneplus_theme_accent_color_select">ಅಕ್ಸೆಂಟ್ ಬಣ್ಣವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
@@ -3665,10 +3672,11 @@
     <string name="oneplus_theme_clock">ಗಡಿಯಾರ ಶೈಲಿ</string>
     <string name="oneplus_theme_clock_snake_action">ಆ್ಯಂಬಿಯೆಂಟ್ ಡಿಸ್‌ಪ್ಲೇ ಆನ್ ಮಾಡಿ</string>
     <string name="oneplus_theme_clock_snake_tip">ಆ್ಯಂಬಿಯೆಂಟ್ ಡಿಸ್‌ಪ್ಲೇ ಆನ್ ಆಗಿರುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯವು ಲಭ್ಯವಿರುತ್ತದೆ</string>
-    <string name="oneplus_theme_drop_summary">ಮಾರ್ಪಾಡುಗಳನ್ನು ತ್ಯಜಿಸುವುದೇ?</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_drop_summary">ಮಾರ್ಪಾಡುಗಳನ್ನು ರದ್ದುಪಡಿಸುವುದೆ?</string>
     <string name="oneplus_theme_drop_title">ಸಂಪಾದನೆ ಮೋಡ್‌ನಿಂದ ನಿರ್ಗಮಿಸಿ</string>
     <string name="oneplus_theme_entrance_summary">ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಫಾಂಟ್, ಟೋನ್</string>
-    <string name="oneplus_theme_entrance_title">ಕಸ್ಟಮೈಸೇಶನ್</string>
+    <string name="oneplus_theme_entrance_title">ಗ್ರಾಹಕೀಯಗೊಳಿಸುವಿಕೆ</string>
     <string name="oneplus_theme_fingerprint">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನಿಮೇಶನ್</string>
     <string name="oneplus_theme_fingerprint_snake_action">ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆನ್ ಮಾಡಿ</string>
     <string name="oneplus_theme_fingerprint_snake_tip">ಬೆರಳುಮುದ್ರೆಯು ಆನ್ ಆಗಿರುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯವು ಲಭ್ಯವಿರುತ್ತದೆ</string>
@@ -3681,7 +3689,8 @@
     <string name="oneplus_theme_preset_dark">ಸೂಕ್ಷ್ಮ ಕತ್ತಲೆ</string>
     <string name="oneplus_theme_preset_light">ಪ್ರಕಾಶಿಸುತ್ತಿರುವ ಬೆಳಕು</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">ಪ್ರಿಸೆಟ್ ಥೀಮ್‌ಗಳು ವ್ಯಾಪಕ ಶ್ರೇಣಿಯ ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಮಿಶ್ರಿತ ಬಣ್ಣ ಇತ್ಯಾದಿಗಳೊಂದಿಗೆ ಬರುತ್ತವೆ</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">ಆಕಾರ</string>
     <string name="oneplus_theme_shape_effect_round">ವೃತ್ತಾಕಾರ</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">ದುಂಡು ಆಯತಾಕಾರ</string>
@@ -3690,9 +3699,9 @@
     <string name="oneplus_theme_shape_effect_title">ಆಕಾರವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="oneplus_theme_system_customization">ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್</string>
     <string name="oneplus_theme_tone">ಟೋನ್</string>
-    <string name="oneplus_theme_tone_effect_color">ವರ್ಣಮಯ</string>
+    <string name="oneplus_theme_tone_effect_color">ಕಲರ್‌ಫುಲ್</string>
     <string name="oneplus_theme_tone_effect_dark">ಗಾಢ</string>
-    <string name="oneplus_theme_tone_effect_light">ತಿಳಿ</string>
+    <string name="oneplus_theme_tone_effect_light">ಲಘು</string>
     <string name="oneplus_theme_tone_effect_title">ಟೋನ್ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="oneplus_theme_wallpaper">ವಾಲ್‌ಪೇಪರ್‌ಗಳು</string>
     <string name="oneplus_three_screenshots_enable_summary">ಸ್ಕ್ರೀನ್‌ಶಾಟ್ ತೆಗೆದುಕೊಳ್ಳಲು ಸ್ಕ್ರೀನಿನ ಮೇಲೆ ಮೂರು ಬೆರಳುಗಳೊಂದಿಗೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
@@ -3708,7 +3717,7 @@
     <string name="oneplus_tools_summary_U30">ಗೇಮಿಂಗ್ ಮೋಡ್, ಪಾಕೆಟ್ ಮೋಡ್, ಶೆಡ್ಯೂಲ್ಡ್ ಪವರ್ ಆನ್/ಆಫ್‌</string>
     <string name="oneplus_tools_summary_no_gamingmode">ಆ್ಯಪ್ ಲಾಕರ್, ಸಮಾನಾಂತರ ಆ್ಯಪ್‌ಗಳು</string>
     <string name="oneplus_tools_title">ಅನುಸಾಧನಗಳು</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus ಖಾತೆ, ಇತರೆ ಖಾತೆಗಳು</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">ಡೀಫಾಲ್ಟ್ ಆ್ಯಪ್‌ಗಳು, ಅನುಮತಿಗಳು</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">ಎಚ್ಚರಿಕೆ ಸ್ಲೈಡರ್, ನ್ಯಾವಿಗೇಶನ್ ಬಾರ್ &amp; ಗೆಶ್ಚರ್‌ಗಳು</string>
     <string name="oneplus_top_level_cloud_h2_summary">ಕ್ಲೌಡ್ ಬಳಸಿಕೊಂಡು ಡೇಟಾ ಸಿಂಕ್ ಮಾಡಿ, ನನ್ನ ಫೋನ್ ಹುಡುಕು</string>
@@ -3723,9 +3732,11 @@
     <string name="oneplus_top_level_system_summary">ಭಾಷೆ &amp; ಕೀಬೋರ್ಡ್, ಸಮಯ, ಮರುಹೊಂದಿಸಿ, ಸಿಸ್ಟಂ ಪರಿಷ್ಕರಣೆಗಳು</string>
     <string name="oneplus_touch_vibrate">ಸ್ಪರ್ಶ ಕಂಪನ</string>
     <string name="oneplus_turn_off_time">ಗೆ</string>
+    <string name="oneplus_turn_on_feature_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="oneplus_turn_on_feature_ok">ಆನ್ ಮಾಡಿ</string>
     <string name="oneplus_turn_on_time">ಇಂದ</string>
     <string name="oneplus_uninstatll_multi_app_msg">ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದ ನಂತರ, ಸಮಾಂತರ ಆಪ್‌ನೊಳಗಿನ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ, ನೀವು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಖಚಿತವಾಗಿಯೂ ಬಯಸುವಿರಾ?</string>
-    <string name="oneplus_uninstatll_multi_app_title">ಸಮಾಂತರ %1$s</string>
+    <string name="oneplus_uninstatll_multi_app_title">ಸಮಾನಾಂತರ %1$s</string>
     <string name="oneplus_uninstatll_multi_main_app_msg">ಅನ್‌ಇನ್‌ಸ್ಟಾಲೇಶನ್ ಮಾಡಿದ ನಂತರ ಈ ಆಪ್‌ನಲ್ಲಿನ ಮತ್ತು ಸಂಬಂಧಿತ ಸಮಾಂತರ ಆಪ್‌ನೊಳಗಿನ ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ, ನೀವು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಲು ಖಚಿತವಾಗಿಯೂ ಬಯಸುವಿರಾ?</string>
     <string name="oneplus_unknown_ringtone">ಅಜ್ಞಾತ ರಿಂಗ್‌ಟೋನ್</string>
     <string name="oneplus_use_faceunlock_and_fingerprint_settings_summary">"ತ್ವರಿತ ಮತ್ತು ಸರಳ ಅನ್‌ಲಾಕಿಂಗ್ ಅನುಭವಕ್ಕಾಗಿ ಬೆರಳಚ್ಚು ಆಯ್ಕೆಯ ಜೊತೆಗೆ ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಕೂಡ ಬಳಸಿ. ನೀವು ಮಾಡಬೇಕಾದುದು ಇಷ್ಟೇ, ನಿಮ್ಮ ಫೋನ್ ಎಚ್ಚರಿಸಿ ಮತ್ತು ಅದರ ಕಡೆಗೆ ನೋಡಿ, ಆಮೇಲೆ ನೀವು ಅದನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.
@@ -3745,7 +3756,7 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">ಅಲಾರಂಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಕರೆಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿಶ್ಯಬ್ಧಗೊಳಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಕಂಪನ ಮಾತ್ರ ಮೋಡ್‌ಗೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ</string>
     <string name="oneplus_vibration_summary">ಅಲಾರಂ ಯಾವಾಗಲೂ ರಿಂಗ್ ಆಗುತ್ತದೆ</string>
     <string name="oneplus_video_enhancer">ವೀಡಿಯೊ ಎನ್‌ಹಾನ್ಸರ್</string>
-    <string name="oneplus_video_enhancer_footer">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತಿರುವಾಗ ಬಣ್ಣವನ್ನು ಸುಧಾರಿಸಿ</string>
+    <string name="oneplus_video_enhancer_footer">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುವಾಗ ಬಣ್ಣವನ್ನು ವರ್ಧಿಸಿ</string>
     <string name="oneplus_video_enhancer_summary">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುವಾಗ ಬಣ್ಣವನ್ನು ವರ್ಧಿಸಿ</string>
     <string name="oneplus_volume_keys_adjust">ಸರಿಹೊಂದಿಸಲು ವಾಲ್ಯೂಮ್ ಬಟನ್ ಬಳಸಿ</string>
     <string name="oneplus_volume_keys_adjust_media">ಮೀಡಿಯಾ ವಾಲ್ಯೂಮ್</string>
@@ -3789,6 +3800,7 @@
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">ಮೊದಲಿಗೆ ಬ್ಯಾಕಪ್ ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಅನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="op_cloud_service_summary">ನಿಮ್ಮ ಸಂಪರ್ಕಗಳು, ಟಿಪ್ಪಣಿಗಳು, ಫೋಟೋಗಳು ಇನ್ನೂ ಮುಂತಾದವುಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಿ.</string>
     <string name="op_cloud_service_title">ಕ್ಲೌಡ್ ಸೇವೆ</string>
     <string name="op_confirm_enable_oem_unlock_text">ಎಚ್ಚರಿಕೆ: ಸಾಧನದ ಸಂರಕ್ಷಣೆ ಮತ್ತು ದೃಢೀಕರಣ ವೈಶಿಷ್ಟ್ಯಗಳು ಉದಾ., ಬೆರಳಚ್ಚಿನ ಮೂಲಕ ಹಣಪಾವತಿ ಮತ್ತು ಸುಧಾರಿತ DRM ಕೀಯು OEM ಅನ್‌ಲಾಕ್‌ನಲ್ಲಿ ಕೆಲಸ ಮಾಡುವುದಿಲ್ಲ.</string>
@@ -3800,17 +3812,25 @@
     <string name="op_default_apps_summary">ಹೋಮ್, ಬ್ರೌಸರ್</string>
     <string name="op_default_luncher_title">ಹೋಮ್ ಅಪ್ಲಿಕೇಶನ್</string>
     <string name="op_dnd_summary">ಅಡಚಣೆ ಮಾಡಬೇಡಿ</string>
+    <string name="op_face_unlock_set_unlock_password">ಫೇಸ್ ಅನ್‌ಲಾಕ್ + ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="op_face_unlock_set_unlock_pattern">ಫೇಸ್ ಅನ್‌ಲಾಕ್ + ಪ್ಯಾಟರ್ನ್</string>
+    <string name="op_face_unlock_set_unlock_pin">ಫೇಸ್ ಅನ್‌ಲಾಕ್ + ಪಿನ್</string>
+    <string name="op_face_unlock_skip_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಇಲ್ಲದೆಯೇ ಮುಂದುವರೆಸಿ</string>
     <string name="op_failed_to_get_data">ಡೇಟಾ ಪತ್ತೆಹಚ್ಚಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="op_fetch_data_in_process">ಲೋಡ್ ಆಗುತ್ತಿದೆ</string>
     <string name="op_fragment">ಚಿಕ್ಕದು</string>
+    <string name="op_gamespace">ಗೇಮ್ ಸ್ಪೇಸ್</string>
     <string name="op_high_power_app_manager">ಪವರ್-ಹಂಗ್ರಿ ಆಪ್ಸ್ ನಿರ್ವಹಣೆ</string>
     <string name="op_light_mode_title">ತೆಳು</string>
     <string name="op_linked_launch_summary">ಮ್ಯಾನೇಜ್ ಆಪ್ಸ್ ಅನ್ನು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಲಾಂಚ್‌ಗೆ ಲಿಂಕ್ ಮಾಡಬಹುದು</string>
     <string name="op_linked_launch_title">ಆಪ್ಸ್ ಆಟೊ-ಲಾಂಚ್</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಬಳಸಲು, ಪಾಸ್‌ವರ್ಡ್ ಹೊಂದಿಸಿ</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಬಳಸಲು, ಪ್ಯಾಟರ್ನ್ ಹೊಂದಿಸಿ</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಬಳಸಲು, ಪಿನ್ ಹೊಂದಿಸಿ</string>
     <string name="op_not_disturb">ತೊಂದರೆ ಕೊಡಬಾರದ ಆದ್ಯತೆಗಳು</string>
     <string name="op_not_disturb_summary">ಅಲಾರಂಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಕರೆಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ಮ್ಯೂಟ್ ಮಾಡಿ ಮತ್ತು ಕಂಪನವನ್ನು ಆಫ್ ಮಾಡಿ</string>
     <string name="op_oneplus_roaming_summary">ಜಾಗತಿಕ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸೆಸ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸಿ</string>
-    <string name="op_oneplus_roaming_title">OnePlus ರೋಮಿಂಗ್</string>
+    <string name="op_oneplus_roaming_title">OnePlus Roaming</string>
     <string name="op_primary_charm_purple_label">ಗಾಢ ನೇರಳೆ</string>
     <string name="op_primary_dark_green_label">ಗಾಢ ಹಸಿರು</string>
     <string name="op_primary_default_label">ನೀಲಿ</string>
@@ -3830,7 +3850,7 @@
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">ಹೋಮ್ ಬಟನ್ ಮೇಲೆ ಬೆರಳಮುದ್ರೆಯ ಸೆನ್ಸಾರ್ ನೆಲೆಗೊಳಿಸಿ</string>
     <string name="op_security_settings_title">ಭದ್ರತೆ &amp; ಬೆರಳಮುದ್ರೆ</string>
     <string name="op_sim_card_with_slotid">SIM %1$s</string>
-    <string name="op_sim_cord">SIM &amp; ನೆಟ್‌ವರ್ಕ್</string>
+    <string name="op_sim_cord">ಸಿಮ್ &amp; ನೆಟ್‌ವರ್ಕ್</string>
     <string name="op_sim_cord_summary">ಡೀಫಾಲ್ಟ್ SIM ಕಾರ್ಡ್, ಬ್ಯಾಂಡ್‌ವಿಡ್ತ್ ಬಳಕೆ</string>
     <string name="op_sim_name_with_prefix">(%1$s)</string>
     <string name="op_sms_ringtone">SMS ರಿಂಗ್‌ಟೋನ್</string>
@@ -4310,7 +4330,7 @@ UT ಇಂಟರ್ಫೇಸ್: %5$s"</string>
     <string name="scanning_status_text_wifi_on_ble_off">ವೈ-ಫೈ ಸ್ಕ್ಯಾನಿಂಗ್ ಆನ್ ಆಗಿದೆ, ಬ್ಲೂಟೂತ್ ಸ್ಕ್ಯಾನಿಂಗ್ ಆಫ್ ಆಗಿದೆ</string>
     <string name="scanning_status_text_wifi_on_ble_on">ವೈ-ಫೈ ಮತ್ತು ಬ್ಲೂಟೂತ್ ಎರಡರದ್ದೂ ಸ್ಕ್ಯಾನಿಂಗ್ ಆನ್ ಆಗಿದೆ</string>
     <string name="schedule_reminders">ಈವೆಂಟ್ ನೆನಪೋಲೆಗಳು</string>
-    <string name="screen_color_mode_advanced">ಸುಧಾರಿತ</string>
+    <string name="screen_color_mode_advanced">ಅಡ್ವಾನ್ಸ್‌ಡ್</string>
     <string name="screen_color_mode_advanced_settings">ಸುಧಾರಿತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="screen_color_mode_vivid">ವಿವಿದ್</string>
     <string name="screen_compatibility_label">ಪರದೆಯ ಹೊಂದಾಣಿಕೆ</string>
@@ -5019,7 +5039,7 @@ UT ಇಂಟರ್ಫೇಸ್: %5$s"</string>
     <string name="summary_range_verbal_combination">%1$s ರಿಂದ %2$s</string>
     <string name="summary_voice_network">VoLTE, Wi-Fi ಕರೆ ಮಾಡುವಿಕೆ</string>
     <string name="summary_voice_volte_only">VoLTE</string>
-    <string name="summary_voice_wfc_only">Wi-Fi ಕರೆ ಮಾಡುವಿಕೆ</string>
+    <string name="summary_voice_wfc_only">Wi-Fi ಕರೆ</string>
     <string name="support_summary">ಸಹಾಯ ಲೇಖನಗಳು, ಫೋನ್, ಚಾಟ್‌ ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="swipe_direction_ltr">ವಜಾಗೊಳಿಸಲು ಬಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ, ಮೆನು ತೋರಿಸಲು ಎಡಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="swipe_direction_rtl">ವಜಾಗೊಳಿಸಲು ಎಡಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ, ಮೆನು ತೋರಿಸಲು ಬಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ</string>

@@ -173,7 +173,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1212f5
+    const v4, 0x7f1212f6
 
     invoke-virtual {v3, v4}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setTitle(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
@@ -189,7 +189,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1212f6
+    const v4, 0x7f1212f7
 
     const/4 v5, 0x0
 

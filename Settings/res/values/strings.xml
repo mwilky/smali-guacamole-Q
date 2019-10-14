@@ -3127,7 +3127,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Pocket mode</string>
     <string name="oneplus_aod_smart_display_calendar_event">Calendar event</string>
     <string name="oneplus_aod_smart_display_music_info">Media player</string>
-    <string name="oneplus_aod_smart_display_title">Smart display</string>
+    <string name="oneplus_aod_smart_display_title">Contextual info</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Compatibility mode</string>
     <string name="oneplus_app_display_fullscreen">Fullscreen mode</string>
@@ -4089,6 +4089,7 @@ Note:
     <string name="oneplus_theme_clock">Clock style</string>
     <string name="oneplus_theme_clock_snake_action">TURN ON AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">This feature will be available when ambient display is on</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Discard modifications?</string>
     <string name="oneplus_theme_drop_title">Exit edit mode</string>
     <string name="oneplus_theme_entrance_summary">Wallpapers, accent color, font, tone</string>
@@ -6994,13 +6995,8 @@ Update settings to:
     <item type="string" name="APKTOOL_DUMMY_dba">false</item>
     <item type="string" name="APKTOOL_DUMMY_e09">false</item>
     <item type="string" name="APKTOOL_DUMMY_e0a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f1c">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f91">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f02">false</item>
     <item type="string" name="APKTOOL_DUMMY_f92">false</item>
-    <item type="string" name="APKTOOL_DUMMY_15c6">false</item>
-    <string name="hardware_keys_action_kill">Kill foreground app</string>
-    <string name="hardware_keys_action_screenshot">Full screenshot</string>
-    <string name="hardware_keys_action_app">Launch custom app (select app in RiCE)</string>
-    <string name="hardware_keys_action_previous_app">Switch to previous app</string>
-    <string name="hardware_keys_action_default_double_recents">Nothing (Switch to previous app)</string>
+    <item type="string" name="APKTOOL_DUMMY_f93">false</item>
+    <item type="string" name="APKTOOL_DUMMY_15c7">false</item>
 </resources>

@@ -92,9 +92,9 @@
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
 
-    const/16 v2, 0x1d
+    const/16 v2, 0x1c
 
-    if-gt v1, v2, :cond_3
+    if-ge v1, v2, :cond_3
 
     move v0, v3
 

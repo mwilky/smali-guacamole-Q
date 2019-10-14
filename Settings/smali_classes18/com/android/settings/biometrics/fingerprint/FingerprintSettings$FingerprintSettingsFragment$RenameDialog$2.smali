@@ -55,7 +55,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a0272
+    const v2, 0x7f0a0273
 
     invoke-virtual {v1, v2}, Lcom/oneplus/lib/app/OPAlertDialog;->findViewById(I)Landroid/view/View;
 

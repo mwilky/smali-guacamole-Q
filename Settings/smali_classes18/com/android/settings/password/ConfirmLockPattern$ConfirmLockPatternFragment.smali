@@ -201,7 +201,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f0a0368
+    const v0, 0x7f0a0369
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1125,7 +1125,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a02ce
+    const v3, 0x7f0a02cf
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1162,7 +1162,7 @@
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_1
-    const v3, 0x7f0a03a5
+    const v3, 0x7f0a03a6
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1172,7 +1172,7 @@
 
     iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
-    const v3, 0x7f0a0684
+    const v3, 0x7f0a0685
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1182,7 +1182,7 @@
 
     iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mDetailsTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0a0245
+    const v3, 0x7f0a0246
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1192,7 +1192,7 @@
 
     iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mErrorTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0a038e
+    const v3, 0x7f0a038f
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1200,7 +1200,7 @@
 
     iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLeftSpacerLandscape:Landroid/view/View;
 
-    const v3, 0x7f0a05aa
+    const v3, 0x7f0a05ab
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1208,7 +1208,7 @@
 
     iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mRightSpacerLandscape:Landroid/view/View;
 
-    const v3, 0x7f0a0701
+    const v3, 0x7f0a0702
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

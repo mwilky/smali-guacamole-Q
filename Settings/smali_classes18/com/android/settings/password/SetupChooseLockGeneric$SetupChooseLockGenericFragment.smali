@@ -384,7 +384,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f12135f
+    const v1, 0x7f121360
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;

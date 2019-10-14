@@ -25,7 +25,7 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a0737
+    const v0, 0x7f0a0738
 
     invoke-virtual {p0, v0}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -39,7 +39,7 @@
 
     new-array v1, v0, [Landroid/widget/TextView;
 
-    const v2, 0x7f0a0351
+    const v2, 0x7f0a0352
 
     invoke-virtual {p0, v2}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -51,7 +51,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a0356
+    const v2, 0x7f0a0357
 
     invoke-virtual {p0, v2}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -63,7 +63,7 @@
 
     aput-object v2, v1, v4
 
-    const v2, 0x7f0a0359
+    const v2, 0x7f0a035a
 
     invoke-virtual {p0, v2}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -79,7 +79,7 @@
 
     new-array v1, v5, [Landroid/widget/TextView;
 
-    const v2, 0x7f0a0358
+    const v2, 0x7f0a0359
 
     invoke-virtual {p0, v2}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f0a0352
+    const v2, 0x7f0a0353
 
     invoke-virtual {p0, v2}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     if-ne v0, v2, :cond_4
 
-    const v5, 0x7f0a02a6
+    const v5, 0x7f0a02a7
 
     invoke-virtual {p0, v5}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +203,7 @@
 
     check-cast v5, Landroid/widget/LinearLayout;
 
-    const v6, 0x7f0a0354
+    const v6, 0x7f0a0355
 
     invoke-virtual {p0, v6}, Lcom/android/settings/widget/UsageView;->findViewById(I)Landroid/view/View;
 
@@ -419,11 +419,11 @@
 .method public setSideLabelWeights(FF)V
     .locals 1
 
-    const v0, 0x7f0a0643
+    const v0, 0x7f0a0644
 
     invoke-direct {p0, v0, p1}, Lcom/android/settings/widget/UsageView;->setWeight(IF)V
 
-    const v0, 0x7f0a0644
+    const v0, 0x7f0a0645
 
     invoke-direct {p0, v0, p2}, Lcom/android/settings/widget/UsageView;->setWeight(IF)V
 

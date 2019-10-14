@@ -97,7 +97,7 @@
     :goto_0
     iget-boolean v1, p0, Lcom/android/settings/SummaryPreference;->mChartEnabled:Z
 
-    const v4, 0x7f0a0350
+    const v4, 0x7f0a0351
 
     if-eqz v1, :cond_2
 
@@ -178,7 +178,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12147d
+    const v1, 0x7f12147e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -268,7 +268,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12147d
+    const v1, 0x7f12147e
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

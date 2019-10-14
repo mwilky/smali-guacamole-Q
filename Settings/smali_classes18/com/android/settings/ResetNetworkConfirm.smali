@@ -132,7 +132,7 @@
 
     iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContentView:Landroid/view/View;
 
-    const v1, 0x7f0a0251
+    const v1, 0x7f0a0252
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f121207
+    const v0, 0x7f121208
 
     const/4 v1, 0x0
 
@@ -510,7 +510,7 @@
 
     iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContentView:Landroid/view/View;
 
-    const v1, 0x7f0a059e
+    const v1, 0x7f0a059f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -518,7 +518,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f121212
+    const v1, 0x7f121213
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

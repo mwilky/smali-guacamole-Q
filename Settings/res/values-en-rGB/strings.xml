@@ -1775,6 +1775,7 @@ For more details, contact your organisation's admin."</string>
     <string name="failed_to_open_app_settings_toast">Failed to open settings for %1$s</string>
     <string name="fcc_equipment_id">Equipment ID</string>
     <string name="feature_flags_dashboard_title">Feature flags</string>
+    <string name="feature_not_support_split_screen">This function is not supported in split screen.</string>
     <string name="filter">Filter</string>
     <string name="filter_all_apps">All apps</string>
     <string name="filter_apps_all">All apps</string>
@@ -1797,7 +1798,7 @@ For more details, contact your organisation's admin."</string>
     <string name="filter_work_apps">Work</string>
     <string name="filter_write_settings_apps">Can modify system settings</string>
     <string name="fingerprint_add_fingerprint">Add fingerprint</string>
-    <string name="fingerprint_add_fingerprint_summary">Place your finger on the sensor then lift after you feel a vibration.</string>
+    <string name="fingerprint_add_fingerprint_summary">Place your finger on the key then lift after you feel a vibration.</string>
     <string name="fingerprint_add_max">You can add up to %d fingerprints</string>
     <string name="fingerprint_add_title">Add fingerprint</string>
     <string name="fingerprint_allset">All set!</string>
@@ -2890,7 +2891,7 @@ This will also give the app the ability to turn Do Not Disturb on or off and cha
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">Pocket mode</string>
     <string name="oneplus_aod_smart_display_calendar_event">Calendar event</string>
     <string name="oneplus_aod_smart_display_music_info">Media player</string>
-    <string name="oneplus_aod_smart_display_title">Smart display</string>
+    <string name="oneplus_aod_smart_display_title">Contextual info</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">Compatibility mode</string>
     <string name="oneplus_app_display_fullscreen">Fullscreen mode</string>
@@ -3001,10 +3002,11 @@ Battery saver turns off automatically when your device is charging."</string>
     <string name="oneplus_connected_devices_count">There are %1$s devices connected</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, cast, printing</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; device connection</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">PROCESSOR</string>
     <string name="oneplus_custom_time">Custom time range</string>
     <string name="oneplus_customization">Navigation bar customisation</string>
     <string name="oneplus_customization_summary">Long press, double tap</string>
+    <string name="oneplus_customization_summary_hide_navbar">Long press, double tap, hide the navigation bar</string>
     <string name="oneplus_data_usage_control_title">Data usage control</string>
     <string name="oneplus_dc_dimming_summary">DC dimming will adjust the screen brightness by changing the circuit power of the screen. When enabled, it will reduce screen flickers at low brightness. However, this may lead to abnormal colours being displayed in some cases.</string>
     <string name="oneplus_dc_dimming_title">DC dimming</string>
@@ -3264,6 +3266,10 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_intelligently_select_best_wifi">Intelligently select the best Wi‑Fi</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Intelligently select and connect to the best Wi‑Fi by detecting and analysing the connectivity and signal strength of Wi‑Fi networks</string>
     <string name="oneplus_intensely">Strong</string>
+    <string name="oneplus_is_turn_on_feature">Are you sure you want to turn on this feature?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"When it's turned on, the following situations might occur occasionally:
+1.Some areas of the screen display are abnormal
+2.Adaptive brightness won't work properly"</string>
     <string name="oneplus_lab_dislike">Dislike</string>
     <string name="oneplus_lab_features">LAB FEATURES</string>
     <string name="oneplus_lab_feedback_toast">Thanks for your feedback!</string>
@@ -3493,7 +3499,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_recognized_bluetooth_car_kits">Recognised Vehicle Bluetooth</string>
     <string name="oneplus_recognized_bluetooth_car_kits_no_devices">No Vehicle Bluetooth. You can manually add new devices below</string>
     <string name="oneplus_recommended_opening">Recommended</string>
-    <string name="oneplus_reenroll_fingerprint_tips">Please re-enter your fingerprint after replacing the protective film of the mobile phone to ensure the accuracy of the fingerprint</string>
+    <string name="oneplus_reenroll_fingerprint_tips">Please re-enter your fingerprint after replacing the protective film on the mobile phone to ensure the accuracy of the fingerprint</string>
     <string name="oneplus_regulatory_information">Verification</string>
     <string name="oneplus_remove">REMOVE</string>
     <string name="oneplus_rename_fingerprint_list">Rename fingerprint</string>
@@ -3568,7 +3574,8 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">don’t disturb, interrupt, interruption, break, mode</string>
     <string name="oneplus_search_keyword_swap_navkeys">swap buttons</string>
     <string name="oneplus_search_keyword_switch">transfer, data migration</string>
-    <string name="oneplus_search_keyword_theme_settings">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMISATION, Accent color, Shape, Font, Tone, Icon pack</string>
+    <string name="oneplus_search_keyword_theme_settings">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMISATION, Accent colour, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMISATION, Accent colour, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifications, experience, program, improvement</string>
@@ -3632,7 +3639,7 @@ Note:
     <string name="oneplus_smart_wifi_connection">smart Wi‑Fi connection</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS ringtone and vibration</string>
-    <string name="oneplus_snooze_options_title">Snooze notifications from the pull-down shade</string>
+    <string name="oneplus_snooze_options_title">Snooze notifications from the notification shade</string>
     <string name="oneplus_sound_and_vibrate">Sound &amp; vibration</string>
     <string name="oneplus_sound_settings_summary">Do Not Disturb, earphone mode</string>
     <string name="oneplus_sound_tuner">Dolby Atmos</string>
@@ -3665,6 +3672,7 @@ Note:
     <string name="oneplus_theme_clock">Clock style</string>
     <string name="oneplus_theme_clock_snake_action">TURN ON AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">This feature will be available when ambient display is on</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">Discard modifications?</string>
     <string name="oneplus_theme_drop_title">Exit edit mode</string>
     <string name="oneplus_theme_entrance_summary">Wallpapers, accent color, font, tone</string>
@@ -3681,7 +3689,8 @@ Note:
     <string name="oneplus_theme_preset_dark">Nuanced dark</string>
     <string name="oneplus_theme_preset_light">Illuminating light</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of wallpapers, accent colors, tones, etc.</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colours, tones, etc.</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colours, tones, etc</string>
     <string name="oneplus_theme_shape">Shape</string>
     <string name="oneplus_theme_shape_effect_round">Round</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">Round rectangle</string>
@@ -3723,6 +3732,8 @@ Note:
     <string name="oneplus_top_level_system_summary">Language &amp; keyboard, time, reset, system updates</string>
     <string name="oneplus_touch_vibrate">Touch vibration</string>
     <string name="oneplus_turn_off_time">To</string>
+    <string name="oneplus_turn_on_feature_cancel">CANCEL</string>
+    <string name="oneplus_turn_on_feature_ok">TURN ON</string>
     <string name="oneplus_turn_on_time">From</string>
     <string name="oneplus_uninstatll_multi_app_msg">All data within the parallel app will be erased upon uninstallation. Are you sure you want to uninstall?</string>
     <string name="oneplus_uninstatll_multi_app_title">Parallel %1$s</string>
@@ -3789,6 +3800,7 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">Choose a backup screen lock first</string>
     <string name="op_cloud_service_summary">Sync your contacts, notes, photos, etc.</string>
     <string name="op_cloud_service_title">Cloud Service</string>
     <string name="op_confirm_enable_oem_unlock_text">WARNING: Device protection and verification features, e.g., fingerprint payment and advanced DRM key, may not work while OEM is unlocked.</string>
@@ -3800,13 +3812,21 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="op_default_apps_summary">Home, browser</string>
     <string name="op_default_luncher_title">Home app</string>
     <string name="op_dnd_summary">Do Not Disturb</string>
+    <string name="op_face_unlock_set_unlock_password">Face Unlock + Password</string>
+    <string name="op_face_unlock_set_unlock_pattern">Face Unlock + Pattern</string>
+    <string name="op_face_unlock_set_unlock_pin">Face Unlock + PIN</string>
+    <string name="op_face_unlock_skip_face">Continue without face unlock</string>
     <string name="op_failed_to_get_data">Failed to retrieve data</string>
     <string name="op_fetch_data_in_process">Loading</string>
     <string name="op_fragment">Short</string>
+    <string name="op_gamespace">Game Space</string>
     <string name="op_high_power_app_manager">Manage power-hungry apps</string>
     <string name="op_light_mode_title">Light</string>
     <string name="op_linked_launch_summary">Manage background app launch</string>
     <string name="op_linked_launch_title">App auto-launch</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">To use Face Unlock, set password</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">To use Face Unlock, set pattern</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">To use Face Unlock, set PIN</string>
     <string name="op_not_disturb">Do Not Disturb preferences</string>
     <string name="op_not_disturb_summary">Mute calls and notifications and turn off vibration, except for alarms</string>
     <string name="op_oneplus_roaming_summary">Provide global Internet access services</string>

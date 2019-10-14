@@ -114,7 +114,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a0187
+    const v0, 0x7f0a0188
 
     invoke-virtual {p0, v0}, Lcom/android/settings/password/SetupChooseLockGeneric;->findViewById(I)Landroid/view/View;
 

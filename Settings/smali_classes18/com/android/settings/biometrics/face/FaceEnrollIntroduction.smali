@@ -106,7 +106,7 @@
 .method protected getConfirmLockTitleResId()I
     .locals 1
 
-    const v0, 0x7f1212e6
+    const v0, 0x7f1212e7
 
     return v0
 .end method
@@ -114,7 +114,7 @@
 .method protected getDescriptionResDisabledByAdmin()I
     .locals 1
 
-    const v0, 0x7f1212e0
+    const v0, 0x7f1212e1
 
     return v0
 .end method
@@ -140,7 +140,7 @@
 .method protected getErrorTextView()Landroid/widget/TextView;
     .locals 1
 
-    const v0, 0x7f0a0248
+    const v0, 0x7f0a0249
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -162,7 +162,7 @@
 .method protected getHeaderResDefault()I
     .locals 1
 
-    const v0, 0x7f1212e1
+    const v0, 0x7f1212e2
 
     return v0
 .end method
@@ -170,7 +170,7 @@
 .method protected getHeaderResDisabledByAdmin()I
     .locals 1
 
-    const v0, 0x7f1212e2
+    const v0, 0x7f1212e3
 
     return v0
 .end method
@@ -264,7 +264,7 @@
 
     iput-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->mFaceManager:Landroid/hardware/face/FaceManager;
 
-    const v0, 0x7f0a0259
+    const v0, 0x7f0a025a
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -274,7 +274,7 @@
 
     iput-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->mBtnNext:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v0, 0x7f0a0258
+    const v0, 0x7f0a0259
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -304,7 +304,7 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->mBtnCancel:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f1213dc
+    const v1, 0x7f1213dd
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 
@@ -321,7 +321,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/biometrics/face/FaceEnrollIntroduction;->mBtnCancel:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f1212da
+    const v1, 0x7f1212db
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 

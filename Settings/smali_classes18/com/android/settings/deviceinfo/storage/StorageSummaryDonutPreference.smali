@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    const v0, 0x7f0a021a
+    const v0, 0x7f0a021b
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -77,7 +77,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/android/settings/widget/DonutView;->setPercentage(D)V
 
     :cond_0
-    const v1, 0x7f0a01dd
+    const v1, 0x7f0a01de
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +98,7 @@
 
     if-eqz p1, :cond_1
 
-    const v0, 0x7f0a01dd
+    const v0, 0x7f0a01de
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 

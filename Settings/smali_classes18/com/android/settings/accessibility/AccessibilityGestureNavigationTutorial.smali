@@ -97,9 +97,9 @@
 
     const v5, 0x7f110017
 
-    const v6, 0x7f0a029e
+    const v6, 0x7f0a029f
 
-    const v7, 0x7f0a02a0
+    const v7, 0x7f0a02a1
 
     if-eq p1, v3, :cond_3
 

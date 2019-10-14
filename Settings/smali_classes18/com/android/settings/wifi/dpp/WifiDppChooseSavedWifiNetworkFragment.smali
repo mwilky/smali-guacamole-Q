@@ -132,7 +132,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a077a
+    const v5, 0x7f0a077b
 
     const-string v6, "wifi_network_list_fragment"
 
@@ -168,13 +168,13 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiDppChooseSavedWifiNetworkFragment;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f1217d8
+    const v1, 0x7f1217d9
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiDppChooseSavedWifiNetworkFragment;->mSummary:Landroid/widget/TextView;
 
-    const v1, 0x7f1217d9
+    const v1, 0x7f1217da
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

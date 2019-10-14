@@ -3722,6 +3722,7 @@
     <string name="oneplus_theme_clock">时钟样式</string>
     <string name="oneplus_theme_clock_snake_action">去开启</string>
     <string name="oneplus_theme_clock_snake_tip">此功能在开启息屏显示后即可使用</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">色值</string>
     <string name="oneplus_theme_drop_summary">是否放弃目前的修改？</string>
     <string name="oneplus_theme_drop_title">离开编辑模式</string>
     <string name="oneplus_theme_entrance_summary">壁纸、强调色、字体、色调</string>
@@ -3923,6 +3924,7 @@
     <string name="op_confirm_enable_oem_unlock_text">警告：OEM 解锁后，设备的保护和验证能力，例如指纹支付、高级 DRM 许可等可能无法使用。</string>
     <string name="op_custom_color_value">颜色代码</string>
     <string name="op_custom_color_value_edit">输入颜色代码</string>
+    <string name="op_custom_color_value_invalid">无效色值</string>
     <string name="op_dark_mode_title">暗色主题</string>
     <string name="op_data_vowlan_enable_summary">开启后可使用运营商提供的WLAN通话</string>
     <string name="op_default_apps_summary">桌面、浏览器</string>
@@ -3936,6 +3938,7 @@
     <string name="op_failed_to_get_data">获取数据失败</string>
     <string name="op_fetch_data_in_process">加载中</string>
     <string name="op_first_time_add_fingerprint_tips">你需要先设置一个密码，以便在指纹解锁不可用时使用</string>
+    <string name="op_gamespace">游戏空间</string>
     <string name="op_high_power_app_manager">高耗电应用管理</string>
     <string name="op_light_mode_title">白色主题</string>
     <string name="op_linked_launch_summary">管理应用在后台相互启动</string>

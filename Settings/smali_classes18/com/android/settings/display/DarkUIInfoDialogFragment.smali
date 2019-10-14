@@ -103,7 +103,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0a0607
+    const v4, 0x7f0a0608
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -119,7 +119,7 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v4, 0x7f0a0608
+    const v4, 0x7f0a0609
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

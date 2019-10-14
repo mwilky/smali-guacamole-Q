@@ -238,14 +238,6 @@
     return v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/settings/network/ApnSettings;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->loadCarrierConfigInfo()V
-
-    return-void
-.end method
-
 .method static synthetic access$102(Z)Z
     .locals 0
 
@@ -254,7 +246,7 @@
     return p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/settings/network/ApnSettings;I)V
+.method static synthetic access$1100(Lcom/android/settings/network/ApnSettings;I)V
     .locals 0
 
     invoke-virtual {p0, p1}, Lcom/android/settings/network/ApnSettings;->removeDialog(I)V
@@ -262,7 +254,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
+.method static synthetic access$1200(Lcom/android/settings/network/ApnSettings;)Landroid/content/ContentResolver;
     .locals 1
 
     invoke-virtual {p0}, Lcom/android/settings/network/ApnSettings;->getContentResolver()Landroid/content/ContentResolver;
@@ -272,7 +264,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1400()Landroid/net/Uri;
+.method static synthetic access$1300()Landroid/net/Uri;
     .locals 1
 
     sget-object v0, Lcom/android/settings/network/ApnSettings;->DEFAULTAPN_URI:Landroid/net/Uri;
@@ -280,7 +272,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
+.method static synthetic access$1400(Lcom/android/settings/network/ApnSettings;Landroid/net/Uri;)Landroid/net/Uri;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/settings/network/ApnSettings;->getUriForCurrSubId(Landroid/net/Uri;)Landroid/net/Uri;
@@ -2213,126 +2205,6 @@
     return v0
 .end method
 
-.method private loadCarrierConfigInfo()V
-    .locals 6
-
-    nop
-
-    const-string v0, "carrier_config"
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/network/ApnSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/CarrierConfigManager;
-
-    iget v1, p0, Lcom/android/settings/network/ApnSettings;->mSubId:I
-
-    invoke-virtual {v0, v1}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
-
-    move-result-object v1
-
-    const-string v2, "hide_ims_apn_bool"
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lcom/android/settings/network/ApnSettings;->mHideImsApn:Z
-
-    const-string v2, "allow_adding_apns_bool"
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
-
-    const-string v2, "apn_hide_rule_strings_array"
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsWithRule:[Ljava/lang/String;
-
-    const-string v2, "apn_hide_rule_strings_with_iccids_array"
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsWithIccidRule:[Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
-
-    const-string v3, "ApnSettings"
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getIccId()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "loadCarrierConfigInfo: iccid = "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getPersistableBundle(Ljava/lang/String;)Landroid/os/PersistableBundle;
-
-    move-result-object v4
-
-    iput-object v4, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsGroupByIccid:Landroid/os/PersistableBundle;
-
-    :cond_0
-    iget-boolean v2, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "read_only_apn_types_string_array"
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/android/settings/network/ApnEditor;->hasAllApns([Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "loadCarrierConfigInfo: not allowing adding APN because all APN types are read only"
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v3, 0x0
-
-    iput-boolean v3, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
-
-    :cond_1
-    const-string v2, "hide_preset_apn_details_bool"
-
-    invoke-virtual {v1, v2}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lcom/android/settings/network/ApnSettings;->mHidePresetApnDetails:Z
-
-    return-void
-.end method
-
 .method private networkTypeToRilRidioTechnology(I)I
     .locals 1
 
@@ -2807,7 +2679,7 @@
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 7
 
     invoke-super {p0, p1}, Lcom/android/settings/RestrictedSettingsFragment;->onCreate(Landroid/os/Bundle;)V
 
@@ -2882,12 +2754,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/settings/network/ApnSettings;->mIntentFilter:Landroid/content/IntentFilter;
-
-    const-string v2, "android.telephony.action.CARRIER_CONFIG_CHANGED"
-
-    invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/android/settings/network/ApnSettings;->setIfOnlyAvailableForAdmins(Z)V
@@ -2906,22 +2772,134 @@
 
     iput-object v1, p0, Lcom/android/settings/network/ApnSettings;->mUiccController:Lcom/android/internal/telephony/uicc/UiccController;
 
-    invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->loadCarrierConfigInfo()V
+    nop
+
+    const-string v1, "carrier_config"
+
+    invoke-virtual {p0, v1}, Lcom/android/settings/network/ApnSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telephony/CarrierConfigManager;
+
+    iget v2, p0, Lcom/android/settings/network/ApnSettings;->mSubId:I
+
+    invoke-virtual {v1, v2}, Landroid/telephony/CarrierConfigManager;->getConfigForSubId(I)Landroid/os/PersistableBundle;
+
+    move-result-object v2
+
+    const-string v3, "hide_ims_apn_bool"
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v3
+
+    iput-boolean v3, p0, Lcom/android/settings/network/ApnSettings;->mHideImsApn:Z
+
+    const-string v3, "allow_adding_apns_bool"
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v3
+
+    iput-boolean v3, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUss()Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_1
+    if-eqz v3, :cond_1
 
     invoke-direct {p0}, Lcom/android/settings/network/ApnSettings;->updateApnEditState()V
 
     :cond_1
+    const-string v3, "apn_hide_rule_strings_array"
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsWithRule:[Ljava/lang/String;
+
+    const-string v3, "apn_hide_rule_strings_with_iccids_array"
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsWithIccidRule:[Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/android/settings/network/ApnSettings;->mSubscriptionInfo:Landroid/telephony/SubscriptionInfo;
+
+    const-string v4, "ApnSettings"
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Landroid/telephony/SubscriptionInfo;->getIccId()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "iccid: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getPersistableBundle(Ljava/lang/String;)Landroid/os/PersistableBundle;
+
+    move-result-object v5
+
+    iput-object v5, p0, Lcom/android/settings/network/ApnSettings;->mHideApnsGroupByIccid:Landroid/os/PersistableBundle;
+
+    :cond_2
+    iget-boolean v3, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
+
+    if-eqz v3, :cond_3
+
+    const-string v3, "read_only_apn_types_string_array"
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getStringArray(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/android/settings/network/ApnEditor;->hasAllApns([Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    const-string v5, "not allowing adding APN because all APN types are read only"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v4, 0x0
+
+    iput-boolean v4, p0, Lcom/android/settings/network/ApnSettings;->mAllowAddingApns:Z
+
+    :cond_3
+    const-string v3, "hide_preset_apn_details_bool"
+
+    invoke-virtual {v2, v3}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v3
+
+    iput-boolean v3, p0, Lcom/android/settings/network/ApnSettings;->mHidePresetApnDetails:Z
+
     invoke-static {v0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
-    move-result-object v1
+    move-result-object v3
 
-    iput-object v1, p0, Lcom/android/settings/network/ApnSettings;->mUserManager:Landroid/os/UserManager;
+    iput-object v3, p0, Lcom/android/settings/network/ApnSettings;->mUserManager:Landroid/os/UserManager;
 
     return-void
 .end method
@@ -2945,7 +2923,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121216
+    const v2, 0x7f121217
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

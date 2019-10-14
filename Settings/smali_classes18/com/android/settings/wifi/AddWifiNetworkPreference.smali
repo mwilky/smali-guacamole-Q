@@ -29,7 +29,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setIcon(I)V
 
-    const v0, 0x7f121760
+    const v0, 0x7f121761
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/AddWifiNetworkPreference;->setTitle(I)V
 
@@ -136,7 +136,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1217e7
+    const v2, 0x7f1217e8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

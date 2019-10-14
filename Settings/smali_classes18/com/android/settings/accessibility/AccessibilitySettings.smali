@@ -463,7 +463,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121117
+    const v2, 0x7f121118
 
     const/4 v3, 0x2
 
@@ -570,7 +570,7 @@
     :cond_4
     if-nez p2, :cond_5
 
-    const v1, 0x7f1214fe
+    const v1, 0x7f1214ff
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -579,7 +579,7 @@
     return-object v1
 
     :cond_5
-    const v1, 0x7f1214fd
+    const v1, 0x7f1214fe
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1096,7 +1096,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f030095
+    const v2, 0x7f030097
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1114,7 +1114,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f030094
+    const v2, 0x7f030096
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1723,13 +1723,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f030079
+    const v2, 0x7f03007b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f03007a
+    const v3, 0x7f03007c
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1911,12 +1911,12 @@
 
     if-eqz v0, :cond_1
 
-    const v2, 0x7f1214fe
+    const v2, 0x7f1214ff
 
     goto :goto_0
 
     :cond_1
-    const v2, 0x7f1214fd
+    const v2, 0x7f1214fe
 
     :goto_0
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setSummary(I)V
@@ -2119,7 +2119,7 @@
     goto :goto_0
 
     :cond_1
-    const-string v2, "hac_enabled=OFF"
+    const-string v2, "HACSetting=OFF"
 
     :goto_0
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setParameters(Ljava/lang/String;)V
@@ -2357,25 +2357,25 @@
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f030054
+    const v2, 0x7f030056
 
     const-string v3, "screen_reader_category"
 
     invoke-direct {v0, v3, v2}, Lcom/android/settings/accessibility/AccessibilitySettings;->initializePreBundledServicesMapFromArray(Ljava/lang/String;I)V
 
-    const v2, 0x7f030051
+    const v2, 0x7f030053
 
     const-string v4, "audio_and_captions_category"
 
     invoke-direct {v0, v4, v2}, Lcom/android/settings/accessibility/AccessibilitySettings;->initializePreBundledServicesMapFromArray(Ljava/lang/String;I)V
 
-    const v2, 0x7f030052
+    const v2, 0x7f030054
 
     const-string v5, "display_category"
 
     invoke-direct {v0, v5, v2}, Lcom/android/settings/accessibility/AccessibilitySettings;->initializePreBundledServicesMapFromArray(Ljava/lang/String;I)V
 
-    const v2, 0x7f030053
+    const v2, 0x7f030055
 
     const-string v6, "interaction_control_category"
 
@@ -2860,23 +2860,23 @@
 
     move/from16 v19, v14
 
-    const v1, 0x7f030050
+    const v1, 0x7f030052
 
     invoke-direct {v0, v3, v1}, Lcom/android/settings/accessibility/AccessibilitySettings;->updateCategoryOrderFromArray(Ljava/lang/String;I)V
 
-    const v1, 0x7f03004d
+    const v1, 0x7f03004f
 
     move-object/from16 v2, v22
 
     invoke-direct {v0, v2, v1}, Lcom/android/settings/accessibility/AccessibilitySettings;->updateCategoryOrderFromArray(Ljava/lang/String;I)V
 
-    const v1, 0x7f03004f
+    const v1, 0x7f030051
 
     move-object/from16 v2, v21
 
     invoke-direct {v0, v2, v1}, Lcom/android/settings/accessibility/AccessibilitySettings;->updateCategoryOrderFromArray(Ljava/lang/String;I)V
 
-    const v1, 0x7f03004e
+    const v1, 0x7f030050
 
     move-object/from16 v2, v20
 
@@ -2991,7 +2991,7 @@
 
     iget-object v3, p0, Lcom/android/settings/accessibility/AccessibilitySettings;->mToggleInversionPreference:Landroidx/preference/SwitchPreference;
 
-    const v4, 0x7f1214eb
+    const v4, 0x7f1214ec
 
     invoke-virtual {v3, v4}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 

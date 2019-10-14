@@ -1549,8 +1549,8 @@
     <string name="display_settings_title">디스플레이</string>
     <string name="display_summary">%1$s 동안 사용하지 않으면 절전 모드로 전환됩니다.</string>
     <string name="display_summary_example">10분 동안 사용하지 않으면 절전 모드로 전환</string>
-    <string name="display_summary_off">적응형 밝기가 꺼져 있습니다.</string>
-    <string name="display_summary_on">적응형 밝기가 켜져 있습니다.</string>
+    <string name="display_summary_off">자동 밝기 조정이 꺼져 있습니다.</string>
+    <string name="display_summary_on">자동 밝기 조정이 켜져 있습니다.</string>
     <string name="display_vr_pref_low_persistence">잔상 줄이기(권장)</string>
     <string name="display_vr_pref_off">깜박임 줄이기</string>
     <string name="display_vr_pref_title">기기가 VR 모드인 경우</string>
@@ -1775,6 +1775,7 @@
     <string name="failed_to_open_app_settings_toast">%1$s 설정을 열지 못했음</string>
     <string name="fcc_equipment_id">장비 ID</string>
     <string name="feature_flags_dashboard_title">기능 플래그</string>
+    <string name="feature_not_support_split_screen">이 기능은 분할 화면에서 지원되지 않습니다.</string>
     <string name="filter">필터</string>
     <string name="filter_all_apps">모든 앱</string>
     <string name="filter_apps_all">모든 앱</string>
@@ -2068,7 +2069,7 @@
     <string name="keywords_date_and_time">시계, 군사</string>
     <string name="keywords_default_apps">앱, 기본</string>
     <string name="keywords_default_browser">기본, 기본 브라우저</string>
-    <string name="keywords_default_links">기본</string>
+    <string name="keywords_default_links">기본 테마</string>
     <string name="keywords_default_payment_app">결제, 기본</string>
     <string name="keywords_default_phone_app">전화, 다이얼러, 기본</string>
     <string name="keywords_device_feedback">버그</string>
@@ -2890,7 +2891,7 @@
     <string name="oneplus_anti_misoperation_of_the_screen_touch_enable_title">포켓 모드</string>
     <string name="oneplus_aod_smart_display_calendar_event">달력 이벤트</string>
     <string name="oneplus_aod_smart_display_music_info">미디어 플레이어</string>
-    <string name="oneplus_aod_smart_display_title">스마트 디스플레이</string>
+    <string name="oneplus_aod_smart_display_title">상황별 정보</string>
     <string name="oneplus_app_alipay">Alipay</string>
     <string name="oneplus_app_display_compatibility">호환성 모드</string>
     <string name="oneplus_app_display_fullscreen">전체 화면 모드</string>
@@ -2928,7 +2929,7 @@
     <string name="oneplus_auto_disconect_the_ap">연결된 장치가 없으면 핫스팟은 5분 후에 자동으로 꺼집니다.</string>
     <string name="oneplus_auto_open_app_none">없음</string>
     <string name="oneplus_auto_open_app_other_applications">기타 응용 프로그램</string>
-    <string name="oneplus_auto_open_app_recommended">권장</string>
+    <string name="oneplus_auto_open_app_recommended">추천</string>
     <string name="oneplus_auto_open_specified_app">지정된 앱 자동으로 열기</string>
     <string name="oneplus_auto_play">자동 재생</string>
     <string name="oneplus_auto_play_summary">이어폰을 연결하면 자동으로 음악 재생 다시 시작</string>
@@ -3001,10 +3002,11 @@
     <string name="oneplus_connected_devices_count">%1$s개의 연결된 장치가 있습니다.</string>
     <string name="oneplus_connected_devices_dashboard_summary">NFC, 캐스트, 인쇄</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth 및 장치 연결</string>
-    <string name="oneplus_cpu">CPU</string>
+    <string name="oneplus_cpu">프로세서</string>
     <string name="oneplus_custom_time">사용자 지정 시간 범위</string>
     <string name="oneplus_customization">탐색 표시줄 사용자 지정</string>
     <string name="oneplus_customization_summary">길게 누르기, 두 번 탭</string>
+    <string name="oneplus_customization_summary_hide_navbar">길게 누르기, 두 번 탭, 탐색 표시줄 숨기기</string>
     <string name="oneplus_data_usage_control_title">데이터 사용량 제어</string>
     <string name="oneplus_dc_dimming_summary">DC 감광은 화면의 회로 전력을 변경하여 화면 밝기를 조정합니다. 사용 설정하면 낮은 밝기에서 화면 깜박임이 감소합니다. 그러나 이로 인해 비정상적인 색상이 나타나는 경우가 있을 수 있습니다.</string>
     <string name="oneplus_dc_dimming_title">DC 감광</string>
@@ -3158,7 +3160,7 @@
     <string name="oneplus_forum_award_title">상</string>
     <string name="oneplus_fullscreen_back_guide_summary">화면의 왼쪽 하단 또는 오른쪽 하단 가장자리에서 안쪽으로 살짝 밉니다.</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">화면 하단의 왼쪽 또는 오른쪽에서 위로 살짝 밉니다.</string>
-    <string name="oneplus_fullscreen_back_guide_title">뒤로가기</string>
+    <string name="oneplus_fullscreen_back_guide_title">뒤로</string>
     <string name="oneplus_fullscreen_disable_this_feature">탐색 제스처를 사용하는 경우 이 기능을 사용할 수 없습니다.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"뒤로 버튼을 대체하는 제스처를 사용해 보세요.
 화면 하단의 왼쪽 또는 오른쪽에서 위로 살짝 미세요."</string>
@@ -3264,6 +3266,10 @@
     <string name="oneplus_intelligently_select_best_wifi">최상의 Wi‑Fi를 지능적으로 선택</string>
     <string name="oneplus_intelligently_select_best_wifi_summary">Wi‑Fi 네트워크의 연결 및 신호 강도를 감지하고 분석하여 최상의 Wi‑Fi 네트워크를 지능적으로 선택 및 연결</string>
     <string name="oneplus_intensely">강하게</string>
+    <string name="oneplus_is_turn_on_feature">이 기능을 켤까요?</string>
+    <string name="oneplus_is_turn_on_feature_summary">"켜면 다음 상황이 가끔 발생할 수 있습니다.
+1. 화면 디스플레이의 일부 영역이 비정상적입니다.
+2. 자동 밝기 조정이 제대로 작동하지 않습니다."</string>
     <string name="oneplus_lab_dislike">싫어요</string>
     <string name="oneplus_lab_features">실험실 기능</string>
     <string name="oneplus_lab_feedback_toast">피드백을 보내주셔서 감사합니다!</string>
@@ -3361,7 +3367,7 @@
     <string name="oneplus_notification_channel_summary_low">소리 또는 진동이 없는 덜 중요한 알림</string>
     <string name="oneplus_notification_dialog_never_mode">안 함</string>
     <string name="oneplus_notification_dialog_ringtone">알림 벨소리</string>
-    <string name="oneplus_notification_dialog_ringtone_mode">벨소리 모드에서만</string>
+    <string name="oneplus_notification_dialog_ringtone_mode">Only in ring mode</string>
     <string name="oneplus_notification_dialog_ringtone_silent_mode">항상</string>
     <string name="oneplus_notification_dots">알림 점</string>
     <string name="oneplus_notification_instrucitons">사용자 튜토리얼</string>
@@ -3526,10 +3532,10 @@
     <string name="oneplus_screen_refresh_rate_auto_summary">더 높은 새로 고침 빈도로 매우 부드러움</string>
     <string name="oneplus_screen_refresh_rate_info">화면 새로 고침 빈도가 높을수록 화면 환경이 부드럽습니다. 90Hz에서 새로 고침 빈도는 시나리오에 따라 동적으로 전환됩니다.</string>
     <string name="oneplus_screen_resolution_adjust">해상도</string>
-    <string name="oneplus_screen_resolution_adjust_1080p_summary">탁월한 디스플레이, 낮은 전력 소비(2340×1080)</string>
+    <string name="oneplus_screen_resolution_adjust_1080p_summary">Excellent display, lower power consumption (2340×1080)</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch">자동 전환</string>
     <string name="oneplus_screen_resolution_adjust_intelligent_switch_summary">자동으로 적절한 해상도로 전환</string>
-    <string name="oneplus_screen_resolution_adjust_other_summary">최대 선명도, 전력 소비 증가(3120×1440)</string>
+    <string name="oneplus_screen_resolution_adjust_other_summary">Maximum clarity, increased power consumption (3120×1440)</string>
     <string name="oneplus_search_keyword_about_settings">장치 이름, Android 버전, 빌드 번호, 모델, CPU, 저장소, RAM, ROM, 카메라, 픽셀, 화면</string>
     <string name="oneplus_search_keyword_accent_color">색상</string>
     <string name="oneplus_search_keyword_app_lock">잠금, PIN, 비밀번호</string>
@@ -3568,7 +3574,8 @@
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">방해 금지, 인터럽트, 중단, 브레이크, 모드</string>
     <string name="oneplus_search_keyword_swap_navkeys">버튼 바꾸기</string>
     <string name="oneplus_search_keyword_switch">전송, 데이터 마이그레이션</string>
-    <string name="oneplus_search_keyword_theme_settings">잠금 화면 사용자 지정, 배경 화면, 시계 스타일, 지문 애니메이션, Horizon light, 시스템 사용자 지정, 테마 컬러, 모양, 글꼴, 톤, 아이콘 팩</string>
+    <string name="oneplus_search_keyword_theme_settings">잠금 화면 사용자 지정, 배경 화면, 시계 스타일, 지문 애니메이션, Horizon light, 시스템 사용자 지정, 테마 컬러, 모양, 글꼴, 톤, 아이콘 팩, 조명, 몰입형 어둠, 강렬한 색조</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">잠금 화면 사용자 지정, 배경 화면, 시계 스타일, 지문 애니메이션, Horizon Light, 시스템 사용자 지정, 테마 컬러, 모양, 글꼴, 톤, 아이콘 팩, 조명, 몰입형 어둠, 강렬한 색조, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">스크린샷</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">알림, 환경, 프로그램, 개선</string>
@@ -3631,7 +3638,7 @@
     <string name="oneplus_smart_wifi_connection">스마트 Wi‑Fi 연결</string>
     <string name="oneplus_sms">SMS</string>
     <string name="oneplus_sms_and_vibration">SMS 벨소리 및 진동</string>
-    <string name="oneplus_snooze_options_title">풀다운 음영에서 알림을 다시 알림</string>
+    <string name="oneplus_snooze_options_title">알림 음영에서 알림을 다시 알림</string>
     <string name="oneplus_sound_and_vibrate">사운드 및 진동</string>
     <string name="oneplus_sound_settings_summary">방해 금지, 이어폰 모드</string>
     <string name="oneplus_sound_tuner">Dolby Atoms</string>
@@ -3643,7 +3650,7 @@
     <string name="oneplus_suspension_notice">헤즈업</string>
     <string name="oneplus_suspension_notice_summary">앱이 헤즈업 알림을 표시하도록 허용합니다.</string>
     <string name="oneplus_switch">OnePlus Switch</string>
-    <string name="oneplus_switch_resolution_kill_process_confirm">전환</string>
+    <string name="oneplus_switch_resolution_kill_process_confirm">Switch</string>
     <string name="oneplus_switch_resolution_kill_process_tips">해상도를 전환하면 일부 백그라운드 앱이 종료될 수 있습니다. 전환하시겠습니까?</string>
     <string name="oneplus_switch_screen_lock_type">화면 잠금 유형 전환 중입니다. 잠시만 기다려 주세요...</string>
     <string name="oneplus_system_data_summary">계정 정보, 연락처, 앱 데이터 포함</string>
@@ -3664,6 +3671,7 @@
     <string name="oneplus_theme_clock">시계 스타일</string>
     <string name="oneplus_theme_clock_snake_action">앰비언트 디스플레이 켜기</string>
     <string name="oneplus_theme_clock_snake_tip">이 기능은 앰비언트 디스플레이가 켜져 있을 때 사용할 수 있습니다.</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
     <string name="oneplus_theme_drop_summary">수정 사항을 취소하시겠습니까?</string>
     <string name="oneplus_theme_drop_title">편집 모드 끝내기</string>
     <string name="oneplus_theme_entrance_summary">배경 화면, 테마 컬러, 글꼴, 톤</string>
@@ -3677,10 +3685,11 @@
     <string name="oneplus_theme_lock_screen_customization">잠금 화면 사용자 지정</string>
     <string name="oneplus_theme_preset">프리셋 테마</string>
     <string name="oneplus_theme_preset_color">강렬한 색조</string>
-    <string name="oneplus_theme_preset_dark">미묘한 느낌의 어둠</string>
+    <string name="oneplus_theme_preset_dark">몰입형 어둠</string>
     <string name="oneplus_theme_preset_light">조명</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
-    <string name="oneplus_theme_preset_summary">프리셋 테마에는 다양한 배경 화면, 테마 컬러, 톤 등이 있습니다.</string>
+    <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
+    <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
     <string name="oneplus_theme_shape">모양</string>
     <string name="oneplus_theme_shape_effect_round">원형</string>
     <string name="oneplus_theme_shape_effect_round_rectangle">둥근 직사각형</string>
@@ -3691,7 +3700,7 @@
     <string name="oneplus_theme_tone">톤</string>
     <string name="oneplus_theme_tone_effect_color">컬러풀</string>
     <string name="oneplus_theme_tone_effect_dark">어둡게</string>
-    <string name="oneplus_theme_tone_effect_light">밝게</string>
+    <string name="oneplus_theme_tone_effect_light">약하게</string>
     <string name="oneplus_theme_tone_effect_title">톤 선택</string>
     <string name="oneplus_theme_wallpaper">배경 화면</string>
     <string name="oneplus_three_screenshots_enable_summary">화면에서 세 손가락으로 살짝 밀어 스크린샷 생성</string>
@@ -3707,7 +3716,7 @@
     <string name="oneplus_tools_summary_U30">게임 모드, 포켓 모드, 예약된 전원 켜기/끄기</string>
     <string name="oneplus_tools_summary_no_gamingmode">앱 락커, 병렬 앱</string>
     <string name="oneplus_tools_title">유틸리티</string>
-    <string name="oneplus_top_level_accounts_summary">OnePlus 계정, 기타 계정</string>
+    <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">기본 앱, 권한</string>
     <string name="oneplus_top_level_buttons_and_gestures_summary">알림 슬라이더, 탐색 표시줄 및 제스처</string>
     <string name="oneplus_top_level_cloud_h2_summary">클라우드로 데이터 동기화, 휴대폰 찾기</string>
@@ -3721,7 +3730,9 @@
     <string name="oneplus_top_level_sound_summary">방해 금지, 이어폰 모드, 벨소리</string>
     <string name="oneplus_top_level_system_summary">언어 및 키보드, 시간, 재설정, 시스템 업데이트</string>
     <string name="oneplus_touch_vibrate">터치 진동</string>
-    <string name="oneplus_turn_off_time">끝</string>
+    <string name="oneplus_turn_off_time">종료</string>
+    <string name="oneplus_turn_on_feature_cancel">취소</string>
+    <string name="oneplus_turn_on_feature_ok">켜기</string>
     <string name="oneplus_turn_on_time">시작</string>
     <string name="oneplus_uninstatll_multi_app_msg">제거하면 병렬 앱 내의 모든 데이터가 지워집니다. 제거하시겠습니까?</string>
     <string name="oneplus_uninstatll_multi_app_title">병렬 %1$s</string>
@@ -3788,6 +3799,7 @@
     <string name="op_china_mobile">CMCC</string>
     <string name="op_china_telecom">CTCC</string>
     <string name="op_china_unicom">CUCC</string>
+    <string name="op_choose_lock_generic_title">먼저 백업 화면 잠금 선택</string>
     <string name="op_cloud_service_summary">연락처, 노트, 사진 등을 동기화합니다.</string>
     <string name="op_cloud_service_title">클라우드 서비스</string>
     <string name="op_confirm_enable_oem_unlock_text">경고: 장치 보호 및 인증 기능(예: 지문 인식 결제 및 고급 DRM 키)은 OEM 잠금 해제 중에 작동하지 않을 수 있습니다.</string>
@@ -3799,13 +3811,21 @@
     <string name="op_default_apps_summary">홈, 브라우저</string>
     <string name="op_default_luncher_title">홈 앱</string>
     <string name="op_dnd_summary">방해 금지</string>
+    <string name="op_face_unlock_set_unlock_password">얼굴 잠금 해제 + 비밀번호</string>
+    <string name="op_face_unlock_set_unlock_pattern">얼굴 잠금 해제 + 패턴</string>
+    <string name="op_face_unlock_set_unlock_pin">얼굴 잠금 해제 + PIN</string>
+    <string name="op_face_unlock_skip_face">얼굴 잠금 해제 없이 계속</string>
     <string name="op_failed_to_get_data">데이터를 검색하지 못함</string>
     <string name="op_fetch_data_in_process">로드 중</string>
     <string name="op_fragment">짧음</string>
+    <string name="op_gamespace">게임 공간</string>
     <string name="op_high_power_app_manager">전원-부족 앱 관리자</string>
     <string name="op_light_mode_title">밝게</string>
     <string name="op_linked_launch_summary">연결될 수 있는 앱 관리가 백그라운드에서 실행됩니다.</string>
     <string name="op_linked_launch_title">앱 자동 실행</string>
+    <string name="op_lockpassword_choose_your_password_header_for_face">얼굴 잠금 해제를 사용하려면 비밀번호를 설정하세요.</string>
+    <string name="op_lockpassword_choose_your_pattern_header_for_face">얼굴 잠금 해제를 사용하려면 패턴을 설정하세요.</string>
+    <string name="op_lockpassword_choose_your_pin_header_for_face">얼굴 잠금 해제를 사용하려면 PIN을 설정하세요.</string>
     <string name="op_not_disturb">방해 금지 기본 설정</string>
     <string name="op_not_disturb_summary">알람을 제외하고 통화 및 알림이 음소거되고 진동이 꺼집니다.</string>
     <string name="op_oneplus_roaming_summary">글로벌 인터넷 액세스 서비스 제공</string>

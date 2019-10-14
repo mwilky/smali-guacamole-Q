@@ -64,7 +64,7 @@
 
     const v3, 0x7f120b00
 
-    const v4, 0x7f12190e
+    const v4, 0x7f12190f
 
     const-string v5, "android.net.conn.PROMPT_PARTIAL_CONNECTIVITY"
 
@@ -109,7 +109,7 @@
 
     iput-object v1, v0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
-    const v1, 0x7f1210c4
+    const v1, 0x7f1210c5
 
     invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiNoInternetDialog;->getString(I)Ljava/lang/String;
 

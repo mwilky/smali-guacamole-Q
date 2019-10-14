@@ -271,7 +271,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a0756
+    const v0, 0x7f0a0757
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -279,7 +279,7 @@
 
     check-cast v0, Landroid/view/TextureView;
 
-    const v1, 0x7f0a0753
+    const v1, 0x7f0a0754
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -289,7 +289,7 @@
 
     iput-object v1, p0, Lcom/oneplus/settings/widget/OPVideoPreference;->imageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0a074f
+    const v1, 0x7f0a0750
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

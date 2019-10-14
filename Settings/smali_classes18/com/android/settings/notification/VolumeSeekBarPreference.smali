@@ -353,7 +353,7 @@
 
     iput-object v0, p0, Lcom/android/settings/notification/VolumeSeekBarPreference;->mIconView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0696
+    const v0, 0x7f0a0697
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
