@@ -39,6 +39,14 @@
     return-void
 .end method
 
+.method static synthetic lambda$update$0(Lcom/oneplus/scene/OpSceneModeObserver$Callback;)V
+    .locals 0
+
+    invoke-interface {p0}, Lcom/oneplus/scene/OpSceneModeObserver$Callback;->onBrickModeChanged()V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method observe()V
@@ -98,7 +106,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     :cond_0
     const/4 v1, -0x2
@@ -121,7 +129,7 @@
 
     move-result v1
 
-    if-eq v1, v0, :cond_2
+    if-eq v1, v0, :cond_3
 
     iget-object v1, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->this$0:Lcom/oneplus/scene/OpSceneModeObserver;
 
@@ -181,6 +189,17 @@
     invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/phone/NavigationBarFragment;->onBrickModeChanged(Z)V
 
     :cond_2
+    iget-object v0, p0, Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;->this$0:Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-static {v0}, Lcom/oneplus/scene/OpSceneModeObserver;->access$300(Lcom/oneplus/scene/OpSceneModeObserver;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/oneplus/scene/-$$Lambda$OpSceneModeObserver$SettingsObserver$TUm0l-cGRNGDHGc16Oivsv0ulDQ;->INSTANCE:Lcom/oneplus/scene/-$$Lambda$OpSceneModeObserver$SettingsObserver$TUm0l-cGRNGDHGc16Oivsv0ulDQ;
+
+    invoke-static {v0, v1}, Lcom/android/systemui/util/Utils;->safeForeach(Ljava/util/List;Ljava/util/function/Consumer;)V
+
+    :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

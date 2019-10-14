@@ -539,65 +539,76 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     iget-boolean v1, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->enabled:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    return-void
+    sget-boolean p1, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_1
+
+    iget-object p0, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
+
+    const-string p1, "handleUpdateState: skipping update."
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iput-boolean v2, p0, Lcom/android/systemui/qs/tiles/WifiTile;->mExpectDisabled:Z
+    return-void
 
     :cond_2
+    iput-boolean v2, p0, Lcom/android/systemui/qs/tiles/WifiTile;->mExpectDisabled:Z
+
+    :cond_3
     sget-object v1, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->ARG_SHOW_TRANSIENT_ENABLING:Ljava/lang/Object;
 
     const/4 v3, 0x1
 
-    if-ne p2, v1, :cond_3
+    if-ne p2, v1, :cond_4
 
     move p2, v3
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     move p2, v2
 
     :goto_0
     iget-boolean v1, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->enabled:Z
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget v1, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->wifiSignalIconId:I
 
-    if-lez v1, :cond_4
+    if-lez v1, :cond_5
 
     iget-object v1, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->ssid:Ljava/lang/String;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     move v1, v3
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     move v1, v2
 
     :goto_1
     iget v4, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->wifiSignalIconId:I
 
-    if-lez v4, :cond_5
+    if-lez v4, :cond_6
 
     iget-object v4, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->ssid:Ljava/lang/String;
 
-    if-nez v4, :cond_5
+    if-nez v4, :cond_6
 
     move v4, v3
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     move v4, v2
 
     :goto_2
@@ -605,17 +616,17 @@
 
     iget-boolean v6, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->enabled:Z
 
-    if-eq v5, v6, :cond_6
+    if-eq v5, v6, :cond_7
 
     move v5, v3
 
     goto :goto_3
 
-    :cond_6
+    :cond_7
     move v5, v2
 
     :goto_3
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_8
 
     iget-object v5, p0, Lcom/android/systemui/qs/tiles/WifiTile;->mDetailAdapter:Lcom/android/systemui/qs/tiles/WifiTile$WifiDetailAdapter;
 
@@ -627,10 +638,10 @@
 
     invoke-virtual {p0, v5}, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->fireToggleStateChanged(Z)V
 
-    :cond_7
+    :cond_8
     iget-object v5, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->slash:Lcom/android/systemui/plugins/qs/QSTile$SlashState;
 
-    if-nez v5, :cond_8
+    if-nez v5, :cond_9
 
     new-instance v5, Lcom/android/systemui/plugins/qs/QSTile$SlashState;
 
@@ -644,25 +655,25 @@
 
     iput v6, v5, Lcom/android/systemui/plugins/qs/QSTile$SlashState;->rotation:F
 
-    :cond_8
+    :cond_9
     iget-object v5, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->slash:Lcom/android/systemui/plugins/qs/QSTile$SlashState;
 
     iput-boolean v2, v5, Lcom/android/systemui/plugins/qs/QSTile$SlashState;->isSlashed:Z
 
-    if-nez p2, :cond_a
+    if-nez p2, :cond_b
 
     iget-boolean v5, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->isTransient:Z
 
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_a
 
     goto :goto_4
 
-    :cond_9
+    :cond_a
     move v5, v2
 
     goto :goto_5
 
-    :cond_a
+    :cond_b
     :goto_4
     move v5, v3
 
@@ -681,20 +692,20 @@
 
     iput-boolean v3, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->dualTarget:Z
 
-    if-nez p2, :cond_c
+    if-nez p2, :cond_d
 
     iget-boolean p2, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->enabled:Z
 
-    if-eqz p2, :cond_b
+    if-eqz p2, :cond_c
 
     goto :goto_6
 
-    :cond_b
+    :cond_c
     move p2, v2
 
     goto :goto_7
 
-    :cond_c
+    :cond_d
     :goto_6
     move p2, v3
 
@@ -703,17 +714,17 @@
 
     iget-boolean p2, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->enabled:Z
 
-    if-eqz p2, :cond_d
+    if-eqz p2, :cond_e
 
     iget-boolean p2, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->activityIn:Z
 
-    if-eqz p2, :cond_d
+    if-eqz p2, :cond_e
 
     move p2, v3
 
     goto :goto_8
 
-    :cond_d
+    :cond_e
     move p2, v2
 
     :goto_8
@@ -721,17 +732,17 @@
 
     iget-boolean p2, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->enabled:Z
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_f
 
     iget-boolean p2, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->activityOut:Z
 
-    if-eqz p2, :cond_e
+    if-eqz p2, :cond_f
 
     move p2, v3
 
     goto :goto_9
 
-    :cond_e
+    :cond_f
     move p2, v2
 
     :goto_9
@@ -749,7 +760,7 @@
 
     sget-boolean v7, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v7, :cond_f
+    if-eqz v7, :cond_10
 
     iget-object v7, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
 
@@ -789,14 +800,14 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_f
+    :cond_10
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isUSS()Z
 
     move-result v7
 
-    if-eqz v7, :cond_14
+    if-eqz v7, :cond_15
 
-    if-eqz v5, :cond_10
+    if-eqz v5, :cond_11
 
     sget v4, Lcom/android/systemui/R$drawable;->op_ic_signal_wifi_transient_animation:I
 
@@ -816,10 +827,10 @@
 
     goto/16 :goto_a
 
-    :cond_10
+    :cond_11
     iget-boolean v5, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-nez v5, :cond_11
+    if-nez v5, :cond_12
 
     iget-object v4, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->slash:Lcom/android/systemui/plugins/qs/QSTile$SlashState;
 
@@ -845,8 +856,8 @@
 
     goto/16 :goto_a
 
-    :cond_11
-    if-eqz v1, :cond_12
+    :cond_12
+    if-eqz v1, :cond_13
 
     iget v4, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->wifiSignalIconId:I
 
@@ -866,8 +877,8 @@
 
     goto/16 :goto_a
 
-    :cond_12
-    if-eqz v4, :cond_13
+    :cond_13
+    if-eqz v4, :cond_14
 
     sget v4, Lcom/android/systemui/R$drawable;->op_ic_qs_wifi_disconnected:I
 
@@ -887,7 +898,7 @@
 
     goto/16 :goto_a
 
-    :cond_13
+    :cond_14
     sget v4, Lcom/oneplus/systemui/statusbar/policy/OpWifiIcons;->OP_QS_WIFI_NO_NETWORK:I
 
     invoke-static {v4}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
@@ -906,8 +917,8 @@
 
     goto :goto_a
 
-    :cond_14
-    if-eqz v5, :cond_15
+    :cond_15
+    if-eqz v5, :cond_16
 
     sget v4, Lcom/android/systemui/R$drawable;->op_ic_signal_wifi_transient_animation:I
 
@@ -927,10 +938,10 @@
 
     goto :goto_a
 
-    :cond_15
+    :cond_16
     iget-boolean v5, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-nez v5, :cond_16
+    if-nez v5, :cond_17
 
     iget-object v4, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->slash:Lcom/android/systemui/plugins/qs/QSTile$SlashState;
 
@@ -956,8 +967,8 @@
 
     goto :goto_a
 
-    :cond_16
-    if-eqz v1, :cond_17
+    :cond_17
+    if-eqz v1, :cond_18
 
     iget v4, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->wifiSignalIconId:I
 
@@ -977,8 +988,8 @@
 
     goto :goto_a
 
-    :cond_17
-    if-eqz v4, :cond_18
+    :cond_18
+    if-eqz v4, :cond_19
 
     sget v4, Lcom/android/systemui/R$drawable;->op_p_ic_qs_wifi_disconnected:I
 
@@ -998,7 +1009,7 @@
 
     goto :goto_a
 
-    :cond_18
+    :cond_19
     sget v4, Lcom/android/systemui/statusbar/policy/WifiIcons;->QS_WIFI_NO_NETWORK:I
 
     invoke-static {v4}, Lcom/android/systemui/qs/tileimpl/QSTileImpl$ResourceIcon;->get(I)Lcom/android/systemui/plugins/qs/QSTile$Icon;
@@ -1018,7 +1029,7 @@
     :goto_a
     sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v4, :cond_19
+    if-eqz v4, :cond_1a
 
     iget-object v4, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->TAG:Ljava/lang/String;
 
@@ -1026,11 +1037,27 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "handleUpdateState: label="
+    const-string v7, "handleUpdateState: state="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v7, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->state:I
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, ", label="
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v7, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->label:Ljava/lang/CharSequence;
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v7, ", secondaryLabel="
+
+    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v7, p1, Lcom/android/systemui/plugins/qs/QSTile$State;->secondaryLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1048,7 +1075,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_19
+    :cond_1a
     iget-object v4, p0, Lcom/android/systemui/qs/tileimpl/QSTileImpl;->mContext:Landroid/content/Context;
 
     sget v5, Lcom/android/systemui/R$string;->quick_settings_wifi_label:I
@@ -1065,9 +1092,9 @@
 
     iget-boolean v5, p1, Lcom/android/systemui/plugins/qs/QSTile$BooleanState;->value:Z
 
-    if-eqz v5, :cond_1a
+    if-eqz v5, :cond_1b
 
-    if-eqz v1, :cond_1a
+    if-eqz v1, :cond_1b
 
     iget-object v1, v0, Lcom/android/systemui/qs/tiles/WifiTile$CallbackInfo;->wifiSignalContentDescription:Ljava/lang/String;
 
@@ -1089,7 +1116,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1a
+    if-nez v0, :cond_1b
 
     invoke-virtual {p2, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1097,7 +1124,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuffer;
 
-    :cond_1a
+    :cond_1b
     invoke-virtual {p2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object p2

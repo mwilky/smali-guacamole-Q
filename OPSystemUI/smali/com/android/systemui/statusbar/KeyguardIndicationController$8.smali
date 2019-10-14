@@ -59,7 +59,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_4
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
@@ -78,7 +78,7 @@
 
     const/4 v3, 0x4
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, v0, :cond_3
 
     const-string p1, "MSG_PLAY_FAST_CHARGE_ANIMATION"
 
@@ -116,8 +116,17 @@
 
     move-result-object p1
 
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$1000(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/graphics/drawable/AnimationDrawable;
+
+    move-result-object p1
+
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
+    :cond_2
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$8;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     invoke-static {p0}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$1100(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/os/Handler;
@@ -130,8 +139,8 @@
 
     goto :goto_0
 
-    :cond_2
-    if-ne p1, v3, :cond_3
+    :cond_3
+    if-ne p1, v3, :cond_4
 
     const-string p1, "MSG_PLAY_FADE_OUT_ANIMATION"
 
@@ -143,7 +152,7 @@
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
 
-    :cond_3
+    :cond_4
     :goto_0
     return-void
 .end method

@@ -48,7 +48,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Landroid/content/Context;)V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,17 +58,17 @@
 
     iput-boolean v0, p0, Lcom/android/systemui/assist/AssistManager;->mIsPowerLongPressWithGoogleAssistant:Z
 
-    new-instance v0, Lcom/android/systemui/assist/AssistManager$1;
+    new-instance v1, Lcom/android/systemui/assist/AssistManager$1;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/assist/AssistManager$1;-><init>(Lcom/android/systemui/assist/AssistManager;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/assist/AssistManager$1;-><init>(Lcom/android/systemui/assist/AssistManager;)V
 
-    iput-object v0, p0, Lcom/android/systemui/assist/AssistManager;->mShowCallback:Lcom/android/internal/app/IVoiceInteractionSessionShowCallback;
+    iput-object v1, p0, Lcom/android/systemui/assist/AssistManager;->mShowCallback:Lcom/android/internal/app/IVoiceInteractionSessionShowCallback;
 
-    new-instance v0, Lcom/android/systemui/assist/AssistManager$2;
+    new-instance v1, Lcom/android/systemui/assist/AssistManager$2;
 
-    invoke-direct {v0, p0}, Lcom/android/systemui/assist/AssistManager$2;-><init>(Lcom/android/systemui/assist/AssistManager;)V
+    invoke-direct {v1, p0}, Lcom/android/systemui/assist/AssistManager$2;-><init>(Lcom/android/systemui/assist/AssistManager;)V
 
-    iput-object v0, p0, Lcom/android/systemui/assist/AssistManager;->mHideRunnable:Ljava/lang/Runnable;
+    iput-object v1, p0, Lcom/android/systemui/assist/AssistManager;->mHideRunnable:Ljava/lang/Runnable;
 
     iput-object p2, p0, Lcom/android/systemui/assist/AssistManager;->mContext:Landroid/content/Context;
 
@@ -76,9 +76,9 @@
 
     iget-object p1, p0, Lcom/android/systemui/assist/AssistManager;->mContext:Landroid/content/Context;
 
-    const-string v0, "window"
+    const-string v1, "window"
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -94,11 +94,11 @@
 
     new-instance p1, Lcom/android/systemui/assist/AssistDisclosure;
 
-    new-instance v0, Landroid/os/Handler;
+    new-instance v1, Landroid/os/Handler;
 
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {p1, p2, v0}, Lcom/android/systemui/assist/AssistDisclosure;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
+    invoke-direct {p1, p2, v1}, Lcom/android/systemui/assist/AssistDisclosure;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     iput-object p1, p0, Lcom/android/systemui/assist/AssistManager;->mAssistDisclosure:Lcom/android/systemui/assist/AssistDisclosure;
 
@@ -110,13 +110,13 @@
 
     new-instance p1, Lcom/android/systemui/assist/AssistHandleBehaviorController;
 
-    iget-object v0, p0, Lcom/android/systemui/assist/AssistManager;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
+    iget-object v1, p0, Lcom/android/systemui/assist/AssistManager;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
 
-    new-instance v1, Landroid/os/Handler;
+    new-instance v2, Landroid/os/Handler;
 
-    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
+    invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {p1, p2, v0, v1}, Lcom/android/systemui/assist/AssistHandleBehaviorController;-><init>(Landroid/content/Context;Lcom/android/internal/app/AssistUtils;Landroid/os/Handler;)V
+    invoke-direct {p1, p2, v1, v2}, Lcom/android/systemui/assist/AssistHandleBehaviorController;-><init>(Landroid/content/Context;Lcom/android/internal/app/AssistUtils;Landroid/os/Handler;)V
 
     iput-object p1, p0, Lcom/android/systemui/assist/AssistManager;->mHandleController:Lcom/android/systemui/assist/AssistHandleBehaviorController;
 
@@ -124,9 +124,9 @@
 
     new-instance p1, Lcom/android/settingslib/applications/InterestingConfigChanges;
 
-    const v0, -0x7ffffc7c
+    const v1, -0x7ffffc7c
 
-    invoke-direct {p1, v0}, Lcom/android/settingslib/applications/InterestingConfigChanges;-><init>(I)V
+    invoke-direct {p1, v1}, Lcom/android/settingslib/applications/InterestingConfigChanges;-><init>(I)V
 
     iput-object p1, p0, Lcom/android/systemui/assist/AssistManager;->mInterestingConfigChanges:Lcom/android/settingslib/applications/InterestingConfigChanges;
 
@@ -140,13 +140,7 @@
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/assist/AssistManager;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    invoke-static {}, Landroid/app/ActivityManager;->isLowRamDeviceStatic()Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    iput-boolean p1, p0, Lcom/android/systemui/assist/AssistManager;->mShouldEnableOrb:Z
+    iput-boolean v0, p0, Lcom/android/systemui/assist/AssistManager;->mShouldEnableOrb:Z
 
     new-instance p1, Lcom/android/systemui/assist/ui/DefaultUiController;
 

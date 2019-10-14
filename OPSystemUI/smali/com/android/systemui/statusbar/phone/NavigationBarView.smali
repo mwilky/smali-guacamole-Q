@@ -88,6 +88,8 @@
 
 .field private mHeadsUpManager:Lcom/android/systemui/statusbar/policy/HeadsUpManager;
 
+.field private mHideNavBar:Z
+
 .field private mHomeButtonBounds:Landroid/graphics/Rect;
 
 .field private mHomeDefaultIcon:Lcom/android/systemui/statusbar/policy/KeyButtonDrawable;
@@ -294,6 +296,8 @@
     iput-boolean p2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mIsCustomNavBar:Z
 
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mIsInBrickMode:Z
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mHideNavBar:Z
 
     new-instance p2, Lcom/android/systemui/statusbar/phone/NavigationBarView$1;
 
@@ -644,6 +648,20 @@
     move-result p1
 
     iput p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->COLOR_KEY_TRANSPARENT:I
+
+    const-class p1, Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-static {p1}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oneplus/scene/OpSceneModeObserver;
+
+    invoke-virtual {p1}, Lcom/oneplus/scene/OpSceneModeObserver;->isInBrickMode()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mIsInBrickMode:Z
 
     return-void
 .end method
@@ -2134,7 +2152,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "updateButtonColor buttonColor: "
+    const-string v1, "updateButtonColor buttonColor=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2144,7 +2162,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", rippleColor: "
+    const-string v1, ", rippleColor=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2154,7 +2172,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", force: "
+    const-string v1, ", force="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5358,6 +5376,8 @@
 .method public updateNavButtonIcon(Z)V
     .locals 1
 
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mHideNavBar:Z
+
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->getNavButton()Lcom/android/systemui/statusbar/phone/ButtonDispatcher;
 
     move-result-object v0
@@ -5439,6 +5459,10 @@
     invoke-virtual {v4, v3}, Lcom/android/systemui/statusbar/phone/ButtonDispatcher;->setImageDrawable(Lcom/android/systemui/statusbar/policy/KeyButtonDrawable;)V
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->updateRecentsIcon()V
+
+    iget-boolean v3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mHideNavBar:Z
+
+    invoke-virtual {p0, v3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->updateNavButtonIcon(Z)V
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mContextualButtonGroup:Lcom/android/systemui/statusbar/phone/ContextualButtonGroup;
 
@@ -5770,6 +5794,32 @@
 
     invoke-direct {p0, v1}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->setUpSwipeUpOnboarding(Z)V
 
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setHaptic "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    xor-int/lit8 v2, v0, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "StatusBar/NavBarView"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-static {}, Lcom/android/systemui/shared/system/WindowManagerWrapper;->getInstance()Lcom/android/systemui/shared/system/WindowManagerWrapper;
 
     move-result-object v1
@@ -5806,66 +5856,6 @@
 
     move-result v0
 
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
-
-    const-string v2, "StatusBar/NavBarView"
-
-    const/high16 v3, 0x1000000
-
-    if-eqz v1, :cond_0
-
-    iget v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mDisabledFlags:I
-
-    and-int/2addr v1, v3
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "STATUS_BAR_DISABLE_RECENT: "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    sget-boolean v1, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
-
-    const/high16 v4, 0x200000
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mDisabledFlags:I
-
-    and-int/2addr v1, v4
-
-    if-eqz v1, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "STATUS_BAR_DISABLE_HOME: "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
     invoke-static {}, Lcom/android/systemui/shared/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/system/ActivityManagerWrapper;
@@ -5876,63 +5866,67 @@
 
     move-result v2
 
-    const/4 v5, 0x1
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v3, v2, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
+
+    iget v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mDisabledFlags:I
+
+    const/high16 v4, 0x1000000
+
+    and-int/2addr v2, v4
+
+    const/4 v4, 0x0
+
+    if-eqz v2, :cond_0
+
+    move v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v4
+
+    :goto_0
+    const/16 v5, 0x80
 
     invoke-virtual {v1, v5, v2, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
-    const/16 v2, 0x80
-
-    iget v6, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mDisabledFlags:I
-
-    and-int/2addr v3, v6
-
-    const/4 v6, 0x0
-
-    if-eqz v3, :cond_2
-
-    move v3, v5
-
-    goto :goto_0
-
-    :cond_2
-    move v3, v6
-
-    :goto_0
-    invoke-virtual {v1, v2, v3, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
-
     const/16 v2, 0x100
 
-    iget v3, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mDisabledFlags:I
+    iget v5, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mDisabledFlags:I
 
-    and-int/2addr v3, v4
+    const/high16 v6, 0x200000
 
-    if-eqz v3, :cond_3
+    and-int/2addr v5, v6
 
-    move v6, v5
+    if-eqz v5, :cond_1
 
-    :cond_3
-    invoke-virtual {v1, v2, v6, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
+    move v4, v3
+
+    :cond_1
+    invoke-virtual {v1, v2, v4, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mPanelView:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_2
 
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NavigationBarView;->mOverviewProxyService:Lcom/android/systemui/recents/OverviewProxyService;
 
-    const/4 v3, 0x4
+    const/4 v4, 0x4
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/PanelView;->isFullyExpanded()Z
 
     move-result v1
 
-    invoke-virtual {v2, v3, v1, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
+    invoke-virtual {v2, v4, v1, v0}, Lcom/android/systemui/recents/OverviewProxyService;->setSystemUiStateFlag(IZI)V
 
-    invoke-direct {p0, v5}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->changeHomeHandleAlpha(Z)V
+    invoke-direct {p0, v3}, Lcom/android/systemui/statusbar/phone/NavigationBarView;->changeHomeHandleAlpha(Z)V
 
-    :cond_4
+    :cond_2
     return-void
 .end method

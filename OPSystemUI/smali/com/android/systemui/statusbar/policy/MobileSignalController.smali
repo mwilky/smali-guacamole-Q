@@ -137,7 +137,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 36
+    .locals 41
 
     const/4 v0, 0x6
 
@@ -217,7 +217,17 @@
 
     const-string v35, "310020"
 
-    filled-new-array/range {v1 .. v35}, [Ljava/lang/String;
+    const-string v36, "23203"
+
+    const-string v37, "23207"
+
+    const-string v38, "26002"
+
+    const-string v39, "26201"
+
+    const-string v40, "23001"
+
+    filled-new-array/range {v1 .. v40}, [Ljava/lang/String;
 
     move-result-object v0
 

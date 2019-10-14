@@ -43,21 +43,52 @@
 
 # virtual methods
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView;
+    .locals 4
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/Float;
+    check-cast v0, Ljava/lang/Float;
 
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/phone/PanelView;->setExpandedHeightInternal(F)V
+    iget v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->val$endHeight:F
+
+    sub-float/2addr v0, v1
+
+    iget v2, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->val$startHeight:F
+
+    sub-float/2addr v2, v1
+
+    div-float/2addr v0, v2
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float v0, v1, v0
+
+    sub-float v2, v1, v0
+
+    iget-object v3, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView;
+
+    invoke-virtual {v3, v2}, Landroid/widget/FrameLayout;->setAlpha(F)V
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/PanelView;->setExpandedHeightInternal(F)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
@@ -69,19 +100,8 @@
 
     move-result p1
 
-    iget v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->val$endHeight:F
+    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/PanelView;->setExpandedHeightInternal(F)V
 
-    sub-float/2addr p1, v0
-
-    iget v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->val$startHeight:F
-
-    sub-float/2addr v1, v0
-
-    div-float/2addr p1, v1
-
-    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView$2;->this$0:Lcom/oneplus/systemui/statusbar/phone/OpNotificationPanelView;
-
-    invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->setAlpha(F)V
-
+    :goto_0
     return-void
 .end method

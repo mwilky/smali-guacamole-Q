@@ -3167,10 +3167,6 @@
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mIsSupportResolutionSwitch:Z
 
-    iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mIsSupportResolutionSwitch:Z
-
-    if-eqz v0, :cond_3
-
     const-class v0, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -3181,7 +3177,6 @@
 
     invoke-interface {v0, p0}, Lcom/android/systemui/statusbar/policy/CallbackController;->addCallback(Ljava/lang/Object;)V
 
-    :cond_3
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
@@ -3218,11 +3213,11 @@
 
     const/16 v1, 0x5a0
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_3
 
     goto :goto_1
 
-    :cond_4
+    :cond_3
     const/4 v2, 0x0
 
     :goto_1

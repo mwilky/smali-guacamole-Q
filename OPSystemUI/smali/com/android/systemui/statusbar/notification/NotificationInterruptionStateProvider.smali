@@ -1335,7 +1335,7 @@
     :cond_7
     iget p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->importance:I
 
-    const/4 p1, 0x4
+    const/4 p1, 0x3
 
     if-ge p0, p1, :cond_9
 

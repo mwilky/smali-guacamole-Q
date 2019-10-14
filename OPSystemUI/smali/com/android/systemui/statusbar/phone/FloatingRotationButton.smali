@@ -194,7 +194,21 @@
 
     move-result v3
 
-    sget v5, Lcom/android/systemui/R$drawable;->ic_sysbar_rotate_button:I
+    invoke-static {}, Lcom/oneplus/util/OpNavBarUtils;->isSupportCustomNavBar()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    sget p0, Lcom/android/systemui/R$drawable;->ic_sysbar_rotate_button2:I
+
+    goto :goto_0
+
+    :cond_0
+    sget p0, Lcom/android/systemui/R$drawable;->ic_sysbar_rotate_button:I
+
+    :goto_0
+    move v5, p0
 
     const/4 v6, 0x0
 

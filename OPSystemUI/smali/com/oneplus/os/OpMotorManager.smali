@@ -41,7 +41,7 @@
 
     if-nez p0, :cond_0
 
-    const-string p0, "MotorManager"
+    const-string p0, "OpMotorManager"
 
     const-string p1, "MotorManagerService was null"
 
@@ -56,7 +56,7 @@
 .method public downMotorBySystemApp(Ljava/lang/String;)I
     .locals 2
 
-    const-string v0, "MotorManager"
+    const-string v0, "OpMotorManager"
 
     const-string v1, "downMotorBySystemApp"
 
@@ -92,7 +92,26 @@
 
     invoke-static {v0, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    goto :goto_0
+
     :cond_0
+    const-string p1, "downMotor get motor service again"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "motor"
+
+    invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/android/os/IOpMotorManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/android/os/IOpMotorManager;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/os/OpMotorManager;->mService:Lcom/oneplus/android/os/IOpMotorManager;
+
+    :goto_0
     const/4 p0, 0x0
 
     return p0
@@ -101,18 +120,18 @@
 .method public getMotorStateBySystemApp()I
     .locals 2
 
-    const-string v0, "MotorManager"
+    const-string v0, "OpMotorManager"
 
     const-string v1, "getMotorStateBySystemApp"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/oneplus/os/OpMotorManager;->mService:Lcom/oneplus/android/os/IOpMotorManager;
+    iget-object v1, p0, Lcom/oneplus/os/OpMotorManager;->mService:Lcom/oneplus/android/os/IOpMotorManager;
 
-    if-eqz p0, :cond_0
+    if-eqz v1, :cond_0
 
     :try_start_0
-    invoke-interface {p0}, Lcom/oneplus/android/os/IOpMotorManager;->getMotorStateBySystemApp()I
+    invoke-interface {v1}, Lcom/oneplus/android/os/IOpMotorManager;->getMotorStateBySystemApp()I
 
     move-result p0
     :try_end_0
@@ -127,7 +146,26 @@
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    goto :goto_0
+
     :cond_0
+    const-string v1, "getMotor get motor service again"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, "motor"
+
+    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/oneplus/android/os/IOpMotorManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/android/os/IOpMotorManager;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oneplus/os/OpMotorManager;->mService:Lcom/oneplus/android/os/IOpMotorManager;
+
+    :goto_0
     const/16 p0, -0xa
 
     return p0
@@ -136,7 +174,7 @@
 .method public upMotorBySystemApp(Ljava/lang/String;)I
     .locals 2
 
-    const-string v0, "MotorManager"
+    const-string v0, "OpMotorManager"
 
     const-string v1, "upMotorBySystemApp"
 
@@ -172,7 +210,26 @@
 
     invoke-static {v0, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
+    goto :goto_0
+
     :cond_0
+    const-string p1, "upMotor get motor service again"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "motor"
+
+    invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/oneplus/android/os/IOpMotorManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/android/os/IOpMotorManager;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oneplus/os/OpMotorManager;->mService:Lcom/oneplus/android/os/IOpMotorManager;
+
+    :goto_0
     const/4 p0, 0x0
 
     return p0

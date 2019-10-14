@@ -183,7 +183,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/android/systemui/R$dimen;->op_keyguard_slice_view_row_text_size:I
+    sget v1, Lcom/android/systemui/R$dimen;->op_owner_info_font_size:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

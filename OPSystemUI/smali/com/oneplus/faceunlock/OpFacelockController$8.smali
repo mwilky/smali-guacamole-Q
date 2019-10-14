@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/faceunlock/OpFacelockController;->updateKeyguardAlpha(IZ)V
+    value = Lcom/oneplus/faceunlock/OpFacelockController;->updateKeyguardAlpha(IZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -3104,34 +3104,7 @@
     .locals 18
 
     move-object/from16 v0, p0
-    
-    sget v2, Lcom/oneplus/aod/OpAodDisplayViewManager;->mPulseStatus:I
-	
-	const v4, 0x2
-	
-	if-ne v2, v4, :cond_stock
-	
-	sget v2, Lcom/oneplus/aod/OpAodDisplayViewManager;->mFingerprint:I
-	
-	if-nez v2, :cond_stock
 
-    iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-    
-    const v4, 0x8
-    
-    invoke-virtual {v2, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-    
-    iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-    
-    invoke-virtual {v2, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-    
-    iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconDim:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-    
-    invoke-virtual {v2, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-    
-    return-void    
-    
-    :cond_stock
     move/from16 v1, p1
 
     iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -3960,7 +3933,7 @@
 
     move-result-object p0
 
-    sget v2, Lcom/android/systemui/R$dimen;->oneplus_widget_label_font_size:I
+    sget v2, Lcom/android/systemui/R$dimen;->oneplus_contorl_text_size_body1:I
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -4573,7 +4546,7 @@
 .end method
 
 .method private shouldEnableHBM()Z
-    .locals 4
+    .locals 5
 
     iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsKeyguardDone:Z
 
@@ -4608,7 +4581,7 @@
 
     cmpl-float v0, v0, v3
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_e
 
     iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mShowOnWindow:Z
 
@@ -4659,7 +4632,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_d
 
     iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsKeyguardDone:Z
 
@@ -4673,7 +4646,7 @@
 
     if-eqz v0, :cond_4
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_4
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mPm:Landroid/os/PowerManager;
@@ -4764,26 +4737,64 @@
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_c
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
 
+    move-result v4
+
+    invoke-virtual {v0, v4}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isUserInLockdown(I)Z
+
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isUserInLockdown(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_9
+    if-eqz v0, :cond_9
 
     goto :goto_0
 
     :cond_9
-    return v3
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isUnlockingWithBiometricAllowed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    iget-boolean v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsKeyguardDone:Z
+
+    if-nez v0, :cond_b
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOwnerString:Ljava/lang/String;
+
+    invoke-direct {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->isKeyguard(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOwnerString:Ljava/lang/String;
+
+    const-string v0, "forceShow-keyguard"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_b
 
     :cond_a
+    const-string p0, "don\'t enable HBM due to boot device or biometrice doesn\'t allow"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_b
+    return v3
+
+    :cond_c
     :goto_0
     const-string p0, "don\'t enable HBM due to lockout"
 
@@ -4791,7 +4802,7 @@
 
     return v1
 
-    :cond_b
+    :cond_d
     :goto_1
     const-string p0, "don\'t enable HBM due to duraing fp wake and unlock"
 
@@ -4799,7 +4810,7 @@
 
     return v1
 
-    :cond_c
+    :cond_e
     :goto_2
     const-string p0, "don\'t enable HBM dim view is gone or not show on window"
 

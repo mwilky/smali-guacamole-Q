@@ -126,23 +126,19 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;->mState:Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable$ConstantState;
-
-    invoke-static {v2}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable$ConstantState;->access$500(Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable$ConstantState;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable;->mState:Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable$ConstantState;
-
-    invoke-static {v3}, Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable$ConstantState;->access$500(Lcom/android/systemui/statusbar/phone/LockscreenWallpaper$WallpaperDrawable$ConstantState;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+    invoke-virtual {v3}, Landroid/graphics/Rect;->height()I
 
     move-result v3
 

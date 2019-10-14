@@ -73,6 +73,41 @@
     return v0
 .end method
 
+.method public static getEditTheme()I
+    .locals 2
+
+    sget v0, Lcom/oneplus/util/ThemeColorUtils;->sCurrentTheme:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    sget v0, Lcom/android/systemui/R$style;->op_edit_theme_android:I
+
+    return v0
+
+    :cond_0
+    sget v0, Lcom/android/systemui/R$style;->op_edit_theme_android:I
+
+    return v0
+
+    :cond_1
+    sget v0, Lcom/android/systemui/R$style;->op_edit_theme_dark:I
+
+    return v0
+
+    :cond_2
+    sget v0, Lcom/android/systemui/R$style;->op_edit_theme_light:I
+
+    return v0
+.end method
+
 .method public static getPopTheme()I
     .locals 2
 

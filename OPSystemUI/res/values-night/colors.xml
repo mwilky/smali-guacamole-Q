@@ -21,12 +21,14 @@
     <color name="notification_guts_priority_button_content_color_selected">@color/GM2_blue_300</color>
     <color name="notification_guts_sub_text_color">@color/GM2_grey_300</color>
     <color name="notification_legacy_background_color">@android:color/notification_material_background_color</color>
-    <color name="notification_material_background_dimmed_color">#aa000000</color>
+    <color name="notification_material_background_color">#ff121212</color>
+    <color name="notification_material_background_dimmed_color">#ff121212</color>
     <color name="notification_primary_text_color">@android:color/notification_primary_text_color_dark</color>
     <color name="notification_ripple_untinted_color">#30ffffff</color>
     <color name="notification_section_clear_all_btn_color">@color/GM2_grey_500</color>
     <color name="notification_section_header_label_color">@color/GM2_grey_200</color>
     <color name="notification_shade_background_color">@color/GM2_grey_900</color>
+    <color name="op_dismiss_all_button_color">#ffffffff</color>
     <color name="op_qs_drag_handle_color">#ff424242</color>
     <color name="qs_customize_background">@color/GM2_grey_900</color>
     <color name="qs_customize_decoration">@color/GM2_grey_800</color>

@@ -376,6 +376,16 @@
     return-void
 .end method
 
+.method protected onMeasure(II)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    invoke-super {p0, p1, p1}, Landroid/widget/LinearLayout;->onMeasure(II)V
+
+    return-void
+.end method
+
 .method public setDecorColor(I)V
     .locals 0
 

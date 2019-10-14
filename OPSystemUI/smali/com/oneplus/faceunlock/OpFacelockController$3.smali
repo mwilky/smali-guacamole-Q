@@ -76,7 +76,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0, v0, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$1900(Lcom/oneplus/faceunlock/OpFacelockController;IZ)V
+    invoke-static {p0, v0, v0, v0}, Lcom/oneplus/faceunlock/OpFacelockController;->access$1900(Lcom/oneplus/faceunlock/OpFacelockController;IZZ)V
 
     return-void
 .end method

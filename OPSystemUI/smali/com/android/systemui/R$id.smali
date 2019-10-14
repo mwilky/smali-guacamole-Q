@@ -784,8 +784,6 @@
 
 .field public static final qs_icon_tag:I = 0x7f0a03c8
 
-.field public static final qs_navbar_scrim:I = 0x7f0a03ca
-
 .field public static final qs_slash_tag:I = 0x7f0a03cb
 
 .field public static final quick_qs_panel:I = 0x7f0a03cc

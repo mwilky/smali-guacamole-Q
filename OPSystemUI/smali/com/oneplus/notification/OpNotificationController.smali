@@ -1268,6 +1268,16 @@
 
     if-nez v1, :cond_2
 
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->getRow()Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->isContentHidden()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
     goto :goto_2
 
     :cond_2

@@ -410,6 +410,21 @@
     return v2
 
     :cond_5
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->isAttachedToWindow()Z
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
+    const-string p0, "NotifRemoteInputManager"
+
+    const-string p1, "activateRemoteInput, stop animation since RemoteInputView is not attached"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+
+    :cond_6
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getPrivateLayout()Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
     move-result-object v4
@@ -418,7 +433,7 @@
 
     move-result-object v4
 
-    if-ne v0, v4, :cond_6
+    if-ne v0, v4, :cond_7
 
     invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;->getPrivateLayout()Lcom/android/systemui/statusbar/notification/row/NotificationContentView;
 
@@ -432,7 +447,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_6
+    if-nez v4, :cond_7
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;->mCallback:Lcom/android/systemui/statusbar/NotificationRemoteInputManager$Callback;
 
@@ -440,14 +455,14 @@
 
     return v3
 
-    :cond_6
+    :cond_7
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p0
 
     instance-of v1, p1, Landroid/widget/TextView;
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_8
 
     move-object v1, p1
 
@@ -457,7 +472,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_7
+    if-eqz v4, :cond_8
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
@@ -485,7 +500,7 @@
 
     move-result p0
 
-    :cond_7
+    :cond_8
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
     move-result v1

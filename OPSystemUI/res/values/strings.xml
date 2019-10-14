@@ -287,7 +287,7 @@
     <string name="accessibility_zero_bars">Zero bars.</string>
     <string name="active_input_method_subtypes">Active input methods</string>
     <string name="activity_launch_on_secondary_display_failed_text">App does not support launch on secondary displays.</string>
-    <string name="activity_not_available">"App isn't available"</string>
+    <string name="activity_not_available">App is not available</string>
     <string name="activity_not_found">Application is not installed on your device</string>
     <string name="adb_keys_warning_message">Revoke access to USB debugging from all computers you’ve previously authorized?</string>
     <string name="adb_warning_message">USB debugging is intended for development purposes only. Use it to copy data between your computer and your device, install apps on your device without notification, and read log data.</string>
@@ -299,7 +299,7 @@
     <string name="alarm_template_far">on %1$s</string>
     <string name="allow_mock_location">Allow mock locations</string>
     <string name="allow_mock_location_summary">Allow mock locations</string>
-    <string name="allow_notification">Allow notification</string>
+    <string name="allow_notification">Allow notifications</string>
     <string name="always_use_accessory">Always open %1$s when %2$s is connected</string>
     <string name="always_use_device">Always open %1$s when %2$s is connected</string>
     <string name="animator_duration_scale_title">Animator duration scale</string>
@@ -1121,7 +1121,7 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="nav_bar_default">(default)</string>
     <string name="nav_bar_edge_panel">Navigation bar Edge Panel</string>
     <string name="nav_bar_guide_positive">GOT IT</string>
-    <string name="nav_bar_guide_title">Swipe up from the bottom to show the navigation bar. If you want to stop hiding navigation, please tap</string>
+    <string name="nav_bar_guide_title">Swipe up from the bottom to show the navigation bar. To stop hiding navigation, please tap here.</string>
     <string name="nav_bar_layout">Layout</string>
     <string name="next_button_label">Next</string>
     <string name="no_application">Nothing</string>
@@ -1268,10 +1268,10 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="overheat_dialog_purple_message">The phone will be powered off after 5 seconds</string>
     <string name="overheat_dialog_red_message">Will clear all application processes to lower the temperature</string>
     <string name="overheat_dialog_title">The temperature of your phone is too high</string>
-    <string name="overheat_notification_alert">The temperature of your phone is too high, and high power consumption functions are turned off to lower the temperature</string>
+    <string name="overheat_notification_alert">The temperature of your phone is too high, and high power consuming functions are turned off to lower the temperature</string>
     <string name="overheat_notification_resume">"The phone's temperature has been restored and the phone can be used normally"</string>
     <string name="overheat_notification_title_resume">"The phone's temperature has been restored"</string>
-    <string name="overheat_toast_content">The phone is in a high temperature state, it is not recommended to use this feature</string>
+    <string name="overheat_toast_content">temperature of the phone is too high</string>
     <string name="overlay_display_devices_title">Simulate secondary displays</string>
     <string name="overview">Overview</string>
     <string name="phone_hint">Swipe from icon for phone</string>
@@ -1352,8 +1352,8 @@ You're also connected to a VPN, which can monitor your network activity."</strin
     <string name="preference_summary_default_combination">%1$s / %2$s</string>
     <string name="prevent_view_title">Pocket mode is on</string>
     <string name="prevent_view_title_cancel">To activate your phone:</string>
-    <string name="prevent_view_top_tag_cancel">Please do not cover the blue area of your phone, and clean any dirt or dust on the blue area.</string>
-    <string name="prevent_view_top_tag_cancel2">Please follow the circles on the screen and tap on them to force quit pocket mode.</string>
+    <string name="prevent_view_top_tag_cancel">Do not cover the blue area of your phone, and clean any dirt or dust off of it.</string>
+    <string name="prevent_view_top_tag_cancel2">Follow the circles on the screen and tap them to force quit pocket mode</string>
     <string name="prevent_view_top_tag_numbuer1">"1. "</string>
     <string name="prevent_view_top_tag_numbuer2">"2. "</string>
     <string name="privacy_alert_application_name">Privacy Alerts</string>
@@ -1529,12 +1529,12 @@ Battery saver"</string>
     <string name="recents_deep_clean_dialog_checkbox_text">Do not show again</string>
     <string name="recents_deep_clean_dialog_message">Deep clean will clear all background processes, which may lead to unintended results. Some apps may stop working and may not receive notifications until you restart them. Please confirm.</string>
     <string name="recents_deep_clean_dialog_title">Caution</string>
-    <string name="recents_deep_clean_message">Kill all applications</string>
+    <string name="recents_deep_clean_message">Quit all applications</string>
     <string name="recents_deep_clean_option">Deep clear</string>
     <string name="recents_empty_no_apps_open">No applications open</string>
     <string name="recents_empty_recently_closed">Recently closed apps</string>
     <string name="recents_normal_clean_description">Clear task list and cache without clearing background processes.</string>
-    <string name="recents_normal_clean_option">Normal clear</string>
+    <string name="recents_normal_clean_option">Normal clearing</string>
     <string name="recents_option_note">You can change this in Setting -> Advanced.</string>
     <string name="recents_option_title">Which way do you prefer</string>
     <string name="recents_quick_scrub_onboarding">Drag right to quickly switch apps</string>

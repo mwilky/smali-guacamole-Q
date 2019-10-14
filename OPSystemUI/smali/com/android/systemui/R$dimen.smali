@@ -440,7 +440,9 @@
 
 .field public static final oneplus_contorl_layout_margin_left1:I = 0x7f070410
 
-.field public static final oneplus_widget_label_font_size:I = 0x7f0704aa
+.field public static final oneplus_contorl_layout_margin_left5:I = 0x7f070416
+
+.field public static final oneplus_contorl_text_size_body1:I = 0x7f07048f
 
 .field public static final op_aod_clock_analog_my_margin_top:I = 0x7f0704c4
 
@@ -523,8 +525,6 @@
 .field public static final op_keyguard_indication_padding_bottom_2k:I = 0x7f070529
 
 .field public static final op_keyguard_lockicon_margin_bottom:I = 0x7f07052a
-
-.field public static final op_keyguard_slice_view_row_text_size:I = 0x7f07052d
 
 .field public static final op_nav_home_handle_anim_restore:I = 0x7f07052e
 
@@ -831,8 +831,6 @@
 .field public static final widget_icon_padding:I = 0x7f070784
 
 .field public static final widget_icon_size:I = 0x7f070785
-
-.field public static final widget_label_font_size:I = 0x7f070786
 
 .field public static final wireless_charging_anim_battery_level_text_size_end:I = 0x7f07078d
 

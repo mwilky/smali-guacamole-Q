@@ -650,7 +650,7 @@
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_legacy_background_color">#ff1a1a1a</color>
     <color name="notification_list_shadow_top">#80000000</color>
-    <color name="notification_material_background_color">@android:color/notification_material_background_color</color>
+    <color name="notification_material_background_color">#ffffffff</color>
     <color name="notification_material_background_dark_color">#ff333333</color>
     <color name="notification_material_background_dimmed_color">#ccffffff</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
@@ -755,6 +755,7 @@
     <color name="op_button_material_disable_light">#1e000000</color>
     <color name="op_button_text">#ffffffff</color>
     <color name="op_design_snackbar_background_color">#ff323232</color>
+    <color name="op_dismiss_all_button_color">#8a000000</color>
     <color name="op_drop_down_item_selected_color_dark">#1affffff</color>
     <color name="op_drop_down_item_selected_color_light">#0f000000</color>
     <color name="op_error_color_material_dark">#ffff6e6e</color>

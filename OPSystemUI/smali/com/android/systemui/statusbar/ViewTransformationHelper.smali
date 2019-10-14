@@ -545,6 +545,11 @@
 .method public transformFrom(Lcom/android/systemui/statusbar/TransformableView;F)V
     .locals 4
 
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/ViewTransformationHelper;->mTransformedViews:Landroid/util/ArrayMap;
 
     invoke-virtual {v0}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
@@ -555,13 +560,13 @@
 
     move-result-object v0
 
-    :cond_0
+    :cond_1
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -577,7 +582,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     iget-object v3, p0, Lcom/android/systemui/statusbar/ViewTransformationHelper;->mCustomTransformations:Landroid/util/ArrayMap;
 
@@ -587,19 +592,19 @@
 
     check-cast v3, Lcom/android/systemui/statusbar/ViewTransformationHelper$CustomTransformation;
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-virtual {v3, v2, p1, p2}, Lcom/android/systemui/statusbar/ViewTransformationHelper$CustomTransformation;->transformFrom(Lcom/android/systemui/statusbar/notification/TransformState;Lcom/android/systemui/statusbar/TransformableView;F)Z
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/notification/TransformState;->recycle()V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -608,7 +613,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     invoke-virtual {v2, v1, p2}, Lcom/android/systemui/statusbar/notification/TransformState;->transformViewFrom(Lcom/android/systemui/statusbar/notification/TransformState;F)V
 
@@ -616,7 +621,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     invoke-virtual {v2, p2, p1}, Lcom/android/systemui/statusbar/notification/TransformState;->appear(FLcom/android/systemui/statusbar/TransformableView;)V
 
     :goto_1
@@ -624,7 +629,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 

@@ -1038,6 +1038,7 @@
     <style name="Keyguard.ImageButton.NumPadDelete" parent="@android:style/Widget.ImageButton">
         <item name="android:paddingBottom">11.0sp</item>
         <item name="android:src">@drawable/ic_backspace_black_24dp</item>
+        <item name="android:src">@drawable/ic_backspace_black_24dp</item>
         <item name="android:tint">@color/pin_delete_color</item>
         <item name="android:tintMode">src_in</item>
     </style>
@@ -3226,6 +3227,16 @@
         <item name="android:textSize">@dimen/oneplus_contorl_text_size_body1</item>
         <item name="android:textColor">?wallpaperTextColorSecondary</item>
     </style>
+    <style name="OverflowMenuStyleDark" parent="@android:style/Widget.Material.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/oneplus_contorl_bg_color_menu_dark</item>
+        <item name="android:dropDownHorizontalOffset">@dimen/qs_toolbar_menu_offset</item>
+        <item name="android:dropDownVerticalOffset">@dimen/oneplus_contorl_list_item_height_one_line1</item>
+    </style>
+    <style name="OverflowMenuStyleLight" parent="@android:style/Widget.Material.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/oneplus_contorl_bg_color_menu_light</item>
+        <item name="android:dropDownHorizontalOffset">@dimen/qs_toolbar_menu_offset</item>
+        <item name="android:dropDownVerticalOffset">@dimen/oneplus_contorl_list_item_height_one_line1</item>
+    </style>
     <style name="PasswordTheme" parent="@style/Theme.SystemUI">
         <item name="android:textColor">?wallpaperTextColor</item>
         <item name="android:colorControlNormal">?wallpaperTextColor</item>
@@ -3752,9 +3763,9 @@
         <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
     </style>
     <style name="TextAppearance.Keyguard.BottomArea" parent="@style/TextAppearance.Keyguard">
-        <item name="android:textSize">@dimen/oneplus_widget_label_font_size</item>
+        <item name="android:textAppearance">@style/oneplus_contorl_text_style_body1</item>
+        <item name="android:textSize">@dimen/oneplus_contorl_text_size_body1</item>
         <item name="android:textColor">?wallpaperTextColor</item>
-        <item name="android:maxLines">1</item>
     </style>
     <style name="TextAppearance.Keyguard.Secondary" parent="@style/TextAppearance.Keyguard">
         <item name="android:textSize">@dimen/widget_label_font_size</item>
@@ -3928,10 +3939,12 @@
     </style>
     <style name="TextAppearance.NotificationImportanceChannel" parent="@style/TextAppearance">
         <item name="android:textSize">@dimen/notification_importance_channel_text</item>
+        <item name="android:textSize">@dimen/notification_importance_channel_text</item>
         <item name="android:textColor">@color/notification_guts_header_text_color</item>
         <item name="android:fontFamily">@android:string/config_headlineFontFamilyMedium</item>
     </style>
     <style name="TextAppearance.NotificationImportanceChannelGroup" parent="@style/TextAppearance">
+        <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
         <item name="android:textSize">@dimen/notification_importance_channel_group_text</item>
         <item name="android:textColor">@color/notification_guts_sub_text_color</item>
         <item name="android:fontFamily">@android:string/config_headlineFontFamily</item>
@@ -5212,7 +5225,6 @@
     </style>
     <style name="edit_theme" parent="@style/qs_theme">
         <item name="android:colorBackground">?android:colorSecondary</item>
-        <item name="android:textColor">@color/oneplus_contorl_text_color_primary_light</item>
     </style>
     <style name="hybrid_notification">
         <item name="android:paddingStart">@android:dimen/notification_content_margin_start</item>
@@ -5351,6 +5363,21 @@
     <style name="op_car_mode_dock_animation">
         <item name="android:windowEnterAnimation">@anim/op_car_mode_dock_enter</item>
         <item name="android:windowExitAnimation">@anim/op_car_mode_dock_exit</item>
+    </style>
+    <style name="op_edit_theme_android" parent="@style/qs_theme">
+        <item name="android:colorBackground">?android:colorSecondary</item>
+        <item name="android:textColor">@color/oneplus_contorl_text_color_primary_dark</item>
+        <item name="android:actionOverflowMenuStyle">@style/OverflowMenuStyleDark</item>
+    </style>
+    <style name="op_edit_theme_dark" parent="@style/qs_theme">
+        <item name="android:colorBackground">?android:colorSecondary</item>
+        <item name="android:textColor">@color/oneplus_contorl_text_color_primary_dark</item>
+        <item name="android:actionOverflowMenuStyle">@style/OverflowMenuStyleDark</item>
+    </style>
+    <style name="op_edit_theme_light" parent="@style/qs_theme">
+        <item name="android:colorBackground">?android:colorSecondary</item>
+        <item name="android:textColor">@color/oneplus_contorl_text_color_primary_light</item>
+        <item name="android:actionOverflowMenuStyle">@style/OverflowMenuStyleLight</item>
     </style>
     <style name="op_widget_big">
         <item name="android:textSize">@dimen/widget_big_font_size</item>

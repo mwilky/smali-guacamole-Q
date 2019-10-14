@@ -57,8 +57,6 @@
 
 .field private mGoingToSleepVisibleNotOccluded:Z
 
-.field private mHandler:Landroid/os/Handler;
-
 .field private mINotificationManager:Landroid/app/INotificationManager;
 
 .field private mIsDocked:Z
@@ -183,12 +181,6 @@
     invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$3;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mHandler:Landroid/os/Handler;
 
     new-instance v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$7;
 
@@ -1108,9 +1100,9 @@
 .end method
 
 .method public hide(JJ)V
-    .locals 17
+    .locals 15
 
-    move-object/from16 v0, p0
+    move-object v0, p0
 
     const/4 v1, 0x0
 
@@ -1132,149 +1124,129 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lcom/android/systemui/statusbar/policy/KeyguardMonitorImpl;->notifyKeyguardState(ZZZ)V
 
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->launchPendingWakeupAction()V
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->launchPendingWakeupAction()V
 
-    iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mContext:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/android/keyguard/KeyguardUpdateMonitor;->needsSlowUnlockTransition()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const-wide/16 v2, 0x7d0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide/from16 v2, p3
-
-    :goto_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, -0x30
+
+    add-long v4, p1, v4
+
+    sub-long/2addr v4, v2
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v4
 
-    const-wide/16 v6, -0x30
+    iget-object v6, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    add-long v6, p1, v6
+    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/StatusBar;->isInLaunchTransition()Z
 
-    sub-long/2addr v6, v4
+    move-result v6
 
-    const-wide/16 v4, 0x0
+    const/4 v13, 0x1
 
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v6
-
-    iget-object v8, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    invoke-virtual {v8}, Lcom/android/systemui/statusbar/phone/StatusBar;->isInLaunchTransition()Z
-
-    move-result v8
-
-    const/4 v15, 0x1
-
-    if-eqz v8, :cond_1
+    if-eqz v6, :cond_0
 
     iget-object v1, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     new-instance v2, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$5;
 
-    invoke-direct {v2, v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$5;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
+    invoke-direct {v2, p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$5;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
 
     new-instance v3, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$6;
 
-    invoke-direct {v3, v0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$6;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
+    invoke-direct {v3, p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager$6;-><init>(Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;)V
 
     invoke-virtual {v1, v2, v3}, Lcom/android/systemui/statusbar/phone/StatusBar;->fadeKeyguardAfterLaunchTransition(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    goto :goto_4
+    goto :goto_3
+
+    :cond_0
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->executeAfterKeyguardGoneAction()V
+
+    iget-object v6, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    invoke-virtual {v6}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+
+    move-result v6
+
+    const/4 v7, 0x2
+
+    if-ne v6, v7, :cond_1
+
+    move v14, v13
+
+    goto :goto_0
 
     :cond_1
-    invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->executeAfterKeyguardGoneAction()V
+    move v14, v1
 
-    iget-object v8, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+    :goto_0
+    if-eqz v14, :cond_2
 
-    invoke-virtual {v8}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
+    const-wide/16 v4, 0xf0
 
-    move-result v8
+    move-wide v9, v2
 
-    const/4 v9, 0x2
-
-    if-ne v8, v9, :cond_2
-
-    move/from16 v16, v15
+    move-wide v11, v4
 
     goto :goto_1
 
     :cond_2
-    move/from16 v16, v1
+    move-wide/from16 v11, p3
+
+    move-wide v9, v4
 
     :goto_1
-    if-eqz v16, :cond_3
+    iget-object v6, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
-    const-wide/16 v2, 0xf0
+    move-wide/from16 v7, p1
 
-    move-wide v13, v2
-
-    move-wide v11, v4
-
-    goto :goto_2
-
-    :cond_3
-    move-wide v13, v2
-
-    move-wide v11, v6
-
-    :goto_2
-    iget-object v8, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
-
-    move-wide/from16 v9, p1
-
-    invoke-virtual/range {v8 .. v14}, Lcom/android/systemui/statusbar/phone/StatusBar;->setKeyguardFadingAway(JJJ)V
+    invoke-virtual/range {v6 .. v12}, Lcom/android/systemui/statusbar/phone/StatusBar;->setKeyguardFadingAway(JJJ)V
 
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->startKeyguardFadingAway()V
 
-    invoke-direct {v0, v15}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->hideBouncer(Z)V
+    invoke-direct {p0, v13}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->hideBouncer(Z)V
 
-    if-eqz v16, :cond_4
+    if-eqz v14, :cond_3
 
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->fadeKeyguardWhilePulsing()V
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->wakeAndUnlockDejank()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->wakeAndUnlockDejank()V
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_4
+    :cond_3
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->hideKeyguard()Z
 
     move-result v2
 
-    if-nez v2, :cond_5
+    if-nez v2, :cond_4
 
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBarWindowController:Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
-    invoke-virtual {v2, v15}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->setKeyguardFadingAway(Z)V
+    invoke-virtual {v2, v13}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->setKeyguardFadingAway(Z)V
 
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->updateScrimController()V
 
-    invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->wakeAndUnlockDejank()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->wakeAndUnlockDejank()V
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_5
+    :cond_4
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/StatusBar;->finishKeyguardFadingAway()V
@@ -1283,8 +1255,8 @@
 
     invoke-virtual {v2}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->finishKeyguardFadingAway()V
 
-    :goto_3
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->updateStates()V
+    :goto_2
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->updateStates()V
 
     iget-object v2, v0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBarWindowController:Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
 
@@ -1294,10 +1266,10 @@
 
     invoke-interface {v0}, Lcom/android/keyguard/ViewMediatorCallback;->keyguardGone()V
 
-    :goto_4
+    :goto_3
     const/16 v0, 0x3e
 
-    invoke-static {v0, v15}, Landroid/util/StatsLog;->write(II)I
+    invoke-static {v0, v13}, Landroid/util/StatsLog;->write(II)I
 
     return-void
 .end method
@@ -1759,21 +1731,33 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/StatusBar;->finishKeyguardFadingAway()V
+    invoke-virtual {v0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->getMode()I
 
-    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+    move-result v0
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->finishKeyguardFadingAway()V
+    const/4 v1, 0x5
 
-    invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
+    if-ne v0, v1, :cond_0
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    const/16 v0, 0x14
+    goto :goto_0
 
-    invoke-virtual {p0, v0}, Landroid/view/WindowManagerGlobal;->trimMemory(I)V
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mStatusBar:Lcom/android/systemui/statusbar/phone/StatusBar;
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/StatusBar;->finishKeyguardFadingAway()V
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mBiometricUnlockController:Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
+
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->finishKeyguardFadingAway()V
+
+    invoke-virtual {p0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBarKeyguardViewManager;->opTrimMemory(Z)V
 
     return-void
 .end method
@@ -1973,6 +1957,8 @@
 
     :goto_0
     iput-boolean v0, p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;->mGoingToSleepVisibleNotOccluded:Z
+
+    invoke-virtual {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBarKeyguardViewManager;->opOnStartedGoingToSleep()V
 
     return-void
 .end method

@@ -540,67 +540,65 @@
 .end method
 
 .method private relayoutViews()V
-    .locals 4
+    .locals 3
 
     iget v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightIndex:I
 
-    const/4 v1, 0x0
+    const/16 v1, 0xa
 
-    const/16 v2, 0xa
-
-    if-ne v0, v2, :cond_0
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v0, v1
+    const/4 v0, 0x0
 
     :goto_0
-    iget-object v2, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v1
 
     if-eqz v0, :cond_1
 
-    sget v3, Lcom/android/systemui/R$dimen;->op_aod_light_effect_my_width:I
+    sget v2, Lcom/android/systemui/R$dimen;->op_aod_light_effect_my_width:I
 
     goto :goto_1
 
     :cond_1
-    sget v3, Lcom/android/systemui/R$dimen;->op_aod_light_effect_width:I
+    sget v2, Lcom/android/systemui/R$dimen;->op_aod_light_effect_width:I
 
     :goto_1
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v2
+    move-result v1
 
-    iget-object v3, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
 
-    invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v3
+    move-result-object v2
 
-    iput v2, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    iget-object v3, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRightView:Landroid/widget/ImageView;
+    iget-object v2, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRightView:Landroid/widget/ImageView;
 
-    invoke-virtual {v3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v2}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v3
+    move-result-object v2
 
-    iput v2, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     if-eqz v0, :cond_2
-
-    invoke-virtual {p0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setScaleY(F)V
+
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
 
@@ -680,15 +678,9 @@
 
     if-eq v0, v1, :cond_0
 
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setScaleY(F)V
-
-    const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
@@ -906,9 +898,9 @@
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setVisibility(I)V
+    invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLightAnimator:Landroid/animation/ValueAnimator;
 

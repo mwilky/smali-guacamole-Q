@@ -609,9 +609,69 @@
 .end method
 
 .method public synthetic lambda$setEnabledAsync$7$ThemeOverlayManager(Ljava/lang/String;Landroid/os/UserHandle;Z)V
-    .locals 0
+    .locals 5
 
-    if-eqz p3, :cond_0
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    const/4 v1, 0x0
+
+    const-string v2, "ThemeOverlayManager"
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    aput-object p1, v0, v1
+
+    const/4 v3, 0x1
+
+    aput-object p2, v0, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v0, v3
+
+    const-string v3, "setEnabled: %s %s %b"
+
+    invoke-static {v3, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "pkg == null, "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v3, 0x7
+
+    invoke-static {v3}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    if-eqz p3, :cond_2
 
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayManager;->mOverlayManager:Landroid/content/om/OverlayManager;
 
@@ -619,12 +679,10 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
     iget-object p0, p0, Lcom/android/systemui/theme/ThemeOverlayManager;->mOverlayManager:Landroid/content/om/OverlayManager;
 
-    const/4 p3, 0x0
-
-    invoke-virtual {p0, p1, p3, p2}, Landroid/content/om/OverlayManager;->setEnabled(Ljava/lang/String;ZLandroid/os/UserHandle;)V
+    invoke-virtual {p0, p1, v1, p2}, Landroid/content/om/OverlayManager;->setEnabled(Ljava/lang/String;ZLandroid/os/UserHandle;)V
 
     :goto_0
     return-void

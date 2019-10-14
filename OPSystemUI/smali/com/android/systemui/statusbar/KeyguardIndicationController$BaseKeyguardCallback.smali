@@ -1042,7 +1042,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_16
+    if-eqz v1, :cond_17
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
@@ -1145,7 +1145,7 @@
 
     move-result p1
 
-    if-nez p1, :cond_15
+    if-nez p1, :cond_16
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
@@ -1158,7 +1158,7 @@
     goto/16 :goto_b
 
     :cond_12
-    if-nez v3, :cond_15
+    if-nez v3, :cond_16
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
@@ -1166,7 +1166,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_15
+    if-eqz p1, :cond_16
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
@@ -1248,8 +1248,17 @@
 
     move-result-object p1
 
+    if-eqz p1, :cond_15
+
+    iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
+
+    invoke-static {p1}, Lcom/android/systemui/statusbar/KeyguardIndicationController;->access$1000(Lcom/android/systemui/statusbar/KeyguardIndicationController;)Landroid/graphics/drawable/AnimationDrawable;
+
+    move-result-object p1
+
     invoke-virtual {p1}, Landroid/graphics/drawable/AnimationDrawable;->stop()V
 
+    :cond_15
     iget-object p1, p0, Lcom/android/systemui/statusbar/KeyguardIndicationController$BaseKeyguardCallback;->this$0:Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
     iget-object p1, p1, Lcom/android/systemui/statusbar/KeyguardIndicationController;->mFadeOutAnimatorSet:Landroid/animation/AnimatorSet;
@@ -1272,11 +1281,11 @@
 
     invoke-virtual {p0, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    :cond_15
+    :cond_16
     :goto_b
     return-void
 
-    :cond_16
+    :cond_17
     :goto_c
     const-string p0, "no dash view"
 

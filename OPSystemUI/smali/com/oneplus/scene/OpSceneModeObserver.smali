@@ -6,12 +6,23 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/oneplus/scene/OpSceneModeObserver$Callback;,
         Lcom/oneplus/scene/OpSceneModeObserver$SettingsObserver;
     }
 .end annotation
 
 
 # instance fields
+.field private final mCallbacks:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lcom/oneplus/scene/OpSceneModeObserver$Callback;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mContext:Landroid/content/Context;
 
 .field private mIsInBrickMode:Z
@@ -34,6 +45,12 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mIsInBrickMode:Z
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mCallbacks:Ljava/util/ArrayList;
 
     iput-object p1, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mContext:Landroid/content/Context;
 
@@ -96,12 +113,40 @@
     return-object p0
 .end method
 
+.method static synthetic access$300(Lcom/oneplus/scene/OpSceneModeObserver;)Ljava/util/ArrayList;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mCallbacks:Ljava/util/ArrayList;
+
+    return-object p0
+.end method
+
 
 # virtual methods
+.method public addCallback(Lcom/oneplus/scene/OpSceneModeObserver$Callback;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mCallbacks:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
 .method public isInBrickMode()Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mIsInBrickMode:Z
 
     return p0
+.end method
+
+.method public removeCallback(Lcom/oneplus/scene/OpSceneModeObserver$Callback;)V
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/scene/OpSceneModeObserver;->mCallbacks:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
 .end method

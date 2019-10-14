@@ -1757,7 +1757,7 @@
 .end method
 
 .method showNextSecurityScreenOrFinish(ZI)Z
-    .locals 9
+    .locals 10
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1797,17 +1797,19 @@
 
     move-result v0
 
-    const-string v2, "swipe"
+    const/4 v2, 0x4
 
-    const/4 v3, 0x2
+    const-string v3, "swipe"
 
-    const/4 v4, 0x3
+    const/4 v4, 0x2
 
-    const/4 v5, -0x1
+    const/4 v5, 0x3
 
-    const/4 v6, 0x0
+    const/4 v6, -0x1
 
-    const/4 v7, 0x1
+    const/4 v7, 0x0
+
+    const/4 v8, 0x1
 
     if-eqz v0, :cond_1
 
@@ -1821,10 +1823,10 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v2}, Lcom/oneplus/sarah/SarahClient;->notifyUnlock(Ljava/lang/String;)V
+    invoke-virtual {p1, v3}, Lcom/oneplus/sarah/SarahClient;->notifyUnlock(Ljava/lang/String;)V
 
     :cond_0
-    move v3, v4
+    move v2, v5
 
     goto/16 :goto_1
 
@@ -1837,14 +1839,16 @@
 
     if-eqz v0, :cond_2
 
+    move v2, v4
+
     goto/16 :goto_1
 
     :cond_2
     sget-object v0, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->None:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    iget-object v8, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mCurrentSecuritySelection:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+    iget-object v9, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mCurrentSecuritySelection:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
 
-    if-ne v0, v8, :cond_5
+    if-ne v0, v9, :cond_5
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mSecurityModel:Lcom/android/keyguard/KeyguardSecurityModel;
 
@@ -1866,34 +1870,34 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v2}, Lcom/oneplus/sarah/SarahClient;->notifyUnlock(Ljava/lang/String;)V
+    invoke-virtual {p1, v3}, Lcom/oneplus/sarah/SarahClient;->notifyUnlock(Ljava/lang/String;)V
 
     :cond_3
-    move v3, v6
+    move v2, v7
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_4
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->showSecurityScreen(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_5
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_a
 
     sget-object p1, Lcom/android/keyguard/KeyguardSecurityContainer$5;->$SwitchMap$com$android$keyguard$KeyguardSecurityModel$SecurityMode:[I
 
-    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v9}, Ljava/lang/Enum;->ordinal()I
 
     move-result v0
 
     aget p1, p1, v0
 
-    if-eq p1, v7, :cond_8
+    if-eq p1, v8, :cond_9
 
-    if-eq p1, v3, :cond_8
+    if-eq p1, v4, :cond_9
 
-    if-eq p1, v4, :cond_8
+    if-eq p1, v5, :cond_9
 
     const/4 v0, 0x6
 
@@ -1925,7 +1929,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0, v6}, Lcom/android/keyguard/KeyguardSecurityContainer;->showPrimarySecurityScreen(Z)V
+    invoke-virtual {p0, v7}, Lcom/android/keyguard/KeyguardSecurityContainer;->showPrimarySecurityScreen(Z)V
 
     goto :goto_0
 
@@ -1944,38 +1948,67 @@
 
     invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
 
-    move-result v1
+    move-result v3
 
-    invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
+    invoke-virtual {v0, v3}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    const/4 v3, 0x4
-
     goto :goto_1
 
     :cond_7
+    sget-object v0, Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;->None:Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;
+
+    if-ne p1, v0, :cond_8
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    invoke-virtual {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isSimPinSecure()Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Lcom/android/internal/widget/LockPatternUtils;->isSecure(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const-string p1, "finish it when no SimPin"
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_8
     invoke-direct {p0, p1}, Lcom/android/keyguard/KeyguardSecurityContainer;->showSecurityScreen(Lcom/android/keyguard/KeyguardSecurityModel$SecurityMode;)V
 
     goto :goto_0
 
-    :cond_8
-    move v3, v7
+    :cond_9
+    move v2, v8
 
-    move v6, v3
+    move v7, v2
 
     goto :goto_1
 
-    :cond_9
+    :cond_a
     :goto_0
-    move v3, v5
+    move v2, v6
 
-    move v7, v6
+    move v8, v7
 
     :goto_1
-    if-eq v3, v5, :cond_a
+    if-eq v2, v6, :cond_b
 
     iget-object p1, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mMetricsLogger:Lcom/android/internal/logging/MetricsLogger;
 
@@ -1991,21 +2024,21 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
+    invoke-virtual {v0, v2}, Landroid/metrics/LogMaker;->setSubtype(I)Landroid/metrics/LogMaker;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/android/internal/logging/MetricsLogger;->write(Landroid/metrics/LogMaker;)V
 
-    :cond_a
-    if-eqz v7, :cond_b
+    :cond_b
+    if-eqz v8, :cond_c
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardSecurityContainer;->mSecurityCallback:Lcom/android/keyguard/KeyguardSecurityContainer$SecurityCallback;
 
-    invoke-interface {p0, v6, p2}, Lcom/android/keyguard/KeyguardSecurityContainer$SecurityCallback;->finish(ZI)V
+    invoke-interface {p0, v7, p2}, Lcom/android/keyguard/KeyguardSecurityContainer$SecurityCallback;->finish(ZI)V
 
-    :cond_b
-    return v7
+    :cond_c
+    return v8
 .end method
 
 .method showPrimarySecurityScreen(Z)V

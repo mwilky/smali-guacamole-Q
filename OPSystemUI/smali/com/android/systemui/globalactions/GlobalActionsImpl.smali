@@ -448,12 +448,15 @@
 
     check-cast p0, Landroid/widget/ProgressBar;
 
+    if-eqz p0, :cond_1
+
     invoke-virtual {p0}, Landroid/widget/ProgressBar;->getIndeterminateDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
     invoke-virtual {p0, v4}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
+    :cond_1
     const p0, 0x1020014
 
     invoke-virtual {v0, p0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
@@ -462,15 +465,17 @@
 
     check-cast p0, Landroid/widget/TextView;
 
+    if-eqz p0, :cond_2
+
     invoke-virtual {p0, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
     const p1, 0x104060f
 
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
 
-    :cond_1
+    :cond_2
     const/high16 p0, -0x1000000
 
     invoke-virtual {p2, p0, v1}, Lcom/android/internal/colorextraction/drawable/ScrimDrawable;->setColor(IZ)V
