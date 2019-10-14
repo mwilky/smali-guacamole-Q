@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static final SIa:Lorg/bouncycastle/asn1/bvj;
+.field public static final XIa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final TIa:Lorg/bouncycastle/asn1/bvj;
+.field public static final YIa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final UIa:Lorg/bouncycastle/asn1/bvj;
+.field public static final ZIa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final VIa:Lorg/bouncycastle/asn1/bvj;
+.field public static final _Ia:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final WIa:Lorg/bouncycastle/asn1/bvj;
+.field public static final aJa:Lorg/bouncycastle/asn1/bvj;
 
 
 # direct methods
@@ -25,7 +25,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->SIa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->XIa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->TIa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->YIa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -41,7 +41,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->UIa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->ZIa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -49,7 +49,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->VIa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->_Ia:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -57,7 +57,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->WIa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/cno/zta;->aJa:Lorg/bouncycastle/asn1/bvj;
 
     return-void
 .end method

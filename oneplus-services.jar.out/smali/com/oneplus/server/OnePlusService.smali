@@ -408,7 +408,7 @@
 
     iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOnePlusThemeController:Lcom/oneplus/server/zta/sis;
 
-    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->zf()V
+    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->yf()V
 
     invoke-static {}, Lcom/android/server/ire;->getInstance()Lcom/android/server/ire;
 

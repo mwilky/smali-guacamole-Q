@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field protected dDa:[Lyou/zta/sis/zta/wtn$zta;
+.field protected iDa:[Lyou/zta/sis/zta/wtn$zta;
 
 
 # direct methods
@@ -18,17 +18,17 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/cgv;->dDa:[Lyou/zta/sis/zta/wtn$zta;
+    iput-object v0, p0, Lyou/zta/sis/zta/cgv;->iDa:[Lyou/zta/sis/zta/wtn$zta;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Fk()[Lyou/zta/sis/zta/wtn$zta;
+.method public Ek()[Lyou/zta/sis/zta/wtn$zta;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cgv;->dDa:[Lyou/zta/sis/zta/wtn$zta;
+    iget-object p0, p0, Lyou/zta/sis/zta/cgv;->iDa:[Lyou/zta/sis/zta/wtn$zta;
 
     return-object p0
 .end method
@@ -36,7 +36,7 @@
 .method public zta([Lyou/zta/sis/zta/wtn$zta;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/cgv;->dDa:[Lyou/zta/sis/zta/wtn$zta;
+    iput-object p1, p0, Lyou/zta/sis/zta/cgv;->iDa:[Lyou/zta/sis/zta/wtn$zta;
 
     return-void
 .end method

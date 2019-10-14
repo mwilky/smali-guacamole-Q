@@ -24,7 +24,10 @@
     return p0
 .end method
 
-.method protected bio(Ljava/lang/String;I)Lorg/bouncycastle/asn1/vdb;
+.method public abstract tsu(Lorg/bouncycastle/asn1/bvj;Ljava/lang/String;)Lorg/bouncycastle/asn1/vdb;
+.end method
+
+.method protected wtn(Ljava/lang/String;I)Lorg/bouncycastle/asn1/vdb;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -139,7 +142,4 @@
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public abstract tsu(Lorg/bouncycastle/asn1/bvj;Ljava/lang/String;)Lorg/bouncycastle/asn1/vdb;
 .end method

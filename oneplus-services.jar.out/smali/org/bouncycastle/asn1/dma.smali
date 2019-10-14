@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private final dga:Z
+.field private final iga:Z
 
-.field private final ega:[[B
+.field private final jga:[[B
 
 .field private final limit:I
 
@@ -44,13 +44,13 @@
 
     iput p2, p0, Lorg/bouncycastle/asn1/dma;->limit:I
 
-    iput-boolean p3, p0, Lorg/bouncycastle/asn1/dma;->dga:Z
+    iput-boolean p3, p0, Lorg/bouncycastle/asn1/dma;->iga:Z
 
     const/16 p1, 0xb
 
     new-array p1, p1, [[B
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/dma;->ega:[[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/dma;->jga:[[B
 
     return-void
 .end method
@@ -688,34 +688,7 @@
 
 
 # virtual methods
-.method Af()Lorg/bouncycastle/asn1/cno;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    new-instance v0, Lorg/bouncycastle/asn1/cno;
-
-    invoke-direct {v0}, Lorg/bouncycastle/asn1/cno;-><init>()V
-
-    :goto_0
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma;->readObject()Lorg/bouncycastle/asn1/vdb;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method protected Bf()I
+.method protected Af()I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -816,7 +789,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma;->Bf()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma;->Af()I
 
     move-result v4
 
@@ -1075,7 +1048,7 @@
     throw p0
 
     :cond_4
-    iget-boolean p1, p0, Lorg/bouncycastle/asn1/dma;->dga:Z
+    iget-boolean p1, p0, Lorg/bouncycastle/asn1/dma;->iga:Z
 
     if-eqz p1, :cond_5
 
@@ -1147,13 +1120,40 @@
     return-object p0
 
     :cond_9
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma;->ega:[[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma;->jga:[[B
 
     invoke-static {p2, v2, p0}, Lorg/bouncycastle/asn1/dma;->zta(ILorg/bouncycastle/asn1/ba;[[B)Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 
     return-object p0
+.end method
+
+.method zf()Lorg/bouncycastle/asn1/cno;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    new-instance v0, Lorg/bouncycastle/asn1/cno;
+
+    invoke-direct {v0}, Lorg/bouncycastle/asn1/cno;-><init>()V
+
+    :goto_0
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma;->readObject()Lorg/bouncycastle/asn1/vdb;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
 .end method
 
 .method zta(Lorg/bouncycastle/asn1/ba;)Lorg/bouncycastle/asn1/cno;
@@ -1168,7 +1168,7 @@
 
     invoke-direct {p0, p1}, Lorg/bouncycastle/asn1/dma;-><init>(Ljava/io/InputStream;)V
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma;->Af()Lorg/bouncycastle/asn1/cno;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma;->zf()Lorg/bouncycastle/asn1/cno;
 
     move-result-object p0
 

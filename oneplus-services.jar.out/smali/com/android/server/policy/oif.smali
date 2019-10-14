@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic QC:Z
+.field final synthetic RC:Z
 
 .field final synthetic this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/android/server/policy/oif;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    iput-boolean p2, p0, Lcom/android/server/policy/oif;->QC:Z
+    iput-boolean p2, p0, Lcom/android/server/policy/oif;->RC:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    iget-boolean v1, p0, Lcom/android/server/policy/oif;->QC:Z
+    iget-boolean v1, p0, Lcom/android/server/policy/oif;->RC:Z
 
     const-string v2, "lidOpen"
 

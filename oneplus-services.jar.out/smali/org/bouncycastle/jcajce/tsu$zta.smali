@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field private Tla:Z
+.field private Yla:Z
 
-.field private Ula:Z
+.field private Zla:Z
 
-.field private Vla:Ljava/math/BigInteger;
+.field private _la:Ljava/math/BigInteger;
 
-.field private Wla:[B
+.field private ama:[B
 
-.field private Xla:Z
+.field private bma:Z
 
-.field private final Yza:Ljava/security/cert/CRLSelector;
+.field private final cAa:Ljava/security/cert/CRLSelector;
 
 
 # direct methods
@@ -36,17 +36,17 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Tla:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Yla:Z
 
-    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Ula:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Zla:Z
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Vla:Ljava/math/BigInteger;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->_la:Ljava/math/BigInteger;
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Wla:[B
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->ama:[B
 
-    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Xla:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->bma:Z
 
     invoke-interface {p1}, Ljava/security/cert/CRLSelector;->clone()Ljava/lang/Object;
 
@@ -54,7 +54,7 @@
 
     check-cast p1, Ljava/security/cert/CRLSelector;
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Yza:Ljava/security/cert/CRLSelector;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->cAa:Ljava/security/cert/CRLSelector;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 .method static synthetic rtg(Lorg/bouncycastle/jcajce/tsu$zta;)[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Wla:[B
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->ama:[B
 
     return-object p0
 .end method
@@ -70,7 +70,7 @@
 .method static synthetic sis(Lorg/bouncycastle/jcajce/tsu$zta;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Ula:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Zla:Z
 
     return p0
 .end method
@@ -78,7 +78,7 @@
 .method static synthetic ssp(Lorg/bouncycastle/jcajce/tsu$zta;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Xla:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->bma:Z
 
     return p0
 .end method
@@ -86,7 +86,7 @@
 .method static synthetic tsu(Lorg/bouncycastle/jcajce/tsu$zta;)Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Vla:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->_la:Ljava/math/BigInteger;
 
     return-object p0
 .end method
@@ -94,7 +94,7 @@
 .method static synthetic you(Lorg/bouncycastle/jcajce/tsu$zta;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Tla:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Yla:Z
 
     return p0
 .end method
@@ -102,7 +102,7 @@
 .method static synthetic zta(Lorg/bouncycastle/jcajce/tsu$zta;)Ljava/security/cert/CRLSelector;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Yza:Ljava/security/cert/CRLSelector;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/tsu$zta;->cAa:Ljava/security/cert/CRLSelector;
 
     return-object p0
 .end method
@@ -112,7 +112,7 @@
 .method public V(Z)Lorg/bouncycastle/jcajce/tsu$zta;
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Ula:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Zla:Z
 
     return-object p0
 .end method
@@ -120,7 +120,7 @@
 .method public W(Z)Lorg/bouncycastle/jcajce/tsu$zta;
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Tla:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Yla:Z
 
     return-object p0
 .end method
@@ -128,7 +128,7 @@
 .method public X(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Xla:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->bma:Z
 
     return-void
 .end method
@@ -161,7 +161,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Wla:[B
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->ama:[B
 
     return-void
 .end method
@@ -169,7 +169,7 @@
 .method public sis(Ljava/math/BigInteger;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->Vla:Ljava/math/BigInteger;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/tsu$zta;->_la:Ljava/math/BigInteger;
 
     return-void
 .end method

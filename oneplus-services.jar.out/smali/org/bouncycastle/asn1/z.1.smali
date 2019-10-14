@@ -6,7 +6,7 @@
 # static fields
 .field public static final INSTANCE:Lorg/bouncycastle/asn1/z;
 
-.field private static final Qna:[B
+.field private static final Vna:[B
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     new-array v0, v0, [B
 
-    sput-object v0, Lorg/bouncycastle/asn1/z;->Qna:[B
+    sput-object v0, Lorg/bouncycastle/asn1/z;->Vna:[B
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     return p0
 .end method
 
-.method mg()I
+.method lg()I
     .locals 0
 
     const/4 p0, 0x2
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    sget-object p0, Lorg/bouncycastle/asn1/z;->Qna:[B
+    sget-object p0, Lorg/bouncycastle/asn1/z;->Vna:[B
 
     const/4 v0, 0x5
 

@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 8
+    .locals 6
 
     const-string p1, "city"
 
@@ -46,57 +46,98 @@
 
     move-result-object v2
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v3, ""
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    if-nez v0, :cond_0
 
-    const-string v4, "mNfcUpdateConfigReceiver "
+    move-object v0, v3
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    if-nez v2, :cond_1
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v2, v3
 
-    const-string v4, " appcode:"
+    :cond_1
+    iget-object v4, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4}, Lcom/android/server/OnePlusNfcService;->access$000(Lcom/android/server/OnePlusNfcService;)Ljava/util/Map;
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, "OnePlusNfcService"
+    check-cast v4, Ljava/lang/String;
 
-    invoke-static {v4, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-nez v4, :cond_2
 
-    iget-object v3, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
+    const-string v4, "yangchengtong"
 
-    invoke-static {v3}, Lcom/android/server/OnePlusNfcService;->access$000(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
+    :cond_2
+    iget-object v5, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    move-result-object v3
+    invoke-static {v5}, Lcom/android/server/OnePlusNfcService;->access$100(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
 
-    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    move-result-object v5
 
-    move-result-object v3
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    invoke-static {v3, p1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v3
+    invoke-static {v5, v1, v2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    if-eqz v3, :cond_0
+    iget-object v1, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    if-eqz v0, :cond_0
+    invoke-static {v1}, Lcom/android/server/OnePlusNfcService;->access$100(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
 
-    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v3
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    if-eqz v3, :cond_0
+    move-result-object v1
 
-    const-string p1, "mNfcUpdateConfigReceiver is same , dont need entry city "
+    invoke-static {v1, p1, v0}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mNfcUpdateConfigReceiver "
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " appcode:"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OnePlusNfcService"
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "persist.vendor.oem.nfc.rf.card"
+
+    invoke-static {p1, v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    const-string p1, "config is same not set again"
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p1, "restart"
 
@@ -104,7 +145,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_3
 
     const-string p2, "true"
 
@@ -112,129 +153,43 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_3
 
-    goto/16 :goto_0
+    const-string p1, "restart for action "
 
-    :cond_0
-    const-string p2, ""
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-nez v0, :cond_1
+    iget-object p0, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    move-object v0, p2
-
-    :cond_1
-    if-nez v2, :cond_2
-
-    move-object v2, p2
-
-    :cond_2
-    iget-object v3, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
-
-    invoke-static {v3}, Lcom/android/server/OnePlusNfcService;->access$200(Lcom/android/server/OnePlusNfcService;)Ljava/util/Map;
-
-    move-result-object v3
-
-    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    if-nez v3, :cond_3
-
-    move-object v0, p2
-
-    move-object v2, v0
-
-    move-object v3, v2
+    invoke-static {p0}, Lcom/android/server/OnePlusNfcService;->access$200(Lcom/android/server/OnePlusNfcService;)V
 
     :cond_3
-    const-string v5, "persist.vendor.oem.nfc.rf.card"
-
-    invoke-static {v5, p2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
     return-void
 
     :cond_4
-    const-string v6, "productline"
+    const-string p2, "productline"
 
-    invoke-virtual {v6, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result p2
 
-    const-string v7, "vendor.oem.nfc.rf.card.productline"
+    const-string v0, "vendor.oem.nfc.rf.card.productline"
 
-    if-eqz v6, :cond_5
+    if-eqz p2, :cond_5
 
-    invoke-static {v7, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_5
-    invoke-static {v7, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v5, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p2, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
-
-    invoke-static {p2}, Lcom/android/server/OnePlusNfcService;->access$000(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p2
-
-    invoke-static {p2, v1, v2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
-
-    iget-object p2, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
-
-    invoke-static {p2}, Lcom/android/server/OnePlusNfcService;->access$000(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p2
-
-    invoke-static {p2, p1, v0}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p2, "mNfcUpdateConfigReceiver setprovide  appcode = "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "city ="
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v4, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     iget-object p0, p0, Lcom/android/server/bvj;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    invoke-static {p0}, Lcom/android/server/OnePlusNfcService;->access$100(Lcom/android/server/OnePlusNfcService;)V
+    invoke-static {p0}, Lcom/android/server/OnePlusNfcService;->access$200(Lcom/android/server/OnePlusNfcService;)V
 
-    :cond_6
     return-void
 .end method

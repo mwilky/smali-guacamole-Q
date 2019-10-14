@@ -74,40 +74,7 @@
     return p0
 .end method
 
-.method private bio(Ljava/io/PrintWriter;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    iget-object p1, p0, Lcom/android/server/engineer/ywr;->mContext:Landroid/content/Context;
-
-    const-string v0, "get_config_params"
-
-    invoke-direct {p0, p1, v0}, Lcom/android/server/engineer/ywr;->sis(Landroid/content/Context;Ljava/lang/String;)V
-
-    const/4 p0, 0x1
-
-    sput-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
-
-    :goto_0
-    sget-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
-
-    if-eqz p0, :cond_0
-
-    const-wide/16 p0, 0x64
-
-    invoke-static {p0, p1}, Landroid/os/SystemClock;->sleep(J)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method private bl()Ljava/lang/String;
+.method private al()Ljava/lang/String;
     .locals 11
 
     new-instance v0, Ljava/io/File;
@@ -352,6 +319,39 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private bio(Ljava/io/PrintWriter;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    iget-object p1, p0, Lcom/android/server/engineer/ywr;->mContext:Landroid/content/Context;
+
+    const-string v0, "get_config_params"
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/engineer/ywr;->sis(Landroid/content/Context;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    sput-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
+
+    :goto_0
+    sget-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
+
+    if-eqz p0, :cond_0
+
+    const-wide/16 p0, 0x64
+
+    invoke-static {p0, p1}, Landroid/os/SystemClock;->sleep(J)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method private igw(Ljava/io/PrintWriter;)V
@@ -3078,7 +3078,7 @@
     goto/16 :goto_9
 
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/server/engineer/ywr;->bl()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/engineer/ywr;->al()Ljava/lang/String;
 
     move-result-object p0
 

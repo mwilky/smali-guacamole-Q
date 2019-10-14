@@ -11,19 +11,19 @@
 
 .field public static final iPAddress:I = 0x7
 
-.field public static final kqa:I = 0x1
-
-.field public static final lqa:I = 0x3
-
-.field public static final mqa:I = 0x4
-
-.field public static final nqa:I = 0x5
-
-.field public static final oqa:I = 0x6
-
 .field public static final otherName:I = 0x0
 
-.field public static final pqa:I = 0x8
+.field public static final pqa:I = 0x1
+
+.field public static final qqa:I = 0x3
+
+.field public static final rqa:I = 0x4
+
+.field public static final sqa:I = 0x5
+
+.field public static final tqa:I = 0x6
+
+.field public static final uqa:I = 0x8
 
 
 # instance fields

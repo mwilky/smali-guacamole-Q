@@ -8,13 +8,13 @@
 
 .field public static final MAX:I = 0x5
 
-.field public static final MEa:I = 0x0
-
 .field public static final MHL:I = 0x3
 
-.field public static final NEa:I = 0x1
+.field public static final REa:I = 0x0
 
-.field public static final OEa:I = 0x4
+.field public static final SEa:I = 0x1
+
+.field public static final TEa:I = 0x4
 
 
 # direct methods

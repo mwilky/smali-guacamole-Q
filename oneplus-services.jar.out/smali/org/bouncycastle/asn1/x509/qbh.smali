@@ -6,7 +6,7 @@
 # instance fields
 .field private digest:[B
 
-.field private nla:Lorg/bouncycastle/asn1/x509/zta;
+.field private sla:Lorg/bouncycastle/asn1/x509/zta;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/oif;-><init>()V
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
 
     move-result-object p1
 
@@ -27,7 +27,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/qbh;->nla:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/qbh;->sla:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -57,7 +57,7 @@
 
     iput-object p2, p0, Lorg/bouncycastle/asn1/x509/qbh;->digest:[B
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/qbh;->nla:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/qbh;->sla:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
 
 # virtual methods
-.method public Cf()[B
+.method public Bf()[B
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/x509/qbh;->digest:[B
@@ -120,10 +120,10 @@
     return-object p0
 .end method
 
-.method public Jh()Lorg/bouncycastle/asn1/x509/zta;
+.method public Ih()Lorg/bouncycastle/asn1/x509/zta;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/qbh;->nla:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/qbh;->sla:Lorg/bouncycastle/asn1/x509/zta;
 
     return-object p0
 .end method
@@ -135,7 +135,7 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/asn1/cno;-><init>()V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/qbh;->nla:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/qbh;->sla:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 

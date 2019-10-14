@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/OnePlusHighPowerDetector;->Wm()V
+    value = Lcom/android/server/am/OnePlusHighPowerDetector;->Vm()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -91,20 +91,20 @@
     goto/16 :goto_0
 
     :cond_2
-    sget-object p2, Lcom/android/server/am/OnePlusHighPowerDetector;->tt:Ljava/lang/Object;
+    sget-object p2, Lcom/android/server/am/OnePlusHighPowerDetector;->ut:Ljava/lang/Object;
 
     monitor-enter p2
 
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Nq:I
+    iget v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:I
 
     if-lez v0, :cond_4
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Nq:I
+    iget v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:I
 
     sub-int/2addr v0, v2
 
@@ -116,7 +116,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget-wide v5, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:J
+    iget-wide v5, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Pq:J
 
     const-wide/16 v7, 0x0
 
@@ -126,11 +126,11 @@
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget-wide v5, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:J
+    iget-wide v5, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Pq:J
 
     sub-long v5, v3, v5
 
-    sget-object v0, Lcom/android/server/am/OnePlusHighPowerDetector;->ht:[I
+    sget-object v0, Lcom/android/server/am/OnePlusHighPowerDetector;->it:[I
 
     aget v0, v0, v1
 
@@ -152,7 +152,7 @@
 
     iget-object v6, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget v6, v6, Lcom/android/server/am/OnePlusHighPowerDetector;->Nq:I
+    iget v6, v6, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -168,7 +168,7 @@
 
     iget-object v6, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget-wide v6, v6, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:J
+    iget-wide v6, v6, Lcom/android/server/am/OnePlusHighPowerDetector;->Pq:J
 
     sub-long v6, v3, v6
 
@@ -182,29 +182,29 @@
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput-boolean p1, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Pq:Z
+    iput-boolean p1, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Qq:Z
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget-boolean v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Br:Z
+    iget-boolean v0, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Cr:Z
 
     if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput v2, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Dr:I
+    iput v2, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Er:I
 
     iget-object v0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput-boolean p1, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Br:Z
+    iput-boolean p1, v0, Lcom/android/server/am/OnePlusHighPowerDetector;->Cr:Z
 
     iget-object p1, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput-boolean v1, p1, Lcom/android/server/am/OnePlusHighPowerDetector;->Cr:Z
+    iput-boolean v1, p1, Lcom/android/server/am/OnePlusHighPowerDetector;->Dr:Z
 
     iget-object p1, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput v1, p1, Lcom/android/server/am/OnePlusHighPowerDetector;->Er:I
+    iput v1, p1, Lcom/android/server/am/OnePlusHighPowerDetector;->Fr:I
 
     const-string p1, "OHPD"
 
@@ -218,7 +218,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iget v1, v1, Lcom/android/server/am/OnePlusHighPowerDetector;->Dr:I
+    iget v1, v1, Lcom/android/server/am/OnePlusHighPowerDetector;->Er:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -231,12 +231,12 @@
     :cond_3
     iget-object p1, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput-wide v3, p1, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:J
+    iput-wide v3, p1, Lcom/android/server/am/OnePlusHighPowerDetector;->Pq:J
 
     :cond_4
     iget-object p0, p0, Lcom/android/server/am/qeg;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    iput v2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->Nq:I
+    iput v2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->Oq:I
 
     monitor-exit p2
 

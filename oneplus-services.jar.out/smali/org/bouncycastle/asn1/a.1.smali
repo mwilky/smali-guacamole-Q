@@ -58,7 +58,7 @@
     return-object v0
 .end method
 
-.method public kg()Ljava/io/OutputStream;
+.method public jg()Ljava/io/OutputStream;
     .locals 1
 
     const/16 v0, 0x3e8

@@ -6,17 +6,17 @@
 # static fields
 .field public static final CUSTOM:I = 0x1
 
-.field public static final HEa:I = 0x2
-
-.field public static final IEa:I = 0x3
-
-.field public static final JEa:I = 0x4
-
-.field public static final KEa:I = 0x5
-
-.field public static final LEa:I = 0x6
-
 .field public static final MAX:I = 0x8
+
+.field public static final MEa:I = 0x2
+
+.field public static final NEa:I = 0x3
+
+.field public static final OEa:I = 0x4
+
+.field public static final PEa:I = 0x5
+
+.field public static final QEa:I = 0x6
 
 .field public static final SRGB:I = 0x7
 

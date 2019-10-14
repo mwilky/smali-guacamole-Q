@@ -157,7 +157,7 @@
     :cond_2
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->rtg(Lcom/android/server/i;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/server/i;->tsu(Lcom/android/server/i;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -190,7 +190,7 @@
 
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->rtg(Lcom/android/server/i;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/server/i;->tsu(Lcom/android/server/i;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -226,7 +226,7 @@
     :cond_4
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->rtg(Lcom/android/server/i;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/android/server/i;->tsu(Lcom/android/server/i;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -304,17 +304,17 @@
 
     invoke-virtual {v7, v0, v6, v5, p1}, Lcom/android/server/i;->zta(IIIZ)V
 
-    iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
+    iget-object v0, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->zta(Lcom/android/server/i;)I
+    invoke-static {v0}, Lcom/android/server/i;->zta(Lcom/android/server/i;)I
 
-    move-result p1
+    move-result v0
 
-    if-ne p1, v4, :cond_9
+    if-ne v0, v4, :cond_9
 
-    iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
+    iget-object v0, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->you(Lcom/android/server/i;)Z
+    invoke-static {v0, p1}, Lcom/android/server/i;->zta(Lcom/android/server/i;Z)Z
 
     move-result p1
 
@@ -324,7 +324,7 @@
 
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->sis(Lcom/android/server/i;)Lcom/android/server/i$rtg;
+    invoke-static {p1}, Lcom/android/server/i;->you(Lcom/android/server/i;)Lcom/android/server/i$rtg;
 
     move-result-object p1
 
@@ -336,7 +336,7 @@
 
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1, v0}, Lcom/android/server/i;->zta(Lcom/android/server/i;Z)Z
+    invoke-static {p1, v0}, Lcom/android/server/i;->you(Lcom/android/server/i;Z)Z
 
     goto :goto_0
 
@@ -369,7 +369,7 @@
 
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1, v0}, Lcom/android/server/i;->zta(Lcom/android/server/i;Z)Z
+    invoke-static {p1, v0}, Lcom/android/server/i;->you(Lcom/android/server/i;Z)Z
 
     :cond_8
     const-string p1, "OverHeatingDiagnosis"
@@ -382,7 +382,7 @@
     :goto_0
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->tsu(Lcom/android/server/i;)Z
+    invoke-static {p1}, Lcom/android/server/i;->sis(Lcom/android/server/i;)Z
 
     move-result p1
 
@@ -396,7 +396,7 @@
 
     iget-object p0, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p0}, Lcom/android/server/i;->sis(Lcom/android/server/i;)Lcom/android/server/i$rtg;
+    invoke-static {p0}, Lcom/android/server/i;->you(Lcom/android/server/i;)Lcom/android/server/i$rtg;
 
     move-result-object p0
 
@@ -411,19 +411,19 @@
     :cond_a
     iget-object p1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {p1}, Lcom/android/server/i;->ear(Lcom/android/server/i;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/android/server/i;->cjf(Lcom/android/server/i;)Landroid/content/Context;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {v0}, Lcom/android/server/i;->ire(Lcom/android/server/i;)Lcom/android/server/i$zta;
+    invoke-static {v0}, Lcom/android/server/i;->ear(Lcom/android/server/i;)Lcom/android/server/i$zta;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/server/i$rtg;->this$0:Lcom/android/server/i;
 
-    invoke-static {v1}, Lcom/android/server/i;->hmo(Lcom/android/server/i;)Landroid/content/IntentFilter;
+    invoke-static {v1}, Lcom/android/server/i;->ire(Lcom/android/server/i;)Landroid/content/IntentFilter;
 
     move-result-object v1
 

@@ -97,7 +97,7 @@
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->sna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
 
     invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/n;-><init>([BI)V
 
@@ -291,7 +291,7 @@
     return p0
 .end method
 
-.method mg()I
+.method lg()I
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
@@ -327,7 +327,7 @@
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget v1, p0, Lorg/bouncycastle/asn1/sis;->sna:I
+    iget v1, p0, Lorg/bouncycastle/asn1/sis;->xna:I
 
     invoke-static {v0, v1}, Lorg/bouncycastle/asn1/sis;->tsu([BI)[B
 
@@ -341,7 +341,7 @@
 
     new-array v1, v1, [B
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->qg()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->pg()I
 
     move-result p0
 

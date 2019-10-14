@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method private cl()V
+.method private bl()V
     .locals 6
 
     iget-object v0, p0, Lcom/android/server/wm/zta/zta;->ob:Landroid/graphics/Rect;
@@ -330,7 +330,7 @@
     add-int/lit8 v0, v0, -0x1
 
     :goto_0
-    if-ltz v0, :cond_0
+    if-ltz v0, :cond_1
 
     iget-object v1, p0, Lcom/android/server/wm/zta/zta;->rb:Ljava/util/ArrayList;
 
@@ -340,54 +340,64 @@
 
     check-cast v1, Lcom/android/server/wm/zta/zta$zta;
 
-    const/4 v2, 0x0
+    long-to-float v2, p1
 
-    long-to-float v3, p1
+    iget v3, v1, Lcom/android/server/wm/zta/zta$zta;->mDelay:F
 
-    iget v4, v1, Lcom/android/server/wm/zta/zta$zta;->mDelay:F
+    sub-float/2addr v2, v3
 
-    sub-float/2addr v3, v4
+    const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
-
-    move-result v2
-
-    iget v3, v1, Lcom/android/server/wm/zta/zta$zta;->mDuration:F
-
-    div-float/2addr v2, v3
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    invoke-static {v3, v2}, Ljava/lang/Math;->min(FF)F
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(FF)F
 
     move-result v2
 
-    iget-object v4, v1, Lcom/android/server/wm/zta/zta$zta;->mInterpolator:Landroid/view/animation/Interpolator;
+    iget v4, v1, Lcom/android/server/wm/zta/zta$zta;->mDuration:F
 
-    invoke-interface {v4, v2}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+    cmpl-float v3, v4, v3
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    if-eqz v3, :cond_0
+
+    div-float/2addr v2, v4
+
+    invoke-static {v5, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
 
-    iget v4, v1, Lcom/android/server/wm/zta/zta$zta;->mEnd:F
+    goto :goto_1
 
-    mul-float/2addr v4, v2
+    :cond_0
+    move v2, v5
 
-    iget v5, v1, Lcom/android/server/wm/zta/zta$zta;->mStart:F
+    :goto_1
+    iget-object v3, v1, Lcom/android/server/wm/zta/zta$zta;->mInterpolator:Landroid/view/animation/Interpolator;
 
-    sub-float/2addr v3, v2
+    invoke-interface {v3, v2}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
 
-    mul-float/2addr v5, v3
+    move-result v2
 
-    add-float/2addr v4, v5
+    iget v3, v1, Lcom/android/server/wm/zta/zta$zta;->mEnd:F
 
-    iput v4, v1, Lcom/android/server/wm/zta/zta$zta;->value:F
+    mul-float/2addr v3, v2
+
+    iget v4, v1, Lcom/android/server/wm/zta/zta$zta;->mStart:F
+
+    sub-float/2addr v5, v2
+
+    mul-float/2addr v4, v5
+
+    add-float/2addr v3, v4
+
+    iput v3, v1, Lcom/android/server/wm/zta/zta$zta;->value:F
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    :cond_0
-    invoke-direct {p0}, Lcom/android/server/wm/zta/zta;->cl()V
+    :cond_1
+    invoke-direct {p0}, Lcom/android/server/wm/zta/zta;->bl()V
 
     return-void
 .end method

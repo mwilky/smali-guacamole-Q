@@ -25,11 +25,11 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/android/server/am/OnePlusBGController$CleanType;
 
-.field public static final enum Dga:Lcom/android/server/am/OnePlusBGController$CleanType;
+.field public static final enum Iga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
-.field public static final enum Ega:Lcom/android/server/am/OnePlusBGController$CleanType;
+.field public static final enum Jga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
-.field public static final enum Fga:Lcom/android/server/am/OnePlusBGController$CleanType;
+.field public static final enum Kga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
 
 # direct methods
@@ -44,7 +44,7 @@
 
     invoke-direct {v0, v2, v1}, Lcom/android/server/am/OnePlusBGController$CleanType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Dga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sput-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Iga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     new-instance v0, Lcom/android/server/am/OnePlusBGController$CleanType;
 
@@ -54,7 +54,7 @@
 
     invoke-direct {v0, v3, v2}, Lcom/android/server/am/OnePlusBGController$CleanType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Ega:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sput-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Jga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     new-instance v0, Lcom/android/server/am/OnePlusBGController$CleanType;
 
@@ -64,21 +64,21 @@
 
     invoke-direct {v0, v4, v3}, Lcom/android/server/am/OnePlusBGController$CleanType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Fga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sput-object v0, Lcom/android/server/am/OnePlusBGController$CleanType;->Kga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/am/OnePlusBGController$CleanType;
 
-    sget-object v4, Lcom/android/server/am/OnePlusBGController$CleanType;->Dga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object v4, Lcom/android/server/am/OnePlusBGController$CleanType;->Iga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     aput-object v4, v0, v1
 
-    sget-object v1, Lcom/android/server/am/OnePlusBGController$CleanType;->Ega:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object v1, Lcom/android/server/am/OnePlusBGController$CleanType;->Jga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/am/OnePlusBGController$CleanType;->Fga:Lcom/android/server/am/OnePlusBGController$CleanType;
+    sget-object v1, Lcom/android/server/am/OnePlusBGController$CleanType;->Kga:Lcom/android/server/am/OnePlusBGController$CleanType;
 
     aput-object v1, v0, v3
 

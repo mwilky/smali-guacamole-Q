@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final Pla:I
+.field private final Ula:I
 
-.field private final Qla:Ljava/util/Set;
+.field private final Vla:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -27,7 +27,7 @@
     .end annotation
 .end field
 
-.field private final Zza:Lorg/bouncycastle/jcajce/wtn;
+.field private final dAa:Lorg/bouncycastle/jcajce/wtn;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/bio;->Zza:Lorg/bouncycastle/jcajce/wtn;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/bio;->dAa:Lorg/bouncycastle/jcajce/wtn;
 
     invoke-static {p1}, Lorg/bouncycastle/jcajce/bio$zta;->you(Lorg/bouncycastle/jcajce/bio$zta;)Ljava/util/Set;
 
@@ -50,13 +50,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/bio;->Qla:Ljava/util/Set;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/bio;->Vla:Ljava/util/Set;
 
     invoke-static {p1}, Lorg/bouncycastle/jcajce/bio$zta;->sis(Lorg/bouncycastle/jcajce/bio$zta;)I
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/jcajce/bio;->Pla:I
+    iput p1, p0, Lorg/bouncycastle/jcajce/bio;->Ula:I
 
     return-void
 .end method
@@ -71,10 +71,10 @@
 
 
 # virtual methods
-.method public Wf()Ljava/util/Set;
+.method public Vf()Ljava/util/Set;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/bio;->Qla:Ljava/util/Set;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/bio;->Vla:Ljava/util/Set;
 
     return-object p0
 .end method
@@ -88,15 +88,15 @@
 .method public getMaxPathLength()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/jcajce/bio;->Pla:I
+    iget p0, p0, Lorg/bouncycastle/jcajce/bio;->Ula:I
 
     return p0
 .end method
 
-.method public kj()Lorg/bouncycastle/jcajce/wtn;
+.method public jj()Lorg/bouncycastle/jcajce/wtn;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/bio;->Zza:Lorg/bouncycastle/jcajce/wtn;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/bio;->dAa:Lorg/bouncycastle/jcajce/wtn;
 
     return-object p0
 .end method

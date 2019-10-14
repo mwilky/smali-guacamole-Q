@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/power/OnePlusStandbyAnalyzer$cno;->Hf()V
+    value = Lcom/android/server/power/OnePlusStandbyAnalyzer$cno;->Gf()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -270,9 +270,9 @@
 
     iget-object p0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$cno;->this$0:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->xja:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object p1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;->_ia:Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;->eja:Lcom/android/server/power/OnePlusStandbyAnalyzer$QXDM_REASON;
 
     const/4 v1, 0x0
 

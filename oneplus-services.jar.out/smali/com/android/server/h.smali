@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic ika:J
+.field final synthetic nka:J
 
-.field final synthetic jka:Z
+.field final synthetic oka:Z
 
 .field final synthetic this$0:Lcom/android/server/i;
 
@@ -42,9 +42,9 @@
 
     iput-object p5, p0, Lcom/android/server/h;->val$reason:Ljava/lang/String;
 
-    iput-wide p6, p0, Lcom/android/server/h;->ika:J
+    iput-wide p6, p0, Lcom/android/server/h;->nka:J
 
-    iput-boolean p8, p0, Lcom/android/server/h;->jka:Z
+    iput-boolean p8, p0, Lcom/android/server/h;->oka:Z
 
     iput-object p9, p0, Lcom/android/server/h;->val$dbox:Landroid/os/DropBoxManager;
 
@@ -124,7 +124,7 @@
 
     iget-object v3, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v3}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
+    invoke-static {v3}, Lcom/android/server/i;->gwm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
 
     move-result-object v3
 
@@ -138,11 +138,11 @@
 
     iget-object v3, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v3}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
+    invoke-static {v3}, Lcom/android/server/i;->gwm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
 
     move-result-object v3
 
-    iget-wide v5, p0, Lcom/android/server/h;->ika:J
+    iget-wide v5, p0, Lcom/android/server/h;->nka:J
 
     invoke-virtual {v3, v5, v6}, Lcom/android/internal/os/ProcessCpuTracker;->printCurrentState(J)Ljava/lang/String;
 
@@ -162,7 +162,7 @@
 
     iget-object v5, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v5}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
+    invoke-static {v5}, Lcom/android/server/i;->gwm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
 
     move-result-object v5
 
@@ -178,7 +178,7 @@
 
     iget-object v5, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v5}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
+    invoke-static {v5}, Lcom/android/server/i;->gwm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
 
     move-result-object v5
 
@@ -194,7 +194,7 @@
 
     iget-object v5, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v5}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
+    invoke-static {v5}, Lcom/android/server/i;->gwm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
 
     move-result-object v5
 
@@ -210,7 +210,7 @@
 
     iget-object v5, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v5}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
+    invoke-static {v5}, Lcom/android/server/i;->gwm(Lcom/android/server/i;)Lcom/android/internal/os/ProcessCpuTracker;
 
     move-result-object v5
 
@@ -286,7 +286,7 @@
     :cond_0
     iget-object v3, p0, Lcom/android/server/h;->this$0:Lcom/android/server/i;
 
-    invoke-static {v3}, Lcom/android/server/i;->ear(Lcom/android/server/i;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/android/server/i;->cjf(Lcom/android/server/i;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -642,7 +642,7 @@
 
     :cond_4
     :goto_8
-    iget-boolean v0, p0, Lcom/android/server/h;->jka:Z
+    iget-boolean v0, p0, Lcom/android/server/h;->oka:Z
 
     if-eqz v0, :cond_5
 

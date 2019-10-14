@@ -6,15 +6,15 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "SecrecyService.Utils"
 
-.field private static rK:Ljava/lang/String; = "/sys/devices/download_info/upgrade_download_time1"
+.field private static sK:Ljava/lang/String; = "/sys/devices/download_info/upgrade_download_time1"
 
-.field private static sK:Ljava/lang/String; = "/sys/devices/download_info/intranet"
+.field private static tK:Ljava/lang/String; = "/sys/devices/download_info/intranet"
 
-.field private static tK:Ljava/lang/String; = "[1-9][0-9]{3}/[0-9]{2}/[0-9]{2}"
+.field private static uK:Ljava/lang/String; = "[1-9][0-9]{3}/[0-9]{2}/[0-9]{2}"
 
-.field private static uK:Ljava/lang/String; = "[0-9]{2}:[0-9]{2}:[0-9]{2}"
+.field private static vK:Ljava/lang/String; = "[0-9]{2}:[0-9]{2}:[0-9]{2}"
 
-.field private static final vK:I = 0x1
+.field private static final wK:I = 0x1
 
 
 # direct methods
@@ -55,7 +55,7 @@
 .method public static Z(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->tK:Ljava/lang/String;
+    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->uK:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -105,7 +105,7 @@
 .method public static aa(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->uK:Ljava/lang/String;
+    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->vK:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -356,12 +356,35 @@
     throw p0
 .end method
 
-.method private static fo()Ljava/lang/String;
+.method private static eo()Ljava/lang/String;
     .locals 1
 
     const-string v0, "none"
 
     return-object v0
+.end method
+
+.method private static fo()Z
+    .locals 2
+
+    sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
+
+    const-string v1, "qcom"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public static gck(Ljava/lang/String;Ljava/lang/String;)J
@@ -437,27 +460,4 @@
 
     :goto_0
     return-wide v0
-.end method
-
-.method private static ho()Z
-    .locals 2
-
-    sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
-
-    const-string v1, "qcom"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
 .end method

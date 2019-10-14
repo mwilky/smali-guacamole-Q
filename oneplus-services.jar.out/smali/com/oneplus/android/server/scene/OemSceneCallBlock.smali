@@ -26,6 +26,10 @@
 
 .field private static final DBG_LOGV:Z
 
+.field private static final GAME_MODE_NOTIFY_TYPE_HEADS_UP:I = 0x0
+
+.field private static final GAME_MODE_NOTIFY_TYPE_TEXT_ONLY:I = 0x2
+
 .field private static final IM_CONFIG_NAME:Ljava/lang/String; = "GameModeImComponents"
 
 .field private static final INCALL_TIMEOUT:J = 0x7530L
@@ -333,8 +337,8 @@
     return-void
 .end method
 
-.method private blockerEnabled(I)Z
-    .locals 8
+.method private blockerEnabled(IZ)Z
+    .locals 9
 
     const/4 v0, 0x1
 
@@ -430,151 +434,183 @@
 
     move-result v1
 
-    sget-boolean v4, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v4, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
 
-    const-string v6, "game_mode_notifications_3rd_calls"
-
-    if-eqz v4, :cond_5
-
-    :try_start_1
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "blockerEnabled: userId = "
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v7, ", gameCallBlockerOimcStatus = "
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v7, ", GAME_MODE_NOTIFICATIONS_3RD_CALLS = "
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v7, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v7
-
-    invoke-static {v7, v6, p1}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v6, "game_mode_notifications_3rd_calls"
 
-    :cond_5
-    if-ne v1, v0, :cond_6
+    invoke-static {v4, v6, p1}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
+    move-result-object v4
 
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    invoke-static {v1, v6, p1}, Landroid/provider/Settings$System;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    if-eqz v1, :cond_6
-
-    move v1, v0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    const-string v4, "blockerEnabled error:"
-
-    invoke-static {v5, v4, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_6
-    move v1, v2
-
-    :goto_0
-    :try_start_2
-    const-string v4, "NotifyFor3PtyCallsBlocking_CarMode"
-
-    invoke-static {v4}, Lcom/oneplus/server/zta;->getRemoteFuncStatus(Ljava/lang/String;)I
-
-    move-result v4
-
-    sget-boolean v6, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
-
-    if-eqz v6, :cond_7
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "blockerEnabled(car mode): userId = "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v7, ", carCallBlockerOimcStatus = "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_7
     iget-object v6, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    const-string v7, "oneplus_carmode_inside"
+    const-string v7, "game_mode_block_notification"
 
-    invoke-static {v6, v7, v2, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v6, v7, v2, p1}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
-    move-result v2
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    move-result v6
 
-    if-ne v4, v0, :cond_8
+    sget-boolean v7, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
 
-    if-ne v2, v0, :cond_8
+    if-eqz v7, :cond_5
 
-    :try_start_3
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "blockerEnabled: userId = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ", gameCallBlockerOimcStatus = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ", GAME_MODE_NOTIFICATIONS_3RD_CALLS = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v8, ", GAME_MODE_BLOCK_NOTIFICATION = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, ", isCall = "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    if-ne v1, v0, :cond_6
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v4, :cond_6
+
+    if-eqz p2, :cond_6
+
+    move v4, v0
+
+    goto :goto_0
+
+    :cond_6
+    move v4, v2
+
+    :goto_0
+    if-ne v1, v0, :cond_8
+
+    if-eq v6, v0, :cond_7
+
+    const/4 v1, 0x2
+
+    if-ne v6, v1, :cond_8
+
+    :cond_7
+    if-nez p2, :cond_8
+
+    move v4, v0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p2
+
+    const-string v1, "blockerEnabled error:"
+
+    invoke-static {v5, v1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move v4, v2
+
+    :cond_8
+    :goto_1
+    :try_start_1
+    const-string p2, "NotifyFor3PtyCallsBlocking_CarMode"
+
+    invoke-static {p2}, Lcom/oneplus/server/zta;->getRemoteFuncStatus(Ljava/lang/String;)I
+
+    move-result p2
+
+    sget-boolean v1, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
+
+    if-eqz v1, :cond_9
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "blockerEnabled(car mode): userId = "
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v6, ", carCallBlockerOimcStatus = "
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v5, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_9
     iget-object v1, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    const-string v2, "oneplus_carmode_shield_third_call"
+    const-string v6, "oneplus_carmode_inside"
 
-    invoke-static {v1, v2, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v1, v6, v2, p1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result v1
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    if-ne p2, v0, :cond_a
+
+    if-ne v1, v0, :cond_a
+
+    :try_start_2
+    iget-object p2, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p2
+
+    const-string v1, "oneplus_carmode_shield_third_call"
+
+    invoke-static {p2, v1, p1}, Landroid/provider/Settings$Secure;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -582,36 +618,36 @@
 
     move-result p1
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_b
 
     iput-boolean v0, p0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->mIsNotifyBlocked:Z
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_1
     move-exception p0
 
-    goto :goto_1
-
-    :cond_8
-    move v0, v1
-
     goto :goto_2
+
+    :cond_a
+    move v0, v4
+
+    goto :goto_3
 
     :catch_2
     move-exception p0
 
-    move v0, v1
+    move v0, v4
 
-    :goto_1
+    :goto_2
     const-string p1, "blockerEnabled error(car mode):"
 
     invoke-static {v5, p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_9
-    :goto_2
+    :cond_b
+    :goto_3
     return v0
 .end method
 
@@ -1693,11 +1729,13 @@
 .end method
 
 .method private isCallBlockedOn()Z
-    .locals 1
+    .locals 2
 
     const/4 v0, -0x1
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->isCallBlockedOnForUser(I)Z
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->isCallBlockedOnForUser(IZ)Z
 
     move-result p0
 
@@ -1705,6 +1743,18 @@
 .end method
 
 .method private isCallBlockedOnForUser(I)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p1, v0}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->isCallBlockedOnForUser(IZ)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private isCallBlockedOnForUser(IZ)Z
     .locals 3
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_DUMP:Z
@@ -1722,29 +1772,29 @@
     invoke-static {v1, v2, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->blockerEnabled(I)Z
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->blockerEnabled(IZ)Z
 
     move-result p1
 
-    sget-boolean v0, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
+    sget-boolean p2, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->DBG_LOGV:Z
 
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "isBlockerEnabled = "
+    const-string v0, "isBlockerEnabled = "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     if-eqz p1, :cond_2
@@ -3498,7 +3548,7 @@
 
     move-result-object v1
 
-    const v2, 0x506009e
+    const v2, 0x506009f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

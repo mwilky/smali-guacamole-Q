@@ -1153,37 +1153,23 @@
 
     move-result p1
 
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
+    const-string v0, "persist.sys.version.lastota"
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+    const-string v1, ""
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "doze_mode_policy"
+    const-string v1, ""
 
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-ne v0, v4, :cond_14
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    move v0, v4
-
-    goto :goto_5
-
-    :cond_14
-    move v0, v2
-
-    :goto_5
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$1302(Z)Z
-
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -1191,17 +1177,71 @@
 
     move-result-object v1
 
-    const/4 v5, -0x2
+    const-string v5, "doze_mode_policy"
 
-    const-string v6, "optimal_power_save_mode_enabled"
-
-    invoke-static {v1, v6, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v1, v5, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/android/server/OpPowerControllerService;->access$702(Lcom/android/server/OpPowerControllerService;I)I
+    if-ne v1, v4, :cond_14
+
+    move v1, v4
+
+    goto :goto_5
+
+    :cond_14
+    move v1, v2
+
+    :goto_5
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$1302(Z)Z
+
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v5
+
+    const/4 v6, -0x2
+
+    const-string v7, "optimal_power_save_mode_enabled"
+
+    invoke-static {v5, v7, v6}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v5
+
+    invoke-static {v1, v5}, Lcom/android/server/OpPowerControllerService;->access$702(Lcom/android/server/OpPowerControllerService;I)I
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "isFirstBoot: "
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v5, ", isBrandNewQ: "
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v5, "OpPowerControllerService"
+
+    invoke-static {v5, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_16
+
+    if-eqz v0, :cond_16
 
     new-array p1, v4, [I
 

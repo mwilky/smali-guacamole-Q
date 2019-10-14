@@ -16,31 +16,31 @@
 
 .field public static DEBUG:Z = false
 
-.field public static final Fk:Ljava/lang/String; = "persist.sys.opabr.local"
+.field public static final Gk:Ljava/lang/String; = "persist.sys.opabr.local"
 
-.field private static Gk:Ljava/lang/String; = null
+.field private static Hk:Ljava/lang/String; = null
 
-.field private static Hk:I = 0x0
+.field private static Ik:I = 0x0
 
-.field public static final Ik:Ljava/lang/String; = "OPABR"
+.field public static final Jk:Ljava/lang/String; = "OPABR"
 
-.field private static final Jk:Ljava/lang/String; = "recorder"
-
-.field private static final Kk:Ljava/lang/String; = "record"
+.field private static final Kk:Ljava/lang/String; = "recorder"
 
 .field public static LOCAL:Z = false
 
-.field private static final Lk:Ljava/lang/String; = "reason"
+.field private static final Lk:Ljava/lang/String; = "record"
 
 .field public static MDM:Z = false
 
-.field private static final Mk:Ljava/lang/String; = "background"
+.field private static final Mk:Ljava/lang/String; = "reason"
 
-.field private static final Nk:Ljava/lang/String; = "canal"
+.field private static final Nk:Ljava/lang/String; = "background"
 
-.field private static final Ok:Ljava/lang/String; = "detail"
+.field private static final Ok:Ljava/lang/String; = "canal"
 
 .field public static final PROP_MDM:Ljava/lang/String; = "persist.sys.opabr.mdm"
+
+.field private static final Pk:Ljava/lang/String; = "detail"
 
 .field public static final TAG:Ljava/lang/String; = "OnePlusAppBootRecorder"
 
@@ -48,13 +48,13 @@
 
 .field private static final XML_TAG_NAMESPACE:Ljava/lang/String; = ""
 
-.field private static final ak:Ljava/lang/String; = "caller"
+.field private static final bk:Ljava/lang/String; = "caller"
 
-.field private static final bk:Ljava/lang/String; = "callee"
+.field private static final ck:Ljava/lang/String; = "callee"
 
 
 # instance fields
-.field private Ek:Ljava/util/ArrayList;
+.field private Fk:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -110,11 +110,11 @@
 
     const-string v0, "/data/system/appboot/record.xml"
 
-    sput-object v0, Lcom/android/server/am/zgw;->Gk:Ljava/lang/String;
+    sput-object v0, Lcom/android/server/am/zgw;->Hk:Ljava/lang/String;
 
     const/4 v0, 0x5
 
-    sput v0, Lcom/android/server/am/zgw;->Hk:I
+    sput v0, Lcom/android/server/am/zgw;->Ik:I
 
     return-void
 .end method
@@ -134,7 +134,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
 
@@ -189,7 +189,7 @@
     return-void
 .end method
 
-.method private Sl()Ljava/lang/String;
+.method private Rl()Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/util/ArrayList;
@@ -551,7 +551,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v4, Lcom/android/server/am/zgw;->Hk:I
+    sget v4, Lcom/android/server/am/zgw;->Ik:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -826,7 +826,7 @@
 
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    sget-object p0, Lcom/android/server/am/zgw;->Gk:Ljava/lang/String;
+    sget-object p0, Lcom/android/server/am/zgw;->Hk:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
@@ -1368,7 +1368,7 @@
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sput p1, Lcom/android/server/am/zgw;->Hk:I
+    sput p1, Lcom/android/server/am/zgw;->Ik:I
 
     return-void
 .end method
@@ -1380,7 +1380,7 @@
 
     move-result v0
 
-    sget v1, Lcom/android/server/am/zgw;->Hk:I
+    sget v1, Lcom/android/server/am/zgw;->Ik:I
 
     if-ge v0, v1, :cond_0
 
@@ -1409,7 +1409,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0}, Lcom/android/server/am/zgw;->Sl()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/am/zgw;->Rl()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1422,12 +1422,12 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Lcom/android/server/am/zgw$zta;->hb()Ljava/lang/String;
 
@@ -1595,7 +1595,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     monitor-enter v0
 
@@ -1610,7 +1610,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -1624,11 +1624,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    iget-object v1, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
 
@@ -1650,7 +1650,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/zgw;->Ek:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/zgw;->Fk:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 

@@ -58,7 +58,7 @@
 .method public onNotificationPosted(Landroid/service/notification/StatusBarNotification;Landroid/service/notification/NotificationListenerService$RankingMap;)V
     .locals 1
 
-    invoke-static {}, Lcom/android/server/sis/vdb;->Hd()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/android/server/sis/vdb;->access$2400()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -71,7 +71,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/sis/vdb;->Hd()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/android/server/sis/vdb;->access$2400()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -81,7 +81,7 @@
 
     if-lez p2, :cond_1
 
-    invoke-static {}, Lcom/android/server/sis/vdb;->Hd()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/android/server/sis/vdb;->access$2400()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -176,7 +176,7 @@
 .method public onNotificationRemoved(Landroid/service/notification/StatusBarNotification;Landroid/service/notification/NotificationListenerService$RankingMap;)V
     .locals 2
 
-    invoke-static {}, Lcom/android/server/sis/vdb;->Hd()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/android/server/sis/vdb;->access$2400()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -189,7 +189,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/sis/vdb;->Hd()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/android/server/sis/vdb;->access$2400()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -201,7 +201,7 @@
 
     if-lez p2, :cond_1
 
-    invoke-static {}, Lcom/android/server/sis/vdb;->Hd()Ljava/util/ArrayList;
+    invoke-static {}, Lcom/android/server/sis/vdb;->access$2400()Ljava/util/ArrayList;
 
     move-result-object p2
 

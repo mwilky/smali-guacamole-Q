@@ -19,23 +19,23 @@
 
 .field private static final TAG:Ljava/lang/String; = "OpScreenRotationImprovement"
 
-.field private static final XT:I = 0x1
+.field private static final YT:I = 0x1
 
-.field private static final YT:I = 0x2
+.field private static final ZT:I = 0x2
 
-.field private static final ZT:I = 0x3
+.field private static final _T:I = 0x3
 
-.field private static final _T:I = 0x4
+.field private static final aU:I = 0x4
 
 
 # instance fields
-.field private TT:I
-
 .field private UT:I
 
-.field private VT:Landroid/graphics/Color;
+.field private VT:I
 
-.field private WT:I
+.field private WT:Landroid/graphics/Color;
+
+.field private XT:I
 
 .field private mContext:Landroid/content/Context;
 
@@ -74,15 +74,15 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/server/wm/qeg;->TT:I
-
     iput v0, p0, Lcom/android/server/wm/qeg;->UT:I
+
+    iput v0, p0, Lcom/android/server/wm/qeg;->VT:I
 
     new-instance v0, Landroid/graphics/Color;
 
     invoke-direct {v0}, Landroid/graphics/Color;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/wm/qeg;->VT:Landroid/graphics/Color;
+    iput-object v0, p0, Lcom/android/server/wm/qeg;->WT:Landroid/graphics/Color;
 
     iput-object p1, p0, Lcom/android/server/wm/qeg;->mContext:Landroid/content/Context;
 
@@ -92,13 +92,13 @@
 .method private sis(F)Landroid/graphics/Color;
     .locals 5
 
-    iget v0, p0, Lcom/android/server/wm/qeg;->TT:I
+    iget v0, p0, Lcom/android/server/wm/qeg;->UT:I
 
     invoke-static {v0}, Landroid/graphics/Color;->valueOf(I)Landroid/graphics/Color;
 
     move-result-object v0
 
-    iget p0, p0, Lcom/android/server/wm/qeg;->UT:I
+    iget p0, p0, Lcom/android/server/wm/qeg;->VT:I
 
     invoke-static {p0}, Landroid/graphics/Color;->valueOf(I)Landroid/graphics/Color;
 
@@ -576,7 +576,7 @@
 
     const/4 p3, 0x0
 
-    iput p3, p0, Lcom/android/server/wm/qeg;->WT:I
+    iput p3, p0, Lcom/android/server/wm/qeg;->XT:I
 
     invoke-virtual {p1}, Lcom/android/server/wm/DisplayContent;->getDisplay()Landroid/view/Display;
 
@@ -692,7 +692,7 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/android/server/wm/qeg;->TT:I
+    iput p2, p0, Lcom/android/server/wm/qeg;->UT:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -747,7 +747,7 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/wm/BlackFrame;-><init>(Landroid/view/SurfaceControl$Transaction;Landroid/graphics/Rect;Landroid/graphics/Rect;ILcom/android/server/wm/DisplayContent;Z)V
 
-    iget p0, p0, Lcom/android/server/wm/qeg;->TT:I
+    iget p0, p0, Lcom/android/server/wm/qeg;->UT:I
 
     invoke-static {p0}, Landroid/graphics/Color;->valueOf(I)Landroid/graphics/Color;
 
@@ -909,17 +909,17 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/wm/qeg;->VT:Landroid/graphics/Color;
+    iput-object p1, p0, Lcom/android/server/wm/qeg;->WT:Landroid/graphics/Color;
 
-    iget p1, p0, Lcom/android/server/wm/qeg;->WT:I
+    iget p1, p0, Lcom/android/server/wm/qeg;->XT:I
 
     const/4 p2, 0x1
 
     add-int/2addr p1, p2
 
-    iput p1, p0, Lcom/android/server/wm/qeg;->WT:I
+    iput p1, p0, Lcom/android/server/wm/qeg;->XT:I
 
-    iget p1, p0, Lcom/android/server/wm/qeg;->WT:I
+    iget p1, p0, Lcom/android/server/wm/qeg;->XT:I
 
     if-ne p1, p2, :cond_6
 
@@ -1042,7 +1042,7 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/android/server/wm/qeg;->UT:I
+    iput p2, p0, Lcom/android/server/wm/qeg;->VT:I
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -1050,9 +1050,9 @@
 
     :cond_4
     :goto_3
-    iget p1, p0, Lcom/android/server/wm/qeg;->TT:I
+    iget p1, p0, Lcom/android/server/wm/qeg;->UT:I
 
-    iput p1, p0, Lcom/android/server/wm/qeg;->UT:I
+    iput p1, p0, Lcom/android/server/wm/qeg;->VT:I
 
     :cond_5
     :goto_4
@@ -1068,7 +1068,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p2, p0, Lcom/android/server/wm/qeg;->TT:I
+    iget p2, p0, Lcom/android/server/wm/qeg;->UT:I
 
     invoke-static {p2}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -1080,7 +1080,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/wm/qeg;->UT:I
+    iget p0, p0, Lcom/android/server/wm/qeg;->VT:I
 
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
@@ -1107,7 +1107,7 @@
 
     new-array v0, v0, [F
 
-    iget-object v1, p0, Lcom/android/server/wm/qeg;->VT:Landroid/graphics/Color;
+    iget-object v1, p0, Lcom/android/server/wm/qeg;->WT:Landroid/graphics/Color;
 
     invoke-virtual {v1}, Landroid/graphics/Color;->red()F
 
@@ -1117,7 +1117,7 @@
 
     aput v1, v0, v2
 
-    iget-object v1, p0, Lcom/android/server/wm/qeg;->VT:Landroid/graphics/Color;
+    iget-object v1, p0, Lcom/android/server/wm/qeg;->WT:Landroid/graphics/Color;
 
     invoke-virtual {v1}, Landroid/graphics/Color;->green()F
 
@@ -1127,7 +1127,7 @@
 
     aput v1, v0, v2
 
-    iget-object p0, p0, Lcom/android/server/wm/qeg;->VT:Landroid/graphics/Color;
+    iget-object p0, p0, Lcom/android/server/wm/qeg;->WT:Landroid/graphics/Color;
 
     invoke-virtual {p0}, Landroid/graphics/Color;->blue()F
 

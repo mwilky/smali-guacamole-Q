@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic PC:[I
+.field static final synthetic QC:[I
 
 
 # direct methods
@@ -30,10 +30,10 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sput-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
     :try_start_0
-    sget-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sget-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
     sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->NORMAL:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -49,7 +49,7 @@
 
     :catch_0
     :try_start_1
-    sget-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sget-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
     sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->POWER:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -65,9 +65,9 @@
 
     :catch_1
     :try_start_2
-    sget-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sget-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Pga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Uga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
@@ -81,7 +81,7 @@
 
     :catch_2
     :try_start_3
-    sget-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sget-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
     sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->HOME:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -97,7 +97,7 @@
 
     :catch_3
     :try_start_4
-    sget-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sget-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
     sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->FOOT:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -113,9 +113,9 @@
 
     :catch_4
     :try_start_5
-    sget-object v0, Lcom/android/server/policy/wtn;->PC:[I
+    sget-object v0, Lcom/android/server/policy/wtn;->QC:[I
 
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Qga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Vga:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 

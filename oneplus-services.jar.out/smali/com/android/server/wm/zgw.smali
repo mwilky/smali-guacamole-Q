@@ -11,9 +11,9 @@
 
 .field private static final TAG:Ljava/lang/String;
 
-.field private static final jS:I = 0x499602d2
+.field private static final kS:I = 0x499602d2
 
-.field private static final kS:Ljava/lang/String; = "com.android.settings"
+.field private static final lS:Ljava/lang/String; = "com.android.settings"
 
 
 # direct methods

@@ -95,8 +95,6 @@
 
 .field private mStatusBarManager:Landroid/app/StatusBarManager;
 
-.field mSystemReady:Z
-
 .field private mUserManager:Landroid/os/UserManager;
 
 .field public mc:Ljava/util/ArrayList;
@@ -196,8 +194,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/qbh;->pc:Z
 
-    iput-boolean v0, p0, Lcom/android/server/qbh;->mSystemReady:Z
-
     iput v0, p0, Lcom/android/server/qbh;->qc:I
 
     const-string v0, "android.intent.oneplus.gpsforcestop"
@@ -241,6 +237,41 @@
     sget-object v0, Lcom/android/server/qbh;->TAG:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method private fl()Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/qbh;->mLocationManager:Landroid/location/LocationManager;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/qbh;->mContext:Landroid/content/Context;
+
+    const-string v1, "location"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/location/LocationManager;
+
+    iput-object v0, p0, Lcom/android/server/qbh;->mLocationManager:Landroid/location/LocationManager;
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/server/qbh;->mLocationManager:Landroid/location/LocationManager;
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method static synthetic sis(Lcom/android/server/qbh;)Lcom/android/server/qbh$zta;
@@ -340,7 +371,7 @@
 
     move-result p3
 
-    if-eqz p3, :cond_7
+    if-eqz p3, :cond_8
 
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -349,6 +380,23 @@
     check-cast p3, Lcom/android/server/LocationManagerService$Receiver;
 
     iget-object v1, p0, Lcom/android/server/qbh;->mLocationManagerService:Lcom/android/server/LocationManagerService;
+
+    if-nez v1, :cond_3
+
+    const-string v1, "location"
+
+    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/LocationManagerService;
+
+    iput-object v1, p0, Lcom/android/server/qbh;->mLocationManagerService:Lcom/android/server/LocationManagerService;
+
+    :cond_3
+    iget-object v1, p0, Lcom/android/server/qbh;->mLocationManagerService:Lcom/android/server/LocationManagerService;
+
+    if-eqz v1, :cond_4
 
     iget-object v2, p3, Lcom/android/server/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
 
@@ -368,7 +416,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
     sget-object v1, Lcom/android/server/qbh;->TAG:Ljava/lang/String;
 
@@ -398,7 +446,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     iget-object p3, p3, Lcom/android/server/LocationManagerService$Receiver;->mUpdateRecords:Ljava/util/HashMap;
 
     invoke-virtual {p3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -409,7 +457,7 @@
 
     move-result-object p3
 
-    :cond_4
+    :cond_5
     :goto_1
     invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -423,7 +471,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -431,7 +479,7 @@
 
     check-cast v1, Lcom/android/server/LocationManagerService$UpdateRecord;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v2, v1, Lcom/android/server/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/LocationManagerService$Receiver;
 
@@ -443,7 +491,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     iget-object v2, p0, Lcom/android/server/qbh;->mUserManager:Landroid/os/UserManager;
 
@@ -461,15 +509,15 @@
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v2
 
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
-    :cond_5
+    :cond_6
     iget-object v2, v1, Lcom/android/server/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/LocationManagerService$Receiver;
 
     iget-object v2, v2, Lcom/android/server/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
@@ -484,9 +532,9 @@
 
     move-result v3
 
-    if-ne v2, v3, :cond_4
+    if-ne v2, v3, :cond_5
 
-    :cond_6
+    :cond_7
     iget-object v2, v1, Lcom/android/server/LocationManagerService$UpdateRecord;->mRequest:Landroid/location/LocationRequest;
 
     invoke-virtual {v2}, Landroid/location/LocationRequest;->getInterval()J
@@ -497,7 +545,7 @@
 
     cmp-long v2, v2, v4
 
-    if-gtz v2, :cond_4
+    if-gtz v2, :cond_5
 
     iget-object v2, v1, Lcom/android/server/LocationManagerService$UpdateRecord;->mProvider:Ljava/lang/String;
 
@@ -505,7 +553,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     iget-object v2, v1, Lcom/android/server/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/LocationManagerService$Receiver;
 
@@ -517,7 +565,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_5
 
     sget-object v2, Lcom/android/server/qbh;->ic:Ljava/util/ArrayList;
 
@@ -535,7 +583,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_5
 
     iget-object v1, v1, Lcom/android/server/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/LocationManagerService$Receiver;
 
@@ -547,7 +595,7 @@
 
     goto/16 :goto_1
 
-    :cond_7
+    :cond_8
     return-object v0
 .end method
 
@@ -875,15 +923,11 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    iget-object v0, p0, Lcom/android/server/qbh;->rc:Landroid/content/Intent;
+    iget-object p0, p0, Lcom/android/server/qbh;->rc:Landroid/content/Intent;
 
-    const/high16 v1, 0x20000000
+    const/high16 v0, 0x20000000
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/server/qbh;->mSystemReady:Z
+    invoke-virtual {p0, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     return-void
 .end method
@@ -1197,7 +1241,7 @@
 
     invoke-direct {v4, v7, v8}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v7, 0x50600ad
+    const v7, 0x50600ae
 
     invoke-virtual {v4, v7}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -1277,7 +1321,9 @@
 .method public updateGpsRequstPackage(Z)V
     .locals 13
 
-    iget-boolean v0, p0, Lcom/android/server/qbh;->mSystemReady:Z
+    invoke-direct {p0}, Lcom/android/server/qbh;->fl()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 

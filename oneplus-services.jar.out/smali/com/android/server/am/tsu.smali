@@ -278,7 +278,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/tsu;->mListenerMap:Ljava/util/HashMap;
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Aga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Fga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -288,7 +288,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/tsu;->mListenerMap:Ljava/util/HashMap;
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Aga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Fga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -309,7 +309,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Aga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Fga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v1}, Lcom/android/server/am/AppRecordManager$ListenerType;->value()I
 
@@ -473,7 +473,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/tsu;->mListenerMap:Ljava/util/HashMap;
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Bga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Gga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -483,7 +483,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/tsu;->mListenerMap:Ljava/util/HashMap;
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Bga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Gga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -504,7 +504,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Bga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Gga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v1}, Lcom/android/server/am/AppRecordManager$ListenerType;->value()I
 

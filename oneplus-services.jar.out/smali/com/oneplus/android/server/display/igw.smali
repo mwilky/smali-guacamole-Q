@@ -151,7 +151,7 @@
 .method public abstract setUp(Landroid/content/Context;Z)V
 .end method
 
-.method public ue()I
+.method public te()I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/android/server/display/igw;->mFrom:I
@@ -159,7 +159,7 @@
     return p0
 .end method
 
-.method public ve()I
+.method public ue()I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/android/server/display/igw;->mTo:I
@@ -167,7 +167,7 @@
     return p0
 .end method
 
-.method public we()Z
+.method public ve()Z
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/igw;->mAnimator:Landroid/animation/ValueAnimator;

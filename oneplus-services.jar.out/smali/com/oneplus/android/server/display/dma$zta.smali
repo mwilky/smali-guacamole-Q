@@ -54,7 +54,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/oneplus/android/server/display/dma;->access$700()Z
+    invoke-static {}, Lcom/oneplus/android/server/display/dma;->access$800()Z
 
     move-result p0
 
@@ -141,7 +141,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->tsu(Lcom/oneplus/android/server/display/dma;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->rtg(Lcom/oneplus/android/server/display/dma;I)V
 
     goto :goto_0
 
@@ -150,7 +150,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->sis(Lcom/oneplus/android/server/display/dma;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->tsu(Lcom/oneplus/android/server/display/dma;I)V
 
     goto :goto_0
 
@@ -159,7 +159,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->you(Lcom/oneplus/android/server/display/dma;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->sis(Lcom/oneplus/android/server/display/dma;I)V
 
     goto :goto_0
 
@@ -198,7 +198,7 @@
 
     iget p1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->rtg(Lcom/oneplus/android/server/display/dma;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/display/dma;->zta(Lcom/oneplus/android/server/display/dma;I)V
 
     goto :goto_0
 

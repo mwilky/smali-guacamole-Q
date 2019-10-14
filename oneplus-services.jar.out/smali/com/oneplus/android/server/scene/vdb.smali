@@ -219,7 +219,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/vdb;->_a:Landroid/view/View;
 
-    const v1, 0x5060093
+    const v1, 0x5060094
 
     goto :goto_0
 
@@ -244,7 +244,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/vdb;->_a:Landroid/view/View;
 
-    const v1, 0x506009f
+    const v1, 0x50600a0
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;

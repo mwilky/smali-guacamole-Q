@@ -225,48 +225,7 @@
     return-object p0
 .end method
 
-.method private static isHexDigit(C)Z
-    .locals 1
-
-    const/16 v0, 0x30
-
-    if-gt v0, p0, :cond_0
-
-    const/16 v0, 0x39
-
-    if-le p0, v0, :cond_2
-
-    :cond_0
-    const/16 v0, 0x61
-
-    if-gt v0, p0, :cond_1
-
-    const/16 v0, 0x66
-
-    if-le p0, v0, :cond_2
-
-    :cond_1
-    const/16 v0, 0x41
-
-    if-gt v0, p0, :cond_3
-
-    const/16 v0, 0x46
-
-    if-gt p0, v0, :cond_3
-
-    :cond_2
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method public static kth(Ljava/lang/String;I)Lorg/bouncycastle/asn1/ssp;
+.method public static igw(Ljava/lang/String;I)Lorg/bouncycastle/asn1/ssp;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -331,6 +290,47 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method private static isHexDigit(C)Z
+    .locals 1
+
+    const/16 v0, 0x30
+
+    if-gt v0, p0, :cond_0
+
+    const/16 v0, 0x39
+
+    if-le p0, v0, :cond_2
+
+    :cond_0
+    const/16 v0, 0x61
+
+    if-gt v0, p0, :cond_1
+
+    const/16 v0, 0x66
+
+    if-le p0, v0, :cond_2
+
+    :cond_1
+    const/16 v0, 0x41
+
+    if-gt v0, p0, :cond_3
+
+    const/16 v0, 0x46
+
+    if-gt p0, v0, :cond_3
+
+    :cond_2
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method private static sis(Ljava/util/Vector;)[Lorg/bouncycastle/asn1/bvj;
@@ -901,7 +901,7 @@
 .method public static you(Lorg/bouncycastle/asn1/bvj/sis;Lorg/bouncycastle/asn1/bvj/sis;)Z
     .locals 4
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/bvj/sis;->th()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/bvj/sis;->sh()Z
 
     move-result v0
 
@@ -909,17 +909,17 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->th()Z
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->sh()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/bvj/sis;->sh()[Lorg/bouncycastle/asn1/bvj/zta;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/bvj/sis;->rh()[Lorg/bouncycastle/asn1/bvj/zta;
 
     move-result-object p0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->sh()[Lorg/bouncycastle/asn1/bvj/zta;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->rh()[Lorg/bouncycastle/asn1/bvj/zta;
 
     move-result-object p1
 
@@ -965,7 +965,7 @@
     return v1
 
     :cond_4
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->th()Z
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->sh()Z
 
     move-result v0
 
@@ -1180,13 +1180,13 @@
 .method public static zta(Ljava/lang/StringBuffer;Lorg/bouncycastle/asn1/bvj/sis;Ljava/util/Hashtable;)V
     .locals 4
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->th()Z
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->sh()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->sh()[Lorg/bouncycastle/asn1/bvj/zta;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/bvj/sis;->rh()[Lorg/bouncycastle/asn1/bvj/zta;
 
     move-result-object p1
 
@@ -1649,7 +1649,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/bvj/tsu;->wh()[Lorg/bouncycastle/asn1/bvj/sis;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/bvj/tsu;->vh()[Lorg/bouncycastle/asn1/bvj/sis;
 
     move-result-object p0
 

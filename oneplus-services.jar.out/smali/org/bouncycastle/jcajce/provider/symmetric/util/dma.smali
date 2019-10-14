@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private cna:Z
-
 .field private digest:I
+
+.field private hna:Z
 
 .field private ivSize:I
 
@@ -24,7 +24,7 @@
 
     invoke-direct {p0, p1, p2}, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;-><init>(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
 
-    iput-boolean p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->cna:Z
+    iput-boolean p3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->hna:Z
 
     iput p4, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->scheme:I
 
@@ -63,9 +63,9 @@
 
     new-instance p1, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;
 
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->Xma:Ljava/lang/String;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->bna:Ljava/lang/String;
 
-    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->bna:Lorg/bouncycastle/asn1/bvj;
+    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->gna:Lorg/bouncycastle/asn1/bvj;
 
     iget v4, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->scheme:I
 
@@ -84,7 +84,7 @@
     return-object p1
 
     :cond_0
-    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->cna:Z
+    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->hna:Z
 
     if-eqz p1, :cond_1
 
@@ -118,9 +118,9 @@
 
     new-instance p1, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;
 
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->Xma:Ljava/lang/String;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->bna:Ljava/lang/String;
 
-    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->bna:Lorg/bouncycastle/asn1/bvj;
+    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->gna:Lorg/bouncycastle/asn1/bvj;
 
     iget v4, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/dma;->scheme:I
 

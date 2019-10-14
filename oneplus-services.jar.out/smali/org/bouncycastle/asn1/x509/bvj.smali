@@ -7,9 +7,9 @@
 
 
 # static fields
-.field public static final Hpa:I = 0x0
+.field public static final Mpa:I = 0x0
 
-.field public static final Ipa:I = 0x1
+.field public static final Npa:I = 0x1
 
 
 # instance fields

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private fl:I
+.field private gl:I
 
 .field private mCount:I
 
@@ -40,13 +40,13 @@
 
     iput p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->mCount:I
 
-    iput p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->fl:I
+    iput p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->gl:I
 
     iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->mProcess:Ljava/lang/String;
 
     iput p3, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->mCount:I
 
-    iput p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->fl:I
+    iput p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->gl:I
 
     return-void
 .end method
@@ -56,7 +56,7 @@
 .method public Vb()I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->fl:I
+    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->gl:I
 
     return p0
 .end method
@@ -96,7 +96,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->fl:I
+    iget p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$ssp;->gl:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

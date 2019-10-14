@@ -103,7 +103,15 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/android/server/OnePlusNfcService;)Ljava/util/Map;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/OnePlusNfcService;->mCardConfigMap:Ljava/util/Map;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/OnePlusNfcService;->mContext:Landroid/content/Context;
@@ -111,20 +119,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/android/server/OnePlusNfcService;)V
+.method static synthetic access$200(Lcom/android/server/OnePlusNfcService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusNfcService;->resetNfcService()V
 
     return-void
-.end method
-
-.method static synthetic access$200(Lcom/android/server/OnePlusNfcService;)Ljava/util/Map;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/OnePlusNfcService;->mCardConfigMap:Ljava/util/Map;
-
-    return-object p0
 .end method
 
 .method static synthetic access$300(Lcom/android/server/OnePlusNfcService;)Landroid/content/BroadcastReceiver;

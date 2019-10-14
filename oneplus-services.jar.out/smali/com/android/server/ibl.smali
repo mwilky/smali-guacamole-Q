@@ -78,7 +78,7 @@
 
     iget-object p1, p0, Lcom/android/server/ibl;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    invoke-static {p1}, Lcom/android/server/OnePlusNfcService;->access$000(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/android/server/OnePlusNfcService;->access$100(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -90,7 +90,7 @@
 
     iget-object p1, p0, Lcom/android/server/ibl;->this$0:Lcom/android/server/OnePlusNfcService;
 
-    invoke-static {p1}, Lcom/android/server/OnePlusNfcService;->access$000(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/android/server/OnePlusNfcService;->access$100(Lcom/android/server/OnePlusNfcService;)Landroid/content/Context;
 
     move-result-object p1
 

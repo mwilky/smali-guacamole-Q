@@ -4,9 +4,9 @@
 
 
 # static fields
-.field public static final cza:I = 0x1
+.field public static final hza:I = 0x1
 
-.field public static final dza:I = 0x2
+.field public static final iza:I = 0x2
 
 
 # instance fields
@@ -14,11 +14,11 @@
 
 .field private final n:I
 
-.field private final nva:I
+.field private final sva:I
 
-.field private final oya:I
+.field private final tya:I
 
-.field private final rka:Ljava/security/SecureRandom;
+.field private final wka:Ljava/security/SecureRandom;
 
 
 # direct methods
@@ -51,37 +51,37 @@
 
     iput p2, p0, Lorg/bouncycastle/crypto/wtn/dma;->n:I
 
-    iput p3, p0, Lorg/bouncycastle/crypto/wtn/dma;->nva:I
+    iput p3, p0, Lorg/bouncycastle/crypto/wtn/dma;->sva:I
 
-    iput p5, p0, Lorg/bouncycastle/crypto/wtn/dma;->oya:I
+    iput p5, p0, Lorg/bouncycastle/crypto/wtn/dma;->tya:I
 
-    iput-object p4, p0, Lorg/bouncycastle/crypto/wtn/dma;->rka:Ljava/security/SecureRandom;
+    iput-object p4, p0, Lorg/bouncycastle/crypto/wtn/dma;->wka:Ljava/security/SecureRandom;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Ai()I
+.method public Qi()Ljava/security/SecureRandom;
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->n:I
-
-    return p0
-.end method
-
-.method public Ri()Ljava/security/SecureRandom;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->rka:Ljava/security/SecureRandom;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->wka:Ljava/security/SecureRandom;
 
     return-object p0
+.end method
+
+.method public fj()I
+    .locals 0
+
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->tya:I
+
+    return p0
 .end method
 
 .method public getCertainty()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->nva:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->sva:I
 
     return p0
 .end method
@@ -94,10 +94,10 @@
     return p0
 .end method
 
-.method public gj()I
+.method public zi()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->oya:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->n:I
 
     return p0
 .end method

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic FA:Ljava/lang/CharSequence;
+.field final synthetic GA:Ljava/lang/CharSequence;
 
-.field final synthetic GA:I
+.field final synthetic HA:I
 
 .field final synthetic this$0:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
@@ -31,9 +31,9 @@
 
     iput-object p1, p0, Lcom/android/server/inputmethod/sis;->this$0:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    iput-object p2, p0, Lcom/android/server/inputmethod/sis;->FA:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lcom/android/server/inputmethod/sis;->GA:Ljava/lang/CharSequence;
 
-    iput p3, p0, Lcom/android/server/inputmethod/sis;->GA:I
+    iput p3, p0, Lcom/android/server/inputmethod/sis;->HA:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,9 +47,9 @@
 
     iget-object v0, p0, Lcom/android/server/inputmethod/sis;->this$0:Lcom/android/server/inputmethod/OpVerificationCodeController;
 
-    iget-object v1, p0, Lcom/android/server/inputmethod/sis;->FA:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lcom/android/server/inputmethod/sis;->GA:Ljava/lang/CharSequence;
 
-    iget p0, p0, Lcom/android/server/inputmethod/sis;->GA:I
+    iget p0, p0, Lcom/android/server/inputmethod/sis;->HA:I
 
     invoke-static {v0, v1, p0}, Lcom/android/server/inputmethod/OpVerificationCodeController;->access$900(Lcom/android/server/inputmethod/OpVerificationCodeController;Ljava/lang/CharSequence;I)V
 

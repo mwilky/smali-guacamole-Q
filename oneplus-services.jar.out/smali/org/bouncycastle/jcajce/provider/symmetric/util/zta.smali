@@ -6,9 +6,9 @@
 # instance fields
 .field private final helper:Lorg/bouncycastle/jcajce/tsu/tsu;
 
-.field protected rka:Ljava/security/SecureRandom;
-
 .field protected strength:I
+
+.field protected wka:Ljava/security/SecureRandom;
 
 
 # direct methods
@@ -37,7 +37,7 @@
 
     iput p1, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/zta;->strength:I
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/zta;->rka:Ljava/security/SecureRandom;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/zta;->wka:Ljava/security/SecureRandom;
 
     return-void
 .end method

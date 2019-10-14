@@ -2434,7 +2434,7 @@
 
     invoke-direct {v3, v4, v5}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v4, 0x5060058
+    const v4, 0x5060059
 
     invoke-virtual {v3, v4}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -4306,7 +4306,7 @@
 
     invoke-static {v2}, Lcom/android/server/power/OpPowerManagerInjector;->disableExclusiveWakeLocks(Z)V
 
-    sget-boolean p1, Lcom/android/server/am/ugm;->Vi:Z
+    sget-boolean p1, Lcom/android/server/am/ugm;->Wi:Z
 
     if-eqz p1, :cond_3
 
@@ -4350,7 +4350,7 @@
 
     invoke-direct {p0, p1}, Lcom/android/server/OpPowerControllerService;->applyGMSFirewallLocked(Z)V
 
-    sget-boolean p2, Lcom/android/server/am/ugm;->Vi:Z
+    sget-boolean p2, Lcom/android/server/am/ugm;->Wi:Z
 
     if-eqz p2, :cond_5
 
@@ -5127,7 +5127,7 @@
     goto :goto_0
 
     :cond_3
-    sget-boolean p0, Lcom/android/server/am/ugm;->Vi:Z
+    sget-boolean p0, Lcom/android/server/am/ugm;->Wi:Z
 
     if-eqz p0, :cond_4
 
@@ -6630,11 +6630,11 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v2}, Lcom/android/server/irq;->If()Z
+    invoke-virtual {v2}, Lcom/android/server/irq;->Hf()Z
 
     move-result p0
 
-    invoke-virtual {v4}, Lcom/android/server/irq;->If()Z
+    invoke-virtual {v4}, Lcom/android/server/irq;->Hf()Z
 
     move-result v1
 
@@ -8667,7 +8667,7 @@
 
     invoke-static {v0}, Lcom/android/server/power/OpPowerManagerInjector;->disableExclusiveWakeLocks(Z)V
 
-    sget-boolean p0, Lcom/android/server/am/ugm;->Vi:Z
+    sget-boolean p0, Lcom/android/server/am/ugm;->Wi:Z
 
     if-eqz p0, :cond_0
 
@@ -8700,7 +8700,7 @@
 
     invoke-static {p0}, Lcom/android/server/power/OpPowerManagerInjector;->enableExclusiveWakeLocks(Z)V
 
-    sget-boolean p0, Lcom/android/server/am/ugm;->Vi:Z
+    sget-boolean p0, Lcom/android/server/am/ugm;->Wi:Z
 
     if-eqz p0, :cond_0
 

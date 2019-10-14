@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field ZO:Ljava/text/DecimalFormat;
+.field _O:Ljava/text/DecimalFormat;
 
 .field public audioPowerMah:D
 
@@ -128,7 +128,7 @@
 
     invoke-direct {p1, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->ZO:Ljava/text/DecimalFormat;
+    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->_O:Ljava/text/DecimalFormat;
 
     return-void
 .end method
@@ -192,16 +192,16 @@
 
     invoke-direct {p1, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->ZO:Ljava/text/DecimalFormat;
+    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->_O:Ljava/text/DecimalFormat;
 
     iput-object p2, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->uid:Ljava/lang/Integer;
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->To()V
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->So()V
 
     return-void
 .end method
 
-.method private To()V
+.method private So()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->uid:Ljava/lang/Integer;
@@ -246,7 +246,7 @@
     return-void
 .end method
 
-.method private Uo()Z
+.method private To()Z
     .locals 5
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->uid:Ljava/lang/Integer;
@@ -1177,7 +1177,7 @@
 .method static synthetic zta(Lcom/android/server/wm/OpPowerConsumpStats$bio;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->Uo()Z
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->To()Z
 
     move-result p0
 

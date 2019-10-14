@@ -53,7 +53,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/server/i$zta;->this$0:Lcom/android/server/i;
 
-    invoke-static {v0}, Lcom/android/server/i;->ssp(Lcom/android/server/i;)Z
+    invoke-static {v0}, Lcom/android/server/i;->rtg(Lcom/android/server/i;)Z
 
     move-result v0
 
@@ -152,7 +152,7 @@
 
     iget-object v2, p0, Lcom/android/server/i$zta;->this$0:Lcom/android/server/i;
 
-    invoke-static {v2}, Lcom/android/server/i;->fto(Lcom/android/server/i;)I
+    invoke-static {v2}, Lcom/android/server/i;->hmo(Lcom/android/server/i;)I
 
     move-result v2
 
@@ -162,7 +162,7 @@
 
     iget-object v2, p0, Lcom/android/server/i$zta;->this$0:Lcom/android/server/i;
 
-    invoke-static {v2}, Lcom/android/server/i;->cno(Lcom/android/server/i;)Lcom/android/server/i$sis;
+    invoke-static {v2}, Lcom/android/server/i;->ssp(Lcom/android/server/i;)Lcom/android/server/i$sis;
 
     move-result-object v2
 
@@ -173,7 +173,7 @@
     :cond_6
     iget-object v2, p0, Lcom/android/server/i$zta;->this$0:Lcom/android/server/i;
 
-    invoke-static {v2}, Lcom/android/server/i;->cno(Lcom/android/server/i;)Lcom/android/server/i$sis;
+    invoke-static {v2}, Lcom/android/server/i;->ssp(Lcom/android/server/i;)Lcom/android/server/i$sis;
 
     move-result-object v2
 
@@ -183,7 +183,7 @@
     :goto_2
     iget-object v2, p0, Lcom/android/server/i$zta;->this$0:Lcom/android/server/i;
 
-    invoke-static {v2}, Lcom/android/server/i;->kth(Lcom/android/server/i;)I
+    invoke-static {v2}, Lcom/android/server/i;->cno(Lcom/android/server/i;)I
 
     move-result v2
 
@@ -219,7 +219,7 @@
 
     iget-object p0, p0, Lcom/android/server/i$zta;->this$0:Lcom/android/server/i;
 
-    invoke-static {p0}, Lcom/android/server/i;->sis(Lcom/android/server/i;)Lcom/android/server/i$rtg;
+    invoke-static {p0}, Lcom/android/server/i;->you(Lcom/android/server/i;)Lcom/android/server/i$rtg;
 
     move-result-object p0
 

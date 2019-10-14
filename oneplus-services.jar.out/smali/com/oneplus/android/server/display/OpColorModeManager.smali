@@ -16,7 +16,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "OpColorModeManager"
 
-.field private static final laa:I
+.field private static final maa:I
 
 
 # instance fields
@@ -36,7 +36,7 @@
     return-void
 .end method
 
-.method private Br()V
+.method private Ar()V
     .locals 1
 
     const/4 p0, 0x0
@@ -267,7 +267,7 @@
     goto :goto_0
 
     :pswitch_1
-    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorModeManager;->Br()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorModeManager;->Ar()V
 
     :goto_0
     invoke-static {p1, p2}, Lcom/oneplus/android/server/display/OpColorModeManager;->nativeSetPanelMode(IZ)V

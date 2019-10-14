@@ -259,7 +259,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Cg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
 
     move-result p1
 
@@ -293,7 +293,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Cg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
 
     move-result v0
 
@@ -369,7 +369,7 @@
 
 
 # virtual methods
-.method public Bg()Ljava/util/Enumeration;
+.method public Ag()Ljava/util/Enumeration;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/obl;->seq:Ljava/util/Vector;
@@ -398,7 +398,7 @@
 .method public hashCode()I
     .locals 3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
 
     move-result-object v0
 
@@ -461,7 +461,7 @@
     return-object v0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method mg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/G;
@@ -475,7 +475,7 @@
     return-object v0
 .end method
 
-.method og()Lorg/bouncycastle/asn1/vdb;
+.method ng()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/X;
@@ -590,11 +590,11 @@
     return v1
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
 
     move-result-object p1
 

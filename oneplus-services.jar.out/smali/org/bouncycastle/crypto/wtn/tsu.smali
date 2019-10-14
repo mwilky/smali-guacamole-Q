@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final jza:I = 0x18
+.field public static final oza:I = 0x18
 
 
 # direct methods

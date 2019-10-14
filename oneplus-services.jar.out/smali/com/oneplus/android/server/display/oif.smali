@@ -82,7 +82,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/oif;->val$to:[F
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/bvj;->sis([F)[F
+    invoke-static {p1}, Lcom/oneplus/android/server/display/bvj;->you([F)[F
 
     :cond_0
     iget-object p0, p0, Lcom/oneplus/android/server/display/oif;->this$0:Lcom/oneplus/android/server/display/bvj;

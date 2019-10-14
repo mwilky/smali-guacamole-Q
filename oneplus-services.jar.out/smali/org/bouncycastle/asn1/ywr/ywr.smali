@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method protected Pi()Lorg/bouncycastle/asn1/ibl/vju;
+.method protected Oi()Lorg/bouncycastle/asn1/ibl/vju;
     .locals 12
 
     const-wide/16 v0, 0x1

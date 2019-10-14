@@ -6,15 +6,15 @@
 # static fields
 .field public static final DEBUG:Z
 
-.field private static Hfa:Landroid/app/PendingIntent; = null
-
 .field public static final IN_USING:Z = true
 
-.field private static final Ifa:Ljava/lang/String; = "com.oneplus.android.screenOffCheckProcessState"
+.field private static Kfa:Landroid/app/PendingIntent; = null
+
+.field private static final Lfa:Ljava/lang/String; = "com.oneplus.android.screenOffCheckProcessState"
 
 .field public static final TAG:Ljava/lang/String; = "DozeManager"
 
-.field private static final Tn:Ljava/lang/String; = "deviceidle"
+.field private static final Un:Ljava/lang/String; = "deviceidle"
 
 .field private static mAlarmManager:Landroid/app/AlarmManager;
 
@@ -200,7 +200,7 @@
     return-void
 .end method
 
-.method private Tm()[Ljava/lang/String;
+.method private Sm()[Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
@@ -237,7 +237,7 @@
 .method static synthetic access$100()Landroid/app/PendingIntent;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/server/ssp;->Hfa:Landroid/app/PendingIntent;
+    sget-object v0, Lcom/oneplus/server/ssp;->Kfa:Landroid/app/PendingIntent;
 
     return-object v0
 .end method
@@ -614,7 +614,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/ssp;->Hfa:Landroid/app/PendingIntent;
+    sput-object v0, Lcom/oneplus/server/ssp;->Kfa:Landroid/app/PendingIntent;
 
     invoke-virtual {p2, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 

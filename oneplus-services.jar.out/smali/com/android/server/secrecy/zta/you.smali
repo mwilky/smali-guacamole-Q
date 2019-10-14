@@ -8,17 +8,17 @@
 
 
 # instance fields
-.field private CJ:Z
-
-.field private DJ:Ljava/lang/String;
+.field private DJ:Z
 
 .field private EJ:Ljava/lang/String;
 
 .field private FJ:Ljava/lang/String;
 
-.field private GJ:J
+.field private GJ:Ljava/lang/String;
 
 .field private HJ:J
+
+.field private IJ:J
 
 
 # direct methods
@@ -47,7 +47,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
+    iput-wide v0, p0, Lcom/android/server/secrecy/zta/you;->IJ:J
 
     :cond_0
     sget-object v0, Lcom/android/server/secrecy/zta/you;->TAG:Ljava/lang/String;
@@ -60,7 +60,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
+    iget-wide v2, p0, Lcom/android/server/secrecy/zta/you;->IJ:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -82,7 +82,7 @@
 .method public kd()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:J
+    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
 
     return-wide v0
 .end method
@@ -90,7 +90,7 @@
 .method public ld()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
+    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->IJ:J
 
     return-wide v0
 .end method
@@ -98,7 +98,7 @@
 .method public md()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/secrecy/zta/you;->CJ:Z
+    iget-boolean p0, p0, Lcom/android/server/secrecy/zta/you;->DJ:Z
 
     return p0
 .end method
@@ -110,39 +110,39 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/secrecy/zta/you;->FJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:Ljava/lang/String;
 
     invoke-static {}, Lcom/android/server/secrecy/zta/zta/tsu;->Ad()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/secrecy/zta/you;->CJ:Z
+    iput-boolean v0, p0, Lcom/android/server/secrecy/zta/you;->DJ:Z
 
-    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->FJ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/server/secrecy/zta/zta/tsu;->Z(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/secrecy/zta/you;->DJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/secrecy/zta/you;->EJ:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->FJ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/server/secrecy/zta/zta/tsu;->aa(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/secrecy/zta/you;->EJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/secrecy/zta/you;->FJ:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->DJ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->EJ:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/android/server/secrecy/zta/you;->EJ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/server/secrecy/zta/you;->FJ:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/android/server/secrecy/zta/zta/tsu;->gck(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:J
+    iput-wide v0, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
 
     return-void
 .end method
@@ -160,7 +160,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lcom/android/server/secrecy/zta/you;->CJ:Z
+    iget-boolean v0, p0, Lcom/android/server/secrecy/zta/you;->DJ:Z
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -180,7 +180,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->FJ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->GJ:J
+    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
 
     invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->HJ:J
+    iget-wide v0, p0, Lcom/android/server/secrecy/zta/you;->IJ:J
 
     invoke-virtual {p1, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

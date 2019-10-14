@@ -279,15 +279,7 @@
     return-object v0
 .end method
 
-.method static synthetic cno(Lcom/android/server/rtg;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/rtg;->fl()V
-
-    return-void
-.end method
-
-.method private dl()V
+.method private cl()V
     .locals 4
 
     sget-boolean v0, Lcom/android/server/rtg;->Pb:Z
@@ -349,7 +341,15 @@
     return-void
 .end method
 
-.method private el()V
+.method static synthetic cno(Lcom/android/server/rtg;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/rtg;->el()V
+
+    return-void
+.end method
+
+.method private dl()V
     .locals 4
 
     sget-boolean v0, Lcom/android/server/rtg;->Pb:Z
@@ -435,7 +435,7 @@
     return-void
 .end method
 
-.method private fl()V
+.method private el()V
     .locals 6
 
     const-string p0, "installAPKs: wait internalSD ready for totally "
@@ -711,7 +711,7 @@
 .method static synthetic ssp(Lcom/android/server/rtg;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/rtg;->el()V
+    invoke-direct {p0}, Lcom/android/server/rtg;->dl()V
 
     return-void
 .end method
@@ -899,7 +899,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/rtg;->dl()V
+    invoke-direct {p0}, Lcom/android/server/rtg;->cl()V
 
     iget v2, p0, Lcom/android/server/rtg;->Nb:I
 

@@ -6,9 +6,9 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "OpMatrixUtils"
 
-.field private static final taa:I = 0x1e
+.field private static final uaa:I = 0x1e
 
-.field private static final uaa:F = 0.6f
+.field private static final vaa:F = 0.6f
 
 
 # direct methods
@@ -170,7 +170,7 @@
     return-object v0
 .end method
 
-.method public static tsu([F[F)[F
+.method public static sis([F[F)[F
     .locals 14
 
     array-length v0, p0

@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final SA:Landroid/util/ArraySet;
+.field private static final TA:Landroid/util/ArraySet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/ArraySet<",
@@ -17,9 +17,9 @@
     .end annotation
 .end field
 
-.field private static TA:Z = false
-
 .field private static final TAG:Ljava/lang/String; = "you"
+
+.field private static UA:Z
 
 
 # instance fields
@@ -50,11 +50,11 @@
 
     invoke-direct {v0, v1}, Landroid/util/ArraySet;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/android/server/pm/you;->SA:Landroid/util/ArraySet;
+    sput-object v0, Lcom/android/server/pm/you;->TA:Landroid/util/ArraySet;
 
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/android/server/pm/you;->TA:Z
+    sput-boolean v0, Lcom/android/server/pm/you;->UA:Z
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 .method public getGMSState()Z
     .locals 0
 
-    sget-boolean p0, Lcom/android/server/pm/you;->TA:Z
+    sget-boolean p0, Lcom/android/server/pm/you;->UA:Z
 
     return p0
 .end method
@@ -101,7 +101,7 @@
 
     move-result p1
 
-    sget-object v0, Lcom/android/server/pm/you;->SA:Landroid/util/ArraySet;
+    sget-object v0, Lcom/android/server/pm/you;->TA:Landroid/util/ArraySet;
 
     invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -139,7 +139,7 @@
 .method public setGMSState(Z)V
     .locals 0
 
-    sput-boolean p1, Lcom/android/server/pm/you;->TA:Z
+    sput-boolean p1, Lcom/android/server/pm/you;->UA:Z
 
     return-void
 .end method

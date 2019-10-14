@@ -36,7 +36,7 @@
     if-ne v0, v3, :cond_0
 
     :try_start_0
-    invoke-virtual {p0, p2, v1}, Lorg/bouncycastle/asn1/x509/r;->bio(Ljava/lang/String;I)Lorg/bouncycastle/asn1/vdb;
+    invoke-virtual {p0, p2, v1}, Lorg/bouncycastle/asn1/x509/r;->wtn(Ljava/lang/String;I)Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
     :try_end_0
@@ -89,7 +89,7 @@
     move-result-object p2
 
     :cond_1
-    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Hsa:Lorg/bouncycastle/asn1/bvj;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Msa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -97,7 +97,7 @@
 
     if-nez p0, :cond_6
 
-    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Ksa:Lorg/bouncycastle/asn1/bvj;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Psa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -108,7 +108,7 @@
     goto :goto_1
 
     :cond_2
-    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->ysa:Lorg/bouncycastle/asn1/bvj;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Dsa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -131,7 +131,7 @@
 
     if-nez p0, :cond_5
 
-    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->rha:Lorg/bouncycastle/asn1/bvj;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->wha:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -139,7 +139,7 @@
 
     if-nez p0, :cond_5
 
-    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->wsa:Lorg/bouncycastle/asn1/bvj;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Bsa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -147,7 +147,7 @@
 
     if-nez p0, :cond_5
 
-    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Gsa:Lorg/bouncycastle/asn1/bvj;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/q;->Lsa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 

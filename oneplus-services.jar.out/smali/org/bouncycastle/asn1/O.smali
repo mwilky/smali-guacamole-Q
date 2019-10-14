@@ -200,7 +200,7 @@
     return p0
 .end method
 
-.method mg()I
+.method lg()I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {

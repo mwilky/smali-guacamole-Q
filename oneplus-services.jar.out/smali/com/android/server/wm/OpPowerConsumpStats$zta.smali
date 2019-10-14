@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field AO:Z
-
-.field lock:Ljava/lang/Object;
-
-.field final synthetic this$0:Lcom/android/server/wm/OpPowerConsumpStats;
-
-.field yO:Ljava/util/HashMap;
+.field AO:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -31,6 +25,12 @@
         }
     .end annotation
 .end field
+
+.field BO:Z
+
+.field lock:Ljava/lang/Object;
+
+.field final synthetic this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
 .field zO:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -56,13 +56,13 @@
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     new-instance p1, Ljava/lang/Object;
 
@@ -72,12 +72,12 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iput-boolean p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     return-void
 .end method
 
-.method private Ho()Ljava/util/HashMap;
+.method private Go()Ljava/util/HashMap;
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -96,7 +96,7 @@
     monitor-enter v1
 
     :try_start_0
-    iget-boolean v2, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iget-boolean v2, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     if-eqz v2, :cond_6
 
@@ -172,7 +172,7 @@
 
     move-result-wide v6
 
-    iget-object v8, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iget-object v8, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     invoke-virtual {v8, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -340,7 +340,7 @@
     goto :goto_4
 .end method
 
-.method private Io()Z
+.method private Ho()Z
     .locals 19
 
     move-object/from16 v0, p0
@@ -350,7 +350,7 @@
     monitor-enter v1
 
     :try_start_0
-    iget-boolean v2, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iget-boolean v2, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     const/4 v3, 0x0
 
@@ -361,7 +361,7 @@
     return v3
 
     :cond_0
-    iput-boolean v3, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iput-boolean v3, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -381,7 +381,7 @@
 
     move-result-object v4
 
-    iget-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iget-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     if-nez v5, :cond_1
 
@@ -389,21 +389,21 @@
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iput-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     :cond_1
     if-eqz v4, :cond_2
 
-    iget-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iget-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     if-eqz v5, :cond_2
 
-    iget-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iget-object v5, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     invoke-virtual {v5, v4}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
     :cond_2
-    iget-object v4, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iget-object v4, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -426,7 +426,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    iget-object v6, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iget-object v6, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -440,7 +440,7 @@
 
     move-result-wide v6
 
-    iget-object v8, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iget-object v8, v0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     invoke-virtual {v8, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -606,7 +606,7 @@
     throw v0
 .end method
 
-.method private Jo()V
+.method private Io()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->lock:Ljava/lang/Object;
@@ -618,17 +618,17 @@
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iput-object v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
+    iput-object v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Ljava/util/HashMap;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iput-boolean v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     const-string p0, "AppInForegroundDischargeDurationTimer resetTime"
 
@@ -648,7 +648,7 @@
     throw p0
 .end method
 
-.method private Ko()Z
+.method private Jo()Z
     .locals 7
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->lock:Ljava/lang/Object;
@@ -656,7 +656,7 @@
     monitor-enter v0
 
     :try_start_0
-    iget-boolean v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iget-boolean v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     if-eqz v1, :cond_0
 
@@ -669,7 +669,7 @@
     :cond_0
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->AO:Z
+    iput-boolean v1, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->BO:Z
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -689,7 +689,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     if-nez v5, :cond_1
 
@@ -697,16 +697,16 @@
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v5, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iput-object v5, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     :cond_1
     if-eqz v4, :cond_2
 
-    iget-object v5, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     if-eqz v5, :cond_2
 
-    iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->yO:Ljava/util/HashMap;
+    iget-object p0, p0, Lcom/android/server/wm/OpPowerConsumpStats$zta;->zO:Ljava/util/HashMap;
 
     invoke-virtual {p0, v4}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
@@ -744,7 +744,7 @@
 .method static synthetic sis(Lcom/android/server/wm/OpPowerConsumpStats$zta;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Io()Z
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Ho()Z
 
     move-result p0
 
@@ -754,7 +754,7 @@
 .method static synthetic tsu(Lcom/android/server/wm/OpPowerConsumpStats$zta;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Jo()V
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Io()V
 
     return-void
 .end method
@@ -762,7 +762,7 @@
 .method static synthetic you(Lcom/android/server/wm/OpPowerConsumpStats$zta;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Ko()Z
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Jo()Z
 
     move-result p0
 
@@ -772,7 +772,7 @@
 .method static synthetic zta(Lcom/android/server/wm/OpPowerConsumpStats$zta;)Ljava/util/HashMap;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Ho()Ljava/util/HashMap;
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$zta;->Go()Ljava/util/HashMap;
 
     move-result-object p0
 

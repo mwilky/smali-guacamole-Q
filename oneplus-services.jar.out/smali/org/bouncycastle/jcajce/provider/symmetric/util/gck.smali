@@ -22,24 +22,24 @@
 
 .field public static final SHA512:I = 0x9
 
-.field public static final dNa:I = 0x0
-
-.field public static final eNa:I = 0xa
-
-.field public static final fNa:I = 0xb
-
-.field public static final gNa:I = 0xc
-
-.field public static final hNa:I = 0xd
-
 .field public static final iNa:I = 0x0
 
-.field public static final jNa:I = 0x1
+.field public static final jNa:I = 0xa
 
-.field public static final kNa:I = 0x2
+.field public static final kNa:I = 0xb
 
-.field public static final lNa:I = 0x3
+.field public static final lNa:I = 0xc
 
-.field public static final mNa:I = 0x4
+.field public static final mNa:I = 0xd
 
-.field public static final nNa:I = 0x5
+.field public static final nNa:I = 0x0
+
+.field public static final oNa:I = 0x1
+
+.field public static final pNa:I = 0x2
+
+.field public static final qNa:I = 0x3
+
+.field public static final rNa:I = 0x4
+
+.field public static final sNa:I = 0x5

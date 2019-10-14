@@ -31,17 +31,17 @@
 
 .field public static final enum IN:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
-.field public static final enum Zja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
-
-.field public static final enum _ja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
-
-.field public static final enum aka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
-
-.field public static final enum bka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
-
-.field public static final enum cka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
-
 .field public static final enum dka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+.field public static final enum eka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+.field public static final enum fka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+.field public static final enum gka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+.field public static final enum hka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+.field public static final enum ika:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
 
 # direct methods
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, v3, v2}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Zja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->dka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v0, v6, v5}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->_ja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->eka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v0, v7, v6}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->aka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->fka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -116,7 +116,7 @@
 
     invoke-direct {v0, v8, v7}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->bka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->gka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -126,7 +126,7 @@
 
     invoke-direct {v0, v9, v8}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->cka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->hka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     new-instance v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
@@ -136,7 +136,7 @@
 
     invoke-direct {v0, v10, v9}, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->dka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->ika:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     const/16 v0, 0x9
 
@@ -146,7 +146,7 @@
 
     aput-object v10, v0, v1
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->Zja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->dka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     aput-object v1, v0, v2
 
@@ -158,23 +158,23 @@
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->_ja:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->eka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->aka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->fka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->bka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->gka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     aput-object v1, v0, v7
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->cka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->hka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     aput-object v1, v0, v8
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->dka:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->ika:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     aput-object v1, v0, v9
 

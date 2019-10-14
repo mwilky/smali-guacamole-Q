@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private LBa:Z
+.field private QBa:Z
 
 .field private factor:Ljava/math/BigInteger;
 
@@ -26,7 +26,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lyou/zta/sis/you$zta;->LBa:Z
+    iput-boolean p1, p0, Lyou/zta/sis/you$zta;->QBa:Z
 
     iput-object p2, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
 
@@ -36,7 +36,7 @@
 .method static synthetic access$000()Lyou/zta/sis/you$zta;
     .locals 1
 
-    invoke-static {}, Lyou/zta/sis/you$zta;->ct()Lyou/zta/sis/you$zta;
+    invoke-static {}, Lyou/zta/sis/you$zta;->et()Lyou/zta/sis/you$zta;
 
     move-result-object v0
 
@@ -46,14 +46,14 @@
 .method static synthetic access$200()Lyou/zta/sis/you$zta;
     .locals 1
 
-    invoke-static {}, Lyou/zta/sis/you$zta;->dt()Lyou/zta/sis/you$zta;
+    invoke-static {}, Lyou/zta/sis/you$zta;->ft()Lyou/zta/sis/you$zta;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private static ct()Lyou/zta/sis/you$zta;
+.method private static et()Lyou/zta/sis/you$zta;
     .locals 3
 
     new-instance v0, Lyou/zta/sis/you$zta;
@@ -67,7 +67,7 @@
     return-object v0
 .end method
 
-.method private static dt()Lyou/zta/sis/you$zta;
+.method private static ft()Lyou/zta/sis/you$zta;
     .locals 3
 
     new-instance v0, Lyou/zta/sis/you$zta;
@@ -106,9 +106,25 @@
 
 # virtual methods
 .method public Aj()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lyou/zta/sis/you$zta;->QBa:Z
+
+    return p0
+.end method
+
+.method public yj()Ljava/math/BigInteger;
+    .locals 0
+
+    iget-object p0, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
+
+    return-object p0
+.end method
+
+.method public zj()Z
     .locals 1
 
-    iget-boolean v0, p0, Lyou/zta/sis/you$zta;->LBa:Z
+    iget-boolean v0, p0, Lyou/zta/sis/you$zta;->QBa:Z
 
     if-eqz v0, :cond_0
 
@@ -125,20 +141,4 @@
 
     :goto_0
     return p0
-.end method
-
-.method public Bj()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lyou/zta/sis/you$zta;->LBa:Z
-
-    return p0
-.end method
-
-.method public zj()Ljava/math/BigInteger;
-    .locals 0
-
-    iget-object p0, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
-
-    return-object p0
 .end method

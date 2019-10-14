@@ -43,7 +43,7 @@
     return-void
 
     :cond_0
-    const-string v1, "android.intent.action.BOOT_COMPLETED"
+    const-string v1, "com.oem.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

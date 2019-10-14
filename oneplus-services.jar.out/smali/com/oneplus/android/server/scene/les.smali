@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/android/server/scene/ivd;
 
-.field final synthetic yda:I
+.field final synthetic zda:I
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/les;->this$0:Lcom/oneplus/android/server/scene/ivd;
 
-    iput p2, p0, Lcom/oneplus/android/server/scene/les;->yda:I
+    iput p2, p0, Lcom/oneplus/android/server/scene/les;->zda:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 .method public run()V
     .locals 4
 
-    iget v0, p0, Lcom/oneplus/android/server/scene/les;->yda:I
+    iget v0, p0, Lcom/oneplus/android/server/scene/les;->zda:I
 
     if-eqz v0, :cond_2
 

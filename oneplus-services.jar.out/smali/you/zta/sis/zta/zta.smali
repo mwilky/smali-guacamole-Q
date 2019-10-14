@@ -37,7 +37,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lyou/zta/sis/zta/wtn;->lk()Z
+    invoke-virtual {p1}, Lyou/zta/sis/zta/wtn;->kk()Z
 
     move-result v1
 

@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public Td()V
+.method public Sd()V
     .locals 1
 
     const-string v0, ""

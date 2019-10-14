@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static final Yca:Ljava/lang/String; = "game_mode_answer_no_incallui"
+.field private static final Zca:Ljava/lang/String; = "game_mode_answer_no_incallui"
 
 .field private static instance:Lcom/oneplus/android/server/scene/qbh;
 
 
 # instance fields
-.field private Wca:Z
+.field private Xca:Z
 
-.field private final Xca:Landroid/database/ContentObserver;
+.field private final Yca:Landroid/database/ContentObserver;
 
 .field private mContext:Landroid/content/Context;
 
@@ -25,7 +25,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Wca:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Z
 
     new-instance v0, Lcom/oneplus/android/server/scene/ywr;
 
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/oneplus/android/server/scene/ywr;-><init>(Lcom/oneplus/android/server/scene/qbh;Landroid/os/Handler;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Landroid/database/ContentObserver;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/qbh;->Yca:Landroid/database/ContentObserver;
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/qbh;->mContext:Landroid/content/Context;
 
@@ -52,16 +52,16 @@
     return-void
 .end method
 
-.method private Vr()V
+.method private Ur()V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Wca:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Wca:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Z
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/qbh;->mContext:Landroid/content/Context;
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Landroid/database/ContentObserver;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/qbh;->Yca:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
@@ -191,7 +191,7 @@
     return-void
 .end method
 
-.method public We()V
+.method public Ve()V
     .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -214,11 +214,11 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/qbh;->logd(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/scene/qbh;->Vr()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/scene/qbh;->Ur()V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Wca:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Z
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/qbh;->mContext:Landroid/content/Context;
 
@@ -232,7 +232,7 @@
 
     move-result-object v1
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/qbh;->Xca:Landroid/database/ContentObserver;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/qbh;->Yca:Landroid/database/ContentObserver;
 
     const/4 v2, 0x0
 

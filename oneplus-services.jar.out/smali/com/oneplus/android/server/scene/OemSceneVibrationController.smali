@@ -19,17 +19,17 @@
 
 .field public static final TAG:Ljava/lang/String; = "OemSceneVibrationController"
 
-.field private static Zea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
-
-.field private static final _ea:I
+.field private static _ea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
 .field private static final afa:I
+
+.field private static final bfa:I
 
 .field private static sInstance:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
 
 
 # instance fields
-.field private Yea:I
+.field private Zea:I
 
 .field private mContext:Landroid/content/Context;
 
@@ -48,7 +48,7 @@
 
     sput-boolean v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->DEBUG:Z
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->Tja:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->Yja:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -58,9 +58,9 @@
 
     shl-int v0, v1, v0
 
-    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->_ea:I
+    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->afa:I
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->Uja:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->Zja:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -68,7 +68,7 @@
 
     shl-int v0, v1, v0
 
-    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->afa:I
+    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->bfa:I
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
     new-instance v1, Ljava/lang/Object;
 
@@ -107,7 +107,7 @@
     monitor-enter p1
 
     :try_start_0
-    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
     monitor-exit p1
 
@@ -185,18 +185,18 @@
     if-eqz p2, :cond_0
 
     :try_start_0
-    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
     shl-int p1, v1, p1
 
     or-int/2addr p1, p2
 
-    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
     goto :goto_0
 
     :cond_0
-    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
     shl-int p1, v1, p1
 
@@ -204,7 +204,7 @@
 
     and-int/2addr p1, p2
 
-    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
     :goto_0
     monitor-exit v0
@@ -224,9 +224,9 @@
 .method private rtg(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
-    iget p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Yea:I
+    iget p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:I
 
-    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->_ea:I
+    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->afa:I
 
     and-int/2addr v0, p1
 
@@ -237,7 +237,7 @@
     return v1
 
     :cond_0
-    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->afa:I
+    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->bfa:I
 
     and-int/2addr p1, v0
 
@@ -298,10 +298,10 @@
 
 
 # virtual methods
-.method public of()Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+.method public nf()Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->_ea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     if-nez v0, :cond_0
 
@@ -309,10 +309,10 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;-><init>(Lcom/oneplus/android/server/scene/OemSceneVibrationController;)V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    sput-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->_ea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     :cond_0
-    sget-object p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Zea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    sget-object p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->_ea:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     return-object p0
 .end method

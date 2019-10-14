@@ -21,23 +21,23 @@
 
 .field private static final TAG:Ljava/lang/String; = "AlertSliderAudioPolicy"
 
-.field private static final hX:Ljava/lang/String; = "oem_zen_media_switch"
+.field private static final iX:Ljava/lang/String; = "oem_zen_media_switch"
 
-.field private static final iX:I = 0x0
+.field private static final jX:I = 0x0
 
-.field private static final jX:I = 0x1
+.field private static final kX:I = 0x1
 
-.field private static final kX:I = 0x2
+.field private static final lX:I = 0x2
 
 
 # instance fields
-.field private final dX:Ljava/lang/Object;
+.field private final eX:Ljava/lang/Object;
 
-.field private eX:Lcom/oneplus/android/server/alertslider/tsu;
-
-.field private fX:Z
+.field private fX:Lcom/oneplus/android/server/alertslider/tsu;
 
 .field private gX:Z
+
+.field private hX:Z
 
 .field private mAudioManager:Landroid/media/AudioManager;
 
@@ -70,11 +70,11 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->dX:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->eX:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/alertslider/you;->gX:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/alertslider/you;->hX:Z
 
     iput-object p1, p0, Lcom/oneplus/android/server/alertslider/you;->mContext:Landroid/content/Context;
 
@@ -132,7 +132,7 @@
     move p2, v0
 
     :goto_0
-    iput-boolean p2, p0, Lcom/oneplus/android/server/alertslider/you;->fX:Z
+    iput-boolean p2, p0, Lcom/oneplus/android/server/alertslider/you;->gX:Z
 
     return-void
 .end method
@@ -145,7 +145,7 @@
     return v0
 .end method
 
-.method private dr()V
+.method private br()V
     .locals 4
 
     iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->mAudioManager:Landroid/media/AudioManager;
@@ -167,7 +167,7 @@
     return-void
 .end method
 
-.method private er()V
+.method private dr()V
     .locals 6
 
     iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->mAudioService:Lcom/android/server/audio/AudioService;
@@ -187,7 +187,7 @@
     return-void
 .end method
 
-.method private fr()V
+.method private er()V
     .locals 6
 
     iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->mAudioService:Lcom/android/server/audio/AudioService;
@@ -218,7 +218,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/alertslider/you;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/alertslider/you;->fX:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/alertslider/you;->gX:Z
 
     return p1
 .end method
@@ -269,16 +269,16 @@
 .method public setUp()V
     .locals 4
 
-    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->dX:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->eX:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-boolean v1, p0, Lcom/oneplus/android/server/alertslider/you;->fX:Z
+    iget-boolean v1, p0, Lcom/oneplus/android/server/alertslider/you;->gX:Z
 
     if-eqz v1, :cond_0
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/alertslider/you;->er()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/alertslider/you;->dr()V
 
     :cond_0
     const/4 v1, 0x2
@@ -320,7 +320,7 @@
 .method public sis(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/alertslider/you;->gX:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/alertslider/you;->hX:Z
 
     return-void
 .end method
@@ -338,12 +338,12 @@
 .method public zgw()V
     .locals 4
 
-    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->dX:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->eX:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/oneplus/android/server/alertslider/you;->fr()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/alertslider/you;->er()V
 
     const/4 v1, 0x2
 
@@ -388,12 +388,12 @@
 .method public zta()V
     .locals 4
 
-    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->dX:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/you;->eX:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/oneplus/android/server/alertslider/you;->fr()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/alertslider/you;->er()V
 
     const/4 v1, 0x2
 

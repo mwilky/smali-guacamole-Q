@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private Zca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+.field private _ca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
 .field private mAudioManager:Landroid/media/AudioManager;
 
@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method private Tm()[Ljava/lang/String;
+.method private Sm()[Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
@@ -91,10 +91,10 @@
     return-object p0
 .end method
 
-.method private Wr()V
+.method private Vr()V
     .locals 1
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Tm()[Ljava/lang/String;
+    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Sm()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -269,17 +269,17 @@
 .method static synthetic zta(Lcom/oneplus/android/server/scene/OemSceneAudioController;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Wr()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Vr()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Xe()Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+.method public We()Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Zca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->_ca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     if-nez v0, :cond_0
 
@@ -287,10 +287,10 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;-><init>(Lcom/oneplus/android/server/scene/OemSceneAudioController;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Zca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->_ca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Zca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->_ca:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     return-object p0
 .end method

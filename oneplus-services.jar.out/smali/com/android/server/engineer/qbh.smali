@@ -22,39 +22,39 @@
 
 .field public static final ERROR_NOT_SUPPORTED:I = -0x1
 
-.field public static final Gz:I = -0x2
+.field public static final Hz:I = -0x2
 
-.field private static final Hz:I = 0x4
+.field private static final Iz:I = 0x4
 
-.field private static final Iz:Ljava/lang/String; = "android.secrecy.SecrecyManagerInternal"
+.field private static final Jz:Ljava/lang/String; = "android.secrecy.SecrecyManagerInternal"
 
-.field private static final Jz:Ljava/lang/String; = "getSecrecyState"
+.field private static final Kz:Ljava/lang/String; = "getSecrecyState"
 
-.field private static final Kz:Ljava/lang/String; = "android.os.OemManager"
+.field private static final Lz:Ljava/lang/String; = "android.os.OemManager"
 
-.field private static final Lz:Ljava/lang/String; = "writeLogToPartition"
+.field private static final Mz:Ljava/lang/String; = "writeLogToPartition"
 
-.field private static final Mz:Ljava/lang/String; = "cleanItem"
+.field private static final Nz:Ljava/lang/String; = "cleanItem"
 
-.field private static final Nz:Ljava/lang/String; = "syncCacheToEmmc"
+.field private static final Oz:Ljava/lang/String; = "syncCacheToEmmc"
 
-.field private static final Oz:Ljava/lang/String; = "vendor.oem.hardware.cryptoeng.V1_0.ICryptoeng"
+.field private static final Pz:Ljava/lang/String; = "vendor.oem.hardware.cryptoeng.V1_0.ICryptoeng"
 
-.field private static final Pz:Ljava/lang/String; = "vendor.oem.hardware.biometrics.fingerprintpay.V1_0.IFingerprintPay"
+.field private static final Qz:Ljava/lang/String; = "vendor.oem.hardware.biometrics.fingerprintpay.V1_0.IFingerprintPay"
 
-.field public static final Qz:B = 0x0t
-
-.field public static final Rz:B = 0x1t
+.field public static final Rz:B = 0x0t
 
 .field public static final STATUS_OK:I = 0x0
 
-.field public static final Sz:B = 0x2t
+.field public static final Sz:B = 0x1t
 
 .field private static final TAG:Ljava/lang/String; = "OneplusEngineerUtils"
 
-.field private static final Tz:Ljava/io/File;
+.field public static final Tz:B = 0x2t
 
-.field private static final Ug:Ljava/lang/String; = "oem.secrecy.support"
+.field private static final Uz:Ljava/io/File;
+
+.field private static final Vg:Ljava/lang/String; = "oem.secrecy.support"
 
 
 # direct methods
@@ -67,7 +67,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/engineer/qbh;->Tz:Ljava/io/File;
+    sput-object v0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
 
     new-instance v0, Ljava/io/File;
 
@@ -1339,7 +1339,7 @@
 
     :cond_3
     :goto_6
-    sget-object p0, Lcom/android/server/engineer/qbh;->Tz:Ljava/io/File;
+    sget-object p0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -1353,7 +1353,7 @@
 
     invoke-static {p0, v0}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
-    sget-object p0, Lcom/android/server/engineer/qbh;->Tz:Ljava/io/File;
+    sget-object p0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
 
     invoke-static {p0, v0}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
@@ -1467,7 +1467,7 @@
     return v1
 
     :cond_2
-    sget-object v4, Lcom/android/server/engineer/qbh;->Tz:Ljava/io/File;
+    sget-object v4, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1680,7 +1680,7 @@
 
     invoke-static {p0, p1}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
-    sget-object p0, Lcom/android/server/engineer/qbh;->Tz:Ljava/io/File;
+    sget-object p0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
 
     invoke-static {p0, p1}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 

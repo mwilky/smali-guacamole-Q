@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private final ata:[B
+.field private final fta:[B
 
 .field private final key:I
 
@@ -32,7 +32,7 @@
 
     iput v0, p0, Lorg/bouncycastle/asn1/bvj$zta;->key:I
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/bvj$zta;->ata:[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/bvj$zta;->fta:[B
 
     return-void
 .end method
@@ -46,11 +46,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/bvj$zta;->ata:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/bvj$zta;->fta:[B
 
     check-cast p1, Lorg/bouncycastle/asn1/bvj$zta;
 
-    iget-object p1, p1, Lorg/bouncycastle/asn1/bvj$zta;->ata:[B
+    iget-object p1, p1, Lorg/bouncycastle/asn1/bvj$zta;->fta:[B
 
     invoke-static {p0, p1}, Lorg/bouncycastle/util/zta;->sis([B[B)Z
 

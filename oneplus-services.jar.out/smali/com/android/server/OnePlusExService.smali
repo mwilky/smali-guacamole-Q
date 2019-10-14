@@ -22,6 +22,8 @@
 
 .field private static final MSG_SYSTEM_READY:I = 0x1
 
+.field private static final OEM_BOOT_COMPLETED:Ljava/lang/String; = "com.oem.intent.action.BOOT_COMPLETED"
+
 .field private static final SCREATOR:Landroid/util/Singleton;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1277,7 +1279,7 @@
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    const-string v3, "android.intent.action.BOOT_COMPLETED"
+    const-string v3, "com.oem.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
@@ -1322,7 +1324,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->uf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v2
 
@@ -1336,7 +1338,7 @@
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->uf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v1
 
@@ -2733,7 +2735,7 @@
     :cond_1
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mSceneModeController:Lcom/oneplus/android/server/scene/ivd;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->lf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->kf()V
 
     goto :goto_0
 
@@ -2742,7 +2744,7 @@
 
     if-eqz p0, :cond_4
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->nf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->mf()V
 
     goto :goto_0
 
@@ -2841,7 +2843,7 @@
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mSceneModeController:Lcom/oneplus/android/server/scene/ivd;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->mf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->lf()V
 
     goto :goto_0
 

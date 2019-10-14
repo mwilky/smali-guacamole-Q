@@ -18,25 +18,25 @@
 
 .field public static final STATE_IDLE:I = 0x2
 
-.field public static final _g:I = -0x3e8
+.field public static final ah:I = -0x3e8
 
-.field public static final ah:I = 0x0
+.field public static final bh:I = 0x0
 
-.field public static final bh:I = 0x1
+.field public static final ch:I = 0x1
 
-.field public static final ch:I = 0x2
+.field public static final dh:I = 0x2
 
-.field public static final dh:I = 0x4
+.field public static final eh:I = 0x4
 
-.field public static final eh:I = 0x8
+.field public static final fh:I = 0x8
 
-.field public static final fh:I = 0x10
+.field public static final gh:I = 0x10
 
-.field public static final gh:I = 0x20
+.field public static final hh:I = 0x20
 
-.field public static final hh:I = 0x40
+.field public static final ih:I = 0x40
 
-.field public static final ih:I = 0x80
+.field public static final jh:I = 0x80
 
 
 # direct methods

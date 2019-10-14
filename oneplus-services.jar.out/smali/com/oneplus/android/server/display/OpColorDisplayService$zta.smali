@@ -72,7 +72,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->se()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->re()V
 
     goto/16 :goto_2
 
@@ -94,7 +94,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ge()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Fe()V
 
     goto/16 :goto_2
 
@@ -105,7 +105,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Fe()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ee()V
 
     goto/16 :goto_2
 
@@ -200,7 +200,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ce()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Be()V
 
     goto/16 :goto_2
 
@@ -211,7 +211,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ze()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ye()V
 
     goto/16 :goto_2
 
@@ -230,7 +230,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ae()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ze()V
 
     goto/16 :goto_2
 
@@ -253,7 +253,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ye()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->xe()V
 
     goto/16 :goto_2
 
@@ -351,7 +351,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->De()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ce()V
 
     goto :goto_2
 
@@ -370,7 +370,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Be()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ae()V
 
     goto :goto_2
 

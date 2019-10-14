@@ -10,8 +10,6 @@
 
 
 # instance fields
-.field private jh:Ljava/lang/reflect/Method;
-
 .field private kh:Ljava/lang/reflect/Method;
 
 .field private lh:Ljava/lang/reflect/Method;
@@ -28,6 +26,8 @@
 
 .field private mProcessList:Lcom/android/server/am/ProcessList;
 
+.field private mh:Ljava/lang/reflect/Method;
+
 
 # direct methods
 .method constructor <init>(Lcom/android/server/am/ywr;Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessList;Lcom/android/server/wm/ActivityTaskManagerService;Lcom/android/internal/os/ProcessCpuTracker;)V
@@ -37,11 +37,11 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/am/wtn;->jh:Ljava/lang/reflect/Method;
-
     iput-object v0, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
 
     iput-object v0, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
+
+    iput-object v0, p0, Lcom/android/server/am/wtn;->mh:Ljava/lang/reflect/Method;
 
     iput-object p1, p0, Lcom/android/server/am/wtn;->mEmbryoManager:Lcom/android/server/am/ywr;
 
@@ -110,9 +110,9 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/server/am/wtn;->jh:Ljava/lang/reflect/Method;
+    iput-object v2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/android/server/am/wtn;->jh:Ljava/lang/reflect/Method;
+    iget-object v2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_0
 
@@ -123,7 +123,7 @@
     return v1
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/am/wtn;->jh:Ljava/lang/reflect/Method;
+    iget-object v2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
 
     invoke-virtual {v2, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
@@ -145,9 +145,9 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
+    iput-object v2, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
+    iget-object v2, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_1
 
@@ -158,7 +158,7 @@
     return v1
 
     :cond_1
-    iget-object v2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
+    iget-object v2, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
 
     invoke-virtual {v2, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
@@ -180,9 +180,9 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
+    iput-object v2, p0, Lcom/android/server/am/wtn;->mh:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
+    iget-object v2, p0, Lcom/android/server/am/wtn;->mh:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_2
 
@@ -193,7 +193,7 @@
     return v1
 
     :cond_2
-    iget-object p0, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
+    iget-object p0, p0, Lcom/android/server/am/wtn;->mh:Ljava/lang/reflect/Method;
 
     invoke-virtual {p0, v6}, Ljava/lang/reflect/Method;->setAccessible(Z)V
     :try_end_0
@@ -340,7 +340,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v1, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
+    iget-object v1, p0, Lcom/android/server/am/wtn;->mh:Ljava/lang/reflect/Method;
 
     iget-object p0, p0, Lcom/android/server/am/wtn;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -626,7 +626,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v1, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
+    iget-object v1, p0, Lcom/android/server/am/wtn;->lh:Ljava/lang/reflect/Method;
 
     iget-object p0, p0, Lcom/android/server/am/wtn;->mAms:Lcom/android/server/am/ActivityManagerService;
 
@@ -868,7 +868,7 @@
 
     invoke-direct {v1, p2, p3}, Lcom/android/server/am/HostingRecord;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/android/server/am/wtn;->jh:Ljava/lang/reflect/Method;
+    iget-object p2, p0, Lcom/android/server/am/wtn;->kh:Ljava/lang/reflect/Method;
 
     iget-object p0, p0, Lcom/android/server/am/wtn;->mProcessList:Lcom/android/server/am/ProcessList;
 

@@ -8,9 +8,9 @@
 
 
 # instance fields
-.field private Vg:Lcom/android/server/am/you;
+.field private Wg:Lcom/android/server/am/you;
 
-.field private final Wg:Ljava/util/HashMap;
+.field private final Xg:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -21,11 +21,11 @@
     .end annotation
 .end field
 
-.field private Xg:I
-
 .field private Yg:I
 
-.field private final Zg:Ljava/util/HashMap;
+.field private Zg:I
+
+.field private final _g:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -87,7 +87,7 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/android/server/am/you;-><init>(ILjava/lang/String;ZZ)V
 
-    iput-object p2, p0, Lcom/android/server/am/you;->Vg:Lcom/android/server/am/you;
+    iput-object p2, p0, Lcom/android/server/am/you;->Wg:Lcom/android/server/am/you;
 
     return-void
 .end method
@@ -125,21 +125,21 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/server/am/you;->Xg:I
+    iput v0, p0, Lcom/android/server/am/you;->Yg:I
 
     iput v0, p0, Lcom/android/server/am/you;->mState:I
 
-    iput v0, p0, Lcom/android/server/am/you;->Yg:I
+    iput v0, p0, Lcom/android/server/am/you;->Zg:I
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     new-instance v0, Ljava/util/HashSet;
 
@@ -158,19 +158,7 @@
     return-void
 .end method
 
-.method private Ha(I)V
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/am/you;->Yg:I
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcom/android/server/am/you;->Yg:I
-
-    return-void
-.end method
-
-.method private Hl()V
+.method private Gl()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -207,27 +195,25 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/android/server/am/you;->da(Z)V
+    invoke-direct {p0, v1}, Lcom/android/server/am/you;->ea(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method private Ia(I)V
+.method private Ha(I)V
     .locals 1
 
-    iget v0, p0, Lcom/android/server/am/you;->Yg:I
+    iget v0, p0, Lcom/android/server/am/you;->Zg:I
 
-    not-int p1, p1
+    or-int/2addr p1, v0
 
-    and-int/2addr p1, v0
-
-    iput p1, p0, Lcom/android/server/am/you;->Yg:I
+    iput p1, p0, Lcom/android/server/am/you;->Zg:I
 
     return-void
 .end method
 
-.method private Il()V
+.method private Hl()V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -262,12 +248,26 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/server/am/you;->da(Z)V
+    invoke-direct {p0, v0}, Lcom/android/server/am/you;->ea(Z)V
 
     return-void
 .end method
 
-.method private da(Z)V
+.method private Ia(I)V
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/am/you;->Zg:I
+
+    not-int p1, p1
+
+    and-int/2addr p1, v0
+
+    iput p1, p0, Lcom/android/server/am/you;->Zg:I
+
+    return-void
+.end method
+
+.method private ea(Z)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -322,9 +322,9 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/server/am/you;->Yg:I
+    iput v0, p0, Lcom/android/server/am/you;->Zg:I
 
-    iput v0, p0, Lcom/android/server/am/you;->Xg:I
+    iput v0, p0, Lcom/android/server/am/you;->Yg:I
 
     const/16 v0, 0x14
 
@@ -334,11 +334,11 @@
 
     iput-wide v0, p0, Lcom/android/server/am/you;->mProcStateSeq:J
 
-    iget-object v0, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    iget-object v0, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
@@ -392,7 +392,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object p1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->size()I
 
@@ -412,7 +412,7 @@
 
     if-ne p2, v0, :cond_0
 
-    iget-object p1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object p1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->size()I
 
@@ -420,7 +420,7 @@
 
     if-ne p1, v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/am/you;->Hl()V
+    invoke-direct {p0}, Lcom/android/server/am/you;->Gl()V
 
     goto :goto_0
 
@@ -429,7 +429,7 @@
 
     if-nez p2, :cond_1
 
-    iget-object p1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object p1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Ljava/util/HashMap;->size()I
 
@@ -437,7 +437,7 @@
 
     if-nez p1, :cond_1
 
-    invoke-direct {p0}, Lcom/android/server/am/you;->Il()V
+    invoke-direct {p0}, Lcom/android/server/am/you;->Hl()V
 
     :cond_1
     :goto_0
@@ -523,13 +523,13 @@
     :try_start_0
     iput v0, p0, Lcom/android/server/am/you;->mState:I
 
-    iget v1, p0, Lcom/android/server/am/you;->Yg:I
+    iget v1, p0, Lcom/android/server/am/you;->Zg:I
 
     and-int/2addr v1, v0
 
     if-eqz v1, :cond_0
 
-    invoke-direct {p0, v0}, Lcom/android/server/am/you;->da(Z)V
+    invoke-direct {p0, v0}, Lcom/android/server/am/you;->ea(Z)V
 
     :cond_0
     invoke-static {}, Lcom/android/server/am/tsu;->getInstance()Lcom/android/server/am/tsu;
@@ -610,7 +610,7 @@
     :try_start_0
     iput v0, p0, Lcom/android/server/am/you;->mState:I
 
-    iget v0, p0, Lcom/android/server/am/you;->Yg:I
+    iget v0, p0, Lcom/android/server/am/you;->Zg:I
 
     and-int/lit8 v0, v0, 0x1
 
@@ -618,7 +618,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/android/server/am/you;->da(Z)V
+    invoke-direct {p0, v0}, Lcom/android/server/am/you;->ea(Z)V
 
     :cond_0
     invoke-static {}, Lcom/android/server/am/tsu;->getInstance()Lcom/android/server/am/tsu;
@@ -678,7 +678,7 @@
 .method public final getOwnerUid()I
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/you;->Vg:Lcom/android/server/am/you;
+    iget-object p0, p0, Lcom/android/server/am/you;->Wg:Lcom/android/server/am/you;
 
     if-eqz p0, :cond_0
 
@@ -766,7 +766,7 @@
 .method public final ma()I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/am/you;->Yg:I
+    iget p0, p0, Lcom/android/server/am/you;->Zg:I
 
     return p0
 .end method
@@ -954,12 +954,12 @@
 .method public obl(I)V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1002,7 +1002,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object p0, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1407,7 +1407,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/am/you;->Yg:I
+    iget v1, p0, Lcom/android/server/am/you;->Zg:I
 
     invoke-static {v1}, Lcom/android/server/am/AppRecordManager;->hmo(I)Ljava/lang/String;
 
@@ -1439,7 +1439,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
-    iget-object v1, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     monitor-enter v1
     :try_end_2
@@ -1450,7 +1450,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -1481,7 +1481,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v4, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1511,11 +1511,11 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :try_start_4
-    iget-object v1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->size()I
 
@@ -1534,7 +1534,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
 
@@ -1548,7 +1548,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -1599,7 +1599,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1865,7 +1865,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1879,7 +1879,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1892,7 +1892,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1937,13 +1937,13 @@
     monitor-enter p0
 
     :try_start_0
-    iget v0, p0, Lcom/android/server/am/you;->Xg:I
+    iget v0, p0, Lcom/android/server/am/you;->Yg:I
 
     const/4 v1, 0x1
 
     sub-int/2addr v0, v1
 
-    iput v0, p0, Lcom/android/server/am/you;->Xg:I
+    iput v0, p0, Lcom/android/server/am/you;->Yg:I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1975,7 +1975,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lcom/android/server/am/you;->Xg:I
+    iget p1, p0, Lcom/android/server/am/you;->Yg:I
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1985,7 +1985,7 @@
 
     invoke-static {v1, p1}, Lcom/android/server/am/you;->myLog(ILjava/lang/String;)V
 
-    iget p1, p0, Lcom/android/server/am/you;->Xg:I
+    iget p1, p0, Lcom/android/server/am/you;->Yg:I
 
     if-lez p1, :cond_0
 
@@ -1996,7 +1996,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    iput p1, p0, Lcom/android/server/am/you;->Xg:I
+    iput p1, p0, Lcom/android/server/am/you;->Yg:I
 
     const/16 v0, 0x40
 
@@ -2347,7 +2347,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2420,7 +2420,7 @@
 
     if-le v2, v1, :cond_1
 
-    iget-object v2, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2451,7 +2451,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/am/you;->Wg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->Xg:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2531,12 +2531,12 @@
 .method public zta(ILjava/lang/String;ZI)V
     .locals 4
 
-    iget-object v0, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2611,7 +2611,7 @@
     invoke-direct {p3, p1, p2, p0}, Lcom/android/server/am/m;-><init>(ILjava/lang/String;Lcom/android/server/am/you;)V
 
     :goto_0
-    iget-object p0, p0, Lcom/android/server/am/you;->Zg:Ljava/util/HashMap;
+    iget-object p0, p0, Lcom/android/server/am/you;->_g:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2640,13 +2640,13 @@
     monitor-enter p0
 
     :try_start_0
-    iget p2, p0, Lcom/android/server/am/you;->Xg:I
+    iget p2, p0, Lcom/android/server/am/you;->Yg:I
 
     const/4 p3, 0x1
 
     add-int/2addr p2, p3
 
-    iput p2, p0, Lcom/android/server/am/you;->Xg:I
+    iput p2, p0, Lcom/android/server/am/you;->Yg:I
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -2678,7 +2678,7 @@
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lcom/android/server/am/you;->Xg:I
+    iget p1, p0, Lcom/android/server/am/you;->Yg:I
 
     invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2688,7 +2688,7 @@
 
     invoke-static {p3, p1}, Lcom/android/server/am/you;->myLog(ILjava/lang/String;)V
 
-    iget p1, p0, Lcom/android/server/am/you;->Xg:I
+    iget p1, p0, Lcom/android/server/am/you;->Yg:I
 
     if-le p1, p3, :cond_0
 
@@ -2734,7 +2734,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget v0, p0, Lcom/android/server/am/you;->Xg:I
+    iget v0, p0, Lcom/android/server/am/you;->Yg:I
 
     if-gtz v0, :cond_0
 
@@ -2779,7 +2779,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lcom/android/server/am/you;->Xg:I
+    iget p1, p0, Lcom/android/server/am/you;->Yg:I
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

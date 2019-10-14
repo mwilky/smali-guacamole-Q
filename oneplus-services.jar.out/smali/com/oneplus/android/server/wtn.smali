@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/android/server/vdb;->Eq()V
+    value = Lcom/oneplus/android/server/vdb;->Dq()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,7 +39,7 @@
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {}, Lcom/oneplus/android/server/vdb;->fe()Z
+    invoke-static {}, Lcom/oneplus/android/server/vdb;->ee()Z
 
     move-result p1
 

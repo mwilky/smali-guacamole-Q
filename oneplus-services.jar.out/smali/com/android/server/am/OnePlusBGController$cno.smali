@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field hl:J
-
 .field il:J
+
+.field jl:J
 
 .field mTimeStamp:J
 
@@ -57,9 +57,9 @@
 
     iput-wide p3, p0, Lcom/android/server/am/OnePlusBGController$cno;->mTimeStamp:J
 
-    iput-wide p5, p0, Lcom/android/server/am/OnePlusBGController$cno;->hl:J
+    iput-wide p5, p0, Lcom/android/server/am/OnePlusBGController$cno;->il:J
 
-    iput-wide p7, p0, Lcom/android/server/am/OnePlusBGController$cno;->il:J
+    iput-wide p7, p0, Lcom/android/server/am/OnePlusBGController$cno;->jl:J
 
     return-void
 .end method
@@ -110,13 +110,13 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Lcom/android/server/am/OnePlusBGController$cno;->il:J
+    iget-wide v2, p0, Lcom/android/server/am/OnePlusBGController$cno;->jl:J
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/OnePlusBGController$cno;->hl:J
+    iget-wide v1, p0, Lcom/android/server/am/OnePlusBGController$cno;->il:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

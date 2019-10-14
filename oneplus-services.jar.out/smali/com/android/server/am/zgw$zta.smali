@@ -21,53 +21,53 @@
 
 
 # static fields
-.field static final Ak:I = 0x2
+.field static final Ak:I = 0x1
 
-.field static final Bk:I = 0x3
+.field static final Bk:I = 0x2
 
-.field static final Ck:I = 0x4
+.field static final Ck:I = 0x3
 
-.field static final Dk:I = 0x5
+.field static final Dk:I = 0x4
+
+.field static final Ek:I = 0x5
 
 .field static final LEVEL_NONE:I = 0x0
 
-.field static final qk:Ljava/lang/String; = "unknow"
+.field static final rk:Ljava/lang/String; = "unknow"
 
-.field static final rk:Ljava/lang/String; = "activity"
+.field static final sk:Ljava/lang/String; = "activity"
 
-.field static final sk:Ljava/lang/String; = "service"
+.field static final tk:Ljava/lang/String; = "service"
 
-.field static final tk:Ljava/lang/String; = "broadcast"
+.field static final uk:Ljava/lang/String; = "broadcast"
 
-.field static final uk:Ljava/lang/String; = "provider"
+.field static final vk:Ljava/lang/String; = "provider"
 
-.field static final vk:Ljava/lang/String; = "job"
+.field static final wk:Ljava/lang/String; = "job"
 
-.field static final wk:Ljava/lang/String; = "notification"
+.field static final xk:Ljava/lang/String; = "notification"
 
-.field static final xk:Ljava/lang/String; = "instrumentation"
+.field static final yk:Ljava/lang/String; = "instrumentation"
 
-.field static final yk:I = 0x0
-
-.field static final zk:I = 0x1
+.field static final zk:I
 
 
 # instance fields
-.field private lk:Ljava/lang/String;
-
 .field private mAction:Ljava/lang/String;
 
 .field private mCallerPackage:Ljava/lang/String;
 
 .field private mReason:Ljava/lang/String;
 
-.field private mk:Z
+.field private mk:Ljava/lang/String;
 
 .field private nf:I
 
-.field private nk:Ljava/lang/String;
+.field private nk:Z
 
 .field private pk:Ljava/lang/String;
+
+.field private qk:Ljava/lang/String;
 
 
 # direct methods
@@ -82,13 +82,13 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/am/zgw$zta;->mk:Z
+    iput-boolean v0, p0, Lcom/android/server/am/zgw$zta;->nk:Z
 
     iput-object p1, p0, Lcom/android/server/am/zgw$zta;->mReason:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/android/server/am/zgw$zta;->mCallerPackage:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/android/server/am/zgw$zta;->lk:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/am/zgw$zta;->mk:Ljava/lang/String;
 
     if-eqz p2, :cond_0
 
@@ -106,7 +106,7 @@
 
     xor-int/lit8 p1, p1, 0x1
 
-    iput-boolean p1, p0, Lcom/android/server/am/zgw$zta;->mk:Z
+    iput-boolean p1, p0, Lcom/android/server/am/zgw$zta;->nk:Z
 
     :cond_0
     return-void
@@ -123,7 +123,7 @@
 .method static synthetic sis(Lcom/android/server/am/zgw$zta;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/zgw$zta;->nk:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -131,7 +131,7 @@
 .method static synthetic you(Lcom/android/server/am/zgw$zta;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/am/zgw$zta;->qk:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -147,7 +147,7 @@
 .method static synthetic zta(Lcom/android/server/am/zgw$zta;)Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->qk:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -165,7 +165,7 @@
 .method public gb()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->lk:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->mk:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -181,7 +181,7 @@
 .method public getDetail()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->qk:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -213,7 +213,7 @@
 .method public ib()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->nk:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -221,7 +221,7 @@
 .method public jb()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/am/zgw$zta;->mk:Z
+    iget-boolean p0, p0, Lcom/android/server/am/zgw$zta;->nk:Z
 
     return p0
 .end method
@@ -246,7 +246,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/android/server/am/zgw$zta;->lk:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/server/am/zgw$zta;->mk:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -266,7 +266,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/android/server/am/zgw$zta;->lk:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/server/am/zgw$zta;->mk:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -302,7 +302,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/android/server/am/zgw$zta;->nk:Ljava/lang/String;
+    iget-object v3, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -338,7 +338,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-boolean v3, p0, Lcom/android/server/am/zgw$zta;->mk:Z
+    iget-boolean v3, p0, Lcom/android/server/am/zgw$zta;->nk:Z
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -356,7 +356,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->qk:Ljava/lang/String;
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -394,7 +394,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/android/server/am/zgw$zta;->mk:Z
+    iget-boolean v1, p0, Lcom/android/server/am/zgw$zta;->nk:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -402,7 +402,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/zgw$zta;->lk:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/server/am/zgw$zta;->mk:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -418,7 +418,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/zgw$zta;->nk:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -434,7 +434,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->pk:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/zgw$zta;->qk:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

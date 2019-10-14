@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field Aw:J
+.field Bw:J
 
 .field count:I
 
@@ -32,7 +32,7 @@
 
     iput-wide v0, p0, Lcom/android/server/am/r$you;->pss:J
 
-    iput-wide v0, p0, Lcom/android/server/am/r$you;->Aw:J
+    iput-wide v0, p0, Lcom/android/server/am/r$you;->Bw:J
 
     const/4 v0, 0x0
 
@@ -58,7 +58,7 @@
 
     iput-wide v0, p0, Lcom/android/server/am/r$you;->pss:J
 
-    iget-wide v0, p0, Lcom/android/server/am/r$you;->Aw:J
+    iget-wide v0, p0, Lcom/android/server/am/r$you;->Bw:J
 
     invoke-virtual {p1}, Landroid/os/Debug$MemoryInfo;->getTotalUss()I
 
@@ -68,7 +68,7 @@
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/android/server/am/r$you;->Aw:J
+    iput-wide v0, p0, Lcom/android/server/am/r$you;->Bw:J
 
     iget p1, p0, Lcom/android/server/am/r$you;->count:I
 

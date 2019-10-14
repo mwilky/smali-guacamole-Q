@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field BD:Ljava/lang/String;
+.field BD:Z
+
+.field CD:Ljava/lang/String;
 
 .field appIcon:Landroid/graphics/drawable/Drawable;
 
@@ -29,11 +31,9 @@
 
 .field final synthetic this$0:Lcom/android/server/policy/OpQuickPay;
 
-.field xD:Ljava/lang/String;
-
 .field yD:Ljava/lang/String;
 
-.field zD:Z
+.field zD:Ljava/lang/String;
 
 
 # direct methods
@@ -46,7 +46,7 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/server/policy/OpQuickPay$zta;->zD:Z
+    iput-boolean p1, p0, Lcom/android/server/policy/OpQuickPay$zta;->BD:Z
 
     iput-boolean p1, p0, Lcom/android/server/policy/OpQuickPay$zta;->isDefault:Z
 
