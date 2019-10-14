@@ -368,8 +368,6 @@
 
     move-result v0
 
-    const-string v1, "LPP_PROFILE"
-
     if-eqz v0, :cond_0
 
     const-string/jumbo v0, "ro.boot.opcarrier"
@@ -378,26 +376,21 @@
 
     move-result-object v0
 
-    const-string/jumbo v2, "sprint"
+    const-string/jumbo v1, "sprint"
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, "3"
+    const-string v0, "LPP_PROFILE"
 
-    invoke-virtual {p0, v1, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    const-string v1, "3"
 
-    goto :goto_0
+    invoke-virtual {p0, v0, v1}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     :cond_0
-    const-string v0, "2"
-
-    invoke-virtual {p0, v1, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
-
-    :goto_0
     return-void
 .end method
 

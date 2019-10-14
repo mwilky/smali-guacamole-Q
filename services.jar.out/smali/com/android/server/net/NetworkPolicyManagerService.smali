@@ -886,7 +886,7 @@
 
     const-string/jumbo v1, "updateNetworkEnabledNL()"
 
-    const-string v2, "isUidNetworkingBlocked()"
+    const-string/jumbo v2, "isUidNetworkingBlocked()"
 
     filled-new-array {v1, v2}, [Ljava/lang/String;
 

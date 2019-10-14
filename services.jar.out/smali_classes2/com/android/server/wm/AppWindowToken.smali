@@ -986,7 +986,7 @@
 
     if-nez p5, :cond_1
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_1
     if-eqz p2, :cond_6
@@ -1004,36 +1004,35 @@
     :cond_2
     if-nez p7, :cond_3
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_3
     invoke-direct {p0, p7}, Lcom/android/server/wm/AppWindowToken;->snapshotOrientationSameAsTask(Landroid/app/ActivityManager$TaskSnapshot;)Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_5
+    if-eqz v2, :cond_4
 
-    if-eqz p6, :cond_4
+    const/4 v1, 0x1
 
     goto :goto_0
 
     :cond_4
-    move v1, v0
+    if-eqz p6, :cond_5
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_5
-    :goto_0
-    const/4 v1, 0x1
+    move v1, v0
 
-    :goto_1
+    :goto_0
     return v1
 
     :cond_6
     return v1
 
     :cond_7
-    :goto_2
+    :goto_1
     return v0
 .end method
 

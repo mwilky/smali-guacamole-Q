@@ -319,7 +319,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_14
+    if-nez v0, :cond_15
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->mAdbKeyStore:Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;
 
@@ -332,7 +332,7 @@
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->mAdbKeyStore:Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     invoke-virtual {v0}, Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;->persistKeyStore()V
 
@@ -419,8 +419,11 @@
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->mAdbKeyStore:Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;
 
+    if-eqz v0, :cond_7
+
     invoke-virtual {v0}, Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;->deleteKeyStore()V
 
+    :cond_7
     invoke-direct {p0}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->cancelJobToUpdateAdbKeyStore()V
 
     goto/16 :goto_4
@@ -444,7 +447,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     const-string v1, "Deferring adb confirmation until after vold decrypt"
 
@@ -456,7 +459,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_14
+    if-eqz v1, :cond_15
 
     iget-object v1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -472,7 +475,7 @@
 
     goto/16 :goto_4
 
-    :cond_7
+    :cond_8
     iget-object v3, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
     invoke-static {v3, v0}, Lcom/android/server/adb/AdbDebuggingManager;->access$500(Lcom/android/server/adb/AdbDebuggingManager;Ljava/lang/String;)Ljava/lang/String;
@@ -493,7 +496,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_9
+    if-eqz v8, :cond_a
 
     iget-object v4, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -501,7 +504,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_14
+    if-eqz v4, :cond_15
 
     iget-object v4, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -521,7 +524,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_9
 
     iget-object v2, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -531,7 +534,7 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_8
+    :cond_9
     iget-object v2, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->mAdbKeyStore:Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -550,14 +553,14 @@
 
     goto/16 :goto_4
 
-    :cond_9
+    :cond_a
     const-string v1, ""
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_b
 
     iget-object v1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -565,7 +568,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_14
+    if-eqz v1, :cond_15
 
     iget-object v1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -581,7 +584,7 @@
 
     goto/16 :goto_4
 
-    :cond_a
+    :cond_b
     invoke-direct {p0, v0, v7, v6}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->logAdbConnectionChanged(Ljava/lang/String;IZ)V
 
     iget-object v1, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -605,7 +608,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -642,7 +645,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_b
+    if-nez v4, :cond_c
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -674,14 +677,14 @@
 
     goto/16 :goto_4
 
-    :cond_b
+    :cond_c
     iget v4, p1, Landroid/os/Message;->arg1:I
 
-    if-ne v4, v7, :cond_c
+    if-ne v4, v7, :cond_d
 
     move v6, v7
 
-    :cond_c
+    :cond_d
     move v4, v6
 
     iget-object v5, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -690,7 +693,7 @@
 
     move-result-object v5
 
-    if-eqz v5, :cond_14
+    if-eqz v5, :cond_15
 
     iget-object v5, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -700,7 +703,7 @@
 
     invoke-virtual {v5, v2}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingThread;->sendResponse(Ljava/lang/String;)V
 
-    if-eqz v4, :cond_e
+    if-eqz v4, :cond_f
 
     iget-object v2, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -712,7 +715,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_d
+    if-nez v2, :cond_e
 
     iget-object v2, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -722,7 +725,7 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_d
+    :cond_e
     iget-object v2, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->mAdbKeyStore:Lcom/android/server/adb/AdbDebuggingManager$AdbKeyStore;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -737,7 +740,7 @@
 
     invoke-virtual {p0}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->scheduleJobToUpdateAdbKeyStore()J
 
-    :cond_e
+    :cond_f
     invoke-direct {p0, v0, v1, v4}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->logAdbConnectionChanged(Ljava/lang/String;IZ)V
 
     goto/16 :goto_4
@@ -749,11 +752,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_f
+    if-nez v0, :cond_10
 
     goto/16 :goto_4
 
-    :cond_f
+    :cond_10
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
     invoke-static {v0, v6}, Lcom/android/server/adb/AdbDebuggingManager;->access$202(Lcom/android/server/adb/AdbDebuggingManager;Z)Z
@@ -764,7 +767,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -778,7 +781,7 @@
 
     invoke-static {v0, v3}, Lcom/android/server/adb/AdbDebuggingManager;->access$102(Lcom/android/server/adb/AdbDebuggingManager;Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingThread;)Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingThread;
 
-    :cond_10
+    :cond_11
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
     invoke-static {v0}, Lcom/android/server/adb/AdbDebuggingManager;->access$300(Lcom/android/server/adb/AdbDebuggingManager;)Ljava/util/List;
@@ -789,7 +792,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_12
+    if-nez v0, :cond_13
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
@@ -806,7 +809,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_12
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -824,7 +827,7 @@
 
     goto :goto_3
 
-    :cond_11
+    :cond_12
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
 
     invoke-static {v0}, Lcom/android/server/adb/AdbDebuggingManager;->access$400(Lcom/android/server/adb/AdbDebuggingManager;)V
@@ -837,7 +840,7 @@
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    :cond_12
+    :cond_13
     invoke-virtual {p0}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->scheduleJobToUpdateAdbKeyStore()J
 
     goto :goto_4
@@ -849,11 +852,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_14
 
     goto :goto_4
 
-    :cond_13
+    :cond_14
     invoke-virtual {p0}, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->registerForAuthTimeChanges()V
 
     iget-object v0, p0, Lcom/android/server/adb/AdbDebuggingManager$AdbDebuggingHandler;->this$0:Lcom/android/server/adb/AdbDebuggingManager;
@@ -892,7 +895,7 @@
 
     nop
 
-    :cond_14
+    :cond_15
     :goto_4
     return-void
 

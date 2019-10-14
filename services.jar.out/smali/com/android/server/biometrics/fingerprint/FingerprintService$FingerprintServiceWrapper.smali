@@ -167,14 +167,6 @@
 
     invoke-static {v0, p1, p2}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$2600(Lcom/android/server/biometrics/fingerprint/FingerprintService;Landroid/os/IBinder;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
-
-    invoke-virtual {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->restoreGrayModeState()V
-
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
-
-    invoke-virtual {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->restoreColorCorrectionState()V
-
     return-void
 .end method
 
@@ -218,14 +210,6 @@
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
 
     invoke-static {v0, p1}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->access$1500(Lcom/android/server/biometrics/fingerprint/FingerprintService;Landroid/os/IBinder;)V
-
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
-
-    invoke-virtual {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->restoreGrayModeState()V
-
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/FingerprintService$FingerprintServiceWrapper;->this$0:Lcom/android/server/biometrics/fingerprint/FingerprintService;
-
-    invoke-virtual {v0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->restoreColorCorrectionState()V
 
     return-void
 .end method

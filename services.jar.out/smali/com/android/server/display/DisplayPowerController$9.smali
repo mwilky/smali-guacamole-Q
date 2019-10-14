@@ -45,7 +45,7 @@
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController$9;->val$pw:Ljava/io/PrintWriter;
 
-    invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerController;->access$1100(Lcom/android/server/display/DisplayPowerController;Ljava/io/PrintWriter;)V
+    invoke-static {v0, v1}, Lcom/android/server/display/DisplayPowerController;->access$1000(Lcom/android/server/display/DisplayPowerController;Ljava/io/PrintWriter;)V
 
     return-void
 .end method

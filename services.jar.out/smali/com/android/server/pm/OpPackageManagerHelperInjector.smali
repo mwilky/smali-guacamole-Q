@@ -515,6 +515,65 @@
     return-void
 .end method
 
+.method public static maybeChangePackageFlags(Landroid/content/pm/PackageInfo;)V
+    .locals 4
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0x15
+
+    aput v3, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->isInSpecialTesting()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    const-string v2, "com.google.android.syncadapters.contacts"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    invoke-virtual {v1}, Landroid/content/pm/ApplicationInfo;->getCodePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/android/server/pm/OpReserveAppInjector;->isReserveApp(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    iget v2, v1, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    or-int/2addr v0, v2
+
+    iput v0, v1, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    :cond_0
+    return-void
+.end method
+
 .method public static setAdbState(Z)V
     .locals 0
 

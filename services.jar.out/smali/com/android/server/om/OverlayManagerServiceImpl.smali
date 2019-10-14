@@ -2213,132 +2213,152 @@
 
     invoke-interface {v0, v11}, Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;->getOverlayPackages(I)Ljava/util/List;
 
-    move-result-object v8
+    move-result-object v0
 
-    invoke-interface {v8}, Ljava/util/List;->size()I
+    const/16 v2, 0x3e7
 
-    move-result v7
+    const/4 v8, 0x0
+
+    if-ne v11, v2, :cond_3
+
+    iget-object v2, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mPackageManager:Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;
+
+    invoke-interface {v2, v8}, Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;->getOverlayPackages(I)Ljava/util/List;
+
+    move-result-object v0
+
+    move-object v7, v0
+
+    goto :goto_2
+
+    :cond_3
+    move-object v7, v0
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/List;->size()I
+
+    move-result v6
 
     const/4 v0, 0x0
 
-    :goto_2
-    if-ge v0, v7, :cond_5
+    :goto_3
+    if-ge v0, v6, :cond_6
 
-    invoke-interface {v8, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v6, v2
-
-    check-cast v6, Landroid/content/pm/PackageInfo;
-
-    iget-object v2, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v9, v2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v7, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     move-object v5, v2
 
-    check-cast v5, Landroid/content/om/OverlayInfo;
+    check-cast v5, Landroid/content/pm/PackageInfo;
 
-    invoke-static {v6, v5}, Lcom/android/server/om/OverlayManagerServiceImpl;->mustReinitializeOverlay(Landroid/content/pm/PackageInfo;Landroid/content/om/OverlayInfo;)Z
+    iget-object v2, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v9, v2}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v4, v2
+
+    check-cast v4, Landroid/content/om/OverlayInfo;
+
+    invoke-static {v5, v4}, Lcom/android/server/om/OverlayManagerServiceImpl;->mustReinitializeOverlay(Landroid/content/pm/PackageInfo;Landroid/content/om/OverlayInfo;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
-    if-eqz v5, :cond_3
+    if-eqz v4, :cond_4
 
-    iget-object v2, v5, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
+    iget-object v2, v4, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
 
     invoke-interface {v14, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    :cond_3
+    :cond_4
     iget-object v2, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
-    iget-object v3, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+    iget-object v3, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    iget-object v4, v6, Landroid/content/pm/PackageInfo;->overlayTarget:Ljava/lang/String;
+    iget-object v8, v5, Landroid/content/pm/PackageInfo;->overlayTarget:Ljava/lang/String;
 
-    move/from16 v16, v7
+    move/from16 v17, v6
 
-    iget-object v7, v6, Landroid/content/pm/PackageInfo;->targetOverlayableName:Ljava/lang/String;
+    iget-object v6, v5, Landroid/content/pm/PackageInfo;->targetOverlayableName:Ljava/lang/String;
 
-    move-object/from16 v17, v4
+    move-object/from16 v18, v4
 
-    iget-object v4, v6, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v4, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v4}, Landroid/content/pm/ApplicationInfo;->getBaseCodePath()Ljava/lang/String;
 
-    move-result-object v18
+    move-result-object v19
 
-    invoke-virtual {v6}, Landroid/content/pm/PackageInfo;->isStaticOverlayPackage()Z
+    invoke-virtual {v5}, Landroid/content/pm/PackageInfo;->isStaticOverlayPackage()Z
 
-    move-result v19
+    move-result v20
 
-    iget v4, v6, Landroid/content/pm/PackageInfo;->overlayPriority:I
+    iget v4, v5, Landroid/content/pm/PackageInfo;->overlayPriority:I
 
-    move/from16 v20, v10
+    move/from16 v21, v10
 
-    iget-object v10, v6, Landroid/content/pm/PackageInfo;->overlayCategory:Ljava/lang/String;
+    iget-object v10, v5, Landroid/content/pm/PackageInfo;->overlayCategory:Ljava/lang/String;
 
-    move/from16 v21, v4
+    move/from16 v22, v4
 
     move/from16 v4, p1
 
-    move-object/from16 v22, v5
+    move-object/from16 v23, v15
 
-    move-object/from16 v5, v17
+    move-object v15, v5
 
-    move-object/from16 v17, v15
+    move-object v5, v8
 
-    move-object v15, v6
+    move/from16 v8, v17
 
-    move-object v6, v7
+    move-object/from16 v17, v12
 
-    move-object/from16 v23, v12
+    move-object v12, v7
 
-    move/from16 v12, v16
+    move-object/from16 v7, v19
 
-    move-object/from16 v7, v18
+    move-object/from16 v19, v13
 
-    move-object/from16 v16, v13
+    const/4 v11, 0x0
 
-    move-object v13, v8
+    move v13, v8
 
-    move/from16 v8, v19
+    move/from16 v8, v20
 
     move-object v11, v9
 
-    move/from16 v9, v21
+    move/from16 v9, v22
 
-    move/from16 v18, v20
+    move/from16 v20, v21
 
     invoke-virtual/range {v2 .. v10}, Lcom/android/server/om/OverlayManagerSettings;->init(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;)V
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_4
-    move-object/from16 v22, v5
+    :cond_5
+    move-object/from16 v18, v4
 
     move-object v11, v9
 
-    move/from16 v18, v10
+    move/from16 v20, v10
 
-    move-object/from16 v23, v12
+    move-object/from16 v17, v12
 
-    move-object/from16 v16, v13
+    move-object/from16 v19, v13
 
-    move-object/from16 v17, v15
+    move-object/from16 v23, v15
 
-    move-object v15, v6
+    move-object v15, v5
 
-    move v12, v7
+    move v13, v6
 
-    move-object v13, v8
+    move-object v12, v7
 
-    :goto_3
+    :goto_4
     iget-object v2, v15, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v11, v2}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2347,36 +2367,38 @@
 
     move-object v9, v11
 
-    move v7, v12
+    move-object v7, v12
 
-    move-object v8, v13
+    move v6, v13
 
-    move-object/from16 v13, v16
+    move-object/from16 v12, v17
 
-    move-object/from16 v15, v17
+    move-object/from16 v13, v19
 
-    move/from16 v10, v18
+    move/from16 v10, v20
 
-    move-object/from16 v12, v23
+    move-object/from16 v15, v23
+
+    const/4 v8, 0x0
 
     move/from16 v11, p1
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_5
+    :cond_6
     move-object v11, v9
 
-    move/from16 v18, v10
+    move/from16 v20, v10
 
-    move-object/from16 v23, v12
+    move-object/from16 v17, v12
 
-    move-object/from16 v16, v13
+    move-object/from16 v19, v13
 
-    move-object/from16 v17, v15
+    move-object/from16 v23, v15
 
-    move v12, v7
+    move v13, v6
 
-    move-object v13, v8
+    move-object v12, v7
 
     invoke-virtual {v11}, Landroid/util/ArrayMap;->size()I
 
@@ -2384,8 +2406,8 @@
 
     const/4 v0, 0x0
 
-    :goto_4
-    if-ge v0, v2, :cond_6
+    :goto_5
+    if-ge v0, v2, :cond_7
 
     invoke-virtual {v11, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
@@ -2409,101 +2431,97 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_6
+    :cond_7
     const/4 v0, 0x0
 
     move v3, v0
 
-    :goto_5
-    const/4 v4, 0x0
+    :goto_6
+    if-ge v3, v13, :cond_8
 
-    if-ge v3, v12, :cond_7
-
-    invoke-interface {v13, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v12, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v5, v0
+    move-object v4, v0
 
-    check-cast v5, Landroid/content/pm/PackageInfo;
+    check-cast v4, Landroid/content/pm/PackageInfo;
 
     :try_start_0
-    iget-object v0, v5, Landroid/content/pm/PackageInfo;->overlayTarget:Ljava/lang/String;
+    iget-object v0, v4, Landroid/content/pm/PackageInfo;->overlayTarget:Ljava/lang/String;
 
-    iget-object v6, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+    iget-object v5, v4, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
     :try_end_0
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_0 .. :try_end_0} :catch_1
 
-    move/from16 v7, p1
+    move/from16 v6, p1
 
-    move-object v8, v11
+    const/4 v7, 0x0
 
     :try_start_1
-    invoke-direct {v1, v0, v6, v7, v4}, Lcom/android/server/om/OverlayManagerServiceImpl;->updateState(Ljava/lang/String;Ljava/lang/String;II)Z
+    invoke-direct {v1, v0, v5, v6, v7}, Lcom/android/server/om/OverlayManagerServiceImpl;->updateState(Ljava/lang/String;Ljava/lang/String;II)Z
     :try_end_1
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_1 .. :try_end_1} :catch_0
 
-    move-object/from16 v6, v16
+    move-object/from16 v8, v19
 
-    goto :goto_7
+    goto :goto_8
 
     :catch_0
     move-exception v0
 
-    goto :goto_6
+    goto :goto_7
 
     :catch_1
     move-exception v0
 
-    move/from16 v7, p1
+    move/from16 v6, p1
 
-    move-object v8, v11
-
-    :goto_6
-    const-string v4, "failed to update settings"
-
-    move-object/from16 v6, v16
-
-    invoke-static {v6, v4, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    iget-object v4, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
-
-    iget-object v9, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v4, v9, v7}, Lcom/android/server/om/OverlayManagerSettings;->remove(Ljava/lang/String;I)Z
+    const/4 v7, 0x0
 
     :goto_7
-    iget-object v0, v5, Landroid/content/pm/PackageInfo;->overlayTarget:Ljava/lang/String;
+    const-string v5, "failed to update settings"
+
+    move-object/from16 v8, v19
+
+    invoke-static {v8, v5, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    iget-object v5, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
+
+    iget-object v9, v4, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v5, v9, v6}, Lcom/android/server/om/OverlayManagerSettings;->remove(Ljava/lang/String;I)Z
+
+    :goto_8
+    iget-object v0, v4, Landroid/content/pm/PackageInfo;->overlayTarget:Ljava/lang/String;
 
     invoke-interface {v14, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v3, v3, 0x1
 
-    move-object/from16 v16, v6
+    move-object/from16 v19, v8
 
-    move-object v11, v8
+    goto :goto_6
 
-    goto :goto_5
+    :cond_8
+    move/from16 v6, p1
 
-    :cond_7
-    move/from16 v7, p1
+    move-object/from16 v8, v19
 
-    move-object v8, v11
-
-    move-object/from16 v6, v16
+    const/4 v7, 0x0
 
     invoke-interface {v14}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    :goto_8
+    :goto_9
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -2511,71 +2529,71 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iget-object v5, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mPackageManager:Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;
+    iget-object v4, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mPackageManager:Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;
 
-    invoke-interface {v5, v0, v7}, Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-interface {v4, v0, v6}, Lcom/android/server/om/OverlayManagerServiceImpl$PackageManagerHelper;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    move-result-object v5
+    move-result-object v4
 
-    if-nez v5, :cond_8
+    if-nez v4, :cond_9
 
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
-    :cond_8
-    goto :goto_8
-
     :cond_9
+    goto :goto_9
+
+    :cond_a
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    move-object v5, v0
+    move-object v4, v0
 
     iget-object v0, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
-    invoke-virtual {v0, v7}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForUser(I)Landroid/util/ArrayMap;
+    invoke-virtual {v0, v6}, Lcom/android/server/om/OverlayManagerSettings;->getOverlaysForUser(I)Landroid/util/ArrayMap;
 
-    move-result-object v9
+    move-result-object v5
 
-    invoke-virtual {v9}, Landroid/util/ArrayMap;->size()I
+    invoke-virtual {v5}, Landroid/util/ArrayMap;->size()I
 
-    move-result v10
+    move-result v9
 
     const/4 v0, 0x0
 
-    :goto_9
-    if-ge v0, v10, :cond_d
+    :goto_a
+    if-ge v0, v9, :cond_e
 
-    invoke-virtual {v9, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+    invoke-virtual {v5, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v10
 
-    check-cast v11, Ljava/util/List;
+    check-cast v10, Ljava/util/List;
 
-    if-eqz v11, :cond_a
+    if-eqz v10, :cond_b
 
-    invoke-interface {v11}, Ljava/util/List;->size()I
+    invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v15
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_a
-    move v15, v4
-
-    :goto_a
-    const/16 v16, 0x0
-
-    move/from16 v4, v16
+    :cond_b
+    move v15, v7
 
     :goto_b
-    if-ge v4, v15, :cond_c
+    const/16 v16, 0x0
 
-    invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move/from16 v7, v16
+
+    :goto_c
+    if-ge v7, v15, :cond_d
+
+    invoke-interface {v10, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v16
 
-    move/from16 v20, v2
+    move/from16 v19, v2
 
     move-object/from16 v2, v16
 
@@ -2585,41 +2603,41 @@
 
     move-result v16
 
-    if-eqz v16, :cond_b
+    if-eqz v16, :cond_c
 
     move-object/from16 v16, v3
 
     iget-object v3, v2, Landroid/content/om/OverlayInfo;->category:Ljava/lang/String;
 
-    invoke-virtual {v5, v3}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v3}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_b
+    :cond_c
     move-object/from16 v16, v3
 
-    :goto_c
-    add-int/lit8 v4, v4, 0x1
+    :goto_d
+    add-int/lit8 v7, v7, 0x1
 
     move-object/from16 v3, v16
 
-    move/from16 v2, v20
+    move/from16 v2, v19
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_c
-    move/from16 v20, v2
+    :cond_d
+    move/from16 v19, v2
 
     move-object/from16 v16, v3
 
     add-int/lit8 v0, v0, 0x1
 
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
-    goto :goto_9
+    goto :goto_a
 
-    :cond_d
-    move/from16 v20, v2
+    :cond_e
+    move/from16 v19, v2
 
     move-object/from16 v16, v3
 
@@ -2627,27 +2645,27 @@
 
     array-length v3, v2
 
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
-    :goto_d
-    if-ge v4, v3, :cond_10
+    :goto_e
+    if-ge v7, v3, :cond_11
 
-    aget-object v11, v2, v4
+    aget-object v10, v2, v7
 
     :try_start_2
     iget-object v0, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
 
-    invoke-virtual {v0, v11, v7}, Lcom/android/server/om/OverlayManagerSettings;->getOverlayInfo(Ljava/lang/String;I)Landroid/content/om/OverlayInfo;
+    invoke-virtual {v0, v10, v6}, Lcom/android/server/om/OverlayManagerSettings;->getOverlayInfo(Ljava/lang/String;I)Landroid/content/om/OverlayInfo;
 
     move-result-object v0
 
     iget-object v15, v0, Landroid/content/om/OverlayInfo;->category:Ljava/lang/String;
 
-    invoke-virtual {v5, v15}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v15}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
 
     move-result v15
 
-    if-nez v15, :cond_e
+    if-nez v15, :cond_f
 
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -2662,7 +2680,7 @@
 
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v2, "\' for target \'"
 
@@ -2682,51 +2700,51 @@
     :try_end_3
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_3 .. :try_end_3} :catch_6
 
-    move-object/from16 v2, v23
+    move-object/from16 v2, v17
 
     :try_start_4
     invoke-virtual {v15, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v15, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v15
 
-    invoke-static {v6, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v15, v1, Lcom/android/server/om/OverlayManagerServiceImpl;->mSettings:Lcom/android/server/om/OverlayManagerSettings;
     :try_end_4
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_4 .. :try_end_4} :catch_5
 
-    move/from16 v22, v3
+    move/from16 v17, v3
 
     :try_start_5
     iget-object v3, v0, Landroid/content/om/OverlayInfo;->packageName:Ljava/lang/String;
     :try_end_5
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_5 .. :try_end_5} :catch_4
 
-    move-object/from16 v23, v5
+    move-object/from16 v22, v4
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
     :try_start_6
-    invoke-virtual {v15, v3, v7, v5}, Lcom/android/server/om/OverlayManagerSettings;->setEnabled(Ljava/lang/String;IZ)Z
+    invoke-virtual {v15, v3, v6, v4}, Lcom/android/server/om/OverlayManagerSettings;->setEnabled(Ljava/lang/String;IZ)Z
 
     iget-object v3, v0, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
 
-    iget-object v5, v0, Landroid/content/om/OverlayInfo;->packageName:Ljava/lang/String;
+    iget-object v4, v0, Landroid/content/om/OverlayInfo;->packageName:Ljava/lang/String;
     :try_end_6
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_6 .. :try_end_6} :catch_3
 
     const/4 v15, 0x0
 
     :try_start_7
-    invoke-direct {v1, v3, v5, v7, v15}, Lcom/android/server/om/OverlayManagerServiceImpl;->updateState(Ljava/lang/String;Ljava/lang/String;II)Z
+    invoke-direct {v1, v3, v4, v6, v15}, Lcom/android/server/om/OverlayManagerServiceImpl;->updateState(Ljava/lang/String;Ljava/lang/String;II)Z
 
     move-result v3
 
-    if-eqz v3, :cond_f
+    if-eqz v3, :cond_10
 
     iget-object v3, v0, Landroid/content/om/OverlayInfo;->targetPackageName:Ljava/lang/String;
 
@@ -2734,106 +2752,106 @@
     :try_end_7
     .catch Lcom/android/server/om/OverlayManagerSettings$BadKeyException; {:try_start_7 .. :try_end_7} :catch_2
 
-    goto :goto_f
+    goto :goto_10
 
     :catch_2
     move-exception v0
 
-    goto :goto_11
+    goto :goto_12
 
     :catch_3
     move-exception v0
 
     const/4 v15, 0x0
 
-    goto :goto_11
+    goto :goto_12
 
     :catch_4
     move-exception v0
 
-    goto :goto_e
+    goto :goto_f
 
     :catch_5
     move-exception v0
 
-    move/from16 v22, v3
+    move/from16 v17, v3
 
-    :goto_e
-    move-object/from16 v23, v5
+    :goto_f
+    move-object/from16 v22, v4
 
     const/4 v15, 0x0
 
-    goto :goto_11
+    goto :goto_12
 
     :catch_6
     move-exception v0
 
-    goto :goto_10
+    goto :goto_11
 
-    :cond_e
+    :cond_f
     move-object/from16 v21, v2
 
-    move/from16 v22, v3
+    move-object/from16 v22, v4
 
-    move-object/from16 v2, v23
+    move-object/from16 v2, v17
 
     const/4 v15, 0x0
 
-    move-object/from16 v23, v5
+    move/from16 v17, v3
 
-    :cond_f
-    :goto_f
-    goto :goto_12
+    :cond_10
+    :goto_10
+    goto :goto_13
 
     :catch_7
     move-exception v0
 
     move-object/from16 v21, v2
 
-    :goto_10
-    move/from16 v22, v3
+    :goto_11
+    move-object/from16 v22, v4
 
-    move-object/from16 v2, v23
+    move-object/from16 v2, v17
 
     const/4 v15, 0x0
 
-    move-object/from16 v23, v5
+    move/from16 v17, v3
 
-    :goto_11
+    :goto_12
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "Failed to set default overlay \'"
+    const-string v4, "Failed to set default overlay \'"
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v6, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v8, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_12
-    add-int/lit8 v4, v4, 0x1
+    :goto_13
+    add-int/lit8 v7, v7, 0x1
 
-    move/from16 v3, v22
+    move/from16 v3, v17
 
-    move-object/from16 v5, v23
+    move-object/from16 v4, v22
 
-    move-object/from16 v23, v2
+    move-object/from16 v17, v2
 
     move-object/from16 v2, v21
 
-    goto/16 :goto_d
+    goto/16 :goto_e
 
-    :cond_10
+    :cond_11
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, v14}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V

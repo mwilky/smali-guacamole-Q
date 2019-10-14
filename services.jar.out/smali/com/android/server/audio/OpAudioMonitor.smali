@@ -79,9 +79,9 @@
 
     iput-wide v0, p0, Lcom/android/server/audio/OpAudioMonitor;->mHsTime:J
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/audio/OpAudioMonitor;->mPkStartTime:Ljava/util/Map;
 

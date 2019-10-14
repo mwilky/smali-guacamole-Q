@@ -9301,7 +9301,7 @@
 
     const/4 v1, 0x5
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
     iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mDisplay:Landroid/view/Display;
 
@@ -9311,13 +9311,28 @@
 
     const/16 v1, 0x3e8
 
-    if-eq v0, v1, :cond_0
+    if-ne v0, v1, :cond_0
 
+    iget-object v0, p0, Lcom/android/server/wm/DisplayContent;->mDisplay:Landroid/view/Display;
+
+    invoke-virtual {v0}, Landroid/view/Display;->getOwnerPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "com.oneplus.screenrecord"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     :goto_0

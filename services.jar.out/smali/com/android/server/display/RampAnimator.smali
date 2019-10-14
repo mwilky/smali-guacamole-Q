@@ -47,6 +47,10 @@
 
 .field private mCurrentValue:I
 
+.field private mDelayMs:I
+
+.field public mEnableDelay:Z
+
 .field private mExitHBMMode:Z
 
 .field private mFirstTime:Z
@@ -74,12 +78,16 @@
 
 .field private mRate:I
 
+.field private mRateBackup:I
+
 .field private mTargetValue:I
+
+.field private mTimeStamp:J
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/Object;Landroid/util/IntProperty;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -90,11 +98,21 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/4 v0, -0x1
 
-    iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
     const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mEnableDelay:Z
+
+    const/16 v1, 0xbb8
+
+    iput v1, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
@@ -133,10 +151,10 @@
     return-wide v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+.method static synthetic access$1000(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
+    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -149,7 +167,39 @@
     return-wide p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/display/RampAnimator;)Z
+.method static synthetic access$1100(Lcom/android/server/display/RampAnimator;)Landroid/util/IntProperty;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/display/RampAnimator;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
+
+    return-void
+.end method
+
+.method static synthetic access$1302(Lcom/android/server/display/RampAnimator;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1400(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1500(Lcom/android/server/display/RampAnimator;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
@@ -157,7 +207,7 @@
     return v0
 .end method
 
-.method static synthetic access$1102(Lcom/android/server/display/RampAnimator;Z)Z
+.method static synthetic access$1502(Lcom/android/server/display/RampAnimator;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
@@ -197,6 +247,14 @@
     return v0
 .end method
 
+.method static synthetic access$402(Lcom/android/server/display/RampAnimator;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    return p1
+.end method
+
 .method static synthetic access$500(Lcom/android/server/display/RampAnimator;)I
     .locals 1
 
@@ -213,34 +271,60 @@
     return p1
 .end method
 
-.method static synthetic access$600(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
+.method static synthetic access$600(Lcom/android/server/display/RampAnimator;)I
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
-    return-object v0
+    return v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/display/RampAnimator;)Landroid/util/IntProperty;
+.method static synthetic access$602(Lcom/android/server/display/RampAnimator;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    return p1
+.end method
+
+.method static synthetic access$700(Lcom/android/server/display/RampAnimator;)J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/android/server/display/RampAnimator;->mTimeStamp:J
+
+    return-wide v0
+.end method
+
+.method static synthetic access$702(Lcom/android/server/display/RampAnimator;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/server/display/RampAnimator;->mTimeStamp:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$800(Lcom/android/server/display/RampAnimator;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
+    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->useScreenShotAlgo()Z
 
-    return-object v0
+    move-result v0
+
+    return v0
 .end method
 
-.method static synthetic access$800(Lcom/android/server/display/RampAnimator;)V
-    .locals 0
+.method static synthetic access$900(Lcom/android/server/display/RampAnimator;)I
+    .locals 1
 
-    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
 
-    return-void
+    return v0
 .end method
 
-.method static synthetic access$902(Lcom/android/server/display/RampAnimator;Z)Z
+.method static synthetic access$902(Lcom/android/server/display/RampAnimator;I)I
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
 
     return p1
 .end method
@@ -359,6 +443,90 @@
     return-void
 .end method
 
+.method private getDcEnable()Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const-string/jumbo v1, "persist.vendor.dc.enable"
+
+    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    move v0, v2
+
+    :cond_0
+    return v0
+.end method
+
+.method private isOnePlus7Projects()Z
+    .locals 2
+
+    const-string/jumbo v0, "ro.boot.project_name"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "18821"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "18825"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "18827"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "18831"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "18857"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    return v1
+
+    :cond_1
+    :goto_0
+    const/4 v1, 0x1
+
+    return v1
+.end method
+
 .method private postAnimationCallback()V
     .locals 4
 
@@ -375,34 +543,46 @@
     return-void
 .end method
 
+.method private useScreenShotAlgo()Z
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->getDcEnable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->isOnePlus7Projects()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+.end method
+
 
 # virtual methods
 .method public animateTo(I)Z
-    .locals 3
+    .locals 2
 
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/display/RampAnimator;->calculateRampRate(II)I
 
     move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "calculateRampRate(): rate = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "RampAnimator"
-
-    invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/display/RampAnimator;->animateTo(II)Z
 
@@ -412,7 +592,7 @@
 .end method
 
 .method public animateTo(II)Z
-    .locals 4
+    .locals 5
 
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
@@ -444,11 +624,13 @@
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    if-nez v0, :cond_9
+    const/4 v1, -0x1
+
+    if-nez v0, :cond_a
 
     if-gtz p2, :cond_3
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
@@ -463,41 +645,51 @@
 
     if-gt p1, v0, :cond_4
 
-    iget v1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
+    iget v4, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    if-le v0, v1, :cond_5
+    if-le v0, v4, :cond_5
 
     :cond_4
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    iget v1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+    iget v4, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-gt v0, v1, :cond_6
+    if-gt v0, v4, :cond_7
 
-    if-gt v1, p1, :cond_6
+    if-gt v4, p1, :cond_7
 
     :cond_5
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    if-ne v0, v1, :cond_6
+
     iput p2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
 
+    goto :goto_1
+
     :cond_6
+    iput p2, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    :cond_7
+    :goto_1
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    if-eq v0, p1, :cond_7
+    if-eq v0, p1, :cond_8
 
     move v3, v2
 
-    :cond_7
+    :cond_8
     move v0, v3
 
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
     iget-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
     iget v1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-eq p1, v1, :cond_8
+    if-eq p1, v1, :cond_9
 
     iput-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
@@ -513,29 +705,31 @@
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
 
-    :cond_8
+    :cond_9
     return v0
 
-    :cond_9
-    :goto_1
+    :cond_a
+    :goto_2
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    if-nez v0, :cond_b
+    if-nez v0, :cond_c
 
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-eq p1, v0, :cond_a
+    if-eq p1, v0, :cond_b
 
-    goto :goto_2
-
-    :cond_a
-    return v3
+    goto :goto_3
 
     :cond_b
-    :goto_2
+    return v3
+
+    :cond_c
+    :goto_3
     iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
     iput v3, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    iput v1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
@@ -549,22 +743,22 @@
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->cancelAnimationCallback()V
 
-    :cond_c
+    :cond_d
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     invoke-interface {v0}, Lcom/android/server/display/RampAnimator$Listener;->onAnimationEnd()V
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
@@ -574,8 +768,110 @@
 
     iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    :cond_d
+    :cond_e
     return v2
+.end method
+
+.method public dump(Ljava/io/PrintWriter;)V
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
+
+    const-string v0, "Screen Brightness Ramp Animator Configuration:"
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  mCurrentValue="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  mTargetValue="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  mRate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  mRateBackup="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  mEnableDelay="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mEnableDelay:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method public getBrightnessValue()I

@@ -10829,7 +10829,7 @@
 .end method
 
 .method shouldAbortBackgroundActivityStart(IILjava/lang/String;IILcom/android/server/wm/WindowProcessController;Lcom/android/server/am/PendingIntentRecord;ZLandroid/content/Intent;)Z
-    .locals 31
+    .locals 32
 
     move-object/from16 v0, p0
 
@@ -10849,17 +10849,15 @@
 
     move-result v9
 
-    if-eqz v12, :cond_21
+    if-eqz v12, :cond_20
 
     const/16 v2, 0x3e8
 
-    if-eq v9, v2, :cond_21
+    if-eq v9, v2, :cond_20
 
     const/16 v3, 0x403
 
     if-ne v9, v3, :cond_0
-
-    move-object/from16 v13, p9
 
     move/from16 v22, v9
 
@@ -10922,17 +10920,15 @@
     :goto_2
     move v5, v4
 
-    if-nez v16, :cond_20
+    if-nez v16, :cond_1f
 
     if-eqz v5, :cond_4
 
-    move-object/from16 v13, p9
-
-    move/from16 v21, v5
+    move/from16 v28, v5
 
     move/from16 v29, v6
 
-    move/from16 v25, v8
+    move/from16 v30, v8
 
     move/from16 v22, v9
 
@@ -11234,12 +11230,16 @@
 
     move/from16 v24, v7
 
+    const/16 v19, 0x1
+
     goto :goto_b
 
     :cond_1a
     move/from16 v21, v4
 
     move/from16 v24, v7
+
+    const/16 v19, 0x1
 
     :goto_b
     iget-object v4, v0, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -11279,82 +11279,35 @@
     return v4
 
     :cond_1b
-    const/4 v4, 0x0
+    invoke-static/range {p3 .. p3}, Lcom/oneplus/android/server/uididle/UidIdleWhitelistManagerInjector;->isBackgroundActivityWhitelist(Ljava/lang/String;)Z
 
-    const/4 v4, 0x1
+    move-result v4
 
-    new-array v13, v4, [I
+    if-eqz v4, :cond_1c
 
-    const/16 v19, 0xd8
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const/16 v17, 0x0
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    aput v19, v13, v17
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v13}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_1c
-
-    new-instance v13, Ljava/util/ArrayList;
-
-    iget-object v4, v0, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
-
-    iget-object v4, v4, Lcom/android/server/wm/ActivityTaskManagerService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    move/from16 v25, v8
-
-    const v8, 0x107001a
-
-    invoke-virtual {v4, v8}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-direct {v13, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    move-object v4, v13
-
-    invoke-interface {v4, v14}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_1d
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v7, " is whitelisted."
 
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v4
 
-    invoke-static {v9, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v7, 0x0
+    const/4 v4, 0x0
 
-    return v7
+    return v4
 
     :cond_1c
-    move/from16 v25, v8
-
-    :cond_1d
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -11417,83 +11370,85 @@
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v13, p9
+    move-object/from16 v7, p9
 
-    invoke-virtual {v4, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v7, "; callerApp: "
+    move/from16 v25, v2
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "; callerApp: "
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v7, "]"
+    const-string v2, "]"
 
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v2
 
-    invoke-static {v9, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v4, v0, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
+    iget-object v2, v0, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/ActivityTaskManagerService;->isActivityStartsLoggingEnabled()Z
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityTaskManagerService;->isActivityStartsLoggingEnabled()Z
 
-    move-result v4
+    move-result v2
 
-    if-eqz v4, :cond_1f
+    if-eqz v2, :cond_1e
 
-    iget-object v4, v0, Lcom/android/server/wm/ActivityStarter;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
+    iget-object v2, v0, Lcom/android/server/wm/ActivityStarter;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
-    invoke-virtual {v4}, Lcom/android/server/wm/ActivityStackSupervisor;->getActivityMetricsLogger()Lcom/android/server/wm/ActivityMetricsLogger;
+    invoke-virtual {v2}, Lcom/android/server/wm/ActivityStackSupervisor;->getActivityMetricsLogger()Lcom/android/server/wm/ActivityMetricsLogger;
 
-    move-result-object v4
+    move-result-object v2
 
-    if-eqz v11, :cond_1e
+    if-eqz v11, :cond_1d
 
-    const/16 v17, 0x1
+    move/from16 v17, v19
 
     goto :goto_c
 
-    :cond_1e
+    :cond_1d
     const/16 v17, 0x0
 
     :goto_c
     move-object/from16 v26, v1
 
-    move-object v1, v4
-
-    move/from16 v27, v2
+    move-object v1, v2
 
     move-object/from16 v2, p9
 
-    move/from16 v28, v3
+    move/from16 v27, v3
 
     move-object/from16 v3, v26
 
-    move/from16 v19, v21
-
-    const/4 v7, 0x1
-
     move/from16 v4, p1
 
-    move/from16 v21, v5
+    move/from16 v28, v5
 
     move-object/from16 v5, p3
 
     move/from16 v29, v6
 
-    move/from16 v6, v25
+    move v6, v8
 
-    move/from16 v30, v7
+    move/from16 v31, v24
+
+    move/from16 v24, v19
+
+    move/from16 v19, v31
 
     move/from16 v7, v16
 
+    move/from16 v30, v8
+
     move/from16 v8, p4
 
-    move/from16 v9, v19
+    move/from16 v9, v21
 
     move/from16 v10, v18
 
@@ -11503,32 +11458,32 @@
 
     goto :goto_d
 
-    :cond_1f
+    :cond_1e
     move-object/from16 v26, v1
 
-    move/from16 v27, v2
+    move/from16 v27, v3
 
-    move/from16 v28, v3
+    move/from16 v28, v5
 
     move/from16 v29, v6
 
-    move/from16 v19, v21
+    move/from16 v30, v8
 
-    const/16 v30, 0x1
+    move/from16 v31, v24
 
-    move/from16 v21, v5
+    move/from16 v24, v19
+
+    move/from16 v19, v31
 
     :goto_d
-    return v30
+    return v24
 
-    :cond_20
-    move-object/from16 v13, p9
-
-    move/from16 v21, v5
+    :cond_1f
+    move/from16 v28, v5
 
     move/from16 v29, v6
 
-    move/from16 v25, v8
+    move/from16 v30, v8
 
     move/from16 v22, v9
 
@@ -11537,9 +11492,7 @@
 
     return v1
 
-    :cond_21
-    move-object/from16 v13, p9
-
+    :cond_20
     move/from16 v22, v9
 
     const/4 v1, 0x0

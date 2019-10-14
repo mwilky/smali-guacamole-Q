@@ -14,10 +14,6 @@
 
 .field private static final FINISH_FP_ENROLL:I = 0xa
 
-.field private static final GRAY_MODE_OFF:I = 0x1
-
-.field private static final GRAY_MODE_ON:I = 0x0
-
 .field private static final RESUME_FP_ENROLL:I = 0x8
 
 .field private static final SUSPEND_FP_ENROLL:I = 0x9
@@ -25,8 +21,6 @@
 .field protected static final TAG:Ljava/lang/String; = "OpFingerprintService"
 
 .field public static mIsColorCalibrationDisableByFingerPrint:Z
-
-.field public static mIsGrayScaleDisableByFingerPrint:Z
 
 
 # instance fields
@@ -37,8 +31,6 @@
 .field private final FAIL_ATTEMPT_COUNTING_DURATION:J
 
 .field private final FAIL_ATTEMPT_MAX_AMOUNT:J
-
-.field private final GRAYSCALE_SETTING:Ljava/lang/String;
 
 .field protected final IS_SUPPORT_CUSTOM_FINGERPRINT:Z
 
@@ -60,25 +52,17 @@
 
 .field private mCurrentParam:I
 
-.field private mDtm:Lcom/android/server/display/color/DisplayTransformManager;
-
 .field private mExtDaemon:Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;
 
 .field private mFailedAttemptsForAttack:I
 
 .field private mFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
 
-.field private mGrayModeSetting:I
-
-.field private final mGrayModebserver:Landroid/database/ContentObserver;
-
 .field private final mKeyguardPackage:Ljava/lang/String;
 
 .field private mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
 
 .field private mTempDisableColorCorrection:Z
-
-.field private mTempDisableGrayMode:Z
 
 .field private mTimeStampRaisingCriteria:J
 
@@ -94,8 +78,6 @@
     sput-boolean v0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->DEBUG:Z
 
     const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsGrayScaleDisableByFingerPrint:Z
 
     sput-boolean v0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsColorCalibrationDisableByFingerPrint:Z
 
@@ -151,14 +133,6 @@
 
     iput v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentParam:I
 
-    const-string v1, "accessibility_display_grayscale_enabled"
-
-    iput-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->GRAYSCALE_SETTING:Ljava/lang/String;
-
-    iput v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    iput-boolean v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
     const-wide/32 v3, 0xea60
 
     iput-wide v3, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->FAIL_ATTEMPT_COUNTING_DURATION:J
@@ -179,76 +153,102 @@
 
     iput-boolean v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mAttackDefending:Z
 
-    const-string v3, "fps_color_correction"
+    const-string v1, "fps_color_correction"
 
-    iput-object v3, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->KEY_COLOR_CORRECTION:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->KEY_COLOR_CORRECTION:Ljava/lang/String;
 
     iput-boolean v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableColorCorrection:Z
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    iput-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
-
-    new-instance v4, Lcom/android/server/biometrics/fingerprint/OpFingerprintService$1;
-
-    iget-object v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mHandler:Lcom/android/server/biometrics/BiometricServiceBase$H;
-
-    invoke-direct {v4, p0, v5}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService$1;-><init>(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;Landroid/os/Handler;)V
-
-    iput-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModebserver:Landroid/database/ContentObserver;
+    iput-object v3, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
 
     iput-object p1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v4
+    move-result-object v3
 
-    const v5, 0x104018d
+    const v4, 0x104018d
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-static {v4}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+    invoke-static {v3}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    iput-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mKeyguardPackage:Ljava/lang/String;
+    iput-object v3, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mKeyguardPackage:Ljava/lang/String;
 
-    new-instance v4, Landroid/content/IntentFilter;
+    new-instance v3, Landroid/content/IntentFilter;
 
-    invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
+    invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    const-string v5, "com.android.server.biometrics.fingerprint.ACTION_LOCKOUT_RESET"
+    const-string v4, "com.android.server.biometrics.fingerprint.ACTION_LOCKOUT_RESET"
 
-    invoke-virtual {v4, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-boolean v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->IS_SUPPORT_CUSTOM_FINGERPRINT:Z
+    iget-boolean v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->IS_SUPPORT_CUSTOM_FINGERPRINT:Z
 
-    if-eqz v5, :cond_0
+    if-eqz v4, :cond_0
 
-    const-string v5, "android.intent.action.BOOT_COMPLETED"
+    const-string v4, "android.intent.action.BOOT_COMPLETED"
 
-    invoke-virtual {v4, v5}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     :cond_0
+    iget-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x5050024
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    iput v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockX:I
+
+    iget-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x5050025
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    iput v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockY:I
+
+    iget v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockX:I
+
     iget-object v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    const v6, 0x5050024
+    const v6, 0x5050029
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    iput v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockX:I
+    add-int/2addr v4, v5
+
+    iput v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockXEnd:I
+
+    iget v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockY:I
 
     iget-object v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
 
@@ -256,104 +256,40 @@
 
     move-result-object v5
 
-    const v6, 0x5050025
+    const v6, 0x5050028
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v5
 
-    iput v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockY:I
+    add-int/2addr v4, v5
 
-    iget v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockX:I
+    iput v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockYEnd:I
 
-    iget-object v6, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
+    iget-boolean v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->IS_SUPPORT_CUSTOM_FINGERPRINT:Z
 
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    if-eqz v4, :cond_1
 
-    move-result-object v6
+    new-instance v4, Lcom/oneplus/onlineconfig/OpFingerprintConfig;
 
-    const v7, 0x5050029
+    invoke-direct {v4, p1}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    iput-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
 
-    move-result v6
+    new-instance v4, Lcom/oneplus/core/oimc/OIMCServiceManager;
 
-    add-int/2addr v5, v6
+    invoke-direct {v4}, Lcom/oneplus/core/oimc/OIMCServiceManager;-><init>()V
 
-    iput v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockXEnd:I
-
-    iget v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockY:I
-
-    iget-object v6, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    const v7, 0x5050028
-
-    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v6
-
-    add-int/2addr v5, v6
-
-    iput v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mBlockYEnd:I
-
-    iget-boolean v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->IS_SUPPORT_CUSTOM_FINGERPRINT:Z
-
-    if-eqz v5, :cond_1
-
-    new-instance v5, Lcom/oneplus/onlineconfig/OpFingerprintConfig;
-
-    invoke-direct {v5, p1}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;-><init>(Landroid/content/Context;)V
-
-    iput-object v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mFingerprintConfig:Lcom/oneplus/onlineconfig/OpFingerprintConfig;
-
-    iget-object v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModebserver:Landroid/database/ContentObserver;
-
-    invoke-virtual {v5, v0}, Landroid/database/ContentObserver;->onChange(Z)V
-
-    iget-object v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v5
-
-    invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    iget-object v6, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModebserver:Landroid/database/ContentObserver;
-
-    const/4 v7, -0x1
-
-    invoke-virtual {v5, v1, v0, v6, v7}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
-
-    new-instance v1, Lcom/oneplus/core/oimc/OIMCServiceManager;
-
-    invoke-direct {v1}, Lcom/oneplus/core/oimc/OIMCServiceManager;-><init>()V
-
-    iput-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
+    iput-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mOIMCServiceManager:Lcom/oneplus/core/oimc/OIMCServiceManager;
 
     :cond_1
-    const-class v1, Lcom/android/server/display/color/DisplayTransformManager;
-
-    invoke-static {v1}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/android/server/display/color/DisplayTransformManager;
-
-    iput-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mDtm:Lcom/android/server/display/color/DisplayTransformManager;
-
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
-    move-result v1
+    move-result v4
 
     const/16 v5, -0x2710
 
-    if-ne v1, v5, :cond_2
+    if-ne v4, v5, :cond_2
 
     return-void
 
@@ -364,7 +300,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, v3, v2, v1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v5, v1, v2, v4}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v5
 
@@ -386,7 +322,7 @@
 
     const-string v7, "accessibility_display_daltonizer_enabled"
 
-    invoke-static {v6, v7, v2, v1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v6, v7, v2, v4}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v6
 
@@ -439,7 +375,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v7, v0, v1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v8, v7, v0, v4}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
 
@@ -447,104 +383,10 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3, v2, v1}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
+    invoke-static {v0, v1, v2, v4}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
     :cond_6
     return-void
-.end method
-
-.method static synthetic access$000(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)I
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    return v0
-.end method
-
-.method static synthetic access$002(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    return p1
-.end method
-
-.method static synthetic access$100(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic access$200(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)I
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    return v0
-.end method
-
-.method static synthetic access$300(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)I
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    return v0
-.end method
-
-.method static synthetic access$400(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getPendingClient()Lcom/android/server/biometrics/ClientMonitor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$500(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    return v0
-.end method
-
-.method static synthetic access$502(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    return p1
-.end method
-
-.method static synthetic access$600(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getCurrentClient()Lcom/android/server/biometrics/ClientMonitor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method static synthetic access$700(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)I
-    .locals 1
-
-    iget v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    return v0
-.end method
-
-.method static synthetic access$800(Lcom/android/server/biometrics/fingerprint/OpFingerprintService;)Lcom/android/server/biometrics/ClientMonitor;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getCurrentClient()Lcom/android/server/biometrics/ClientMonitor;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method private allowUseCustomFingerprint(Ljava/lang/String;)Z
@@ -672,132 +514,6 @@
 
     :cond_2
     return-void
-.end method
-
-.method private static computeSaturationMatrix(F)[F
-    .locals 9
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    sub-float v1, v0, p0
-
-    const/4 v2, 0x3
-
-    new-array v3, v2, [F
-
-    const v4, 0x3e6c8b44    # 0.231f
-
-    mul-float/2addr v4, v1
-
-    const/4 v5, 0x0
-
-    aput v4, v3, v5
-
-    const v4, 0x3f370a3d    # 0.715f
-
-    mul-float/2addr v4, v1
-
-    const/4 v6, 0x1
-
-    aput v4, v3, v6
-
-    const v4, 0x3d9374bc    # 0.072f
-
-    mul-float/2addr v4, v1
-
-    const/4 v7, 0x2
-
-    aput v4, v3, v7
-
-    const/16 v4, 0x10
-
-    new-array v4, v4, [F
-
-    aget v8, v3, v5
-
-    add-float/2addr v8, p0
-
-    aput v8, v4, v5
-
-    aget v8, v3, v5
-
-    aput v8, v4, v6
-
-    aget v5, v3, v5
-
-    aput v5, v4, v7
-
-    const/4 v5, 0x0
-
-    aput v5, v4, v2
-
-    aget v2, v3, v6
-
-    const/4 v8, 0x4
-
-    aput v2, v4, v8
-
-    aget v2, v3, v6
-
-    add-float/2addr v2, p0
-
-    const/4 v8, 0x5
-
-    aput v2, v4, v8
-
-    aget v2, v3, v6
-
-    const/4 v6, 0x6
-
-    aput v2, v4, v6
-
-    const/4 v2, 0x7
-
-    aput v5, v4, v2
-
-    aget v2, v3, v7
-
-    const/16 v6, 0x8
-
-    aput v2, v4, v6
-
-    aget v2, v3, v7
-
-    const/16 v6, 0x9
-
-    aput v2, v4, v6
-
-    aget v2, v3, v7
-
-    add-float/2addr v2, p0
-
-    const/16 v6, 0xa
-
-    aput v2, v4, v6
-
-    const/16 v2, 0xb
-
-    aput v5, v4, v2
-
-    const/16 v2, 0xc
-
-    aput v5, v4, v2
-
-    const/16 v2, 0xd
-
-    aput v5, v4, v2
-
-    const/16 v2, 0xe
-
-    aput v5, v4, v2
-
-    const/16 v2, 0xf
-
-    aput v0, v4, v2
-
-    move-object v0, v4
-
-    return-object v0
 .end method
 
 .method private forceSendEvent(II)V
@@ -1260,209 +976,6 @@
     return-void
 .end method
 
-.method protected disableColorCorrection()V
-    .locals 6
-
-    iget v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    const/16 v1, -0x2710
-
-    if-ne v0, v1, :cond_0
-
-    const-string v0, "OpFingerprintService"
-
-    const-string v1, "Current userId = -10000 and block to disable function"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableColorCorrection:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    const-string v2, "accessibility_display_daltonizer_enabled"
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v2, v3, v1}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v3
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iput-boolean v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableColorCorrection:Z
-
-    sput-boolean v1, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsColorCalibrationDisableByFingerPrint:Z
-
-    iget-object v4, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v4
-
-    iget v5, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    invoke-static {v4, v2, v3, v5}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    iget v3, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    const-string v4, "fps_color_correction"
-
-    invoke-static {v2, v4, v1, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method protected disableGrayMode(Z)V
-    .locals 5
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    const-string v1, "OpFingerprintService"
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "disableGrayMode, temp:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", mode:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_3
-
-    :cond_1
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsGrayScaleDisableByFingerPrint:Z
-
-    iput-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    const-string/jumbo v0, "persist.vendor.color.matrix"
-
-    const-string v2, "2"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->computeSaturationMatrix(F)[F
-
-    move-result-object v0
-
-    :try_start_0
-    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mDtm:Lcom/android/server/display/color/DisplayTransformManager;
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mDtm:Lcom/android/server/display/color/DisplayTransformManager;
-
-    const/16 v3, 0x96
-
-    invoke-virtual {v2, v3, v0}, Lcom/android/server/display/color/DisplayTransformManager;->setColorMatrix(I[F)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_2
-    goto :goto_0
-
-    :catch_0
-    move-exception v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "disableGrayMode Exception = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    :goto_0
-    return-void
-.end method
-
 .method protected dump(Ljava/io/PrintWriter;)V
     .locals 6
 
@@ -1577,60 +1090,6 @@
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v1, "mTempDisableGrayMode:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v1, "mGrayModeSetting:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v1, "mIsGrayScaleDisableByFingerPrint:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v1, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsGrayScaleDisableByFingerPrint:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2130,13 +1589,6 @@
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/android/server/biometrics/BiometricServiceBase;->handleError(JII)V
 
-    const/4 v0, 0x3
-
-    if-ne p3, v0, :cond_1
-
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->restoreGrayModeState()V
-
-    :cond_1
     return-void
 .end method
 
@@ -2241,24 +1693,10 @@
 .end method
 
 .method protected removeClient(Lcom/android/server/biometrics/ClientMonitor;)V
-    .locals 1
+    .locals 0
 
     invoke-super {p0, p1}, Lcom/android/server/biometrics/BiometricServiceBase;->removeClient(Lcom/android/server/biometrics/ClientMonitor;)V
 
-    instance-of v0, p1, Lcom/android/server/biometrics/AuthenticationClient;
-
-    if-nez v0, :cond_0
-
-    instance-of v0, p1, Lcom/android/server/biometrics/EnrollClient;
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->restoreGrayModeState()V
-
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->restoreColorCorrectionState()V
-
-    :cond_1
     return-void
 .end method
 
@@ -2269,163 +1707,6 @@
 
     invoke-virtual {v0}, Lcom/oneplus/onlineconfig/OpFingerprintConfig;->resolveOnlineConfig()V
 
-    return-void
-.end method
-
-.method protected restoreColorCorrectionState()V
-    .locals 5
-
-    iget-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableColorCorrection:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableColorCorrection:Z
-
-    sput-boolean v0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsColorCalibrationDisableByFingerPrint:Z
-
-    iget-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    iget v3, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    const-string v4, "accessibility_display_daltonizer_enabled"
-
-    invoke-static {v1, v4, v2, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    iget-object v1, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mCurrentUserId:I
-
-    const-string v3, "fps_color_correction"
-
-    invoke-static {v1, v3, v0, v2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method protected restoreGrayModeState()V
-    .locals 5
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    const-string v1, "OpFingerprintService"
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v2, "restoreGrayModeState, temp:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", mode:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mGrayModeSetting:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mTempDisableGrayMode:Z
-
-    sput-boolean v0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mIsGrayScaleDisableByFingerPrint:Z
-
-    const-string/jumbo v0, "persist.vendor.color.matrix"
-
-    const-string v2, "2"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->computeSaturationMatrix(F)[F
-
-    move-result-object v0
-
-    :try_start_0
-    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mDtm:Lcom/android/server/display/color/DisplayTransformManager;
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->mDtm:Lcom/android/server/display/color/DisplayTransformManager;
-
-    const/16 v3, 0x96
-
-    invoke-virtual {v2, v3, v0}, Lcom/android/server/display/color/DisplayTransformManager;->setColorMatrix(I[F)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_1
-    goto :goto_0
-
-    :catch_0
-    move-exception v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v4, "restoreGrayModeState Exception = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    :goto_0
     return-void
 .end method
 

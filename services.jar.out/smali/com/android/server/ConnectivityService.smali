@@ -16104,7 +16104,7 @@
     invoke-direct {p0, v4, p1}, Lcom/android/server/ConnectivityService;->sendNetworkConnChangedBroadcast(ZLcom/android/server/connectivity/NetworkAgentInfo;)V
 
     :cond_7
-    goto :goto_2
+    goto/16 :goto_3
 
     :catchall_0
     move-exception v3
@@ -16121,10 +16121,43 @@
 
     if-ne v0, v3, :cond_a
 
+    :try_start_3
     iget-object v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v3}, Lcom/android/internal/util/AsyncChannel;->disconnect()V
+    :try_end_3
+    .catch Ljava/util/NoSuchElementException; {:try_start_3 .. :try_end_3} :catch_0
 
+    goto :goto_1
+
+    :catch_0
+    move-exception v3
+
+    nop
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "NetworkAgentInfo:"
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v6, " Exception:"
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
+
+    :goto_1
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
     move-result v3
@@ -16148,7 +16181,7 @@
 
     invoke-virtual {v3}, Lcom/android/server/connectivity/ProxyTracker;->sendProxyBroadcast()V
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_a
     if-eqz v1, :cond_b
@@ -16190,12 +16223,12 @@
 
     const v3, 0x80009
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_e
     const v3, 0x8000a
 
-    :goto_1
+    :goto_2
     invoke-virtual {p0, p1, v3}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -16203,16 +16236,16 @@
     invoke-virtual {v3, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->update(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     :cond_f
-    :goto_2
+    :goto_3
     return-void
 
     :catchall_1
     move-exception v3
 
-    :try_start_3
+    :try_start_4
     monitor-exit p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     throw v3
 .end method

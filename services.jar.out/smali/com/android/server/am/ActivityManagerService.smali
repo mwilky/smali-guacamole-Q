@@ -5010,7 +5010,9 @@
 
     invoke-virtual {v7, v5, v6, v8}, Lcom/android/server/am/ActivityManagerService;->checkTime(JLjava/lang/String;)V
 
-    iget v8, v1, Lcom/android/server/am/ProcessRecord;->userId:I
+    iget-object v8, v1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget v8, v8, Landroid/content/pm/ApplicationInfo;->uid:I
 
     iget v9, v1, Lcom/android/server/am/ProcessRecord;->pid:I
 

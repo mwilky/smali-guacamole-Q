@@ -32,7 +32,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 7
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -52,15 +52,19 @@
 
     sput-object v0, Lcom/android/server/pm/OpSettingsInjector;->sSharedUsers:Landroid/util/ArrayMap;
 
-    const-string v0, "com.qualcomm.qti.dynamicddsservice"
+    const-string v1, "com.qualcomm.qti.dynamicddsservice"
 
-    const-string v1, "com.qualcomm.qti.ims"
+    const-string v2, "com.qualcomm.qti.ims"
 
-    const-string v2, "com.qti.confuridialer"
+    const-string v3, "com.qti.confuridialer"
 
-    const-string/jumbo v3, "net.oneplus.widget"
+    const-string/jumbo v4, "net.oneplus.widget"
 
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/String;
+    const-string v5, "com.qualcomm.qti.uceShimService"
+
+    const-string v6, "com.qti.dpmserviceapp"
+
+    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
 
     move-result-object v0
 

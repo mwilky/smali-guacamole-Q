@@ -110,7 +110,7 @@
     goto :goto_2
 
     :cond_3
-    if-eq v1, v0, :cond_5
+    if-eq v1, v0, :cond_6
 
     :try_start_0
     const-string v0, "OMS ACTION_USER_REMOVED"
@@ -175,7 +175,7 @@
     throw v0
 
     :cond_4
-    if-eq v1, v0, :cond_5
+    if-eq v1, v0, :cond_6
 
     :try_start_4
     const-string v0, "OMS ACTION_USER_ADDED"
@@ -211,9 +211,22 @@
     iget-object v0, p0, Lcom/android/server/om/OverlayManagerService$UserReceiver;->this$0:Lcom/android/server/om/OverlayManagerService;
 
     invoke-static {v0, v1, v2}, Lcom/android/server/om/OverlayManagerService;->access$700(Lcom/android/server/om/OverlayManagerService;ILjava/util/List;)V
+
+    const/16 v0, 0x3e7
+
+    if-ne v1, v0, :cond_5
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v5, "com.oem.intent.action.parallel_overlay_ready"
+
+    invoke-direct {v0, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
+    :cond_5
     invoke-static {v3, v4}, Landroid/os/Trace;->traceEnd(J)V
 
     nop
@@ -240,7 +253,7 @@
 
     throw v0
 
-    :cond_5
+    :cond_6
     :goto_2
     return-void
 .end method

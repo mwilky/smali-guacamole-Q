@@ -37,6 +37,9 @@
 .method public abstract canServiceGo(Lcom/android/server/am/ProcessRecord;Landroid/content/Intent;Lcom/android/server/am/ServiceRecord;ILjava/lang/String;)Z
 .end method
 
+.method public abstract checkAppInfo(ILandroid/content/pm/ApplicationInfo;)Landroid/content/pm/ApplicationInfo;
+.end method
+
 .method public abstract getScreenState()Z
 .end method
 

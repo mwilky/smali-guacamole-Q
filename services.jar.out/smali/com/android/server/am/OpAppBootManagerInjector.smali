@@ -505,6 +505,54 @@
     return v1
 .end method
 
+.method public static checkAppInfoWithFlags(ILandroid/content/pm/ApplicationInfo;)Landroid/content/pm/ApplicationInfo;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    aput v1, v0, v1
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-eqz p1, :cond_1
+
+    sget-object v0, Lcom/android/server/am/OpAppBootManagerInjector;->sAppBootManager:Lcom/android/server/am/IOpAppBootManager;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_appbootmanager:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpAppBootManager;
+
+    sput-object v0, Lcom/android/server/am/OpAppBootManagerInjector;->sAppBootManager:Lcom/android/server/am/IOpAppBootManager;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpAppBootManagerInjector;->sAppBootManager:Lcom/android/server/am/IOpAppBootManager;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IOpAppBootManager;->checkAppInfo(ILandroid/content/pm/ApplicationInfo;)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    return-object p1
+.end method
+
 .method public static getScreenState()Z
     .locals 2
 

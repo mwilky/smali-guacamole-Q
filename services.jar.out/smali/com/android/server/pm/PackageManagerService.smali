@@ -27433,6 +27433,12 @@
 
     iput-object v7, v6, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
+    invoke-static {p1, v6}, Lcom/android/server/am/OpAppBootManagerInjector;->checkAppInfoWithFlags(ILandroid/content/pm/ApplicationInfo;)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v7
+
+    move-object v6, v7
+
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_d
@@ -78909,6 +78915,8 @@
     move-result-object v4
 
     if-eqz v4, :cond_7
+
+    invoke-static {v4}, Lcom/android/server/pm/OpPackageManagerHelperInjector;->maybeChangePackageFlags(Landroid/content/pm/PackageInfo;)V
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

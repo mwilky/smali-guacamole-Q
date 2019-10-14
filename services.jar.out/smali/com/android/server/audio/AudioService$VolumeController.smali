@@ -145,7 +145,16 @@
     return-void
 
     :cond_0
+    and-int/lit16 v0, p1, 0x400
+
+    if-nez v0, :cond_1
+
+    or-int/lit16 p1, p1, 0x400
+
+    :cond_1
     :try_start_0
+    iget-object v0, p0, Lcom/android/server/audio/AudioService$VolumeController;->mController:Landroid/media/IVolumeController;
+
     invoke-interface {v0, p1}, Landroid/media/IVolumeController;->displaySafeVolumeWarning(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0

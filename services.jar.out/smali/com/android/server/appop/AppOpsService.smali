@@ -15726,7 +15726,7 @@
     add-int/lit8 v1, v1, -0x1
 
     :goto_0
-    if-ltz v1, :cond_5
+    if-ltz v1, :cond_6
 
     iget-object v2, p0, Lcom/android/server/appop/AppOpsService;->mUidStates:Landroid/util/SparseArray;
 
@@ -15763,7 +15763,7 @@
 
     if-nez v4, :cond_1
 
-    goto :goto_3
+    goto/16 :goto_3
 
     :cond_1
     invoke-virtual {v4}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
@@ -15779,7 +15779,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_4
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -15869,31 +15869,50 @@
     const/4 v0, 0x1
 
     :cond_2
-    goto :goto_1
+    sget-boolean v8, Lcom/android/server/appop/OpAppOpsService;->mUpdatingXml:Z
+
+    if-eqz v8, :cond_3
+
+    iget-object v8, v6, Lcom/android/server/appop/AppOpsService$Ops;->packageName:Ljava/lang/String;
+
+    const-string v9, "com.oneplus.mms"
+
+    invoke-virtual {v8, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    iget-object v8, p0, Lcom/android/server/appop/AppOpsService;->mContext:Landroid/content/Context;
+
+    invoke-static {v8, v7}, Lcom/android/server/appop/OpAppOpsService;->lockMmsApp(Landroid/content/Context;I)V
 
     :cond_3
+    goto :goto_1
+
+    :cond_4
     invoke-virtual {v2}, Lcom/android/server/appop/AppOpsService$UidState;->isDefault()Z
 
     move-result v6
 
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
     iget-object v6, p0, Lcom/android/server/appop/AppOpsService;->mUidStates:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v1}, Landroid/util/SparseArray;->removeAt(I)V
 
-    :cond_4
+    :cond_5
     :goto_3
     add-int/lit8 v1, v1, -0x1
 
     goto/16 :goto_0
 
-    :cond_5
-    if-eqz v0, :cond_6
+    :cond_6
+    if-eqz v0, :cond_7
 
     invoke-direct {p0}, Lcom/android/server/appop/AppOpsService;->scheduleFastWriteLocked()V
 
-    :cond_6
+    :cond_7
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -15936,7 +15955,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_8
 
     const-class v2, Landroid/os/storage/StorageManagerInternal;
 
@@ -15952,7 +15971,7 @@
 
     invoke-virtual {v2, v3}, Landroid/os/storage/StorageManagerInternal;->addExternalStoragePolicy(Landroid/os/storage/StorageManagerInternal$ExternalStorageMountPolicy;)V
 
-    :cond_7
+    :cond_8
     return-void
 
     :catchall_0

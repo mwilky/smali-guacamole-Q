@@ -260,7 +260,7 @@
 .end method
 
 .method private detectSwipe(IJFF)I
-    .locals 8
+    .locals 9
 
     iget-object v0, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDownX:[F
 
@@ -305,98 +305,117 @@
     return v4
 
     :cond_0
-    iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->screenHeight:I
-
-    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
-
-    sub-int/2addr v4, v7
-
-    int-to-float v4, v4
-
-    cmpl-float v4, v1, v4
-
-    if-ltz v4, :cond_1
-
-    iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
-
-    int-to-float v4, v4
-
-    sub-float v4, v1, v4
-
-    cmpg-float v4, p5, v4
-
-    if-gez v4, :cond_1
-
-    cmp-long v4, v2, v5
-
-    if-gez v4, :cond_1
-
-    const/4 v4, 0x2
-
-    return v4
-
-    :cond_1
-    iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->screenWidth:I
-
-    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
-
-    sub-int/2addr v4, v7
-
-    int-to-float v4, v4
-
-    cmpl-float v4, v0, v4
-
-    if-ltz v4, :cond_2
-
-    iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
-
-    int-to-float v4, v4
-
-    sub-float v4, v0, v4
-
-    cmpg-float v4, p4, v4
-
-    if-gez v4, :cond_2
-
-    cmp-long v4, v2, v5
-
-    if-gez v4, :cond_2
-
-    const/4 v4, 0x3
-
-    return v4
-
-    :cond_2
     iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
-    int-to-float v4, v4
+    invoke-static {}, Lcom/android/server/policy/OpPhoneWindowManagerInjector;->isGestureButtonWithoutHideBarEnabled()Z
 
-    cmpg-float v4, v0, v4
+    move-result v7
 
-    if-gtz v4, :cond_3
+    if-eqz v7, :cond_1
 
-    iget v4, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
+    iget-object v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mContext:Landroid/content/Context;
 
-    int-to-float v4, v4
+    invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    add-float/2addr v4, v0
+    move-result-object v7
 
-    cmpl-float v4, p4, v4
+    const v8, 0x505002e
 
-    if-lez v4, :cond_3
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    cmp-long v4, v2, v5
+    move-result v4
 
-    if-gez v4, :cond_3
+    :cond_1
+    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->screenHeight:I
 
-    const/4 v4, 0x4
+    sub-int/2addr v7, v4
 
-    return v4
+    int-to-float v7, v7
+
+    cmpl-float v7, v1, v7
+
+    if-ltz v7, :cond_2
+
+    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
+
+    int-to-float v7, v7
+
+    sub-float v7, v1, v7
+
+    cmpg-float v7, p5, v7
+
+    if-gez v7, :cond_2
+
+    cmp-long v7, v2, v5
+
+    if-gez v7, :cond_2
+
+    const/4 v5, 0x2
+
+    return v5
+
+    :cond_2
+    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->screenWidth:I
+
+    iget v8, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
+
+    sub-int/2addr v7, v8
+
+    int-to-float v7, v7
+
+    cmpl-float v7, v0, v7
+
+    if-ltz v7, :cond_3
+
+    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
+
+    int-to-float v7, v7
+
+    sub-float v7, v0, v7
+
+    cmpg-float v7, p4, v7
+
+    if-gez v7, :cond_3
+
+    cmp-long v7, v2, v5
+
+    if-gez v7, :cond_3
+
+    const/4 v5, 0x3
+
+    return v5
 
     :cond_3
-    const/4 v4, 0x0
+    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
-    return v4
+    int-to-float v7, v7
+
+    cmpg-float v7, v0, v7
+
+    if-gtz v7, :cond_4
+
+    iget v7, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
+
+    int-to-float v7, v7
+
+    add-float/2addr v7, v0
+
+    cmpl-float v7, p4, v7
+
+    if-lez v7, :cond_4
+
+    cmp-long v5, v2, v5
+
+    if-gez v5, :cond_4
+
+    const/4 v5, 0x4
+
+    return v5
+
+    :cond_4
+    const/4 v5, 0x0
+
+    return v5
 .end method
 
 .method private detectSwipe(Landroid/view/MotionEvent;)I
@@ -681,6 +700,47 @@
 
     iput v2, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
+    sget-boolean v2, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v2, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "mSwipeStartThreshold="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " mDisplayCutoutTouchableRegionSize="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mDisplayCutoutTouchableRegionSize:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " mSwipeDistanceThreshold="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/server/wm/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "SystemGestures"
+
+    invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
     return-void
 .end method
 
