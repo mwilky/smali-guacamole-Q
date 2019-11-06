@@ -119,6 +119,14 @@
     move-result p2
 
     invoke-interface {p1, p2}, Lcom/android/systemui/plugins/qs/QS;->setOverscrolling(Z)V
+    
+    iget-object p2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView$19;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
+    
+    invoke-virtual {p2}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+
+    move-result p2
+
+    invoke-interface {p1, p2}, Lcom/android/systemui/plugins/qs/QS;->setSecureExpandDisabled(Z)V
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView$19;->this$0:Lcom/android/systemui/statusbar/phone/NotificationPanelView;
 

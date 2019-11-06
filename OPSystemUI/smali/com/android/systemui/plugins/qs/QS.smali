@@ -32,6 +32,9 @@
 
 
 # virtual methods
+.method public abstract setSecureExpandDisabled(Z)V
+.end method
+
 .method public abstract animateHeaderSlidingIn(J)V
 .end method
 

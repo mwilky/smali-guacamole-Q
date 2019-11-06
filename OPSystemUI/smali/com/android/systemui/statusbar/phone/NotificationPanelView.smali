@@ -1897,6 +1897,12 @@
     iget-boolean v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mQsExpansionEnabled:Z
 
     if-eqz v1, :cond_2
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+    
+    move-result v1
+    
+    if-nez v1, :cond_2
 
     iput-boolean v3, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mQsTracking:Z
 
@@ -2334,6 +2340,12 @@
     const/4 v3, 0x0
 
     const/4 v4, 0x5
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+    
+    move-result v0
+    
+    if-nez v0, :cond_5
     
     invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->rightHandPulldown(Landroid/view/MotionEvent;)Z
 
@@ -4173,6 +4185,12 @@
     const/4 v1, 0x0
 
     if-eqz v0, :cond_7
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+    
+    move-result v0
+    
+    if-nez v0, :cond_7
 
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mCollapsedOnDown:Z
 
@@ -5621,6 +5639,12 @@
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+    
+    move-result v0
+    
+    if-nez v0, :cond_0
 
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mQsExpandImmediate:Z
 
@@ -8554,6 +8578,12 @@
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+    
+    move-result v0
+    
+    if-eqz v0, :cond_0
 
     move p1, v1
 
@@ -8797,6 +8827,12 @@
     iget-boolean v6, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mKeyguardShowing:Z
 
     invoke-interface {v1, v6}, Lcom/android/systemui/plugins/qs/QS;->setKeyguardShowing(Z)V
+    
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->isLockPulldown()Z
+    
+    move-result v6
+    
+    invoke-interface {v1, v6}, Lcom/android/systemui/plugins/qs/QS;->setSecureExpandDisabled(Z)V
 
     :cond_1
     const/4 v1, 0x2
@@ -10594,4 +10630,22 @@
     invoke-virtual {v0}, Lcom/android/keyguard/KeyguardStatusView;->setViewsVisibility()V
     
     return-void
+.end method
+
+.method public isLockPulldown()Z
+    .locals 3
+
+    sget-boolean v1, Lcom/android/mwilky/Renovate;->mLockQsInLockscreen:Z
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v2, p0, Lcom/android/systemui/statusbar/phone/NotificationPanelView;->mKeyguardShowing:Z
+
+    :goto_0
+    return v2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_0
 .end method

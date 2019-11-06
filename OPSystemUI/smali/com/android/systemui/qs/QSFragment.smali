@@ -8,6 +8,8 @@
 
 
 # instance fields
+.field private mSecureExpandDisabled:Z
+
 .field private final mAnimateHeaderSlidingInListener:Landroid/animation/Animator$AnimatorListener;
 
 .field public mContainer:Lcom/android/systemui/qs/QSContainerImpl;
@@ -365,7 +367,14 @@
 # virtual methods
 .method public animateHeaderSlidingIn(J)V
     .locals 1
+    
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QSFragment;->mSecureExpandDisabled:Z
+    
+    if-eqz v0, :cond_mw
 
+	return-void
+    
+    :cond_mw
     iget-boolean v0, p0, Lcom/android/systemui/qs/QSFragment;->mQsExpanded:Z
 
     if-nez v0, :cond_0
@@ -607,15 +616,26 @@
 .end method
 
 .method public getQsMinExpansionHeight()I
-    .locals 0
+    .registers 2
 
-    iget-object p0, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+    .line 10
+    iget-boolean v0, p0, Lcom/android/systemui/qs/QSFragment;->mSecureExpandDisabled:Z
 
-    invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getHeight()I
+    if-eqz v0, :cond_6
 
-    move-result p0
+    const/4 v0, 0x0
 
-    return p0
+    goto :goto_c
+
+    :cond_6
+    iget-object v0, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
+
+    invoke-virtual {v0}, Lcom/android/systemui/qs/QuickStatusBarHeader;->getHeight()I
+
+    move-result v0
+
+    :goto_c
+    return v0
 .end method
 
 .method public getQsPanel()Lcom/android/systemui/qs/QSPanel;
@@ -1293,8 +1313,13 @@
 
     iget-boolean v3, p0, Lcom/android/systemui/qs/QSFragment;->mKeyguardShowing:Z
 
+    if-nez v3, :cond_mw
+    
+    iget-boolean v3, p0, Lcom/android/systemui/qs/QSFragment;->mSecureExpandDisabled:Z
+    
     if-eqz v3, :cond_0
 
+    :cond_mw
     iget-object p2, p0, Lcom/android/systemui/qs/QSFragment;->mHeader:Lcom/android/systemui/qs/QuickStatusBarHeader;
 
     invoke-virtual {p2}, Landroid/widget/RelativeLayout;->getHeight()I
@@ -1505,5 +1530,16 @@
 
     invoke-virtual {v0}, Lcom/android/systemui/qs/QSAnimator;->onRtlChanged()V
 
+    return-void
+.end method
+
+.method public setSecureExpandDisabled(Z)V
+    .registers 2
+    .param p1, "value"    # Z
+
+    .line 15
+    iput-boolean p1, p0, Lcom/android/systemui/qs/QSFragment;->mSecureExpandDisabled:Z
+
+    .line 16
     return-void
 .end method
