@@ -35,7 +35,7 @@
         <item name="textColorPrimary">#ffffffff</item>
         <item name="textColorSecondary">#7affffff</item>
         <item name="colorControlActivated">#1fffffff</item>
-        <item name="navigationBarColor">#ff010101</item>
+        <item name="navigationBarColor">#ff424242</item>
         <item name="colorBackgroundFloating">#ff424242</item>
         <item name="windowLightNavigationBar">true</item>
     </style>
