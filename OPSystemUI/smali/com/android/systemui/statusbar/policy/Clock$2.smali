@@ -128,7 +128,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     const-string p1, "time-zone"
 
@@ -136,6 +136,17 @@
 
     move-result-object p1
 
+    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getHandler()Landroid/os/Handler;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object p2, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
 
     invoke-virtual {p2}, Landroid/widget/TextView;->getHandler()Landroid/os/Handler;
@@ -150,14 +161,14 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const-string p2, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
 
@@ -177,14 +188,36 @@
 
     move-result-object p2
 
+    if-nez p2, :cond_2
+
+    return-void
+
+    :cond_2
+    iget-object p2, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getHandler()Landroid/os/Handler;
+
+    move-result-object p2
+
     new-instance v0, Lcom/android/systemui/statusbar/policy/-$$Lambda$Clock$2$BzKxslldgL1SP5a4jbR8GDSq90w;
 
     invoke-direct {v0, p0, p1}, Lcom/android/systemui/statusbar/policy/-$$Lambda$Clock$2$BzKxslldgL1SP5a4jbR8GDSq90w;-><init>(Lcom/android/systemui/statusbar/policy/Clock$2;Ljava/util/Locale;)V
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_1
+    :cond_3
     :goto_0
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getHandler()Landroid/os/Handler;
+
+    move-result-object p1
+
+    if-nez p1, :cond_4
+
+    return-void
+
+    :cond_4
     iget-object p1, p0, Lcom/android/systemui/statusbar/policy/Clock$2;->this$0:Lcom/android/systemui/statusbar/policy/Clock;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getHandler()Landroid/os/Handler;

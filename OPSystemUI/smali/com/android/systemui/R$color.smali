@@ -112,50 +112,48 @@
 
 .field public static final op_btn_volume_media_icon_bg_light:I = 0x7f060329
 
-.field public static final op_dismiss_all_button_color:I = 0x7f060335
+.field public static final op_home_handle_dark_color:I = 0x7f06033f
 
-.field public static final op_home_handle_dark_color:I = 0x7f060340
+.field public static final op_home_handle_light_color:I = 0x7f060340
 
-.field public static final op_home_handle_light_color:I = 0x7f060341
+.field public static final op_nav_bar_background_dark:I = 0x7f060347
 
-.field public static final op_nav_bar_background_dark:I = 0x7f060348
+.field public static final op_nav_bar_background_light:I = 0x7f060348
 
-.field public static final op_nav_bar_background_light:I = 0x7f060349
+.field public static final op_nav_bar_background_transparent:I = 0x7f060349
 
-.field public static final op_nav_bar_background_transparent:I = 0x7f06034a
+.field public static final op_nav_bar_key_dark:I = 0x7f06034a
 
-.field public static final op_nav_bar_key_dark:I = 0x7f06034b
+.field public static final op_nav_bar_key_light:I = 0x7f06034b
 
-.field public static final op_nav_bar_key_light:I = 0x7f06034c
+.field public static final op_nav_bar_key_transparent:I = 0x7f06034c
 
-.field public static final op_nav_bar_key_transparent:I = 0x7f06034d
+.field public static final op_volume_dialog_row_icon_color_dark:I = 0x7f06037e
 
-.field public static final op_volume_dialog_row_icon_color_dark:I = 0x7f06037f
+.field public static final op_volume_dialog_row_icon_color_light:I = 0x7f06037f
 
-.field public static final op_volume_dialog_row_icon_color_light:I = 0x7f060380
+.field public static final qs_detail_button_white:I = 0x7f0603d9
 
-.field public static final qs_detail_button_white:I = 0x7f0603da
+.field public static final qs_tile_disabled_color:I = 0x7f0603de
 
-.field public static final qs_tile_disabled_color:I = 0x7f0603df
+.field public static final qs_tile_icon:I = 0x7f0603e0
 
-.field public static final qs_tile_icon:I = 0x7f0603e1
+.field public static final remote_input_hint:I = 0x7f060410
 
-.field public static final remote_input_hint:I = 0x7f060411
+.field public static final remote_input_text_enabled:I = 0x7f060413
 
-.field public static final remote_input_text_enabled:I = 0x7f060414
+.field public static final screen_pinning_request_window_bg:I = 0x7f060417
 
-.field public static final screen_pinning_request_window_bg:I = 0x7f060418
+.field public static final smart_reply_button_background:I = 0x7f060434
 
-.field public static final smart_reply_button_background:I = 0x7f060435
+.field public static final smart_reply_button_stroke:I = 0x7f060435
 
-.field public static final smart_reply_button_stroke:I = 0x7f060436
+.field public static final smart_reply_button_text:I = 0x7f060436
 
-.field public static final smart_reply_button_text:I = 0x7f060437
+.field public static final smart_reply_button_text_dark_bg:I = 0x7f060437
 
-.field public static final smart_reply_button_text_dark_bg:I = 0x7f060438
+.field public static final system_bar_background_opaque:I = 0x7f06044d
 
-.field public static final system_bar_background_opaque:I = 0x7f06044e
+.field public static final system_bar_background_transparent:I = 0x7f06044e
 
-.field public static final system_bar_background_transparent:I = 0x7f06044f
-
-.field public static final transparent:I = 0x7f060493
+.field public static final transparent:I = 0x7f060492

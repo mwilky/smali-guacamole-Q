@@ -607,6 +607,42 @@
 
 
 # virtual methods
+.method public acquireWakeLock()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mPowerManager:Landroid/os/PowerManager;
+
+    const/4 v1, 0x1
+
+    const-string v2, "wake-and-unlock wakelock"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mHandler:Landroid/os/Handler;
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->mReleaseBiometricWakeLockRunnable:Ljava/lang/Runnable;
+
+    const-wide/16 v1, 0x3a98
+
+    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    const-string p0, "BiometricUnlockController"
+
+    const-string v0, "fingerprint acquired, grabbing biometric wakelock"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
 .method public dump(Ljava/io/PrintWriter;)V
     .locals 1
 

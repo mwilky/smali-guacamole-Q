@@ -224,6 +224,23 @@
     return-void
 .end method
 
+.method protected handleTimeChanged()V
+    .locals 1
+
+    sget-boolean v0, Lcom/oneplus/aod/slice/OpSlice;->DEBUG:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/aod/slice/OpSlice;->mTag:Ljava/lang/String;
+
+    const-string v0, "handleTimeChanged"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+.end method
+
 .method protected isActive()Z
     .locals 0
 
@@ -243,17 +260,16 @@
 .method public onTimeChanged()V
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/aod/slice/OpSlice;->DEBUG:Z
+    iget-object p0, p0, Lcom/oneplus/aod/slice/OpSlice;->mHandler:Lcom/oneplus/aod/slice/OpSlice$H;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x3
 
-    iget-object p0, p0, Lcom/oneplus/aod/slice/OpSlice;->mTag:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    const-string v0, "onTimeChanged"
+    move-result-object p0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    :cond_0
     return-void
 .end method
 

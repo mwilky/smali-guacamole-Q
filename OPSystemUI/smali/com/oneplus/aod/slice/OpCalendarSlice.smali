@@ -497,10 +497,10 @@
     return-void
 .end method
 
-.method public onTimeChanged()V
+.method public handleTimeChanged()V
     .locals 0
 
-    invoke-super {p0}, Lcom/oneplus/aod/slice/OpSlice;->onTimeChanged()V
+    invoke-super {p0}, Lcom/oneplus/aod/slice/OpSlice;->handleTimeChanged()V
 
     invoke-direct {p0}, Lcom/oneplus/aod/slice/OpCalendarSlice;->updateEvent()V
 

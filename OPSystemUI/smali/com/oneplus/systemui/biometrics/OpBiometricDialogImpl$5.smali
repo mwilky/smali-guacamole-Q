@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2402(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2602(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Ljava/lang/String;)Ljava/lang/String;
 
     sget-boolean p1, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->DEBUG:Z
 
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$5;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$5;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$5;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
 
     move-result-object p0
 

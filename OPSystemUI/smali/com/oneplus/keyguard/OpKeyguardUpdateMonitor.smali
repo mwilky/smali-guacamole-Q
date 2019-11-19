@@ -3763,6 +3763,13 @@
     invoke-virtual {p2, p3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     :cond_0
+    iget-object p3, p0, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3, p2}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->dump(Ljava/io/PrintWriter;)V
+
+    :cond_1
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4385,7 +4392,7 @@
 
     const/16 p3, 0x38
 
-    if-ne p1, p3, :cond_1
+    if-ne p1, p3, :cond_2
 
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -4407,7 +4414,7 @@
 
     invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

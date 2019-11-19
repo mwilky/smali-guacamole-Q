@@ -71,7 +71,18 @@
     :cond_2
     invoke-virtual {p0, v1}, Lcom/oneplus/aod/slice/OpSlice;->handleSetEnabled(Z)V
 
+    goto :goto_0
+
     :cond_3
+    const/4 p1, 0x3
+
+    if-ne v0, p1, :cond_4
+
+    iget-object p0, p0, Lcom/oneplus/aod/slice/OpSlice$H;->this$0:Lcom/oneplus/aod/slice/OpSlice;
+
+    invoke-virtual {p0}, Lcom/oneplus/aod/slice/OpSlice;->handleTimeChanged()V
+
+    :cond_4
     :goto_0
     return-void
 .end method

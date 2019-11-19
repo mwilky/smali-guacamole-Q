@@ -57,7 +57,7 @@
     move v1, v2
 
     :cond_0
-    invoke-static {p1, v1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2302(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2502(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     sget-boolean p1, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->DEBUG:Z
 
@@ -73,7 +73,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$4;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2300(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2500(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result p0
 

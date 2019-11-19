@@ -976,6 +976,7 @@
     <dimen name="one_finger_pop_limit">0.0dip</dimen>
     <dimen name="oneplus_appbar_with_tab_size1">119.0dip</dimen>
     <dimen name="oneplus_appbar_with_tab_size2">143.0dip</dimen>
+    <dimen name="oneplus_battery_margin_bottom">-1.0px</dimen>
     <dimen name="oneplus_bottom_text_spacing_digital">-1.0dip</dimen>
     <dimen name="oneplus_button_default_height">64.0dip</dimen>
     <item type="dimen" name="oneplus_button_mini_height">@dimen/oneplus_contorl_list_item_height_one_line1</item>
@@ -1526,7 +1527,6 @@
     <dimen name="qs_battery_padding">2.0dip</dimen>
     <dimen name="qs_brightness_view_margin_bottom">1.0dip</dimen>
     <dimen name="qs_brightness_view_margin_top">8.0dip</dimen>
-    <dimen name="qs_brightness_view_margin_top_mod">50.0dip</dimen>
     <dimen name="qs_carrier_info_text_size">14.0sp</dimen>
     <dimen name="qs_carrier_margin_width">4.0dip</dimen>
     <dimen name="qs_carrier_text_padding">52.0px</dimen>
@@ -1720,8 +1720,8 @@
     <dimen name="star_size_max">5.0dip</dimen>
     <dimen name="star_size_min">3.0dip</dimen>
     <dimen name="status_bar_airplane_spacer_width">4.0dip</dimen>
-    <dimen name="status_bar_battery_icon_height">13.0dip</dimen>
-    <dimen name="status_bar_battery_icon_width">7.799988dip</dimen>
+    <dimen name="status_bar_battery_icon_height">14.899994dip</dimen>
+    <dimen name="status_bar_battery_icon_width">8.939972dip</dimen>
     <dimen name="status_bar_clock_end_padding">0.0dip</dimen>
     <dimen name="status_bar_clock_size">14.0sp</dimen>
     <dimen name="status_bar_clock_starting_padding">7.0dip</dimen>
@@ -1924,5 +1924,4 @@
     <dimen name="zen_mode_condition_detail_button_padding">8.0dip</dimen>
     <dimen name="zen_mode_condition_detail_item_interline_spacing">4.0dip</dimen>
     <dimen name="zen_mode_condition_detail_item_spacing">12.0dip</dimen>
-    <dimen name="quick_qs_total_height_tweak">260.0dip</dimen>
 </resources>

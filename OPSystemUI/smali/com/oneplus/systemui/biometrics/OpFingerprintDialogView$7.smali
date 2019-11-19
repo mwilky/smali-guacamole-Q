@@ -43,12 +43,12 @@
 
     if-nez v1, :cond_0
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     :cond_0
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$7;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$3600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
 
     move-result v0
 

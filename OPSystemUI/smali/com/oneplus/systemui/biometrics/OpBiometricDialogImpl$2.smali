@@ -40,10 +40,6 @@
 .method public onClientActiveChangedWithPkg(ZLjava/lang/String;)V
     .locals 2
 
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz v0, :cond_0
-
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -60,6 +56,38 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string p1, ", lastOwnerString = "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1200(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", null:"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    iget-object p1, p1, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -68,16 +96,27 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
+    iget-object p1, p1, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->mFodDialogView:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    if-eqz p0, :cond_1
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p0, p2}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->setOwnerString(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->setOwnerString(Ljava/lang/String;)V
 
     :cond_1
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1300(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1202(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Ljava/lang/String;)Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-static {p0, p2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1302(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Ljava/lang/String;)Ljava/lang/String;
+
     return-void
 .end method
 
@@ -115,7 +154,7 @@
     :cond_0
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$2;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1200(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$OpHandler;
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$OpHandler;
 
     move-result-object p0
 

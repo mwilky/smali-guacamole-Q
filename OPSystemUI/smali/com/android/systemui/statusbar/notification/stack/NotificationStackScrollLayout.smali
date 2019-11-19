@@ -9197,43 +9197,17 @@
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setElevation(F)V
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mDismissAllButton:Landroid/view/View;
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    sget v2, Lcom/android/systemui/R$drawable;->recents_dismiss_all_icon:I
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    sget v1, Lcom/android/systemui/R$color;->op_dismiss_all_button_color:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mDismissAllButton:Landroid/view/View;
-
-    check-cast v2, Landroid/widget/ImageView;
-
-    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setColorFilter(I)V
-
-    sget v1, Lcom/android/systemui/R$color;->notification_material_background_color:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
-
     move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setElevation(F)V
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;->mDismissAllButton:Landroid/view/View;
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    check-cast p0, Landroid/widget/ImageView;
 
-    move-result-object v0
+    sget v0, Lcom/android/systemui/R$drawable;->recents_dismiss_all_icon:I
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     :cond_0
     return-void

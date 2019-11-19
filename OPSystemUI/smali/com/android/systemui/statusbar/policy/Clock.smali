@@ -16,10 +16,6 @@
 
 
 # instance fields
-.field private mDarkIconColor:I
-
-.field private mClockColor:I
-
 .field private final mAmPmStyle:I
 
 .field private mAttached:Z
@@ -593,12 +589,8 @@
     return p0
 .end method
 
-.method public updateClockVisibility()V
+.method private updateClockVisibility()V
     .locals 1
-    
-    sget v0, Lcom/android/mwilky/Renovate;->mClockPosition:I
-    
-    if-nez v0, :cond_0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->shouldBeVisible()Z
 
@@ -1043,15 +1035,9 @@
 
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClock()V
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateShowSeconds()V
-    
-    const/4 v0, 0x0
-    
-    int-to-float v0, v0
-
-    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/Clock;->updateViews(F)V
 
     const-class v0, Lcom/android/systemui/statusbar/phone/HighlightHintController;
 
@@ -1067,19 +1053,23 @@
 .end method
 
 .method public onDarkChanged(Landroid/graphics/Rect;FI)V
-    .locals 2
-    
-    float-to-int v0, p2
+    .locals 0
 
-    iget v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mDarkIconColor:I #dark color
+    invoke-static {p1, p0, p3}, Lcom/android/systemui/plugins/DarkIconDispatcher;->getTint(Landroid/graphics/Rect;Landroid/view/View;I)I
 
-    if-nez v0, :cond_0 #set to grey if dark intensity is 1
+    move-result p1
 
-    iget v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockColor:I #custom color
+    iput p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mNonAdaptedColor:I
+
+    iget-boolean p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mUseWallpaperTextColor:Z
+
+    if-nez p1, :cond_0
+
+    iget p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mNonAdaptedColor:I
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_0
-    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/policy/Clock;->setTextColor(I)V
-
     return-void
 .end method
 
@@ -1392,7 +1382,7 @@
 
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/policy/Clock;->setClockVisibleByUser(Z)V
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     :goto_0
     return-void
@@ -1403,7 +1393,7 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockVisibleByPolicy:Z
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     return-void
 .end method
@@ -1413,7 +1403,7 @@
 
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockVisibleByUser:Z
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/Clock;->updateClockVisibility()V
 
     return-void
 .end method
@@ -1512,38 +1502,5 @@
     invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :goto_0
-    return-void
-.end method
-
-.method public updateViews(F)V
-    .locals 2
-    
-    float-to-int v0, p1
-    
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/policy/Clock;->readRenovateMods()V
-    
-    iget v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mDarkIconColor:I #dark color
-
-    if-nez v0, :cond_dark #set to grey if dark intensity is 1
-
-    iget v1, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockColor:I #custom color
-
-    :cond_dark
-    invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/policy/Clock;->setTextColor(I)V
-
-    return-void
-.end method
-
-.method public readRenovateMods()V
-    .locals 1
-    
-    sget v0, Lcom/android/mwilky/Renovate;->mClockColorOP:I
-    
-    iput v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mClockColor:I
-	
-    sget v0, Lcom/android/mwilky/Renovate;->mDarkIconColor:I
-	
-    iput v0, p0, Lcom/android/systemui/statusbar/policy/Clock;->mDarkIconColor:I
-	
     return-void
 .end method

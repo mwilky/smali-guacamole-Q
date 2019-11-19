@@ -763,10 +763,10 @@
     return-void
 .end method
 
-.method public onTimeChanged()V
+.method public handleTimeChanged()V
     .locals 1
 
-    invoke-super {p0}, Lcom/oneplus/aod/slice/OpSlice;->onTimeChanged()V
+    invoke-super {p0}, Lcom/oneplus/aod/slice/OpSlice;->handleTimeChanged()V
 
     iget-boolean v0, p0, Lcom/oneplus/aod/slice/OpWeatherSlice;->mFirstQueryInfo:Z
 

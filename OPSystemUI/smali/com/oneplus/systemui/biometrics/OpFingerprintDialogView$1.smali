@@ -53,7 +53,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
 
     goto/16 :goto_0
 
@@ -84,7 +84,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, v0, v1, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;IILcom/android/internal/telephony/IccCardConstants$State;)V
+    invoke-static {p0, v0, v1, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;IILcom/android/internal/telephony/IccCardConstants$State;)V
 
     goto/16 :goto_0
 
@@ -111,7 +111,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, v0, v1, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ILjava/lang/String;Landroid/hardware/biometrics/BiometricSourceType;)V
+    invoke-static {p0, v0, v1, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ILjava/lang/String;Landroid/hardware/biometrics/BiometricSourceType;)V
 
     goto/16 :goto_0
 
@@ -120,7 +120,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
 
     goto/16 :goto_0
 
@@ -129,7 +129,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
 
     goto/16 :goto_0
 
@@ -144,7 +144,7 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$2000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
 
     goto/16 :goto_0
 
@@ -159,28 +159,28 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
 
     goto/16 :goto_0
 
     :pswitch_9
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto/16 :goto_0
 
     :pswitch_a
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto/16 :goto_0
 
     :pswitch_b
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto/16 :goto_0
 
@@ -189,14 +189,14 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
 
     goto/16 :goto_0
 
     :pswitch_d
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+    invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto/16 :goto_0
 
@@ -223,26 +223,11 @@
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
-    invoke-static {p0, v0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ZF)V
-
-    goto/16 :goto_0
-
-    :pswitch_f
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
-
-    invoke-static {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
+    invoke-static {p0, v0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ZF)V
 
     goto :goto_0
 
-    :pswitch_10
+    :pswitch_f
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Boolean;
@@ -257,49 +242,49 @@
 
     goto :goto_0
 
-    :pswitch_11
+    :pswitch_10
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_12
+    :pswitch_11
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_13
+    :pswitch_12
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_14
+    :pswitch_13
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_15
+    :pswitch_14
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_16
+    :pswitch_15
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_17
+    :pswitch_16
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/String;
@@ -310,14 +295,14 @@
 
     goto :goto_0
 
-    :pswitch_18
+    :pswitch_17
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
 
     goto :goto_0
 
-    :pswitch_19
+    :pswitch_18
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Boolean;
@@ -332,7 +317,7 @@
 
     goto :goto_0
 
-    :pswitch_1a
+    :pswitch_19
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Boolean;
@@ -347,7 +332,7 @@
 
     goto :goto_0
 
-    :pswitch_1b
+    :pswitch_1a
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$1;->this$0:Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;
 
     invoke-static {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
@@ -355,11 +340,8 @@
     :goto_0
     return-void
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x65
-        :pswitch_1b
         :pswitch_1a
         :pswitch_19
         :pswitch_18
@@ -367,14 +349,15 @@
         :pswitch_16
         :pswitch_15
         :pswitch_14
-        :pswitch_0
         :pswitch_13
         :pswitch_0
-        :pswitch_0
-        :pswitch_0
         :pswitch_12
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
         :pswitch_11
         :pswitch_10
+        :pswitch_0
         :pswitch_f
         :pswitch_e
         :pswitch_0

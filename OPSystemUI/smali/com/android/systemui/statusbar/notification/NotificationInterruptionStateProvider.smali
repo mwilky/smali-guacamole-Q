@@ -1171,7 +1171,7 @@
 .end method
 
 .method public shouldPulse(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-    .locals 4
+    .locals 6
 
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->notification:Landroid/service/notification/StatusBarNotification;
 
@@ -1267,9 +1267,9 @@
     :cond_3
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/NotificationInterruptionStateProvider;->canAlertCommon(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
-    move-result p0
+    move-result v1
 
-    if-nez p0, :cond_5
+    if-nez v1, :cond_5
 
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptionStateProvider;->OP_DEBUG:Z
 
@@ -1301,9 +1301,9 @@
     :cond_5
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->shouldSuppressAmbient()Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_7
+    if-eqz v1, :cond_7
 
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptionStateProvider;->OP_DEBUG:Z
 
@@ -1333,11 +1333,11 @@
     return v3
 
     :cond_7
-    iget p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->importance:I
+    iget v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->importance:I
 
-    const/4 p1, 0x3
+    const/4 v4, 0x3
 
-    if-ge p0, p1, :cond_9
+    if-ge v1, v4, :cond_9
 
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptionStateProvider;->OP_DEBUG:Z
 
@@ -1369,33 +1369,33 @@
     :cond_9
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object p0
+    move-result-object v1
 
-    iget-object p0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+    iget-object v1, v1, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    const-string p1, "android.title"
+    const-string v4, "android.title"
 
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
-    move-result-object p1
+    move-result-object v4
 
-    const-string v1, "android.text"
+    const-string v5, "android.text"
 
-    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v5}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
-    move-result-object p0
+    move-result-object v1
 
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result p1
+    move-result v4
 
-    if-eqz p1, :cond_b
+    if-eqz v4, :cond_b
 
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_b
+    if-eqz v1, :cond_b
 
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptionStateProvider;->OP_DEBUG:Z
 
@@ -1427,11 +1427,11 @@
     :cond_b
     invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result-object p0
+    move-result-object v1
 
-    iget-object p0, p0, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
+    iget-object v1, v1, Landroid/app/Notification;->fullScreenIntent:Landroid/app/PendingIntent;
 
-    if-eqz p0, :cond_d
+    if-eqz v1, :cond_d
 
     sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptionStateProvider;->OP_DEBUG:Z
 
@@ -1461,6 +1461,62 @@
     return v3
 
     :cond_d
+    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "com.android.dialer"
+
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_f
+
+    iget p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->importance:I
+
+    const/4 v1, 0x4
+
+    if-ge p1, v1, :cond_f
+
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/NotificationInterruptionStateProvider;->mOpNotificationController:Lcom/oneplus/notification/OpNotificationController;
+
+    invoke-virtual {p0}, Lcom/oneplus/notification/OpNotificationController;->getCallState()I
+
+    move-result p0
+
+    const/4 p1, 0x2
+
+    if-ne p0, p1, :cond_f
+
+    sget-boolean p0, Lcom/oneplus/systemui/statusbar/notification/OpNotificationInterruptionStateProvider;->OP_DEBUG:Z
+
+    if-eqz p0, :cond_e
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "No pulsing: dialer off hook and not important enough: "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_e
+    return v3
+
+    :cond_f
     const/4 p0, 0x1
 
     return p0

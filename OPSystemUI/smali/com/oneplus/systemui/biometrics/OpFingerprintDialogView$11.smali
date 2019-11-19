@@ -41,7 +41,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
+    invoke-static {p0, v0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->access$1100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
 
     return-void
 .end method

@@ -177,6 +177,12 @@
     return-void
 .end method
 
+.method public onPackagePreferencesCleared()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onRecentsAnimationStateChanged(Z)V
     .locals 0
 

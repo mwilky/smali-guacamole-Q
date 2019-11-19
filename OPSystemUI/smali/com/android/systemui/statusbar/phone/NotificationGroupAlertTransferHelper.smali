@@ -689,29 +689,30 @@
 .end method
 
 .method private onlySummaryAlerts(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-    .locals 0
+    .locals 1
 
-    iget-object p0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->notification:Landroid/service/notification/StatusBarNotification;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+    if-eqz p1, :cond_0
 
-    move-result-object p0
+    iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->notification:Landroid/service/notification/StatusBarNotification;
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getGroupAlertBehavior()I
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
-    move-result p0
+    move-result-object p1
 
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Landroid/app/Notification;->getGroupAlertBehavior()I
 
-    if-ne p0, p1, :cond_0
+    move-result p1
 
-    goto :goto_0
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    move p0, v0
 
     :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
+    return p0
 .end method
 
 .method private pendingInflationsWillAddChildren(Lcom/android/systemui/statusbar/phone/NotificationGroupManager$NotificationGroup;)Z

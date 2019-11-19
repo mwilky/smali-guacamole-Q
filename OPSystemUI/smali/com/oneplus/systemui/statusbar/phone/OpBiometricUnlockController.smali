@@ -168,22 +168,6 @@
     return-void
 .end method
 
-.method private getHandler()Landroid/os/Handler;
-    .locals 2
-
-    const-class v0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
-
-    const-string v1, "mHandler"
-
-    invoke-static {v0, p0, v1}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Handler;
-
-    return-object p0
-.end method
-
 .method private getMode()I
     .locals 2
 
@@ -204,22 +188,6 @@
     return p0
 .end method
 
-.method private getReleaseBiometricWakeLockRunnable()Ljava/lang/Runnable;
-    .locals 2
-
-    const-class v0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
-
-    const-string v1, "mReleaseBiometricWakeLockRunnable"
-
-    invoke-static {v0, p0, v1}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Runnable;
-
-    return-object p0
-.end method
-
 .method private getStatusBarKeyguardViewManager()Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
     .locals 2
 
@@ -232,22 +200,6 @@
     move-result-object p0
 
     check-cast p0, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
-
-    return-object p0
-.end method
-
-.method private getWakeLock()Landroid/os/PowerManager$WakeLock;
-    .locals 2
-
-    const-class v0, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
-
-    const-string v1, "mWakeLock"
-
-    invoke-static {v0, p0, v1}, Lcom/oneplus/util/OpReflectionUtils;->getValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/PowerManager$WakeLock;
 
     return-object p0
 .end method
@@ -640,7 +592,7 @@
 .end method
 
 .method public onFingerprintAcquired(I)V
-    .locals 4
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -751,8 +703,6 @@
     :cond_0
     const/4 v0, 0x6
 
-    const/4 v2, 0x1
-
     if-ne p1, v0, :cond_5
 
     iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -804,9 +754,9 @@
 
     move-result-wide v0
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v1, v3}, Landroid/os/PowerManager;->userActivity(JZ)V
+    invoke-virtual {p1, v0, v1, v2}, Landroid/os/PowerManager;->userActivity(JZ)V
 
     goto :goto_0
 
@@ -823,6 +773,8 @@
 
     move-result p1
 
+    const/4 v0, 0x1
+
     if-nez p1, :cond_4
 
     invoke-static {}, Lcom/oneplus/util/OpUtils;->isHomeApp()Z
@@ -831,14 +783,14 @@
 
     if-nez p1, :cond_4
 
-    invoke-virtual {p0, v2, v2}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->setFingerprintState(ZI)V
+    invoke-virtual {p0, v0, v0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->setFingerprintState(ZI)V
 
     goto :goto_1
 
     :cond_4
     const/4 p1, 0x7
 
-    invoke-virtual {p0, v2, p1}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->setFingerprintState(ZI)V
+    invoke-virtual {p0, v0, p1}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->setFingerprintState(ZI)V
 
     :goto_1
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->onFingerprintUnlockStart()V
@@ -846,60 +798,25 @@
     return-void
 
     :cond_5
-    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
+    iget-object p0, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    invoke-virtual {p1}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceInteractive()Z
+    invoke-virtual {p0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->isDeviceInteractive()Z
 
-    move-result p1
+    move-result p0
 
-    if-nez p1, :cond_8
+    if-nez p0, :cond_6
 
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->getWakeLock()Landroid/os/PowerManager$WakeLock;
-
-    iget-object p1, p0, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->mPowerManager:Landroid/os/PowerManager;
-
-    const-string v0, "wake-and-unlock wakelock"
-
-    invoke-virtual {p1, v2, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->getHandler()Landroid/os/Handler;
-
-    move-result-object p1
-
-    const-string v0, "Mickey"
-
-    if-eqz p1, :cond_7
-
-    invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpBiometricUnlockController;->getReleaseBiometricWakeLockRunnable()Ljava/lang/Runnable;
+    invoke-static {}, Lcom/oneplus/plugin/OpLsState;->getInstance()Lcom/oneplus/plugin/OpLsState;
 
     move-result-object p0
 
-    if-eqz p0, :cond_6
+    invoke-virtual {p0}, Lcom/oneplus/plugin/OpLsState;->getBiometricUnlockController()Lcom/android/systemui/statusbar/phone/BiometricUnlockController;
 
-    const-wide/16 v0, 0x3a98
+    move-result-object p0
 
-    invoke-virtual {p1, p0, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_2
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/BiometricUnlockController;->acquireWakeLock()V
 
     :cond_6
-    const-string p0, "runnable is null"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_2
-
-    :cond_7
-    const-string p0, "handler is null"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_8
-    :goto_2
     return-void
 .end method
 

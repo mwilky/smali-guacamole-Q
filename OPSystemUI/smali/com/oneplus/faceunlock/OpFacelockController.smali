@@ -4132,7 +4132,7 @@
 .end method
 
 .method public onKeyguardBouncerChanged(Z)V
-    .locals 4
+    .locals 3
 
     sget-boolean v0, Lcom/oneplus/faceunlock/OpFacelockController;->DEBUG:Z
 
@@ -4309,9 +4309,9 @@
 
     const/4 v0, 0x3
 
-    const/4 v3, -0x1
+    const/4 v2, -0x1
 
-    invoke-direct {p0, v0, v3}, Lcom/oneplus/faceunlock/OpFacelockController;->updateRecognizedState(II)V
+    invoke-direct {p0, v0, v2}, Lcom/oneplus/faceunlock/OpFacelockController;->updateRecognizedState(II)V
 
     :cond_6
     :goto_1
@@ -4341,14 +4341,6 @@
     iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-virtual {p1}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFacelockUnlocking()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, p0, Lcom/oneplus/faceunlock/OpFacelockController;->mStatusBarWindowController:Lcom/android/systemui/statusbar/phone/StatusBarWindowController;
-
-    invoke-virtual {p1, v2}, Lcom/android/systemui/statusbar/phone/StatusBarWindowController;->isShowingLiveWallpaper(Z)Z
 
     move-result p1
 

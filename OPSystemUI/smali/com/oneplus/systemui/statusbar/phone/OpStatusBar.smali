@@ -2650,6 +2650,16 @@
     return-void
 .end method
 
+.method public onPackagePreferencesCleared()V
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/systemui/SystemUI;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/android/systemui/util/NotificationChannels;->createAll(Landroid/content/Context;)V
+
+    return-void
+.end method
+
 .method public onSingleTap()V
     .locals 2
 
@@ -2994,6 +3004,12 @@
 
     iput-boolean v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
 
+    iget-object v0, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mOpWakingUpScrimController:Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;
+
+    iget-boolean v1, p0, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->mCustomDozing:Z
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/systemui/statusbar/phone/OpWakingUpScrimController;->setDozing(Z)V
+
     invoke-direct {p0}, Lcom/oneplus/systemui/statusbar/phone/OpStatusBar;->getDozeScrimController()Lcom/android/systemui/statusbar/phone/DozeScrimController;
 
     move-result-object v0
@@ -3033,7 +3049,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, " isFingerprintAlreadyAuthenticated"
+    const-string v1, " AlreadyAuthenticated: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -1538,7 +1538,7 @@
 .end method
 
 .method public updateMediaMetaData(ZZ)V
-    .locals 7
+    .locals 6
 
     const-string v0, "StatusBar#updateMediaMetaData"
 
@@ -1575,6 +1575,18 @@
     move v0, v1
 
     :goto_0
+    iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mContext:Landroid/content/Context;
+
+    invoke-static {v3}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/oneplus/keyguard/OpKeyguardUpdateMonitor;->isFacelockUnlocking()Z
+
+    move-result v3
+
+    or-int/2addr v0, v3
+
     iget-object v3, p0, Lcom/android/systemui/statusbar/NotificationMediaManager;->mKeyguardMonitor:Lcom/android/systemui/statusbar/policy/KeyguardMonitor;
 
     invoke-interface {v3}, Lcom/android/systemui/statusbar/policy/KeyguardMonitor;->isLaunchTransitionFadingAway()Z
@@ -1595,10 +1607,6 @@
     const/4 v3, 0x0
 
     if-eqz v0, :cond_4
-    
-    sget-boolean v6, Lcom/android/mwilky/Renovate;->mHideLockscreenAlbumArt:Z
-    
-    if-nez v6, :cond_4
 
     const-string v4, "android.media.metadata.ART"
 

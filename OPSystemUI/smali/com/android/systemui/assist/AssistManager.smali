@@ -467,6 +467,12 @@
 .method private startVoiceInteractor(Landroid/os/Bundle;)V
     .locals 3
 
+    const-string v0, "AssistManager"
+
+    const-string v1, "start VoiceInteractor"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, p0, Lcom/android/systemui/assist/AssistManager;->mAssistUtils:Lcom/android/internal/app/AssistUtils;
 
     iget-object p0, p0, Lcom/android/systemui/assist/AssistManager;->mShowCallback:Lcom/android/internal/app/IVoiceInteractionSessionShowCallback;
@@ -636,12 +642,29 @@
 
     move-result-object v1
 
+    :try_start_0
     iget-object v2, p0, Lcom/android/systemui/assist/AssistManager;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v3, p0, Lcom/android/systemui/assist/AssistManager;->mView:Lcom/android/systemui/assist/AssistOrbContainer;
 
     invoke-interface {v2, v3, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/RuntimeException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "AssistManager"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
     if-eqz p1, :cond_2
 
     iget-object p0, p0, Lcom/android/systemui/assist/AssistManager;->mView:Lcom/android/systemui/assist/AssistOrbContainer;

@@ -68,7 +68,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1300(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1500(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result p1
 
@@ -131,7 +131,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1500(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1700(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result v0
 
@@ -187,7 +187,7 @@
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1800(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result v0
 
@@ -202,7 +202,7 @@
     :cond_5
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1800(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result v0
 
@@ -231,11 +231,11 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1, v3}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1302(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v3}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1502(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1800(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result p1
 
@@ -251,16 +251,24 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1700(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)V
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1900(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)V
 
     :cond_7
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result p1
 
     if-eqz p1, :cond_b
+
+    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2000(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_b
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
@@ -272,15 +280,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_b
-
-    iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
-
-    invoke-static {p1, v3}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1902(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v3}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2102(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
@@ -301,15 +301,15 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1902(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2102(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1302(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1502(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2002(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2202(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
@@ -317,7 +317,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1500(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1700(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result p1
 
@@ -325,7 +325,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1600(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Z
 
     move-result p1
 
@@ -333,13 +333,13 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2200(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Landroid/view/WindowManager;
+    invoke-static {p1}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2400(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Landroid/view/WindowManager;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2100(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Landroid/view/View;
+    invoke-static {v0}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$2300(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;)Landroid/view/View;
 
     move-result-object v0
 
@@ -347,7 +347,7 @@
 
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
 
-    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1502(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
+    invoke-static {p1, v2}, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;->access$1702(Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;Z)Z
 
     :cond_9
     iget-object p1, p0, Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl$3;->this$0:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;

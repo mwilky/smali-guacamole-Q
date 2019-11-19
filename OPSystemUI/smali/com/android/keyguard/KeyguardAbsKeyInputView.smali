@@ -1243,8 +1243,35 @@
 .end method
 
 .method public showPromptReason(I)V
-    .locals 1
+    .locals 6
 
+    iget-object v0, p0, Lcom/android/keyguard/KeyguardAbsKeyInputView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-static {}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getCurrentUser()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;->getLockoutAttemptDeadline(I)J
+
+    move-result-wide v0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v0, v4
+
+    if-eqz v4, :cond_0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -1255,7 +1282,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
@@ -1267,20 +1294,20 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAbsKeyInputView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     sget p1, Lcom/android/systemui/R$string;->kg_first_unlock_instructions:I
 
     invoke-interface {p0, p1}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(I)V
 
-    :cond_0
+    :cond_1
     return-void
 
-    :cond_1
+    :cond_2
     iget-object v0, p0, Landroid/widget/LinearLayout;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -1291,33 +1318,33 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAbsKeyInputView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_3
 
     sget p1, Lcom/android/systemui/R$string;->face_unlock_notify_password:I
 
     invoke-interface {p0, p1}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(I)V
 
-    :cond_2
+    :cond_3
     return-void
 
-    :cond_3
-    if-eqz p1, :cond_4
+    :cond_4
+    if-eqz p1, :cond_5
 
     invoke-virtual {p0, p1}, Lcom/android/keyguard/KeyguardAbsKeyInputView;->getPromptReasonStringRes(I)I
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     iget-object p0, p0, Lcom/android/keyguard/KeyguardAbsKeyInputView;->mSecurityMessageDisplay:Lcom/android/keyguard/SecurityMessageDisplay;
 
     invoke-interface {p0, p1}, Lcom/android/keyguard/SecurityMessageDisplay;->setMessage(I)V
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 

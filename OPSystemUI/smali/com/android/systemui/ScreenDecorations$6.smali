@@ -47,7 +47,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$700(Lcom/android/systemui/ScreenDecorations;)I
+    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$000(Lcom/android/systemui/ScreenDecorations;)I
 
     move-result v1
 
@@ -65,7 +65,7 @@
 
     iget-object v3, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v3}, Lcom/android/systemui/ScreenDecorations;->access$700(Lcom/android/systemui/ScreenDecorations;)I
+    invoke-static {v3}, Lcom/android/systemui/ScreenDecorations;->access$000(Lcom/android/systemui/ScreenDecorations;)I
 
     move-result v3
 
@@ -85,12 +85,12 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1, v0}, Lcom/android/systemui/ScreenDecorations;->access$702(Lcom/android/systemui/ScreenDecorations;I)I
+    invoke-static {v1, v0}, Lcom/android/systemui/ScreenDecorations;->access$002(Lcom/android/systemui/ScreenDecorations;I)I
 
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$800(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$1000(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v0
 
@@ -98,7 +98,7 @@
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$900(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$1100(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v0
 
@@ -112,7 +112,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$1000(Lcom/android/systemui/ScreenDecorations;)V
+    invoke-static {v0}, Lcom/android/systemui/ScreenDecorations;->access$1200(Lcom/android/systemui/ScreenDecorations;)V
 
     sget-boolean v0, Lcom/oneplus/util/OpUtils;->DEBUG_ONEPLUS:Z
 
@@ -128,7 +128,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$1100(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$100(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v1
 
@@ -140,7 +140,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$1200(Lcom/android/systemui/ScreenDecorations;)Z
+    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$200(Lcom/android/systemui/ScreenDecorations;)Z
 
     move-result v1
 
@@ -152,7 +152,7 @@
 
     iget-object v1, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$700(Lcom/android/systemui/ScreenDecorations;)I
+    invoke-static {v1}, Lcom/android/systemui/ScreenDecorations;->access$000(Lcom/android/systemui/ScreenDecorations;)I
 
     move-result v1
 
@@ -169,11 +169,11 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/android/systemui/ScreenDecorations;->access$1102(Lcom/android/systemui/ScreenDecorations;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/ScreenDecorations;->access$102(Lcom/android/systemui/ScreenDecorations;Z)Z
 
     iget-object v0, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 
-    invoke-static {v0, v1}, Lcom/android/systemui/ScreenDecorations;->access$1202(Lcom/android/systemui/ScreenDecorations;Z)Z
+    invoke-static {v0, v1}, Lcom/android/systemui/ScreenDecorations;->access$202(Lcom/android/systemui/ScreenDecorations;Z)Z
 
     iget-object p0, p0, Lcom/android/systemui/ScreenDecorations$6;->this$0:Lcom/android/systemui/ScreenDecorations;
 

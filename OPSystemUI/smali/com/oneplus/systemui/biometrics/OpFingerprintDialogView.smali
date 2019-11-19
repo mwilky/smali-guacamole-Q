@@ -685,20 +685,12 @@
 .method static synthetic access$1100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleSetDialogShowing(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$1200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
-    .locals 0
-
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleUpdateIconVisibility(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ZF)V
+.method static synthetic access$1200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ZF)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleUpdateLayoutDimension(ZF)V
@@ -706,7 +698,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+.method static synthetic access$1300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnScreenTurnedOff()V
@@ -714,7 +706,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+.method static synthetic access$1400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnFinishedGoingToSleep(I)V
@@ -722,7 +714,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+.method static synthetic access$1500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnStartedWakingUp()V
@@ -730,7 +722,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+.method static synthetic access$1600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnScreenTurnedOn()V
@@ -738,7 +730,7 @@
     return-void
 .end method
 
-.method static synthetic access$1800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+.method static synthetic access$1700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleResetState()V
@@ -746,10 +738,18 @@
     return-void
 .end method
 
-.method static synthetic access$1900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
+.method static synthetic access$1800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnKeyguardVisibilityChanged(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$1900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnKeyguardBouncerChanged(Z)V
 
     return-void
 .end method
@@ -762,15 +762,7 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnKeyguardBouncerChanged(Z)V
-
-    return-void
-.end method
-
-.method static synthetic access$2100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+.method static synthetic access$2000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnFacelockStateChanged(I)V
@@ -778,7 +770,7 @@
     return-void
 .end method
 
-.method static synthetic access$2200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+.method static synthetic access$2100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnStrongAuthStateChanged(I)V
@@ -786,7 +778,7 @@
     return-void
 .end method
 
-.method static synthetic access$2300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ILjava/lang/String;Landroid/hardware/biometrics/BiometricSourceType;)V
+.method static synthetic access$2200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;ILjava/lang/String;Landroid/hardware/biometrics/BiometricSourceType;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnBiometricHelp(ILjava/lang/String;Landroid/hardware/biometrics/BiometricSourceType;)V
@@ -794,7 +786,7 @@
     return-void
 .end method
 
-.method static synthetic access$2400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;IILcom/android/internal/telephony/IccCardConstants$State;)V
+.method static synthetic access$2300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;IILcom/android/internal/telephony/IccCardConstants$State;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnSimStateChanged(IILcom/android/internal/telephony/IccCardConstants$State;)V
@@ -802,7 +794,7 @@
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+.method static synthetic access$2400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->handleOnUserSwitching(I)V
@@ -810,7 +802,7 @@
     return-void
 .end method
 
-.method static synthetic access$2600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/android/systemui/biometrics/DialogViewCallback;
+.method static synthetic access$2500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/android/systemui/biometrics/DialogViewCallback;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mCallback:Lcom/android/systemui/biometrics/DialogViewCallback;
@@ -818,7 +810,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
+.method static synthetic access$2600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mAnimatingAway:Z
@@ -826,7 +818,7 @@
     return p0
 .end method
 
-.method static synthetic access$2702(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
+.method static synthetic access$2602(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mAnimatingAway:Z
@@ -834,18 +826,26 @@
     return p1
 .end method
 
-.method static synthetic access$2800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/Handler;
+.method static synthetic access$2700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
+    iget-boolean p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mFodDialogShowing:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/view/ViewGroup;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mLayout:Landroid/view/ViewGroup;
 
     return-object p0
 .end method
 
-.method static synthetic access$2900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/view/WindowManager;
+.method static synthetic access$2900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/Handler;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mWindowManager:Landroid/view/WindowManager;
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
 
     return-object p0
 .end method
@@ -858,7 +858,15 @@
     return-void
 .end method
 
-.method static synthetic access$3000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
+.method static synthetic access$3000(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/view/WindowManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mWindowManager:Landroid/view/WindowManager;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mShowingPressed:Z
@@ -866,7 +874,7 @@
     return p0
 .end method
 
-.method static synthetic access$3100(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+.method static synthetic access$3200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->setDisplayPressMode(I)V
@@ -874,7 +882,7 @@
     return-void
 .end method
 
-.method static synthetic access$3200(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
+.method static synthetic access$3300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->playAnimation(I)V
@@ -882,7 +890,7 @@
     return-void
 .end method
 
-.method static synthetic access$3300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/Handler;
+.method static synthetic access$3400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mMainThreadhandler:Landroid/os/Handler;
@@ -890,7 +898,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
+.method static synthetic access$3500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->stopAnimation()V
@@ -898,7 +906,7 @@
     return-void
 .end method
 
-.method static synthetic access$3500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
+.method static synthetic access$3600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mDeviceInteractive:Z
@@ -906,7 +914,7 @@
     return p0
 .end method
 
-.method static synthetic access$3502(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
+.method static synthetic access$3602(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mDeviceInteractive:Z
@@ -914,7 +922,7 @@
     return p1
 .end method
 
-.method static synthetic access$3600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
+.method static synthetic access$3700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mDialogImpl:Lcom/oneplus/systemui/biometrics/OpBiometricDialogImpl;
@@ -922,7 +930,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$3700(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Ljava/lang/String;
+.method static synthetic access$3800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mOwnerString:Ljava/lang/String;
@@ -930,20 +938,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$3800(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
+.method static synthetic access$3900(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mShowOnWindow:Z
 
     return p0
-.end method
-
-.method static synthetic access$3902(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsScreenOn:Z
-
-    return p1
 .end method
 
 .method static synthetic access$400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Ljava/lang/String;)V
@@ -957,7 +957,7 @@
 .method static synthetic access$4002(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsScreenTurningOn:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsScreenOn:Z
 
     return p1
 .end method
@@ -965,7 +965,7 @@
 .method static synthetic access$4102(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mGoingToSleep:Z
+    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIsScreenTurningOn:Z
 
     return p1
 .end method
@@ -973,12 +973,20 @@
 .method static synthetic access$4202(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
     .locals 0
 
+    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mGoingToSleep:Z
+
+    return p1
+.end method
+
+.method static synthetic access$4302(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
+    .locals 0
+
     iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mFaceUnlocked:Z
 
     return p1
 .end method
 
-.method static synthetic access$4300(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+.method static synthetic access$4400(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mStatusBarKeyguardViewManager:Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
@@ -986,20 +994,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$4402(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
+.method static synthetic access$4502(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mNeedToShowAodText:Z
 
     return p1
-.end method
-
-.method static synthetic access$4500(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/view/ViewGroup;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mLayout:Landroid/view/ViewGroup;
-
-    return-object p0
 .end method
 
 .method static synthetic access$4600(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)Landroid/os/PowerManager;
@@ -2710,32 +2710,6 @@
     return-void
 .end method
 
-.method private handleSetDialogShowing(Z)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "handleSetDialogShowing "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OpFingerprintDialogView"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mFodDialogShowing:Z
-
-    return-void
-.end method
-
 .method private handleSetOwnerString(Ljava/lang/String;)V
     .locals 2
 
@@ -3081,6 +3055,12 @@
 
     iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mAnimatingAway:Z
 
+    const-string p1, "OpFingerprintDialogView"
+
+    const-string v0, "handleStartDismiss"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     new-instance p1, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$3;
 
     invoke-direct {p1, p0}, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView$3;-><init>(Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;)V
@@ -3104,34 +3084,7 @@
     .locals 18
 
     move-object/from16 v0, p0
-    
-    sget v2, Lcom/oneplus/aod/OpAodDisplayViewManager;->mPulseStatus:I
-	
-	const v4, 0x2
-	
-	if-ne v2, v4, :cond_stock
-	
-	sget-boolean v2, Lcom/android/mwilky/Renovate;->mAodFingerprint:Z
-	
-	if-nez v2, :cond_stock
 
-    iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconNormal:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-    
-    const v4, 0x8
-    
-    invoke-virtual {v2, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-    
-    iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconDisable:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-    
-    invoke-virtual {v2, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-    
-    iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mIconDim:Lcom/oneplus/systemui/biometrics/OpCircleImageView;
-    
-    invoke-virtual {v2, v4}, Lcom/oneplus/systemui/biometrics/OpCircleImageView;->setVisibility(I)V
-    
-    return-void    
-    
-    :cond_stock
     move/from16 v1, p1
 
     iget-object v2, v0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
@@ -5290,6 +5243,43 @@
     return-void
 .end method
 
+.method public dump(Ljava/io/PrintWriter;)V
+    .locals 2
+
+    const-string v0, "OpFingerprintDialogView"
+
+    const-string v1, "dump FingerprintDialogUI"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object p0
+
+    new-instance v0, Landroid/util/PrintWriterPrinter;
+
+    invoke-direct {v0, p1}, Landroid/util/PrintWriterPrinter;-><init>(Ljava/io/PrintWriter;)V
+
+    const-string p1, "OpFingerprintDialogView  "
+
+    invoke-virtual {p0, v0, p1}, Landroid/os/Looper;->dump(Landroid/util/Printer;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public forceRemove()V
     .locals 2
 
@@ -6166,27 +6156,34 @@
 .method public setDialogShowing(Z)V
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x74
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+    const-string v1, "setDialogShowing: "
 
-    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v1, "OpFingerprintDialogView"
 
-    move-result-object p1
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
 
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    const/16 v1, 0x67
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mFodDialogShowing:Z
 
     return-void
 .end method
@@ -6261,6 +6258,24 @@
 
 .method public setOwnerString(Ljava/lang/String;)V
     .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setOwnerString to "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpFingerprintDialogView"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/oneplus/systemui/biometrics/OpFingerprintDialogView;->mHandler:Landroid/os/Handler;
 

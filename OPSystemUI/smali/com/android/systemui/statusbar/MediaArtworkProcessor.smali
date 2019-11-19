@@ -4,8 +4,6 @@
 
 
 # instance fields
-.field private mDownSample:I
-
 .field private mArtworkCache:Landroid/graphics/Bitmap;
 
 .field private final mTmpSize:Landroid/graphics/Point;
@@ -22,10 +20,6 @@
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/MediaArtworkProcessor;->mTmpSize:Landroid/graphics/Point;
-    
-    const/4 v0, 0x6
-
-    iput v0, p0, Lcom/android/systemui/statusbar/MediaArtworkProcessor;->mDownSample:I
 
     return-void
 .end method
@@ -50,7 +44,7 @@
 .end method
 
 .method public final processArtwork(Landroid/content/Context;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-    .locals 7
+    .locals 4
 
     const-string v0, "context"
 
@@ -76,38 +70,6 @@
     throw p0
 
     :cond_1
-    sget v6, Lcom/android/mwilky/Renovate;->mAlbumArtBlurAmount:F
-    
-    const/high16 v5, 0x40a00000    # 5.0f
-
-    cmpg-float v4, v6, v5
-
-    if-gez v4, :cond_e
-
-    .line 24
-    const/4 v4, 0x2
-
-    iput v4, p0, Lcom/android/systemui/statusbar/MediaArtworkProcessor;->mDownSample:I
-
-    goto :goto_1b
-
-    .line 25
-    :cond_e
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    cmpg-float v4, v6, v5
-
-    if-gez v4, :cond_1b
-
-    .line 26
-    const/4 v4, 0x1
-
-    iput v4, p0, Lcom/android/systemui/statusbar/MediaArtworkProcessor;->mDownSample:I
-
-    .line 29
-    :cond_1b
-    :goto_1b
     invoke-virtual {p1}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
 
     move-result-object v0
@@ -133,18 +95,16 @@
     const/4 v3, 0x0
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
-    
-    iget v4, p0, Lcom/android/systemui/statusbar/MediaArtworkProcessor;->mDownSample:I
 
     iget-object p0, p0, Lcom/android/systemui/statusbar/MediaArtworkProcessor;->mTmpSize:Landroid/graphics/Point;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
 
-    div-int v1, v1, v4
+    div-int/lit8 v1, v1, 0x6
 
     iget p0, p0, Landroid/graphics/Point;->y:I
 
-    div-int p0, p0, v4
+    div-int/lit8 p0, p0, 0x6
 
     invoke-static {v1, p0}, Ljava/lang/Math;->max(II)I
 
@@ -222,14 +182,11 @@
     invoke-static {p1, v3}, Landroid/renderscript/ScriptIntrinsicBlur;->create(Landroid/renderscript/RenderScript;Landroid/renderscript/Element;)Landroid/renderscript/ScriptIntrinsicBlur;
 
     move-result-object p1
-    
-    float-to-int v5, v6
-    
-    if-eqz v5, :cond_noblur
 
-    invoke-virtual {p1, v6}, Landroid/renderscript/ScriptIntrinsicBlur;->setRadius(F)V
+    const/high16 v3, 0x41c80000    # 25.0f
 
-	:cond_noblur
+    invoke-virtual {p1, v3}, Landroid/renderscript/ScriptIntrinsicBlur;->setRadius(F)V
+
     invoke-virtual {p1, v1}, Landroid/renderscript/ScriptIntrinsicBlur;->setInput(Landroid/renderscript/Allocation;)V
 
     invoke-virtual {p1, v2}, Landroid/renderscript/ScriptIntrinsicBlur;->forEach(Landroid/renderscript/Allocation;)V
