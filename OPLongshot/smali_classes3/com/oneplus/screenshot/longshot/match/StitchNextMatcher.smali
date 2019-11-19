@@ -900,7 +900,9 @@
     goto :goto_3
 
     :cond_5
-    const/16 v0, 0x64
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getOverrideMatchThresholdValue()I
+
+    move-result v0
 
     :goto_3
     move v5, v0

@@ -88,19 +88,22 @@
     <public type="array" name="match_5_list_activity" id="0x7f03001f" />
     <public type="array" name="non_list_activity" id="0x7f030020" />
     <public type="array" name="not_ignore_fail_list_activity" id="0x7f030021" />
-    <public type="array" name="page_list_activity" id="0x7f030022" />
-    <public type="array" name="shot_next_level_2_list_activity" id="0x7f030023" />
-    <public type="array" name="shot_next_level_3_list_activity" id="0x7f030024" />
-    <public type="array" name="shot_next_level_4_list_activity" id="0x7f030025" />
-    <public type="array" name="shot_next_level_5_list_activity" id="0x7f030026" />
-    <public type="array" name="small_list_activity" id="0x7f030027" />
-    <public type="array" name="special_scroll_activity" id="0x7f030028" />
-    <public type="array" name="stitch_next_level_2_list_activity" id="0x7f030029" />
-    <public type="array" name="stitch_next_level_3_list_activity" id="0x7f03002a" />
-    <public type="array" name="stitch_next_level_4_list_activity" id="0x7f03002b" />
-    <public type="array" name="stitch_next_level_5_list_activity" id="0x7f03002c" />
-    <public type="array" name="strict_list_activity" id="0x7f03002d" />
-    <public type="array" name="with_issue_report_activity" id="0x7f03002e" />
+    <public type="array" name="override_match_threshold_list_2" id="0x7f030022" />
+    <public type="array" name="override_match_threshold_list_3" id="0x7f030023" />
+    <public type="array" name="override_match_threshold_list_4" id="0x7f030024" />
+    <public type="array" name="page_list_activity" id="0x7f030025" />
+    <public type="array" name="shot_next_level_2_list_activity" id="0x7f030026" />
+    <public type="array" name="shot_next_level_3_list_activity" id="0x7f030027" />
+    <public type="array" name="shot_next_level_4_list_activity" id="0x7f030028" />
+    <public type="array" name="shot_next_level_5_list_activity" id="0x7f030029" />
+    <public type="array" name="small_list_activity" id="0x7f03002a" />
+    <public type="array" name="special_scroll_activity" id="0x7f03002b" />
+    <public type="array" name="stitch_next_level_2_list_activity" id="0x7f03002c" />
+    <public type="array" name="stitch_next_level_3_list_activity" id="0x7f03002d" />
+    <public type="array" name="stitch_next_level_4_list_activity" id="0x7f03002e" />
+    <public type="array" name="stitch_next_level_5_list_activity" id="0x7f03002f" />
+    <public type="array" name="strict_list_activity" id="0x7f030030" />
+    <public type="array" name="with_issue_report_activity" id="0x7f030031" />
     <public type="attr" name="OPAlertDialogStyle" id="0x7f040000" />
     <public type="attr" name="OPEditTextStyle" id="0x7f040001" />
     <public type="attr" name="OPFloatingActionButtonStyle" id="0x7f040002" />
@@ -2879,52 +2882,56 @@
     <public type="integer" name="config_move_duration" id="0x7f0a0017" />
     <public type="integer" name="config_move_keep_long" id="0x7f0a0018" />
     <public type="integer" name="config_move_keep_short" id="0x7f0a0019" />
-    <public type="integer" name="config_percent_max" id="0x7f0a001a" />
-    <public type="integer" name="config_percent_move_big_top" id="0x7f0a001b" />
-    <public type="integer" name="config_percent_move_bottom" id="0x7f0a001c" />
-    <public type="integer" name="config_percent_move_higher_bottom" id="0x7f0a001d" />
-    <public type="integer" name="config_percent_move_lower_bottom" id="0x7f0a001e" />
-    <public type="integer" name="config_percent_move_lower_top" id="0x7f0a001f" />
-    <public type="integer" name="config_percent_move_small_bottom" id="0x7f0a0020" />
-    <public type="integer" name="config_percent_move_small_top" id="0x7f0a0021" />
-    <public type="integer" name="config_percent_move_top" id="0x7f0a0022" />
-    <public type="integer" name="config_pixel_error_1" id="0x7f0a0023" />
-    <public type="integer" name="config_pixel_error_2" id="0x7f0a0024" />
-    <public type="integer" name="config_start_scroll_delay_0" id="0x7f0a0025" />
-    <public type="integer" name="config_start_scroll_delay_1" id="0x7f0a0026" />
-    <public type="integer" name="config_start_scroll_delay_2" id="0x7f0a0027" />
-    <public type="integer" name="config_start_scroll_delay_3" id="0x7f0a0028" />
-    <public type="integer" name="config_stitch_next_match_level_1" id="0x7f0a0029" />
-    <public type="integer" name="config_stitch_next_match_level_2" id="0x7f0a002a" />
-    <public type="integer" name="config_toastDefaultGravity" id="0x7f0a002b" />
-    <public type="integer" name="date_picker_header_max_lines_material" id="0x7f0a002c" />
-    <public type="integer" name="date_picker_mode" id="0x7f0a002d" />
-    <public type="integer" name="date_picker_mode_material" id="0x7f0a002e" />
-    <public type="integer" name="max_expandable_screenshot_length" id="0x7f0a002f" />
-    <public type="integer" name="max_pages" id="0x7f0a0030" />
-    <public type="integer" name="oneplus_contorl_time_part1" id="0x7f0a0031" />
-    <public type="integer" name="oneplus_contorl_time_part2" id="0x7f0a0032" />
-    <public type="integer" name="oneplus_contorl_time_part3" id="0x7f0a0033" />
-    <public type="integer" name="oneplus_contorl_time_part4" id="0x7f0a0034" />
-    <public type="integer" name="oneplus_contorl_time_part5" id="0x7f0a0035" />
-    <public type="integer" name="oneplus_contorl_time_part6" id="0x7f0a0036" />
-    <public type="integer" name="oneplus_contorl_time_part7" id="0x7f0a0037" />
-    <public type="integer" name="oneplus_selector_button_frame_druation" id="0x7f0a0038" />
-    <public type="integer" name="op_config_tooltipAnimTime" id="0x7f0a0039" />
-    <public type="integer" name="op_date_picker_mode" id="0x7f0a003a" />
-    <public type="integer" name="op_design_snackbar_text_max_lines" id="0x7f0a003b" />
-    <public type="integer" name="op_hide_password_duration" id="0x7f0a003c" />
-    <public type="integer" name="op_pageIndicator_alpha_material" id="0x7f0a003d" />
-    <public type="integer" name="op_pageIndicator_alpha_material_dark" id="0x7f0a003e" />
-    <public type="integer" name="op_pageIndicator_alpha_material_light" id="0x7f0a003f" />
-    <public type="integer" name="op_show_password_duration" id="0x7f0a0040" />
-    <public type="integer" name="preference_fragment_scrollbarStyle" id="0x7f0a0041" />
-    <public type="integer" name="preference_screen_header_scrollbarStyle" id="0x7f0a0042" />
-    <public type="integer" name="preferences_left_pane_weight" id="0x7f0a0043" />
-    <public type="integer" name="preferences_right_pane_weight" id="0x7f0a0044" />
-    <public type="integer" name="status_bar_notification_info_maxnum" id="0x7f0a0045" />
-    <public type="integer" name="time_picker_mode" id="0x7f0a0046" />
-    <public type="integer" name="time_picker_mode_material" id="0x7f0a0047" />
+    <public type="integer" name="config_override_match_threshold_level_1" id="0x7f0a001a" />
+    <public type="integer" name="config_override_match_threshold_level_2" id="0x7f0a001b" />
+    <public type="integer" name="config_override_match_threshold_level_3" id="0x7f0a001c" />
+    <public type="integer" name="config_override_match_threshold_level_4" id="0x7f0a001d" />
+    <public type="integer" name="config_percent_max" id="0x7f0a001e" />
+    <public type="integer" name="config_percent_move_big_top" id="0x7f0a001f" />
+    <public type="integer" name="config_percent_move_bottom" id="0x7f0a0020" />
+    <public type="integer" name="config_percent_move_higher_bottom" id="0x7f0a0021" />
+    <public type="integer" name="config_percent_move_lower_bottom" id="0x7f0a0022" />
+    <public type="integer" name="config_percent_move_lower_top" id="0x7f0a0023" />
+    <public type="integer" name="config_percent_move_small_bottom" id="0x7f0a0024" />
+    <public type="integer" name="config_percent_move_small_top" id="0x7f0a0025" />
+    <public type="integer" name="config_percent_move_top" id="0x7f0a0026" />
+    <public type="integer" name="config_pixel_error_1" id="0x7f0a0027" />
+    <public type="integer" name="config_pixel_error_2" id="0x7f0a0028" />
+    <public type="integer" name="config_start_scroll_delay_0" id="0x7f0a0029" />
+    <public type="integer" name="config_start_scroll_delay_1" id="0x7f0a002a" />
+    <public type="integer" name="config_start_scroll_delay_2" id="0x7f0a002b" />
+    <public type="integer" name="config_start_scroll_delay_3" id="0x7f0a002c" />
+    <public type="integer" name="config_stitch_next_match_level_1" id="0x7f0a002d" />
+    <public type="integer" name="config_stitch_next_match_level_2" id="0x7f0a002e" />
+    <public type="integer" name="config_toastDefaultGravity" id="0x7f0a002f" />
+    <public type="integer" name="date_picker_header_max_lines_material" id="0x7f0a0030" />
+    <public type="integer" name="date_picker_mode" id="0x7f0a0031" />
+    <public type="integer" name="date_picker_mode_material" id="0x7f0a0032" />
+    <public type="integer" name="max_expandable_screenshot_length" id="0x7f0a0033" />
+    <public type="integer" name="max_pages" id="0x7f0a0034" />
+    <public type="integer" name="oneplus_contorl_time_part1" id="0x7f0a0035" />
+    <public type="integer" name="oneplus_contorl_time_part2" id="0x7f0a0036" />
+    <public type="integer" name="oneplus_contorl_time_part3" id="0x7f0a0037" />
+    <public type="integer" name="oneplus_contorl_time_part4" id="0x7f0a0038" />
+    <public type="integer" name="oneplus_contorl_time_part5" id="0x7f0a0039" />
+    <public type="integer" name="oneplus_contorl_time_part6" id="0x7f0a003a" />
+    <public type="integer" name="oneplus_contorl_time_part7" id="0x7f0a003b" />
+    <public type="integer" name="oneplus_selector_button_frame_druation" id="0x7f0a003c" />
+    <public type="integer" name="op_config_tooltipAnimTime" id="0x7f0a003d" />
+    <public type="integer" name="op_date_picker_mode" id="0x7f0a003e" />
+    <public type="integer" name="op_design_snackbar_text_max_lines" id="0x7f0a003f" />
+    <public type="integer" name="op_hide_password_duration" id="0x7f0a0040" />
+    <public type="integer" name="op_pageIndicator_alpha_material" id="0x7f0a0041" />
+    <public type="integer" name="op_pageIndicator_alpha_material_dark" id="0x7f0a0042" />
+    <public type="integer" name="op_pageIndicator_alpha_material_light" id="0x7f0a0043" />
+    <public type="integer" name="op_show_password_duration" id="0x7f0a0044" />
+    <public type="integer" name="preference_fragment_scrollbarStyle" id="0x7f0a0045" />
+    <public type="integer" name="preference_screen_header_scrollbarStyle" id="0x7f0a0046" />
+    <public type="integer" name="preferences_left_pane_weight" id="0x7f0a0047" />
+    <public type="integer" name="preferences_right_pane_weight" id="0x7f0a0048" />
+    <public type="integer" name="status_bar_notification_info_maxnum" id="0x7f0a0049" />
+    <public type="integer" name="time_picker_mode" id="0x7f0a004a" />
+    <public type="integer" name="time_picker_mode_material" id="0x7f0a004b" />
     <public type="interpolator" name="accelerate_quad" id="0x7f0b0000" />
     <public type="interpolator" name="background_alpha" id="0x7f0b0001" />
     <public type="interpolator" name="decelerate_quad" id="0x7f0b0002" />

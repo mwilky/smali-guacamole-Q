@@ -83,31 +83,37 @@
 
 .field public static final not_ignore_fail_list_activity:I = 0x7f030021
 
-.field public static final page_list_activity:I = 0x7f030022
+.field public static final override_match_threshold_list_2:I = 0x7f030022
 
-.field public static final shot_next_level_2_list_activity:I = 0x7f030023
+.field public static final override_match_threshold_list_3:I = 0x7f030023
 
-.field public static final shot_next_level_3_list_activity:I = 0x7f030024
+.field public static final override_match_threshold_list_4:I = 0x7f030024
 
-.field public static final shot_next_level_4_list_activity:I = 0x7f030025
+.field public static final page_list_activity:I = 0x7f030025
 
-.field public static final shot_next_level_5_list_activity:I = 0x7f030026
+.field public static final shot_next_level_2_list_activity:I = 0x7f030026
 
-.field public static final small_list_activity:I = 0x7f030027
+.field public static final shot_next_level_3_list_activity:I = 0x7f030027
 
-.field public static final special_scroll_activity:I = 0x7f030028
+.field public static final shot_next_level_4_list_activity:I = 0x7f030028
 
-.field public static final stitch_next_level_2_list_activity:I = 0x7f030029
+.field public static final shot_next_level_5_list_activity:I = 0x7f030029
 
-.field public static final stitch_next_level_3_list_activity:I = 0x7f03002a
+.field public static final small_list_activity:I = 0x7f03002a
 
-.field public static final stitch_next_level_4_list_activity:I = 0x7f03002b
+.field public static final special_scroll_activity:I = 0x7f03002b
 
-.field public static final stitch_next_level_5_list_activity:I = 0x7f03002c
+.field public static final stitch_next_level_2_list_activity:I = 0x7f03002c
 
-.field public static final strict_list_activity:I = 0x7f03002d
+.field public static final stitch_next_level_3_list_activity:I = 0x7f03002d
 
-.field public static final with_issue_report_activity:I = 0x7f03002e
+.field public static final stitch_next_level_4_list_activity:I = 0x7f03002e
+
+.field public static final stitch_next_level_5_list_activity:I = 0x7f03002f
+
+.field public static final strict_list_activity:I = 0x7f030030
+
+.field public static final with_issue_report_activity:I = 0x7f030031
 
 
 # direct methods

@@ -104,6 +104,7 @@
         <item>com.google.android.talk/com.google.android.apps.hangouts.phone.ConversationActivity</item>
         <item>com.android.dialer/com.oneplus.contacts.activities.OPDialtactsActivity</item>
         <item>com.qq.reader/com.qq.reader.activity.MainActivity</item>
+        <item>com.microsoft.teams/com.microsoft.skype.teams.views.activities.MainActivity</item>
     </string-array>
     <array name="ignore_full_match_list_activity" />
     <string-array name="keep_list_activity">
@@ -175,6 +176,11 @@
         <item>com.android.settings</item>
         <item>com.oneplus.gallery</item>
     </string-array>
+    <string-array name="override_match_threshold_list_2">
+        <item>com.microsoft.teams/com.microsoft.skype.teams.views.activities.ConversationThreadActivity</item>
+    </string-array>
+    <array name="override_match_threshold_list_3" />
+    <array name="override_match_threshold_list_4" />
     <string-array name="page_list_activity">
         <item>com.android.contacts/com.android.contacts.activities.PeopleActivity</item>
         <item>com.android.mms/com.android.mms.ui.ConversationList</item>

@@ -581,7 +581,9 @@
     goto :goto_5
 
     :cond_c
-    const/16 v7, 0x64
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getOverrideMatchThresholdValue()I
+
+    move-result v7
 
     :goto_5
     if-lt v6, v7, :cond_d

@@ -26,10 +26,14 @@
     <integer name="config_move_duration">400</integer>
     <integer name="config_move_keep_long">15</integer>
     <integer name="config_move_keep_short">10</integer>
+    <integer name="config_override_match_threshold_level_1">100</integer>
+    <integer name="config_override_match_threshold_level_2">95</integer>
+    <integer name="config_override_match_threshold_level_3">90</integer>
+    <integer name="config_override_match_threshold_level_4">85</integer>
     <integer name="config_percent_max">10000</integer>
     <integer name="config_percent_move_big_top">3000</integer>
     <integer name="config_percent_move_bottom">8000</integer>
-    <integer name="config_percent_move_higher_bottom">7000</integer>
+    <integer name="config_percent_move_higher_bottom">7500</integer>
     <integer name="config_percent_move_lower_bottom">8500</integer>
     <integer name="config_percent_move_lower_top">500</integer>
     <integer name="config_percent_move_small_bottom">7500</integer>
