@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field Woa:Z
+.field jpa:Z
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lorg/bouncycastle/crypto/wtn/you;->Woa:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/crypto/wtn/you;->jpa:Z
 
     return-void
 .end method
@@ -26,7 +26,7 @@
 .method public isPrivate()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/crypto/wtn/you;->Woa:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/crypto/wtn/you;->jpa:Z
 
     return p0
 .end method

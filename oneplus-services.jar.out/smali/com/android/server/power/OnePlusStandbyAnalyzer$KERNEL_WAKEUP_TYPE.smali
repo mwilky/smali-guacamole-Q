@@ -25,19 +25,19 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
-.field public static final enum Zha:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
-
-.field public static final enum _ha:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
-
-.field public static final enum aia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
-
-.field public static final enum bia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
-
-.field public static final enum cia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
-
-.field public static final enum dia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+.field public static final enum mia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
 .field public static final enum modem:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+
+.field public static final enum nia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+
+.field public static final enum oia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+
+.field public static final enum pia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+
+.field public static final enum qia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+
+.field public static final enum ria:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
 
 # instance fields
@@ -56,7 +56,7 @@
 
     invoke-direct {v0, v2, v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->Zha:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->mia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, v3, v2, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->_ha:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->nia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v0, v5, v4, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->aia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->oia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v0, v6, v5, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->bia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->pia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
@@ -106,7 +106,7 @@
 
     invoke-direct {v0, v7, v6, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->cia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->qia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
@@ -116,17 +116,17 @@
 
     invoke-direct {v0, v8, v7, v8}, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->dia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->ria:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
-    sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->Zha:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object v8, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->mia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     aput-object v8, v0, v1
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->_ha:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->nia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     aput-object v1, v0, v2
 
@@ -134,19 +134,19 @@
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->aia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->oia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->bia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->pia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->cia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->qia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->dia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->ria:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     aput-object v1, v0, v7
 
@@ -206,7 +206,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->dia:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
+    sget-object p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;->ria:Lcom/android/server/power/OnePlusStandbyAnalyzer$KERNEL_WAKEUP_TYPE;
 
     return-object p0
 .end method

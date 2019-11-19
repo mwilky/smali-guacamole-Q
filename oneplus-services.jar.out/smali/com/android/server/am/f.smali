@@ -16,19 +16,19 @@
 
 
 # static fields
-.field private static final MSG_GET_ONLINECONFIG:I = 0x1
+.field public static Ko:Z = true
 
-.field private static final Pu:Ljava/lang/String; = "DoFrameInBG"
+.field private static final MSG_GET_ONLINECONFIG:I = 0x1
 
 .field private static final SYSTEM_PROPERTIES:Ljava/lang/String; = "persist.sys.skipBGDoFrame"
 
 .field private static final TAG:Ljava/lang/String; = "OneplusPerfController"
 
-.field public static wo:Z = true
+.field private static final cv:Ljava/lang/String; = "DoFrameInBG"
 
 
 # instance fields
-.field private Ou:Landroid/os/HandlerThread;
+.field private bv:Landroid/os/HandlerThread;
 
 .field private mConfigObserver:Lcom/oneplus/config/ConfigObserver;
 
@@ -53,7 +53,7 @@
 
     iput-object v0, p0, Lcom/android/server/am/f;->mHandler:Landroid/os/Handler;
 
-    iput-object v0, p0, Lcom/android/server/am/f;->Ou:Landroid/os/HandlerThread;
+    iput-object v0, p0, Lcom/android/server/am/f;->bv:Landroid/os/HandlerThread;
 
     new-instance v0, Lcom/android/server/am/f$you;
 
@@ -136,7 +136,7 @@
 
     move-result v6
 
-    sput-boolean v6, Lcom/android/server/am/f;->wo:Z
+    sput-boolean v6, Lcom/android/server/am/f;->Ko:Z
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -148,7 +148,7 @@
     goto :goto_0
 
     :cond_2
-    sget-boolean p1, Lcom/android/server/am/f;->wo:Z
+    sget-boolean p1, Lcom/android/server/am/f;->Ko:Z
 
     if-eqz p1, :cond_3
 
@@ -167,7 +167,7 @@
     :goto_2
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean p0, Lcom/android/server/am/f;->wo:Z
+    sget-boolean p0, Lcom/android/server/am/f;->Ko:Z
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -212,7 +212,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    sget-boolean p1, Lcom/android/server/am/f;->wo:Z
+    sget-boolean p1, Lcom/android/server/am/f;->Ko:Z
 
     if-eqz p1, :cond_4
 
@@ -258,7 +258,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    sget-boolean p1, Lcom/android/server/am/f;->wo:Z
+    sget-boolean p1, Lcom/android/server/am/f;->Ko:Z
 
     if-eqz p1, :cond_5
 
@@ -280,7 +280,7 @@
     return-void
 
     :goto_6
-    sget-boolean v4, Lcom/android/server/am/f;->wo:Z
+    sget-boolean v4, Lcom/android/server/am/f;->Ko:Z
 
     if-eqz v4, :cond_6
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean p0, Lcom/android/server/am/f;->wo:Z
+    sget-boolean p0, Lcom/android/server/am/f;->Ko:Z
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 

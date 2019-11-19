@@ -40,7 +40,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
 
     move-result-object p0
 
@@ -229,7 +229,7 @@
         }
     .end annotation
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Upa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->hqa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -279,7 +279,7 @@
         }
     .end annotation
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Tpa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->gqa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 

@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public DE:I
+.field public VE:I
 
-.field public EE:I
-
-.field public iF:F
+.field public WE:I
 
 .field public mCount:I
 
 .field public mName:Ljava/lang/String;
+
+.field public wF:F
 
 
 # direct methods
@@ -36,9 +36,9 @@
 
     iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->mCount:I
 
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->DE:I
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->VE:I
 
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->EE:I
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->WE:I
 
     return-void
 .end method
@@ -52,9 +52,9 @@
 
     iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->mCount:I
 
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->DE:I
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->VE:I
 
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->EE:I
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->WE:I
 
     iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->mName:Ljava/lang/String;
 
@@ -72,17 +72,17 @@
 
     iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->mCount:I
 
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->DE:I
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->VE:I
 
-    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->EE:I
+    iput v0, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->WE:I
 
     iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->mName:Ljava/lang/String;
 
     iput p2, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->mCount:I
 
-    iput p3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->EE:I
+    iput p3, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->WE:I
 
-    iput p4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->DE:I
+    iput p4, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->VE:I
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->EE:I
+    iget v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->WE:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->DE:I
+    iget v1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$bvj;->VE:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

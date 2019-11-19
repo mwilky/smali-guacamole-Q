@@ -18,25 +18,25 @@
 
 .field public static final STATE_IDLE:I = 0x2
 
-.field public static final ah:I = -0x3e8
+.field public static final ph:I = -0x3e8
 
-.field public static final bh:I = 0x0
+.field public static final qh:I = 0x0
 
-.field public static final ch:I = 0x1
+.field public static final rh:I = 0x1
 
-.field public static final dh:I = 0x2
+.field public static final sh:I = 0x2
 
-.field public static final eh:I = 0x4
+.field public static final th:I = 0x4
 
-.field public static final fh:I = 0x8
+.field public static final uh:I = 0x8
 
-.field public static final gh:I = 0x10
+.field public static final vh:I = 0x10
 
-.field public static final hh:I = 0x20
+.field public static final wh:I = 0x20
 
-.field public static final ih:I = 0x40
+.field public static final xh:I = 0x40
 
-.field public static final jh:I = 0x80
+.field public static final yh:I = 0x80
 
 
 # direct methods
@@ -58,7 +58,30 @@
     return-void
 .end method
 
-.method public static cjf(I)Ljava/lang/String;
+.method public static cjf(I)I
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getHoldingFlag(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static ear(I)Ljava/lang/String;
     .locals 1
 
     if-eqz p0, :cond_2
@@ -91,168 +114,7 @@
     return-object p0
 .end method
 
-.method public static ear(I)Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->isApp(I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static getOwnerUid(I)I
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getOwnerUid(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static getPackageNameFromUid(I)Ljava/lang/String;
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getPackageNameFromUid(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static getProcState(I)I
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/16 p0, 0x14
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getProcState(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static getSensorName(I)Ljava/lang/String;
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getSensorName(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static getUidFromPackageName(Ljava/lang/String;)I
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getUidFromPackageName(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static getUidState(I)I
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getUidState(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static hmo(I)Ljava/lang/String;
+.method public static fto(I)Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -356,7 +218,176 @@
     return-object p0
 .end method
 
-.method public static ire(I)Z
+.method public static getOwnerUid(I)I
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getOwnerUid(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static getPackageNameFromUid(I)Ljava/lang/String;
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getPackageNameFromUid(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static getPackagesUsingFlag(I)Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getPackagesUsingFlag(I)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static getProcState(I)I
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/16 p0, 0x14
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getProcState(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static getSensorName(I)Ljava/lang/String;
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getSensorName(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static getUidFromPackageName(Ljava/lang/String;)I
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getUidFromPackageName(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static getUidState(I)I
+    .locals 1
+
+    sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/AppRecordManagerService;->getInstance()Lcom/android/server/am/AppRecordManagerService;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getUidState(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static hmo(I)Z
     .locals 2
 
     sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
@@ -380,7 +411,7 @@
     return v1
 .end method
 
-.method public static oxb(I)I
+.method public static ire(I)Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
@@ -396,7 +427,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->getHoldingFlag(I)I
+    invoke-virtual {v0, p0}, Lcom/android/server/am/AppRecordManagerService;->isApp(I)Z
 
     move-result p0
 

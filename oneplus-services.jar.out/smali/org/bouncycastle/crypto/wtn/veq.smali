@@ -8,9 +8,9 @@
 
 
 # instance fields
-.field private bza:Ljava/math/BigInteger;
-
 .field private modulus:Ljava/math/BigInteger;
+
+.field private pza:Ljava/math/BigInteger;
 
 
 # direct methods
@@ -60,7 +60,7 @@
 
     iput-object p2, p0, Lorg/bouncycastle/crypto/wtn/veq;->modulus:Ljava/math/BigInteger;
 
-    iput-object p3, p0, Lorg/bouncycastle/crypto/wtn/veq;->bza:Ljava/math/BigInteger;
+    iput-object p3, p0, Lorg/bouncycastle/crypto/wtn/veq;->pza:Ljava/math/BigInteger;
 
     return-void
 .end method
@@ -120,7 +120,7 @@
 .method public getExponent()Ljava/math/BigInteger;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/veq;->bza:Ljava/math/BigInteger;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/veq;->pza:Ljava/math/BigInteger;
 
     return-object p0
 .end method

@@ -14,43 +14,43 @@
 
 
 # static fields
-.field private static final AX:I = 0x2
-
-.field private static final BX:I = 0x4
+.field public static final CX:I = 0x2
 
 .field private static final DEBUG:Z
+
+.field public static final DX:I = 0x3
+
+.field public static final EX:I = -0x1
+
+.field private static final KX:Ljava/lang/String; = "/sys/bus/platform/devices/soc:tri_state_key/hall_data_calib"
+
+.field private static final LX:Ljava/lang/String; = "tri-state-key"
+
+.field private static final MX:Ljava/lang/String; = "soc:tri_state_key"
+
+.field private static final NX:I = 0x1
+
+.field private static final OX:I = 0x2
+
+.field private static final QX:I = 0x4
 
 .field public static final SWITCH_STATE_ON:I = 0x1
 
 .field private static final TAG:Ljava/lang/String; = "AlertSliderHw"
 
-.field private static final TU:Ljava/lang/String; = "/mnt/vendor/persist/engineermode/tri_state_hall_data"
-
-.field public static final oX:I = 0x2
-
-.field public static final pX:I = 0x3
-
-.field public static final qX:I = -0x1
-
-.field private static final wX:Ljava/lang/String; = "/sys/bus/platform/devices/soc:tri_state_key/hall_data_calib"
-
-.field private static final xX:Ljava/lang/String; = "tri-state-key"
-
-.field private static final yX:Ljava/lang/String; = "soc:tri_state_key"
-
-.field private static final zX:I = 0x1
+.field private static final gV:Ljava/lang/String; = "/mnt/vendor/persist/engineermode/tri_state_hall_data"
 
 
 # instance fields
+.field private GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+
+.field private HX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
+
+.field private IX:Lcom/oneplus/android/server/alertslider/zta;
+
+.field private JX:Landroid/os/PowerManager$WakeLock;
+
 .field private mContext:Landroid/content/Context;
-
-.field private sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
-
-.field private tX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
-
-.field private uX:Lcom/oneplus/android/server/alertslider/zta;
-
-.field private vX:Landroid/os/PowerManager$WakeLock;
 
 
 # direct methods
@@ -73,17 +73,17 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;-><init>(Lcom/oneplus/android/server/alertslider/AlertSliderHw;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iput-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     new-instance v0, Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;-><init>(Lcom/oneplus/android/server/alertslider/AlertSliderHw;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->tX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
+    iput-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->HX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
 
     iput-object p1, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->mContext:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->uX:Lcom/oneplus/android/server/alertslider/zta;
+    iput-object p2, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->IX:Lcom/oneplus/android/server/alertslider/zta;
 
     const-string p2, "power"
 
@@ -101,12 +101,12 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->vX:Landroid/os/PowerManager$WakeLock;
+    iput-object p1, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->JX:Landroid/os/PowerManager$WakeLock;
 
     return-void
 .end method
 
-.method private Ob(I)V
+.method private Qb(I)V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->mContext:Landroid/content/Context;
@@ -119,11 +119,11 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->uX:Lcom/oneplus/android/server/alertslider/zta;
+    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->IX:Lcom/oneplus/android/server/alertslider/zta;
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/oneplus/android/server/alertslider/sis;->y(I)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/android/server/alertslider/sis;->z(I)V
 
     :cond_0
     return-void
@@ -621,7 +621,7 @@
 .method static synthetic you(Lcom/oneplus/android/server/alertslider/AlertSliderHw;)Landroid/os/PowerManager$WakeLock;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->vX:Landroid/os/PowerManager$WakeLock;
+    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->JX:Landroid/os/PowerManager$WakeLock;
 
     return-object p0
 .end method
@@ -629,7 +629,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/alertslider/AlertSliderHw;)Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     return-object p0
 .end method
@@ -637,7 +637,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/alertslider/AlertSliderHw;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->Ob(I)V
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->Qb(I)V
 
     return-void
 .end method
@@ -652,7 +652,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object v0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     invoke-virtual {v0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;->checkSwitchExists()Z
 
@@ -660,7 +660,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->qe()Z
+    invoke-virtual {p0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->re()Z
 
     move-result v0
 
@@ -692,7 +692,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v10, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object v10, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     invoke-virtual {v10}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;->getSwitchStatePath()Ljava/lang/String;
 
@@ -787,7 +787,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object v3, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     invoke-virtual {v3}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;->getSwitchStatePath()Ljava/lang/String;
 
@@ -828,7 +828,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;->getSwitchStatePath()Ljava/lang/String;
 
@@ -854,7 +854,7 @@
 
     new-instance v4, Ljava/io/FileReader;
 
-    iget-object v5, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object v5, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     invoke-virtual {v5}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;->getSwitchStatePath()Ljava/lang/String;
 
@@ -895,7 +895,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->sX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
+    iget-object p0, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->GX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$you;->getSwitchStatePath()Ljava/lang/String;
 
@@ -932,7 +932,7 @@
 
     const-string v0, "AlertSliderHw"
 
-    iget-object v1, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->tX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
+    iget-object v1, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->HX:Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;
 
     invoke-virtual {v1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw$zta;->startMonitor()V
 
@@ -944,7 +944,7 @@
     .catch Lcom/oneplus/android/server/alertslider/AlertSliderHw$AlertSliderUnsupportException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v2, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->uX:Lcom/oneplus/android/server/alertslider/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->IX:Lcom/oneplus/android/server/alertslider/zta;
 
     invoke-virtual {v2, v1}, Lcom/oneplus/android/server/alertslider/zta;->init(I)V
     :try_end_1
@@ -962,7 +962,7 @@
 
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->uX:Lcom/oneplus/android/server/alertslider/zta;
+    iput-object v2, p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->IX:Lcom/oneplus/android/server/alertslider/zta;
 
     :goto_0
     const/4 v2, 0x3
@@ -978,7 +978,7 @@
     if-ne v1, v2, :cond_1
 
     :cond_0
-    invoke-direct {p0, v1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->Ob(I)V
+    invoke-direct {p0, v1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->Qb(I)V
 
     :cond_1
     const-string p0, "/mnt/vendor/persist/engineermode/tri_state_hall_data"
@@ -1073,7 +1073,7 @@
     return v1
 .end method
 
-.method public qe()Z
+.method public re()Z
     .locals 4
 
     sget-boolean p0, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->DEBUG:Z

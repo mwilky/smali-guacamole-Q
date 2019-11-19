@@ -101,7 +101,7 @@
 .method abstract isConstructed()Z
 .end method
 
-.method abstract lg()I
+.method abstract mg()I
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -109,13 +109,13 @@
     .end annotation
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
+.method ng()Lorg/bouncycastle/asn1/vdb;
     .locals 0
 
     return-object p0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method og()Lorg/bouncycastle/asn1/vdb;
     .locals 0
 
     return-object p0

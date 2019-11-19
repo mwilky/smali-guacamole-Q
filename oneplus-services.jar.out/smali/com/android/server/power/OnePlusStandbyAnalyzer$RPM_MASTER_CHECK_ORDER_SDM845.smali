@@ -25,13 +25,13 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
-.field public static final enum lja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+.field public static final enum Aja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
-.field public static final enum mja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+.field public static final enum Bja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
-.field public static final enum nja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+.field public static final enum Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
-.field public static final enum oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+.field public static final enum zja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
 
 # instance fields
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v2, v1, v1}, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->lja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->zja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
@@ -60,7 +60,7 @@
 
     invoke-direct {v0, v3, v2, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->mja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->Aja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
@@ -70,7 +70,7 @@
 
     invoke-direct {v0, v4, v3, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->nja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->Bja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
@@ -80,25 +80,25 @@
 
     invoke-direct {v0, v5, v4, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
-    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->lja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sget-object v5, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->zja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     aput-object v5, v0, v1
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->mja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->Aja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->nja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->Bja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->oja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;->Cja:Lcom/android/server/power/OnePlusStandbyAnalyzer$RPM_MASTER_CHECK_ORDER_SDM845;
 
     aput-object v1, v0, v4
 

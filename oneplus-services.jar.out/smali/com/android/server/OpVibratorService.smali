@@ -2176,7 +2176,7 @@
 
     const/4 p2, 0x0
 
-    invoke-direct {p1, p0, p2}, Lcom/android/server/OpVibratorService$zta;-><init>(Lcom/android/server/OpVibratorService;Lcom/android/server/g;)V
+    invoke-direct {p1, p0, p2}, Lcom/android/server/OpVibratorService$zta;-><init>(Lcom/android/server/OpVibratorService;Lcom/android/server/i;)V
 
     iput-object p1, p0, Lcom/android/server/OpVibratorService;->mConfigUpdater:Lcom/android/server/OpVibratorService$zta;
 

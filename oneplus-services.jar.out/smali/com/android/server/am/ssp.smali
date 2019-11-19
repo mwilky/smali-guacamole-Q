@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -62,7 +62,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-eqz p1, :cond_9
 
     const-string p1, "code"
 
@@ -82,10 +82,9 @@
 
     const/4 p1, 0x0
 
-    :goto_0
     invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$500(Lcom/android/server/am/AppRecordManagerService;Z)V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_0
     const-string p2, "dumpall"
@@ -94,13 +93,15 @@
 
     move-result p2
 
+    const/4 v0, 0x1
+
     if-eqz p2, :cond_1
 
     iget-object p0, p0, Lcom/android/server/am/ssp;->this$0:Lcom/android/server/am/AppRecordManagerService;
 
-    const/4 p1, 0x1
+    invoke-static {p0, v0}, Lcom/android/server/am/AppRecordManagerService;->access$500(Lcom/android/server/am/AppRecordManagerService;Z)V
 
-    goto :goto_0
+    goto/16 :goto_1
 
     :cond_1
     const-string p2, "dumpsensor"
@@ -115,7 +116,7 @@
 
     invoke-static {p0}, Lcom/android/server/am/AppRecordManagerService;->access$600(Lcom/android/server/am/AppRecordManagerService;)V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_2
     const-string p2, "dumplistener"
@@ -132,7 +133,7 @@
 
     invoke-virtual {p0}, Lcom/android/server/am/tsu;->dump()V
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_3
     const-string p2, "dumpisolated"
@@ -147,7 +148,7 @@
 
     invoke-static {p0}, Lcom/android/server/am/AppRecordManagerService;->access$700(Lcom/android/server/am/AppRecordManagerService;)V
 
-    goto :goto_2
+    goto/16 :goto_1
 
     :cond_4
     const-string p2, "debugall"
@@ -160,10 +161,10 @@
 
     const/4 p0, -0x1
 
-    :goto_1
+    :goto_0
     invoke-static {p0}, Lcom/android/server/am/AppRecordManagerService;->access$802(I)I
 
-    goto :goto_2
+    goto/16 :goto_1
 
     :cond_5
     const-string p2, "@"
@@ -172,7 +173,7 @@
 
     move-result p2
 
-    if-eqz p2, :cond_8
+    if-eqz p2, :cond_9
 
     const-string p2, "@dump@pkg@"
 
@@ -180,11 +181,11 @@
 
     move-result p2
 
-    const/16 v0, 0xa
+    const/16 v2, 0xa
 
     if-eqz p2, :cond_6
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -206,7 +207,7 @@
 
     invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$900(Lcom/android/server/am/AppRecordManagerService;Ljava/lang/String;)V
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_6
     const-string p2, "@dump@uid@"
@@ -219,7 +220,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/ssp;->this$0:Lcom/android/server/am/AppRecordManagerService;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -229,20 +230,20 @@
 
     invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$1000(Lcom/android/server/am/AppRecordManagerService;I)V
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_7
-    const-string p0, "@debug@"
+    const-string p2, "@debug@"
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result p0
+    move-result p2
 
-    if-eqz p0, :cond_8
+    const/4 v2, 0x7
 
-    const/4 p0, 0x7
+    if-eqz p2, :cond_8
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -250,9 +251,60 @@
 
     move-result p0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_8
-    :goto_2
+    const-string p2, "@using@"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_9
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    shl-int p1, v0, p1
+
+    iget-object p0, p0, Lcom/android/server/am/ssp;->this$0:Lcom/android/server/am/AppRecordManagerService;
+
+    invoke-virtual {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->getPackagesUsingFlag(I)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, " using "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->fto(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "# "
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_9
+    :goto_1
     return-void
 .end method

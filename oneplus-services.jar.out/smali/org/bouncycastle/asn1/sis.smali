@@ -7,13 +7,13 @@
 
 
 # static fields
-.field private static final Kka:[C
+.field private static final Yka:[C
 
 
 # instance fields
-.field protected final data:[B
+.field protected final Lna:I
 
-.field protected final xna:I
+.field protected final data:[B
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lorg/bouncycastle/asn1/sis;->Kka:[C
+    sput-object v0, Lorg/bouncycastle/asn1/sis;->Yka:[C
 
     return-void
 
@@ -89,7 +89,7 @@
 
     iput-object p1, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iput p2, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iput p2, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     return-void
 
@@ -112,7 +112,7 @@
     throw p0
 .end method
 
-.method protected static W(I)I
+.method protected static X(I)I
     .locals 3
 
     const/4 v0, 0x3
@@ -379,7 +379,7 @@
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     invoke-static {v0, p0}, Lorg/bouncycastle/asn1/sis;->tsu([BI)[B
 
@@ -391,7 +391,7 @@
 .method public getOctets()[B
     .locals 1
 
-    iget v0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget v0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     if-nez v0, :cond_0
 
@@ -446,7 +446,7 @@
 
     if-eq v1, v2, :cond_0
 
-    sget-object v2, Lorg/bouncycastle/asn1/sis;->Kka:[C
+    sget-object v2, Lorg/bouncycastle/asn1/sis;->Yka:[C
 
     aget-byte v3, p0, v1
 
@@ -458,7 +458,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    sget-object v2, Lorg/bouncycastle/asn1/sis;->Kka:[C
+    sget-object v2, Lorg/bouncycastle/asn1/sis;->Yka:[C
 
     aget-byte v3, p0, v1
 
@@ -510,7 +510,7 @@
 .method public hashCode()I
     .locals 1
 
-    iget v0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget v0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->getBytes()[B
 
@@ -530,7 +530,7 @@
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     const/4 v1, 0x4
 
@@ -574,38 +574,38 @@
     return v2
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
+.method ng()Lorg/bouncycastle/asn1/vdb;
     .locals 2
 
     new-instance v0, Lorg/bouncycastle/asn1/n;
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/n;-><init>([BI)V
 
     return-object v0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method og()Lorg/bouncycastle/asn1/vdb;
     .locals 2
 
     new-instance v0, Lorg/bouncycastle/asn1/U;
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/sis;->data:[B
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/U;-><init>([BI)V
 
     return-object v0
 .end method
 
-.method public pg()I
+.method public qg()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget p0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     return p0
 .end method
@@ -642,9 +642,9 @@
     :cond_0
     check-cast p1, Lorg/bouncycastle/asn1/sis;
 
-    iget v0, p0, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget v0, p0, Lorg/bouncycastle/asn1/sis;->Lna:I
 
-    iget v2, p1, Lorg/bouncycastle/asn1/sis;->xna:I
+    iget v2, p1, Lorg/bouncycastle/asn1/sis;->Lna:I
 
     if-ne v0, v2, :cond_1
 

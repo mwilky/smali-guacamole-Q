@@ -629,7 +629,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v1, v2}, Lcom/android/server/OpPowerControllerService$ssp;->bio(II)D
+    invoke-virtual {p1, v1, v2}, Lcom/android/server/OpPowerControllerService$ssp;->igw(II)D
 
     move-result-wide v5
 

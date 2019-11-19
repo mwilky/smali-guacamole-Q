@@ -12,43 +12,43 @@
 
 
 # static fields
+.field private static final AJ:I = 0x2
+
+.field private static final BJ:I = 0x3
+
+.field private static final CJ:Ljava/lang/String; = "imei"
+
+.field private static final DJ:Ljava/lang/String; = "rc4_key"
+
+.field private static final EJ:Ljava/lang/String; = "last_download_time"
+
+.field private static final FJ:Ljava/lang/String; = "encrypt_app"
+
+.field private static final GJ:Ljava/lang/String; = "encrypt_log"
+
+.field private static final HJ:Ljava/lang/String; = "encrypt_adb"
+
 .field private static final TAG:Ljava/lang/String; = "SecrecyService.SecrecyConfig"
-
-.field private static final lJ:I = 0x1
-
-.field private static final mJ:I = 0x2
-
-.field private static final nJ:I = 0x3
-
-.field private static final oJ:Ljava/lang/String; = "imei"
-
-.field private static final pJ:Ljava/lang/String; = "rc4_key"
-
-.field private static final qJ:Ljava/lang/String; = "last_download_time"
-
-.field private static final rJ:Ljava/lang/String; = "encrypt_app"
 
 .field private static sInstance:Lcom/android/server/secrecy/sis; = null
 
 .field private static final sInstanceLock:Ljava/lang/Object;
 
-.field private static final sJ:Ljava/lang/String; = "encrypt_log"
-
-.field private static final tJ:Ljava/lang/String; = "encrypt_adb"
+.field private static final zJ:I = 0x1
 
 
 # instance fields
-.field private final hJ:Ljava/lang/String;
-
-.field private final iJ:[B
-
-.field private jJ:[B
-
-.field private kJ:Ljava/lang/String;
-
 .field private mHandler:Landroid/os/Handler;
 
 .field private mPolicyManager:Lcom/android/server/secrecy/zta/sis;
+
+.field private final vJ:Ljava/lang/String;
+
+.field private final wJ:[B
+
+.field private xJ:[B
+
+.field private yJ:Ljava/lang/String;
 
 
 # direct methods
@@ -71,13 +71,13 @@
 
     const-string v0, "/mnt/vendor/persist/engineermode/engineermode_config"
 
-    iput-object v0, p0, Lcom/android/server/secrecy/sis;->hJ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/secrecy/sis;->vJ:Ljava/lang/String;
 
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/android/server/secrecy/sis;->iJ:[B
+    iput-object v0, p0, Lcom/android/server/secrecy/sis;->wJ:[B
 
     return-void
 .end method
@@ -172,7 +172,7 @@
     return-void
 .end method
 
-.method private Zn()V
+.method private _n()V
     .locals 13
 
     new-instance v0, Landroid/util/ArrayMap;
@@ -219,7 +219,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/android/server/secrecy/zta/zta/tsu;->Ad()Z
+    invoke-static {}, Lcom/android/server/secrecy/zta/zta/tsu;->Bd()Z
 
     move-result v1
 
@@ -238,7 +238,7 @@
     return-void
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/secrecy/sis;->_n()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/secrecy/sis;->ao()Ljava/lang/String;
 
     move-result-object v1
 
@@ -249,7 +249,7 @@
     :cond_1
     iget-object v6, p0, Lcom/android/server/secrecy/sis;->mPolicyManager:Lcom/android/server/secrecy/zta/sis;
 
-    invoke-virtual {v6}, Lcom/android/server/secrecy/zta/sis;->pd()Z
+    invoke-virtual {v6}, Lcom/android/server/secrecy/zta/sis;->qd()Z
 
     move-result v6
 
@@ -315,11 +315,11 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iput-object v1, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
-    iget-object v1, p0, Lcom/android/server/secrecy/sis;->iJ:[B
+    iget-object v1, p0, Lcom/android/server/secrecy/sis;->wJ:[B
 
-    iget-object v9, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iget-object v9, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
     invoke-static {v1, v9}, Landroid/secrecy/RC4;->mixSbox([B[B)V
     :try_end_3
@@ -336,7 +336,7 @@
 
     if-eqz v1, :cond_3
 
-    iput-object v1, p0, Lcom/android/server/secrecy/sis;->kJ:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/server/secrecy/sis;->yJ:Ljava/lang/String;
 
     :cond_3
     const-string v1, "encrypt_log"
@@ -494,7 +494,7 @@
     return-void
 .end method
 
-.method private _n()Ljava/lang/String;
+.method private ao()Ljava/lang/String;
     .locals 4
 
     new-instance p0, Ljava/io/File;
@@ -622,10 +622,10 @@
     throw p0
 .end method
 
-.method private ao()V
+.method private bo()V
     .locals 10
 
-    iget-object v0, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iget-object v0, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
     if-nez v0, :cond_0
 
@@ -657,7 +657,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Lcom/android/server/secrecy/zta/sis;->p(I)Z
+    invoke-virtual {v3, v4}, Lcom/android/server/secrecy/zta/sis;->q(I)Z
 
     move-result v3
 
@@ -665,7 +665,7 @@
 
     const/4 v5, 0x2
 
-    invoke-virtual {v4, v5}, Lcom/android/server/secrecy/zta/sis;->p(I)Z
+    invoke-virtual {v4, v5}, Lcom/android/server/secrecy/zta/sis;->q(I)Z
 
     move-result v4
 
@@ -673,13 +673,13 @@
 
     const/4 v6, 0x4
 
-    invoke-virtual {v5, v6}, Lcom/android/server/secrecy/zta/sis;->p(I)Z
+    invoke-virtual {v5, v6}, Lcom/android/server/secrecy/zta/sis;->q(I)Z
 
     move-result v5
 
     iget-object v6, p0, Lcom/android/server/secrecy/sis;->mPolicyManager:Lcom/android/server/secrecy/zta/sis;
 
-    invoke-virtual {v6}, Lcom/android/server/secrecy/zta/sis;->kd()Ljava/lang/Long;
+    invoke-virtual {v6}, Lcom/android/server/secrecy/zta/sis;->ld()Ljava/lang/Long;
 
     move-result-object v6
 
@@ -691,20 +691,20 @@
 
     move-result-object v6
 
-    iget-object v7, p0, Lcom/android/server/secrecy/sis;->kJ:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/server/secrecy/sis;->yJ:Ljava/lang/String;
 
     if-eqz v7, :cond_1
 
     const-string v7, "imei"
 
-    iget-object v8, p0, Lcom/android/server/secrecy/sis;->kJ:Ljava/lang/String;
+    iget-object v8, p0, Lcom/android/server/secrecy/sis;->yJ:Ljava/lang/String;
 
     invoke-virtual {v0, v7, v8}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     :cond_1
     const-string v7, "rc4_key"
 
-    iget-object v8, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iget-object v8, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
     invoke-static {v8}, Landroid/secrecy/RC4;->encodeHex([B)Ljava/lang/String;
 
@@ -862,7 +862,7 @@
 .method static synthetic sis(Lcom/android/server/secrecy/sis;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/secrecy/sis;->ao()V
+    invoke-direct {p0}, Lcom/android/server/secrecy/sis;->bo()V
 
     return-void
 .end method
@@ -878,7 +878,7 @@
 .method static synthetic zta(Lcom/android/server/secrecy/sis;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/secrecy/sis;->Zn()V
+    invoke-direct {p0}, Lcom/android/server/secrecy/sis;->_n()V
 
     return-void
 .end method
@@ -888,7 +888,7 @@
 .method public T(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/secrecy/sis;->kJ:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/secrecy/sis;->yJ:Ljava/lang/String;
 
     return-void
 .end method
@@ -900,7 +900,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iput-object p1, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
     return-void
 .end method
@@ -927,7 +927,7 @@
 .method public getSecrecyKey([B)Z
     .locals 2
 
-    iget-object p0, p0, Lcom/android/server/secrecy/sis;->iJ:[B
+    iget-object p0, p0, Lcom/android/server/secrecy/sis;->wJ:[B
 
     array-length v0, p0
 
@@ -943,7 +943,7 @@
 .method public oxb(J)Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iget-object v0, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
     if-nez v0, :cond_0
 
@@ -960,7 +960,7 @@
 
     new-array p2, p2, [B
 
-    iget-object p0, p0, Lcom/android/server/secrecy/sis;->iJ:[B
+    iget-object p0, p0, Lcom/android/server/secrecy/sis;->wJ:[B
 
     array-length v0, p0
 
@@ -1037,7 +1037,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/android/server/secrecy/sis;->jJ:[B
+    iget-object v0, p0, Lcom/android/server/secrecy/sis;->xJ:[B
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1057,7 +1057,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/android/server/secrecy/sis;->iJ:[B
+    iget-object v0, p0, Lcom/android/server/secrecy/sis;->wJ:[B
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1077,7 +1077,7 @@
 
     invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/secrecy/sis;->kJ:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/secrecy/sis;->yJ:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

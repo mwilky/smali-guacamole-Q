@@ -4,6 +4,12 @@
 
 
 # static fields
+.field private static final Ax:I = 0x6
+
+.field private static final Bx:I = 0x7
+
+.field private static final Cx:I = 0x2
+
 .field private static final HW_AUTH_PASSWORD:I = 0x1
 
 .field private static final KM_ERROR_INVALID_INPUT_LENGTH:I = -0x15
@@ -24,55 +30,49 @@
 
 .field private static final KM_TAG_USER_AUTH_TYPE:I = 0x1f8
 
-.field public static final Sw:I = 0x0
-
 .field static final TAG:Ljava/lang/String; = "KeyAttestationTest"
 
-.field public static final Tw:I = 0x1
+.field public static final fx:I = 0x0
 
-.field private static final Uw:I = 0xf4240
+.field public static final gx:I = 0x1
 
-.field private static final Vw:I = 0x1e8480
+.field private static final hx:I = 0xf4240
 
-.field private static final Ww:I = 0x9
+.field private static final ix:I = 0x1e8480
 
-.field private static final Xw:I = 0x0
+.field private static final jx:I = 0x9
 
-.field private static final Yw:I = 0x2
+.field private static final kx:I = 0x0
 
-.field private static final Zw:I = 0x3
+.field private static final lx:I = 0x2
 
-.field private static final _w:I = 0x1
+.field private static final mx:I = 0x3
 
-.field private static final ax:I = 0x2
-
-.field private static final bx:I = 0x3
-
-.field private static final cx:Ljava/util/regex/Pattern;
-
-.field private static final dx:I = 0x1
-
-.field private static final ex:I = 0x2
-
-.field private static final fx:Ljava/util/regex/Pattern;
-
-.field private static final gx:I = 0x6
-
-.field private static final hx:Ljava/lang/String; = "1.3.6.1.4.1.11129.2.1.17"
-
-.field private static final ix:I = 0x0
-
-.field private static final jx:I = 0x1
-
-.field private static final kx:I = 0x3
-
-.field private static final lx:I = 0x4
-
-.field private static final mx:I = 0x6
-
-.field private static final nx:I = 0x7
+.field private static final nx:I = 0x1
 
 .field private static final ox:I = 0x2
+
+.field private static final px:I = 0x3
+
+.field private static final qx:Ljava/util/regex/Pattern;
+
+.field private static final rx:I = 0x1
+
+.field private static final sx:I = 0x2
+
+.field private static final tx:Ljava/util/regex/Pattern;
+
+.field private static final ux:I = 0x6
+
+.field private static final vx:Ljava/lang/String; = "1.3.6.1.4.1.11129.2.1.17"
+
+.field private static final wx:I = 0x0
+
+.field private static final xx:I = 0x1
+
+.field private static final yx:I = 0x3
+
+.field private static final zx:I = 0x4
 
 
 # direct methods
@@ -111,7 +111,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/engineer/zta;->cx:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/android/server/engineer/zta;->qx:Ljava/util/regex/Pattern;
 
     const-string v0, "([0-9]{4})-([0-9]{2})-[0-9]{2}"
 
@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/engineer/zta;->fx:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/android/server/engineer/zta;->tx:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     return-void
 .end method
 
-.method private lb(I)Z
+.method private nb(I)Z
     .locals 1
 
     and-int/lit8 p0, p1, 0x2
@@ -155,7 +155,7 @@
     return v0
 .end method
 
-.method private mb(I)Z
+.method private ob(I)Z
     .locals 0
 
     and-int/lit8 p0, p1, 0x4
@@ -181,7 +181,7 @@
     return p0
 .end method
 
-.method private static nb(I)Ljava/lang/String;
+.method private static pb(I)Ljava/lang/String;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -702,7 +702,7 @@
     invoke-virtual {p2, v2}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setKeyValidityForConsumptionEnd(Ljava/util/Date;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
     :cond_0
-    invoke-direct {p0, p4}, Lcom/android/server/engineer/zta;->lb(I)Z
+    invoke-direct {p0, p4}, Lcom/android/server/engineer/zta;->nb(I)Z
 
     move-result p2
 
@@ -715,7 +715,7 @@
     invoke-virtual {v3, p2}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setRandomizedEncryptionRequired(Z)Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
     :cond_1
-    invoke-direct {p0, p4}, Lcom/android/server/engineer/zta;->mb(I)Z
+    invoke-direct {p0, p4}, Lcom/android/server/engineer/zta;->ob(I)Z
 
     move-result p2
 
@@ -1043,7 +1043,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p4}, Lcom/android/server/engineer/zta;->nb(I)Ljava/lang/String;
+    invoke-static {p4}, Lcom/android/server/engineer/zta;->pb(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1065,7 +1065,7 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3}, Lcom/android/server/engineer/zta;->nb(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/android/server/engineer/zta;->pb(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1260,7 +1260,7 @@
 
 
 # virtual methods
-.method public oc()V
+.method public pc()V
     .locals 21
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1399,7 +1399,7 @@
     return-void
 .end method
 
-.method public pc()V
+.method public qc()V
     .locals 17
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1482,7 +1482,7 @@
 
     aget v15, v5, v14
 
-    invoke-direct {v0, v15}, Lcom/android/server/engineer/zta;->lb(I)Z
+    invoke-direct {v0, v15}, Lcom/android/server/engineer/zta;->nb(I)Z
 
     move-result v16
 

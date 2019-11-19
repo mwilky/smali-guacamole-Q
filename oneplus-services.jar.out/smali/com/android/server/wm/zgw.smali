@@ -11,9 +11,9 @@
 
 .field private static final TAG:Ljava/lang/String;
 
-.field private static final kS:I = 0x499602d2
+.field private static final yS:I = 0x499602d2
 
-.field private static final lS:Ljava/lang/String; = "com.android.settings"
+.field private static final zS:Ljava/lang/String; = "com.android.settings"
 
 
 # direct methods
@@ -66,7 +66,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0, p2}, Lcom/android/server/wm/zgw;->u(I)I
+    invoke-virtual {p0, p2}, Lcom/android/server/wm/zgw;->v(I)I
 
     move-result v1
 
@@ -114,7 +114,7 @@
     return p0
 .end method
 
-.method u(I)I
+.method v(I)I
     .locals 0
 
     const p0, 0x499602d2

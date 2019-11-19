@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private permitted:[Lorg/bouncycastle/asn1/x509/oxb;
+.field private Fra:[Lorg/bouncycastle/asn1/x509/oxb;
 
-.field private rra:[Lorg/bouncycastle/asn1/x509/oxb;
+.field private permitted:[Lorg/bouncycastle/asn1/x509/oxb;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/oif;-><init>()V
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
 
     move-result-object p1
 
@@ -54,7 +54,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/veq;->rra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/veq;->Fra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     goto :goto_0
 
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/veq;->rra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/veq;->Fra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     return-void
 .end method
@@ -209,10 +209,10 @@
 
 
 # virtual methods
-.method public bi()[Lorg/bouncycastle/asn1/x509/oxb;
+.method public ci()[Lorg/bouncycastle/asn1/x509/oxb;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->rra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->Fra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     invoke-static {p0}, Lorg/bouncycastle/asn1/x509/veq;->you([Lorg/bouncycastle/asn1/x509/oxb;)[Lorg/bouncycastle/asn1/x509/oxb;
 
@@ -221,7 +221,7 @@
     return-object p0
 .end method
 
-.method public ci()[Lorg/bouncycastle/asn1/x509/oxb;
+.method public di()[Lorg/bouncycastle/asn1/x509/oxb;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->permitted:[Lorg/bouncycastle/asn1/x509/oxb;
@@ -257,7 +257,7 @@
     invoke-virtual {v0, v3}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_0
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->rra:[Lorg/bouncycastle/asn1/x509/oxb;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/veq;->Fra:[Lorg/bouncycastle/asn1/x509/oxb;
 
     if-eqz p0, :cond_1
 

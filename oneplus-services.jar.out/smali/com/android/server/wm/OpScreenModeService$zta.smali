@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field QT:I
+.field eU:I
 
-.field RT:I
+.field fU:I
 
-.field TT:[I
+.field gU:[I
 
 .field mode:Landroid/view/Display$Mode;
 
@@ -36,15 +36,15 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->QT:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->eU:I
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->RT:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->fU:I
 
     const/4 v0, 0x0
 
     new-array v1, v0, [I
 
-    iput-object v1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->TT:[I
+    iput-object v1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->gU:[I
 
     iput-object p2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->mode:Landroid/view/Display$Mode;
 
@@ -58,7 +58,7 @@
 
     if-ne v1, v3, :cond_0
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->RT:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->fU:I
 
     iget-object p1, p1, Lcom/android/server/wm/OpScreenModeService;->mContext:Landroid/content/Context;
 
@@ -73,7 +73,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->TT:[I
+    iput-object p1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->gU:[I
 
     goto :goto_1
 
@@ -86,7 +86,7 @@
 
     if-ne v1, v3, :cond_1
 
-    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->RT:I
+    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->fU:I
 
     iget-object p1, p1, Lcom/android/server/wm/OpScreenModeService;->mContext:Landroid/content/Context;
 
@@ -120,7 +120,7 @@
 
     if-gez p1, :cond_2
 
-    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->QT:I
+    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->eU:I
 
     goto :goto_2
 
@@ -143,7 +143,7 @@
 
     if-gez p1, :cond_3
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->QT:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->eU:I
 
     :cond_3
     :goto_2

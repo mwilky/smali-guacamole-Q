@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/wm/veq;->Hp()V
+    value = Lcom/android/server/wm/veq;->Ip()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -54,7 +54,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v0, Lcom/android/server/wm/veq;->TS:I
+    sget v0, Lcom/android/server/wm/veq;->hT:I
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -64,7 +64,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget p2, Lcom/android/server/wm/veq;->TS:I
+    sget p2, Lcom/android/server/wm/veq;->hT:I
 
     const/4 v0, 0x0
 
@@ -72,12 +72,12 @@
 
     if-ne p2, v1, :cond_0
 
-    sput v0, Lcom/android/server/wm/veq;->TS:I
+    sput v0, Lcom/android/server/wm/veq;->hT:I
 
     goto :goto_0
 
     :cond_0
-    sput v1, Lcom/android/server/wm/veq;->TS:I
+    sput v1, Lcom/android/server/wm/veq;->hT:I
 
     :goto_0
     iget-object p2, p0, Lcom/android/server/wm/hmo;->this$0:Lcom/android/server/wm/veq;
@@ -102,7 +102,7 @@
 
     const-string v1, "quickreply_ime_position"
 
-    sget v2, Lcom/android/server/wm/veq;->TS:I
+    sget v2, Lcom/android/server/wm/veq;->hT:I
 
     invoke-static {p2, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 

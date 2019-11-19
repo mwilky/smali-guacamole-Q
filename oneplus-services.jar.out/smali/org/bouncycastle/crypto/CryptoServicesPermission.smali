@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final nla:Ljava/lang/String; = "globalConfig"
+.field public static final Bla:Ljava/lang/String; = "globalConfig"
 
-.field public static final ola:Ljava/lang/String; = "threadLocalConfig"
+.field public static final Cla:Ljava/lang/String; = "threadLocalConfig"
 
-.field public static final pla:Ljava/lang/String; = "defaultRandomConfig"
+.field public static final Dla:Ljava/lang/String; = "defaultRandomConfig"
 
 
 # instance fields

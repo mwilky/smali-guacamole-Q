@@ -246,7 +246,7 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/m;->string:[C
@@ -255,7 +255,7 @@
 
     mul-int/lit8 v0, v0, 0x2
 
-    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 
@@ -300,7 +300,7 @@
 
     mul-int/lit8 v0, v0, 0x2
 
-    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/ugm;->Y(I)V
+    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/ugm;->Z(I)V
 
     const/4 v0, 0x0
 

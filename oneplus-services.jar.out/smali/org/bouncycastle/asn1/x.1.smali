@@ -287,14 +287,14 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/x;->string:[B
 
     array-length v0, v0
 
-    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 

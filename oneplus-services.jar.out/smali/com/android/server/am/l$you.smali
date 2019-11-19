@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public Wu:Ljava/util/ArrayList;
+.field public kv:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -25,11 +25,11 @@
     .end annotation
 .end field
 
-.field public Xu:Lcom/android/server/am/l$zta;
-
-.field public Yu:D
+.field public lv:Lcom/android/server/am/l$zta;
 
 .field public mId:I
+
+.field public mv:D
 
 
 # direct methods
@@ -44,43 +44,27 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/am/l$you;->Wu:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/android/server/am/l$you;->kv:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public cc()Lcom/android/server/am/l$zta;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/am/l$you;->Xu:Lcom/android/server/am/l$zta;
-
-    return-object p0
-.end method
-
 .method public clear()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/l$you;->Wu:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/l$you;->kv:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     return-void
 .end method
 
-.method public dc()Ljava/util/ArrayList;
+.method public dc()Lcom/android/server/am/l$zta;
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/android/server/am/l$bio;",
-            ">;"
-        }
-    .end annotation
 
-    iget-object p0, p0, Lcom/android/server/am/l$you;->Wu:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/l$you;->lv:Lcom/android/server/am/l$zta;
 
     return-object p0
 .end method
@@ -112,7 +96,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v2, p0, Lcom/android/server/am/l$you;->Xu:Lcom/android/server/am/l$zta;
+    iget-object v2, p0, Lcom/android/server/am/l$you;->lv:Lcom/android/server/am/l$zta;
 
     invoke-virtual {v2}, Lcom/android/server/am/l$zta;->dump()V
 
@@ -124,7 +108,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p0, Lcom/android/server/am/l$you;->Yu:D
+    iget-wide v3, p0, Lcom/android/server/am/l$you;->mv:D
 
     invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -138,7 +122,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/android/server/am/l$you;->Wu:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/l$you;->kv:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -167,6 +151,22 @@
     return-void
 .end method
 
+.method public ec()Ljava/util/ArrayList;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Lcom/android/server/am/l$bio;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Lcom/android/server/am/l$you;->kv:Ljava/util/ArrayList;
+
+    return-object p0
+.end method
+
 .method public getId()I
     .locals 0
 
@@ -186,7 +186,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lcom/android/server/am/l$you;->Wu:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/android/server/am/l$you;->kv:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -194,7 +194,7 @@
 .method public zta(Lcom/android/server/am/l$bio;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/l$you;->Wu:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/l$you;->kv:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -204,7 +204,7 @@
 .method public zta(Lcom/android/server/am/l$zta;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/l$you;->Xu:Lcom/android/server/am/l$zta;
+    iput-object p1, p0, Lcom/android/server/am/l$you;->lv:Lcom/android/server/am/l$zta;
 
     return-void
 .end method

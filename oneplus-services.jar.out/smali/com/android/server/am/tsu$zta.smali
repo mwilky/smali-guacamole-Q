@@ -59,7 +59,7 @@
 
     move-result-object p0
 
-    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->Gga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->Uga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {p0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -503,7 +503,7 @@
 
     move-result-object p0
 
-    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->Fga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v2, Lcom/android/server/am/AppRecordManager$ListenerType;->Tga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {p0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -943,7 +943,7 @@
     :cond_8
     iget v1, p1, Landroid/os/Message;->what:I
 
-    sget-object v3, Lcom/android/server/am/AppRecordManager$ListenerType;->Fga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v3, Lcom/android/server/am/AppRecordManager$ListenerType;->Tga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v3}, Lcom/android/server/am/AppRecordManager$ListenerType;->value()I
 
@@ -958,7 +958,7 @@
     :cond_9
     iget p1, p1, Landroid/os/Message;->what:I
 
-    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Gga:Lcom/android/server/am/AppRecordManager$ListenerType;
+    sget-object v1, Lcom/android/server/am/AppRecordManager$ListenerType;->Uga:Lcom/android/server/am/AppRecordManager$ListenerType;
 
     invoke-virtual {v1}, Lcom/android/server/am/AppRecordManager$ListenerType;->value()I
 

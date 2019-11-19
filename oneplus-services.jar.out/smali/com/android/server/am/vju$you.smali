@@ -48,10 +48,33 @@
     return-object v0
 .end method
 
-.method private hb(I)Z
+.method public static isDeliverDisplayChange(I)Z
+    .locals 1
+
+    const/16 v0, 0x2710
+
+    if-ge p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/am/vju$you;->getInstance()Lcom/android/server/am/vju$you;
+
+    move-result-object v0
+
+    invoke-direct {v0, p0}, Lcom/android/server/am/vju$you;->jb(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private jb(I)Z
     .locals 2
 
-    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ire(I)Z
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->hmo(I)Z
 
     move-result p0
 
@@ -118,27 +141,4 @@
 
     :cond_3
     return v0
-.end method
-
-.method public static isDeliverDisplayChange(I)Z
-    .locals 1
-
-    const/16 v0, 0x2710
-
-    if-ge p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/android/server/am/vju$you;->getInstance()Lcom/android/server/am/vju$you;
-
-    move-result-object v0
-
-    invoke-direct {v0, p0}, Lcom/android/server/am/vju$you;->hb(I)Z
-
-    move-result p0
-
-    return p0
 .end method

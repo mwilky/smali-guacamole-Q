@@ -6,11 +6,11 @@
 # static fields
 .field public static final FALSE:Lorg/bouncycastle/asn1/tsu;
 
-.field private static final Pna:[B
-
-.field private static final Qna:[B
-
 .field public static final TRUE:Lorg/bouncycastle/asn1/tsu;
+
+.field private static final coa:[B
+
+.field private static final doa:[B
 
 
 # instance fields
@@ -31,13 +31,13 @@
 
     aput-byte v3, v1, v2
 
-    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Pna:[B
+    sput-object v1, Lorg/bouncycastle/asn1/tsu;->coa:[B
 
     new-array v1, v0, [B
 
     aput-byte v2, v1, v2
 
-    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Qna:[B
+    sput-object v1, Lorg/bouncycastle/asn1/tsu;->doa:[B
 
     new-instance v1, Lorg/bouncycastle/asn1/tsu;
 
@@ -61,12 +61,12 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Pna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->coa:[B
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Qna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->doa:[B
 
     :goto_0
     iput-object p1, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
@@ -91,7 +91,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Qna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->doa:[B
 
     :goto_0
     iput-object p1, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
@@ -107,7 +107,7 @@
 
     if-ne v0, v1, :cond_1
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Pna:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->coa:[B
 
     goto :goto_0
 
@@ -383,7 +383,7 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 0
 
     const/4 p0, 0x3
@@ -391,7 +391,7 @@
     return p0
 .end method
 
-.method public qg()Z
+.method public rg()Z
     .locals 1
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/tsu;->value:[B

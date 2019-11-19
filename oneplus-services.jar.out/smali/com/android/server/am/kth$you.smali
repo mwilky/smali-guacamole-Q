@@ -68,7 +68,7 @@
 
     invoke-static {v0, p2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->oxb(I)I
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->cjf(I)I
 
     move-result p2
 

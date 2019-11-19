@@ -28,7 +28,7 @@
     return-void
 .end method
 
-.method private Os()[B
+.method private Ps()[B
     .locals 5
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/wtn;->time:[B
@@ -43,7 +43,7 @@
 
     if-ne v1, v2, :cond_5
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
 
     move-result v0
 
@@ -85,7 +85,7 @@
     return-object v2
 
     :cond_0
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->zg()Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->wg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
 
     move-result v0
 
@@ -192,16 +192,16 @@
 
 
 # virtual methods
-.method lg()I
+.method mg()I
     .locals 1
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Os()[B
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Ps()[B
 
     move-result-object p0
 
     array-length p0, p0
 
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 
@@ -220,7 +220,7 @@
         }
     .end annotation
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Os()[B
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Ps()[B
 
     move-result-object p0
 

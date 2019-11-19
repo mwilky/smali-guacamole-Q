@@ -154,7 +154,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/android/server/am/r;->nc()V
+    invoke-virtual {p1}, Lcom/android/server/am/r;->oc()V
 
     iget-object p0, p0, Lcom/android/server/am/gck;->this$0:Lcom/android/server/am/ywr;
 

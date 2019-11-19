@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public Fz:Ljava/lang/String;
+.field public Tz:Ljava/lang/String;
 
-.field public Gz:Ljava/lang/String;
+.field public Uz:Ljava/lang/String;
 
 .field public result:I
 
@@ -40,9 +40,9 @@
 
     iput p1, p0, Lcom/android/server/engineer/qbh$zta;->result:I
 
-    iput-object p2, p0, Lcom/android/server/engineer/qbh$zta;->Fz:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/server/engineer/qbh$zta;->Tz:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/android/server/engineer/qbh$zta;->Gz:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/engineer/qbh$zta;->Uz:Ljava/lang/String;
 
     return-void
 .end method

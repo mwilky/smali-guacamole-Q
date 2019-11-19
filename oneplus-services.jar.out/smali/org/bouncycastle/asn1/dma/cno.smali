@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private Coa:Z
+.field private Qoa:Z
 
 .field private content:Lorg/bouncycastle/asn1/ssp;
 
@@ -22,7 +22,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/dma/cno;->Coa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/dma/cno;->Qoa:Z
 
     iput-object p1, p0, Lorg/bouncycastle/asn1/dma/cno;->contentType:Lorg/bouncycastle/asn1/bvj;
 
@@ -38,9 +38,9 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/dma/cno;->Coa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/dma/cno;->Qoa:Z
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
     :cond_0
     instance-of p1, p1, Lorg/bouncycastle/asn1/d;
 
-    iput-boolean p1, p0, Lorg/bouncycastle/asn1/dma/cno;->Coa:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/asn1/dma/cno;->Qoa:Z
 
     return-void
 .end method
@@ -152,7 +152,7 @@
     invoke-virtual {v0, v2}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_0
-    iget-boolean p0, p0, Lorg/bouncycastle/asn1/dma/cno;->Coa:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/asn1/dma/cno;->Qoa:Z
 
     if-eqz p0, :cond_1
 

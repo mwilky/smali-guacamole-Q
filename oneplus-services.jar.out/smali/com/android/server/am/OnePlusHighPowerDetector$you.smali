@@ -15,13 +15,13 @@
 
 
 # instance fields
+.field public final Nq:I
+
 .field public final pid:I
 
 .field public pkgName:Ljava/lang/String;
 
 .field public final uid:I
-
-.field public final zq:I
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     iput-object p3, p0, Lcom/android/server/am/OnePlusHighPowerDetector$you;->pkgName:Ljava/lang/String;
 
-    iput p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$you;->zq:I
+    iput p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$you;->Nq:I
 
     return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final Sma:Ljava/util/Map;
+.field private static final fna:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static final Tma:Ljava/util/Map;
+.field private static final gna:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field private static final Uma:Ljava/util/Map;
+.field private static final hna:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -37,17 +37,17 @@
     .end annotation
 .end field
 
-.field private static final Vma:Ljava/util/Hashtable;
+.field private static final ina:Ljava/util/Hashtable;
 
-.field private static final Wma:Ljava/util/Hashtable;
+.field private static final jna:Ljava/util/Hashtable;
 
 
 # instance fields
-.field protected final Bka:Lorg/bouncycastle/crypto/dma;
+.field protected final Pka:Lorg/bouncycastle/crypto/dma;
 
-.field protected final Qma:Ljava/lang/String;
+.field protected final dna:Ljava/lang/String;
 
-.field protected Rma:[B
+.field protected ena:[B
 
 
 # direct methods
@@ -58,31 +58,31 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Sma:Ljava/util/Map;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->fna:Ljava/util/Map;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Vma:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ina:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
     const/16 v0, 0x40
 
@@ -108,191 +108,31 @@
 
     move-result-object v3
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     const-string v5, "DES"
 
     invoke-interface {v4, v5, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     const-string v6, "DESEDE"
 
     invoke-interface {v4, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     const-string v7, "BLOWFISH"
 
     invoke-interface {v4, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     const-string v7, "AES"
 
     invoke-interface {v4, v7, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->fKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->nKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->vKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->gKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->oKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->wKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->iKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->qKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->yKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->hKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->pKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->xKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->jKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->rKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->zKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
-
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->lKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v8, Lorg/bouncycastle/asn1/bio/you;->tKa:Lorg/bouncycastle/asn1/bvj;
 
@@ -300,9 +140,9 @@
 
     move-result-object v8
 
-    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v8, Lorg/bouncycastle/asn1/bio/you;->BKa:Lorg/bouncycastle/asn1/bvj;
 
@@ -310,11 +150,21 @@
 
     move-result-object v8
 
+    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->JKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
     invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->kKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->uKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -322,9 +172,9 @@
 
     invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->sKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->CKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -332,9 +182,9 @@
 
     invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->AKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->KKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -342,9 +192,9 @@
 
     invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/wtn/zta;->KLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->wKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -352,9 +202,9 @@
 
     invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/wtn/zta;->LLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->EKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -362,9 +212,9 @@
 
     invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/wtn/zta;->MLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->MKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -372,9 +222,9 @@
 
     invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v8, Lorg/bouncycastle/asn1/cno/zta;->_Ia:Lorg/bouncycastle/asn1/bvj;
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->vKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -382,7 +232,157 @@
 
     invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->DKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->LKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->xKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->FKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->NKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->zKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->HKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->PKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->yKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->GKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/bio/you;->OKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/wtn/zta;->YLa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/wtn/zta;->ZLa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/wtn/zta;->_La:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v4, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
+
+    sget-object v8, Lorg/bouncycastle/asn1/cno/zta;->nJa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v8}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-interface {v4, v8, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v4, Lorg/bouncycastle/asn1/dma/gwm;->id_alg_CMS3DESwrap:Lorg/bouncycastle/asn1/bvj;
 
@@ -392,7 +392,7 @@
 
     invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v4, Lorg/bouncycastle/asn1/dma/gwm;->des_EDE3_CBC:Lorg/bouncycastle/asn1/bvj;
 
@@ -402,9 +402,9 @@
 
     invoke-interface {v1, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
-    sget-object v2, Lorg/bouncycastle/asn1/gck/zta;->RLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v2, Lorg/bouncycastle/asn1/gck/zta;->eMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v2}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -412,7 +412,7 @@
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA1:Lorg/bouncycastle/asn1/bvj;
 
@@ -428,7 +428,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA256:Lorg/bouncycastle/asn1/bvj;
 
@@ -438,7 +438,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA384:Lorg/bouncycastle/asn1/bvj;
 
@@ -454,7 +454,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA512:Lorg/bouncycastle/asn1/bvj;
 
@@ -470,43 +470,43 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Sma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->fna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->des_EDE3_CBC:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v6, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Sma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->fna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->wKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->KKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v7, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Sma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->fna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->JLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->XLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v2, "CAMELLIA"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Sma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->fna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->XIa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->kJa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v2, "SEED"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Sma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->fna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->RLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->eMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v5, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->vJa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->JJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -516,9 +516,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->wJa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->KJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -528,9 +528,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->zJa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->NJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -540,19 +540,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->AJa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
-
-    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->BJa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->OJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -560,9 +550,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->CJa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->PJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -570,9 +560,19 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->QLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/kth/zta;->QJa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
+
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->dMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -580,19 +580,9 @@
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->RLa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
-
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->TLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->eMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -600,9 +590,9 @@
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->SLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->gMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -610,9 +600,19 @@
 
     invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->ULa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->fMa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
+
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->hMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -622,7 +622,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->des_EDE3_CBC:Lorg/bouncycastle/asn1/bvj;
 
@@ -632,7 +632,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_alg_CMS3DESwrap:Lorg/bouncycastle/asn1/bvj;
 
@@ -642,7 +642,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_alg_CMSRC2wrap:Lorg/bouncycastle/asn1/bvj;
 
@@ -654,7 +654,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA1:Lorg/bouncycastle/asn1/bvj;
 
@@ -666,7 +666,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA224:Lorg/bouncycastle/asn1/bvj;
 
@@ -678,7 +678,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA256:Lorg/bouncycastle/asn1/bvj;
 
@@ -690,7 +690,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA384:Lorg/bouncycastle/asn1/bvj;
 
@@ -702,7 +702,7 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA512:Lorg/bouncycastle/asn1/bvj;
 
@@ -714,9 +714,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->HLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->VLa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -726,19 +726,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->ILa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
-
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->JLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->WLa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -746,19 +736,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->KLa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
-
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->LLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->XLa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -766,9 +746,9 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->MLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->YLa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -776,9 +756,29 @@
 
     invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->_Ia:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->ZLa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
+
+    sget-object v1, Lorg/bouncycastle/asn1/wtn/zta;->_La:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
+
+    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->nJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -786,19 +786,9 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->XIa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
-
-    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->YIa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->kJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -806,9 +796,19 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->jKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/cno/zta;->lJa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
+
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->xKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -816,19 +816,9 @@
 
     invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->lKa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
-
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->lKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->zKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -836,35 +826,45 @@
 
     invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Vma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
+
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->zKa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ina:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->des_EDE3_CBC:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v6, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Vma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ina:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->wKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->KKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v7, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Vma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ina:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->RLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->eMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v5, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
     invoke-virtual {v0, v5, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
     invoke-virtual {v0, v6, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->RLa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->eMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v1}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -872,7 +872,7 @@
 
     invoke-virtual {v0, v1, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->des_EDE3_CBC:Lorg/bouncycastle/asn1/bvj;
 
@@ -882,7 +882,7 @@
 
     invoke-virtual {v0, v1, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_alg_CMS3DESwrap:Lorg/bouncycastle/asn1/bvj;
 
@@ -900,9 +900,9 @@
 
     invoke-direct {p0}, Ljavax/crypto/KeyAgreementSpi;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Qma:Ljava/lang/String;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->dna:Ljava/lang/String;
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Bka:Lorg/bouncycastle/crypto/dma;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Pka:Lorg/bouncycastle/crypto/dma;
 
     return-void
 .end method
@@ -972,7 +972,7 @@
     return-object p0
 
     :cond_0
-    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->eKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->sKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -989,7 +989,7 @@
     return-object p0
 
     :cond_1
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Uma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->hna:Ljava/util/Map;
 
     invoke-static {p0}, Lorg/bouncycastle/util/Strings;->toUpperCase(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1047,7 +1047,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -1060,7 +1060,7 @@
     return p0
 
     :cond_1
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Tma:Ljava/util/Map;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->gna:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1083,7 +1083,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Bka:Lorg/bouncycastle/crypto/dma;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Pka:Lorg/bouncycastle/crypto/dma;
 
     const/4 v1, 0x0
 
@@ -1097,15 +1097,15 @@
 
     new-instance p3, Lorg/bouncycastle/crypto/wtn/oxb;
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Rma:[B
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ena:[B
 
     invoke-direct {p3, p1, v0}, Lorg/bouncycastle/crypto/wtn/oxb;-><init>([B[B)V
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Bka:Lorg/bouncycastle/crypto/dma;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Pka:Lorg/bouncycastle/crypto/dma;
 
     invoke-interface {v0, p3}, Lorg/bouncycastle/crypto/dma;->zta(Lorg/bouncycastle/crypto/ywr;)V
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Bka:Lorg/bouncycastle/crypto/dma;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Pka:Lorg/bouncycastle/crypto/dma;
 
     array-length p3, p2
 
@@ -1157,7 +1157,7 @@
 
 
 # virtual methods
-.method protected abstract bg()[B
+.method protected abstract cg()[B
 .end method
 
 .method protected engineGenerateSecret([BI)I
@@ -1198,7 +1198,7 @@
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Qma:Ljava/lang/String;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->dna:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1235,7 +1235,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Vma:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ina:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
@@ -1243,7 +1243,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Vma:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->ina:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1265,7 +1265,7 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->bg()[B
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->cg()[B
 
     move-result-object v2
 
@@ -1277,7 +1277,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Wma:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->jna:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
@@ -1303,11 +1303,11 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Bka:Lorg/bouncycastle/crypto/dma;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->Pka:Lorg/bouncycastle/crypto/dma;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->bg()[B
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->cg()[B
 
     move-result-object v0
 
@@ -1340,7 +1340,7 @@
     throw v0
 
     :cond_0
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->bg()[B
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/zta;->cg()[B
 
     move-result-object p0
 

@@ -25,7 +25,7 @@
 
 
 # virtual methods
-.method public Cf()[B
+.method public Df()[B
     .locals 0
 
     iget-object p0, p0, Ljava/io/ByteArrayOutputStream;->buf:[B

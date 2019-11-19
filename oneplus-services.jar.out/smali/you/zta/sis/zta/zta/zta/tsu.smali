@@ -87,7 +87,7 @@
 
 
 # virtual methods
-.method public Pj()Lyou/zta/sis/zta/cno;
+.method public Qj()Lyou/zta/sis/zta/cno;
     .locals 1
 
     invoke-static {}, Lyou/zta/sis/sis/sis;->create()[I
@@ -105,7 +105,7 @@
     return-object p0
 .end method
 
-.method public Qj()Ljava/lang/String;
+.method public Rj()Ljava/lang/String;
     .locals 0
 
     const-string p0, "SecP192K1Field"
@@ -113,7 +113,7 @@
     return-object p0
 .end method
 
-.method public Rj()Z
+.method public Sj()Z
     .locals 0
 
     iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
@@ -125,7 +125,7 @@
     return p0
 .end method
 
-.method public Sj()Lyou/zta/sis/zta/cno;
+.method public Tj()Lyou/zta/sis/zta/cno;
     .locals 5
 
     iget-object v0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
@@ -260,7 +260,7 @@
     return-object p0
 .end method
 
-.method public Tj()Lyou/zta/sis/zta/cno;
+.method public Uj()Lyou/zta/sis/zta/cno;
     .locals 1
 
     invoke-static {}, Lyou/zta/sis/sis/sis;->create()[I
@@ -278,7 +278,7 @@
     return-object p0
 .end method
 
-.method public Uj()Z
+.method public Vj()Z
     .locals 2
 
     iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I

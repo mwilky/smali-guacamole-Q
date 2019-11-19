@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static final Kka:[C
+.field private static final Yka:[C
 
 
 # instance fields
@@ -24,7 +24,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lorg/bouncycastle/asn1/P;->Kka:[C
+    sput-object v0, Lorg/bouncycastle/asn1/P;->Yka:[C
 
     return-void
 
@@ -239,7 +239,7 @@
 
     if-eq v1, v2, :cond_0
 
-    sget-object v2, Lorg/bouncycastle/asn1/P;->Kka:[C
+    sget-object v2, Lorg/bouncycastle/asn1/P;->Yka:[C
 
     aget-byte v3, p0, v1
 
@@ -251,7 +251,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    sget-object v2, Lorg/bouncycastle/asn1/P;->Kka:[C
+    sget-object v2, Lorg/bouncycastle/asn1/P;->Yka:[C
 
     aget-byte v3, p0, v1
 
@@ -302,14 +302,14 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/P;->string:[B
 
     array-length v0, v0
 
-    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 

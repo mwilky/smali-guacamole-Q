@@ -8,17 +8,17 @@
 
 .field public static final MAX:I = 0x8
 
-.field public static final MEa:I = 0x2
-
-.field public static final NEa:I = 0x3
-
-.field public static final OEa:I = 0x4
-
-.field public static final PEa:I = 0x5
-
-.field public static final QEa:I = 0x6
-
 .field public static final SRGB:I = 0x7
+
+.field public static final _Ea:I = 0x2
+
+.field public static final aFa:I = 0x3
+
+.field public static final bFa:I = 0x4
+
+.field public static final cFa:I = 0x5
+
+.field public static final dFa:I = 0x6
 
 
 # direct methods

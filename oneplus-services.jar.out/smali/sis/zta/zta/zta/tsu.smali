@@ -10,11 +10,11 @@
 
 .field public static final MHL:I = 0x3
 
-.field public static final REa:I = 0x0
+.field public static final eFa:I = 0x0
 
-.field public static final SEa:I = 0x1
+.field public static final fFa:I = 0x1
 
-.field public static final TEa:I = 0x4
+.field public static final gFa:I = 0x4
 
 
 # direct methods

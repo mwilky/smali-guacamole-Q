@@ -59,7 +59,7 @@
 
     iget-object p0, p0, Lcom/android/server/policy/obl$zta;->this$0:Lcom/android/server/policy/obl;
 
-    iput-boolean v0, p0, Lcom/android/server/policy/obl;->ZC:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/obl;->mD:Z
 
     goto :goto_0
 
@@ -87,7 +87,7 @@
 
     iget-object p0, p0, Lcom/android/server/policy/obl$zta;->this$0:Lcom/android/server/policy/obl;
 
-    iget-object p0, p0, Lcom/android/server/policy/obl;->_C:Lcom/android/server/GestureLauncherService;
+    iget-object p0, p0, Lcom/android/server/policy/obl;->nD:Lcom/android/server/GestureLauncherService;
 
     const/4 p1, 0x1
 

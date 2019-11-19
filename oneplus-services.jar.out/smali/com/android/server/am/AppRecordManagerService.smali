@@ -396,7 +396,7 @@
 
     if-nez p1, :cond_1
 
-    invoke-virtual {v1}, Lcom/android/server/am/you;->oa()I
+    invoke-virtual {v1}, Lcom/android/server/am/you;->pa()I
 
     move-result v2
 
@@ -1318,7 +1318,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ma()I
+    invoke-virtual {p0}, Lcom/android/server/am/you;->na()I
 
     move-result p0
 
@@ -1367,6 +1367,102 @@
     return-object p0
 .end method
 
+.method public getPackagesUsingFlag(I)Ljava/util/ArrayList;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/android/server/am/AppRecordManagerService;->mAppRecordMap:Ljava/util/HashMap;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/am/AppRecordManagerService;->mAppRecordMap:Ljava/util/HashMap;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/android/server/am/AppRecordManagerService;->mAppRecordMap:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->size()I
+
+    move-result v1
+
+    if-gtz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object p0, p0, Lcom/android/server/am/AppRecordManagerService;->mAppRecordMap:Ljava/util/HashMap;
+
+    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_1
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/am/you;
+
+    invoke-virtual {v2}, Lcom/android/server/am/you;->na()I
+
+    move-result v3
+
+    and-int/2addr v3, p1
+
+    if-eqz v3, :cond_1
+
+    iget-object v2, v2, Lcom/android/server/am/you;->mPackageName:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_2
+    monitor-exit v0
+
+    return-object v1
+
+    :cond_3
+    :goto_1
+    const/4 p0, 0x0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
 .method public getProcState(I)I
     .locals 0
 
@@ -1374,7 +1470,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->na()I
+    invoke-virtual {p0}, Lcom/android/server/am/you;->oa()I
 
     move-result p0
 
@@ -1431,7 +1527,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->oa()I
+    invoke-virtual {p0}, Lcom/android/server/am/you;->pa()I
 
     move-result p0
 
@@ -1642,7 +1738,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->pa()Z
+    invoke-virtual {p0}, Lcom/android/server/am/you;->qa()Z
 
     move-result p0
 
@@ -1656,7 +1752,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->qa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ra()V
 
     return-void
 .end method
@@ -1668,7 +1764,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ra()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->sa()V
 
     return-void
 .end method
@@ -1752,7 +1848,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->sa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ta()V
 
     return-void
 .end method
@@ -1764,7 +1860,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ta()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ua()V
 
     return-void
 .end method
@@ -1792,7 +1888,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/you;->vdb(I)V
+    invoke-virtual {p0, p2}, Lcom/android/server/am/you;->zgw(I)V
 
     return-void
 .end method
@@ -1806,7 +1902,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ua()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->va()V
 
     :cond_0
     return-void
@@ -1819,7 +1915,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->va()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->wa()V
 
     return-void
 .end method
@@ -1831,7 +1927,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->wa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->xa()V
 
     return-void
 .end method
@@ -1843,7 +1939,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->xa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ya()V
 
     return-void
 .end method
@@ -1871,7 +1967,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/you;->zgw(I)V
+    invoke-virtual {p0, p2}, Lcom/android/server/am/you;->obl(I)V
 
     return-void
 .end method
@@ -1883,7 +1979,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ya()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->za()V
 
     return-void
 .end method
@@ -1895,7 +1991,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->za()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->Aa()V
 
     return-void
 .end method
@@ -1907,7 +2003,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->Aa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->Ba()V
 
     return-void
 .end method
@@ -2043,7 +2139,7 @@
     :cond_2
     iget p1, p1, Lcom/android/server/am/ProcessRecord;->pid:I
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/you;->obl(I)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/you;->oxb(I)V
 
     :goto_2
     monitor-exit v0
@@ -2316,11 +2412,11 @@
 .method public schedulePerformPoll()V
     .locals 0
 
-    invoke-static {}, Lcom/android/server/ugm;->getInstance()Lcom/android/server/ugm;
+    invoke-static {}, Lcom/android/server/zgw;->getInstance()Lcom/android/server/zgw;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/ugm;->schedulePerformPoll()V
+    invoke-virtual {p0}, Lcom/android/server/zgw;->schedulePerformPoll()V
 
     return-void
 .end method

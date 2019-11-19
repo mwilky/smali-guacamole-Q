@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private publicExponent:Ljava/math/BigInteger;
+.field private Gva:I
 
-.field private sva:I
+.field private publicExponent:Ljava/math/BigInteger;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/lqr;->publicExponent:Ljava/math/BigInteger;
 
-    iput p4, p0, Lorg/bouncycastle/crypto/wtn/lqr;->sva:I
+    iput p4, p0, Lorg/bouncycastle/crypto/wtn/lqr;->Gva:I
 
     return-void
 
@@ -57,7 +57,7 @@
 .method public getCertainty()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/lqr;->sva:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/lqr;->Gva:I
 
     return p0
 .end method

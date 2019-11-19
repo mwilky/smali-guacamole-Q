@@ -255,7 +255,7 @@
 
     if-gt p0, p1, :cond_b
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->qeg(I)I
+    invoke-static {p0}, Lcom/android/server/am/cgv;->ivd(I)I
 
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 

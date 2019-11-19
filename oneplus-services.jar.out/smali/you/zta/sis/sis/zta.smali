@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final TDa:J = 0x55555555L
+.field private static final gEa:J = 0x55555555L
 
-.field private static final UDa:J = 0x5555555555555555L
+.field private static final hEa:J = 0x5555555555555555L
 
-.field private static final VDa:J = -0x5555555555555556L
+.field private static final iEa:J = -0x5555555555555556L
 
 
 # direct methods
@@ -192,7 +192,7 @@
     return-wide p0
 .end method
 
-.method public static ra(I)I
+.method public static sa(I)I
     .locals 1
 
     const v0, 0xffff
@@ -234,7 +234,7 @@
     return p0
 .end method
 
-.method public static sa(I)J
+.method public static ta(I)J
     .locals 6
 
     ushr-int/lit8 v0, p0, 0x8
@@ -314,7 +314,7 @@
     return-wide v0
 .end method
 
-.method public static ta(I)I
+.method public static ua(I)I
     .locals 1
 
     and-int/lit16 p0, p0, 0xff
@@ -340,7 +340,7 @@
     return p0
 .end method
 
-.method public static ua(I)I
+.method public static va(I)I
     .locals 2
 
     ushr-int/lit8 v0, p0, 0x8
@@ -402,7 +402,7 @@
     return p0
 .end method
 
-.method public static va(I)I
+.method public static wa(I)I
     .locals 2
 
     ushr-int/lit8 v0, p0, 0x7
@@ -464,7 +464,7 @@
     return p0
 .end method
 
-.method public static wa(I)I
+.method public static xa(I)I
     .locals 2
 
     ushr-int/lit8 v0, p0, 0x1
@@ -526,7 +526,7 @@
     return p0
 .end method
 
-.method public static xa(I)I
+.method public static ya(I)I
     .locals 2
 
     ushr-int/lit8 v0, p0, 0x8

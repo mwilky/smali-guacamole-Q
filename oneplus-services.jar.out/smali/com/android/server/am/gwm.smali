@@ -34,7 +34,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    sget-boolean p1, Lcom/android/server/am/ugm;->Wi:Z
+    sget-boolean p1, Lcom/android/server/am/ugm;->kj:Z
 
     if-nez p1, :cond_0
 
@@ -120,7 +120,7 @@
     :cond_3
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -134,7 +134,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -145,7 +145,7 @@
     :cond_4
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -200,7 +200,7 @@
     :cond_7
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -215,7 +215,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p2, p1, v1, v2}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -266,7 +266,7 @@
     :cond_a
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -280,7 +280,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
@@ -291,7 +291,7 @@
     :cond_b
     iget-object p2, p0, Lcom/android/server/am/gwm;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 

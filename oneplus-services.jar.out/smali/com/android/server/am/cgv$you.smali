@@ -27,6 +27,14 @@
 
 
 # instance fields
+.field Lm:J
+
+.field Mm:J
+
+.field Nm:I
+
+.field Om:Ljava/lang/String;
+
 .field createTime:Ljava/lang/String;
 
 .field pkgName:Ljava/lang/String;
@@ -34,14 +42,6 @@
 .field final synthetic this$0:Lcom/android/server/am/cgv;
 
 .field uid:I
-
-.field wm:J
-
-.field xm:J
-
-.field ym:I
-
-.field zm:Ljava/lang/String;
 
 
 # direct methods
@@ -66,17 +66,17 @@
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->wm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Lm:J
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->xm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Mm:J
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/android/server/am/cgv$you;->ym:I
+    iput v0, p0, Lcom/android/server/am/cgv$you;->Nm:I
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/server/am/cgv$you;->zm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/am/cgv$you;->Om:Ljava/lang/String;
 
     monitor-enter p0
 
@@ -89,9 +89,9 @@
 
     iput-object v0, p0, Lcom/android/server/am/cgv$you;->pkgName:Ljava/lang/String;
 
-    iget-object p2, p2, Lcom/android/server/am/cgv$bio;->Pm:Ljava/lang/String;
+    iget-object p2, p2, Lcom/android/server/am/cgv$bio;->dn:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/android/server/am/cgv$you;->zm:Ljava/lang/String;
+    iput-object p2, p0, Lcom/android/server/am/cgv$you;->Om:Ljava/lang/String;
 
     invoke-static {p1}, Lcom/android/server/am/cgv;->rtg(Lcom/android/server/am/cgv;)Ljava/text/SimpleDateFormat;
 
@@ -115,7 +115,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/android/server/am/cgv$you;->wm:J
+    iput-wide p1, p0, Lcom/android/server/am/cgv$you;->Lm:J
 
     monitor-exit p0
 
@@ -160,17 +160,17 @@
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->wm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Lm:J
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->xm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Mm:J
 
     const/4 p1, 0x0
 
-    iput p1, p0, Lcom/android/server/am/cgv$you;->ym:I
+    iput p1, p0, Lcom/android/server/am/cgv$you;->Nm:I
 
     const-string p1, ""
 
-    iput-object p1, p0, Lcom/android/server/am/cgv$you;->zm:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/am/cgv$you;->Om:Ljava/lang/String;
 
     monitor-enter p2
 
@@ -187,21 +187,21 @@
 
     iput-object p1, p0, Lcom/android/server/am/cgv$you;->createTime:Ljava/lang/String;
 
-    iget-wide v0, p2, Lcom/android/server/am/cgv$you;->wm:J
+    iget-wide v0, p2, Lcom/android/server/am/cgv$you;->Lm:J
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->wm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Lm:J
 
-    iget-wide v0, p2, Lcom/android/server/am/cgv$you;->xm:J
+    iget-wide v0, p2, Lcom/android/server/am/cgv$you;->Mm:J
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->xm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Mm:J
 
-    iget p1, p2, Lcom/android/server/am/cgv$you;->ym:I
+    iget p1, p2, Lcom/android/server/am/cgv$you;->Nm:I
 
-    iput p1, p0, Lcom/android/server/am/cgv$you;->ym:I
+    iput p1, p0, Lcom/android/server/am/cgv$you;->Nm:I
 
-    iget-object p1, p2, Lcom/android/server/am/cgv$you;->zm:Ljava/lang/String;
+    iget-object p1, p2, Lcom/android/server/am/cgv$you;->Om:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/android/server/am/cgv$you;->zm:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/am/cgv$you;->Om:Ljava/lang/String;
 
     monitor-exit p2
 
@@ -225,15 +225,15 @@
     return-void
 .end method
 
-.method private Pa(I)V
+.method private Ra(I)V
     .locals 0
 
     monitor-enter p0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/am/cgv$you;->hm()V
+    invoke-direct {p0}, Lcom/android/server/am/cgv$you;->jm()V
 
-    iput p1, p0, Lcom/android/server/am/cgv$you;->ym:I
+    iput p1, p0, Lcom/android/server/am/cgv$you;->Nm:I
 
     monitor-exit p0
 
@@ -249,13 +249,13 @@
     throw p1
 .end method
 
-.method private hm()V
+.method private jm()V
     .locals 4
 
     monitor-enter p0
 
     :try_start_0
-    iget v0, p0, Lcom/android/server/am/cgv$you;->ym:I
+    iget v0, p0, Lcom/android/server/am/cgv$you;->Nm:I
 
     if-nez v0, :cond_0
 
@@ -263,11 +263,11 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/android/server/am/cgv$you;->wm:J
+    iget-wide v2, p0, Lcom/android/server/am/cgv$you;->Lm:J
 
     sub-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->xm:J
+    iput-wide v0, p0, Lcom/android/server/am/cgv$you;->Mm:J
 
     :cond_0
     monitor-exit p0
@@ -316,9 +316,9 @@
     return v0
 
     :cond_0
-    iget-wide v1, p0, Lcom/android/server/am/cgv$you;->wm:J
+    iget-wide v1, p0, Lcom/android/server/am/cgv$you;->Lm:J
 
-    iget-wide v3, p1, Lcom/android/server/am/cgv$you;->wm:J
+    iget-wide v3, p1, Lcom/android/server/am/cgv$you;->Lm:J
 
     cmp-long v1, v1, v3
 
@@ -341,7 +341,7 @@
 .method static synthetic zta(Lcom/android/server/am/cgv$you;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/am/cgv$you;->hm()V
+    invoke-direct {p0}, Lcom/android/server/am/cgv$you;->jm()V
 
     return-void
 .end method
@@ -349,7 +349,7 @@
 .method static synthetic zta(Lcom/android/server/am/cgv$you;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/am/cgv$you;->Pa(I)V
+    invoke-direct {p0, p1}, Lcom/android/server/am/cgv$you;->Ra(I)V
 
     return-void
 .end method
@@ -392,23 +392,23 @@
     monitor-enter p0
 
     :try_start_0
-    iget v0, p0, Lcom/android/server/am/cgv$you;->ym:I
+    iget v0, p0, Lcom/android/server/am/cgv$you;->Nm:I
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/am/cgv$you;->hm()V
+    invoke-direct {p0}, Lcom/android/server/am/cgv$you;->jm()V
 
     :cond_0
-    iget v0, p1, Lcom/android/server/am/cgv$you;->ym:I
+    iget v0, p1, Lcom/android/server/am/cgv$you;->Nm:I
 
     if-nez v0, :cond_1
 
-    invoke-direct {p1}, Lcom/android/server/am/cgv$you;->hm()V
+    invoke-direct {p1}, Lcom/android/server/am/cgv$you;->jm()V
 
     :cond_1
-    iget-wide v0, p0, Lcom/android/server/am/cgv$you;->xm:J
+    iget-wide v0, p0, Lcom/android/server/am/cgv$you;->Mm:J
 
-    iget-wide v2, p1, Lcom/android/server/am/cgv$you;->xm:J
+    iget-wide v2, p1, Lcom/android/server/am/cgv$you;->Mm:J
 
     cmp-long v0, v0, v2
 
@@ -421,9 +421,9 @@
     return p1
 
     :cond_2
-    iget-wide v0, p0, Lcom/android/server/am/cgv$you;->xm:J
+    iget-wide v0, p0, Lcom/android/server/am/cgv$you;->Mm:J
 
-    iget-wide v2, p1, Lcom/android/server/am/cgv$you;->xm:J
+    iget-wide v2, p1, Lcom/android/server/am/cgv$you;->Mm:J
 
     cmp-long p1, v0, v2
 

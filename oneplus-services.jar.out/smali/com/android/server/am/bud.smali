@@ -264,7 +264,7 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/android/server/am/les;->e(I)I
+    invoke-static {p1}, Lcom/android/server/am/les;->f(I)I
 
     iget-object p0, p0, Lcom/android/server/am/bud;->this$0:Lcom/android/server/am/les;
 

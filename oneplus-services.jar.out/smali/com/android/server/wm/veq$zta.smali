@@ -15,25 +15,25 @@
 
 
 # static fields
-.field static final H:I = 0x1
+.field static final ca:I = 0x1
 
-.field static final J:I = 0x2
+.field static final da:I = 0x2
 
-.field static final W:I = 0x3
+.field static final ea:I = 0x3
 
-.field static final aa:I = 0x4
+.field static final fa:I = 0x4
 
-.field static final ba:I = 0x5
+.field static final ga:I = 0x5
 
-.field static final ca:I = 0x6
+.field static final ha:I = 0x6
 
-.field static final da:I = 0x7
+.field static final ia:I = 0x7
 
-.field static final ea:I = 0x8
+.field static final ja:I = 0x8
 
-.field static final fa:I = 0x9
+.field static final ka:I = 0x9
 
-.field static final ga:I = 0xa
+.field static final la:I = 0xa
 
 
 # instance fields
@@ -139,7 +139,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/veq$zta;->this$0:Lcom/android/server/wm/veq;
 
-    iget-object v0, p1, Lcom/android/server/wm/veq;->JS:Landroid/view/View;
+    iget-object v0, p1, Lcom/android/server/wm/veq;->_S:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
@@ -274,7 +274,7 @@
 
     iget-object v0, p0, Lcom/android/server/wm/veq$zta;->this$0:Lcom/android/server/wm/veq;
 
-    iget-object v0, v0, Lcom/android/server/wm/veq;->IS:Landroid/view/View;
+    iget-object v0, v0, Lcom/android/server/wm/veq;->ZS:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

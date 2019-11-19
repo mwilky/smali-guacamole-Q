@@ -19,7 +19,7 @@
 
 .field public mPkgName:Ljava/lang/String;
 
-.field public nf:Ljava/lang/String;
+.field public zf:Ljava/lang/String;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     const-string v0, "0"
 
-    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->nf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->zf:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->mPkgName:Ljava/lang/String;
 
@@ -60,13 +60,13 @@
 
     const-string v0, "0"
 
-    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->nf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->zf:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->mPkgName:Ljava/lang/String;
 
     iput p2, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->mPerfLock:I
 
-    iput-object p3, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->nf:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->zf:Ljava/lang/String;
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->nf:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager$you;->zf:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

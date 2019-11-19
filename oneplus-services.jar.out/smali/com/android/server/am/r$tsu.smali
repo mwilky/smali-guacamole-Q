@@ -144,7 +144,7 @@
 
     if-nez v6, :cond_0
 
-    invoke-virtual {v7}, Lcom/android/server/am/qbh;->Ja()Z
+    invoke-virtual {v7}, Lcom/android/server/am/qbh;->Ka()Z
 
     move-result v6
 

@@ -1,4 +1,4 @@
-.class Lcom/android/server/ire$zta;
+.class Lcom/android/server/fto$zta;
 .super Ljava/lang/Object;
 .source ""
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/ire;
+    value = Lcom/android/server/fto;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/server/ire;
+.field final synthetic this$0:Lcom/android/server/fto;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/ire;)V
+.method constructor <init>(Lcom/android/server/fto;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/ire$zta;->this$0:Lcom/android/server/ire;
+    iput-object p1, p0, Lcom/android/server/fto$zta;->this$0:Lcom/android/server/fto;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,7 +37,7 @@
 .method public updateConfig(Lorg/json/JSONArray;)V
     .locals 2
 
-    invoke-static {}, Lcom/android/server/ire;->access$300()Z
+    invoke-static {}, Lcom/android/server/fto;->access$300()Z
 
     move-result v0
 
@@ -50,9 +50,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/ire$zta;->this$0:Lcom/android/server/ire;
+    iget-object p0, p0, Lcom/android/server/fto$zta;->this$0:Lcom/android/server/fto;
 
-    invoke-static {p0, p1}, Lcom/android/server/ire;->zta(Lcom/android/server/ire;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/fto;->zta(Lcom/android/server/fto;Lorg/json/JSONArray;)V
 
     return-void
 .end method

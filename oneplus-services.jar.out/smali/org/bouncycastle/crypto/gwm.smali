@@ -131,7 +131,7 @@
 
 
 # virtual methods
-.method public abstract ca(I)Lorg/bouncycastle/crypto/kth;
+.method public abstract da(I)Lorg/bouncycastle/crypto/kth;
 .end method
 
 .method public abstract generateDerivedParameters(I)Lorg/bouncycastle/crypto/kth;
@@ -161,7 +161,7 @@
     return-object p0
 .end method
 
-.method public abstract ibl(II)Lorg/bouncycastle/crypto/kth;
+.method public abstract gwm(II)Lorg/bouncycastle/crypto/kth;
 .end method
 
 .method public zta([B[BI)V

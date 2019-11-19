@@ -21,7 +21,7 @@
 
 .field public mTimeout:I
 
-.field public nf:Ljava/lang/String;
+.field public zf:Ljava/lang/String;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     const-string v0, "0"
 
-    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->nf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->zf:Ljava/lang/String;
 
     invoke-static {}, Lcom/android/server/wm/OnePlusPerfManager;->access$000()I
 
@@ -52,7 +52,7 @@
 
     iput p2, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->mMode:I
 
-    iput-object p3, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->nf:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->zf:Ljava/lang/String;
 
     iput p4, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->mTimeout:I
 
@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method public Sd()V
+.method public Td()V
     .locals 1
 
     const-string v0, ""
@@ -74,7 +74,7 @@
 
     const-string v0, "0"
 
-    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->nf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->zf:Ljava/lang/String;
 
     invoke-static {}, Lcom/android/server/wm/OnePlusPerfManager;->access$000()I
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->nf:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->zf:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -140,9 +140,9 @@
 
     iput v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->mMode:I
 
-    iget-object v0, p1, Lcom/android/server/wm/OnePlusPerfManager$rtg;->nf:Ljava/lang/String;
+    iget-object v0, p1, Lcom/android/server/wm/OnePlusPerfManager$rtg;->zf:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->nf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/wm/OnePlusPerfManager$rtg;->zf:Ljava/lang/String;
 
     iget p1, p1, Lcom/android/server/wm/OnePlusPerfManager$rtg;->mTimeout:I
 

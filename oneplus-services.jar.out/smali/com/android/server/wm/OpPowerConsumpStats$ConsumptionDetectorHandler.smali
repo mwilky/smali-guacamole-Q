@@ -294,7 +294,7 @@
 
     move-result-object v12
 
-    iput-object v12, v0, Lcom/android/server/wm/OpPowerConsumpStats$gck;->bP:Ljava/lang/String;
+    iput-object v12, v0, Lcom/android/server/wm/OpPowerConsumpStats$gck;->qP:Ljava/lang/String;
 
     iget-object v0, v1, Lcom/android/server/wm/OpPowerConsumpStats$ConsumptionDetectorHandler;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
@@ -306,7 +306,7 @@
 
     move-result-wide v12
 
-    iput-wide v12, v0, Lcom/android/server/wm/OpPowerConsumpStats$gck;->cP:J
+    iput-wide v12, v0, Lcom/android/server/wm/OpPowerConsumpStats$gck;->rP:J
 
     iget-object v0, v1, Lcom/android/server/wm/OpPowerConsumpStats$ConsumptionDetectorHandler;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 

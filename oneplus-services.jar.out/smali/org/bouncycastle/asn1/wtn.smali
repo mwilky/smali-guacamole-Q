@@ -144,7 +144,7 @@
     return-void
 .end method
 
-.method private Ns()Ljava/lang/String;
+.method private Os()Ljava/lang/String;
     .locals 6
 
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
@@ -232,7 +232,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v4}, Lorg/bouncycastle/asn1/wtn;->ec(I)Ljava/lang/String;
+    invoke-direct {p0, v4}, Lorg/bouncycastle/asn1/wtn;->gc(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -242,7 +242,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v1}, Lorg/bouncycastle/asn1/wtn;->ec(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lorg/bouncycastle/asn1/wtn;->gc(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -255,7 +255,7 @@
     return-object p0
 .end method
 
-.method private ec(I)Ljava/lang/String;
+.method private gc(I)Ljava/lang/String;
     .locals 1
 
     const/16 p0, 0xa
@@ -473,7 +473,7 @@
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->wg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
 
     move-result v2
 
@@ -490,7 +490,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->zg()Z
 
     move-result v2
 
@@ -507,7 +507,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
 
     move-result v2
 
@@ -562,7 +562,7 @@
     goto :goto_4
 
     :cond_4
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->wg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
 
     move-result v1
 
@@ -582,7 +582,7 @@
     goto :goto_3
 
     :cond_5
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->zg()Z
 
     move-result v1
 
@@ -599,7 +599,7 @@
     goto :goto_2
 
     :cond_6
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
 
     move-result v1
 
@@ -649,7 +649,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->wg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
 
     move-result v2
 
@@ -666,7 +666,7 @@
     goto :goto_5
 
     :cond_9
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->zg()Z
 
     move-result v2
 
@@ -683,7 +683,7 @@
     goto :goto_5
 
     :cond_a
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
 
     move-result v2
 
@@ -716,7 +716,7 @@
     goto/16 :goto_1
 
     :goto_6
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->wg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
 
     move-result p0
 
@@ -986,7 +986,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lorg/bouncycastle/asn1/wtn;->Ns()Ljava/lang/String;
+    invoke-direct {p0}, Lorg/bouncycastle/asn1/wtn;->Os()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1087,14 +1087,14 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 1
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/wtn;->time:[B
 
     array-length p0, p0
 
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 
@@ -1105,7 +1105,7 @@
     return v0
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
+.method ng()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/v;
@@ -1117,7 +1117,7 @@
     return-object v0
 .end method
 
-.method public vg()Ljava/lang/String;
+.method public wg()Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/wtn;->time:[B
@@ -1129,7 +1129,7 @@
     return-object p0
 .end method
 
-.method protected wg()Z
+.method protected xg()Z
     .locals 4
 
     const/4 v0, 0x0
@@ -1166,7 +1166,7 @@
     return v0
 .end method
 
-.method protected xg()Z
+.method protected yg()Z
     .locals 1
 
     const/16 v0, 0xa
@@ -1196,7 +1196,7 @@
     return p0
 .end method
 
-.method protected yg()Z
+.method protected zg()Z
     .locals 1
 
     const/16 v0, 0xc

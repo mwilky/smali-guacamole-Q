@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field final synthetic Vb:I
+.field final synthetic _b:I
 
-.field final synthetic Wb:I
+.field final synthetic ac:I
 
-.field final synthetic Xb:I
+.field final synthetic bc:I
 
 .field final synthetic this$0:Lcom/android/server/OnePlusExService;
 
@@ -41,11 +41,11 @@
 
     iput-object p3, p0, Lcom/android/server/wtn;->val$context:Landroid/content/Context;
 
-    iput p4, p0, Lcom/android/server/wtn;->Vb:I
+    iput p4, p0, Lcom/android/server/wtn;->_b:I
 
-    iput p5, p0, Lcom/android/server/wtn;->Wb:I
+    iput p5, p0, Lcom/android/server/wtn;->ac:I
 
-    iput p6, p0, Lcom/android/server/wtn;->Xb:I
+    iput p6, p0, Lcom/android/server/wtn;->bc:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,11 +67,11 @@
 
     iget-object v2, p0, Lcom/android/server/wtn;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {v2}, Lcom/android/server/OnePlusExService;->access$800(Lcom/android/server/OnePlusExService;)[I
+    invoke-static {v2}, Lcom/android/server/OnePlusExService;->access$900(Lcom/android/server/OnePlusExService;)[I
 
     move-result-object v2
 
-    iget v3, p0, Lcom/android/server/wtn;->Vb:I
+    iget v3, p0, Lcom/android/server/wtn;->_b:I
 
     aget v2, v2, v3
 
@@ -87,7 +87,7 @@
 
     iget-object v2, p0, Lcom/android/server/wtn;->val$n:Landroid/app/Notification$Builder;
 
-    invoke-static {v0, v1, v2}, Lcom/android/server/OnePlusExService;->access$900(Lcom/android/server/OnePlusExService;Landroid/content/Context;Landroid/app/Notification$Builder;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/OnePlusExService;->access$1000(Lcom/android/server/OnePlusExService;Landroid/content/Context;Landroid/app/Notification$Builder;)V
 
     iget-object v0, p0, Lcom/android/server/wtn;->val$n:Landroid/app/Notification$Builder;
 
@@ -97,17 +97,17 @@
 
     iget-object v1, p0, Lcom/android/server/wtn;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {v1}, Lcom/android/server/OnePlusExService;->access$1000(Lcom/android/server/OnePlusExService;)Landroid/app/NotificationManager;
+    invoke-static {v1}, Lcom/android/server/OnePlusExService;->access$1100(Lcom/android/server/OnePlusExService;)Landroid/app/NotificationManager;
 
     move-result-object v1
 
-    iget v2, p0, Lcom/android/server/wtn;->Wb:I
+    iget v2, p0, Lcom/android/server/wtn;->ac:I
 
     invoke-virtual {v1, v2, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    iget v0, p0, Lcom/android/server/wtn;->Vb:I
+    iget v0, p0, Lcom/android/server/wtn;->_b:I
 
-    iget v5, p0, Lcom/android/server/wtn;->Xb:I
+    iget v5, p0, Lcom/android/server/wtn;->bc:I
 
     add-int/lit8 v1, v5, -0x1
 
@@ -119,14 +119,14 @@
 
     iget-object v3, p0, Lcom/android/server/wtn;->val$context:Landroid/content/Context;
 
-    iget v4, p0, Lcom/android/server/wtn;->Wb:I
+    iget v4, p0, Lcom/android/server/wtn;->ac:I
 
     :goto_0
-    invoke-static {v1}, Lcom/android/server/OnePlusExService;->access$1100(Lcom/android/server/OnePlusExService;)Landroid/app/Notification$Builder;
+    invoke-static {v1}, Lcom/android/server/OnePlusExService;->access$1200(Lcom/android/server/OnePlusExService;)Landroid/app/Notification$Builder;
 
     move-result-object v6
 
-    invoke-static/range {v1 .. v6}, Lcom/android/server/OnePlusExService;->access$1200(Lcom/android/server/OnePlusExService;ILandroid/content/Context;IILandroid/app/Notification$Builder;)V
+    invoke-static/range {v1 .. v6}, Lcom/android/server/OnePlusExService;->access$1300(Lcom/android/server/OnePlusExService;ILandroid/content/Context;IILandroid/app/Notification$Builder;)V
 
     goto :goto_1
 
@@ -137,7 +137,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {v0}, Lcom/android/server/OnePlusExService;->access$1300(Lcom/android/server/OnePlusExService;)I
+    invoke-static {v0}, Lcom/android/server/OnePlusExService;->access$1400(Lcom/android/server/OnePlusExService;)I
 
     move-result v0
 
@@ -147,7 +147,7 @@
 
     iget-object v0, p0, Lcom/android/server/wtn;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {v0}, Lcom/android/server/OnePlusExService;->access$1400(Lcom/android/server/OnePlusExService;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/OnePlusExService;->access$1500(Lcom/android/server/OnePlusExService;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -162,9 +162,9 @@
 
     iget-object v3, p0, Lcom/android/server/wtn;->val$context:Landroid/content/Context;
 
-    iget v4, p0, Lcom/android/server/wtn;->Wb:I
+    iget v4, p0, Lcom/android/server/wtn;->ac:I
 
-    iget v5, p0, Lcom/android/server/wtn;->Xb:I
+    iget v5, p0, Lcom/android/server/wtn;->bc:I
 
     goto :goto_0
 

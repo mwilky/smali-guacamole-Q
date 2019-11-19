@@ -8,9 +8,9 @@
 
 
 # instance fields
-.field params:Lorg/bouncycastle/crypto/wtn/ibl;
+.field Kka:Ljava/security/SecureRandom;
 
-.field wka:Ljava/security/SecureRandom;
+.field params:Lorg/bouncycastle/crypto/wtn/ibl;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method protected Ui()Lyou/zta/sis/zta/bio;
+.method protected Vi()Lyou/zta/sis/zta/bio;
     .locals 0
 
     new-instance p0, Lyou/zta/sis/zta/dma;
@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lorg/bouncycastle/crypto/ssp/bio;->params:Lorg/bouncycastle/crypto/wtn/ibl;
 
-    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/ibl;->zi()Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/ibl;->Ai()Ljava/math/BigInteger;
 
     move-result-object v0
 
@@ -51,13 +51,13 @@
 
     :cond_0
     :goto_0
-    iget-object v3, p0, Lorg/bouncycastle/crypto/ssp/bio;->wka:Ljava/security/SecureRandom;
+    iget-object v3, p0, Lorg/bouncycastle/crypto/ssp/bio;->Kka:Ljava/security/SecureRandom;
 
     invoke-static {v1, v3}, Lorg/bouncycastle/util/you;->zta(ILjava/security/SecureRandom;)Ljava/math/BigInteger;
 
     move-result-object v3
 
-    sget-object v4, Lyou/zta/sis/zta/sis;->Zma:Ljava/math/BigInteger;
+    sget-object v4, Lyou/zta/sis/zta/sis;->mna:Ljava/math/BigInteger;
 
     invoke-virtual {v3, v4}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
@@ -83,7 +83,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p0}, Lorg/bouncycastle/crypto/ssp/bio;->Ui()Lyou/zta/sis/zta/bio;
+    invoke-virtual {p0}, Lorg/bouncycastle/crypto/ssp/bio;->Vi()Lyou/zta/sis/zta/bio;
 
     move-result-object v0
 
@@ -121,27 +121,27 @@
 
     check-cast p1, Lorg/bouncycastle/crypto/wtn/gwm;
 
-    invoke-virtual {p1}, Lorg/bouncycastle/crypto/bvj;->Qi()Ljava/security/SecureRandom;
+    invoke-virtual {p1}, Lorg/bouncycastle/crypto/bvj;->Ri()Ljava/security/SecureRandom;
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/ssp/bio;->wka:Ljava/security/SecureRandom;
+    iput-object v0, p0, Lorg/bouncycastle/crypto/ssp/bio;->Kka:Ljava/security/SecureRandom;
 
-    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/gwm;->cg()Lorg/bouncycastle/crypto/wtn/ibl;
+    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/gwm;->dg()Lorg/bouncycastle/crypto/wtn/ibl;
 
     move-result-object p1
 
     iput-object p1, p0, Lorg/bouncycastle/crypto/ssp/bio;->params:Lorg/bouncycastle/crypto/wtn/ibl;
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/ssp/bio;->wka:Ljava/security/SecureRandom;
+    iget-object p1, p0, Lorg/bouncycastle/crypto/ssp/bio;->Kka:Ljava/security/SecureRandom;
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lorg/bouncycastle/crypto/igw;->Pi()Ljava/security/SecureRandom;
+    invoke-static {}, Lorg/bouncycastle/crypto/igw;->Qi()Ljava/security/SecureRandom;
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/ssp/bio;->wka:Ljava/security/SecureRandom;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/ssp/bio;->Kka:Ljava/security/SecureRandom;
 
     :cond_0
     return-void

@@ -18,7 +18,7 @@
 
 .field public static final TAG:Ljava/lang/String; = "OPGPS"
 
-.field private static dc:Ljava/util/List; = null
+.field private static lc:Ljava/util/List; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -28,15 +28,21 @@
     .end annotation
 .end field
 
-.field private static final ec:I = 0x1
+.field private static mAms:Lcom/android/server/am/ActivityManagerService; = null
 
-.field private static final fc:I = 0x2
+.field private static mInstance:Lcom/android/server/dma; = null
 
-.field private static final gc:I = 0x2710
+.field private static mPms:Landroid/content/pm/IPackageManager; = null
 
-.field private static final hc:I = 0x7d0
+.field private static final mc:I = 0x1
 
-.field private static ic:Ljava/util/ArrayList; = null
+.field private static final nc:I = 0x2
+
+.field private static final oc:I = 0x2710
+
+.field private static final pc:I = 0x7d0
+
+.field private static qc:Ljava/util/ArrayList; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -46,23 +52,17 @@
     .end annotation
 .end field
 
-.field private static final jc:I = 0x0
+.field private static final rc:I = 0x0
 
-.field private static final kc:I = 0x55d4a80
+.field private static final sc:I = 0x55d4a80
 
-.field private static final lc:I = 0x5f5e100
-
-.field private static mAms:Lcom/android/server/am/ActivityManagerService;
-
-.field private static mInstance:Lcom/android/server/dma;
-
-.field private static mPms:Landroid/content/pm/IPackageManager;
+.field private static final tc:I = 0x5f5e100
 
 
 # instance fields
-.field private Yb:Landroid/os/Handler;
+.field private fc:Landroid/os/Handler;
 
-.field private Zb:Ljava/util/ArrayList;
+.field private gc:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -72,7 +72,7 @@
     .end annotation
 .end field
 
-.field private _b:Ljava/util/ArrayList;
+.field private hc:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -82,7 +82,7 @@
     .end annotation
 .end field
 
-.field private ac:Ljava/util/ArrayList;
+.field private ic:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -92,9 +92,9 @@
     .end annotation
 .end field
 
-.field private bc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
+.field private jc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
 
-.field private cc:Ljava/lang/Object;
+.field private kc:Ljava/lang/Object;
 
 .field private mProviders:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -132,13 +132,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sput-object v0, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/server/dma;->qc:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
@@ -154,25 +154,25 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/dma;->ac:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/android/server/OnePlusGPSFreezer$1;
 
@@ -192,12 +192,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/dma$zta;-><init>(Lcom/android/server/dma;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method private Aa(I)V
+.method private Ba(I)V
     .locals 3
 
     sget-boolean v0, Lcom/android/server/dma;->DEBUG:Z
@@ -245,7 +245,7 @@
     return-void
 .end method
 
-.method private Ba(I)I
+.method private Ca(I)I
     .locals 0
 
     const p0, 0x55d4a80
@@ -272,7 +272,7 @@
     return p1
 .end method
 
-.method private Ca(I)I
+.method private Da(I)I
     .locals 0
 
     const p0, 0x55d4a80
@@ -297,16 +297,16 @@
     return p1
 .end method
 
-.method private Da(I)Z
+.method private Ea(I)Z
     .locals 3
 
-    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ear(I)Z
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->ire(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -318,7 +318,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -330,7 +330,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object p0, p0, Lcom/android/server/dma;->ac:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -369,14 +369,14 @@
 
     move-result-object p0
 
-    sget-object v1, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v1, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     monitor-enter v1
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    sget-object v2, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v2, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     invoke-interface {v2, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -431,7 +431,7 @@
     return p0
 .end method
 
-.method private Ea(I)V
+.method private Fa(I)V
     .locals 2
 
     sget-boolean v0, Lcom/android/server/dma;->DEBUG:Z
@@ -490,7 +490,7 @@
 .method static synthetic access$500()Ljava/util/List;
     .locals 1
 
-    sget-object v0, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v0, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     return-object v0
 .end method
@@ -530,29 +530,6 @@
     throw v1
 .end method
 
-.method private static gwm(II)I
-    .locals 1
-
-    const v0, 0x55d4a80
-
-    if-le p0, v0, :cond_0
-
-    const v0, 0x186a0
-
-    mul-int/2addr p1, v0
-
-    sub-int/2addr p0, p1
-
-    return p0
-
-    :cond_0
-    mul-int/lit8 p0, p0, 0x64
-
-    add-int/2addr p0, p1
-
-    return p0
-.end method
-
 .method private gwm(IZ)V
     .locals 2
 
@@ -589,7 +566,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-direct {p0, p1}, Lcom/android/server/dma;->Da(I)Z
+    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ea(I)Z
 
     move-result v1
 
@@ -602,7 +579,7 @@
     :cond_1
     if-nez p2, :cond_2
 
-    iget-object p2, p0, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iget-object p2, p0, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -614,7 +591,7 @@
 
     if-nez p2, :cond_2
 
-    iget-object p2, p0, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iget-object p2, p0, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -626,7 +603,7 @@
 
     if-nez p2, :cond_2
 
-    iget-object p2, p0, Lcom/android/server/dma;->ac:Ljava/util/ArrayList;
+    iget-object p2, p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -638,9 +615,9 @@
 
     if-nez p2, :cond_2
 
-    iget-object p2, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p2, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p1, v0}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p1, v0}, Lcom/android/server/dma;->ugm(II)I
 
     move-result v0
 
@@ -652,19 +629,19 @@
 
     if-eqz p2, :cond_2
 
-    iget-object p2, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p2, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
     const/4 v0, 0x2
 
-    invoke-static {p1, v0}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p1, v0}, Lcom/android/server/dma;->ugm(II)I
 
     move-result v1
 
     invoke-virtual {p2, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object p2, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p2, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p1, v0}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p1, v0}, Lcom/android/server/dma;->ugm(II)I
 
     move-result p1
 
@@ -676,7 +653,7 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -688,7 +665,7 @@
 .method public static isBlockedGpsUid(I)Z
     .locals 1
 
-    sget-object v0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/server/dma;->qc:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -704,7 +681,7 @@
 .method static synthetic rtg(Lcom/android/server/dma;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/dma;->Aa(I)V
+    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ba(I)V
 
     return-void
 .end method
@@ -712,7 +689,7 @@
 .method static synthetic sis(Lcom/android/server/dma;I)I
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ca(I)I
+    invoke-direct {p0, p1}, Lcom/android/server/dma;->Da(I)I
 
     move-result p0
 
@@ -722,7 +699,7 @@
 .method static synthetic sis(Lcom/android/server/dma;)Ljava/util/ArrayList;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/dma;->ac:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -769,9 +746,9 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p2, v1}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p2, v1}, Lcom/android/server/dma;->ugm(II)I
 
     move-result v1
 
@@ -783,17 +760,17 @@
 
     if-nez p1, :cond_2
 
-    iget-object p1, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p2, v2}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p2, v2}, Lcom/android/server/dma;->ugm(II)I
 
     move-result v1
 
     invoke-virtual {p1, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object p1, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p2, v2}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p2, v2}, Lcom/android/server/dma;->ugm(II)I
 
     move-result p2
 
@@ -801,16 +778,16 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
     const-wide/16 v0, 0x2710
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p2, v2}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p2, v2}, Lcom/android/server/dma;->ugm(II)I
 
     move-result v2
 
@@ -822,17 +799,17 @@
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p2, v1}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p2, v1}, Lcom/android/server/dma;->ugm(II)I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    iget-object p1, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p1, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
-    invoke-static {p2, v1}, Lcom/android/server/dma;->gwm(II)I
+    invoke-static {p2, v1}, Lcom/android/server/dma;->ugm(II)I
 
     move-result p2
 
@@ -840,7 +817,7 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/server/dma;->Yb:Landroid/os/Handler;
+    iget-object p0, p0, Lcom/android/server/dma;->fc:Landroid/os/Handler;
 
     const-wide/16 v0, 0x7d0
 
@@ -854,9 +831,32 @@
 .method static synthetic tsu(Lcom/android/server/dma;I)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/dma;->Da(I)Z
+    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ea(I)Z
 
     move-result p0
+
+    return p0
+.end method
+
+.method private static ugm(II)I
+    .locals 1
+
+    const v0, 0x55d4a80
+
+    if-le p0, v0, :cond_0
+
+    const v0, 0x186a0
+
+    mul-int/2addr p1, v0
+
+    sub-int/2addr p0, p1
+
+    return p0
+
+    :cond_0
+    mul-int/lit8 p0, p0, 0x64
+
+    add-int/2addr p0, p1
 
     return p0
 .end method
@@ -866,7 +866,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/dma;->vdb(IZ)V
 
-    iget-object p2, p0, Lcom/android/server/dma;->cc:Ljava/lang/Object;
+    iget-object p2, p0, Lcom/android/server/dma;->kc:Ljava/lang/Object;
 
     if-nez p2, :cond_0
 
@@ -908,7 +908,7 @@
 
     if-ne v3, p1, :cond_1
 
-    sget-object v0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/server/dma;->qc:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -949,7 +949,7 @@
 
     check-cast v0, Lcom/android/server/LocationManagerService$LocationProvider;
 
-    iget-object v1, p0, Lcom/android/server/dma;->bc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
+    iget-object v1, p0, Lcom/android/server/dma;->jc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
 
     invoke-virtual {v1, v0}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->applyRequirementsInnerLocked(Lcom/android/server/LocationManagerService$LocationProvider;)V
 
@@ -1018,7 +1018,7 @@
 
     if-eqz v0, :cond_7
 
-    invoke-static {p0}, Lcom/android/server/am/AppRecordManager;->ear(I)Z
+    invoke-static {p0}, Lcom/android/server/am/AppRecordManager;->ire(I)Z
 
     move-result v0
 
@@ -1032,12 +1032,12 @@
 
     if-eqz p3, :cond_1
 
-    iget-object p2, p2, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     goto :goto_0
 
     :cond_1
-    iget-object p2, p2, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     :goto_0
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1049,7 +1049,7 @@
     :cond_2
     if-eqz p3, :cond_3
 
-    iget-object p2, p2, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1063,12 +1063,12 @@
 
     sget-object p2, Lcom/android/server/dma;->mInstance:Lcom/android/server/dma;
 
-    iget-object p2, p2, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     goto :goto_2
 
     :cond_3
-    iget-object p2, p2, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1082,14 +1082,14 @@
 
     sget-object p2, Lcom/android/server/dma;->mInstance:Lcom/android/server/dma;
 
-    iget-object p2, p2, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     goto :goto_2
 
     :cond_4
     sget-object p2, Lcom/android/server/dma;->mInstance:Lcom/android/server/dma;
 
-    iget-object p2, p2, Lcom/android/server/dma;->ac:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1111,7 +1111,7 @@
 
     sget-object p2, Lcom/android/server/dma;->mInstance:Lcom/android/server/dma;
 
-    iget-object p2, p2, Lcom/android/server/dma;->ac:Ljava/util/ArrayList;
+    iget-object p2, p2, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
 
     :goto_2
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1133,7 +1133,7 @@
 .method private vdb(IZ)V
     .locals 0
 
-    sget-object p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
+    sget-object p0, Lcom/android/server/dma;->qc:Ljava/util/ArrayList;
 
     if-eqz p2, :cond_0
 
@@ -1143,7 +1143,7 @@
 
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    sget-object p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
+    sget-object p0, Lcom/android/server/dma;->qc:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1167,7 +1167,7 @@
 .method static synthetic you(Lcom/android/server/dma;I)I
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ba(I)I
+    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ca(I)I
 
     move-result p0
 
@@ -1177,7 +1177,7 @@
 .method static synthetic you(Lcom/android/server/dma;)Ljava/util/ArrayList;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/dma;->Zb:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/dma;->gc:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -1193,16 +1193,16 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v0, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v1, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    sget-object v1, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v1, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     invoke-interface {v1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -1220,7 +1220,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcom/android/server/dma;->dc:Ljava/util/List;
+    sget-object v2, Lcom/android/server/dma;->lc:Ljava/util/List;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1248,7 +1248,7 @@
 .method static synthetic zta(Lcom/android/server/dma;)Ljava/util/ArrayList;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/dma;->_b:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/dma;->hc:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -1266,7 +1266,7 @@
 .method static synthetic zta(Lcom/android/server/dma;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/dma;->Ea(I)V
+    invoke-direct {p0, p1}, Lcom/android/server/dma;->Fa(I)V
 
     return-void
 .end method
@@ -1284,13 +1284,13 @@
 .method public initFromLMS(Lcom/android/server/LocationManagerService;Lcom/android/server/LocationManagerService$LocationManagerServiceInner;)V
     .locals 0
 
-    iput-object p2, p0, Lcom/android/server/dma;->bc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
+    iput-object p2, p0, Lcom/android/server/dma;->jc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
 
     invoke-virtual {p2}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getLock()Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/dma;->cc:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/android/server/dma;->kc:Ljava/lang/Object;
 
     invoke-virtual {p2}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getReceivers()Ljava/util/HashMap;
 
@@ -1308,7 +1308,7 @@
 
     move-result-object p0
 
-    sput-object p0, Lcom/android/server/dma;->ic:Ljava/util/ArrayList;
+    sput-object p0, Lcom/android/server/dma;->qc:Ljava/util/ArrayList;
 
     return-void
 .end method

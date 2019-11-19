@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final uza:S = 0x0s
+.field public static final Iza:S = 0x0s
 
-.field public static final vza:S = 0x1s
+.field public static final Jza:S = 0x1s
 
-.field public static final wza:S = 0x2s
+.field public static final Kza:S = 0x2s
 
 
 # direct methods

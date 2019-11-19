@@ -96,7 +96,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/Double;->compareTo(Ljava/lang/Double;)I
+    invoke-virtual {p1, p0}, Ljava/lang/Double;->compareTo(Ljava/lang/Double;)I
 
     move-result p0
 

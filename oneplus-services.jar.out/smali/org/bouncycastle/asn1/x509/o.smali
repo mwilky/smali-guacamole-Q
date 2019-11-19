@@ -4,33 +4,21 @@
 
 
 # static fields
-.field public static final Qra:Lorg/bouncycastle/asn1/bvj;
+.field public static final Asa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Rra:Lorg/bouncycastle/asn1/bvj;
+.field public static final Bsa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Sra:Lorg/bouncycastle/asn1/bvj;
+.field public static final Csa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Tra:Lorg/bouncycastle/asn1/bvj;
+.field public static final Dsa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Ura:Lorg/bouncycastle/asn1/bvj;
+.field public static final Esa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Vra:Lorg/bouncycastle/asn1/bvj;
+.field public static final Fsa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Wra:Lorg/bouncycastle/asn1/bvj;
+.field public static final Gsa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final Xra:Lorg/bouncycastle/asn1/bvj;
-
-.field public static final Yra:Lorg/bouncycastle/asn1/bvj;
-
-.field public static final Zra:Lorg/bouncycastle/asn1/bvj;
-
-.field public static final _ra:Lorg/bouncycastle/asn1/bvj;
-
-.field public static final asa:Lorg/bouncycastle/asn1/bvj;
-
-.field public static final bsa:Lorg/bouncycastle/asn1/bvj;
-
-.field public static final csa:Lorg/bouncycastle/asn1/bvj;
+.field public static final Hsa:Lorg/bouncycastle/asn1/bvj;
 
 .field public static final dsa:Lorg/bouncycastle/asn1/bvj;
 
@@ -66,6 +54,18 @@
 
 .field public static final tsa:Lorg/bouncycastle/asn1/bvj;
 
+.field public static final usa:Lorg/bouncycastle/asn1/bvj;
+
+.field public static final vsa:Lorg/bouncycastle/asn1/bvj;
+
+.field public static final wsa:Lorg/bouncycastle/asn1/bvj;
+
+.field public static final xsa:Lorg/bouncycastle/asn1/bvj;
+
+.field public static final ysa:Lorg/bouncycastle/asn1/bvj;
+
+.field public static final zsa:Lorg/bouncycastle/asn1/bvj;
+
 
 # instance fields
 .field private extensions:Ljava/util/Hashtable;
@@ -83,7 +83,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Qra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->dsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -91,7 +91,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Rra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->esa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -99,7 +99,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Sra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->fsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -107,7 +107,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Tra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->gsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -115,7 +115,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Ura:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->hsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -123,7 +123,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Vra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->isa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -131,7 +131,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Wra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->jsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -139,7 +139,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Xra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->ksa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -147,7 +147,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Yra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->lsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -155,7 +155,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Zra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->msa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -163,7 +163,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->_ra:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->nsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -171,7 +171,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->asa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->osa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -179,7 +179,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->bsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->psa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -187,7 +187,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->csa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->qsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -195,7 +195,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->dsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->rsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -203,7 +203,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->esa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->ssa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -211,7 +211,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->fsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->tsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -219,7 +219,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->gsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->usa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -227,7 +227,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->hsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->vsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -235,7 +235,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->isa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->wsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -243,7 +243,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->jsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->xsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -251,7 +251,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->ksa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->ysa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -259,7 +259,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->lsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->zsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -267,7 +267,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->msa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Asa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -275,7 +275,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->nsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Bsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -283,7 +283,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->osa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Csa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -291,7 +291,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->psa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Dsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -299,7 +299,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->qsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Esa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -307,7 +307,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->rsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Fsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -315,7 +315,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->ssa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Gsa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -323,7 +323,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->tsa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/o;->Hsa:Lorg/bouncycastle/asn1/bvj;
 
     return-void
 .end method
@@ -522,7 +522,7 @@
 
     iput-object v0, p0, Lorg/bouncycastle/asn1/x509/o;->ordering:Ljava/util/Vector;
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Bg()Ljava/util/Enumeration;
 
     move-result-object p1
 
@@ -849,7 +849,7 @@
 
 
 # virtual methods
-.method public Qh()[Lorg/bouncycastle/asn1/bvj;
+.method public Rh()[Lorg/bouncycastle/asn1/bvj;
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/x509/o;->ordering:Ljava/util/Vector;
@@ -861,7 +861,7 @@
     return-object p0
 .end method
 
-.method public Rh()Ljava/util/Enumeration;
+.method public Sh()Ljava/util/Enumeration;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/x509/o;->ordering:Ljava/util/Vector;

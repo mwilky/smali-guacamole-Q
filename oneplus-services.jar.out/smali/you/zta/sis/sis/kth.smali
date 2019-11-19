@@ -16,6 +16,14 @@
     return-void
 .end method
 
+.method public static Aa(I)[J
+    .locals 0
+
+    new-array p0, p0, [J
+
+    return-object p0
+.end method
+
 .method public static bio(II[II)I
     .locals 7
 
@@ -3284,14 +3292,6 @@
     const/4 p1, 0x1
 
     invoke-direct {p0, p1, v0}, Ljava/math/BigInteger;-><init>(I[B)V
-
-    return-object p0
-.end method
-
-.method public static za(I)[J
-    .locals 0
-
-    new-array p0, p0, [J
 
     return-object p0
 .end method

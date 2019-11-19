@@ -17,25 +17,25 @@
 # static fields
 .field public static final MSG_INIT:I = 0x101d0
 
-.field public static final bud:I = 0x101d5
+.field public static final irq:I = 0x101d2
 
-.field public static final cgv:I = 0x101d3
+.field public static final ivd:I = 0x101d5
 
-.field public static final irq:I = 0x101d7
+.field public static final j:I = 0x101d6
 
-.field public static final ivd:I = 0x101da
+.field public static final k:I = 0x101d7
 
-.field public static final les:I = 0x101d6
+.field public static final les:I = 0x101d1
 
-.field public static final lqr:I = 0x101d1
+.field public static final m:I = 0x101d8
 
-.field public static final qeg:I = 0x101d9
+.field public static final o:I = 0x101d9
 
-.field public static final vdw:I = 0x101d8
+.field public static final p:I = 0x101da
 
-.field public static final veq:I = 0x101d2
+.field public static final qeg:I = 0x101d4
 
-.field public static final vju:I = 0x101d4
+.field public static final vdw:I = 0x101d3
 
 
 # instance fields
@@ -350,7 +350,7 @@
     :sswitch_4
     iget-object p1, p0, Lcom/android/server/am/OnePlusBGController$rtg;->this$0:Lcom/android/server/am/OnePlusBGController;
 
-    invoke-virtual {p1}, Lcom/android/server/am/OnePlusBGController;->Eb()V
+    invoke-virtual {p1}, Lcom/android/server/am/OnePlusBGController;->Fb()V
 
     iget-object p1, p0, Lcom/android/server/am/OnePlusBGController$rtg;->this$0:Lcom/android/server/am/OnePlusBGController;
 

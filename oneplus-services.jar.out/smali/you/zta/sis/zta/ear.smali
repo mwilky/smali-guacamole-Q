@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field protected iDa:[Lyou/zta/sis/zta/wtn;
+.field protected wDa:[Lyou/zta/sis/zta/wtn;
 
-.field protected jDa:[Lyou/zta/sis/zta/wtn;
+.field protected xDa:[Lyou/zta/sis/zta/wtn;
 
-.field protected kDa:Lyou/zta/sis/zta/wtn;
+.field protected yDa:Lyou/zta/sis/zta/wtn;
 
 
 # direct methods
@@ -22,37 +22,37 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/ear;->iDa:[Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lyou/zta/sis/zta/ear;->wDa:[Lyou/zta/sis/zta/wtn;
 
-    iput-object v0, p0, Lyou/zta/sis/zta/ear;->jDa:[Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lyou/zta/sis/zta/ear;->xDa:[Lyou/zta/sis/zta/wtn;
 
-    iput-object v0, p0, Lyou/zta/sis/zta/ear;->kDa:Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lyou/zta/sis/zta/ear;->yDa:Lyou/zta/sis/zta/wtn;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Ek()[Lyou/zta/sis/zta/wtn;
-    .locals 0
-
-    iget-object p0, p0, Lyou/zta/sis/zta/ear;->iDa:[Lyou/zta/sis/zta/wtn;
-
-    return-object p0
-.end method
-
 .method public Fk()[Lyou/zta/sis/zta/wtn;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ear;->jDa:[Lyou/zta/sis/zta/wtn;
+    iget-object p0, p0, Lyou/zta/sis/zta/ear;->wDa:[Lyou/zta/sis/zta/wtn;
 
     return-object p0
 .end method
 
-.method public Gk()Lyou/zta/sis/zta/wtn;
+.method public Gk()[Lyou/zta/sis/zta/wtn;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/ear;->kDa:Lyou/zta/sis/zta/wtn;
+    iget-object p0, p0, Lyou/zta/sis/zta/ear;->xDa:[Lyou/zta/sis/zta/wtn;
+
+    return-object p0
+.end method
+
+.method public Hk()Lyou/zta/sis/zta/wtn;
+    .locals 0
+
+    iget-object p0, p0, Lyou/zta/sis/zta/ear;->yDa:Lyou/zta/sis/zta/wtn;
 
     return-object p0
 .end method
@@ -60,7 +60,7 @@
 .method public sis([Lyou/zta/sis/zta/wtn;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ear;->iDa:[Lyou/zta/sis/zta/wtn;
+    iput-object p1, p0, Lyou/zta/sis/zta/ear;->wDa:[Lyou/zta/sis/zta/wtn;
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 .method public tsu([Lyou/zta/sis/zta/wtn;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ear;->jDa:[Lyou/zta/sis/zta/wtn;
+    iput-object p1, p0, Lyou/zta/sis/zta/ear;->xDa:[Lyou/zta/sis/zta/wtn;
 
     return-void
 .end method
@@ -76,7 +76,7 @@
 .method public ywr(Lyou/zta/sis/zta/wtn;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/sis/zta/ear;->kDa:Lyou/zta/sis/zta/wtn;
+    iput-object p1, p0, Lyou/zta/sis/zta/ear;->yDa:Lyou/zta/sis/zta/wtn;
 
     return-void
 .end method

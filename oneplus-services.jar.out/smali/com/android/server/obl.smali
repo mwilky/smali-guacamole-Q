@@ -3,993 +3,722 @@
 .source ""
 
 # interfaces
-.implements Lcom/android/server/IOpAlarmAlignment;
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/android/server/obl$zta;,
-        Lcom/android/server/obl$you;
-    }
-.end annotation
+.implements Lcom/android/server/IOpAggressiveDoze;
 
 
 # static fields
-.field private static final Ad:Z = false
-
-.field private static Bd:Z = false
-
-.field private static final Cd:Ljava/lang/String; = "ProcessManagement"
-
 .field private static final DEBUG_ONEPLUS:Z
 
-.field private static Dd:Landroid/util/ArrayMap; = null
+.field private static final IDLE_AFTER_INACTIVE_TIMEOUT:Ljava/lang/String; = "idle_after_inactive_to=420000"
+
+.field private static final IDLE_FACTOR:Ljava/lang/String; = "idle_factor=3"
+
+.field private static final IDLE_PENDING_TIMEOUT:Ljava/lang/String; = "idle_pending_to=60000"
+
+.field private static final INACTIVE_TIMEOUT:Ljava/lang/String; = "inactive_to=960000"
+
+.field private static final LOCATING_TIMEOUT:Ljava/lang/String; = "locating_to=30000"
+
+.field private static final LOCATION_ACCURACY:Ljava/lang/String; = "location_accuracy=10"
+
+.field private static final MAX_IDLE_PENDING_TIMEOUT:Ljava/lang/String; = "max_idle_pending_to=120000"
+
+.field private static final MAX_IDLE_TIMEOUT:Ljava/lang/String; = "max_idle_to=864000000"
+
+.field private static final MIN_TIME_TO_ALARM:Ljava/lang/String; = "min_time_to_alarm=60000"
+
+.field private static final MOTION_INACTIVE_TIMEOUT:Ljava/lang/String; = "motion_inactive_to=60000"
+
+.field private static final SENSING_TIMEOUT:Ljava/lang/String; = "sensing_to=24000"
+
+.field private static final TAG:Ljava/lang/String; = "OpAggressiveDoze"
+
+.field private static final hd:Ljava/lang/String; = "stopGps"
+
+.field static jc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner; = null
+
+.field private static final jd:Ljava/lang/String; = "aggressive"
+
+.field private static final kd:Ljava/lang/String;
+
+.field private static final ld:Ljava/lang/String;
+
+.field static mLock:Ljava/lang/Object;
+
+.field static md:Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;
+
+.field static nd:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/util/ArrayMap<",
+            "Ljava/util/ArrayList<",
             "Ljava/lang/String;",
-            "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static Ed:Landroid/util/ArrayMap; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static Fd:Ljava/util/List; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private static Gd:Ljava/lang/Object; = null
-
-.field static final TAG:Ljava/lang/String; = "OpAlarmAlignment"
+.field static od:Z
 
 
 # instance fields
-.field private final dd:Lcom/android/server/obl$you;
+.field bd:Z
 
-.field private mAlignment:Lcom/android/server/obl$zta;
+.field cd:Z
 
-.field private mContext:Landroid/content/Context;
+.field dd:J
 
-.field private td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-.field private ud:J
-
-.field private vd:Landroid/util/ArrayMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/ArrayMap<",
-            "Lcom/android/server/AlarmManagerService$Alarm;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private wd:Ljava/util/ArrayList;
+.field ed:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private xd:Landroid/util/ArrayMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private yd:Landroid/util/ArrayMap;
+.field private gd:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;>;"
+            "Ljava/util/HashSet<",
+            "Ljava/lang/Integer;",
+            ">;"
         }
     .end annotation
 .end field
 
-.field private final zd:Ljava/lang/Object;
+.field kc:Ljava/lang/Object;
+
+.field mConstants:Lcom/android/server/DeviceIdleController$Constants;
+
+.field mContext:Landroid/content/Context;
+
+.field mDeviceIdleController:Lcom/android/server/DeviceIdleController;
+
+.field mGpsLocationListener:Landroid/location/LocationListener;
+
+.field mHandler:Landroid/os/Handler;
+
+.field mLocationManager:Landroid/location/LocationManager;
+
+.field mLocationManagerService:Lcom/android/server/LocationManagerService;
+
+.field private mPolicy:I
+
+.field mReceivers:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/Object;",
+            "Lcom/android/server/LocationManagerService$Receiver;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mResolver:Landroid/content/ContentResolver;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 13
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
     sput-boolean v0, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
 
-    const/4 v0, 0x0
+    const-string v0, "sensing_to=24000"
 
-    sput-boolean v0, Lcom/android/server/obl;->Bd:Z
+    const-string v1, "locating_to=30000"
 
-    new-instance v0, Landroid/util/ArrayMap;
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lcom/android/server/obl;->Dd:Landroid/util/ArrayMap;
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    new-instance v0, Landroid/util/ArrayMap;
+    move-result-object v0
 
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
+    const-string v1, ","
 
-    sput-object v0, Lcom/android/server/obl;->Ed:Landroid/util/ArrayMap;
+    invoke-static {v1, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/obl;->kd:Ljava/lang/String;
+
+    const-string v2, "sensing_to=24000"
+
+    const-string v3, "locating_to=30000"
+
+    const-string v4, "location_accuracy=10"
+
+    const-string v5, "idle_after_inactive_to=420000"
+
+    const-string v6, "inactive_to=960000"
+
+    const-string v7, "max_idle_pending_to=120000"
+
+    const-string v8, "idle_pending_to=60000"
+
+    const-string v9, "motion_inactive_to=60000"
+
+    const-string v10, "idle_factor=3"
+
+    const-string v11, "min_time_to_alarm=60000"
+
+    const-string v12, "max_idle_to=864000000"
+
+    filled-new-array/range {v2 .. v12}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/obl;->ld:Ljava/lang/String;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/server/obl;->Fd:Ljava/util/List;
+    sput-object v0, Lcom/android/server/obl;->nd:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/android/server/obl;->Gd:Ljava/lang/Object;
+    sput-object v0, Lcom/android/server/obl;->mLock:Ljava/lang/Object;
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/android/server/obl;->od:Z
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    iput v0, p0, Lcom/android/server/obl;->mPolicy:I
 
-    new-instance v0, Lcom/android/server/obl$you;
+    iput-boolean v0, p0, Lcom/android/server/obl;->bd:Z
 
-    invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
+    iput-boolean v0, p0, Lcom/android/server/obl;->cd:Z
 
-    move-result-object v1
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/android/server/obl$you;-><init>(Lcom/android/server/obl;Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lcom/android/server/obl;->dd:Lcom/android/server/obl$you;
-
-    new-instance v0, Landroid/util/ArrayMap;
-
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
-
-    new-instance v0, Landroid/util/ArrayMap;
-
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/obl;->xd:Landroid/util/ArrayMap;
-
-    new-instance v0, Landroid/util/ArrayMap;
-
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/obl;->zd:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
 
     return-void
 .end method
 
-.method static synthetic access$300()Z
-    .locals 1
-
-    sget-boolean v0, Lcom/android/server/obl;->Bd:Z
-
-    return v0
-.end method
-
-.method private getTimeDelta()J
-    .locals 4
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method static synthetic sis(Lcom/android/server/obl;)Lcom/android/server/AlarmManagerService$AmsInner;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    return-object p0
-.end method
-
-.method static synthetic you(Lcom/android/server/obl;)Lcom/android/server/obl$zta;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    return-object p0
-.end method
-
-.method private you(Ljava/lang/String;ZI)V
+.method private Ga(I)V
     .locals 2
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    sget-boolean v0, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
 
-    move-result-wide v0
-
-    if-eqz p2, :cond_0
-
-    sget-object p2, Lcom/android/server/obl;->Gd:Ljava/lang/Object;
-
-    monitor-enter p2
-
-    :try_start_0
-    sget-object p0, Lcom/android/server/obl;->Dd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p0, Lcom/android/server/obl;->Dd:Landroid/util/ArrayMap;
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    invoke-virtual {p0, p1, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p0, Lcom/android/server/obl;->Ed:Landroid/util/ArrayMap;
-
-    invoke-virtual {p0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p0, Lcom/android/server/obl;->Ed:Landroid/util/ArrayMap;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p3
-
-    invoke-virtual {p0, p1, p3}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit p2
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_0
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object p2
-
-    iget-object p3, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    invoke-virtual {p3}, Lcom/android/server/AlarmManagerService$AmsInner;->getAlarmHandler()Lcom/android/server/AlarmManagerService$AlarmHandler;
-
-    const/16 p3, 0x15
-
-    iput p3, p2, Landroid/os/Message;->what:I
-
-    iput-object p1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object p0, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    invoke-virtual {p0}, Lcom/android/server/AlarmManagerService$AmsInner;->getAlarmHandler()Lcom/android/server/AlarmManagerService$AlarmHandler;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Lcom/android/server/AlarmManagerService$AlarmHandler;->sendMessage(Landroid/os/Message;)Z
-
-    sget-object p0, Lcom/android/server/obl;->Gd:Ljava/lang/Object;
-
-    monitor-enter p0
-
-    :try_start_1
-    sget-object p2, Lcom/android/server/obl;->Dd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p2, Lcom/android/server/obl;->Ed:Landroid/util/ArrayMap;
-
-    invoke-virtual {p2, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit p0
-
-    :goto_0
-    return-void
-
-    :catchall_1
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    throw p1
-.end method
-
-.method static synthetic zta(Lcom/android/server/obl;)Landroid/content/Context;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
-
-    return-object p0
-.end method
-
-.method private zta(Lcom/android/server/AlarmManagerService$Alarm;JJ)Z
-    .locals 5
-
-    iget-object p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
-
-    const/4 p5, 0x0
-
-    if-eqz p4, :cond_8
-
-    iget-object p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->packageName:Ljava/lang/String;
-
-    sget-object v0, Lcom/android/server/obl;->Gd:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lcom/android/server/obl;->Dd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1, p4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-lez v0, :cond_7
+    if-eqz v0, :cond_0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p1, Lcom/android/server/AlarmManagerService$Alarm;->statsTag:Ljava/lang/String;
+    const-string v1, "addUidtoDozingGps uid:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
+    const-string v1, "OpAggressiveDoze"
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    iget-object v1, p1, Lcom/android/server/AlarmManagerService$Alarm;->statsTag:Ljava/lang/String;
-
-    invoke-virtual {p0, v1}, Lcom/android/server/obl;->gwm(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p0, p2, p3}, Lcom/android/server/obl;->rtg(J)J
-
-    move-result-wide p2
-
-    iget v1, p1, Lcom/android/server/AlarmManagerService$Alarm;->type:I
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    move v1, p5
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v1, v2
-
-    :goto_1
-    if-eqz v1, :cond_2
-
-    invoke-direct {p0}, Lcom/android/server/obl;->getTimeDelta()J
-
-    move-result-wide v3
-
-    add-long/2addr v3, p2
-
-    goto :goto_2
-
-    :cond_2
-    move-wide v3, p2
-
-    :goto_2
-    iput-wide v3, p1, Lcom/android/server/AlarmManagerService$Alarm;->origWhen:J
-
-    iput-wide v3, p1, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->expectedWhenElapsed:J
-
-    iget-object p2, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    iget-object p3, p1, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
-
-    iget-object v1, p1, Lcom/android/server/AlarmManagerService$Alarm;->listener:Landroid/app/IAlarmListener;
-
-    invoke-virtual {p2, p3, v1}, Lcom/android/server/AlarmManagerService$AmsInner;->removeLockedInner(Landroid/app/PendingIntent;Landroid/app/IAlarmListener;)V
-
-    iget-object p2, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    invoke-virtual {p2, p1, p5, v2}, Lcom/android/server/AlarmManagerService$AmsInner;->setImplLockedInner(Lcom/android/server/AlarmManagerService$Alarm;ZZ)V
-
-    sget-boolean p2, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
-
-    if-eqz p2, :cond_3
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, "delay third part wakeup alarm =  operation ="
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p3, p1, Lcom/android/server/AlarmManagerService$Alarm;->statsTag:Ljava/lang/String;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "OpAlarmAlignment"
-
-    invoke-static {p3, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    iget-object p2, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object p2, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object p2, p0, Lcom/android/server/obl;->zd:Ljava/lang/Object;
-
-    monitor-enter p2
-
-    :try_start_1
-    iget-object p3, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p3, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p3, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p3, p1, p4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iget-object p1, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p1, p4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    if-nez p1, :cond_4
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object p0, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p0, p4, p1}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return v2
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_2
-    monitor-exit p2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p0
-
-    :cond_5
-    iget-object p2, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p2, p4}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ljava/util/ArrayList;
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    :cond_6
-    iget-object p2, p0, Lcom/android/server/obl;->zd:Ljava/lang/Object;
-
-    monitor-enter p2
-
-    :try_start_3
-    iget-object p3, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {p3, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit p2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    iget-object p0, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception p0
-
-    :try_start_4
-    monitor-exit p2
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw p0
-
-    :cond_7
-    :goto_3
-    return p5
-
-    :catchall_2
-    move-exception p0
-
-    :try_start_5
-    monitor-exit v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    throw p0
-
-    :cond_8
-    return p5
-.end method
-
-
-# virtual methods
-.method public deliverDelayAlarm(Landroid/os/Message;)V
-    .locals 10
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v3, p0, Lcom/android/server/obl;->zd:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    :goto_0
-    :try_start_0
-    iget-object v6, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v6}, Landroid/util/ArrayMap;->size()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_1
-
-    iget-object v6, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v6, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/String;
-
-    if-eqz v6, :cond_0
-
-    invoke-virtual {v6, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    iget-object v6, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v6, v5}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/android/server/AlarmManagerService$Alarm;
-
-    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v7, "OpAlarmAlignment"
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, " deliverAlarmsLocked  operation ="
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, v6, Lcom/android/server/AlarmManagerService$Alarm;->statsTag:Ljava/lang/String;
-
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v7, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    iget-object v3, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    invoke-virtual {v3, v2, v0, v1}, Lcom/android/server/AlarmManagerService$AmsInner;->deliverAlarmsLockedInner(Ljava/util/ArrayList;J)V
-
-    iget-object v0, p0, Lcom/android/server/obl;->zd:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
 
     monitor-enter v0
 
-    move v1, v4
+    :try_start_0
+    iget-object p0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
 
-    :goto_1
-    :try_start_1
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v3
+    move-result-object p1
 
-    if-ge v1, v3, :cond_2
+    invoke-virtual {p0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lcom/android/server/obl;->vd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_2
     monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move v0, v4
-
-    :goto_2
-    iget-object v1, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1}, Landroid/util/ArrayMap;->size()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_4
-
-    iget-object v1, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/android/server/obl;->yd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayList;
-
-    move v2, v4
-
-    :goto_3
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_3
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    iget-object v5, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v5, p0, Lcom/android/server/obl;->xd:Landroid/util/ArrayMap;
-
-    invoke-virtual {v5, v3}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_4
     return-void
 
     :catchall_0
     move-exception p0
 
-    :try_start_2
     monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p0
-
-    :catchall_1
-    move-exception p0
-
-    :try_start_3
-    monitor-exit v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 .end method
 
-.method public dma(Z)Z
-    .locals 0
+.method private Ha(I)V
+    .locals 2
 
-    sget-boolean p0, Lcom/android/server/obl;->Bd:Z
-
-    sput-boolean p1, Lcom/android/server/obl;->Bd:Z
-
-    return p0
-.end method
-
-.method public gck(Z)Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lcom/android/server/obl$zta;->bio(Z)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public gwm(Ljava/lang/String;)Z
-    .locals 4
-
-    const-string v0, "sending operation black alarm "
-
-    const-string v1, "OpAlarmAlignment"
-
-    const/4 v2, 0x1
-
-    if-eqz p1, :cond_1
-
-    const-string v3, "AlarmTaskSchedule"
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "com.igexin.sdk.action"
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "AlarmTaskScheduleBak"
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "cn.jpush.android.service.AlarmReceiver"
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "com.q.m.QS"
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    const-string v3, "intent.action.COCKROACH"
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    :cond_0
-    sget-boolean p0, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
-
-    if-eqz p0, :cond_3
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    :goto_0
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0, p1}, Lcom/android/server/obl;->ugm(Ljava/lang/String;)Z
-
-    move-result p0
+    iget-object p0, p0, Lcom/android/server/obl;->mResolver:Landroid/content/ContentResolver;
 
     if-eqz p0, :cond_2
 
-    sget-boolean p0, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
+    const-string v0, "device_idle_constants"
 
-    if-eqz p0, :cond_3
+    if-eqz p1, :cond_1
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    if-eq p1, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    sget-object p1, Lcom/android/server/obl;->ld:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p1, Lcom/android/server/obl;->kd:Ljava/lang/String;
+
+    :goto_0
+    invoke-static {p0, v0, p1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method private Ia(I)V
+    .locals 2
+
+    sget-object p0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_power_manager:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {p0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/server/power/ugm;
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_alarm_alignment:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/cjf;
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0, v1}, Lcom/android/server/power/ugm;->setDeviceIdleAggressive(Z)V
+
+    :cond_0
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, v1}, Lcom/android/server/cjf;->gck(Z)Z
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0, p1}, Lcom/android/server/power/ugm;->setDeviceIdleAggressive(Z)V
+
+    :cond_2
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p1}, Lcom/android/server/cjf;->gck(Z)Z
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method C()Z
+    .locals 15
+
+    const-string v0, "Failed to check LoctionWhitelistUid"
+
+    const-string v1, "OpAggressiveDoze"
+
+    invoke-virtual {p0}, Lcom/android/server/obl;->D()Landroid/util/ArrayMap;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    goto/16 :goto_5
+
+    :cond_0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    iget-object v4, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v4, 0x0
+
+    :goto_0
+    iget-object v5, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
+
+    invoke-virtual {v5}, Ljava/util/HashSet;->clear()V
+
+    move v5, v3
+
+    move v6, v5
+
+    :goto_1
+    invoke-virtual {v2}, Landroid/util/ArrayMap;->size()I
+
+    move-result v7
+
+    if-ge v5, v7, :cond_8
+
+    invoke-virtual {v2, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    invoke-virtual {v2, v5}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Integer;
+
+    if-nez v8, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+
+    move-result v9
+
+    const/16 v10, 0x2710
+
+    if-lt v9, v10, :cond_7
+
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+
+    move-result v9
+
+    invoke-virtual {v4, v9}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    move-result-object v9
+
+    move v10, v6
+
+    move v6, v3
+
+    :goto_2
+    array-length v11, v9
+
+    if-ge v6, v11, :cond_6
+
+    :try_start_0
+    aget-object v11, v9, v6
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v12, "gps"
+
+    const/4 v13, 0x1
+
+    if-eqz v11, :cond_4
+
+    :try_start_1
+    aget-object v11, v9, v6
+
+    const-string v14, "com.amap.android.ams"
+
+    invoke-virtual {v11, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_3
+
+    aget-object v11, v9, v6
+
+    const-string v14, "com.amap.android.location"
+
+    invoke-virtual {v11, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_4
+
+    :cond_3
+    invoke-virtual {v7, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_4
+
+    move v10, v13
+
+    :cond_4
+    aget-object v11, v9, v6
+
+    invoke-virtual {v4, v11, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v11
+
+    if-eqz v11, :cond_5
+
+    iget v11, v11, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/2addr v11, v13
+
+    if-nez v11, :cond_5
+
+    invoke-virtual {v7, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_5
+
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+
+    move-result v11
+
+    invoke-direct {p0, v11}, Lcom/android/server/obl;->Ga(I)V
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
+
+    move v10, v13
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v11
+
+    invoke-static {v1, v0, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_5
+    :goto_3
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    move v6, v10
+
+    :cond_7
+    :goto_4
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_8
+    return v6
+
+    :cond_9
+    :goto_5
+    return v3
+.end method
+
+.method D()Landroid/util/ArrayMap;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/android/server/obl;->kc:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    new-instance v1, Landroid/util/ArrayMap;
+
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
+
+    iget-object v2, p0, Lcom/android/server/obl;->mReceivers:Ljava/util/HashMap;
+
+    invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/server/LocationManagerService$Receiver;
+
+    iget-object v3, v3, Lcom/android/server/LocationManagerService$Receiver;->mUpdateRecords:Ljava/util/HashMap;
+
+    invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_1
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/Map$Entry;
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/android/server/LocationManagerService$UpdateRecord;
+
+    if-eqz v4, :cond_1
+
+    iget-object v5, v4, Lcom/android/server/LocationManagerService$UpdateRecord;->mRequest:Landroid/location/LocationRequest;
+
+    invoke-virtual {v5}, Landroid/location/LocationRequest;->getInterval()J
+
+    move-result-wide v5
+
+    sget-object v7, Lcom/android/server/obl;->jc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
+
+    invoke-virtual {v7}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getHighPowerIntervalMs()J
+
+    move-result-wide v7
+
+    cmp-long v5, v5, v7
+
+    if-gtz v5, :cond_1
+
+    iget-object v5, v4, Lcom/android/server/LocationManagerService$UpdateRecord;->mReceiver:Lcom/android/server/LocationManagerService$Receiver;
+
+    iget-object v5, v5, Lcom/android/server/LocationManagerService$Receiver;->mCallerIdentity:Lcom/android/server/location/CallerIdentity;
+
+    iget v5, v5, Lcom/android/server/location/CallerIdentity;->mUid:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    iget-object v4, v4, Lcom/android/server/LocationManagerService$UpdateRecord;->mProvider:Ljava/lang/String;
+
+    iget-object v6, p0, Lcom/android/server/obl;->ed:Ljava/util/ArrayList;
+
+    invoke-virtual {v6, v5}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    const-string v6, "gps"
+
+    invoke-virtual {v6, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    invoke-static {v6}, Lcom/android/server/am/AppRecordManager;->getProcState(I)I
+
+    move-result v6
+
+    const/4 v7, 0x5
+
+    if-gt v6, v7, :cond_1
+
+    invoke-virtual {v1, v5, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_2
-    const/4 v2, 0x0
+    monitor-exit v0
 
-    :cond_3
-    :goto_1
-    return v2
+    return-object v1
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public initAlarmAlignment(II)V
-    .locals 4
+.method E()Z
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -997,31 +726,19 @@
 
     const/4 v2, 0x0
 
-    const/16 v3, 0x5e
-
-    aput v3, v1, v2
+    aput v2, v1, v2
 
     invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p0}, Lcom/android/server/obl;->isAggressive()Z
 
-    if-ne p1, p2, :cond_1
+    move-result p0
 
-    iget-object p1, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string p2, "doze_mode_policy"
-
-    invoke-static {p1, p2, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result p1
-
-    if-ne p1, v0, :cond_0
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
@@ -1029,715 +746,1073 @@
     move v0, v2
 
     :goto_0
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    invoke-virtual {p1, v0}, Lcom/android/server/obl$zta;->bio(Z)Z
-
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    invoke-virtual {p1}, Lcom/android/server/obl$zta;->G()V
-
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    invoke-virtual {p1}, Lcom/android/server/obl$zta;->registerOnlineConfig()V
-
-    iget-object p0, p0, Lcom/android/server/obl;->dd:Lcom/android/server/obl$you;
-
-    invoke-virtual {p0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object p1
-
-    const-wide/16 v0, 0x1770
-
-    invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public initInstance(Lcom/android/server/AlarmManagerService$AmsInner;Landroid/content/Context;)V
-    .locals 2
-
-    iput-object p1, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    iput-object p2, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
-
-    const/4 p1, 0x1
-
-    new-array p1, p1, [I
-
-    const/4 p2, 0x0
-
-    const/16 v0, 0x5e
-
-    aput v0, p1, p2
-
-    invoke-static {p1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Lcom/android/server/obl$zta;
-
-    iget-object p2, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
-
-    iget-object v0, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    invoke-virtual {v0}, Lcom/android/server/AlarmManagerService$AmsInner;->getAlarmHandler()Lcom/android/server/AlarmManagerService$AlarmHandler;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/obl;->dd:Lcom/android/server/obl$you;
-
-    invoke-direct {p1, p0, p2, v0, v1}, Lcom/android/server/obl$zta;-><init>(Lcom/android/server/obl;Landroid/content/Context;Landroid/os/Handler;Landroid/os/Handler;)V
-
-    iput-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    :cond_0
-    return-void
-.end method
-
-.method rtg(J)J
-    .locals 4
-
-    iget-wide v0, p0, Lcom/android/server/obl;->ud:J
-
-    sub-long/2addr p1, v0
-
-    const-wide/32 v0, 0x927c0
-
-    div-long/2addr p1, v0
-
-    long-to-int p1, p1
-
-    const/4 p2, 0x1
-
-    add-int/2addr p1, p2
-
-    if-gtz p1, :cond_0
-
-    move p1, p2
-
-    :cond_0
-    iget-wide v0, p0, Lcom/android/server/obl;->ud:J
-
-    mul-int/lit8 p1, p1, 0xa
-
-    mul-int/lit8 p1, p1, 0x3c
-
-    int-to-long p0, p1
-
-    const-wide/16 v2, 0x3e8
-
-    mul-long/2addr p0, v2
-
-    add-long/2addr v0, p0
-
-    return-wide v0
-.end method
-
-.method public setAlarmAlignment(Lcom/android/server/AlarmManagerService$Alarm;Lcom/android/server/AlarmManagerService$AlarmAlignmentReason;JJ)Z
-    .locals 8
-
-    iget-object v0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    new-array v2, v0, [I
-
-    const/16 v3, 0x5e
-
-    aput v3, v2, v1
-
-    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    sget-object v2, Lcom/android/server/zgw;->ad:[I
-
-    invoke-virtual {p2}, Lcom/android/server/AlarmManagerService$AlarmAlignmentReason;->ordinal()I
-
-    move-result p2
-
-    aget p2, v2, p2
-
-    if-eq p2, v0, :cond_9
-
-    const/4 v2, 0x2
-
-    if-eq p2, v2, :cond_7
-
-    const/4 v2, 0x3
-
-    if-eq p2, v2, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p2, v0, :cond_1
-
-    goto/16 :goto_2
-
-    :cond_1
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v2, p3
-
-    move-wide v4, p5
-
-    invoke-direct/range {v0 .. v5}, Lcom/android/server/obl;->zta(Lcom/android/server/AlarmManagerService$Alarm;JJ)Z
-
-    move-result v1
-
-    goto/16 :goto_2
-
-    :cond_2
-    iget-object p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->operation:Landroid/app/PendingIntent;
-
-    if-eqz p2, :cond_b
-
-    iget-object p2, p0, Lcom/android/server/obl;->wd:Ljava/util/ArrayList;
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->statsTag:Ljava/lang/String;
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->packageName:Ljava/lang/String;
-
-    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_b
-
-    sget-boolean p2, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
-
-    if-eqz p2, :cond_3
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p3, " cancel setImplLocked  beause of screenOffAdjust tag ="
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p3, p1, Lcom/android/server/AlarmManagerService$Alarm;->statsTag:Ljava/lang/String;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "OpAlarmAlignment"
-
-    invoke-static {p3, p2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p2
-
-    invoke-virtual {p0, p2, p3}, Lcom/android/server/obl;->rtg(J)J
-
-    move-result-wide p2
-
-    iget p0, p1, Lcom/android/server/AlarmManagerService$Alarm;->type:I
-
-    if-eq p0, v0, :cond_4
-
-    if-nez p0, :cond_5
-
-    :cond_4
-    move v1, v0
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p4
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v1
-
-    sub-long/2addr p4, v1
-
-    add-long/2addr p4, p2
-
-    goto :goto_0
-
-    :cond_6
-    move-wide p4, p2
-
-    :goto_0
-    iput-wide p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->origWhen:J
-
-    iput-wide p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
-
-    goto :goto_3
-
-    :cond_7
-    iget-object p2, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    invoke-virtual {p2, p1, v1}, Lcom/android/server/obl$zta;->zta(Lcom/android/server/AlarmManagerService$Alarm;Z)J
-
-    move-result-wide p2
-
-    iget-wide p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    cmp-long p4, p4, p2
-
-    if-eqz p4, :cond_b
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    iget-object p2, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    iget-wide p3, p1, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    iget p5, p1, Lcom/android/server/AlarmManagerService$Alarm;->type:I
-
-    invoke-virtual {p2, p3, p4, p5}, Lcom/android/server/AlarmManagerService$AmsInner;->convertToElapsedInner(JI)J
-
-    move-result-wide p2
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
-
-    iget-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->windowLength:J
-
-    const-wide/16 p4, 0x0
-
-    cmp-long p4, p2, p4
-
-    if-lez p4, :cond_8
-
-    iget-wide p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
-
-    add-long/2addr p4, p2
-
-    goto :goto_1
-
-    :cond_8
-    iget-object v1, p0, Lcom/android/server/obl;->td:Lcom/android/server/AlarmManagerService$AmsInner;
-
-    iget-wide v4, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
-
-    iget-wide v6, p1, Lcom/android/server/AlarmManagerService$Alarm;->repeatInterval:J
-
-    invoke-virtual/range {v1 .. v7}, Lcom/android/server/AlarmManagerService$AmsInner;->getMaxTriggerTime(JJJ)J
-
-    move-result-wide p4
-
-    :goto_1
-    iput-wide p4, p1, Lcom/android/server/AlarmManagerService$Alarm;->maxWhenElapsed:J
-
-    iget-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->whenElapsed:J
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->expectedWhenElapsed:J
-
-    iget-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->maxWhenElapsed:J
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->expectedMaxWhenElapsed:J
-
-    goto :goto_3
-
-    :cond_9
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    invoke-virtual {p0, p1, v0}, Lcom/android/server/obl$zta;->zta(Lcom/android/server/AlarmManagerService$Alarm;Z)J
-
-    move-result-wide p2
-
-    iput-wide p2, p1, Lcom/android/server/AlarmManagerService$Alarm;->when:J
-
-    goto :goto_3
-
-    :cond_a
-    :goto_2
-    move v0, v1
-
-    :cond_b
-    :goto_3
     return v0
 .end method
 
-.method public setBlackAlarm(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
+.method F()Z
+    .locals 11
 
-    sget-object p0, Lcom/android/server/obl;->Fd:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/server/obl;->mLocationManagerService:Lcom/android/server/LocationManagerService;
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    if-eqz v0, :cond_0
 
-    sget-object p0, Lcom/android/server/obl;->Fd:Ljava/util/List;
+    invoke-virtual {p0}, Lcom/android/server/obl;->D()Landroid/util/ArrayMap;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v1, "OpAggressiveDoze"
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto/16 :goto_4
+
+    :cond_1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    iget-object p0, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    move v3, v2
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/util/ArrayMap;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_8
+
+    invoke-virtual {v0, v3}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "isHasGpsReport uid ="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v7, "provider = "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v1, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v5, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v6
+
+    const/16 v7, 0x2710
+
+    if-lt v6, v7, :cond_7
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-virtual {p0, v5}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
+
+    move-result-object v5
+
+    move v6, v2
+
+    :goto_2
+    array-length v7, v5
+
+    if-ge v6, v7, :cond_7
+
+    aget-object v7, v5, v6
+
+    if-eqz v7, :cond_3
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "isHasGpsReport package ="
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v8, v5, v6
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v1, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    aget-object v7, v5, v6
+
+    const-string v8, "gps"
+
+    const/4 v9, 0x1
+
+    if-eqz v7, :cond_5
+
+    aget-object v7, v5, v6
+
+    const-string v10, "com.amap.android.ams"
+
+    invoke-virtual {v7, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_4
+
+    aget-object v7, v5, v6
+
+    const-string v10, "com.amap.android.location"
+
+    invoke-virtual {v7, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
+
+    :cond_4
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
+
+    return v9
+
+    :cond_5
+    :try_start_0
+    aget-object v7, v5, v6
+
+    invoke-virtual {p0, v7, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_6
+
+    iget v7, v7, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/2addr v7, v9
+
+    if-nez v7, :cond_6
+
+    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v7, :cond_6
+
+    return v9
+
+    :catch_0
+    move-exception v7
+
+    const-string v8, "Failed to get application info"
+
+    invoke-static {v1, v8, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_6
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_7
+    :goto_3
+    add-int/lit8 v3, v3, 0x1
+
+    goto/16 :goto_1
+
+    :cond_8
+    return v2
+
+    :cond_9
+    :goto_4
+    const-string p0, "isHasGpsReport activeLocationArrayMap = 0"
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
+.end method
+
+.method public anyMotionResultOverride(I)I
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/android/server/obl;->E()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
 
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p1, "mBlackAlarmOperation = "
+    const-string v0, "change onAnyMotionResult("
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ")"
 
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object p1, Lcom/android/server/obl;->Fd:Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    const-string p1, "OpAlarmAlignment"
+    const-string p1, "OpAggressiveDoze"
 
-    invoke-static {p1, p0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-void
-.end method
+    const/4 p0, 0x0
 
-.method public setBlockAlarmUid(Ljava/lang/String;ZI)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/obl;->you(Ljava/lang/String;ZI)V
-
-    return-void
-.end method
-
-.method public shellCommand(Ljava/io/PrintWriter;[Ljava/lang/String;)Z
-    .locals 6
-
-    const/4 v0, 0x0
-
-    move v1, v0
+    return p0
 
     :cond_0
-    array-length v2, p2
+    return p1
+.end method
 
-    const/4 v3, 0x1
+.method public clearGpsUids()V
+    .locals 2
 
-    if-ge v1, v2, :cond_5
+    sget-boolean v0, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
 
-    aget-object v2, p2, v1
+    if-eqz v0, :cond_0
 
-    if-eqz v2, :cond_5
+    const-string v0, "OpAggressiveDoze"
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    const-string v1, "clearGpsUids"
 
-    move-result v4
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-lez v4, :cond_5
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v4
-
-    const/16 v5, 0x2d
-
-    if-eq v4, v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    const-string v4, "-align"
-
-    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    sget-boolean v2, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
-
-    if-eqz v2, :cond_0
-
-    array-length v0, p2
-
-    if-ge v1, v0, :cond_3
+    monitor-enter v0
 
     :try_start_0
-    aget-object p2, p2, v1
+    iget-object p0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
 
-    invoke-static {p2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-virtual {p0}, Ljava/util/HashSet;->clear()V
 
-    move-result-wide v0
+    monitor-exit v0
 
-    const-wide/16 v4, 0x0
+    return-void
 
-    cmp-long p2, v0, v4
+    :catchall_0
+    move-exception p0
 
-    if-gez p2, :cond_2
-
-    const-string p2, "Alarm align window must be larger than 0 !"
-
-    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_2
-    iget-object p2, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    if-eqz p2, :cond_4
-
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/obl$zta;->sis(J)V
+    monitor-exit v0
     :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    throw p0
+.end method
 
-    :catch_0
-    const-string p0, "Number format is wrong!"
+.method public clearWhitelistUid()V
+    .locals 4
 
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    sget-object v0, Lcom/android/server/obl;->mLock:Ljava/lang/Object;
 
-    goto :goto_0
+    monitor-enter v0
 
-    :cond_3
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    const/4 v1, 0x0
 
-    if-eqz p0, :cond_4
-
-    invoke-virtual {p0, p1}, Lcom/android/server/obl$zta;->dump(Ljava/io/PrintWriter;)V
-
-    :cond_4
     :goto_0
-    return v3
+    :try_start_0
+    sget-object v2, Lcom/android/server/obl;->nd:Ljava/util/ArrayList;
 
-    :cond_5
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_0
+
+    sget-object v2, Lcom/android/server/obl;->nd:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/android/server/obl;->mDeviceIdleController:Lcom/android/server/DeviceIdleController;
+
+    invoke-virtual {v3, v2}, Lcom/android/server/DeviceIdleController;->removePowerSaveWhitelistAppInternal(Ljava/lang/String;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Lcom/android/server/obl;->nd:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+
+    monitor-exit v0
+
+    return-void
+
     :goto_1
-    array-length v2, p2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ge v1, v2, :cond_a
+    throw p0
 
-    aget-object v2, p2, v1
+    :catchall_0
+    move-exception p0
 
-    add-int/2addr v1, v3
+    goto :goto_1
+.end method
 
-    array-length v4, p2
+.method public getStopGpsState()Z
+    .locals 0
 
-    if-ge v1, v4, :cond_a
+    sget-boolean p0, Lcom/android/server/obl;->od:Z
 
-    const-string v4, "onlineconfig"
+    return p0
+.end method
 
-    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.method isAggressive()Z
+    .locals 1
 
-    move-result v2
+    iget p0, p0, Lcom/android/server/obl;->mPolicy:I
 
-    if-eqz v2, :cond_a
+    const/4 v0, 0x1
 
-    sget-boolean v2, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
+    if-ne p0, v0, :cond_0
 
-    if-eqz v2, :cond_a
+    goto :goto_0
 
-    aget-object v2, p2, v1
+    :cond_0
+    const/4 v0, 0x0
 
-    const-string v4, "on"
-
-    invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    if-eqz p0, :cond_6
-
-    invoke-virtual {p0, v3}, Lcom/android/server/obl$zta;->wtn(Z)V
-
-    :cond_6
-    const-string p0, "OnlineConfig is turned on."
-
-    goto :goto_2
-
-    :cond_7
-    aget-object p2, p2, v1
-
-    const-string v1, "off"
-
-    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_9
-
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    if-eqz p0, :cond_8
-
-    invoke-virtual {p0, v0}, Lcom/android/server/obl$zta;->wtn(Z)V
-
-    :cond_8
-    const-string p0, "OnlineConfig is turned off."
-
-    goto :goto_2
-
-    :cond_9
-    const-string p0, "Please enter on or off."
-
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    const-string p0, "For example, \'adb shell dumpsys alarm onlineconifg off\'."
-
-    :goto_2
-    invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    return v3
-
-    :cond_a
+    :goto_0
     return v0
 .end method
 
-.method ugm(Ljava/lang/String;)Z
+.method public isDozingGps(I)Z
     .locals 1
 
-    sget-object p0, Lcom/android/server/obl;->Fd:Ljava/util/List;
+    iget-object v0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    monitor-enter v0
 
-    move-result-object p0
+    :try_start_0
+    iget-object p0, p0, Lcom/android/server/obl;->gd:Ljava/util/HashSet;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public isMoving(Landroid/location/Location;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/android/server/obl;->od:Z
+
+    invoke-virtual {p0}, Lcom/android/server/obl;->E()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    iget-boolean v1, p0, Lcom/android/server/obl;->cd:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
+
+    move-result v1
+
+    const/high16 v3, 0x41f00000    # 30.0f
+
+    cmpl-float v1, v1, v3
+
+    if-lez v1, :cond_0
+
+    iput-boolean v2, p0, Lcom/android/server/obl;->bd:Z
+
+    return v0
 
     :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v1, p0, Lcom/android/server/obl;->bd:Z
 
-    move-result v0
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_1
+    iput-boolean v2, p0, Lcom/android/server/obl;->bd:Z
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return v0
+
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/server/obl;->C()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    sput-boolean v2, Lcom/android/server/obl;->od:Z
+
+    :cond_2
+    invoke-virtual {p0}, Lcom/android/server/obl;->E()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Lcom/android/server/obl;->cd:Z
+
+    if-eqz v1, :cond_3
+
+    iget-boolean v1, p0, Lcom/android/server/obl;->bd:Z
+
+    if-eqz v1, :cond_4
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
+
+    move-result p1
+
+    iget-object p0, p0, Lcom/android/server/obl;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
+
+    iget p0, p0, Lcom/android/server/DeviceIdleController$Constants;->LOCATION_ACCURACY:F
+
+    cmpl-float p0, p1, p0
+
+    if-lez p0, :cond_4
+
+    return v0
+
+    :cond_4
+    return v2
+.end method
+
+.method public mayUseAggressiveTimeoutLocked(FJJJJJFJJ)Z
+    .locals 5
+
+    move-object v0, p0
+
+    iget v1, v0, Lcom/android/server/obl;->mPolicy:I
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v0, v0, Lcom/android/server/obl;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
+
+    if-eqz v0, :cond_0
+
+    move v1, p1
+
+    iput v1, v0, Lcom/android/server/DeviceIdleController$Constants;->LOCATION_ACCURACY:F
+
+    move-wide v3, p2
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->IDLE_AFTER_INACTIVE_TIMEOUT:J
+
+    move-wide v3, p4
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->INACTIVE_TIMEOUT:J
+
+    move-wide v3, p6
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->MAX_IDLE_PENDING_TIMEOUT:J
+
+    move-wide v3, p8
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->IDLE_PENDING_TIMEOUT:J
+
+    move-wide v3, p10
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->MOTION_INACTIVE_TIMEOUT:J
+
+    move/from16 v1, p12
+
+    iput v1, v0, Lcom/android/server/DeviceIdleController$Constants;->IDLE_FACTOR:F
+
+    move-wide/from16 v3, p13
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->MIN_TIME_TO_ALARM:J
+
+    move-wide/from16 v3, p15
+
+    iput-wide v3, v0, Lcom/android/server/DeviceIdleController$Constants;->MAX_IDLE_TIMEOUT:J
+
+    return v2
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onChange(ZLandroid/net/Uri;)V
+    .locals 1
+
+    const-string p1, "doze_mode_policy"
+
+    invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {v0, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lcom/android/server/obl;->mResolver:Landroid/content/ContentResolver;
+
+    const/4 v0, 0x0
+
+    invoke-static {p2, p1, v0, v0}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    sget-boolean p1, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "doze policy is set to "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p2, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "OpAggressiveDoze"
+
+    invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/obl;->Ha(I)V
+
+    iget p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/obl;->Ia(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public prepareDeviceIdleController(Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;)V
+    .locals 4
+
+    if-eqz p1, :cond_1
+
+    sput-object p1, Lcom/android/server/obl;->md:Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getService()Lcom/android/server/DeviceIdleController;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mDeviceIdleController:Lcom/android/server/DeviceIdleController;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getConstants()Lcom/android/server/DeviceIdleController$Constants;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mResolver:Landroid/content/ContentResolver;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getLocationManager()Landroid/location/LocationManager;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mLocationManager:Landroid/location/LocationManager;
+
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getGpsLocationListener()Landroid/location/LocationListener;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/server/obl;->mGpsLocationListener:Landroid/location/LocationListener;
+
+    iget-object p1, p0, Lcom/android/server/obl;->mResolver:Landroid/content/ContentResolver;
+
+    const-string v0, "doze_mode_policy"
+
+    invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/obl;->mConstants:Lcom/android/server/DeviceIdleController$Constants;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    iget-object p1, p0, Lcom/android/server/obl;->mResolver:Landroid/content/ContentResolver;
+
+    invoke-static {p1, v0, v3, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    sget-boolean p1, Lcom/android/server/obl;->DEBUG_ONEPLUS:Z
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "mPolicy = "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "OpAggressiveDoze"
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/obl;->Ha(I)V
+
+    iget p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/obl;->Ia(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public prepareLocationManagerService(Lcom/android/server/LocationManagerService$LocationManagerServiceInner;)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    sput-object p1, Lcom/android/server/obl;->jc:Lcom/android/server/LocationManagerService$LocationManagerServiceInner;
+
+    invoke-virtual {p1}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getService()Lcom/android/server/LocationManagerService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mLocationManagerService:Lcom/android/server/LocationManagerService;
+
+    invoke-virtual {p1}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getLock()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->kc:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getReceivers()Ljava/util/HashMap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->mReceivers:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getBlockedUids()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/server/obl;->ed:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Lcom/android/server/LocationManagerService$LocationManagerServiceInner;->getHighPowerIntervalMs()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/android/server/obl;->dd:J
+
+    :cond_0
+    return-void
+.end method
+
+.method public requestLocationUpdatesOverride()Z
+    .locals 9
+
+    sget-object v0, Lcom/android/server/obl;->md:Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;
+
+    invoke-virtual {v0}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->getLocationManager()Landroid/location/LocationManager;
+
+    invoke-virtual {p0}, Lcom/android/server/obl;->E()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/android/server/obl;->cd:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/obl;->mLocationManager:Landroid/location/LocationManager;
+
+    const-string v1, "gps"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getProvider(Ljava/lang/String;)Landroid/location/LocationProvider;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/obl;->mLocationManager:Landroid/location/LocationManager;
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/android/server/obl;->md:Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->setHasGps(Z)V
+
+    iput-boolean v1, p0, Lcom/android/server/obl;->bd:Z
+
+    iget-object v2, p0, Lcom/android/server/obl;->mLocationManager:Landroid/location/LocationManager;
+
+    const-wide/16 v4, 0x3e8
+
+    const/high16 v6, 0x41200000    # 10.0f
+
+    iget-object v7, p0, Lcom/android/server/obl;->mGpsLocationListener:Landroid/location/LocationListener;
+
+    iget-object p0, p0, Lcom/android/server/obl;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {p0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v8
+
+    const-string v3, "gps"
+
+    invoke-virtual/range {v2 .. v8}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V
+
+    sget-object p0, Lcom/android/server/obl;->md:Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;
+
+    invoke-virtual {p0, v1}, Lcom/android/server/DeviceIdleController$DeviceIdleControllerInner;->setLocating(Z)V
+
+    return v1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public scheduleAlarmOverride()Z
+    .locals 4
+
+    invoke-virtual {p0}, Lcom/android/server/obl;->E()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/server/obl;->F()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/server/obl;->cd:Z
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "mHasGpsRequest ="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/server/obl;->cd:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "OpAggressiveDoze"
+
+    invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-boolean v0, p0, Lcom/android/server/obl;->cd:Z
+
+    iget-object p0, p0, Lcom/android/server/obl;->mDeviceIdleController:Lcom/android/server/DeviceIdleController;
+
+    if-eqz v0, :cond_0
+
+    const-wide/32 v2, 0x1d4c0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v2, 0x2710
+
+    :goto_0
+    invoke-virtual {p0, v2, v3, v1}, Lcom/android/server/DeviceIdleController;->scheduleAlarmLocked(JZ)V
 
     const/4 p0, 0x1
 
     return p0
 
     :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return v1
 .end method
 
-.method public updateInteractiveStartTime(J)V
-    .locals 0
+.method public shellCommand(Lcom/android/server/DeviceIdleController$Shell;Ljava/lang/String;Ljava/io/PrintWriter;)Z
+    .locals 6
 
-    iput-wide p1, p0, Lcom/android/server/obl;->ud:J
+    const-string v0, "aggressive"
 
-    return-void
-.end method
+    invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public ywr(Z)V
-    .locals 4
+    move-result p2
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    new-array v1, v0, [I
+    if-eqz p2, :cond_3
 
-    const/4 v2, 0x0
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    const/16 v3, 0x5e
+    move-result-wide v1
 
-    aput v3, v1, v2
+    :try_start_0
+    invoke-virtual {p1}, Lcom/android/server/DeviceIdleController$Shell;->getNextArg()Ljava/lang/String;
 
-    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+    move-result-object p1
 
-    move-result v1
+    const/4 p2, 0x1
 
-    if-eqz v1, :cond_1
+    if-eqz p1, :cond_2
 
-    if-eqz p1, :cond_0
+    const-string v3, "OpAggressiveDoze"
 
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Lcom/android/server/obl$zta;->igw(Z)Z
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    const-string v5, "aggressive doze: "
 
-    invoke-virtual {p1, v0}, Lcom/android/server/obl$zta;->kth(Z)Z
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-wide/32 v0, 0x1b7740
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v3, p0, Lcom/android/server/obl;->mPolicy:I
+
+    const-string v4, "true"
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    move v0, p2
 
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    const-string v4, "false"
 
-    invoke-virtual {p1, v2}, Lcom/android/server/obl$zta;->igw(Z)Z
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object p1, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    move-result p1
 
-    invoke-virtual {p1, v2}, Lcom/android/server/obl$zta;->kth(Z)Z
+    if-eqz p1, :cond_1
 
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
-
-    const-wide/16 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p0, v0, v1}, Lcom/android/server/obl$zta;->tsu(J)J
+    goto :goto_0
 
     :cond_1
-    return-void
+    const-string p1, "please enter aggressive [true|false]"
+
+    invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :goto_0
+    iput v0, p0, Lcom/android/server/obl;->mPolicy:I
+
+    iget p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/obl;->Ha(I)V
+
+    iget p1, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-direct {p0, p1}, Lcom/android/server/obl;->Ia(I)V
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p1, "aggressive: "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " -> "
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_1
+    invoke-virtual {p3, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_2
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "mPolicy: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lcom/android/server/obl;->mPolicy:I
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :goto_2
+    invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return p2
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw p0
+
+    :cond_3
+    return v0
 .end method
 
-.method public zta(Lcom/android/server/AlarmManagerService$Alarm;)Z
+.method public startMonitoringMotionOverride()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/obl;->mAlignment:Lcom/android/server/obl$zta;
+    invoke-virtual {p0}, Lcom/android/server/obl;->E()Z
+
+    move-result p0
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/obl$zta;->zta(Lcom/android/server/AlarmManagerService$Alarm;)Z
-
-    move-result p0
+    const/4 p0, 0x1
 
     return p0
 
@@ -1745,4 +1820,64 @@
     const/4 p0, 0x0
 
     return p0
+.end method
+
+.method public tryClearAllPendingBroadcasts()V
+    .locals 2
+
+    iget v0, p0, Lcom/android/server/obl;->mPolicy:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/obl;->kc:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p0, p0, Lcom/android/server/obl;->mReceivers:Ljava/util/HashMap;
+
+    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/LocationManagerService$Receiver;
+
+    invoke-virtual {v1}, Lcom/android/server/LocationManagerService$Receiver;->clearPendingBroadcastsLocked()V
+
+    goto :goto_0
+
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method

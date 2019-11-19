@@ -32,141 +32,177 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 1
+    .locals 2
 
     iget p0, p1, Landroid/os/Message;->what:I
 
-    if-eqz p0, :cond_9
+    const-string v0, "OPBF"
 
-    const/16 v0, 0x2328
+    sparse-switch p0, :sswitch_data_0
 
-    if-eq p0, v0, :cond_8
+    goto/16 :goto_2
 
-    const/16 v0, 0x238c
+    :sswitch_0
+    sget p0, Lcom/android/server/Watchdog;->mPhonePid:I
 
-    if-eq p0, v0, :cond_7
+    if-lez p0, :cond_0
 
-    const/16 v0, 0x23f0
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    if-eq p0, v0, :cond_6
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/16 v0, 0x2422
+    const-string p1, "GET_GETVTDATAUSAGE_TIMEOUT kill phone process , pid = "
 
-    if-eq p0, v0, :cond_5
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x2454
+    sget p1, Lcom/android/server/Watchdog;->mPhonePid:I
 
-    if-eq p0, v0, :cond_4
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x24b8
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eq p0, v0, :cond_3
+    move-result-object p0
 
-    const/16 v0, 0x251c
+    goto :goto_0
 
-    if-eq p0, v0, :cond_2
+    :sswitch_1
+    sget p0, Lcom/android/server/Watchdog;->mPhonePid:I
 
-    const/16 v0, 0x2580
+    if-lez p0, :cond_0
 
-    if-eq p0, v0, :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x25e4
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eq p0, v0, :cond_0
+    const-string v1, "GET_CONFIGFORSUBID_TIMEOUT kill phone process , pid = "
 
-    goto :goto_1
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget p0, Lcom/android/server/Watchdog;->mPhonePid:I
+
+    invoke-static {p0}, Landroid/os/Process;->killProcess(I)V
+
+    goto :goto_2
+
+    :sswitch_2
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "NOTIFY_CHANGE_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :sswitch_3
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "ATTACH_APPLICATION_LOCKED_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :sswitch_4
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "BIND_SERVICE_LOCKED_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_3
+    :sswitch_5
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "DISPATCH_RESIZED_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_4
+    :sswitch_6
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "DISPATCH_APP_VISIBILITY_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_5
+    :sswitch_7
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "DISPLAY_EVENT_LOCAL_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_6
+    :sswitch_8
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "DISPLAY_EVENT_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_7
+    :sswitch_9
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "INPUT_DEVICES_CHANGE_TIMEOUT"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_8
+    :sswitch_a
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     const-string v0, "PUBLISH_SERVICE_TIMEOUT"
 
-    :goto_0
+    :goto_1
     invoke-static {p0, p1, v0}, Lcom/android/server/am/cgv;->zta(IILjava/lang/String;)V
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_9
+    :sswitch_b
     iget p0, p1, Landroid/os/Message;->arg1:I
 
     iget p1, p1, Landroid/os/Message;->arg2:I
 
     invoke-static {p0, p1}, Landroid/os/Process;->killProcessGroup(II)I
 
-    :goto_1
+    :cond_0
+    :goto_2
     return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_b
+        0x2328 -> :sswitch_a
+        0x238c -> :sswitch_9
+        0x23f0 -> :sswitch_8
+        0x2422 -> :sswitch_7
+        0x2454 -> :sswitch_6
+        0x24b8 -> :sswitch_5
+        0x251c -> :sswitch_4
+        0x2580 -> :sswitch_3
+        0x25e4 -> :sswitch_2
+        0x2648 -> :sswitch_1
+        0x26ac -> :sswitch_0
+    .end sparse-switch
 .end method

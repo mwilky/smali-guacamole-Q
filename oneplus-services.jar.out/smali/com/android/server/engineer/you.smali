@@ -13,17 +13,17 @@
 
 
 # static fields
-.field private static final DA:Ljava/lang/String; = "sys_engineer_config_list"
-
-.field private static final EA:Ljava/lang/String; = "/data/engineermode/sys_engineer_config_list.xml"
-
-.field private static final FA:Ljava/lang/String; = "/system/etc/sys_engineer_config_list.xml"
+.field private static final TA:Ljava/lang/String; = "sys_engineer_config_list"
 
 .field private static final TAG:Ljava/lang/String; = "you"
 
+.field private static final UA:Ljava/lang/String; = "/data/engineermode/sys_engineer_config_list.xml"
+
+.field private static final VA:Ljava/lang/String; = "/system/etc/sys_engineer_config_list.xml"
+
 
 # instance fields
-.field private final Xz:Lcom/android/server/engineer/you$zta;
+.field private final kA:Lcom/android/server/engineer/you$zta;
 
 
 # direct methods
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/engineer/bvj;->zta(Lcom/android/server/engineer/bvj$zta;Lcom/android/server/engineer/bvj$zta;)V
 
-    iput-object p2, p0, Lcom/android/server/engineer/you;->Xz:Lcom/android/server/engineer/you$zta;
+    iput-object p2, p0, Lcom/android/server/engineer/you;->kA:Lcom/android/server/engineer/you$zta;
 
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/engineer/bvj;->init()V
@@ -82,12 +82,12 @@
 
 
 # virtual methods
-.method public Ac()V
+.method public Bc()V
     .locals 1
 
-    invoke-super {p0}, Lcom/android/server/engineer/bvj;->Ac()V
+    invoke-super {p0}, Lcom/android/server/engineer/bvj;->Bc()V
 
-    iget-object p0, p0, Lcom/android/server/engineer/you;->Xz:Lcom/android/server/engineer/you$zta;
+    iget-object p0, p0, Lcom/android/server/engineer/you;->kA:Lcom/android/server/engineer/you$zta;
 
     if-eqz p0, :cond_0
 
@@ -175,7 +175,7 @@
     return p0
 .end method
 
-.method yc()Z
+.method zc()Z
     .locals 1
 
     const/4 v0, 0x1
@@ -186,7 +186,7 @@
 
     check-cast p0, Lcom/android/server/engineer/you$you;
 
-    invoke-virtual {p0}, Lcom/android/server/engineer/you$you;->yc()Z
+    invoke-virtual {p0}, Lcom/android/server/engineer/you$you;->zc()Z
 
     move-result p0
 

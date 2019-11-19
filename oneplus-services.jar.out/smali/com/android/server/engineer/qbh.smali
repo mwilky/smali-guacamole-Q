@@ -22,39 +22,39 @@
 
 .field public static final ERROR_NOT_SUPPORTED:I = -0x1
 
-.field public static final Hz:I = -0x2
-
-.field private static final Iz:I = 0x4
-
-.field private static final Jz:Ljava/lang/String; = "android.secrecy.SecrecyManagerInternal"
-
-.field private static final Kz:Ljava/lang/String; = "getSecrecyState"
-
-.field private static final Lz:Ljava/lang/String; = "android.os.OemManager"
-
-.field private static final Mz:Ljava/lang/String; = "writeLogToPartition"
-
-.field private static final Nz:Ljava/lang/String; = "cleanItem"
-
-.field private static final Oz:Ljava/lang/String; = "syncCacheToEmmc"
-
-.field private static final Pz:Ljava/lang/String; = "vendor.oem.hardware.cryptoeng.V1_0.ICryptoeng"
-
-.field private static final Qz:Ljava/lang/String; = "vendor.oem.hardware.biometrics.fingerprintpay.V1_0.IFingerprintPay"
-
-.field public static final Rz:B = 0x0t
-
 .field public static final STATUS_OK:I = 0x0
-
-.field public static final Sz:B = 0x1t
 
 .field private static final TAG:Ljava/lang/String; = "OneplusEngineerUtils"
 
-.field public static final Tz:B = 0x2t
+.field public static final Vz:I = -0x2
 
-.field private static final Uz:Ljava/io/File;
+.field private static final Wz:I = 0x4
 
-.field private static final Vg:Ljava/lang/String; = "oem.secrecy.support"
+.field private static final Xz:Ljava/lang/String; = "android.secrecy.SecrecyManagerInternal"
+
+.field private static final Yz:Ljava/lang/String; = "getSecrecyState"
+
+.field private static final Zz:Ljava/lang/String; = "android.os.OemManager"
+
+.field private static final _z:Ljava/lang/String; = "writeLogToPartition"
+
+.field private static final aA:Ljava/lang/String; = "cleanItem"
+
+.field private static final bA:Ljava/lang/String; = "syncCacheToEmmc"
+
+.field private static final cA:Ljava/lang/String; = "vendor.oem.hardware.cryptoeng.V1_0.ICryptoeng"
+
+.field private static final dA:Ljava/lang/String; = "vendor.oem.hardware.biometrics.fingerprintpay.V1_0.IFingerprintPay"
+
+.field public static final eA:B = 0x0t
+
+.field public static final fA:B = 0x1t
+
+.field public static final gA:B = 0x2t
+
+.field private static final hA:Ljava/io/File;
+
+.field private static final jh:Ljava/lang/String; = "oem.secrecy.support"
 
 
 # direct methods
@@ -67,7 +67,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
+    sput-object v0, Lcom/android/server/engineer/qbh;->hA:Ljava/io/File;
 
     new-instance v0, Ljava/io/File;
 
@@ -765,7 +765,7 @@
     return-object v3
 .end method
 
-.method static n(I)I
+.method static o(I)I
     .locals 4
 
     const/4 v0, 0x1
@@ -1339,7 +1339,7 @@
 
     :cond_3
     :goto_6
-    sget-object p0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
+    sget-object p0, Lcom/android/server/engineer/qbh;->hA:Ljava/io/File;
 
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
@@ -1353,7 +1353,7 @@
 
     invoke-static {p0, v0}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
-    sget-object p0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
+    sget-object p0, Lcom/android/server/engineer/qbh;->hA:Ljava/io/File;
 
     invoke-static {p0, v0}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
@@ -1467,7 +1467,7 @@
     return v1
 
     :cond_2
-    sget-object v4, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
+    sget-object v4, Lcom/android/server/engineer/qbh;->hA:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1680,7 +1680,7 @@
 
     invoke-static {p0, p1}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
-    sget-object p0, Lcom/android/server/engineer/qbh;->Uz:Ljava/io/File;
+    sget-object p0, Lcom/android/server/engineer/qbh;->hA:Ljava/io/File;
 
     invoke-static {p0, p1}, Lcom/android/server/engineer/qbh;->zta(Ljava/io/File;Ljava/lang/String;)V
 
@@ -1942,7 +1942,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->uc()Ljava/lang/Object;
+    invoke-static {}, Lcom/android/server/engineer/qbh;->vc()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1973,7 +1973,7 @@
     return-object p0
 .end method
 
-.method static uc()Ljava/lang/Object;
+.method static vc()Ljava/lang/Object;
     .locals 4
 
     const-string v0, "vendor.oem.hardware.cryptoeng.V1_0.ICryptoeng"
@@ -2013,7 +2013,7 @@
     return-object v0
 .end method
 
-.method static vc()Ljava/lang/Object;
+.method static wc()Ljava/lang/Object;
     .locals 4
 
     const-string v0, "vendor.oem.hardware.biometrics.fingerprintpay.V1_0.IFingerprintPay"
@@ -2053,7 +2053,7 @@
     return-object v0
 .end method
 
-.method static wc()Z
+.method static xc()Z
     .locals 2
 
     const-string v0, "ro.board.platform"
@@ -2073,35 +2073,6 @@
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
-
-    return v0
-.end method
-
-.method static xc()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    const-string v1, "android.os.OemManager"
-
-    const-string v2, "syncCacheToEmmc"
-
-    invoke-static {v0, v1, v2, v0, v0}, Lcom/android/server/engineer/qbh;->zta(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
 
     return v0
 .end method
@@ -2452,6 +2423,35 @@
 
     :cond_9
     throw v0
+.end method
+
+.method static yc()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const-string v1, "android.os.OemManager"
+
+    const-string v2, "syncCacheToEmmc"
+
+    invoke-static {v0, v1, v2, v0, v0}, Lcom/android/server/engineer/qbh;->zta(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    return v0
 .end method
 
 .method static you(Ljava/lang/Object;)I

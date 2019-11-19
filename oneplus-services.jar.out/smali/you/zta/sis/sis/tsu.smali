@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static Tk()[I
+.method public static Uk()[I
     .locals 1
 
     const/16 v0, 0xe

@@ -7,23 +7,23 @@
 
 
 # static fields
+.field public static final Dqa:I = 0x1
+
+.field public static final Eqa:I = 0x3
+
+.field public static final Fqa:I = 0x4
+
+.field public static final Gqa:I = 0x5
+
+.field public static final Hqa:I = 0x6
+
+.field public static final Iqa:I = 0x8
+
 .field public static final dNSName:I = 0x2
 
 .field public static final iPAddress:I = 0x7
 
-.field public static final otherName:I = 0x0
-
-.field public static final pqa:I = 0x1
-
-.field public static final qqa:I = 0x3
-
-.field public static final rqa:I = 0x4
-
-.field public static final sqa:I = 0x5
-
-.field public static final tqa:I = 0x6
-
-.field public static final uqa:I = 0x8
+.field public static final otherName:I
 
 
 # instance fields

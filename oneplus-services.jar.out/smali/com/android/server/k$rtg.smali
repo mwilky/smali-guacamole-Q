@@ -1,4 +1,4 @@
-.class Lcom/android/server/i$tsu;
+.class Lcom/android/server/k$rtg;
 .super Ljava/lang/Object;
 .source ""
 
@@ -8,34 +8,34 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/i;
+    value = Lcom/android/server/k;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x2
-    name = "tsu"
+    name = "rtg"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/server/i;
+.field final synthetic this$0:Lcom/android/server/k;
 
 
 # direct methods
-.method private constructor <init>(Lcom/android/server/i;)V
+.method private constructor <init>(Lcom/android/server/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iput-object p1, p0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/server/i;Lcom/android/server/h;)V
+.method synthetic constructor <init>(Lcom/android/server/k;Lcom/android/server/j;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/i$tsu;-><init>(Lcom/android/server/i;)V
+    invoke-direct {p0, p1}, Lcom/android/server/k$rtg;-><init>(Lcom/android/server/k;)V
 
     return-void
 .end method
@@ -83,9 +83,9 @@
     return-void
 
     :cond_0
-    iget-object v14, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v14, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v14}, Lcom/android/server/i;->kth(Lcom/android/server/i;)Z
+    invoke-static {v14}, Lcom/android/server/k;->kth(Lcom/android/server/k;)Z
 
     move-result v14
 
@@ -115,13 +115,13 @@
 
     if-eqz v16, :cond_2
 
-    iget-object v14, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v14, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v11}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v11
 
-    invoke-static {v14, v11}, Lcom/android/server/i;->sis(Lcom/android/server/i;Z)Z
+    invoke-static {v14, v11}, Lcom/android/server/k;->sis(Lcom/android/server/k;Z)Z
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -131,9 +131,9 @@
 
     invoke-virtual {v11, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v14, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v14, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v14}, Lcom/android/server/i;->rtg(Lcom/android/server/i;)Z
+    invoke-static {v14}, Lcom/android/server/k;->rtg(Lcom/android/server/k;)Z
 
     move-result v14
 
@@ -157,13 +157,13 @@
     if-eqz v11, :cond_3
 
     :try_start_1
-    iget-object v11, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v11, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v10}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v10
 
-    invoke-static {v11, v10}, Lcom/android/server/i;->tsu(Lcom/android/server/i;Z)Z
+    invoke-static {v11, v10}, Lcom/android/server/k;->tsu(Lcom/android/server/k;Z)Z
 
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -171,9 +171,9 @@
 
     invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v11, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v11, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v11}, Lcom/android/server/i;->bio(Lcom/android/server/i;)Z
+    invoke-static {v11}, Lcom/android/server/k;->bio(Lcom/android/server/k;)Z
 
     move-result v11
 
@@ -196,13 +196,13 @@
 
     if-eqz v10, :cond_4
 
-    iget-object v10, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v10, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v9}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v9
 
-    invoke-static {v10, v9}, Lcom/android/server/i;->tsu(Lcom/android/server/i;Z)Z
+    invoke-static {v10, v9}, Lcom/android/server/k;->tsu(Lcom/android/server/k;Z)Z
 
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -210,9 +210,9 @@
 
     invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v10, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v10, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v10}, Lcom/android/server/i;->bio(Lcom/android/server/i;)Z
+    invoke-static {v10}, Lcom/android/server/k;->bio(Lcom/android/server/k;)Z
 
     move-result v10
 
@@ -231,13 +231,13 @@
 
     if-eqz v9, :cond_5
 
-    iget-object v9, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v9, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v8}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v8
 
-    invoke-static {v9, v8}, Lcom/android/server/i;->rtg(Lcom/android/server/i;Z)Z
+    invoke-static {v9, v8}, Lcom/android/server/k;->rtg(Lcom/android/server/k;Z)Z
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -247,9 +247,9 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v9, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v9, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v9}, Lcom/android/server/i;->igw(Lcom/android/server/i;)Z
+    invoke-static {v9}, Lcom/android/server/k;->igw(Lcom/android/server/k;)Z
 
     move-result v9
 
@@ -268,13 +268,13 @@
 
     if-eqz v8, :cond_6
 
-    iget-object v8, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v8, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {v8, v7}, Lcom/android/server/i;->zta(Lcom/android/server/i;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8, v7}, Lcom/android/server/k;->zta(Lcom/android/server/k;Ljava/lang/String;)Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -284,9 +284,9 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v8, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v8, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v8}, Lcom/android/server/i;->wtn(Lcom/android/server/i;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/android/server/k;->wtn(Lcom/android/server/k;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -305,13 +305,13 @@
 
     if-eqz v7, :cond_7
 
-    iget-object v7, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v7, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v6}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v6
 
-    invoke-static {v7, v6}, Lcom/android/server/i;->sis(Lcom/android/server/i;I)I
+    invoke-static {v7, v6}, Lcom/android/server/k;->tsu(Lcom/android/server/k;I)I
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -321,9 +321,9 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v7, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v7, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v7}, Lcom/android/server/i;->gck(Lcom/android/server/i;)I
+    invoke-static {v7}, Lcom/android/server/k;->gck(Lcom/android/server/k;)I
 
     move-result v7
 
@@ -342,13 +342,13 @@
 
     if-eqz v6, :cond_8
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v5}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
     move-result v5
 
-    invoke-static {v6, v5}, Lcom/android/server/i;->ssp(Lcom/android/server/i;Z)Z
+    invoke-static {v6, v5}, Lcom/android/server/k;->ssp(Lcom/android/server/k;Z)Z
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -358,9 +358,9 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v6}, Lcom/android/server/i;->dma(Lcom/android/server/i;)Z
+    invoke-static {v6}, Lcom/android/server/k;->dma(Lcom/android/server/k;)Z
 
     move-result v6
 
@@ -379,13 +379,13 @@
 
     if-eqz v5, :cond_9
 
-    iget-object v5, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v5, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
-    invoke-static {v5, v4}, Lcom/android/server/i;->tsu(Lcom/android/server/i;I)I
+    invoke-static {v5, v4}, Lcom/android/server/k;->rtg(Lcom/android/server/k;I)I
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -395,9 +395,9 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v5, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v5}, Lcom/android/server/i;->ywr(Lcom/android/server/i;)I
+    invoke-static {v5}, Lcom/android/server/k;->ywr(Lcom/android/server/k;)I
 
     move-result v5
 
@@ -416,13 +416,13 @@
 
     if-eqz v4, :cond_a
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v3}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
     move-result-wide v5
 
-    invoke-static {v4, v5, v6}, Lcom/android/server/i;->zta(Lcom/android/server/i;J)J
+    invoke-static {v4, v5, v6}, Lcom/android/server/k;->zta(Lcom/android/server/k;J)J
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -432,9 +432,9 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v4}, Lcom/android/server/i;->qbh(Lcom/android/server/i;)J
+    invoke-static {v4}, Lcom/android/server/k;->qbh(Lcom/android/server/k;)J
 
     move-result-wide v4
 
@@ -453,13 +453,13 @@
 
     if-eqz v3, :cond_b
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     invoke-virtual {v15, v2}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
     move-result-wide v4
 
-    invoke-static {v3, v4, v5}, Lcom/android/server/i;->you(Lcom/android/server/i;J)J
+    invoke-static {v3, v4, v5}, Lcom/android/server/k;->you(Lcom/android/server/k;J)J
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -469,9 +469,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->oif(Lcom/android/server/i;)J
+    invoke-static {v3}, Lcom/android/server/k;->oif(Lcom/android/server/k;)J
 
     move-result-wide v3
 
@@ -492,7 +492,7 @@
 
     if-eqz v2, :cond_c
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "monitor_period"
 
@@ -500,7 +500,7 @@
 
     move-result-wide v3
 
-    invoke-static {v2, v3, v4}, Lcom/android/server/i;->sis(Lcom/android/server/i;J)J
+    invoke-static {v2, v3, v4}, Lcom/android/server/k;->sis(Lcom/android/server/k;J)J
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -510,9 +510,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->bvj(Lcom/android/server/i;)J
+    invoke-static {v3}, Lcom/android/server/k;->bvj(Lcom/android/server/k;)J
 
     move-result-wide v3
 
@@ -533,7 +533,7 @@
 
     if-eqz v2, :cond_d
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "monitor_frequency"
 
@@ -541,7 +541,7 @@
 
     move-result-wide v3
 
-    invoke-static {v2, v3, v4}, Lcom/android/server/i;->tsu(Lcom/android/server/i;J)J
+    invoke-static {v2, v3, v4}, Lcom/android/server/k;->tsu(Lcom/android/server/k;J)J
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -551,9 +551,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->ibl(Lcom/android/server/i;)J
+    invoke-static {v3}, Lcom/android/server/k;->ibl(Lcom/android/server/k;)J
 
     move-result-wide v3
 
@@ -574,7 +574,7 @@
 
     if-eqz v2, :cond_e
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "monitor_temp"
 
@@ -582,7 +582,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lcom/android/server/i;->rtg(Lcom/android/server/i;I)I
+    invoke-static {v2, v3}, Lcom/android/server/k;->ssp(Lcom/android/server/k;I)I
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -592,9 +592,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->ugm(Lcom/android/server/i;)I
+    invoke-static {v3}, Lcom/android/server/k;->gwm(Lcom/android/server/k;)I
 
     move-result v3
 
@@ -615,7 +615,7 @@
 
     if-eqz v2, :cond_f
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "critical_cpu"
 
@@ -623,7 +623,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lcom/android/server/i;->ssp(Lcom/android/server/i;I)I
+    invoke-static {v2, v3}, Lcom/android/server/k;->cno(Lcom/android/server/k;I)I
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -633,9 +633,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->vdb(Lcom/android/server/i;)I
+    invoke-static {v3}, Lcom/android/server/k;->ugm(Lcom/android/server/k;)I
 
     move-result v3
 
@@ -656,7 +656,7 @@
 
     if-eqz v2, :cond_10
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "critical_total_cpu"
 
@@ -664,7 +664,7 @@
 
     move-result v3
 
-    invoke-static {v2, v3}, Lcom/android/server/i;->cno(Lcom/android/server/i;I)I
+    invoke-static {v2, v3}, Lcom/android/server/k;->kth(Lcom/android/server/k;I)I
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -674,9 +674,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->zgw(Lcom/android/server/i;)I
+    invoke-static {v3}, Lcom/android/server/k;->vdb(Lcom/android/server/k;)I
 
     move-result v3
 
@@ -697,7 +697,7 @@
 
     if-eqz v2, :cond_11
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "critical_foreground"
 
@@ -705,7 +705,7 @@
 
     move-result-wide v3
 
-    invoke-static {v2, v3, v4}, Lcom/android/server/i;->rtg(Lcom/android/server/i;J)J
+    invoke-static {v2, v3, v4}, Lcom/android/server/k;->rtg(Lcom/android/server/k;J)J
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -715,9 +715,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->obl(Lcom/android/server/i;)J
+    invoke-static {v3}, Lcom/android/server/k;->zgw(Lcom/android/server/k;)J
 
     move-result-wide v3
 
@@ -738,7 +738,7 @@
 
     if-eqz v2, :cond_12
 
-    iget-object v2, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v2, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v3, "critical_charging"
 
@@ -746,7 +746,7 @@
 
     move-result-wide v3
 
-    invoke-static {v2, v3, v4}, Lcom/android/server/i;->ssp(Lcom/android/server/i;J)J
+    invoke-static {v2, v3, v4}, Lcom/android/server/k;->ssp(Lcom/android/server/k;J)J
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -756,9 +756,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v3, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    invoke-static {v3}, Lcom/android/server/i;->oxb(Lcom/android/server/i;)J
+    invoke-static {v3}, Lcom/android/server/k;->obl(Lcom/android/server/k;)J
 
     move-result-wide v3
 
@@ -827,65 +827,75 @@
 
     move-result-object v2
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v5, "system_report_rules"
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    iget-object v6, v6, Lcom/android/server/i;->eg:Lcom/android/server/i$ssp;
+    iget-object v6, v6, Lcom/android/server/k;->sg:Lcom/android/server/k$cno;
 
-    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/i;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/i$ssp;)V
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v5, "forground_report_rules"
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    iget-object v6, v6, Lcom/android/server/i;->fg:Lcom/android/server/i$ssp;
+    iget-object v6, v6, Lcom/android/server/k;->tg:Lcom/android/server/k$cno;
 
-    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/i;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/i$ssp;)V
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v5, "background_report_rules"
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    iget-object v6, v6, Lcom/android/server/i;->gg:Lcom/android/server/i$ssp;
+    iget-object v6, v6, Lcom/android/server/k;->ug:Lcom/android/server/k$cno;
 
-    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/i;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/i$ssp;)V
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v5, "unknown_report_rules"
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    iget-object v6, v6, Lcom/android/server/i;->hg:Lcom/android/server/i$ssp;
+    iget-object v6, v6, Lcom/android/server/k;->vg:Lcom/android/server/k$cno;
 
-    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/i;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/i$ssp;)V
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
+
+    const-string v5, "flashlight_report_rules"
+
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
+
+    iget-object v6, v6, Lcom/android/server/k;->yg:Lcom/android/server/k$cno;
+
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
+
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v5, "total_cpu_load_report_rules"
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    iget-object v6, v6, Lcom/android/server/i;->ig:Lcom/android/server/i$ssp;
+    iget-object v6, v6, Lcom/android/server/k;->wg:Lcom/android/server/k$cno;
 
-    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/i;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/i$ssp;)V
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
 
-    iget-object v4, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v4, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
     const-string v5, "camera_hardware_rules"
 
-    iget-object v6, v0, Lcom/android/server/i$tsu;->this$0:Lcom/android/server/i;
+    iget-object v6, v0, Lcom/android/server/k$rtg;->this$0:Lcom/android/server/k;
 
-    iget-object v6, v6, Lcom/android/server/i;->jg:Lcom/android/server/i$ssp;
+    iget-object v6, v6, Lcom/android/server/k;->xg:Lcom/android/server/k$cno;
 
-    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/i;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/i$ssp;)V
+    invoke-virtual {v4, v2, v5, v6}, Lcom/android/server/k;->zta(Lorg/json/JSONObject;Ljava/lang/String;Lcom/android/server/k$cno;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -919,7 +929,7 @@
 .method public updateConfig(Lorg/json/JSONArray;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/i$tsu;->resolveConfigFromJSON(Lorg/json/JSONArray;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/k$rtg;->resolveConfigFromJSON(Lorg/json/JSONArray;)V
 
     return-void
 .end method

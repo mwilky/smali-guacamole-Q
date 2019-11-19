@@ -15,9 +15,7 @@
 
 
 # instance fields
-.field mUid:I
-
-.field ni:Ljava/util/ArrayList;
+.field Ei:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -27,7 +25,9 @@
     .end annotation
 .end field
 
-.field oi:Ljava/lang/String;
+.field Fi:Ljava/lang/String;
+
+.field mUid:I
 
 .field final synthetic this$0:Lcom/android/server/am/ugm;
 
@@ -44,11 +44,11 @@
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     const-string p1, ""
 
-    iput-object p1, p0, Lcom/android/server/am/ugm$tsu;->oi:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/am/ugm$tsu;->Fi:Ljava/lang/String;
 
     const/4 p1, -0x1
 
@@ -65,10 +65,10 @@
     return-void
 .end method
 
-.method private Jl()Z
+.method private Ll()Z
     .locals 2
 
-    iget-object v0, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -93,7 +93,7 @@
 .method private cgv(J)V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -138,13 +138,13 @@
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/android/server/am/ugm$tsu;->oi:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/am/ugm$tsu;->Fi:Ljava/lang/String;
 
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/am/ugm$tsu;->mUid:I
 
-    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
@@ -164,7 +164,7 @@
 .method private you(Ljava/lang/String;IJ)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/am/ugm$tsu;->oi:Ljava/lang/String;
+    iget-object v0, p0, Lcom/android/server/am/ugm$tsu;->Fi:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -176,7 +176,7 @@
 
     if-ne p1, p2, :cond_0
 
-    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -239,11 +239,11 @@
 
     invoke-direct {p0}, Lcom/android/server/am/ugm$tsu;->clear()V
 
-    iput-object p1, p0, Lcom/android/server/am/ugm$tsu;->oi:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/am/ugm$tsu;->Fi:Ljava/lang/String;
 
     iput p2, p0, Lcom/android/server/am/ugm$tsu;->mUid:I
 
-    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->ni:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/am/ugm$tsu;->Ei:Ljava/util/ArrayList;
 
     invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -257,7 +257,7 @@
 .method static synthetic zta(Lcom/android/server/am/ugm$tsu;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/am/ugm$tsu;->Jl()Z
+    invoke-direct {p0}, Lcom/android/server/am/ugm$tsu;->Ll()Z
 
     move-result p0
 

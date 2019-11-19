@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public Vu:D
+.field public jv:D
 
 .field public mX:D
 
@@ -34,7 +34,7 @@
 
     iput-wide v0, p0, Lcom/android/server/am/l$zta;->mY:D
 
-    iput-wide v0, p0, Lcom/android/server/am/l$zta;->Vu:D
+    iput-wide v0, p0, Lcom/android/server/am/l$zta;->jv:D
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 
     iput-wide p3, p0, Lcom/android/server/am/l$zta;->mY:D
 
-    iput-wide p5, p0, Lcom/android/server/am/l$zta;->Vu:D
+    iput-wide p5, p0, Lcom/android/server/am/l$zta;->jv:D
 
     return-void
 .end method
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/l$zta;->Vu:D
+    iget-wide v1, p0, Lcom/android/server/am/l$zta;->jv:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 

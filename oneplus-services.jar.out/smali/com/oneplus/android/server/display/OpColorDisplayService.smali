@@ -564,7 +564,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Je()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ke()V
 
     return-void
 .end method
@@ -872,7 +872,7 @@
 
     const/4 v1, 0x7
 
-    invoke-virtual {p1, v1}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {p1, v1}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -880,7 +880,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->He()V
+    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->Ie()V
 
     new-array p1, v2, [I
 
@@ -901,7 +901,7 @@
     :cond_1
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -917,7 +917,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->He()V
+    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->Ie()V
 
     :cond_2
     new-array p1, v2, [I
@@ -939,7 +939,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
-    invoke-virtual {v1, p1}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {v1, p1}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -952,7 +952,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
-    invoke-virtual {p1, v9}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {p1, v9}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -967,7 +967,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {p1, v1}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {p1, v1}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -979,7 +979,7 @@
     :goto_0
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->Ge()V
+    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->He()V
 
     new-array p1, v2, [I
 
@@ -996,7 +996,7 @@
     :cond_7
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {v1, v4}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -1012,7 +1012,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->He()V
+    invoke-virtual {p1}, Lcom/oneplus/android/server/display/bvj;->Ie()V
 
     :cond_8
     new-array p1, v2, [I
@@ -1034,7 +1034,7 @@
     :goto_2
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorGamutManager:Lcom/oneplus/android/server/display/dma;
 
-    invoke-virtual {p0, v0}, Lcom/oneplus/android/server/display/dma;->D(I)V
+    invoke-virtual {p0, v0}, Lcom/oneplus/android/server/display/dma;->E(I)V
 
     return-void
 .end method
@@ -1068,7 +1068,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
-    invoke-virtual {v1, v0}, Lcom/oneplus/android/server/display/OpColorModeManager;->H(I)Z
+    invoke-virtual {v1, v0}, Lcom/oneplus/android/server/display/OpColorModeManager;->I(I)Z
 
     move-result v1
 
@@ -1435,7 +1435,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/display/bvj;->Ie()V
+    invoke-virtual {v1}, Lcom/oneplus/android/server/display/bvj;->Je()V
 
     new-array v1, v5, [I
 
@@ -1456,13 +1456,13 @@
     :cond_1
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorTintManager:Lcom/oneplus/android/server/display/bvj;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/display/bvj;->De()V
+    invoke-virtual {v1}, Lcom/oneplus/android/server/display/bvj;->Ee()V
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
     const/4 v6, 0x7
 
-    invoke-virtual {v1, v6}, Lcom/oneplus/android/server/display/OpColorModeManager;->L(I)V
+    invoke-virtual {v1, v6}, Lcom/oneplus/android/server/display/OpColorModeManager;->M(I)V
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mOpColorModeManager:Lcom/oneplus/android/server/display/OpColorModeManager;
 
@@ -1993,7 +1993,7 @@
 
     iget-object v1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService;->mColorGamutManager:Lcom/oneplus/android/server/display/dma;
 
-    invoke-virtual {v1, v0}, Lcom/oneplus/android/server/display/dma;->D(I)V
+    invoke-virtual {v1, v0}, Lcom/oneplus/android/server/display/dma;->E(I)V
 
     sget-boolean v0, Lcom/oneplus/android/server/display/OpColorDisplayService;->IS_SUPPORT_DECR_BL_CJ:Z
 

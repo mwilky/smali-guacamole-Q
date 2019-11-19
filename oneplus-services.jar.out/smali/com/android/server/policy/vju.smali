@@ -18,25 +18,25 @@
 # static fields
 .field private static final DEBUG:Z
 
+.field private static final H:I = 0x3
+
 .field private static final TAG:Ljava/lang/String; = "OpGestures"
 
-.field private static final eE:I = 0xc8
+.field private static final sE:I = 0xc8
 
-.field private static final fE:I = 0x5
+.field private static final tE:I = 0x5
 
-.field private static final gE:I = 0x1f4
-
-.field private static final o:I = 0x3
+.field private static final uE:I = 0x1f4
 
 
 # instance fields
-.field private SD:Z
+.field private fE:Z
 
-.field private TD:I
+.field private gE:I
 
-.field private UD:I
+.field private hE:I
 
-.field private VD:Ljava/util/ArrayList;
+.field private iE:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -46,7 +46,7 @@
     .end annotation
 .end field
 
-.field private WD:Ljava/util/ArrayList;
+.field private jE:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -56,7 +56,7 @@
     .end annotation
 .end field
 
-.field private XD:Ljava/util/ArrayList;
+.field private kE:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -66,19 +66,7 @@
     .end annotation
 .end field
 
-.field private YD:Z
-
-.field private ZD:I
-
-.field private _D:Landroid/graphics/Point;
-
-.field private aE:Landroid/graphics/Point;
-
-.field private bE:Z
-
-.field cE:I
-
-.field dE:I
+.field private lE:Z
 
 .field private mActivityManager:Landroid/app/ActivityManager;
 
@@ -86,11 +74,23 @@
 
 .field private mCurrentUserId:I
 
+.field private mE:I
+
 .field private mHandler:Landroid/os/Handler;
 
 .field private mScreenHeight:I
 
 .field private mScreenWidth:I
+
+.field private nE:Landroid/graphics/Point;
+
+.field private oE:Landroid/graphics/Point;
+
+.field private pE:Z
+
+.field qE:I
+
+.field rE:I
 
 
 # direct methods
@@ -113,27 +113,27 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/policy/vju;->YD:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/vju;->lE:Z
 
     const/4 v1, -0x1
 
-    iput v1, p0, Lcom/android/server/policy/vju;->ZD:I
+    iput v1, p0, Lcom/android/server/policy/vju;->mE:I
 
     iput v1, p0, Lcom/android/server/policy/vju;->mScreenHeight:I
 
@@ -141,11 +141,11 @@
 
     iput v0, p0, Lcom/android/server/policy/vju;->mCurrentUserId:I
 
-    iput-boolean v0, p0, Lcom/android/server/policy/vju;->bE:Z
+    iput-boolean v0, p0, Lcom/android/server/policy/vju;->pE:Z
 
-    iput v1, p0, Lcom/android/server/policy/vju;->cE:I
+    iput v1, p0, Lcom/android/server/policy/vju;->qE:I
 
-    iput v1, p0, Lcom/android/server/policy/vju;->dE:I
+    iput v1, p0, Lcom/android/server/policy/vju;->rE:I
 
     iput-object p1, p0, Lcom/android/server/policy/vju;->mContext:Landroid/content/Context;
 
@@ -191,7 +191,7 @@
 
     div-int/lit8 p1, p1, 0x3
 
-    iput p1, p0, Lcom/android/server/policy/vju;->cE:I
+    iput p1, p0, Lcom/android/server/policy/vju;->qE:I
 
     iget p1, p2, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -203,7 +203,7 @@
 
     div-int/lit8 p1, p1, 0x3
 
-    iput p1, p0, Lcom/android/server/policy/vju;->dE:I
+    iput p1, p0, Lcom/android/server/policy/vju;->rE:I
 
     iget p1, p2, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -248,36 +248,36 @@
     return-void
 .end method
 
-.method private Hn()I
+.method private In()I
     .locals 4
 
-    iget-object v0, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Lcom/android/server/policy/vju;->wtn(Ljava/util/ArrayList;)I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1}, Lcom/android/server/policy/vju;->wtn(Ljava/util/ArrayList;)I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     invoke-direct {p0, v2}, Lcom/android/server/policy/vju;->wtn(Ljava/util/ArrayList;)I
 
     move-result v2
 
-    invoke-direct {p0, v0, v1}, Lcom/android/server/policy/vju;->ire(II)I
+    invoke-direct {p0, v0, v1}, Lcom/android/server/policy/vju;->hmo(II)I
 
     move-result v3
 
-    invoke-direct {p0, v1, v2}, Lcom/android/server/policy/vju;->ire(II)I
+    invoke-direct {p0, v1, v2}, Lcom/android/server/policy/vju;->hmo(II)I
 
     move-result v1
 
-    invoke-direct {p0, v0, v2}, Lcom/android/server/policy/vju;->ire(II)I
+    invoke-direct {p0, v0, v2}, Lcom/android/server/policy/vju;->hmo(II)I
 
     move-result p0
 
@@ -291,35 +291,6 @@
     move p0, v1
 
     :cond_1
-    return p0
-.end method
-
-.method private In()I
-    .locals 2
-
-    iget-object v0, p0, Lcom/android/server/policy/vju;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v1, 0x2
-
-    if-ne v1, v0, :cond_0
-
-    iget p0, p0, Lcom/android/server/policy/vju;->dE:I
-
-    return p0
-
-    :cond_0
-    iget p0, p0, Lcom/android/server/policy/vju;->cE:I
-
     return p0
 .end method
 
@@ -342,20 +313,49 @@
 
     if-ne v1, v0, :cond_0
 
-    iget p0, p0, Lcom/android/server/policy/vju;->cE:I
+    iget p0, p0, Lcom/android/server/policy/vju;->rE:I
 
     return p0
 
     :cond_0
-    iget p0, p0, Lcom/android/server/policy/vju;->dE:I
+    iget p0, p0, Lcom/android/server/policy/vju;->qE:I
 
     return p0
 .end method
 
-.method private Kn()Z
+.method private Kn()I
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/server/policy/vju;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x2
+
+    if-ne v1, v0, :cond_0
+
+    iget p0, p0, Lcom/android/server/policy/vju;->qE:I
+
+    return p0
+
+    :cond_0
+    iget p0, p0, Lcom/android/server/policy/vju;->rE:I
+
+    return p0
+.end method
+
+.method private Ln()Z
     .locals 5
 
-    iget-object v0, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -367,7 +367,7 @@
 
     if-lez v0, :cond_2
 
-    iget-object v0, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -393,7 +393,7 @@
     move v0, v2
 
     :goto_1
-    iget-object v4, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -401,9 +401,9 @@
 
     check-cast v3, Landroid/graphics/Point;
 
-    iput-object v3, p0, Lcom/android/server/policy/vju;->_D:Landroid/graphics/Point;
+    iput-object v3, p0, Lcom/android/server/policy/vju;->nE:Landroid/graphics/Point;
 
-    iget-object v3, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -411,10 +411,10 @@
 
     check-cast v0, Landroid/graphics/Point;
 
-    iput-object v0, p0, Lcom/android/server/policy/vju;->aE:Landroid/graphics/Point;
+    iput-object v0, p0, Lcom/android/server/policy/vju;->oE:Landroid/graphics/Point;
 
     :cond_2
-    invoke-direct {p0}, Lcom/android/server/policy/vju;->Hn()I
+    invoke-direct {p0}, Lcom/android/server/policy/vju;->In()I
 
     move-result v0
 
@@ -425,7 +425,7 @@
     return v2
 
     :cond_3
-    iget-object v0, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Lcom/android/server/policy/vju;->gck(Ljava/util/ArrayList;)Z
 
@@ -433,7 +433,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Lcom/android/server/policy/vju;->gck(Ljava/util/ArrayList;)Z
 
@@ -441,7 +441,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0}, Lcom/android/server/policy/vju;->gck(Ljava/util/ArrayList;)Z
 
@@ -652,7 +652,7 @@
 
     move-result p1
 
-    invoke-direct {p0}, Lcom/android/server/policy/vju;->In()I
+    invoke-direct {p0}, Lcom/android/server/policy/vju;->Jn()I
 
     move-result v0
 
@@ -670,7 +670,7 @@
 
     move-result p1
 
-    invoke-direct {p0}, Lcom/android/server/policy/vju;->Jn()I
+    invoke-direct {p0}, Lcom/android/server/policy/vju;->Kn()I
 
     move-result p0
 
@@ -685,7 +685,7 @@
     return v1
 .end method
 
-.method private ire(II)I
+.method private hmo(II)I
     .locals 0
 
     if-le p1, p2, :cond_0
@@ -882,7 +882,7 @@
 
     iput p1, p3, Landroid/graphics/Point;->y:I
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -890,12 +890,12 @@
 
     if-le p1, v2, :cond_0
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     :goto_0
     invoke-virtual {p0, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -923,7 +923,7 @@
 
     iput p1, p3, Landroid/graphics/Point;->y:I
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -931,12 +931,12 @@
 
     if-le p1, v2, :cond_2
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_2
-    iget-object p0, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
 
     goto :goto_0
 
@@ -961,7 +961,7 @@
 
     iput p1, p3, Landroid/graphics/Point;->y:I
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -969,12 +969,12 @@
 
     if-le p1, v2, :cond_4
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     :cond_4
-    iget-object p0, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     goto :goto_0
 
@@ -988,7 +988,7 @@
 .method public f(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/policy/vju;->YD:Z
+    iput-boolean p1, p0, Lcom/android/server/policy/vju;->lE:Z
 
     return-void
 .end method
@@ -1003,7 +1003,7 @@
     return-void
 
     :cond_0
-    iget-boolean v0, p0, Lcom/android/server/policy/vju;->YD:Z
+    iget-boolean v0, p0, Lcom/android/server/policy/vju;->lE:Z
 
     if-nez v0, :cond_1
 
@@ -1031,36 +1031,36 @@
     :cond_2
     if-nez v0, :cond_3
 
-    iput-boolean v3, p0, Lcom/android/server/policy/vju;->SD:Z
+    iput-boolean v3, p0, Lcom/android/server/policy/vju;->fE:Z
 
-    iput v2, p0, Lcom/android/server/policy/vju;->TD:I
+    iput v2, p0, Lcom/android/server/policy/vju;->gE:I
 
-    iput v2, p0, Lcom/android/server/policy/vju;->UD:I
+    iput v2, p0, Lcom/android/server/policy/vju;->hE:I
 
-    iget-object v4, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v4, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    iget-object v4, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v4, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
     :cond_3
-    iget v4, p0, Lcom/android/server/policy/vju;->TD:I
+    iget v4, p0, Lcom/android/server/policy/vju;->gE:I
 
     add-int/2addr v4, v3
 
-    iput v4, p0, Lcom/android/server/policy/vju;->TD:I
+    iput v4, p0, Lcom/android/server/policy/vju;->gE:I
 
-    iget v4, p0, Lcom/android/server/policy/vju;->TD:I
+    iget v4, p0, Lcom/android/server/policy/vju;->gE:I
 
     if-ne v4, v1, :cond_6
 
-    iget v4, p0, Lcom/android/server/policy/vju;->ZD:I
+    iget v4, p0, Lcom/android/server/policy/vju;->mE:I
 
     const/4 v5, -0x1
 
@@ -1072,7 +1072,7 @@
 
     float-to-int v4, v4
 
-    iput v4, p0, Lcom/android/server/policy/vju;->ZD:I
+    iput v4, p0, Lcom/android/server/policy/vju;->mE:I
 
     :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
@@ -1099,16 +1099,16 @@
     move v4, v2
 
     :goto_0
-    iput-boolean v4, p0, Lcom/android/server/policy/vju;->bE:Z
+    iput-boolean v4, p0, Lcom/android/server/policy/vju;->pE:Z
 
     :cond_6
-    iget v4, p0, Lcom/android/server/policy/vju;->UD:I
+    iget v4, p0, Lcom/android/server/policy/vju;->hE:I
 
-    iget v5, p0, Lcom/android/server/policy/vju;->TD:I
+    iget v5, p0, Lcom/android/server/policy/vju;->gE:I
 
     if-ge v4, v5, :cond_7
 
-    iput v5, p0, Lcom/android/server/policy/vju;->UD:I
+    iput v5, p0, Lcom/android/server/policy/vju;->hE:I
 
     :cond_7
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
@@ -1120,7 +1120,7 @@
     :goto_1
     if-ge v5, v4, :cond_8
 
-    iget v6, p0, Lcom/android/server/policy/vju;->UD:I
+    iget v6, p0, Lcom/android/server/policy/vju;->hE:I
 
     invoke-direct {p0, p1, v5, v6}, Lcom/android/server/policy/vju;->zta(Landroid/view/MotionEvent;II)V
 
@@ -1147,15 +1147,15 @@
     goto :goto_2
 
     :cond_a
-    iget p1, p0, Lcom/android/server/policy/vju;->TD:I
+    iget p1, p0, Lcom/android/server/policy/vju;->gE:I
 
     if-ne p1, v1, :cond_b
 
-    iget-boolean p1, p0, Lcom/android/server/policy/vju;->bE:Z
+    iget-boolean p1, p0, Lcom/android/server/policy/vju;->pE:Z
 
     if-eqz p1, :cond_b
 
-    invoke-direct {p0}, Lcom/android/server/policy/vju;->Kn()Z
+    invoke-direct {p0}, Lcom/android/server/policy/vju;->Ln()Z
 
     move-result p1
 
@@ -1166,21 +1166,21 @@
     invoke-virtual {p1, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_b
-    iget p1, p0, Lcom/android/server/policy/vju;->TD:I
+    iget p1, p0, Lcom/android/server/policy/vju;->gE:I
 
     sub-int/2addr p1, v3
 
-    iput p1, p0, Lcom/android/server/policy/vju;->TD:I
+    iput p1, p0, Lcom/android/server/policy/vju;->gE:I
 
-    iget-object p1, p0, Lcom/android/server/policy/vju;->VD:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
-
-    iget-object p1, p0, Lcom/android/server/policy/vju;->WD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->iE:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    iget-object p0, p0, Lcom/android/server/policy/vju;->XD:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/policy/vju;->jE:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
+
+    iget-object p0, p0, Lcom/android/server/policy/vju;->kE:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
@@ -1188,9 +1188,9 @@
 
     :cond_c
     :goto_2
-    iput-boolean v2, p0, Lcom/android/server/policy/vju;->SD:Z
+    iput-boolean v2, p0, Lcom/android/server/policy/vju;->fE:Z
 
-    iput v2, p0, Lcom/android/server/policy/vju;->TD:I
+    iput v2, p0, Lcom/android/server/policy/vju;->gE:I
 
     :cond_d
     :goto_3

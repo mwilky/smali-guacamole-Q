@@ -24,7 +24,7 @@
 
 .field private mOnePlusThemeController:Lcom/oneplus/server/zta/sis;
 
-.field private mOpCommonFrontMonitor:Lcom/android/server/ire;
+.field private mOpCommonFrontMonitor:Lcom/android/server/fto;
 
 .field private opams:Lcom/android/server/am/obl;
 
@@ -408,19 +408,19 @@
 
     iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOnePlusThemeController:Lcom/oneplus/server/zta/sis;
 
-    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->yf()V
+    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->zf()V
 
-    invoke-static {}, Lcom/android/server/ire;->getInstance()Lcom/android/server/ire;
+    invoke-static {}, Lcom/android/server/fto;->getInstance()Lcom/android/server/fto;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/ire;
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/fto;
 
-    iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/ire;
+    iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOpCommonFrontMonitor:Lcom/android/server/fto;
 
     iget-object p0, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, p0}, Lcom/android/server/ire;->init(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/android/server/fto;->init(Landroid/content/Context;)V
 
     return-void
 .end method

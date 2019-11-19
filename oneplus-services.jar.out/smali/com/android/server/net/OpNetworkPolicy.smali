@@ -944,7 +944,7 @@
 
     sget-boolean p0, Lcom/android/server/net/OpNetworkPolicy;->mEnableFGNetworkRestrictFeature:Z
 
-    if-eqz p0, :cond_7
+    if-eqz p0, :cond_9
 
     sget-boolean p0, Lcom/android/server/net/OpNetworkPolicy;->isDozeChangeSupport:Z
 
@@ -954,12 +954,12 @@
 
     sget p0, Lcom/android/server/net/OpNetworkPolicy;->mPolicy:I
 
-    if-ne p0, v0, :cond_7
+    if-ne p0, v0, :cond_9
 
     :cond_0
     sget-boolean p0, Lcom/android/server/net/OpNetworkPolicy;->mFirstDeviceMode:Z
 
-    if-eqz p0, :cond_7
+    if-eqz p0, :cond_9
 
     sget-boolean p0, Lcom/android/server/net/OpNetworkPolicy;->mAllowFGNetworkAccess:Z
 
@@ -985,7 +985,7 @@
     :cond_2
     const/4 p0, 0x5
 
-    if-gt p2, p0, :cond_6
+    if-gt p2, p0, :cond_8
 
     sget-boolean p0, Lcom/android/server/net/OpNetworkPolicy;->mAllowFGNetworkAccess:Z
 
@@ -994,28 +994,63 @@
     return v0
 
     :cond_3
-    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->oxb(I)I
+    invoke-static {p1}, Lcom/android/server/am/AppRecordManager;->cjf(I)I
 
     move-result p0
 
     and-int/lit16 p2, p0, 0x80
 
-    if-nez p2, :cond_4
+    const-string v2, "isProcStateAllowedWhileIdleOrPowerSaveMode uid:"
+
+    if-nez p2, :cond_6
 
     and-int/lit8 p2, p0, 0x2
 
-    if-eqz p2, :cond_6
+    if-eqz p2, :cond_4
+
+    goto :goto_0
 
     :cond_4
+    invoke-static {p1}, Lcom/android/server/DeviceIdleControllerInjector;->isDozingGps(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_8
+
+    sget-boolean p0, Lcom/android/server/net/OpNetworkPolicy;->DEBUG_ONEPLUS:Z
+
+    if-eqz p0, :cond_5
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", isDozingGps true"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    return v0
+
+    :cond_6
+    :goto_0
     sget-boolean p2, Lcom/android/server/net/OpNetworkPolicy;->DEBUG_ONEPLUS:Z
 
-    if-eqz p2, :cond_5
+    if-eqz p2, :cond_7
 
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "isProcStateAllowedWhileIdleOrPowerSaveMode uid:"
 
     invoke-virtual {p2, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1033,15 +1068,15 @@
 
     invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_7
     return v0
 
-    :cond_6
+    :cond_8
     const/4 p0, 0x0
 
     return p0
 
-    :cond_7
+    :cond_9
     invoke-static {p2}, Landroid/net/NetworkPolicyManager;->isProcStateAllowedWhileIdleOrPowerSaveMode(I)Z
 
     move-result p0

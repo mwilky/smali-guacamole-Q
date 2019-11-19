@@ -4,6 +4,8 @@
 
 
 # static fields
+.field private static final Aaa:I = 0x0
+
 .field private static final OP_DISPLAY_HALSRGB_COLOR_MODE:I = 0x12
 
 .field private static final OP_DISPLAY_P3_COLOR_MODE:I = 0x10
@@ -15,8 +17,6 @@
 .field private static final OP_NATIVE_CUSTOMER_SRGB_MODE:I = 0x14
 
 .field private static final TAG:Ljava/lang/String; = "OpColorModeManager"
-
-.field private static final maa:I
 
 
 # instance fields
@@ -36,7 +36,7 @@
     return-void
 .end method
 
-.method private Ar()V
+.method private Br()V
     .locals 1
 
     const/4 p0, 0x0
@@ -75,7 +75,7 @@
 
 
 # virtual methods
-.method public F(I)Z
+.method public G(I)Z
     .locals 2
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorModeManager;->mContext:Landroid/content/Context;
@@ -102,7 +102,7 @@
     return v0
 .end method
 
-.method public G(I)Z
+.method public H(I)Z
     .locals 2
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorModeManager;->mContext:Landroid/content/Context;
@@ -132,7 +132,7 @@
     return p1
 .end method
 
-.method public H(I)Z
+.method public I(I)Z
     .locals 2
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorModeManager;->mContext:Landroid/content/Context;
@@ -160,7 +160,7 @@
     return v0
 .end method
 
-.method public I(I)Z
+.method public J(I)Z
     .locals 2
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorModeManager;->mContext:Landroid/content/Context;
@@ -190,7 +190,7 @@
     return p1
 .end method
 
-.method public J(I)Z
+.method public K(I)Z
     .locals 2
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorModeManager;->mContext:Landroid/content/Context;
@@ -220,7 +220,7 @@
     return p1
 .end method
 
-.method public K(I)Z
+.method public L(I)Z
     .locals 2
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorModeManager;->mContext:Landroid/content/Context;
@@ -250,7 +250,7 @@
     return p1
 .end method
 
-.method public L(I)V
+.method public M(I)V
     .locals 0
 
     invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorModeManager;->nativeSetActiveModesId(I)V
@@ -267,7 +267,7 @@
     goto :goto_0
 
     :pswitch_1
-    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorModeManager;->Ar()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/display/OpColorModeManager;->Br()V
 
     :goto_0
     invoke-static {p1, p2}, Lcom/oneplus/android/server/display/OpColorModeManager;->nativeSetPanelMode(IZ)V

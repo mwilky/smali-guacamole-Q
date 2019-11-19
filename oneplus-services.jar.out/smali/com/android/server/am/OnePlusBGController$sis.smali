@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public el:D
-
 .field public mTimestamp:J
 
 .field public mType:Lcom/android/server/am/OnePlusBGController$ProcType;
+
+.field public tl:D
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     iput-wide p2, p0, Lcom/android/server/am/OnePlusBGController$sis;->mTimestamp:J
 
-    iput-wide p4, p0, Lcom/android/server/am/OnePlusBGController$sis;->el:D
+    iput-wide p4, p0, Lcom/android/server/am/OnePlusBGController$sis;->tl:D
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/OnePlusBGController$sis;->el:D
+    iget-wide v1, p0, Lcom/android/server/am/OnePlusBGController$sis;->tl:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 

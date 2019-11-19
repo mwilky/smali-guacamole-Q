@@ -49,11 +49,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/server/engineer/you;->yc()Z
+    invoke-virtual {v0}, Lcom/android/server/engineer/you;->zc()Z
 
     move-result v0
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->wc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
 
     move-result v1
 
@@ -63,7 +63,7 @@
 
     iget-object v0, p0, Lcom/android/server/engineer/kth;->this$0:Lcom/android/server/engineer/OneplusEngineerService;
 
-    invoke-virtual {v0}, Lcom/android/server/engineer/OneplusEngineerService;->ka()Z
+    invoke-virtual {v0}, Lcom/android/server/engineer/OneplusEngineerService;->la()Z
 
     move-result v0
 

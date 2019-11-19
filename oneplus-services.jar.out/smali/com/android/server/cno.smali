@@ -49,11 +49,11 @@
     :cond_0
     iget-object p1, p0, Lcom/android/server/cno;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {p1}, Lcom/android/server/OnePlusExService;->access$000(Lcom/android/server/OnePlusExService;)V
+    invoke-static {p1}, Lcom/android/server/OnePlusExService;->access$100(Lcom/android/server/OnePlusExService;)V
 
     iget-object p1, p0, Lcom/android/server/cno;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {p1}, Lcom/android/server/OnePlusExService;->access$100(Lcom/android/server/OnePlusExService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {p1}, Lcom/android/server/OnePlusExService;->access$200(Lcom/android/server/OnePlusExService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p1
 
@@ -65,7 +65,7 @@
 
     iget-object p0, p0, Lcom/android/server/cno;->this$0:Lcom/android/server/OnePlusExService;
 
-    invoke-static {p0}, Lcom/android/server/OnePlusExService;->access$100(Lcom/android/server/OnePlusExService;)Landroid/os/PowerManager$WakeLock;
+    invoke-static {p0}, Lcom/android/server/OnePlusExService;->access$200(Lcom/android/server/OnePlusExService;)Landroid/os/PowerManager$WakeLock;
 
     move-result-object p0
 

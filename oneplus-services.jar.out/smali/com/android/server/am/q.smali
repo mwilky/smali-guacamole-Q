@@ -45,7 +45,7 @@
 
     move-result p0
 
-    invoke-static {p0}, Lcom/android/server/am/r;->l(I)I
+    invoke-static {p0}, Lcom/android/server/am/r;->m(I)I
 
     new-instance p0, Ljava/lang/StringBuilder;
 

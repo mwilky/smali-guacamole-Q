@@ -8,13 +8,13 @@
 
 .field public static final IN_USING:Z = true
 
-.field private static Kfa:Landroid/app/PendingIntent; = null
-
-.field private static final Lfa:Ljava/lang/String; = "com.oneplus.android.screenOffCheckProcessState"
-
 .field public static final TAG:Ljava/lang/String; = "DozeManager"
 
-.field private static final Un:Ljava/lang/String; = "deviceidle"
+.field private static Yfa:Landroid/app/PendingIntent; = null
+
+.field private static final Zfa:Ljava/lang/String; = "com.oneplus.android.screenOffCheckProcessState"
+
+.field private static final ho:Ljava/lang/String; = "deviceidle"
 
 .field private static mAlarmManager:Landroid/app/AlarmManager;
 
@@ -26,13 +26,13 @@
 
 
 # instance fields
-.field kd:Landroid/content/BroadcastReceiver;
-
 .field private mActivityManager:Lcom/android/server/am/ActivityManagerService;
 
 .field private mAudioManager:Landroid/media/AudioManager;
 
 .field private mDeviceIdleService:Landroid/os/IDeviceIdleController;
+
+.field wd:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
@@ -63,7 +63,7 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/server/rtg;-><init>(Lcom/oneplus/server/ssp;)V
 
-    iput-object v0, p0, Lcom/oneplus/server/ssp;->kd:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/oneplus/server/ssp;->wd:Landroid/content/BroadcastReceiver;
 
     const-string v0, "deviceidle"
 
@@ -80,10 +80,36 @@
     return-void
 .end method
 
-.method private As()V
+.method private As()[Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "get_silent_uid"
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, ":0"
+
+    :goto_0
+    invoke-direct {p0, v0}, Lcom/oneplus/server/ssp;->xc(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private Bs()V
     .locals 4
 
-    invoke-direct {p0}, Lcom/oneplus/server/ssp;->zs()[Ljava/lang/String;
+    invoke-direct {p0}, Lcom/oneplus/server/ssp;->As()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -176,19 +202,19 @@
 
     if-lt v2, v3, :cond_2
 
-    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->bc(I)Z
+    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->dc(I)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    invoke-static {v2}, Lcom/android/server/am/cgv;->c(I)Z
+    invoke-static {v2}, Lcom/android/server/am/cgv;->d(I)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->cc(I)V
+    invoke-direct {p0, v2}, Lcom/oneplus/server/ssp;->ec(I)V
 
     :cond_2
     :goto_1
@@ -200,7 +226,7 @@
     return-void
 .end method
 
-.method private Sm()[Ljava/lang/String;
+.method private Um()[Ljava/lang/String;
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
@@ -237,7 +263,7 @@
 .method static synthetic access$100()Landroid/app/PendingIntent;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/server/ssp;->Kfa:Landroid/app/PendingIntent;
+    sget-object v0, Lcom/oneplus/server/ssp;->Yfa:Landroid/app/PendingIntent;
 
     return-object v0
 .end method
@@ -250,7 +276,7 @@
     return-object v0
 .end method
 
-.method private bc(I)Z
+.method private dc(I)Z
     .locals 4
 
     const-string v0, "DozeManager"
@@ -349,7 +375,7 @@
     return p0
 .end method
 
-.method private cc(I)V
+.method private ec(I)V
     .locals 5
 
     iget-object v0, p0, Lcom/oneplus/server/ssp;->mActivityManager:Lcom/android/server/am/ActivityManagerService;
@@ -614,41 +640,15 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/ssp;->Kfa:Landroid/app/PendingIntent;
+    sput-object v0, Lcom/oneplus/server/ssp;->Yfa:Landroid/app/PendingIntent;
 
     invoke-virtual {p2, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/oneplus/server/ssp;->kd:Landroid/content/BroadcastReceiver;
+    iget-object p0, p0, Lcom/oneplus/server/ssp;->wd:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p1, p0, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
-.end method
-
-.method private zs()[Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/server/ssp;->mAudioManager:Landroid/media/AudioManager;
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "get_silent_uid"
-
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, ":0"
-
-    :goto_0
-    invoke-direct {p0, v0}, Lcom/oneplus/server/ssp;->xc(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static zta(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
@@ -666,7 +666,7 @@
 .method static synthetic zta(Lcom/oneplus/server/ssp;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/server/ssp;->As()V
+    invoke-direct {p0}, Lcom/oneplus/server/ssp;->Bs()V
 
     return-void
 .end method

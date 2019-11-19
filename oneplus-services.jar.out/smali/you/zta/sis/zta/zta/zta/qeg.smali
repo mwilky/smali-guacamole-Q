@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final DDa:I = 0x1ff
-
 .field static final P:[I
+
+.field private static final RDa:I = 0x1ff
 
 
 # direct methods

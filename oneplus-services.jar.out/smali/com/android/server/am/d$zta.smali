@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public Qt:Ljava/lang/String;
+.field public du:Ljava/lang/String;
 
 .field private mPid:I
 
@@ -34,7 +34,7 @@
 
     iput-object p2, p0, Lcom/android/server/am/d$zta;->mPkgName:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/android/server/am/d$zta;->Qt:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/am/d$zta;->du:Ljava/lang/String;
 
     iput p4, p0, Lcom/android/server/am/d$zta;->mPid:I
 
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/d$zta;->Qt:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/server/am/d$zta;->du:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/d$zta;->Qt:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/d$zta;->du:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

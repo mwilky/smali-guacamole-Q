@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final Zg:I
-
-.field final cfa:I
-
 .field final mPkgName:Ljava/lang/String;
+
+.field final nh:I
+
+.field final qfa:I
 
 
 # direct methods
@@ -30,16 +30,16 @@
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->mPkgName:Ljava/lang/String;
 
-    iput p2, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->cfa:I
+    iput p2, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->qfa:I
 
-    iput p3, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Zg:I
+    iput p3, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->nh:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Wa()Ljava/lang/String;
+.method public Xa()Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->mPkgName:Ljava/lang/String;
@@ -47,18 +47,18 @@
     return-object p0
 .end method
 
-.method public ma()I
+.method public na()I
     .locals 0
 
-    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Zg:I
+    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->nh:I
 
     return p0
 .end method
 
-.method public of()I
+.method public pf()I
     .locals 0
 
-    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->cfa:I
+    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->qfa:I
 
     return p0
 .end method
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->cfa:I
+    iget v1, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->qfa:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->Zg:I
+    iget p0, p0, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController$zta;->nh:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

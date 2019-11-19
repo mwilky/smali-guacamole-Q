@@ -25,13 +25,13 @@
 
 
 # virtual methods
-.method public Fd()V
+.method public Gd()V
     .locals 0
 
     return-void
 .end method
 
-.method public Gd()V
+.method public Hd()V
     .locals 0
 
     return-void

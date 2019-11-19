@@ -23,9 +23,9 @@
 
 
 # instance fields
-.field final synthetic Bb:I
+.field final synthetic Gb:I
 
-.field final synthetic Cb:Ljava/util/ArrayList;
+.field final synthetic Hb:Ljava/util/ArrayList;
 
 .field final synthetic this$1:Lcom/android/server/policy/lqr;
 
@@ -36,9 +36,9 @@
 
     iput-object p1, p0, Lcom/android/server/policy/ear;->this$1:Lcom/android/server/policy/lqr;
 
-    iput p6, p0, Lcom/android/server/policy/ear;->Bb:I
+    iput p6, p0, Lcom/android/server/policy/ear;->Gb:I
 
-    iput-object p7, p0, Lcom/android/server/policy/ear;->Cb:Ljava/util/ArrayList;
+    iput-object p7, p0, Lcom/android/server/policy/ear;->Hb:Ljava/util/ArrayList;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
 
@@ -54,7 +54,7 @@
 
     move-result-object p2
 
-    iget p3, p0, Lcom/android/server/policy/ear;->Bb:I
+    iget p3, p0, Lcom/android/server/policy/ear;->Gb:I
 
     if-ne p1, p3, :cond_0
 
@@ -79,7 +79,7 @@
 
     check-cast p3, Landroid/widget/CheckedTextView;
 
-    iget-object p0, p0, Lcom/android/server/policy/ear;->Cb:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/policy/ear;->Hb:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 

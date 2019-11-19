@@ -1,11 +1,14 @@
 .class Lcom/android/server/vju;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/bud$zta;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/server/irq;->chargeVibration()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,103 +18,56 @@
 
 
 # instance fields
-.field final synthetic this$1:Lcom/android/server/bud$zta;
+.field final synthetic this$0:Lcom/android/server/irq;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/bud$zta;)V
+.method constructor <init>(Lcom/android/server/irq;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
+    iput-object p1, p0, Lcom/android/server/vju;->this$0:Lcom/android/server/irq;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+.method public run()V
+    .locals 2
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "android.intent.action.SCREEN_ON"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    if-eqz p2, :cond_0
-
-    iget-object p1, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
-
-    invoke-static {p1, v0}, Lcom/android/server/bud$zta;->zta(Lcom/android/server/bud$zta;Z)Z
-
-    iget-object p1, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
-
-    invoke-static {p1}, Lcom/android/server/bud$zta;->zta(Lcom/android/server/bud$zta;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object p0, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
-
-    invoke-virtual {p0}, Lcom/android/server/bud$zta;->updateLightsLocked()V
-
-    goto :goto_0
-
-    :cond_0
-    const-string p2, "android.intent.action.SCREEN_OFF"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, p2}, Lcom/android/server/bud$zta;->zta(Lcom/android/server/bud$zta;Z)Z
-
-    iget-object p1, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
-
-    iget-object p1, p1, Lcom/android/server/bud$zta;->this$0:Lcom/android/server/bud;
-
-    invoke-static {p1}, Lcom/android/server/bud;->kth(Lcom/android/server/bud;)I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move p2, v0
-
-    :cond_1
-    iget-object p0, p0, Lcom/android/server/vju;->this$1:Lcom/android/server/bud$zta;
-
-    invoke-static {p0}, Lcom/android/server/bud$zta;->zta(Lcom/android/server/bud$zta;)Landroid/os/Handler;
+    invoke-static {}, Lcom/android/server/irq;->access$500()Landroid/content/Context;
 
     move-result-object p0
 
-    if-eqz p2, :cond_2
+    const-string v0, "vibrator"
 
-    const-wide/16 p1, 0x1f4
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    move-result-object p0
 
-    goto :goto_0
+    check-cast p0, Landroid/os/Vibrator;
 
-    :cond_2
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    const/4 v0, 0x4
 
-    :cond_3
-    :goto_0
+    new-array v0, v0, [J
+
+    fill-array-data v0, :array_0
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1}, Landroid/os/Vibrator;->vibrate([JI)V
+
     return-void
+
+    nop
+
+    :array_0
+    .array-data 8
+        0x0
+        0xa
+        0x96
+        0xc
+    .end array-data
 .end method

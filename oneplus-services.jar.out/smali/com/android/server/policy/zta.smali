@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final synthetic KB:Lcom/android/server/policy/obl;
+.field private final synthetic YB:Lcom/android/server/policy/obl;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/policy/zta;->KB:Lcom/android/server/policy/obl;
+    iput-object p1, p0, Lcom/android/server/policy/zta;->YB:Lcom/android/server/policy/obl;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/policy/zta;->KB:Lcom/android/server/policy/obl;
+    iget-object p0, p0, Lcom/android/server/policy/zta;->YB:Lcom/android/server/policy/obl;
 
-    invoke-virtual {p0}, Lcom/android/server/policy/obl;->Ec()V
+    invoke-virtual {p0}, Lcom/android/server/policy/obl;->Fc()V
 
     return-void
 .end method

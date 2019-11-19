@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public Fd()V
+.method public Gd()V
     .locals 2
 
     const-string v0, "OpSlaManager"
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public Gd()V
+.method public Hd()V
     .locals 2
 
     const-string v0, "OpSlaManager"

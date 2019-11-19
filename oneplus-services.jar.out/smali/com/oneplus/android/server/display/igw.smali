@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public B(I)V
+.method public C(I)V
     .locals 0
 
     iput p1, p0, Lcom/oneplus/android/server/display/igw;->mFrom:I
@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public C(I)V
+.method public D(I)V
     .locals 0
 
     iput p1, p0, Lcom/oneplus/android/server/display/igw;->mTo:I
@@ -151,7 +151,7 @@
 .method public abstract setUp(Landroid/content/Context;Z)V
 .end method
 
-.method public te()I
+.method public ue()I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/android/server/display/igw;->mFrom:I
@@ -159,7 +159,7 @@
     return p0
 .end method
 
-.method public ue()I
+.method public ve()I
     .locals 0
 
     iget p0, p0, Lcom/oneplus/android/server/display/igw;->mTo:I
@@ -167,7 +167,7 @@
     return p0
 .end method
 
-.method public ve()Z
+.method public we()Z
     .locals 0
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/igw;->mAnimator:Landroid/animation/ValueAnimator;

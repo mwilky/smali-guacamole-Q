@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static final Wna:J = 0xffffffffffff80L
+.field private static final joa:J = 0xffffffffffff80L
 
-.field private static final Xna:Ljava/util/concurrent/ConcurrentMap;
+.field private static final koa:Ljava/util/concurrent/ConcurrentMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentMap<",
@@ -40,7 +40,7 @@
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/asn1/bvj;->Xna:Ljava/util/concurrent/ConcurrentMap;
+    sput-object v0, Lorg/bouncycastle/asn1/bvj;->koa:Ljava/util/concurrent/ConcurrentMap;
 
     return-void
 .end method
@@ -612,7 +612,7 @@
 
     invoke-direct {v0, p0}, Lorg/bouncycastle/asn1/bvj$zta;-><init>([B)V
 
-    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Xna:Ljava/util/concurrent/ConcurrentMap;
+    sget-object v1, Lorg/bouncycastle/asn1/bvj;->koa:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v1, v0}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -920,7 +920,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj$zta;-><init>([B)V
 
-    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Xna:Ljava/util/concurrent/ConcurrentMap;
+    sget-object v1, Lorg/bouncycastle/asn1/bvj;->koa:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v1, v0}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -930,7 +930,7 @@
 
     if-nez v1, :cond_1
 
-    sget-object v1, Lorg/bouncycastle/asn1/bvj;->Xna:Ljava/util/concurrent/ConcurrentMap;
+    sget-object v1, Lorg/bouncycastle/asn1/bvj;->koa:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v1, v0, p0}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -962,7 +962,7 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -976,7 +976,7 @@
 
     array-length p0, p0
 
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 
@@ -1075,7 +1075,7 @@
 
     array-length v0, p0
 
-    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/ugm;->Y(I)V
+    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/ugm;->Z(I)V
 
     invoke-virtual {p1, p0}, Lorg/bouncycastle/asn1/ugm;->write([B)V
 

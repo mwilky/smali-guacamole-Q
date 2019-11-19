@@ -1,11 +1,11 @@
-.class abstract Lcom/android/server/bud$you;
+.class abstract Lcom/android/server/irq$you;
 .super Landroid/database/ContentObserver;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/bud;
+    value = Lcom/android/server/irq;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,20 +17,20 @@
 # instance fields
 .field private mTarget:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/android/server/bud;
+.field final synthetic this$0:Lcom/android/server/irq;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/bud;Landroid/os/Handler;Ljava/lang/String;)V
+.method public constructor <init>(Lcom/android/server/irq;Landroid/os/Handler;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/bud$you;->this$0:Lcom/android/server/bud;
+    iput-object p1, p0, Lcom/android/server/irq$you;->this$0:Lcom/android/server/irq;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    iput-object p3, p0, Lcom/android/server/bud$you;->mTarget:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/irq$you;->mTarget:Ljava/lang/String;
 
-    invoke-static {}, Lcom/android/server/bud;->access$500()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/irq;->access$500()Landroid/content/Context;
 
     move-result-object p1
 
@@ -38,7 +38,7 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/android/server/bud$you;->mTarget:Ljava/lang/String;
+    iget-object p2, p0, Lcom/android/server/irq$you;->mTarget:Ljava/lang/String;
 
     invoke-static {p2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -48,7 +48,7 @@
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    invoke-virtual {p0}, Lcom/android/server/bud$you;->update()V
+    invoke-virtual {p0}, Lcom/android/server/irq$you;->update()V
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 .method public onChange(Z)V
     .locals 0
 
-    invoke-virtual {p0}, Lcom/android/server/bud$you;->update()V
+    invoke-virtual {p0}, Lcom/android/server/irq$you;->update()V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 .method public update()V
     .locals 3
 
-    invoke-static {}, Lcom/android/server/bud;->access$500()Landroid/content/Context;
+    invoke-static {}, Lcom/android/server/irq;->access$500()Landroid/content/Context;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/bud$you;->mTarget:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/server/irq$you;->mTarget:Ljava/lang/String;
 
     const/4 v2, 0x1
 
@@ -93,7 +93,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-virtual {p0, v2}, Lcom/android/server/bud$you;->ssp(Z)V
+    invoke-virtual {p0, v2}, Lcom/android/server/irq$you;->ssp(Z)V
 
     return-void
 .end method

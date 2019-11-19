@@ -23,7 +23,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lorg/bouncycastle/asn1/sis;->W(I)I
+    invoke-static {p1}, Lorg/bouncycastle/asn1/sis;->X(I)I
 
     move-result p1
 
@@ -283,7 +283,7 @@
     return p0
 .end method
 
-.method lg()I
+.method mg()I
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
@@ -292,7 +292,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->aa(I)I
+    invoke-static {v0}, Lorg/bouncycastle/asn1/ia;->ba(I)I
 
     move-result v0
 
@@ -327,7 +327,7 @@
 
     new-array v1, v1, [B
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->pg()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->qg()I
 
     move-result p0
 

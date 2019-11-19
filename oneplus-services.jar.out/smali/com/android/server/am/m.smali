@@ -4,13 +4,13 @@
 
 
 # instance fields
+.field public final Kw:Ljava/lang/String;
+
+.field public final Lw:Lcom/android/server/am/you;
+
 .field public final mPid:I
 
 .field public final mUid:I
-
-.field public final ww:Ljava/lang/String;
-
-.field public final xw:Lcom/android/server/am/you;
 
 
 # direct methods
@@ -23,9 +23,9 @@
 
     iput p2, p0, Lcom/android/server/am/m;->mPid:I
 
-    iput-object p3, p0, Lcom/android/server/am/m;->ww:Ljava/lang/String;
+    iput-object p3, p0, Lcom/android/server/am/m;->Kw:Ljava/lang/String;
 
-    iput-object p4, p0, Lcom/android/server/am/m;->xw:Lcom/android/server/am/you;
+    iput-object p4, p0, Lcom/android/server/am/m;->Lw:Lcom/android/server/am/you;
 
     return-void
 .end method
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/m;->xw:Lcom/android/server/am/you;
+    iget-object v1, p0, Lcom/android/server/am/m;->Lw:Lcom/android/server/am/you;
 
     iget-object v1, v1, Lcom/android/server/am/you;->mPackageName:Ljava/lang/String;
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/m;->ww:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/am/m;->Kw:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

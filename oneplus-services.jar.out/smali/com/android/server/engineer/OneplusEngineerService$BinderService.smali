@@ -182,7 +182,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/engineer/OneplusEngineerService$BinderService;->this$0:Lcom/android/server/engineer/OneplusEngineerService;
 
-    invoke-virtual {p0}, Lcom/android/server/engineer/OneplusEngineerService;->ha()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/server/engineer/OneplusEngineerService;->ia()Ljava/lang/String;
 
     move-result-object p0
 
@@ -205,7 +205,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->dma(II)[B
+    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->ywr(II)[B
 
     move-result-object p0
 
@@ -230,7 +230,7 @@
     :cond_0
     const p0, 0xf425d
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -259,7 +259,7 @@
     :cond_0
     const p0, 0xf4259
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -284,7 +284,7 @@
     :cond_0
     const p0, 0xf4248
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -313,7 +313,7 @@
     :cond_0
     const p0, 0xf4257
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -338,7 +338,7 @@
     :cond_0
     const p0, 0xf4265
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -367,7 +367,7 @@
     :cond_0
     const p0, 0xf426b
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -396,7 +396,7 @@
     :cond_0
     const p0, 0xf4269
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -425,7 +425,7 @@
     :cond_0
     const p0, 0xf4263
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -454,7 +454,7 @@
     :cond_0
     const p0, 0xf4267
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -483,7 +483,7 @@
     :cond_0
     const p0, 0xf4261
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -512,7 +512,7 @@
     :cond_0
     const p0, 0xf426d
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -541,7 +541,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/engineer/OneplusEngineerService$BinderService;->this$0:Lcom/android/server/engineer/OneplusEngineerService;
 
-    invoke-virtual {p0}, Lcom/android/server/engineer/OneplusEngineerService;->ia()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/android/server/engineer/OneplusEngineerService;->ja()Ljava/lang/String;
 
     move-result-object p0
 
@@ -566,7 +566,7 @@
     :cond_0
     const p0, 0x186a4
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -616,7 +616,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()[B
+    invoke-static {}, Lcom/android/server/engineer/rtg;->sc()[B
 
     move-result-object p0
 
@@ -641,7 +641,7 @@
     :cond_0
     const p0, 0xf424a
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -670,7 +670,7 @@
     :cond_0
     const p0, 0xf425b
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -699,7 +699,7 @@
     :cond_0
     const p0, 0xf4250
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -728,7 +728,7 @@
     :cond_0
     const p0, 0xf424c
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -757,7 +757,7 @@
     :cond_0
     const p0, 0xf424e
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -863,7 +863,7 @@
     return p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/engineer/rtg;->qc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
 
     move-result p0
 
@@ -888,7 +888,7 @@
     :cond_0
     const p0, 0x186a2
 
-    invoke-static {p0}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p0}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -930,7 +930,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/engineer/rtg;->m(I)[B
+    invoke-static {p1}, Lcom/android/server/engineer/rtg;->n(I)[B
 
     move-result-object p0
 
@@ -953,7 +953,7 @@
     return p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/engineer/rtg;->sc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->tc()Z
 
     move-result p0
 
@@ -978,7 +978,7 @@
     :cond_0
     iget-object p0, p0, Lcom/android/server/engineer/OneplusEngineerService$BinderService;->this$0:Lcom/android/server/engineer/OneplusEngineerService;
 
-    invoke-virtual {p0}, Lcom/android/server/engineer/OneplusEngineerService;->ka()Z
+    invoke-virtual {p0}, Lcom/android/server/engineer/OneplusEngineerService;->la()Z
 
     move-result p0
 
@@ -1426,7 +1426,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->ywr(II)Z
+    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->qbh(II)Z
 
     move-result p0
 

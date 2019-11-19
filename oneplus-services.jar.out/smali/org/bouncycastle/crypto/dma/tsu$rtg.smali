@@ -43,7 +43,7 @@
         }
     .end annotation
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/c;->fh()Lorg/bouncycastle/asn1/vdb;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/c;->gh()Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 

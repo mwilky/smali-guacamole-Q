@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private Yma:Lyou/zta/sis/zta/wtn;
-
 .field private c:Lyou/zta/sis/zta/rtg;
 
 .field private final encoding:Lorg/bouncycastle/asn1/ibl;
+
+.field private lna:Lyou/zta/sis/zta/wtn;
 
 
 # direct methods
@@ -63,7 +63,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Yma:Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->lna:Lyou/zta/sis/zta/wtn;
 
     new-instance v0, Lorg/bouncycastle/asn1/C;
 
@@ -80,13 +80,13 @@
 
 
 # virtual methods
-.method public declared-synchronized Ai()Lyou/zta/sis/zta/wtn;
+.method public declared-synchronized Bi()Lyou/zta/sis/zta/wtn;
     .locals 2
 
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Yma:Lyou/zta/sis/zta/wtn;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->lna:Lyou/zta/sis/zta/wtn;
 
     if-nez v0, :cond_0
 
@@ -106,10 +106,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Yma:Lyou/zta/sis/zta/wtn;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->lna:Lyou/zta/sis/zta/wtn;
 
     :cond_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->Yma:Lyou/zta/sis/zta/wtn;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/ibl/les;->lna:Lyou/zta/sis/zta/wtn;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -125,7 +125,7 @@
     throw v0
 .end method
 
-.method public Bi()[B
+.method public Ci()[B
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/les;->encoding:Lorg/bouncycastle/asn1/ibl;
@@ -141,7 +141,7 @@
     return-object p0
 .end method
 
-.method public Ci()Z
+.method public Di()Z
     .locals 3
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/les;->encoding:Lorg/bouncycastle/asn1/ibl;

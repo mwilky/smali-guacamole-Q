@@ -834,7 +834,7 @@
 
     move/from16 v29, v5
 
-    iget-object v5, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->oi:Ljava/lang/String;
+    iget-object v5, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Fi:Ljava/lang/String;
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -854,7 +854,7 @@
 
     move-result-object v19
 
-    iget-object v0, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->oi:Ljava/lang/String;
+    iget-object v0, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Fi:Ljava/lang/String;
 
     iget v5, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->mPid:I
 
@@ -1554,7 +1554,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->oi:Ljava/lang/String;
+    iget-object v0, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Fi:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1622,7 +1622,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iget-object p1, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->oi:Ljava/lang/String;
+    iget-object p1, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Fi:Ljava/lang/String;
 
     const-string v1, "pn"
 
@@ -2067,7 +2067,7 @@
     return-void
 
     :cond_4
-    invoke-virtual {v1}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->ac()Z
+    invoke-virtual {v1}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->bc()Z
 
     move-result v0
 
@@ -2142,7 +2142,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p3}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->bc()V
+    invoke-virtual {p3}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->cc()V
 
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mRecentFrontUids:Ljava/util/HashMap;

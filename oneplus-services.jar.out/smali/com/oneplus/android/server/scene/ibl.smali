@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ada:I
+.field final synthetic oda:I
 
-.field final synthetic bda:Ljava/lang/String;
+.field final synthetic pda:Ljava/lang/String;
 
 .field final synthetic this$0:Lcom/oneplus/android/server/scene/OemSceneCallBlock;
 
@@ -31,9 +31,9 @@
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/ibl;->this$0:Lcom/oneplus/android/server/scene/OemSceneCallBlock;
 
-    iput p2, p0, Lcom/oneplus/android/server/scene/ibl;->ada:I
+    iput p2, p0, Lcom/oneplus/android/server/scene/ibl;->oda:I
 
-    iput-object p3, p0, Lcom/oneplus/android/server/scene/ibl;->bda:Ljava/lang/String;
+    iput-object p3, p0, Lcom/oneplus/android/server/scene/ibl;->pda:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -74,9 +74,9 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ibl;->this$0:Lcom/oneplus/android/server/scene/OemSceneCallBlock;
 
-    iget p2, p0, Lcom/oneplus/android/server/scene/ibl;->ada:I
+    iget p2, p0, Lcom/oneplus/android/server/scene/ibl;->oda:I
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ibl;->bda:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ibl;->pda:Ljava/lang/String;
 
     invoke-static {p1, p2, p0}, Lcom/oneplus/android/server/scene/OemSceneCallBlock;->access$200(Lcom/oneplus/android/server/scene/OemSceneCallBlock;ILjava/lang/String;)V
 

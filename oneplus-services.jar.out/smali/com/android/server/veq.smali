@@ -1,14 +1,11 @@
 .class Lcom/android/server/veq;
-.super Ljava/lang/Object;
+.super Lcom/android/server/irq$you;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/bud;->chargeVibration()V
+    value = Lcom/android/server/irq;->registerObserver(ILandroid/os/Handler;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,56 +15,49 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/server/bud;
+.field final synthetic this$0:Lcom/android/server/irq;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/bud;)V
+.method constructor <init>(Lcom/android/server/irq;Landroid/os/Handler;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/veq;->this$0:Lcom/android/server/bud;
+    iput-object p1, p0, Lcom/android/server/veq;->this$0:Lcom/android/server/irq;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lcom/android/server/irq$you;-><init>(Lcom/android/server/irq;Landroid/os/Handler;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method ssp(Z)V
+    .locals 1
 
-    invoke-static {}, Lcom/android/server/bud;->access$500()Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/server/veq;->this$0:Lcom/android/server/irq;
+
+    invoke-static {v0}, Lcom/android/server/irq;->rtg(Lcom/android/server/irq;)Z
+
+    move-result v0
+
+    if-eq v0, p1, :cond_0
+
+    iget-object p0, p0, Lcom/android/server/veq;->this$0:Lcom/android/server/irq;
+
+    invoke-static {p0, p1}, Lcom/android/server/irq;->you(Lcom/android/server/irq;Z)Z
+
+    invoke-static {}, Lcom/android/server/irq;->access$100()Lcom/android/server/irq$zta;
 
     move-result-object p0
 
-    const-string v0, "vibrator"
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {}, Lcom/android/server/irq;->access$100()Lcom/android/server/irq$zta;
 
     move-result-object p0
 
-    check-cast p0, Landroid/os/Vibrator;
+    invoke-virtual {p0}, Lcom/android/server/irq$zta;->updateLightsLocked()V
 
-    const/4 v0, 0x4
-
-    new-array v0, v0, [J
-
-    fill-array-data v0, :array_0
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, v0, v1}, Landroid/os/Vibrator;->vibrate([JI)V
-
+    :cond_0
     return-void
-
-    nop
-
-    :array_0
-    .array-data 8
-        0x0
-        0xa
-        0x96
-        0xc
-    .end array-data
 .end method

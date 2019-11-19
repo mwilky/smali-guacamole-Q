@@ -85,7 +85,7 @@
     return-object p0
 .end method
 
-.method public static Vk()Lorg/bouncycastle/util/qbh;
+.method public static Wk()Lorg/bouncycastle/util/qbh;
     .locals 2
 
     new-instance v0, Lorg/bouncycastle/util/Strings$StringListImpl;

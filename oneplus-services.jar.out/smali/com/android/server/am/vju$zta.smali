@@ -15,7 +15,9 @@
 
 
 # static fields
-.field private static Ap:Ljava/util/List; = null
+.field public static final IN_USING:Z = true
+
+.field private static Op:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -25,7 +27,7 @@
     .end annotation
 .end field
 
-.field private static Bp:Ljava/util/List; = null
+.field private static Pp:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -35,7 +37,7 @@
     .end annotation
 .end field
 
-.field private static Cp:Ljava/util/ArrayList; = null
+.field private static Qp:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -45,7 +47,7 @@
     .end annotation
 .end field
 
-.field private static Dp:Ljava/util/ArrayList; = null
+.field private static Rp:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -55,7 +57,7 @@
     .end annotation
 .end field
 
-.field private static Ep:Ljava/util/ArrayList; = null
+.field private static Sp:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -65,7 +67,7 @@
     .end annotation
 .end field
 
-.field private static Fp:Ljava/util/List; = null
+.field private static Tp:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -75,7 +77,7 @@
     .end annotation
 .end field
 
-.field private static Gp:Landroid/util/ArrayMap; = null
+.field private static Up:Landroid/util/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/ArrayMap<",
@@ -86,8 +88,6 @@
         }
     .end annotation
 .end field
-
-.field public static final IN_USING:Z = true
 
 .field private static mInstance:Lcom/android/server/am/vju$zta;
 
@@ -100,13 +100,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -122,7 +122,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Cp:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Qp:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -142,7 +142,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Dp:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Rp:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -160,19 +160,19 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Ep:Ljava/util/ArrayList;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Sp:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Gp:Landroid/util/ArrayMap;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Up:Landroid/util/ArrayMap;
 
     return-void
 .end method
@@ -190,7 +190,7 @@
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/android/server/am/vju$zta;->Gp:Landroid/util/ArrayMap;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Up:Landroid/util/ArrayMap;
 
     const-string v1, "android.intent.action.ANY_DATA_STATE"
 
@@ -199,7 +199,7 @@
     return-void
 .end method
 
-.method public static Kb()V
+.method public static Lb()V
     .locals 3
 
     const-string v0, "/data/data_bpm/brd.xml"
@@ -208,7 +208,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     const-string v0, "/data/data_bpm/black_brd.xml"
 
@@ -216,7 +216,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     const-string v0, "/data/data_bpm/black_alarm.xml"
 
@@ -224,7 +224,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sput-object v0, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     sget-boolean v0, Lcom/android/server/am/vju;->DEBUG:Z
 
@@ -238,7 +238,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -258,7 +258,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sget-object v2, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -276,7 +276,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object v2, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -291,7 +291,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     invoke-direct {v0, v1}, Lcom/android/server/am/vju$zta;->setBlackAlarm(Ljava/util/List;)V
 
@@ -469,12 +469,12 @@
 .method private gwm(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 1
 
-    sget-object p0, Lcom/android/server/am/vju$zta;->Gp:Landroid/util/ArrayMap;
+    sget-object p0, Lcom/android/server/am/vju$zta;->Up:Landroid/util/ArrayMap;
 
     monitor-enter p0
 
     :try_start_0
-    sget-object v0, Lcom/android/server/am/vju$zta;->Gp:Landroid/util/ArrayMap;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Up:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -524,16 +524,16 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    sget-object v1, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     invoke-interface {v1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -844,16 +844,16 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    sget-object v1, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     invoke-interface {v1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -865,7 +865,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/android/server/am/vju$zta;->setBlackAlarm(Ljava/util/List;)V
 
@@ -885,12 +885,12 @@
 .method private tb(Ljava/lang/String;)Z
     .locals 2
 
-    sget-object p0, Lcom/android/server/am/vju$zta;->Dp:Ljava/util/ArrayList;
+    sget-object p0, Lcom/android/server/am/vju$zta;->Rp:Ljava/util/ArrayList;
 
     monitor-enter p0
 
     :try_start_0
-    sget-object v0, Lcom/android/server/am/vju$zta;->Dp:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Rp:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -949,16 +949,16 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    sget-object v1, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     invoke-interface {v1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -979,12 +979,12 @@
 .method private ub(Ljava/lang/String;)Z
     .locals 2
 
-    sget-object p0, Lcom/android/server/am/vju$zta;->Cp:Ljava/util/ArrayList;
+    sget-object p0, Lcom/android/server/am/vju$zta;->Qp:Ljava/util/ArrayList;
 
     monitor-enter p0
 
     :try_start_0
-    sget-object v0, Lcom/android/server/am/vju$zta;->Cp:Ljava/util/ArrayList;
+    sget-object v0, Lcom/android/server/am/vju$zta;->Qp:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1052,7 +1052,7 @@
     return v0
 
     :cond_0
-    sget-object v1, Lcom/android/server/am/vju$zta;->Bp:Ljava/util/List;
+    sget-object v1, Lcom/android/server/am/vju$zta;->Pp:Ljava/util/List;
 
     invoke-interface {v1, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -1062,7 +1062,7 @@
 
     iget p0, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->b(I)Z
+    invoke-static {p0}, Lcom/android/server/am/cgv;->c(I)Z
 
     move-result p0
 
@@ -1102,7 +1102,7 @@
     :cond_2
     iget p0, p1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->c(I)Z
+    invoke-static {p0}, Lcom/android/server/am/cgv;->d(I)Z
 
     move-result p0
 
@@ -1255,12 +1255,12 @@
     return v2
 
     :cond_4
-    sget-object v3, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sget-object v3, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     monitor-enter v3
 
     :try_start_0
-    sget-object v4, Lcom/android/server/am/vju$zta;->Ap:Ljava/util/List;
+    sget-object v4, Lcom/android/server/am/vju$zta;->Op:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1372,7 +1372,7 @@
 
     if-ne p0, v1, :cond_a
 
-    sget-object p0, Lcom/android/server/am/vju$zta;->Ep:Ljava/util/ArrayList;
+    sget-object p0, Lcom/android/server/am/vju$zta;->Sp:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1518,7 +1518,7 @@
     return v2
 
     :cond_e
-    sget-object p0, Lcom/android/server/am/vju$zta;->Fp:Ljava/util/List;
+    sget-object p0, Lcom/android/server/am/vju$zta;->Tp:Ljava/util/List;
 
     invoke-interface {p0, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 

@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method private static Qc(I)I
+.method private static Sc(I)I
     .locals 2
 
     const/4 v0, 0x0
@@ -258,7 +258,24 @@
     return-object v2
 .end method
 
-.method public static ya(I)I
+.method public static you([I[I[I[I)V
+    .locals 1
+
+    array-length v0, p0
+
+    invoke-static {v0, p1, p2, p3}, Lyou/zta/sis/sis/kth;->rtg(I[I[I[I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {v0, p0, p3}, Lyou/zta/sis/sis/kth;->you(I[I[I)I
+
+    :cond_0
+    return-void
+.end method
+
+.method public static za(I)I
     .locals 2
 
     mul-int v0, p0, p0
@@ -288,23 +305,6 @@
     return v0
 .end method
 
-.method public static you([I[I[I[I)V
-    .locals 1
-
-    array-length v0, p0
-
-    invoke-static {v0, p1, p2, p3}, Lyou/zta/sis/sis/kth;->rtg(I[I[I[I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v0, p0, p3}, Lyou/zta/sis/sis/kth;->you(I[I[I)I
-
-    :cond_0
-    return-void
-.end method
-
 .method private static zta([I[II[II)I
     .locals 4
 
@@ -328,7 +328,7 @@
     :cond_0
     aget v3, p1, v1
 
-    invoke-static {v3}, Lyou/zta/sis/sis/you;->Qc(I)I
+    invoke-static {v3}, Lyou/zta/sis/sis/you;->Sc(I)I
 
     move-result v3
 

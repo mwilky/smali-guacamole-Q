@@ -107,7 +107,7 @@
 
     check-cast v4, Lcom/android/server/am/qbh;
 
-    invoke-virtual {v4}, Lcom/android/server/am/qbh;->Ia()Z
+    invoke-virtual {v4}, Lcom/android/server/am/qbh;->Ja()Z
 
     move-result v5
 
@@ -314,7 +314,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Lcom/android/server/am/qbh;->Ha()J
+    invoke-virtual {v2}, Lcom/android/server/am/qbh;->Ia()J
 
     move-result-wide v5
 

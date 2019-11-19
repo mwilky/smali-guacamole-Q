@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final eZ:[I
+.field private static final sZ:[I
 
 
 # instance fields
-.field private dZ:Lsis/you/you/zta/zta/zta;
+.field private rZ:Lsis/you/you/zta/zta/zta;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/oneplus/android/server/display/bio;->eZ:[I
+    sput-object v0, Lcom/oneplus/android/server/display/bio;->sZ:[I
 
     return-void
 
@@ -44,12 +44,12 @@
 
     invoke-direct {v0}, Lsis/you/you/zta/zta/zta;-><init>()V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iput-object v0, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     return-void
 .end method
 
-.method private Pb(I)Ljava/lang/String;
+.method private Rb(I)Ljava/lang/String;
     .locals 1
 
     const/4 p0, 0x1
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->red:[I
 
@@ -110,7 +110,7 @@
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->red:[I
 
@@ -126,7 +126,7 @@
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -134,7 +134,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->red:[I
 
@@ -142,7 +142,7 @@
 
     aget v2, v2, v5
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -160,13 +160,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->green:[I
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -174,13 +174,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->green:[I
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -188,13 +188,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->green:[I
 
     aget v2, v2, v5
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -212,13 +212,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->blue:[I
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -226,13 +226,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->blue:[I
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -240,13 +240,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v2, v2, Lsis/you/you/zta/zta/zta;->blue:[I
 
     aget v2, v2, v5
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -264,13 +264,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->oFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->CFa:[I
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -278,13 +278,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->oFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->CFa:[I
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -292,13 +292,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->oFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->CFa:[I
 
     aget v2, v2, v5
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -316,13 +316,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->pFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->DFa:[I
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -330,13 +330,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->pFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->DFa:[I
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -344,13 +344,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->pFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->DFa:[I
 
     aget v2, v2, v5
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -368,13 +368,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->qFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->EFa:[I
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -382,13 +382,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->qFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->EFa:[I
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -396,13 +396,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->qFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->EFa:[I
 
     aget v2, v2, v5
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -420,13 +420,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->rFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->FFa:[I
 
     aget v2, v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -434,13 +434,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v2, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->rFa:[I
+    iget-object v2, v2, Lsis/you/you/zta/zta/zta;->FFa:[I
 
     aget v2, v2, v4
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -448,13 +448,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object v1, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
-    iget-object v1, v1, Lsis/you/you/zta/zta/zta;->rFa:[I
+    iget-object v1, v1, Lsis/you/you/zta/zta/zta;->FFa:[I
 
     aget v1, v1, v5
 
-    invoke-direct {p0, v1}, Lcom/oneplus/android/server/display/bio;->Pb(I)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/oneplus/android/server/display/bio;->Rb(I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -469,10 +469,10 @@
     return-void
 .end method
 
-.method public se()Lsis/you/you/zta/zta/zta;
+.method public te()Lsis/you/you/zta/zta/zta;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object p0, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     return-object p0
 .end method
@@ -480,7 +480,7 @@
 .method public zta([[I[I)V
     .locals 6
 
-    iget-object p0, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object p0, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v0, p0, Lsis/you/you/zta/zta/zta;->red:[I
 
@@ -548,7 +548,7 @@
 
     aput v2, v0, v4
 
-    iget-object v0, p0, Lsis/you/you/zta/zta/zta;->oFa:[I
+    iget-object v0, p0, Lsis/you/you/zta/zta/zta;->CFa:[I
 
     const/4 v2, 0x3
 
@@ -570,7 +570,7 @@
 
     aput v2, v0, v4
 
-    iget-object v0, p0, Lsis/you/you/zta/zta/zta;->pFa:[I
+    iget-object v0, p0, Lsis/you/you/zta/zta/zta;->DFa:[I
 
     const/4 v2, 0x4
 
@@ -592,7 +592,7 @@
 
     aput v2, v0, v4
 
-    iget-object v0, p0, Lsis/you/you/zta/zta/zta;->qFa:[I
+    iget-object v0, p0, Lsis/you/you/zta/zta/zta;->EFa:[I
 
     const/4 v2, 0x5
 
@@ -614,7 +614,7 @@
 
     aput p1, v0, v4
 
-    iget-object p0, p0, Lsis/you/you/zta/zta/zta;->rFa:[I
+    iget-object p0, p0, Lsis/you/you/zta/zta/zta;->FFa:[I
 
     aget p1, p2, v1
 
@@ -634,7 +634,7 @@
 .method public zta([[I[[I[I)V
     .locals 5
 
-    iget-object p0, p0, Lcom/oneplus/android/server/display/bio;->dZ:Lsis/you/you/zta/zta/zta;
+    iget-object p0, p0, Lcom/oneplus/android/server/display/bio;->rZ:Lsis/you/you/zta/zta/zta;
 
     iget-object v0, p0, Lsis/you/you/zta/zta/zta;->red:[I
 
@@ -702,7 +702,7 @@
 
     aput p1, v0, v4
 
-    iget-object p1, p0, Lsis/you/you/zta/zta/zta;->oFa:[I
+    iget-object p1, p0, Lsis/you/you/zta/zta/zta;->CFa:[I
 
     aget-object v0, p2, v1
 
@@ -722,7 +722,7 @@
 
     aput v0, p1, v4
 
-    iget-object p1, p0, Lsis/you/you/zta/zta/zta;->pFa:[I
+    iget-object p1, p0, Lsis/you/you/zta/zta/zta;->DFa:[I
 
     aget-object v0, p2, v3
 
@@ -742,7 +742,7 @@
 
     aput v0, p1, v4
 
-    iget-object p1, p0, Lsis/you/you/zta/zta/zta;->qFa:[I
+    iget-object p1, p0, Lsis/you/you/zta/zta/zta;->EFa:[I
 
     aget-object v0, p2, v4
 
@@ -762,7 +762,7 @@
 
     aput p2, p1, v4
 
-    iget-object p0, p0, Lsis/you/you/zta/zta/zta;->rFa:[I
+    iget-object p0, p0, Lsis/you/you/zta/zta/zta;->FFa:[I
 
     aget p1, p3, v1
 

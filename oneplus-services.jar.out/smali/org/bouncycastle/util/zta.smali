@@ -20,6 +20,37 @@
     return-void
 .end method
 
+.method private static a(II)I
+    .locals 1
+
+    sub-int v0, p1, p0
+
+    if-ltz v0, :cond_0
+
+    return v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    invoke-direct {v0, p0}, Ljava/lang/StringBuffer;-><init>(I)V
+
+    const-string p0, " > "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
 .method public static bio([J)[J
     .locals 3
 
@@ -325,7 +356,7 @@
 .method public static copyOfRange([BII)[B
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->ivd(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
 
     move-result p2
 
@@ -352,7 +383,7 @@
 .method public static copyOfRange([III)[I
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->ivd(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
 
     move-result p2
 
@@ -379,7 +410,7 @@
 .method public static copyOfRange([JII)[J
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->ivd(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
 
     move-result p2
 
@@ -885,37 +916,6 @@
 
     :cond_1
     return v0
-.end method
-
-.method private static ivd(II)I
-    .locals 1
-
-    sub-int v0, p1, p0
-
-    if-ltz v0, :cond_0
-
-    return v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuffer;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuffer;-><init>(I)V
-
-    const-string p0, " > "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
-
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 .method public static oif([I)[I
@@ -2272,7 +2272,7 @@
 .method public static zta([Ljava/math/BigInteger;II)[Ljava/math/BigInteger;
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->ivd(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
 
     move-result p2
 

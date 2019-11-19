@@ -4,13 +4,13 @@
 
 
 # static fields
-.field public static final q:Ljava/math/BigInteger;
+.field private static final MCa:I = 0x2
 
-.field private static final yCa:I = 0x2
+.field public static final q:Ljava/math/BigInteger;
 
 
 # instance fields
-.field protected rCa:Lyou/zta/sis/zta/zta/zta/cjf;
+.field protected FCa:Lyou/zta/sis/zta/zta/zta/cjf;
 
 
 # direct methods
@@ -47,7 +47,7 @@
 
     invoke-direct {v0, p0, v1, v1}, Lyou/zta/sis/zta/zta/zta/cjf;-><init>(Lyou/zta/sis/zta/rtg;Lyou/zta/sis/zta/cno;Lyou/zta/sis/zta/cno;)V
 
-    iput-object v0, p0, Lyou/zta/sis/zta/zta/zta/zgw;->rCa:Lyou/zta/sis/zta/zta/zta/cjf;
+    iput-object v0, p0, Lyou/zta/sis/zta/zta/zta/zgw;->FCa:Lyou/zta/sis/zta/zta/zta/cjf;
 
     sget-object v0, Lyou/zta/sis/zta/sis;->ZERO:Ljava/math/BigInteger;
 
@@ -89,18 +89,18 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->fCa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->tCa:Ljava/math/BigInteger;
 
     const/4 v0, 0x2
 
-    iput v0, p0, Lyou/zta/sis/zta/rtg;->aCa:I
+    iput v0, p0, Lyou/zta/sis/zta/rtg;->oCa:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected Dj()Lyou/zta/sis/zta/rtg;
+.method protected Ej()Lyou/zta/sis/zta/rtg;
     .locals 0
 
     new-instance p0, Lyou/zta/sis/zta/zta/zta/zgw;
@@ -135,7 +135,7 @@
 .method public getInfinity()Lyou/zta/sis/zta/wtn;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/zgw;->rCa:Lyou/zta/sis/zta/zta/zta/cjf;
+    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/zgw;->FCa:Lyou/zta/sis/zta/zta/zta/cjf;
 
     return-object p0
 .end method
@@ -148,7 +148,7 @@
     return-object p0
 .end method
 
-.method public ja(I)Z
+.method public ka(I)Z
     .locals 0
 
     const/4 p0, 0x2
@@ -187,7 +187,7 @@
 
     aget-object v4, p1, v4
 
-    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->dk()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->ek()Lyou/zta/sis/zta/cno;
 
     move-result-object v5
 
@@ -199,7 +199,7 @@
 
     add-int/lit8 v3, v3, 0x8
 
-    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->ek()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->fk()Lyou/zta/sis/zta/cno;
 
     move-result-object v4
 

@@ -34,7 +34,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
 
-    sget-boolean p1, Lcom/android/server/am/ugm;->Wi:Z
+    sget-boolean p1, Lcom/android/server/am/ugm;->kj:Z
 
     if-nez p1, :cond_0
 
@@ -121,7 +121,7 @@
 
     if-eqz v0, :cond_3
 
-    sput-boolean v3, Lcom/android/server/am/ugm;->Wi:Z
+    sput-boolean v3, Lcom/android/server/am/ugm;->kj:Z
 
     const-string p0, "persist.sys.appboot.using"
 
@@ -142,7 +142,7 @@
 
     if-eqz v0, :cond_4
 
-    sput-boolean v4, Lcom/android/server/am/ugm;->Wi:Z
+    sput-boolean v4, Lcom/android/server/am/ugm;->kj:Z
 
     const-string p0, "persist.sys.appboot.using"
 
@@ -190,7 +190,7 @@
 
     if-eqz v0, :cond_7
 
-    sput-boolean v3, Lcom/android/server/am/ugm;->Xi:Z
+    sput-boolean v3, Lcom/android/server/am/ugm;->lj:Z
 
     const-string p0, "persist.sys.appboot.blacklist"
 
@@ -205,7 +205,7 @@
 
     if-eqz v0, :cond_8
 
-    sput-boolean v4, Lcom/android/server/am/ugm;->Xi:Z
+    sput-boolean v4, Lcom/android/server/am/ugm;->lj:Z
 
     const-string p0, "persist.sys.appboot.blacklist"
 
@@ -244,7 +244,7 @@
 
     invoke-static {p2, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/android/server/am/ugm;->cgv(I)I
+    invoke-static {p0}, Lcom/android/server/am/ugm;->vju(I)I
 
     goto/16 :goto_5
 
@@ -451,7 +451,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/zgw;->bud(I)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/zgw;->les(I)V
 
     goto :goto_5
 
@@ -470,7 +470,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/ibl;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p1, p1, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p1, p1, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-static {p1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
@@ -480,7 +480,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/ibl;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p2, p2, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p2, p2, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p2, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
@@ -504,7 +504,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/ibl;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p1, p1, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p1, p1, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     const/16 p2, 0x21
 
@@ -531,7 +531,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/ibl;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p1, p1, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p1, p1, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-static {p1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
 
@@ -541,7 +541,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/ibl;->this$0:Lcom/android/server/am/ugm;
 
-    iget-object p0, p0, Lcom/android/server/am/ugm;->Ri:Lcom/android/server/am/ugm$you;
+    iget-object p0, p0, Lcom/android/server/am/ugm;->fj:Lcom/android/server/am/ugm$you;
 
     invoke-virtual {p0, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 

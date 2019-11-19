@@ -9,41 +9,41 @@
 # static fields
 .field private static final BLOCK_SIZE:I = 0x10
 
-.field private static final Mwa:[B
-
-.field private static final Nwa:[I
-
-.field private static final Owa:[I
-
-.field private static final Pwa:I = -0x7f7f7f80
-
-.field private static final Qwa:I = 0x7f7f7f7f
-
-.field private static final Rwa:I = 0x1b
-
 .field private static final S:[B
-
-.field private static final Swa:I = -0x3f3f3f40
 
 .field private static final T0:[I
 
-.field private static final Twa:I = 0x3f3f3f3f
+.field private static final _wa:[B
+
+.field private static final axa:[I
+
+.field private static final bxa:[I
+
+.field private static final cxa:I = -0x7f7f7f80
+
+.field private static final dxa:I = 0x7f7f7f7f
+
+.field private static final exa:I = 0x1b
+
+.field private static final fxa:I = -0x3f3f3f40
+
+.field private static final gxa:I = 0x3f3f3f3f
 
 
 # instance fields
-.field private Gwa:I
+.field private Uwa:I
 
-.field private Hwa:[[I
+.field private Vwa:[[I
 
-.field private Iwa:I
+.field private Wwa:I
 
-.field private Jwa:I
+.field private Xwa:I
 
-.field private Kwa:I
+.field private Ywa:I
 
-.field private Lwa:I
+.field private Zwa:I
 
-.field private dva:Z
+.field private rva:Z
 
 .field private s:[B
 
@@ -64,7 +64,7 @@
 
     fill-array-data v1, :array_1
 
-    sput-object v1, Lorg/bouncycastle/crypto/rtg/zta;->Mwa:[B
+    sput-object v1, Lorg/bouncycastle/crypto/rtg/zta;->_wa:[B
 
     const/16 v1, 0x1e
 
@@ -72,7 +72,7 @@
 
     fill-array-data v1, :array_2
 
-    sput-object v1, Lorg/bouncycastle/crypto/rtg/zta;->Nwa:[I
+    sput-object v1, Lorg/bouncycastle/crypto/rtg/zta;->axa:[I
 
     new-array v1, v0, [I
 
@@ -84,7 +84,7 @@
 
     fill-array-data v0, :array_4
 
-    sput-object v0, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sput-object v0, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     return-void
 
@@ -1170,23 +1170,9 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Hwa:[[I
+    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Vwa:[[I
 
     return-void
-.end method
-
-.method private static bud(II)I
-    .locals 1
-
-    ushr-int v0, p0, p1
-
-    neg-int p1, p1
-
-    shl-int/2addr p0, p1
-
-    or-int/2addr p0, v0
-
-    return p0
 .end method
 
 .method private gwm([BI)V
@@ -1198,9 +1184,9 @@
 
     and-int/lit16 p2, p2, 0xff
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     add-int/lit8 v1, v0, 0x1
 
@@ -1212,9 +1198,9 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     add-int/lit8 v0, v1, 0x1
 
@@ -1226,9 +1212,9 @@
 
     or-int/2addr p2, v1
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     add-int/lit8 v1, v0, 0x1
 
@@ -1238,7 +1224,7 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     add-int/lit8 p2, v1, 0x1
 
@@ -1246,9 +1232,9 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    iput v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iput v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
-    iget v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iget v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     add-int/lit8 v1, p2, 0x1
 
@@ -1260,9 +1246,9 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     add-int/lit8 v0, v1, 0x1
 
@@ -1274,9 +1260,9 @@
 
     or-int/2addr p2, v1
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     add-int/lit8 v1, v0, 0x1
 
@@ -1286,7 +1272,7 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     add-int/lit8 p2, v1, 0x1
 
@@ -1294,9 +1280,9 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    iput v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iput v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
-    iget v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iget v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     add-int/lit8 v1, p2, 0x1
 
@@ -1308,9 +1294,9 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     add-int/lit8 v0, v1, 0x1
 
@@ -1322,9 +1308,9 @@
 
     or-int/2addr p2, v1
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     add-int/lit8 v1, v0, 0x1
 
@@ -1334,7 +1320,7 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     add-int/lit8 p2, v1, 0x1
 
@@ -1342,9 +1328,9 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    iput v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iput v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
-    iget v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iget v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     add-int/lit8 v1, p2, 0x1
 
@@ -1356,9 +1342,9 @@
 
     or-int/2addr p2, v0
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     add-int/lit8 v0, v1, 0x1
 
@@ -1370,9 +1356,9 @@
 
     or-int/2addr p2, v1
 
-    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iput p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
-    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iget p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     aget-byte p1, p1, v0
 
@@ -1380,7 +1366,7 @@
 
     or-int/2addr p1, p2
 
-    iput p1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iput p1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     return-void
 .end method
@@ -1390,7 +1376,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
-    iget v1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iget v1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     int-to-byte v2, v1
 
@@ -1422,7 +1408,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
-    iget v1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iget v1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     int-to-byte v2, v1
 
@@ -1454,7 +1440,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
-    iget v1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iget v1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     int-to-byte v2, v1
 
@@ -1486,7 +1472,7 @@
 
     add-int/lit8 v0, p2, 0x1
 
-    iget p0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iget p0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     int-to-byte v1, p0
 
@@ -1517,7 +1503,21 @@
     return-void
 .end method
 
-.method private static pc(I)I
+.method private static les(II)I
+    .locals 1
+
+    ushr-int v0, p0, p1
+
+    neg-int p1, p1
+
+    shl-int/2addr p0, p1
+
+    or-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method private static rc(I)I
     .locals 2
 
     const v0, 0x7f7f7f7f
@@ -1539,7 +1539,7 @@
     return p0
 .end method
 
-.method private static qc(I)I
+.method private static sc(I)I
     .locals 2
 
     const v0, 0x3f3f3f3f
@@ -1567,98 +1567,14 @@
     return p0
 .end method
 
-.method private static rc(I)I
-    .locals 2
-
-    const/16 v0, 0x8
-
-    invoke-static {p0, v0}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
-
-    move-result v0
-
-    xor-int/2addr v0, p0
-
-    invoke-static {v0}, Lorg/bouncycastle/crypto/rtg/zta;->pc(I)I
-
-    move-result v1
-
-    xor-int/2addr p0, v1
-
-    invoke-static {p0}, Lorg/bouncycastle/crypto/rtg/zta;->qc(I)I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
-    const/16 v1, 0x10
-
-    invoke-static {v0, v1}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
-    xor-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method private static sc(I)I
-    .locals 3
-
-    sget-object v0, Lorg/bouncycastle/crypto/rtg/zta;->S:[B
-
-    and-int/lit16 v1, p0, 0xff
-
-    aget-byte v1, v0, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shr-int/lit8 v2, p0, 0x8
-
-    and-int/lit16 v2, v2, 0xff
-
-    aget-byte v2, v0, v2
-
-    and-int/lit16 v2, v2, 0xff
-
-    shl-int/lit8 v2, v2, 0x8
-
-    or-int/2addr v1, v2
-
-    shr-int/lit8 v2, p0, 0x10
-
-    and-int/lit16 v2, v2, 0xff
-
-    aget-byte v2, v0, v2
-
-    and-int/lit16 v2, v2, 0xff
-
-    shl-int/lit8 v2, v2, 0x10
-
-    or-int/2addr v1, v2
-
-    shr-int/lit8 p0, p0, 0x18
-
-    and-int/lit16 p0, p0, 0xff
-
-    aget-byte p0, v0, p0
-
-    shl-int/lit8 p0, p0, 0x18
-
-    or-int/2addr p0, v1
-
-    return p0
-.end method
-
 .method private sis([[I)V
     .locals 16
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iget v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
-    iget v2, v0, Lorg/bouncycastle/crypto/rtg/zta;->Gwa:I
+    iget v2, v0, Lorg/bouncycastle/crypto/rtg/zta;->Uwa:I
 
     aget-object v3, p1, v2
 
@@ -1668,7 +1584,7 @@
 
     xor-int/2addr v1, v3
 
-    iget v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iget v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     aget-object v5, p1, v2
 
@@ -1678,7 +1594,7 @@
 
     xor-int/2addr v3, v5
 
-    iget v5, v0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iget v5, v0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     aget-object v7, p1, v2
 
@@ -1690,7 +1606,7 @@
 
     add-int/lit8 v7, v2, -0x1
 
-    iget v9, v0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iget v9, v0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     aget-object v2, p1, v2
 
@@ -1709,7 +1625,7 @@
 
     if-le v7, v6, :cond_0
 
-    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v14, v1, 0xff
 
@@ -1721,13 +1637,13 @@
 
     aget v13, v13, v15
 
-    invoke-static {v13, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v13, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v13
 
     xor-int/2addr v13, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v5, 0x10
 
@@ -1735,13 +1651,13 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
     xor-int/2addr v13, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v3, 0x18
 
@@ -1749,7 +1665,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -1761,7 +1677,7 @@
 
     xor-int/2addr v13, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v15, v3, 0xff
 
@@ -1773,13 +1689,13 @@
 
     aget v4, v14, v4
 
-    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
     xor-int/2addr v4, v15
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v2, 0x10
 
@@ -1787,13 +1703,13 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
     xor-int/2addr v4, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v5, 0x18
 
@@ -1801,7 +1717,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -1813,7 +1729,7 @@
 
     xor-int/2addr v4, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v15, v5, 0xff
 
@@ -1825,13 +1741,13 @@
 
     aget v6, v14, v6
 
-    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
     xor-int/2addr v6, v15
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v1, 0x10
 
@@ -1839,13 +1755,13 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
     xor-int/2addr v6, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v2, 0x18
 
@@ -1853,7 +1769,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -1865,7 +1781,7 @@
 
     xor-int/2addr v6, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v2, v2, 0xff
 
@@ -1877,13 +1793,13 @@
 
     aget v5, v14, v5
 
-    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
     xor-int/2addr v2, v5
 
-    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v3, v3, 0x10
 
@@ -1891,13 +1807,13 @@
 
     aget v3, v5, v3
 
-    invoke-static {v3, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v3, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v3
 
     xor-int/2addr v2, v3
 
-    sget-object v3, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v3, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v1, v1, 0x18
 
@@ -1905,7 +1821,7 @@
 
     aget v1, v3, v1
 
-    invoke-static {v1, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v1, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v1
 
@@ -1919,7 +1835,7 @@
 
     xor-int/2addr v1, v3
 
-    sget-object v3, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v3, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v5, v13, 0xff
 
@@ -1931,13 +1847,13 @@
 
     aget v3, v3, v7
 
-    invoke-static {v3, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v3, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v3
 
     xor-int/2addr v3, v5
 
-    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v7, v6, 0x10
 
@@ -1945,13 +1861,13 @@
 
     aget v5, v5, v7
 
-    invoke-static {v5, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
     xor-int/2addr v3, v5
 
-    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v7, v4, 0x18
 
@@ -1959,7 +1875,7 @@
 
     aget v5, v5, v7
 
-    invoke-static {v5, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
@@ -1973,7 +1889,7 @@
 
     xor-int/2addr v3, v5
 
-    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v7, v4, 0xff
 
@@ -1985,13 +1901,13 @@
 
     aget v5, v5, v14
 
-    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
     xor-int/2addr v5, v7
 
-    sget-object v7, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v7, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v14, v1, 0x10
 
@@ -1999,13 +1915,13 @@
 
     aget v7, v7, v14
 
-    invoke-static {v7, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v7, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v7
 
     xor-int/2addr v5, v7
 
-    sget-object v7, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v7, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v14, v6, 0x18
 
@@ -2013,7 +1929,7 @@
 
     aget v7, v7, v14
 
-    invoke-static {v7, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v7, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v7
 
@@ -2027,7 +1943,7 @@
 
     xor-int/2addr v5, v7
 
-    sget-object v7, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v7, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v14, v6, 0xff
 
@@ -2039,13 +1955,13 @@
 
     aget v7, v7, v15
 
-    invoke-static {v7, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v7, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v7
 
     xor-int/2addr v7, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v13, 0x10
 
@@ -2053,13 +1969,13 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
     xor-int/2addr v7, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v1, 0x18
 
@@ -2067,7 +1983,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2079,7 +1995,7 @@
 
     xor-int/2addr v7, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v1, v1, 0xff
 
@@ -2091,13 +2007,13 @@
 
     aget v6, v14, v6
 
-    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
     xor-int/2addr v1, v6
 
-    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/2addr v4, v9
 
@@ -2105,13 +2021,13 @@
 
     aget v4, v6, v4
 
-    invoke-static {v4, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
     xor-int/2addr v1, v4
 
-    sget-object v4, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v4, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v6, v13, 0x18
 
@@ -2119,7 +2035,7 @@
 
     aget v4, v4, v6
 
-    invoke-static {v4, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
@@ -2148,7 +2064,7 @@
     goto/16 :goto_0
 
     :cond_0
-    sget-object v4, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v4, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v6, v1, 0xff
 
@@ -2160,13 +2076,13 @@
 
     aget v4, v4, v13
 
-    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
     xor-int/2addr v4, v6
 
-    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v13, v5, 0x10
 
@@ -2174,13 +2090,13 @@
 
     aget v6, v6, v13
 
-    invoke-static {v6, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
     xor-int/2addr v4, v6
 
-    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v13, v3, 0x18
 
@@ -2188,7 +2104,7 @@
 
     aget v6, v6, v13
 
-    invoke-static {v6, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
@@ -2202,7 +2118,7 @@
 
     xor-int/2addr v4, v6
 
-    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v6, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v13, v3, 0xff
 
@@ -2214,13 +2130,13 @@
 
     aget v6, v6, v14
 
-    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
     xor-int/2addr v6, v13
 
-    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v14, v2, 0x10
 
@@ -2228,13 +2144,13 @@
 
     aget v13, v13, v14
 
-    invoke-static {v13, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v13, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v13
 
     xor-int/2addr v6, v13
 
-    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v14, v5, 0x18
 
@@ -2242,7 +2158,7 @@
 
     aget v13, v13, v14
 
-    invoke-static {v13, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v13, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v13
 
@@ -2256,7 +2172,7 @@
 
     xor-int/2addr v6, v13
 
-    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v13, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v14, v5, 0xff
 
@@ -2268,13 +2184,13 @@
 
     aget v13, v13, v15
 
-    invoke-static {v13, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v13, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v13
 
     xor-int/2addr v13, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v1, 0x10
 
@@ -2282,13 +2198,13 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
     xor-int/2addr v13, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/lit8 v15, v2, 0x18
 
@@ -2296,7 +2212,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2308,7 +2224,7 @@
 
     xor-int/2addr v13, v14
 
-    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v14, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     and-int/lit16 v2, v2, 0xff
 
@@ -2320,13 +2236,13 @@
 
     aget v5, v14, v5
 
-    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
     xor-int/2addr v2, v5
 
-    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v5, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/2addr v3, v9
 
@@ -2334,13 +2250,13 @@
 
     aget v3, v5, v3
 
-    invoke-static {v3, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v3, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v3
 
     xor-int/2addr v2, v3
 
-    sget-object v3, Lorg/bouncycastle/crypto/rtg/zta;->Owa:[I
+    sget-object v3, Lorg/bouncycastle/crypto/rtg/zta;->bxa:[I
 
     shr-int/2addr v1, v11
 
@@ -2348,7 +2264,7 @@
 
     aget v1, v3, v1
 
-    invoke-static {v1, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v1, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v1
 
@@ -2360,7 +2276,7 @@
 
     xor-int/2addr v1, v2
 
-    sget-object v2, Lorg/bouncycastle/crypto/rtg/zta;->Mwa:[B
+    sget-object v2, Lorg/bouncycastle/crypto/rtg/zta;->_wa:[B
 
     and-int/lit16 v3, v4, 0xff
 
@@ -2412,7 +2328,7 @@
 
     xor-int/2addr v3, v14
 
-    iput v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iput v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     and-int/lit16 v3, v6, 0xff
 
@@ -2464,7 +2380,7 @@
 
     xor-int/2addr v3, v7
 
-    iput v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iput v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     and-int/lit16 v3, v13, 0xff
 
@@ -2514,7 +2430,7 @@
 
     xor-int/2addr v3, v7
 
-    iput v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iput v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     and-int/lit16 v1, v1, 0xff
 
@@ -2564,9 +2480,45 @@
 
     xor-int/2addr v1, v2
 
-    iput v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iput v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     return-void
+.end method
+
+.method private static tc(I)I
+    .locals 2
+
+    const/16 v0, 0x8
+
+    invoke-static {p0, v0}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
+
+    move-result v0
+
+    xor-int/2addr v0, p0
+
+    invoke-static {v0}, Lorg/bouncycastle/crypto/rtg/zta;->rc(I)I
+
+    move-result v1
+
+    xor-int/2addr p0, v1
+
+    invoke-static {p0}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    const/16 v1, 0x10
+
+    invoke-static {v0, v1}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    xor-int/2addr p0, v0
+
+    return p0
 .end method
 
 .method private tsu([[I)V
@@ -2574,7 +2526,7 @@
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iget v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     const/4 v2, 0x0
 
@@ -2584,7 +2536,7 @@
 
     xor-int/2addr v1, v3
 
-    iget v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iget v3, v0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     aget-object v4, p1, v2
 
@@ -2594,7 +2546,7 @@
 
     xor-int/2addr v3, v4
 
-    iget v4, v0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iget v4, v0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     aget-object v6, p1, v2
 
@@ -2604,7 +2556,7 @@
 
     xor-int/2addr v4, v6
 
-    iget v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iget v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     aget-object v8, p1, v2
 
@@ -2625,7 +2577,7 @@
     move v1, v5
 
     :goto_0
-    iget v10, v0, Lorg/bouncycastle/crypto/rtg/zta;->Gwa:I
+    iget v10, v0, Lorg/bouncycastle/crypto/rtg/zta;->Uwa:I
 
     sub-int/2addr v10, v5
 
@@ -2649,7 +2601,7 @@
 
     aget v10, v10, v15
 
-    invoke-static {v10, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v10, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
@@ -2663,7 +2615,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2677,7 +2629,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2701,7 +2653,7 @@
 
     aget v2, v14, v2
 
-    invoke-static {v2, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v2
 
@@ -2715,7 +2667,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2729,7 +2681,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2753,7 +2705,7 @@
 
     aget v5, v14, v5
 
-    invoke-static {v5, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
@@ -2767,7 +2719,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2781,7 +2733,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2805,7 +2757,7 @@
 
     aget v3, v14, v3
 
-    invoke-static {v3, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v3, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v3
 
@@ -2819,7 +2771,7 @@
 
     aget v4, v8, v4
 
-    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
@@ -2833,7 +2785,7 @@
 
     aget v4, v4, v6
 
-    invoke-static {v4, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
@@ -2859,7 +2811,7 @@
 
     aget v3, v3, v8
 
-    invoke-static {v3, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v3, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v3
 
@@ -2873,7 +2825,7 @@
 
     aget v6, v6, v8
 
-    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
@@ -2887,7 +2839,7 @@
 
     aget v6, v6, v8
 
-    invoke-static {v6, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
@@ -2913,7 +2865,7 @@
 
     aget v6, v6, v14
 
-    invoke-static {v6, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v6, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v6
 
@@ -2927,7 +2879,7 @@
 
     aget v8, v8, v14
 
-    invoke-static {v8, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v8, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v8
 
@@ -2941,7 +2893,7 @@
 
     aget v8, v8, v14
 
-    invoke-static {v8, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v8, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v8
 
@@ -2967,7 +2919,7 @@
 
     aget v8, v8, v15
 
-    invoke-static {v8, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v8, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v8
 
@@ -2981,7 +2933,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -2995,7 +2947,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -3019,7 +2971,7 @@
 
     aget v10, v14, v10
 
-    invoke-static {v10, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v10, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
@@ -3033,7 +2985,7 @@
 
     aget v2, v10, v2
 
-    invoke-static {v2, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v2
 
@@ -3047,7 +2999,7 @@
 
     aget v2, v2, v5
 
-    invoke-static {v2, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v2
 
@@ -3088,7 +3040,7 @@
 
     aget v2, v2, v10
 
-    invoke-static {v2, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v2
 
@@ -3102,7 +3054,7 @@
 
     aget v5, v5, v10
 
-    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
@@ -3116,7 +3068,7 @@
 
     aget v5, v5, v10
 
-    invoke-static {v5, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
@@ -3142,7 +3094,7 @@
 
     aget v5, v5, v14
 
-    invoke-static {v5, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v5, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v5
 
@@ -3156,7 +3108,7 @@
 
     aget v10, v10, v14
 
-    invoke-static {v10, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v10, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
@@ -3170,7 +3122,7 @@
 
     aget v10, v10, v14
 
-    invoke-static {v10, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v10, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
@@ -3196,7 +3148,7 @@
 
     aget v10, v10, v15
 
-    invoke-static {v10, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v10, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
@@ -3210,7 +3162,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -3224,7 +3176,7 @@
 
     aget v14, v14, v15
 
-    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v14, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v14
 
@@ -3248,7 +3200,7 @@
 
     aget v3, v14, v3
 
-    invoke-static {v3, v12}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v3, v12}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v3
 
@@ -3262,7 +3214,7 @@
 
     aget v4, v8, v4
 
-    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v11}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
@@ -3276,7 +3228,7 @@
 
     aget v4, v4, v6
 
-    invoke-static {v4, v13}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v4, v13}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v4
 
@@ -3342,7 +3294,7 @@
 
     xor-int/2addr v6, v14
 
-    iput v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Iwa:I
+    iput v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Wwa:I
 
     and-int/lit16 v6, v5, 0xff
 
@@ -3392,7 +3344,7 @@
 
     xor-int/2addr v6, v14
 
-    iput v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Jwa:I
+    iput v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Xwa:I
 
     and-int/lit16 v6, v10, 0xff
 
@@ -3440,7 +3392,7 @@
 
     xor-int/2addr v6, v7
 
-    iput v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Kwa:I
+    iput v6, v0, Lorg/bouncycastle/crypto/rtg/zta;->Ywa:I
 
     and-int/lit16 v1, v1, 0xff
 
@@ -3488,9 +3440,57 @@
 
     xor-int/2addr v1, v2
 
-    iput v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Lwa:I
+    iput v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Zwa:I
 
     return-void
+.end method
+
+.method private static uc(I)I
+    .locals 3
+
+    sget-object v0, Lorg/bouncycastle/crypto/rtg/zta;->S:[B
+
+    and-int/lit16 v1, p0, 0xff
+
+    aget-byte v1, v0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    shr-int/lit8 v2, p0, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    shr-int/lit8 v2, p0, 0x10
+
+    and-int/lit16 v2, v2, 0xff
+
+    aget-byte v2, v0, v2
+
+    and-int/lit16 v2, v2, 0xff
+
+    shl-int/lit8 v2, v2, 0x10
+
+    or-int/2addr v1, v2
+
+    shr-int/lit8 p0, p0, 0x18
+
+    and-int/lit16 p0, p0, 0xff
+
+    aget-byte p0, v0, p0
+
+    shl-int/lit8 p0, p0, 0x18
+
+    or-int/2addr p0, v1
+
+    return p0
 .end method
 
 .method private zta([BZ)[[I
@@ -3520,9 +3520,9 @@
 
     add-int/lit8 v5, v2, 0x6
 
-    iput v5, v0, Lorg/bouncycastle/crypto/rtg/zta;->Gwa:I
+    iput v5, v0, Lorg/bouncycastle/crypto/rtg/zta;->Uwa:I
 
-    iget v5, v0, Lorg/bouncycastle/crypto/rtg/zta;->Gwa:I
+    iget v5, v0, Lorg/bouncycastle/crypto/rtg/zta;->Uwa:I
 
     const/4 v6, 0x1
 
@@ -3647,11 +3647,11 @@
 
     if-ge v1, v10, :cond_0
 
-    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
-    invoke-static {v10}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v10}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v10
 
@@ -3685,7 +3685,7 @@
 
     aput v8, v10, v18
 
-    invoke-static {v8}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v8}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v10
 
@@ -3722,11 +3722,11 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v1
 
-    invoke-static {v1}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v1}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v1
 
@@ -3822,11 +3822,11 @@
 
     aput v1, v12, v6
 
-    invoke-static {v1, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v1, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v12
 
-    invoke-static {v12}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v12}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v12
 
@@ -3889,11 +3889,11 @@
     :goto_1
     if-ge v1, v8, :cond_3
 
-    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v15
 
-    invoke-static {v15}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v15}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v15
 
@@ -3941,11 +3941,11 @@
 
     aput v2, v17, v6
 
-    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v17
 
-    invoke-static/range {v17 .. v17}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static/range {v17 .. v17}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v17
 
@@ -4000,11 +4000,11 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v1
 
-    invoke-static {v1}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v1}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v1
 
@@ -4088,15 +4088,15 @@
 
     if-gt v1, v10, :cond_5
 
-    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->bud(II)I
+    invoke-static {v2, v9}, Lorg/bouncycastle/crypto/rtg/zta;->les(II)I
 
     move-result v10
 
-    invoke-static {v10}, Lorg/bouncycastle/crypto/rtg/zta;->sc(I)I
+    invoke-static {v10}, Lorg/bouncycastle/crypto/rtg/zta;->uc(I)I
 
     move-result v10
 
-    sget-object v12, Lorg/bouncycastle/crypto/rtg/zta;->Nwa:[I
+    sget-object v12, Lorg/bouncycastle/crypto/rtg/zta;->axa:[I
 
     add-int/lit8 v13, v1, -0x1
 
@@ -4139,7 +4139,7 @@
     if-nez p2, :cond_7
 
     :goto_4
-    iget v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Gwa:I
+    iget v1, v0, Lorg/bouncycastle/crypto/rtg/zta;->Uwa:I
 
     if-ge v6, v1, :cond_7
 
@@ -4156,7 +4156,7 @@
 
     aget v4, v4, v1
 
-    invoke-static {v4}, Lorg/bouncycastle/crypto/rtg/zta;->rc(I)I
+    invoke-static {v4}, Lorg/bouncycastle/crypto/rtg/zta;->tc(I)I
 
     move-result v4
 
@@ -4211,7 +4211,7 @@
 .method public zta([BI[BI)I
     .locals 2
 
-    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Hwa:[[I
+    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->Vwa:[[I
 
     if-eqz v0, :cond_3
 
@@ -4227,11 +4227,11 @@
 
     if-gt v0, v1, :cond_1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->dva:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/zta;->rva:Z
 
     invoke-direct {p0, p1, p2}, Lorg/bouncycastle/crypto/rtg/zta;->gwm([BI)V
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Hwa:[[I
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/zta;->Vwa:[[I
 
     if-eqz v0, :cond_0
 
@@ -4294,9 +4294,9 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Hwa:[[I
+    iput-object p2, p0, Lorg/bouncycastle/crypto/rtg/zta;->Vwa:[[I
 
-    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/zta;->dva:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/zta;->rva:Z
 
     if-eqz p1, :cond_0
 
@@ -4305,7 +4305,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lorg/bouncycastle/crypto/rtg/zta;->Mwa:[B
+    sget-object p1, Lorg/bouncycastle/crypto/rtg/zta;->_wa:[B
 
     :goto_0
     invoke-static {p1}, Lorg/bouncycastle/util/zta;->vdb([B)[B

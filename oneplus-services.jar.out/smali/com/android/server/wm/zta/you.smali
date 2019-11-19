@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private final eb:I
+.field private final jb:I
 
-.field private final fb:I
+.field private final kb:I
 
 .field private mNormalizedTime:F
 
@@ -41,11 +41,11 @@
 
     move v0, p5
 
-    iput v0, v9, Lcom/android/server/wm/zta/you;->eb:I
+    iput v0, v9, Lcom/android/server/wm/zta/you;->jb:I
 
     move/from16 v0, p6
 
-    iput v0, v9, Lcom/android/server/wm/zta/you;->fb:I
+    iput v0, v9, Lcom/android/server/wm/zta/you;->kb:I
 
     move-object/from16 v0, p7
 
@@ -67,11 +67,11 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/android/server/wm/zta/you;->eb:I
+    iget v1, p0, Lcom/android/server/wm/zta/you;->jb:I
 
     int-to-float v2, v1
 
-    iget v3, p0, Lcom/android/server/wm/zta/you;->fb:I
+    iget v3, p0, Lcom/android/server/wm/zta/you;->kb:I
 
     sub-int/2addr v3, v1
 

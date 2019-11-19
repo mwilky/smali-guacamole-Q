@@ -135,7 +135,7 @@
     return-object p0
 .end method
 
-.method public rh()[Lorg/bouncycastle/asn1/bvj/zta;
+.method public sh()[Lorg/bouncycastle/asn1/bvj/zta;
     .locals 3
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/bvj/sis;->values:Lorg/bouncycastle/asn1/ear;
@@ -173,7 +173,19 @@
     return-object v0
 .end method
 
-.method public sh()Z
+.method public size()I
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/bvj/sis;->values:Lorg/bouncycastle/asn1/ear;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ear;->size()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public th()Z
     .locals 1
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/bvj/sis;->values:Lorg/bouncycastle/asn1/ear;
@@ -193,18 +205,6 @@
 
     :goto_0
     return v0
-.end method
-
-.method public size()I
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/bvj/sis;->values:Lorg/bouncycastle/asn1/ear;
-
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ear;->size()I
-
-    move-result p0
-
-    return p0
 .end method
 
 .method public toASN1Primitive()Lorg/bouncycastle/asn1/vdb;

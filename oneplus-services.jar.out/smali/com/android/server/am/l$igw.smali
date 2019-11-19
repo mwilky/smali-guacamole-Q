@@ -62,13 +62,13 @@
 .method public zta(Lcom/android/server/am/l$bio;Lcom/android/server/am/l$bio;)I
     .locals 4
 
-    iget-wide v0, p1, Lcom/android/server/am/l$bio;->kv:D
+    iget-wide v0, p1, Lcom/android/server/am/l$bio;->yv:D
 
-    iget-wide v2, p1, Lcom/android/server/am/l$bio;->jv:D
+    iget-wide v2, p1, Lcom/android/server/am/l$bio;->xv:D
 
     add-double/2addr v0, v2
 
-    iget-wide p0, p1, Lcom/android/server/am/l$bio;->lv:D
+    iget-wide p0, p1, Lcom/android/server/am/l$bio;->zv:D
 
     add-double/2addr v0, p0
 
@@ -76,13 +76,13 @@
 
     move-result-object p0
 
-    iget-wide v0, p2, Lcom/android/server/am/l$bio;->kv:D
+    iget-wide v0, p2, Lcom/android/server/am/l$bio;->yv:D
 
-    iget-wide v2, p2, Lcom/android/server/am/l$bio;->jv:D
+    iget-wide v2, p2, Lcom/android/server/am/l$bio;->xv:D
 
     add-double/2addr v0, v2
 
-    iget-wide p1, p2, Lcom/android/server/am/l$bio;->lv:D
+    iget-wide p1, p2, Lcom/android/server/am/l$bio;->zv:D
 
     add-double/2addr v0, p1
 
