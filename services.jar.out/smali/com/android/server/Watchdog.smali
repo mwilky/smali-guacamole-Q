@@ -46,6 +46,8 @@
 
 .field static final WAITING:I = 0x1
 
+.field public static mPhonePid:I
+
 .field static sWatchdog:Lcom/android/server/Watchdog;
 
 
@@ -69,8 +71,6 @@
 .field final mMonitorChecker:Lcom/android/server/Watchdog$HandlerChecker;
 
 .field final mOpenFdMonitor:Lcom/android/server/Watchdog$OpenFdMonitor;
-
-.field mPhonePid:I
 
 .field mTraceDateFormat:Ljava/text/SimpleDateFormat;
 
@@ -1052,7 +1052,7 @@
 
     if-eqz v0, :cond_0
 
-    iput p2, p0, Lcom/android/server/Watchdog;->mPhonePid:I
+    sput p2, Lcom/android/server/Watchdog;->mPhonePid:I
 
     :cond_0
     monitor-exit p0
@@ -1457,7 +1457,7 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget v0, v1, Lcom/android/server/Watchdog;->mPhonePid:I
+    sget v0, Lcom/android/server/Watchdog;->mPhonePid:I
 
     if-lez v0, :cond_b
 

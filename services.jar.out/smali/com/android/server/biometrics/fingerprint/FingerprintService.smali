@@ -1295,6 +1295,27 @@
     return-void
 .end method
 
+.method private getCurrentAuthClient()Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->getCurrentClient()Lcom/android/server/biometrics/ClientMonitor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/android/server/biometrics/ClientMonitor;->getOwnerString()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    return-object v1
+.end method
+
 .method private declared-synchronized getFingerprintDaemon()Landroid/hardware/biometrics/fingerprint/V2_1/IBiometricsFingerprint;
     .locals 7
 
@@ -2014,7 +2035,7 @@
 
     check-cast v2, Landroid/hardware/fingerprint/IFingerprintClientActiveCallback;
 
-    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->getAuthPackageInternal()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/biometrics/fingerprint/FingerprintService;->getCurrentAuthClient()Ljava/lang/String;
 
     move-result-object v3
 

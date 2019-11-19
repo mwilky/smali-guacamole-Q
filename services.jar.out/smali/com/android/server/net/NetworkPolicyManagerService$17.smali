@@ -400,10 +400,6 @@
 
     invoke-virtual {v3}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkEnabledNL()V
 
-    iget-object v3, p0, Lcom/android/server/net/NetworkPolicyManagerService$17;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
-
-    invoke-virtual {v3}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNotificationsNL()V
-
     :cond_6
     monitor-exit v1
 
@@ -519,6 +515,8 @@
     invoke-virtual {v4}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
     return v2
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

@@ -1629,8 +1629,20 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
     :goto_0
+    const-class v2, Lcom/android/server/statusbar/StatusBarManagerInternal;
+
+    invoke-static {v2}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/statusbar/StatusBarManagerInternal;
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2}, Lcom/android/server/statusbar/StatusBarManagerInternal;->onPackagePreferencesCleared()V
+
+    :cond_0
     monitor-exit v0
 
     return-void

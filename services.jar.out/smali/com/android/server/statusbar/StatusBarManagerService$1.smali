@@ -334,6 +334,38 @@
     return-void
 .end method
 
+.method public onPackagePreferencesCleared()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$1;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
+
+    invoke-static {v0}, Lcom/android/server/statusbar/StatusBarManagerService;->access$100(Lcom/android/server/statusbar/StatusBarManagerService;)Lcom/android/internal/statusbar/IStatusBar;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lcom/android/server/statusbar/StatusBarManagerService$1;->this$0:Lcom/android/server/statusbar/StatusBarManagerService;
+
+    invoke-static {v0}, Lcom/android/server/statusbar/StatusBarManagerService;->access$100(Lcom/android/server/statusbar/StatusBarManagerService;)Lcom/android/internal/statusbar/IStatusBar;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/android/internal/statusbar/IStatusBar;->onPackagePreferencesCleared()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
 .method public onProposedRotationChanged(IZ)V
     .locals 1
 

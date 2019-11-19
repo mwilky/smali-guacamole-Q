@@ -1223,7 +1223,7 @@
 .end method
 
 .method private limitLuxValue(F)F
-    .locals 14
+    .locals 20
 
     const/4 v0, 0x0
 
@@ -1233,300 +1233,509 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTime:Landroid/text/format/Time;
+    move-object/from16 v2, p0
 
-    iget v2, v2, Landroid/text/format/Time;->hour:I
+    iget-object v3, v2, Lcom/android/server/display/AutomaticBrightnessController;->mTime:Landroid/text/format/Time;
 
-    const-string v3, "18831"
+    iget v3, v3, Landroid/text/format/Time;->hour:I
 
-    const-string v4, "18827"
+    const-string v4, "18831"
 
-    const-string v5, "18825"
+    const-string v5, "18827"
 
-    const-string v6, "18821"
+    const-string v6, "18825"
 
-    const/16 v7, 0x14
+    const-string v7, "18821"
 
-    const-string v8, "19861"
+    const-string v8, "18863"
 
-    const-string v9, "19833"
+    const-string v9, "19853"
 
-    const-string v10, "19831"
+    const-string v10, "19851"
 
-    const-string v11, "19830"
+    const-string v11, "19850"
 
-    const-string v12, "19801"
+    const-string v12, "18865"
 
-    const/4 v13, 0x6
+    const-string v13, "19861"
 
-    if-lt v2, v13, :cond_2
+    const-string v14, "19833"
 
-    if-ge v2, v7, :cond_2
+    const-string v15, "19831"
 
-    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move/from16 v16, v0
 
-    move-result v7
+    const-string v0, "19830"
 
-    if-nez v7, :cond_1
+    const-string v2, "19801"
 
-    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-object/from16 v17, v4
 
-    move-result v7
+    const-string v4, "18857"
 
-    if-nez v7, :cond_1
+    move-object/from16 v18, v5
 
-    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v5, 0x6
 
-    move-result v7
+    if-lt v3, v5, :cond_7
 
-    if-nez v7, :cond_1
+    const/16 v5, 0x14
 
-    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ge v3, v5, :cond_7
 
-    move-result v7
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v7, :cond_1
+    move-result v2
 
-    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez v2, :cond_6
 
-    move-result v7
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v7, :cond_0
+    move-result v0
 
-    goto :goto_0
+    if-nez v0, :cond_6
 
-    :cond_0
-    const v0, 0x3f99999a    # 1.2f
+    invoke-virtual {v15, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto/16 :goto_4
+    move-result v0
 
-    :cond_1
-    :goto_0
-    const v0, 0x3fe66666    # 1.8f
+    if-nez v0, :cond_6
 
-    goto/16 :goto_4
+    invoke-virtual {v14, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_2
-    if-lt v2, v7, :cond_9
+    move-result v0
 
-    const/16 v7, 0x17
+    if-nez v0, :cond_6
 
-    if-gt v2, v7, :cond_9
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v7, "19850"
+    move-result v0
 
-    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_8
-
-    const-string v7, "19851"
-
-    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_8
-
-    const-string v7, "18865"
-
-    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_8
-
-    const-string v7, "19863"
-
-    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_7
-
-    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_7
-
-    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_7
-
-    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_7
-
-    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
+    if-eqz v0, :cond_0
 
     goto :goto_2
 
-    :cond_4
-    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_0
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v0
 
-    if-nez v7, :cond_6
+    if-nez v0, :cond_5
 
-    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v0
 
-    if-nez v7, :cond_6
+    if-nez v0, :cond_5
 
-    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v0
 
-    if-nez v7, :cond_6
+    if-nez v0, :cond_5
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v0
 
-    if-eqz v7, :cond_5
+    if-nez v0, :cond_5
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     goto :goto_1
 
-    :cond_5
-    const v0, 0x3e570a3d    # 0.21f
+    :cond_1
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_4
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const v0, 0x3f99999a    # 1.2f
+
+    move/from16 v17, v3
+
+    goto/16 :goto_9
+
+    :cond_2
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    move-object/from16 v5, v18
+
+    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const v0, 0x3f99999a    # 1.2f
+
+    move/from16 v17, v3
+
+    goto/16 :goto_9
+
+    :cond_4
+    :goto_0
+    const v0, 0x3f99999a    # 1.2f
+
+    move/from16 v17, v3
+
+    goto/16 :goto_9
+
+    :cond_5
+    :goto_1
+    const v0, 0x3fb33333    # 1.4f
+
+    move/from16 v17, v3
+
+    goto/16 :goto_9
 
     :cond_6
-    :goto_1
-    const v0, 0x3f666666    # 0.9f
+    :goto_2
+    const v0, 0x3fe66666    # 1.8f
 
-    goto :goto_4
+    move/from16 v17, v3
+
+    goto/16 :goto_9
 
     :cond_7
-    :goto_2
-    const v0, 0x3f666666    # 0.9f
+    move-object/from16 v19, v17
 
-    goto :goto_4
+    move-object/from16 v5, v18
+
+    move-object/from16 v18, v5
+
+    const/16 v5, 0x14
+
+    if-lt v3, v5, :cond_10
+
+    const/16 v5, 0x17
+
+    if-gt v3, v5, :cond_10
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_f
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    invoke-virtual {v15, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    invoke-virtual {v14, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    goto/16 :goto_5
 
     :cond_8
-    :goto_3
-    const v0, 0x3ecccccd    # 0.4f
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_e
+
+    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_e
+
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_e
+
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_e
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
 
     goto :goto_4
 
     :cond_9
-    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v0
 
-    if-nez v7, :cond_a
+    if-eqz v0, :cond_a
 
-    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result v7
+    move/from16 v17, v3
 
-    if-nez v7, :cond_a
-
-    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_a
-
-    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_a
-
-    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_b
+    goto/16 :goto_9
 
     :cond_a
-    const v0, 0x3ecccccd    # 0.4f
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_b
-    :goto_4
+    move-result v0
+
+    if-nez v0, :cond_d
+
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v6
+    move-result v0
 
-    if-nez v6, :cond_c
+    if-nez v0, :cond_d
+
+    move-object/from16 v5, v18
 
     invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v0
 
-    if-nez v5, :cond_c
+    if-nez v0, :cond_d
 
+    move-object/from16 v0, v19
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    goto :goto_3
+
+    :cond_b
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_c
+    if-eqz v0, :cond_c
 
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const v0, 0x3ee66666    # 0.45f
 
-    move-result v3
+    move/from16 v17, v3
 
-    if-nez v3, :cond_c
-
-    const-string v3, "18857"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_d
+    goto/16 :goto_9
 
     :cond_c
-    const/4 v3, 0x0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    cmpg-float v3, v3, p1
+    move/from16 v17, v3
 
-    if-gtz v3, :cond_d
-
-    const/high16 v3, 0x40a00000    # 5.0f
-
-    cmpg-float v3, p1, v3
-
-    if-gtz v3, :cond_d
-
-    move p1, v0
+    goto/16 :goto_9
 
     :cond_d
-    cmpg-float v3, p1, v0
+    :goto_3
+    const v0, 0x3f666666    # 0.9f
 
-    if-gez v3, :cond_e
+    move/from16 v17, v3
 
-    move v3, v0
-
-    goto :goto_5
+    goto/16 :goto_9
 
     :cond_e
-    move v3, p1
+    :goto_4
+    const/high16 v0, 0x3f800000    # 1.0f
 
+    move/from16 v17, v3
+
+    goto/16 :goto_9
+
+    :cond_f
     :goto_5
-    return v3
+    const v0, 0x3f666666    # 0.9f
+
+    move/from16 v17, v3
+
+    goto/16 :goto_9
+
+    :cond_10
+    move/from16 v17, v3
+
+    move-object/from16 v5, v18
+
+    move-object/from16 v3, v19
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_17
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_17
+
+    invoke-virtual {v15, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_17
+
+    invoke-virtual {v14, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_17
+
+    invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    goto :goto_8
+
+    :cond_11
+    invoke-virtual {v12, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_16
+
+    invoke-virtual {v11, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_16
+
+    invoke-virtual {v10, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_16
+
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_16
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    goto :goto_7
+
+    :cond_12
+    invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_13
+
+    const v0, 0x3f666666    # 0.9f
+
+    goto :goto_9
+
+    :cond_13
+    invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_15
+
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_15
+
+    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_15
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_14
+
+    goto :goto_6
+
+    :cond_14
+    const v0, 0x3f4ccccd    # 0.8f
+
+    goto :goto_9
+
+    :cond_15
+    :goto_6
+    const v0, 0x3f4ccccd    # 0.8f
+
+    goto :goto_9
+
+    :cond_16
+    :goto_7
+    const v0, 0x3f4ccccd    # 0.8f
+
+    goto :goto_9
+
+    :cond_17
+    :goto_8
+    const v0, 0x3f19999a    # 0.6f
+
+    :goto_9
+    cmpg-float v2, p1, v0
+
+    if-gez v2, :cond_18
+
+    move v2, v0
+
+    goto :goto_a
+
+    :cond_18
+    move/from16 v2, p1
+
+    :goto_a
+    return v2
 .end method
 
 .method private nextAmbientLightBrighteningTransition(J)J

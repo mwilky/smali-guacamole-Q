@@ -17173,6 +17173,30 @@
 
     move-result v1
 
+    if-nez v1, :cond_13
+
+    const-string/jumbo v1, "net.oneplus.odm"
+
+    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_13
+
+    const-string v1, "com.oneplus.config"
+
+    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_13
+
+    const-string v1, "com.oneplus.opbugreportlite"
+
+    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
     if-eqz v1, :cond_12
 
     goto :goto_9

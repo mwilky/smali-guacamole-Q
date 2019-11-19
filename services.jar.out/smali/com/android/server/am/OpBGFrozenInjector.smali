@@ -18,6 +18,10 @@
 
 .field public static final DISPLAY_EVENT_TIMEOUT:I = 0x23f0
 
+.field public static final GET_CONFIGFORSUBID_TIMEOUT:I = 0x2648
+
+.field public static final GET_GETVTDATAUSAGE_TIMEOUT:I = 0x26ac
+
 .field public static final INPUT_DEVICES_CHANGE_TIMEOUT:I = 0x238c
 
 .field public static final NOTIFY_CHANGE_TIMEOUT:I = 0x25e4

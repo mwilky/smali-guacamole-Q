@@ -6,6 +6,8 @@
 # static fields
 .field private static final DEBUG:Z
 
+.field public static final GPU_OUT_OF_MEMORY:I = 0xa8
+
 .field private static final TAG:Ljava/lang/String;
 
 .field private static mInited:Z

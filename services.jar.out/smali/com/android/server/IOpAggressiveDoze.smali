@@ -15,10 +15,16 @@
 .method public abstract anyMotionResultOverride(I)I
 .end method
 
+.method public abstract clearGpsUids()V
+.end method
+
 .method public abstract clearWhitelistUid()V
 .end method
 
 .method public abstract getStopGpsState()Z
+.end method
+
+.method public abstract isDozingGps(I)Z
 .end method
 
 .method public abstract isMoving(Landroid/location/Location;)Z

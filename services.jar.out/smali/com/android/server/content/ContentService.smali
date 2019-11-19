@@ -8,6 +8,8 @@
     value = {
         Lcom/android/server/content/ContentService$ObserverNode;,
         Lcom/android/server/content/ContentService$ObserverCall;,
+        Lcom/android/server/content/ContentService$OnChangeRunnable;,
+        Lcom/android/server/content/ContentService$CancelRunnable;,
         Lcom/android/server/content/ContentService$Lifecycle;
     }
 .end annotation
@@ -15,6 +17,8 @@
 
 # static fields
 .field static final DEBUG:Z = false
+
+.field private static final MEDIA_PROVIDER_ONCHNAGE_TIMEOUT:I = 0x1388
 
 .field static final TAG:Ljava/lang/String; = "ContentService"
 
@@ -77,11 +81,19 @@
 
 .field private mFactoryTest:Z
 
+.field private final mHandler:Landroid/os/Handler;
+
+.field private mHandlerThread:Landroid/os/HandlerThread;
+
 .field private final mRootNode:Lcom/android/server/content/ContentService$ObserverNode;
 
 .field private mSyncManager:Lcom/android/server/content/SyncManager;
 
 .field private final mSyncManagerLock:Ljava/lang/Object;
+
+.field private final mTimeoutHandler:Landroid/os/Handler;
+
+.field private mTimeoutHandlerThread:Landroid/os/HandlerThread;
 
 
 # direct methods
@@ -216,6 +228,54 @@
 
     invoke-virtual/range {v3 .. v8}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
+    new-instance v3, Landroid/os/HandlerThread;
+
+    const-string v4, "MediaProviderContentServiceHandlerThread"
+
+    invoke-direct {v3, v4}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v3, p0, Lcom/android/server/content/ContentService;->mHandlerThread:Landroid/os/HandlerThread;
+
+    iget-object v3, p0, Lcom/android/server/content/ContentService;->mHandlerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v3}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v3, Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/server/content/ContentService;->mHandlerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v4}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v3, p0, Lcom/android/server/content/ContentService;->mHandler:Landroid/os/Handler;
+
+    new-instance v3, Landroid/os/HandlerThread;
+
+    const-string v4, "MediaProviderContentServiceTimeoutHandlerThread"
+
+    invoke-direct {v3, v4}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v3, p0, Lcom/android/server/content/ContentService;->mTimeoutHandlerThread:Landroid/os/HandlerThread;
+
+    iget-object v3, p0, Lcom/android/server/content/ContentService;->mTimeoutHandlerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v3}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v3, Landroid/os/Handler;
+
+    iget-object v4, p0, Lcom/android/server/content/ContentService;->mTimeoutHandlerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v4}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v3, p0, Lcom/android/server/content/ContentService;->mTimeoutHandler:Landroid/os/Handler;
+
     return-void
 .end method
 
@@ -235,7 +295,31 @@
     return-void
 .end method
 
-.method static synthetic access$300()Lcom/android/internal/os/BinderDeathDispatcher;
+.method static synthetic access$200(Lcom/android/server/content/ContentService;)Landroid/os/HandlerThread;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/content/ContentService;->mHandlerThread:Landroid/os/HandlerThread;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/android/server/content/ContentService;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/content/ContentService;->mTimeoutHandler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$400(Lcom/android/server/content/ContentService;)Lcom/android/server/content/ContentService$ObserverNode;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/content/ContentService;->mRootNode:Lcom/android/server/content/ContentService$ObserverNode;
+
+    return-object v0
+.end method
+
+.method static synthetic access$600()Lcom/android/internal/os/BinderDeathDispatcher;
     .locals 1
 
     sget-object v0, Lcom/android/server/content/ContentService;->sObserverDeathDispatcher:Lcom/android/internal/os/BinderDeathDispatcher;
@@ -243,7 +327,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$400()Landroid/util/ArraySet;
+.method static synthetic access$700()Landroid/util/ArraySet;
     .locals 1
 
     sget-object v0, Lcom/android/server/content/ContentService;->sObserverLeakDetectedUid:Landroid/util/ArraySet;
@@ -2736,7 +2820,7 @@
     move/from16 v9, p5
 
     :goto_0
-    if-eqz v15, :cond_e
+    if-eqz v15, :cond_f
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -2953,7 +3037,7 @@
 
     move/from16 v2, v20
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
     :catchall_1
     move-exception v0
@@ -2966,7 +3050,7 @@
 
     move/from16 v2, v20
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
     :cond_4
     move-object/from16 v15, p7
@@ -2978,7 +3062,7 @@
     move v9, v0
 
     :goto_3
-    if-ge v9, v7, :cond_9
+    if-ge v9, v7, :cond_a
 
     :try_start_6
     invoke-virtual {v6, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3006,24 +3090,6 @@
 
     invoke-static {v12, v0, v11}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutBegin(III)V
 
-    iget-object v0, v10, Lcom/android/server/content/ContentService$ObserverCall;->mObserver:Landroid/database/IContentObserver;
-
-    iget-boolean v11, v10, Lcom/android/server/content/ContentService$ObserverCall;->mSelfChange:Z
-    :try_end_7
-    .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_1
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    move-object/from16 v14, p1
-
-    :try_start_8
-    invoke-interface {v0, v11, v14, v1}, Landroid/database/IContentObserver;->onChange(ZLandroid/net/Uri;I)V
-
-    invoke-static {v12}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutEnd(I)V
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    if-eqz v0, :cond_6
-
     const-string v0, "com.android.providers.media"
 
     invoke-virtual {v0, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3031,6 +3097,48 @@
     move-result v0
 
     if-eqz v0, :cond_6
+
+    new-instance v0, Lcom/android/server/content/ContentService$OnChangeRunnable;
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_1
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    move-object/from16 v14, p1
+
+    :try_start_8
+    invoke-direct {v0, v8, v10, v14, v1}, Lcom/android/server/content/ContentService$OnChangeRunnable;-><init>(Lcom/android/server/content/ContentService;Lcom/android/server/content/ContentService$ObserverCall;Landroid/net/Uri;I)V
+
+    iget-object v11, v8, Lcom/android/server/content/ContentService;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v11, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    nop
+
+    goto :goto_4
+
+    :cond_6
+    move-object/from16 v14, p1
+
+    iget-object v0, v10, Lcom/android/server/content/ContentService$ObserverCall;->mObserver:Landroid/database/IContentObserver;
+
+    iget-boolean v11, v10, Lcom/android/server/content/ContentService$ObserverCall;->mSelfChange:Z
+
+    invoke-interface {v0, v11, v14, v1}, Landroid/database/IContentObserver;->onChange(ZLandroid/net/Uri;I)V
+
+    :goto_4
+    invoke-static {v12}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutEnd(I)V
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    if-eqz v0, :cond_7
+
+    const-string v0, "com.android.providers.media"
+
+    invoke-virtual {v0, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
 
     const-string v0, "ContentService"
 
@@ -3042,15 +3150,39 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    iget-object v12, v8, Lcom/android/server/content/ContentService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v12}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v12
+
+    iget v13, v10, Lcom/android/server/content/ContentService$ObserverCall;->mUid:I
+
+    invoke-virtual {v12, v13}, Landroid/content/pm/PackageManager;->getNameForUid(I)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v12, "("
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     iget-object v12, v10, Lcom/android/server/content/ContentService$ObserverCall;->mObserver:Landroid/database/IContentObserver;
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v12, " of update at "
+    const-string v12, ") of update at "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v11, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v12, ", "
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3061,17 +3193,17 @@
     .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_0
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    :cond_6
+    :cond_7
     move-object/from16 p5, v2
 
     move/from16 v21, v7
 
-    goto/16 :goto_6
+    goto/16 :goto_7
 
     :catch_0
     move-exception v0
 
-    goto :goto_4
+    goto :goto_5
 
     :catchall_2
     move-exception v0
@@ -3086,14 +3218,14 @@
 
     move/from16 v2, v20
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
     :catch_1
     move-exception v0
 
     move-object/from16 v14, p1
 
-    :goto_4
+    :goto_5
     move-object v11, v0
 
     :try_start_9
@@ -3118,7 +3250,7 @@
 
     iget-object v13, v10, Lcom/android/server/content/ContentService$ObserverCall;->mNode:Lcom/android/server/content/ContentService$ObserverNode;
 
-    invoke-static {v13}, Lcom/android/server/content/ContentService$ObserverNode;->access$200(Lcom/android/server/content/ContentService$ObserverNode;)Ljava/util/ArrayList;
+    invoke-static {v13}, Lcom/android/server/content/ContentService$ObserverNode;->access$500(Lcom/android/server/content/ContentService$ObserverNode;)Ljava/util/ArrayList;
 
     move-result-object v13
 
@@ -3136,8 +3268,8 @@
 
     move/from16 v2, v17
 
-    :goto_5
-    if-ge v2, v3, :cond_8
+    :goto_6
+    if-ge v2, v3, :cond_9
 
     :try_start_b
     invoke-virtual {v13, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3163,7 +3295,7 @@
 
     move-result-object v10
 
-    if-ne v10, v0, :cond_7
+    if-ne v10, v0, :cond_8
 
     invoke-virtual {v13, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -3171,14 +3303,14 @@
 
     add-int/lit8 v3, v3, -0x1
 
-    :cond_7
+    :cond_8
     add-int/lit8 v2, v2, 0x1
 
     move-object/from16 v10, v16
 
     move/from16 v7, v21
 
-    goto :goto_5
+    goto :goto_6
 
     :catchall_3
     move-exception v0
@@ -3187,16 +3319,16 @@
 
     move-object/from16 v16, v10
 
-    goto :goto_7
+    goto :goto_8
 
-    :cond_8
+    :cond_9
     move/from16 v21, v7
 
     move-object/from16 v16, v10
 
     monitor-exit v12
 
-    :goto_6
+    :goto_7
     add-int/lit8 v9, v9, 0x1
 
     move-object/from16 v2, p5
@@ -3216,7 +3348,7 @@
 
     move-object/from16 v16, v10
 
-    :goto_7
+    :goto_8
     monitor-exit v12
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_6
@@ -3235,24 +3367,24 @@
 
     move/from16 v2, v20
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
     :catchall_6
     move-exception v0
 
-    goto :goto_7
+    goto :goto_8
 
     :catchall_7
     move-exception v0
 
-    goto :goto_8
+    goto :goto_9
 
     :catchall_8
     move-exception v0
 
     move-object/from16 v14, p1
 
-    :goto_8
+    :goto_9
     move-object/from16 p5, v2
 
     move-object/from16 v10, p2
@@ -3261,9 +3393,9 @@
 
     move/from16 v2, v20
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
-    :cond_9
+    :cond_a
     move-object/from16 v14, p1
 
     move-object/from16 p5, v2
@@ -3272,14 +3404,14 @@
 
     and-int/lit8 v0, p4, 0x1
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     :try_start_e
     invoke-direct/range {p0 .. p0}, Lcom/android/server/content/ContentService;->getSyncManager()Lcom/android/server/content/SyncManager;
 
     move-result-object v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     const/4 v10, 0x0
 
@@ -3319,7 +3451,7 @@
     :try_start_10
     invoke-virtual/range {v9 .. v17}, Lcom/android/server/content/SyncManager;->scheduleLocalSync(Landroid/accounts/Account;IILjava/lang/String;IIILjava/lang/String;)V
 
-    goto :goto_9
+    goto :goto_a
 
     :catchall_9
     move-exception v0
@@ -3328,16 +3460,16 @@
 
     move-object v3, v15
 
-    goto/16 :goto_c
+    goto/16 :goto_d
 
-    :cond_a
+    :cond_b
     move-object v7, v14
 
     move-object v3, v15
 
     move/from16 v2, v20
 
-    goto :goto_9
+    goto :goto_a
 
     :catchall_a
     move-exception v0
@@ -3350,16 +3482,16 @@
 
     move-object/from16 v10, p2
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
-    :cond_b
+    :cond_c
     move-object v7, v14
 
     move-object v3, v15
 
     move/from16 v2, v20
 
-    :goto_9
+    :goto_a
     iget-object v9, v8, Lcom/android/server/content/ContentService;->mCache:Landroid/util/SparseArray;
 
     monitor-enter v9
@@ -3387,7 +3519,7 @@
 
     sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     const-string v0, "com.android.providers.media"
 
@@ -3395,7 +3527,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_d
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -3443,12 +3575,12 @@
 
     invoke-static {v9, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_a
+    goto :goto_b
 
-    :cond_c
+    :cond_d
     move-object/from16 v10, p2
 
-    :goto_a
+    :goto_b
     return-void
 
     :catchall_b
@@ -3456,7 +3588,7 @@
 
     move-object/from16 v10, p2
 
-    :goto_b
+    :goto_c
     :try_start_12
     monitor-exit v9
     :try_end_12
@@ -3470,15 +3602,15 @@
     :catchall_c
     move-exception v0
 
-    goto :goto_b
+    goto :goto_c
 
     :catchall_d
     move-exception v0
 
-    :goto_c
+    :goto_d
     move-object/from16 v10, p2
 
-    goto :goto_e
+    goto :goto_f
 
     :catchall_e
     move-exception v0
@@ -3493,7 +3625,7 @@
 
     move/from16 v2, v20
 
-    goto :goto_e
+    goto :goto_f
 
     :catchall_f
     move-exception v0
@@ -3506,7 +3638,7 @@
 
     move/from16 v2, v20
 
-    goto :goto_d
+    goto :goto_e
 
     :catchall_10
     move-exception v0
@@ -3519,7 +3651,7 @@
 
     move-object v10, v14
 
-    :goto_d
+    :goto_e
     :try_start_14
     monitor-exit v7
     :try_end_14
@@ -3533,12 +3665,12 @@
     :catchall_11
     move-exception v0
 
-    goto :goto_e
+    goto :goto_f
 
     :catchall_12
     move-exception v0
 
-    goto :goto_d
+    goto :goto_e
 
     :catchall_13
     move-exception v0
@@ -3551,17 +3683,17 @@
 
     move-object v10, v14
 
-    :goto_e
-    if-eqz v6, :cond_d
+    :goto_f
+    if-eqz v6, :cond_e
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    :cond_d
+    :cond_e
     invoke-static {v4, v5}, Lcom/android/server/content/ContentService;->restoreCallingIdentity(J)V
 
     throw v0
 
-    :cond_e
+    :cond_f
     move-object v3, v13
 
     move-object v10, v14

@@ -2357,9 +2357,13 @@
     :catch_0
     move-exception v3
 
-    const/4 v1, 0x0
-
     :try_start_1
+    iget-object v4, p0, Lcom/android/server/usage/UserUsageStatsService;->mCurrentStats:[Lcom/android/server/usage/IntervalStats;
+
+    array-length v4, v4
+
+    move v1, v4
+
     const-string v4, "UserUsageStatsService init error"
 
     invoke-static {v0, v4, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I

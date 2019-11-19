@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/server/content/ContentService$ObserverNode;)Ljava/util/ArrayList;
+.method static synthetic access$500(Lcom/android/server/content/ContentService$ObserverNode;)Ljava/util/ArrayList;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/content/ContentService$ObserverNode;->mObservers:Ljava/util/ArrayList;
@@ -398,13 +398,13 @@
 
     if-eq v8, v0, :cond_4
 
-    invoke-static {v12}, Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;->access$500(Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;)I
+    invoke-static {v12}, Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;->access$800(Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;)I
 
     move-result v1
 
     if-eq v1, v0, :cond_4
 
-    invoke-static {v12}, Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;->access$500(Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;)I
+    invoke-static {v12}, Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;->access$800(Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;)I
 
     move-result v0
 
@@ -976,7 +976,7 @@
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    invoke-static {}, Lcom/android/server/content/ContentService;->access$300()Lcom/android/internal/os/BinderDeathDispatcher;
+    invoke-static {}, Lcom/android/server/content/ContentService;->access$600()Lcom/android/internal/os/BinderDeathDispatcher;
 
     move-result-object v5
 

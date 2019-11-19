@@ -53,7 +53,7 @@
 
     iput-boolean p3, p0, Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;->notifyForDescendants:Z
 
-    invoke-static {}, Lcom/android/server/content/ContentService;->access$300()Lcom/android/internal/os/BinderDeathDispatcher;
+    invoke-static {}, Lcom/android/server/content/ContentService;->access$600()Lcom/android/internal/os/BinderDeathDispatcher;
 
     move-result-object p1
 
@@ -76,14 +76,14 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-static {}, Lcom/android/server/content/ContentService;->access$400()Landroid/util/ArraySet;
+    invoke-static {}, Lcom/android/server/content/ContentService;->access$700()Landroid/util/ArraySet;
 
     move-result-object v0
 
     monitor-enter v0
 
     :try_start_0
-    invoke-static {}, Lcom/android/server/content/ContentService;->access$400()Landroid/util/ArraySet;
+    invoke-static {}, Lcom/android/server/content/ContentService;->access$700()Landroid/util/ArraySet;
 
     move-result-object v1
 
@@ -99,7 +99,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lcom/android/server/content/ContentService;->access$400()Landroid/util/ArraySet;
+    invoke-static {}, Lcom/android/server/content/ContentService;->access$700()Landroid/util/ArraySet;
 
     move-result-object v2
 
@@ -204,7 +204,7 @@
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;)I
+.method static synthetic access$800(Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;)I
     .locals 1
 
     iget v0, p0, Lcom/android/server/content/ContentService$ObserverNode$ObserverEntry;->userHandle:I

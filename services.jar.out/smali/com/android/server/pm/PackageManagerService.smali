@@ -41890,7 +41890,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
+    sget-object v3, Lcom/android/server/pm/PackageManagerService;->sUserManager:Lcom/android/server/pm/UserManagerService;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v4}, Lcom/android/server/pm/UserManagerService;->getUsers(Z)Ljava/util/List;
 
     move-result-object v3
 
@@ -63367,7 +63371,7 @@
 .end method
 
 .method private updateAllSharedLibrariesLocked(Landroid/content/pm/PackageParser$Package;Ljava/util/Map;)Ljava/util/ArrayList;
-    .locals 21
+    .locals 23
     .annotation build Lcom/android/internal/annotations/GuardedBy;
         value = {
             "mPackages"
@@ -63448,7 +63452,7 @@
     move v9, v2
 
     :goto_2
-    if-ltz v9, :cond_b
+    if-ltz v9, :cond_c
 
     iget-object v2, v10, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
@@ -63492,7 +63496,7 @@
 
     if-nez v2, :cond_3
 
-    move/from16 v19, v9
+    move/from16 v20, v9
 
     goto/16 :goto_9
 
@@ -63556,49 +63560,49 @@
     :try_end_0
     .catch Lcom/android/server/pm/PackageManagerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-object/from16 v17, v7
+    move-object/from16 v18, v7
 
-    move/from16 v19, v9
+    move/from16 v20, v9
 
-    goto :goto_8
+    goto/16 :goto_8
 
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    move-object v0, v1
+    move-object/from16 v17, v1
 
     invoke-virtual {v8}, Landroid/content/pm/PackageParser$Package;->isSystem()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_9
+    if-eqz v0, :cond_9
 
     invoke-virtual {v8}, Landroid/content/pm/PackageParser$Package;->isUpdatedSystemApp()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_8
+    if-eqz v0, :cond_8
 
     goto :goto_5
 
     :cond_8
-    move-object/from16 v17, v7
+    move-object/from16 v18, v7
 
-    move-object/from16 v18, v8
+    move-object/from16 v19, v8
 
-    move/from16 v19, v9
+    move/from16 v20, v9
 
-    goto :goto_7
+    goto/16 :goto_7
 
     :cond_9
     :goto_5
     invoke-virtual {v8}, Landroid/content/pm/PackageParser$Package;->isUpdatedSystemApp()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_a
+    if-eqz v0, :cond_a
 
     move v6, v12
 
@@ -63608,79 +63612,224 @@
     move v6, v14
 
     :goto_6
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Try to delete package "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "(system="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Landroid/content/pm/PackageParser$Package;->isSystem()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", updatedSystem="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Landroid/content/pm/PackageParser$Package;->isUpdatedSystemApp()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ") due to exception: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual/range {v17 .. v17}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PackageManager"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;
+
+    invoke-direct {v0, v10}, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;-><init>(Lcom/android/server/pm/PackageSender;)V
+
+    move-object v4, v0
+
+    iget-object v2, v10, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
+
+    monitor-enter v2
+
+    :try_start_1
+    iget-object v0, v10, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
+
+    iget-object v0, v0, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
+
+    iget-object v1, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/pm/PackageSetting;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-nez v0, :cond_b
+
+    :try_start_2
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move-object/from16 v18, v7
+
+    move/from16 v20, v9
+
+    goto :goto_8
+
+    :catchall_0
+    move-exception v0
+
+    move-object/from16 v22, v4
+
+    move-object/from16 v18, v7
+
+    move-object/from16 v19, v8
+
+    move/from16 v20, v9
+
+    goto :goto_a
+
+    :cond_b
+    :try_start_3
+    sget-object v1, Lcom/android/server/pm/PackageManagerService;->sUserManager:Lcom/android/server/pm/UserManagerService;
+
+    invoke-virtual {v1}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v12}, Lcom/android/server/pm/PackageSetting;->queryInstalledUsers([IZ)[I
+
+    move-result-object v1
+
+    iput-object v1, v4, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->origUsers:[I
+
+    monitor-exit v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
     iget-object v2, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     const/4 v3, 0x0
 
-    const/4 v4, 0x1
+    const/16 v18, 0x1
 
     sget-object v1, Lcom/android/server/pm/PackageManagerService;->sUserManager:Lcom/android/server/pm/UserManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/pm/UserManagerService;->getUserIds()[I
 
-    move-result-object v17
+    move-result-object v19
 
-    const/16 v18, 0x0
+    const/16 v20, 0x1
 
-    const/16 v19, 0x1
-
-    const/16 v20, 0x0
+    const/16 v21, 0x0
 
     move-object/from16 v1, p0
 
-    move-object/from16 v5, v17
+    move-object/from16 v22, v4
 
-    move-object/from16 v17, v7
+    move/from16 v4, v18
 
-    move-object/from16 v7, v18
+    move-object/from16 v5, v19
 
-    move-object/from16 v18, v8
+    move-object/from16 v18, v7
 
-    move/from16 v8, v19
+    move-object/from16 v7, v22
 
-    move/from16 v19, v9
+    move-object/from16 v19, v8
 
-    move-object/from16 v9, v20
+    move/from16 v8, v20
+
+    move/from16 v20, v9
+
+    move-object/from16 v9, v21
 
     invoke-direct/range {v1 .. v9}, Lcom/android/server/pm/PackageManagerService;->deletePackageLIF(Ljava/lang/String;Landroid/os/UserHandle;Z[IILcom/android/server/pm/PackageManagerService$PackageRemovedInfo;ZLandroid/content/pm/PackageParser$Package;)Z
 
     :goto_7
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateAllSharedLibrariesLPw failed: "
+    const-string/jumbo v1, "updateAllSharedLibrariesLPw failed: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Lcom/android/server/pm/PackageManagerException;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "PackageManager"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "PackageManager"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_8
     move-object/from16 v1, v16
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
     :goto_9
-    add-int/lit8 v9, v19, -0x1
+    add-int/lit8 v9, v20, -0x1
 
     goto/16 :goto_2
 
-    :cond_b
-    move/from16 v19, v9
+    :catchall_1
+    move-exception v0
 
-    if-eqz v13, :cond_c
+    move-object/from16 v22, v4
+
+    move-object/from16 v18, v7
+
+    move-object/from16 v19, v8
+
+    move/from16 v20, v9
+
+    :goto_a
+    :try_start_4
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_a
+
+    :cond_c
+    move/from16 v20, v9
+
+    if-eqz v13, :cond_d
 
     invoke-virtual {v13}, Ljava/util/ArrayList;->size()I
 
@@ -63688,7 +63837,7 @@
 
     if-gtz v2, :cond_1
 
-    :cond_c
+    :cond_d
     return-object v0
 .end method
 

@@ -22,22 +22,6 @@
 
 
 # static fields
-.field public static mLockOnFreeFall:Z
-
-.field public static mFreeFallRegistered:Z
-
-.field public static mTorchAutoOff:Z
-
-.field public static mFlashlightEnabled:Z
-
-.field public static mTorchPowerScreenOff:Z
-
-.field public static mBlockPowerMenuKeyguard:Z
-
-.field static final LONG_PRESS_POWER_TORCH:I = 0x6
-
-.field private static final MSG_TOGGLE_TORCH:I = 0x1D
-
 .field private static AUTHENTICATE_FACEUNLOCK:I = 0x0
 
 .field private static AUTHENTICATE_FINGERPRINT:I = 0x0
@@ -248,16 +232,6 @@
 
 
 # instance fields
-.field private mSm:Landroid/hardware/SensorManager;
-
-.field private final mFreeFallListener:Landroid/hardware/SensorEventListener;
-
-.field private mFreeFallSensor:Landroid/hardware/Sensor;
-
-.field private mCameraManager:Landroid/hardware/camera2/CameraManager;
-
-.field private mResolvedLongPressOnPowerBehavior:I
-
 .field private mA11yShortcutChordVolumeUpKeyConsumed:Z
 
 .field private mA11yShortcutChordVolumeUpKeyTime:J
@@ -646,8 +620,6 @@
     .locals 5
 
     const/4 v0, 0x0
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
 
     sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->DEBUG:Z
 
@@ -985,12 +957,6 @@
     invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManager$17;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mZenModeCallback:Lcom/oneplus/android/server/zenmode/ZenModeInjector$Callback;
-    
-    new-instance v0, Lcom/android/server/policy/PhoneWindowManager$FreeFall;
-
-    invoke-direct {v0, p0}, Lcom/android/server/policy/PhoneWindowManager$FreeFall;-><init>(Lcom/android/server/policy/PhoneWindowManager;)V
-
-    iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
 
     return-void
 .end method
@@ -2409,21 +2375,6 @@
     return v0
 
     :cond_0
-    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mTorchPowerScreenOff:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->skipWake()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x6
-
-    return v0
-
-    :cond_1
     iget v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mLongPressOnPowerBehavior:I
 
     return v0
@@ -5522,24 +5473,7 @@
     move-result v6
 
     if-eqz v6, :cond_12
-    
-    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBlockPowerMenuKeyguard:Z
-    
-    if-eqz v0, :cond_mw
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isScreenOn()Z
-    
-    move-result v0
-    
-    if-eqz v0, :cond_mw
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->keyguardOn()Z
 
-    move-result v0
-    
-    if-nez v0, :cond_12
-    
-    :cond_mw
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
     move-result v6
@@ -5553,12 +5487,6 @@
     goto/16 :goto_4
 
     :cond_9
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
-
-    move-result v6
-
-    iput v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
     invoke-static {p1}, Lcom/android/server/policy/OpPowerKeyLaunchInjector;->interceptPowerKeyDown(Landroid/view/KeyEvent;)Z
 
     move-result v6
@@ -5613,21 +5541,21 @@
     goto/16 :goto_4
 
     :cond_b
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
+
+    move-result-wide v8
+
+    invoke-direct {p0, v8, v9}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
+
     iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mSupportLongPressPowerWhenNonInteractive:Z
 
-    if-eqz v8, :cond_d
+    if-eqz v8, :cond_e
 
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->hasLongPressOnPowerBehavior()Z
 
     move-result v8
 
-    iput v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    iget v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    const/4 v3, 0x6
-
-    if-ne v8, v3, :cond_e
+    if-eqz v8, :cond_e
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -5642,25 +5570,6 @@
     goto :goto_3
 
     :cond_c
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
-
-    move-result v6
-
-    iput v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    iget v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    const/4 v8, 0x6
-
-    if-eq v6, v8, :cond_mw2
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
-
-    move-result-wide v8
-
-    invoke-direct {p0, v8, v9}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
-
-    :cond_mw2    
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -5712,14 +5621,6 @@
     goto :goto_4
 
     :cond_e
-    const v5, 0x6
-    
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getDownTime()J
-
-    move-result-wide v8
-
-    invoke-direct {p0, v8, v9}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
-
     invoke-static {p1}, Lcom/android/server/policy/OpPowerKeyLaunchInjector;->interceptPowerKeyDown(Landroid/view/KeyEvent;)Z
 
     move-result v5
@@ -9663,24 +9564,6 @@
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-    
-    iget v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    const/4 v1, 0x6
-
-    if-ne v0, v1, :cond_0
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->skipWake()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-    
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    invoke-direct {p0, v0, v1}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
 
     :cond_0
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->hasVeryLongPressOnPowerBehavior()Z
@@ -12185,18 +12068,6 @@
     move-object/from16 v8, p1
 
     iput-object v8, v0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-    
-    iget-object v8, v0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-    
-    const-string v1, "camera"
-
-    invoke-virtual {v8, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/camera2/CameraManager;
-
-    iput-object v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mCameraManager:Landroid/hardware/camera2/CameraManager;
 
     move-object/from16 v9, p2
 
@@ -12839,8 +12710,6 @@
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v1
-    
-    const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mSupportLongPressPowerWhenNonInteractive:Z
 
@@ -16123,14 +15992,6 @@
 
 .method powerLongPress()V
     .locals 5
-    
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
-
-    move-result v0
-    
-    const/4 v1, 0x6
-
-    if-eq v0, v1, :cond_torch
 
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
 
@@ -16256,29 +16117,6 @@
 
     :goto_1
     return-void
-    
-    :cond_torch
-    const v3, 0x1
-    
-    iput-boolean v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerKeyHandled:Z
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
-
-    const/16 v1, 0x1D
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/os/Message;->setAsynchronous(Z)V
-
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-    
-    goto :goto_1
 .end method
 
 .method readLidState()V
@@ -17478,18 +17316,6 @@
 
 .method public updateSettings()V
     .locals 10
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setLockOnFreefall()V
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->switchLockOnFreefall()V
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setTorchPower()V
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->setBlockPowerMenuKeyguard()V
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->allowNavBarHeightTweak()V
-    
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->getNavBarHeightTweak()V
 
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -17918,537 +17744,6 @@
 
     :cond_0
     invoke-virtual {p1, v0, v1}, Landroid/util/proto/ProtoOutputStream;->end(J)V
-
-    return-void
-.end method
-
-.method public allowNavBarHeightTweak()V
-    .locals 2
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string/jumbo p0, "tweaks_custom_navbar_height"
-
-    const/4 v0, 0x0
-
-    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-    
-    sput-boolean v0, Lcom/android/server/wm/DisplayPolicy;->mAllowCustomNavBarHeight:Z
-
-    return-void
-.end method
-
-.method public getNavBarHeightTweak()V
-    .locals 2
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string/jumbo p0, "tweaks_navbar_height"
-
-    const v0, 0x82
-
-    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-    
-    sput v0, Lcom/android/server/wm/DisplayPolicy;->mCustomNavBarHeight:I
-
-    return-void
-.end method
-
-.method public setBlockPowerMenuKeyguard()V
-	.locals 3
-	
-	iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "tweaks_block_power_menu_keyguard"
-    
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mBlockPowerMenuKeyguard:Z
-    
-    return-void   
-.end method
-
-.method public setTorchPower()V
-    .locals 2
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string/jumbo p0, "tweaks_torch_power"
-
-    const/4 v0, 0x0
-
-    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mTorchPowerScreenOff:Z
-
-    return-void
-.end method
-
-.method public isDozeMode()Z
-    .locals 2
-
-    invoke-static {}, Lcom/android/server/policy/PhoneWindowManager;->getDreamManager()Landroid/service/dreams/IDreamManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    invoke-interface {v0}, Landroid/service/dreams/IDreamManager;->isDreaming()Z
-
-    move-result v0
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    return v1
-
-    :cond_0
-    nop
-
-    return v1
-.end method
-
-.method public skipWake()Z
-    .registers 2
-
-    .line 655
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isScreenOn()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_f
-
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->isDozeMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    goto :goto_f
-
-    .line 658
-    :cond_d
-    const/4 v0, 0x1
-
-    return v0
-
-    .line 655
-    :cond_f
-    :goto_f
-    nop
-
-    .line 656
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public setFlashlight(Z)Z
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFlashlightEnabled:Z
-
-    const/4 v1, 0x0
-
-    if-eq v0, p1, :cond_2
-
-    sput-boolean p1, Lcom/android/server/policy/PhoneWindowManager;->mFlashlightEnabled:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getCameraId()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mCameraManager:Landroid/hardware/camera2/CameraManager;
-
-    if-eqz v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "0"
-
-    :goto_0
-    invoke-virtual {v2, v0, p1}, Landroid/hardware/camera2/CameraManager;->setTorchMode(Ljava/lang/String;Z)V
-    :try_end_1
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 p1, 0x1
-
-    :try_start_2
-    monitor-exit p0
-
-    return p1
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "PhoneWindowManager"
-
-    const-string v2, "CameraAccessException: Couldn\'t set torch mode."
-
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    sput-boolean v1, Lcom/android/server/policy/PhoneWindowManager;->mFlashlightEnabled:Z
-
-    monitor-exit p0
-
-    return v1
-
-    :cond_2
-    monitor-exit p0
-
-    return v1
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
-.end method
-
-.method private getCameraId()Ljava/lang/String;
-    .locals 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/hardware/camera2/CameraAccessException;
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mCameraManager:Landroid/hardware/camera2/CameraManager;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    const/4 v3, 0x0
-
-    if-ge v2, v1, :cond_1
-
-    aget-object v4, v0, v2
-
-    :try_start_0
-    iget-object v5, p0, Lcom/android/server/policy/PhoneWindowManager;->mCameraManager:Landroid/hardware/camera2/CameraManager;
-
-    invoke-virtual {v5, v4}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-
-    move-result-object v5
-
-    sget-object v6, Landroid/hardware/camera2/CameraCharacteristics;->FLASH_INFO_AVAILABLE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {v5, v6}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Boolean;
-
-    sget-object v7, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-virtual {v5, v7}, Landroid/hardware/camera2/CameraCharacteristics;->get(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Integer;
-
-    if-eqz v6, :cond_0
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v5, 0x1
-
-    if-ne v3, v5, :cond_0
-
-    return-object v4
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    const-string v0, "PhoneWindowManager"
-
-    const-string v1, "Couldn\'t get torch mode characteristics."
-
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_1
-    return-object v3
-.end method
-
-.method public toggleFlashlight()V
-    .locals 2
-	
-	sget-boolean v1, Lcom/android/server/policy/PhoneWindowManager;->mFlashlightEnabled:Z
-	
-	if-eqz v1, :cond_enable # check if torch is already enabled
-	
-	const/4 v1, 0x0 # disable torch
-	
-	goto :goto_set
-	
-	:cond_enable
-	const/4 v1, 0x1 # enable torch
-	
-	:goto_set
-	invoke-virtual {p0, v1}, Lcom/android/server/policy/PhoneWindowManager;->setFlashlight(Z)Z
-
-    return-void
-.end method
-
-.method private destroySensor()V
-    .locals 2
-    
-    const-string v0, "mwilky"
-
-    const-string/jumbo v1, "freefall unregistered"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
-
-    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
-    
-    const/4 v0, 0x0
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method private initSensor()V
-    .locals 5
-
-    const-string v0, "mwilky"
-
-    const-string/jumbo v1, "initSensor"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    const-string/jumbo v1, "sensor"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/hardware/SensorManager;
-
-    iput-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
-
-    const v1, 0x1fa2658
-
-    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getSensorList(I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/hardware/Sensor;
-
-    if-eqz v2, :cond_0
-
-    iput-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallSensor:Landroid/hardware/Sensor;
-
-    :cond_0
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallSensor:Landroid/hardware/Sensor;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mSm:Landroid/hardware/SensorManager;
-
-    iget-object v2, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallListener:Landroid/hardware/SensorEventListener;
-
-    iget-object v3, p0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallSensor:Landroid/hardware/Sensor;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v3, v4}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
-    
-    const/4 v0, 0x1
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
-    
-    const-string v0, "mwilky"
-
-    const-string/jumbo v1, "freefall registered"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-    
-    return-void
-
-    :cond_2
-    const/4 v0, 0x0
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
-    
-    const-string v0, "mwilky"
-
-    const-string/jumbo v1, "freefall not available"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
-    
-    return-void
-.end method
-
-.method public putDeviceToSleep()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mPowerManager:Landroid/os/PowerManager;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->goToSleep(J)V
-
-    return-void
-.end method
-
-.method public switchLockOnFreefall()V
-     .locals 1
-
-    .line 674
-    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mFreeFallRegistered:Z
-
-    if-eqz v0, :cond_8
-
-    .line 675
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->destroySensor()V
-
-    goto :goto_b
-
-    .line 677
-    :cond_8
-    sget-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mLockOnFreeFall:Z
-    
-    if-eqz v0, :cond_exit
-    
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->initSensor()V
-
-    .line 679
-    :cond_exit
-    :goto_b
-    return-void
-.end method
-
-.method public setLockOnFreefall()V
-    .locals 2
-
-    iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string/jumbo p0, "tweaks_lock_on_freefall"
-
-    const/4 v0, 0x0
-
-    invoke-static {v1, p0, v0}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v0
-    
-    sput-boolean v0, Lcom/android/server/policy/PhoneWindowManager;->mLockOnFreeFall:Z
 
     return-void
 .end method

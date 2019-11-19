@@ -1068,7 +1068,7 @@
 
     const-string v1, "AS.BtHelper"
 
-    const-string v2, "isTwsPlusSwitch true"
+    const-string/jumbo v2, "isTwsPlusSwitch true"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 

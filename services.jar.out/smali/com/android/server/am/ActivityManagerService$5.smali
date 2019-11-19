@@ -153,6 +153,16 @@
 
     invoke-static {}, Lcom/android/server/am/EmbryoManagerInjector;->forceUpdateOnlineConfig()V
 
+    iget-object v0, v1, Lcom/android/server/am/ActivityManagerService$5;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/server/am/OomAdjusterInjector;->getInstance(Landroid/content/Context;)Lcom/android/server/am/OomAdjusterInjector;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/server/am/OomAdjusterInjector;->forceUpdateOnlineConfig()V
+
     goto :goto_1
 
     :cond_2
@@ -1164,8 +1174,6 @@
     move-exception v0
 
     goto :goto_12
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0xa

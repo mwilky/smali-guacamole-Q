@@ -334,6 +334,34 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    :try_start_1
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_exservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/os/IOnePlusExService;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/oneplus/os/IOnePlusExService;->shutdown()V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :cond_1
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "ShutdownThread"
+
+    const-string/jumbo v3, "shutdownInner: fail to notify OnePlusExService."
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
     new-array v0, v1, [I
 
     const/16 v2, 0x97
@@ -348,7 +376,7 @@
 
     const/16 v2, 0x4f
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     new-array v0, v1, [I
 
@@ -360,9 +388,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    :cond_1
+    :cond_2
     new-array v0, v1, [I
 
     aput v2, v0, v3
@@ -371,7 +399,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -401,13 +429,13 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-ne v0, v1, :cond_3
+    if-ne v0, v1, :cond_4
 
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->showShutdownAnimation()V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     new-array v0, v1, [I
 
     aput v2, v0, v3
@@ -416,17 +444,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->showShutdownAnimation()V
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
-    :goto_0
+    :cond_4
+    :goto_1
     nop
 
-    :goto_1
+    :goto_2
     sget-object v0, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     invoke-static {p0}, Lcom/android/server/power/ShutdownThread;->showShutdownDialog(Landroid/content/Context;)Landroid/app/ProgressDialog;
@@ -461,7 +489,7 @@
 
     iput-object v2, v0, Lcom/android/server/power/ShutdownThread;->mCpuWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    :try_start_1
+    :try_start_2
     iget-object v4, v0, Lcom/android/server/power/ShutdownThread;->mPowerManager:Landroid/os/PowerManager;
 
     const-string v5, "ShutdownThread-cpu"
@@ -483,12 +511,12 @@
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread;->mCpuWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_1
-    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_2
+    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_2
+    goto :goto_3
 
-    :catch_0
+    :catch_1
     move-exception v0
 
     const-string v1, "ShutdownThread"
@@ -501,7 +529,7 @@
 
     iput-object v2, v1, Lcom/android/server/power/ShutdownThread;->mCpuWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    :goto_2
+    :goto_3
     sget-object v0, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     iput-object v2, v0, Lcom/android/server/power/ShutdownThread;->mScreenWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -512,9 +540,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    :try_start_2
+    :try_start_3
     sget-object v0, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     sget-object v1, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
@@ -542,12 +570,12 @@
     iget-object v0, v0, Lcom/android/server/power/ShutdownThread;->mScreenWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_2
-    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
+    :try_end_3
+    .catch Ljava/lang/SecurityException; {:try_start_3 .. :try_end_3} :catch_2
 
-    goto :goto_3
+    goto :goto_4
 
-    :catch_1
+    :catch_2
     move-exception v0
 
     const-string v1, "ShutdownThread"
@@ -560,13 +588,13 @@
 
     iput-object v2, v1, Lcom/android/server/power/ShutdownThread;->mScreenWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    :cond_4
-    :goto_3
+    :cond_5
+    :goto_4
     invoke-static {}, Landroid/app/admin/SecurityLog;->isLoggingEnabled()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     const v0, 0x3345a
 
@@ -574,7 +602,7 @@
 
     invoke-static {v0, v1}, Landroid/app/admin/SecurityLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    :cond_5
+    :cond_6
     sget-object v0, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     new-instance v1, Lcom/android/server/power/ShutdownThread$2;
@@ -592,10 +620,10 @@
     :catchall_0
     move-exception v1
 
-    :try_start_3
+    :try_start_4
     monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     throw v1
 .end method
@@ -1776,34 +1804,6 @@
     invoke-static {}, Lcom/oneplus/android/server/OpMotorInjector;->notifyPowerOff()V
 
     :cond_1
-    :try_start_1
-    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_exservice:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
-
-    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oneplus/os/IOnePlusExService;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lcom/oneplus/os/IOnePlusExService;->shutdown()V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :cond_2
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ShutdownThread"
-
-    const-string/jumbo v2, "shutdownInner: fail to notify OnePlusExService."
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1816,25 +1816,25 @@
 
     sget-boolean v1, Lcom/android/server/power/ShutdownThread;->mRebootSafeMode:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     const v1, 0x104060d
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_3
+    :cond_2
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_3
 
     const v1, 0x104068d
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_4
+    :cond_3
     const v1, 0x104068c
 
-    :goto_1
+    :goto_0
     nop
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1855,7 +1855,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_7
+    if-eqz p1, :cond_6
 
     new-instance v2, Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;
 
@@ -1863,27 +1863,27 @@
 
     sget-object v3, Lcom/android/server/power/ShutdownThread;->sConfirmDialog:Landroid/app/AlertDialog;
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_4
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->dismiss()V
 
-    :cond_5
+    :cond_4
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v3, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     sget-boolean v4, Lcom/android/server/power/ShutdownThread;->mRebootSafeMode:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_5
 
     const v4, 0x104060e
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_6
+    :cond_5
     const v4, 0x10405fc
 
-    :goto_2
+    :goto_1
     invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v3
@@ -1936,21 +1936,21 @@
 
     invoke-virtual {v3}, Landroid/app/AlertDialog;->show()V
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_7
+    :cond_6
     invoke-static {p0}, Lcom/android/server/power/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
 
-    :goto_3
+    :goto_2
     return-void
 
     :catchall_0
     move-exception v1
 
-    :try_start_2
+    :try_start_1
     monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v1
 .end method

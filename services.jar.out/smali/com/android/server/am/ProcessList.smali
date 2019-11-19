@@ -9813,33 +9813,78 @@
     .catch Ljava/lang/RuntimeException; {:try_start_a .. :try_end_a} :catch_4
 
     :cond_b
-    :try_start_b
-    iget-object v3, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+    const/16 v3, 0xa8
 
-    iget v3, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+    :try_start_b
+    iget-object v4, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Lcom/android/server/pm/OpCompatibilityInjector;->isInConfigList(ILjava/lang/String;)Z
+
+    move-result v3
     :try_end_b
     .catch Ljava/lang/RuntimeException; {:try_start_b .. :try_end_b} :catch_8
 
-    and-int/lit16 v3, v3, 0x4000
-
-    if-nez v3, :cond_c
+    if-eqz v3, :cond_c
 
     :try_start_c
-    iget-object v3, v15, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-boolean v3, v3, Lcom/android/server/am/ActivityManagerService;->mSafeMode:Z
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ": GPU RLIMIT_STACK_MASK, pkg="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v8, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_c
     .catch Ljava/lang/RuntimeException; {:try_start_c .. :try_end_c} :catch_4
 
-    const/4 v4, 0x1
+    const/high16 v3, 0x20000
 
-    if-ne v3, v4, :cond_d
+    or-int/2addr v2, v3
 
     :cond_c
-    or-int/lit8 v2, v2, 0x8
+    :try_start_d
+    iget-object v3, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget v3, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+    :try_end_d
+    .catch Ljava/lang/RuntimeException; {:try_start_d .. :try_end_d} :catch_8
+
+    and-int/lit16 v3, v3, 0x4000
+
+    if-nez v3, :cond_d
+
+    :try_start_e
+    iget-object v3, v15, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
+
+    iget-boolean v3, v3, Lcom/android/server/am/ActivityManagerService;->mSafeMode:Z
+    :try_end_e
+    .catch Ljava/lang/RuntimeException; {:try_start_e .. :try_end_e} :catch_4
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_e
 
     :cond_d
-    :try_start_d
+    or-int/lit8 v2, v2, 0x8
+
+    :cond_e
+    :try_start_f
     iget-object v3, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v3, v3, Landroid/content/pm/ApplicationInfo;->privateFlags:I
@@ -9848,13 +9893,13 @@
 
     and-int/2addr v3, v4
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_f
 
     const v3, 0x8000
 
     or-int/2addr v2, v3
 
-    :cond_e
+    :cond_f
     const-string v3, "debug.checkjni"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -9865,11 +9910,11 @@
 
     move-result v3
 
-    if-eqz v3, :cond_f
+    if-eqz v3, :cond_10
 
     or-int/lit8 v2, v2, 0x2
 
-    :cond_f
+    :cond_10
     const-string v3, "debug.generate-debug-info"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -9881,27 +9926,27 @@
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
-    :try_end_d
-    .catch Ljava/lang/RuntimeException; {:try_start_d .. :try_end_d} :catch_8
+    :try_end_f
+    .catch Ljava/lang/RuntimeException; {:try_start_f .. :try_end_f} :catch_8
 
     const-string/jumbo v4, "true"
 
-    if-nez v3, :cond_10
+    if-nez v3, :cond_11
 
-    :try_start_e
+    :try_start_10
     invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
-    :try_end_e
-    .catch Ljava/lang/RuntimeException; {:try_start_e .. :try_end_e} :catch_4
+    :try_end_10
+    .catch Ljava/lang/RuntimeException; {:try_start_10 .. :try_end_10} :catch_4
 
-    if-eqz v3, :cond_11
-
-    :cond_10
-    or-int/lit8 v2, v2, 0x20
+    if-eqz v3, :cond_12
 
     :cond_11
-    :try_start_f
+    or-int/lit8 v2, v2, 0x20
+
+    :cond_12
+    :try_start_11
     const-string v3, "dalvik.vm.minidebuginfo"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -9911,25 +9956,25 @@
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v9
-    :try_end_f
-    .catch Ljava/lang/RuntimeException; {:try_start_f .. :try_end_f} :catch_8
+    :try_end_11
+    .catch Ljava/lang/RuntimeException; {:try_start_11 .. :try_end_11} :catch_8
 
-    if-nez v9, :cond_12
+    if-nez v9, :cond_13
 
-    :try_start_10
+    :try_start_12
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
-    :try_end_10
-    .catch Ljava/lang/RuntimeException; {:try_start_10 .. :try_end_10} :catch_4
+    :try_end_12
+    .catch Ljava/lang/RuntimeException; {:try_start_12 .. :try_end_12} :catch_4
 
-    if-eqz v4, :cond_13
-
-    :cond_12
-    or-int/lit16 v2, v2, 0x800
+    if-eqz v4, :cond_14
 
     :cond_13
-    :try_start_11
+    or-int/lit16 v2, v2, 0x800
+
+    :cond_14
+    :try_start_13
     const-string v4, "debug.jni.logging"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -9940,11 +9985,11 @@
 
     move-result v4
 
-    if-eqz v4, :cond_14
+    if-eqz v4, :cond_15
 
     or-int/lit8 v2, v2, 0x10
 
-    :cond_14
+    :cond_15
     const-string v4, "debug.assert"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -9955,20 +10000,20 @@
 
     move-result v1
 
-    if-eqz v1, :cond_15
+    if-eqz v1, :cond_16
 
     or-int/lit8 v2, v2, 0x4
 
-    :cond_15
+    :cond_16
     iget-object v1, v15, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mNativeDebuggingApp:Ljava/lang/String;
-    :try_end_11
-    .catch Ljava/lang/RuntimeException; {:try_start_11 .. :try_end_11} :catch_8
+    :try_end_13
+    .catch Ljava/lang/RuntimeException; {:try_start_13 .. :try_end_13} :catch_8
 
-    if-eqz v1, :cond_16
+    if-eqz v1, :cond_17
 
-    :try_start_12
+    :try_start_14
     iget-object v1, v15, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v1, v1, Lcom/android/server/am/ActivityManagerService;->mNativeDebuggingApp:Ljava/lang/String;
@@ -9979,7 +10024,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_16
+    if-eqz v1, :cond_17
 
     or-int/lit8 v1, v2, 0x40
 
@@ -9992,29 +10037,29 @@
     const/4 v4, 0x0
 
     iput-object v4, v1, Lcom/android/server/am/ActivityManagerService;->mNativeDebuggingApp:Ljava/lang/String;
-    :try_end_12
-    .catch Ljava/lang/RuntimeException; {:try_start_12 .. :try_end_12} :catch_4
+    :try_end_14
+    .catch Ljava/lang/RuntimeException; {:try_start_14 .. :try_end_14} :catch_4
 
-    :cond_16
-    :try_start_13
+    :cond_17
+    :try_start_15
     iget-object v1, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v1}, Landroid/content/pm/ApplicationInfo;->isEmbeddedDexUsed()Z
 
     move-result v1
-    :try_end_13
-    .catch Ljava/lang/RuntimeException; {:try_start_13 .. :try_end_13} :catch_8
+    :try_end_15
+    .catch Ljava/lang/RuntimeException; {:try_start_15 .. :try_end_15} :catch_8
 
-    if-nez v1, :cond_17
+    if-nez v1, :cond_18
 
-    :try_start_14
+    :try_start_16
     iget-object v1, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v1}, Landroid/content/pm/ApplicationInfo;->isPrivilegedApp()Z
 
     move-result v1
 
-    if-eqz v1, :cond_18
+    if-eqz v1, :cond_19
 
     iget-object v1, v13, Lcom/android/server/am/ProcessRecord;->pkgList:Lcom/android/server/am/ProcessRecord$PackageList;
 
@@ -10028,13 +10073,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_18
-
-    :cond_17
-    or-int/lit16 v2, v2, 0x400
+    if-eqz v1, :cond_19
 
     :cond_18
-    if-nez p3, :cond_1a
+    or-int/lit16 v2, v2, 0x400
+
+    :cond_19
+    if-nez p3, :cond_1b
 
     iget-object v1, v15, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -10044,7 +10089,7 @@
 
     move-result v1
 
-    if-nez v1, :cond_1a
+    if-nez v1, :cond_1b
 
     iget-object v1, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -10070,7 +10115,7 @@
 
     and-int/lit16 v9, v4, 0x3000
 
-    if-ne v9, v4, :cond_19
+    if-ne v9, v4, :cond_1a
 
     or-int/2addr v2, v4
 
@@ -10078,7 +10123,7 @@
 
     goto :goto_5
 
-    :cond_19
+    :cond_1a
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -10100,14 +10145,14 @@
     invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
-    :try_end_14
-    .catch Ljava/lang/RuntimeException; {:try_start_14 .. :try_end_14} :catch_4
+    :try_end_16
+    .catch Ljava/lang/RuntimeException; {:try_start_16 .. :try_end_16} :catch_4
 
-    :cond_1a
+    :cond_1b
     move/from16 v17, v2
 
     :goto_5
-    :try_start_15
+    :try_start_17
     const-string/jumbo v1, "persist.device_config.runtime_native.use_app_image_startup_cache"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -10119,21 +10164,21 @@
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
-    :try_end_15
-    .catch Ljava/lang/RuntimeException; {:try_start_15 .. :try_end_15} :catch_8
+    :try_end_17
+    .catch Ljava/lang/RuntimeException; {:try_start_17 .. :try_end_17} :catch_8
 
-    if-nez v1, :cond_1b
+    if-nez v1, :cond_1c
 
-    :try_start_16
+    :try_start_18
     const-string v1, "false"
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
-    :try_end_16
-    .catch Ljava/lang/RuntimeException; {:try_start_16 .. :try_end_16} :catch_4
+    :try_end_18
+    .catch Ljava/lang/RuntimeException; {:try_start_18 .. :try_end_18} :catch_4
 
-    if-nez v1, :cond_1b
+    if-nez v1, :cond_1c
 
     const/high16 v1, 0x10000
 
@@ -10141,23 +10186,23 @@
 
     move/from16 v17, v1
 
-    :cond_1b
+    :cond_1c
     const/4 v1, 0x0
 
-    :try_start_17
+    :try_start_19
     iget-object v2, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->flags:I
-    :try_end_17
-    .catch Ljava/lang/RuntimeException; {:try_start_17 .. :try_end_17} :catch_8
+    :try_end_19
+    .catch Ljava/lang/RuntimeException; {:try_start_19 .. :try_end_19} :catch_8
 
     const/4 v9, 0x2
 
     and-int/2addr v2, v9
 
-    if-eqz v2, :cond_1d
+    if-eqz v2, :cond_1e
 
-    :try_start_18
+    :try_start_1a
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -10179,12 +10224,12 @@
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v9
-    :try_end_18
-    .catch Ljava/lang/RuntimeException; {:try_start_18 .. :try_end_18} :catch_4
+    :try_end_1a
+    .catch Ljava/lang/RuntimeException; {:try_start_1a .. :try_end_1a} :catch_4
 
     move-object/from16 v16, v0
 
-    :try_start_19
+    :try_start_1b
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -10193,17 +10238,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1d
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-    :try_end_19
-    .catchall {:try_start_19 .. :try_end_19} :catchall_1
+    :try_end_1b
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_1
 
     move-object/from16 v19, v1
 
-    :try_start_1a
+    :try_start_1c
     const-string v1, "/system/bin/logwrapper "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -10213,8 +10258,8 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-    :try_end_1a
-    .catchall {:try_start_1a .. :try_end_1a} :catchall_0
+    :try_end_1c
+    .catchall {:try_start_1c .. :try_end_1c} :catchall_0
 
     move-object v1, v0
 
@@ -10225,11 +10270,11 @@
 
     goto :goto_7
 
-    :cond_1c
+    :cond_1d
     move-object/from16 v19, v1
 
     :goto_6
-    :try_start_1b
+    :try_start_1d
     invoke-static {v9}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     move-object/from16 v19, v1
@@ -10245,43 +10290,43 @@
     invoke-static {v9}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v0
-    :try_end_1b
-    .catch Ljava/lang/RuntimeException; {:try_start_1b .. :try_end_1b} :catch_4
+    :try_end_1d
+    .catch Ljava/lang/RuntimeException; {:try_start_1d .. :try_end_1d} :catch_4
 
-    :cond_1d
+    :cond_1e
     move-object/from16 v16, v0
 
     move-object/from16 v19, v1
 
     :goto_8
-    if-eqz v14, :cond_1e
+    if-eqz v14, :cond_1f
 
     move-object v0, v14
 
     goto :goto_9
 
-    :cond_1e
-    :try_start_1c
+    :cond_1f
+    :try_start_1e
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
-    :try_end_1c
-    .catch Ljava/lang/RuntimeException; {:try_start_1c .. :try_end_1c} :catch_8
+    :try_end_1e
+    .catch Ljava/lang/RuntimeException; {:try_start_1e .. :try_end_1e} :catch_8
 
     :goto_9
-    if-nez v0, :cond_1f
+    if-nez v0, :cond_20
 
-    :try_start_1d
+    :try_start_1f
     sget-object v1, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
-    :try_end_1d
-    .catch Ljava/lang/RuntimeException; {:try_start_1d .. :try_end_1d} :catch_6
+    :try_end_1f
+    .catch Ljava/lang/RuntimeException; {:try_start_1f .. :try_end_1f} :catch_6
 
     const/16 v18, 0x0
 
-    :try_start_1e
+    :try_start_20
     aget-object v1, v1, v18
-    :try_end_1e
-    .catch Ljava/lang/RuntimeException; {:try_start_1e .. :try_end_1e} :catch_5
+    :try_end_20
+    .catch Ljava/lang/RuntimeException; {:try_start_20 .. :try_end_20} :catch_5
 
     move-object v0, v1
 
@@ -10308,22 +10353,22 @@
 
     goto/16 :goto_10
 
-    :cond_1f
+    :cond_20
     const/16 v18, 0x0
 
     :goto_b
     const/4 v1, 0x0
 
-    :try_start_1f
+    :try_start_21
     iget-object v2, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
-    :try_end_1f
-    .catch Ljava/lang/RuntimeException; {:try_start_1f .. :try_end_1f} :catch_7
+    :try_end_21
+    .catch Ljava/lang/RuntimeException; {:try_start_21 .. :try_end_21} :catch_7
 
-    if-eqz v2, :cond_20
+    if-eqz v2, :cond_21
 
-    :try_start_20
+    :try_start_22
     iget-object v2, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->primaryCpuAbi:Ljava/lang/String;
@@ -10331,18 +10376,18 @@
     invoke-static {v2}, Ldalvik/system/VMRuntime;->getInstructionSet(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
-    :try_end_20
-    .catch Ljava/lang/RuntimeException; {:try_start_20 .. :try_end_20} :catch_5
+    :try_end_22
+    .catch Ljava/lang/RuntimeException; {:try_start_22 .. :try_end_22} :catch_5
 
     move-object v1, v2
 
     goto :goto_c
 
-    :cond_20
+    :cond_21
     move-object v2, v1
 
     :goto_c
-    :try_start_21
+    :try_start_23
     iput-object v7, v13, Lcom/android/server/am/ProcessRecord;->gids:[I
 
     invoke-virtual {v13, v0}, Lcom/android/server/am/ProcessRecord;->setRequiredAbi(Ljava/lang/String;)V
@@ -10356,12 +10401,12 @@
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
-    :try_end_21
-    .catch Ljava/lang/RuntimeException; {:try_start_21 .. :try_end_21} :catch_7
+    :try_end_23
+    .catch Ljava/lang/RuntimeException; {:try_start_23 .. :try_end_23} :catch_7
 
-    if-eqz v1, :cond_21
+    if-eqz v1, :cond_22
 
-    :try_start_22
+    :try_start_24
     const-string v1, "SELinux tag not defined"
 
     new-instance v9, Ljava/lang/IllegalStateException;
@@ -10403,18 +10448,18 @@
     invoke-direct {v9, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     invoke-static {v8, v1, v9}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-    :try_end_22
-    .catch Ljava/lang/RuntimeException; {:try_start_22 .. :try_end_22} :catch_5
+    :try_end_24
+    .catch Ljava/lang/RuntimeException; {:try_start_24 .. :try_end_24} :catch_5
 
     goto :goto_d
 
-    :cond_21
+    :cond_22
     move-object/from16 v20, v2
 
     move-object/from16 v21, v3
 
     :goto_d
-    :try_start_23
+    :try_start_25
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -10433,13 +10478,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_22
+    if-eqz v2, :cond_23
 
     move-object/from16 v2, v16
 
     goto :goto_e
 
-    :cond_22
+    :cond_23
     iget-object v2, v13, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->seInfoUser:Ljava/lang/String;
@@ -10460,8 +10505,8 @@
     invoke-static {v6, v1}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
 
     const-string v3, "android.app.ActivityThread"
-    :try_end_23
-    .catch Ljava/lang/RuntimeException; {:try_start_23 .. :try_end_23} :catch_7
+    :try_end_25
+    .catch Ljava/lang/RuntimeException; {:try_start_25 .. :try_end_25} :catch_7
 
     move-object/from16 v1, p0
 
@@ -10505,7 +10550,7 @@
 
     move-wide/from16 v13, v27
 
-    :try_start_24
+    :try_start_26
     invoke-virtual/range {v1 .. v14}, Lcom/android/server/am/ProcessList;->startProcessLocked(Lcom/android/server/am/HostingRecord;Ljava/lang/String;Lcom/android/server/am/ProcessRecord;I[IIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)Z
 
     move-result v1
@@ -10568,8 +10613,8 @@
     move-result-object v1
 
     throw v1
-    :try_end_24
-    .catch Ljava/lang/RuntimeException; {:try_start_24 .. :try_end_24} :catch_b
+    :try_end_26
+    .catch Ljava/lang/RuntimeException; {:try_start_26 .. :try_end_26} :catch_b
 
     :catch_b
     move-exception v0

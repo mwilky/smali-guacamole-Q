@@ -622,74 +622,85 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
     const/4 v1, -0x1
 
-    if-nez v0, :cond_a
+    if-le p1, v0, :cond_3
 
-    if-gtz p2, :cond_3
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    iput v1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    :cond_3
+    iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
+
+    if-nez v0, :cond_b
+
+    if-gtz p2, :cond_4
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mRate:I
 
-    if-gt p2, v0, :cond_5
+    if-gt p2, v0, :cond_6
 
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-gt p1, v0, :cond_4
+    if-gt p1, v0, :cond_5
 
     iget v4, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    if-le v0, v4, :cond_5
+    if-le v0, v4, :cond_6
 
-    :cond_4
+    :cond_5
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
     iget v4, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-gt v0, v4, :cond_7
+    if-gt v0, v4, :cond_8
 
-    if-gt v4, p1, :cond_7
+    if-gt v4, p1, :cond_8
 
-    :cond_5
+    :cond_6
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
-    if-ne v0, v1, :cond_6
+    if-ne v0, v1, :cond_7
 
     iput p2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     iput p2, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
-    :cond_7
+    :cond_8
     :goto_1
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
-    if-eq v0, p1, :cond_8
+    if-eq v0, p1, :cond_9
 
     move v3, v2
 
-    :cond_8
+    :cond_9
     move v0, v3
 
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
     iget-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-nez v1, :cond_9
+    if-nez v1, :cond_a
 
     iget v1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-eq p1, v1, :cond_9
+    if-eq p1, v1, :cond_a
 
     iput-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
@@ -705,25 +716,25 @@
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
 
-    :cond_9
+    :cond_a
     return v0
 
-    :cond_a
+    :cond_b
     :goto_2
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    if-nez v0, :cond_c
+    if-nez v0, :cond_d
 
     iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-eq p1, v0, :cond_b
+    if-eq p1, v0, :cond_c
 
     goto :goto_3
 
-    :cond_b
+    :cond_c
     return v3
 
-    :cond_c
+    :cond_d
     :goto_3
     iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
@@ -743,22 +754,22 @@
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->cancelAnimationCallback()V
 
-    :cond_d
+    :cond_e
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     invoke-interface {v0}, Lcom/android/server/display/RampAnimator$Listener;->onAnimationEnd()V
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
@@ -768,7 +779,7 @@
 
     iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    :cond_e
+    :cond_f
     return v2
 .end method
 

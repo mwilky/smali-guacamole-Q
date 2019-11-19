@@ -616,6 +616,10 @@
 
     iget-object v1, v9, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
+    if-eqz v1, :cond_8
+
+    iget-object v1, v9, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
+
     invoke-virtual {v1}, Lcom/android/server/wm/WindowStateAnimator;->hasSurface()Z
 
     move-result v1
@@ -641,6 +645,10 @@
 
     :cond_9
     :goto_1
+    iget-object v1, v9, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
+
+    if-eqz v1, :cond_a
+
     iget-object v1, v9, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
 
     invoke-virtual {v1}, Lcom/android/server/wm/WindowStateAnimator;->hasSurface()Z

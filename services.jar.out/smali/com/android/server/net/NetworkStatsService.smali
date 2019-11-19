@@ -1261,7 +1261,7 @@
 .end method
 
 .method private getNetworkStatsUidDetail([Ljava/lang/String;)Landroid/net/NetworkStats;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -1300,9 +1300,17 @@
 
     check-cast v4, Landroid/telephony/TelephonyManager;
 
+    const/4 v5, 0x0
+
+    const/16 v6, 0x26ac
+
+    invoke-static {v6, v5, v5}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutBegin(III)V
+
     invoke-virtual {v4, v2}, Landroid/telephony/TelephonyManager;->getVtDataUsage(I)Landroid/net/NetworkStats;
 
     move-result-object v2
+
+    invoke-static {v6}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutEnd(I)V
 
     if-eqz v2, :cond_0
 
@@ -1323,7 +1331,7 @@
 .end method
 
 .method private getNetworkStatsXt()Landroid/net/NetworkStats;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -1346,15 +1354,21 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    const/4 v2, 0x0
+    const/16 v2, 0x26ac
 
-    invoke-virtual {v1, v2}, Landroid/telephony/TelephonyManager;->getVtDataUsage(I)Landroid/net/NetworkStats;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    invoke-static {v2, v3, v3}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutBegin(III)V
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v1, v3}, Landroid/telephony/TelephonyManager;->getVtDataUsage(I)Landroid/net/NetworkStats;
 
-    invoke-virtual {v0, v2}, Landroid/net/NetworkStats;->combineAllValues(Landroid/net/NetworkStats;)V
+    move-result-object v3
+
+    invoke-static {v2}, Lcom/android/server/am/OpBGFrozenInjector;->checkTimeoutEnd(I)V
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0, v3}, Landroid/net/NetworkStats;->combineAllValues(Landroid/net/NetworkStats;)V
 
     :cond_0
     return-object v0

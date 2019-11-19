@@ -31,6 +31,9 @@
 .method public abstract onDisplayReady(I)V
 .end method
 
+.method public abstract onPackagePreferencesCleared()V
+.end method
+
 .method public abstract onProposedRotationChanged(IZ)V
 .end method
 

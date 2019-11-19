@@ -13159,10 +13159,10 @@
 
     invoke-static {v1}, Lcom/oneplus/android/server/power/StandbyDetectInjector;->update1stLightIdleStatus(Z)V
 
+    invoke-static {}, Lcom/android/server/DeviceIdleControllerInjector;->clearGpsUids()V
+
     :cond_5
     :goto_0
-    invoke-static {}, Lcom/android/server/DeviceIdleControllerInjector;->clearWhitelistUid()V
-
     return-void
 .end method
 
