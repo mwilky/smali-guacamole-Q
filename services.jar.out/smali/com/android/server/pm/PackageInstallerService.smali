@@ -806,7 +806,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1c
+    if-nez v0, :cond_1d
 
     const/16 v0, 0x7d0
 
@@ -939,6 +939,19 @@
     iput v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     :goto_4
+    const/16 v0, 0x3e8
+
+    if-eq v14, v0, :cond_6
+
+    iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
+
+    const v2, -0x80001
+
+    and-int/2addr v0, v2
+
+    iput v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
+
+    :cond_6
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     const/high16 v2, 0x20000
@@ -947,13 +960,13 @@
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     move v0, v2
 
     goto :goto_5
 
-    :cond_6
+    :cond_7
     const/4 v0, 0x0
 
     :goto_5
@@ -961,11 +974,11 @@
 
     iget-boolean v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->isStaged:Z
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
-    if-eqz v27, :cond_8
+    if-eqz v27, :cond_9
 
-    :cond_7
+    :cond_8
     iget-object v0, v15, Lcom/android/server/pm/PackageInstallerService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.INSTALL_PACKAGES"
@@ -974,8 +987,8 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_8
-    if-eqz v27, :cond_b
+    :cond_9
+    if-eqz v27, :cond_c
 
     iget-object v0, v15, Lcom/android/server/pm/PackageInstallerService;->mApexManager:Lcom/android/server/pm/ApexManager;
 
@@ -983,15 +996,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     iget-boolean v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->isStaged:Z
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     goto :goto_6
 
-    :cond_9
+    :cond_a
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "APEX files can only be installed as part of a staged session."
@@ -1000,7 +1013,7 @@
 
     throw v0
 
-    :cond_a
+    :cond_b
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "This device doesn\'t support the installation of APEX files"
@@ -1009,17 +1022,17 @@
 
     throw v0
 
-    :cond_b
+    :cond_c
     :goto_6
     iget-boolean v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->isMultiPackage:Z
 
-    if-nez v0, :cond_15
+    if-nez v0, :cond_16
 
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     and-int/lit16 v0, v0, 0x100
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
     iget-object v0, v15, Lcom/android/server/pm/PackageInstallerService;->mContext:Landroid/content/Context;
 
@@ -1031,11 +1044,11 @@
 
     const/4 v3, -0x1
 
-    if-eq v0, v3, :cond_c
+    if-eq v0, v3, :cond_d
 
     goto :goto_7
 
-    :cond_c
+    :cond_d
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "You need the android.permission.INSTALL_GRANT_RUNTIME_PERMISSIONS permission to use the PackageManager.INSTALL_GRANT_RUNTIME_PERMISSIONS flag"
@@ -1044,11 +1057,11 @@
 
     throw v0
 
-    :cond_d
+    :cond_e
     :goto_7
     iget-object v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v0, v15, Lcom/android/server/pm/PackageInstallerService;->mContext:Landroid/content/Context;
 
@@ -1072,7 +1085,7 @@
 
     mul-int/lit8 v5, v3, 0x2
 
-    if-gt v4, v5, :cond_e
+    if-gt v4, v5, :cond_f
 
     iget-object v4, v13, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
@@ -1082,9 +1095,9 @@
 
     mul-int/lit8 v5, v3, 0x2
 
-    if-le v4, v5, :cond_f
+    if-le v4, v5, :cond_10
 
-    :cond_e
+    :cond_f
     iget-object v4, v13, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
     invoke-static {v4, v3, v3, v2}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
@@ -1093,16 +1106,16 @@
 
     iput-object v4, v13, Landroid/content/pm/PackageInstaller$SessionParams;->appIcon:Landroid/graphics/Bitmap;
 
-    :cond_f
+    :cond_10
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->mode:I
 
-    if-eq v0, v2, :cond_11
+    if-eq v0, v2, :cond_12
 
-    if-ne v0, v1, :cond_10
+    if-ne v0, v1, :cond_11
 
     goto :goto_8
 
-    :cond_10
+    :cond_11
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1125,7 +1138,7 @@
 
     throw v0
 
-    :cond_11
+    :cond_12
     :goto_8
     nop
 
@@ -1133,7 +1146,7 @@
 
     and-int/lit8 v0, v0, 0x10
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_14
 
     iget-object v0, v15, Lcom/android/server/pm/PackageInstallerService;->mContext:Landroid/content/Context;
 
@@ -1141,11 +1154,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_12
+    if-eqz v0, :cond_13
 
     goto :goto_9
 
-    :cond_12
+    :cond_13
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "No suitable internal storage available"
@@ -1154,12 +1167,12 @@
 
     throw v0
 
-    :cond_13
+    :cond_14
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     and-int/lit16 v0, v0, 0x200
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_15
 
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
@@ -1169,7 +1182,7 @@
 
     goto :goto_9
 
-    :cond_14
+    :cond_15
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     or-int/lit8 v0, v0, 0x10
@@ -1202,7 +1215,7 @@
 
     throw v0
 
-    :cond_15
+    :cond_16
     :goto_9
     iget-object v1, v15, Lcom/android/server/pm/PackageInstallerService;->mSessions:Landroid/util/SparseArray;
 
@@ -1221,7 +1234,7 @@
 
     cmp-long v2, v2, v4
 
-    if-gez v2, :cond_1b
+    if-gez v2, :cond_1c
 
     iget-object v2, v15, Lcom/android/server/pm/PackageInstallerService;->mHistoricalSessionsByInstaller:Landroid/util/SparseIntArray;
 
@@ -1237,7 +1250,7 @@
 
     cmp-long v3, v3, v5
 
-    if-gez v3, :cond_1a
+    if-gez v3, :cond_1b
 
     :try_start_2
     invoke-direct/range {p0 .. p0}, Lcom/android/server/pm/PackageInstallerService;->allocateSessionIdLocked()I
@@ -1260,13 +1273,13 @@
 
     iget-boolean v2, v13, Landroid/content/pm/PackageInstaller$SessionParams;->isMultiPackage:Z
 
-    if-nez v2, :cond_17
+    if-nez v2, :cond_18
 
     iget v2, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
     and-int/lit8 v2, v2, 0x10
 
-    if-eqz v2, :cond_16
+    if-eqz v2, :cond_17
 
     invoke-direct {v15, v10, v13}, Lcom/android/server/pm/PackageInstallerService;->buildSessionDir(ILandroid/content/pm/PackageInstaller$SessionParams;)Ljava/io/File;
 
@@ -1278,7 +1291,7 @@
 
     goto :goto_a
 
-    :cond_16
+    :cond_17
     invoke-direct {v15, v10}, Lcom/android/server/pm/PackageInstallerService;->buildExternalStageCid(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1289,7 +1302,7 @@
 
     goto :goto_a
 
-    :cond_17
+    :cond_18
     move-object/from16 v30, v0
 
     move-object/from16 v31, v1
@@ -1383,13 +1396,13 @@
 
     iget-boolean v0, v6, Landroid/content/pm/PackageInstaller$SessionParams;->isStaged:Z
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
     iget-object v0, v3, Lcom/android/server/pm/PackageInstallerService;->mStagingManager:Lcom/android/server/pm/StagingManager;
 
     invoke-virtual {v0, v2}, Lcom/android/server/pm/StagingManager;->createSession(Lcom/android/server/pm/PackageInstallerSession;)V
 
-    :cond_18
+    :cond_19
     iget-object v0, v2, Lcom/android/server/pm/PackageInstallerSession;->params:Landroid/content/pm/PackageInstaller$SessionParams;
 
     iget v0, v0, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
@@ -1398,7 +1411,7 @@
 
     and-int/2addr v0, v1
 
-    if-nez v0, :cond_19
+    if-nez v0, :cond_1a
 
     iget-object v0, v3, Lcom/android/server/pm/PackageInstallerService;->mCallbacks:Lcom/android/server/pm/PackageInstallerService$Callbacks;
 
@@ -1408,7 +1421,7 @@
 
     invoke-static {v0, v1, v4}, Lcom/android/server/pm/PackageInstallerService$Callbacks;->access$200(Lcom/android/server/pm/PackageInstallerService$Callbacks;II)V
 
-    :cond_19
+    :cond_1a
     invoke-direct/range {p0 .. p0}, Lcom/android/server/pm/PackageInstallerService;->writeSessionsAsync()V
 
     return v5
@@ -1451,7 +1464,7 @@
 
     goto :goto_c
 
-    :cond_1a
+    :cond_1b
     move-object v6, v13
 
     move/from16 v33, v14
@@ -1491,7 +1504,7 @@
 
     goto :goto_c
 
-    :cond_1b
+    :cond_1c
     move-object v6, v13
 
     move v7, v14
@@ -1539,7 +1552,7 @@
 
     goto :goto_c
 
-    :cond_1c
+    :cond_1d
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "User restriction prevents installing"
