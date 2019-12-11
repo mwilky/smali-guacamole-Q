@@ -58,6 +58,8 @@
     .end annotation
 .end field
 
+.field private mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
 .field private mOPFactoryResetConfirmCategory:Lcom/oneplus/settings/ui/OPFactoryResetConfirmCategory;
 
 .field private mOptionalSwitchPreference:Landroidx/preference/SwitchPreference;
@@ -933,7 +935,7 @@
 
 # virtual methods
 .method establishInitialState()V
-    .locals 2
+    .locals 3
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
@@ -947,24 +949,43 @@
 
     iput-object v0, p0, Lcom/android/settings/MasterClear;->mOptionalSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
+    iget-object v0, p0, Lcom/android/settings/MasterClear;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-virtual {v0}, Lcom/android/internal/widget/LockPatternUtils;->isSyntheticPasswordEnabled()Z
 
     move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/MasterClear;->mOptionalSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v2}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
 
-    invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
+    iget-object v0, p0, Lcom/android/settings/MasterClear;->mOptionalSwitchPreference:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setEnabled(Z)V
 
     goto :goto_0
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
     iget-object v0, p0, Lcom/android/settings/MasterClear;->mOptionalSwitchPreference:Landroidx/preference/SwitchPreference;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v2}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/MasterClear;->mOptionalSwitchPreference:Landroidx/preference/SwitchPreference;
 
     invoke-virtual {v0, v1}, Landroidx/preference/SwitchPreference;->setChecked(Z)V
 
@@ -1335,6 +1356,16 @@
     const v0, 0x7f1600b1
 
     invoke-virtual {p0, v0}, Lcom/android/settings/MasterClear;->addPreferencesFromResource(I)V
+
+    new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-virtual {p0}, Lcom/android/settings/MasterClear;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/settings/MasterClear;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-virtual {p0}, Lcom/android/settings/MasterClear;->establishInitialState()V
 

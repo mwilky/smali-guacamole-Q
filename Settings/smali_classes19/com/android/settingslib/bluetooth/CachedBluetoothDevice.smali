@@ -722,7 +722,7 @@
 .end method
 
 .method private processPhonebookAccess()V
-    .locals 3
+    .locals 6
 
     iget-object v0, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
@@ -765,6 +765,8 @@
 
     move-result-object v1
 
+    const/4 v2, 0x2
+
     if-eqz v1, :cond_2
 
     iget-object v1, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
@@ -777,9 +779,9 @@
 
     move-result v1
 
-    const/16 v2, 0x408
+    const/16 v3, 0x408
 
-    if-eq v1, v2, :cond_1
+    if-eq v1, v3, :cond_1
 
     iget-object v1, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
@@ -791,28 +793,45 @@
 
     move-result v1
 
-    const/16 v2, 0x404
+    const/16 v3, 0x404
 
-    if-ne v1, v2, :cond_2
+    if-ne v1, v3, :cond_2
 
     :cond_1
-    iget-object v1, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
+    const v1, 0x534e4554
 
-    const/4 v2, 0x1
+    const/4 v3, 0x3
 
-    invoke-virtual {v1, v2}, Landroid/bluetooth/BluetoothDevice;->setPhonebookAccessPermission(I)Z
+    new-array v3, v3, [Ljava/lang/Object;
 
-    goto :goto_0
+    const/4 v4, 0x0
+
+    const-string v5, "138529441"
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x1
+
+    const/4 v5, -0x1
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    const-string v4, ""
+
+    aput-object v4, v3, v2
+
+    invoke-static {v1, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
     :cond_2
     iget-object v1, p0, Lcom/android/settingslib/bluetooth/CachedBluetoothDevice;->mDevice:Landroid/bluetooth/BluetoothDevice;
 
-    const/4 v2, 0x2
-
     invoke-virtual {v1, v2}, Landroid/bluetooth/BluetoothDevice;->setPhonebookAccessPermission(I)Z
 
     :cond_3
-    :goto_0
     return-void
 .end method
 
