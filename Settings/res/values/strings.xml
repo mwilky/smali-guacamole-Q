@@ -4330,6 +4330,8 @@ OnePlus does not collect your personal data during use, we only need to call you
     <string name="op_lockpassword_choose_your_password_header_for_face">To use face unlock, set password</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">To use face unlock, set pattern</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">To use face unlock, set PIN</string>
+    <string name="op_member_description">Bind your device to get exclusive benefits</string>
+    <string name="op_member_title">Login to OnePlus Account</string>
     <string name="op_more_settings">More</string>
     <string name="op_nfc_how_it_works_content">"1. Download apps which support tap &amp; pay;
 2. According to the apps to complete the setup;
@@ -6965,43 +6967,53 @@ Update settings to:
     <string name="zone_menu_by_region">Select by region</string>
     <string name="zone_time_type_dst">Daylight savings time</string>
     <string name="zone_time_type_standard">Standard time</string>
-    <item type="string" name="APKTOOL_DUMMY_4c9">false</item>
-    <item type="string" name="APKTOOL_DUMMY_4ca">false</item>
-    <item type="string" name="APKTOOL_DUMMY_4cd">false</item>
-    <item type="string" name="APKTOOL_DUMMY_5e2">false</item>
-    <item type="string" name="APKTOOL_DUMMY_6f2">false</item>
-    <item type="string" name="APKTOOL_DUMMY_768">false</item>
-    <item type="string" name="APKTOOL_DUMMY_769">false</item>
-    <item type="string" name="APKTOOL_DUMMY_774">false</item>
-    <item type="string" name="APKTOOL_DUMMY_775">false</item>
+    <item type="string" name="APKTOOL_DUMMY_2bc">false</item>
+    <item type="string" name="APKTOOL_DUMMY_2f8">false</item>
+    <item type="string" name="APKTOOL_DUMMY_4cb">false</item>
+    <item type="string" name="APKTOOL_DUMMY_4cc">false</item>
+    <item type="string" name="APKTOOL_DUMMY_4cf">false</item>
+    <item type="string" name="APKTOOL_DUMMY_5e4">false</item>
+    <item type="string" name="APKTOOL_DUMMY_6f4">false</item>
+    <item type="string" name="APKTOOL_DUMMY_76a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_76b">false</item>
     <item type="string" name="APKTOOL_DUMMY_776">false</item>
     <item type="string" name="APKTOOL_DUMMY_777">false</item>
     <item type="string" name="APKTOOL_DUMMY_778">false</item>
     <item type="string" name="APKTOOL_DUMMY_779">false</item>
     <item type="string" name="APKTOOL_DUMMY_77a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_b08">false</item>
-    <item type="string" name="APKTOOL_DUMMY_ba4">false</item>
-    <item type="string" name="APKTOOL_DUMMY_ba5">false</item>
-    <item type="string" name="APKTOOL_DUMMY_ba6">false</item>
+    <item type="string" name="APKTOOL_DUMMY_77b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_77c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_b0a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_b38">false</item>
     <item type="string" name="APKTOOL_DUMMY_ba7">false</item>
-    <item type="string" name="APKTOOL_DUMMY_bd4">false</item>
-    <item type="string" name="APKTOOL_DUMMY_bd5">false</item>
-    <item type="string" name="APKTOOL_DUMMY_c5a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d47">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d85">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d87">false</item>
-    <item type="string" name="APKTOOL_DUMMY_d89">false</item>
-    <item type="string" name="APKTOOL_DUMMY_db9">false</item>
-    <item type="string" name="APKTOOL_DUMMY_dba">false</item>
-    <item type="string" name="APKTOOL_DUMMY_e09">false</item>
-    <item type="string" name="APKTOOL_DUMMY_e0a">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f02">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f92">false</item>
-    <item type="string" name="APKTOOL_DUMMY_f93">false</item>
-    <item type="string" name="APKTOOL_DUMMY_15c7">false</item>
-    <string name="hardware_keys_action_kill">Kill foreground app</string>
-    <string name="hardware_keys_action_screenshot">Full screenshot</string>
-    <string name="hardware_keys_action_app">Launch custom app (select app in RiCE)</string>
-    <string name="hardware_keys_action_previous_app">Switch to previous app</string>
-    <string name="hardware_keys_action_default_double_recents">Nothing (Switch to previous app)</string>
+    <item type="string" name="APKTOOL_DUMMY_ba8">false</item>
+    <item type="string" name="APKTOOL_DUMMY_ba9">false</item>
+    <item type="string" name="APKTOOL_DUMMY_baa">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bd7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bd8">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bfa">false</item>
+    <item type="string" name="APKTOOL_DUMMY_bfb">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c5f">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c61">false</item>
+    <item type="string" name="APKTOOL_DUMMY_c6e">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d4e">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d61">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d62">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d67">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d7b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d90">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d92">false</item>
+    <item type="string" name="APKTOOL_DUMMY_d94">false</item>
+    <item type="string" name="APKTOOL_DUMMY_da0">false</item>
+    <item type="string" name="APKTOOL_DUMMY_dc5">false</item>
+    <item type="string" name="APKTOOL_DUMMY_dc6">false</item>
+    <item type="string" name="APKTOOL_DUMMY_e15">false</item>
+    <item type="string" name="APKTOOL_DUMMY_e16">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f9d">false</item>
+    <item type="string" name="APKTOOL_DUMMY_f9e">false</item>
+    <item type="string" name="APKTOOL_DUMMY_fd7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_103e">false</item>
+    <item type="string" name="APKTOOL_DUMMY_103f">false</item>
+    <item type="string" name="APKTOOL_DUMMY_15d7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_1905">false</item>
 </resources>

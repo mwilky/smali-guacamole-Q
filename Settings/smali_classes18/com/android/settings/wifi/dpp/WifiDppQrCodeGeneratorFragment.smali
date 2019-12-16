@@ -151,7 +151,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1217ec
+    const v2, 0x7f1217fc
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -162,7 +162,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1217ed
+    const v2, 0x7f1217fd
 
     invoke-virtual {v1, v2}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -227,7 +227,7 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f0d0351
+    const v0, 0x7f0d0353
 
     const/4 v1, 0x0
 
@@ -255,7 +255,7 @@
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/wifi/dpp/WifiDppQrCodeBaseFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0a057d
+    const v0, 0x7f0a0581
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -281,7 +281,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeGeneratorFragment;->mTitle:Landroid/widget/TextView;
 
-    const v2, 0x7f1217ec
+    const v2, 0x7f1217fc
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -290,7 +290,7 @@
     :cond_0
     iget-object v1, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeGeneratorFragment;->mTitle:Landroid/widget/TextView;
 
-    const v2, 0x7f1217ed
+    const v2, 0x7f1217fd
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -299,7 +299,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a050c
+    const v2, 0x7f0a0510
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -321,7 +321,7 @@
 
     iget-object v2, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeGeneratorFragment;->mSummary:Landroid/widget/TextView;
 
-    const v5, 0x7f1217e7
+    const v5, 0x7f1217f7
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -348,7 +348,7 @@
     :cond_1
     iget-object v2, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeGeneratorFragment;->mSummary:Landroid/widget/TextView;
 
-    const v5, 0x7f1217eb
+    const v5, 0x7f1217fb
 
     new-array v6, v4, [Ljava/lang/Object;
 
@@ -372,7 +372,7 @@
 
     iget-object v2, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeGeneratorFragment;->mPasswordView:Landroid/widget/TextView;
 
-    const v5, 0x7f1217e5
+    const v5, 0x7f1217f5
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -389,7 +389,7 @@
     :cond_2
     iget-object v2, p0, Lcom/android/settings/wifi/dpp/WifiDppQrCodeGeneratorFragment;->mPasswordView:Landroid/widget/TextView;
 
-    const v5, 0x7f1217ef
+    const v5, 0x7f1217ff
 
     new-array v4, v4, [Ljava/lang/Object;
 

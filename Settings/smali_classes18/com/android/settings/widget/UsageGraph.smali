@@ -239,7 +239,7 @@
 
     iget-object v4, p0, Lcom/android/settings/widget/UsageGraph;->mDottedPaint:Landroid/graphics/Paint;
 
-    const v5, 0x7f060526
+    const v5, 0x7f060531
 
     invoke-virtual {p1, v5}, Landroid/content/Context;->getColor(I)I
 

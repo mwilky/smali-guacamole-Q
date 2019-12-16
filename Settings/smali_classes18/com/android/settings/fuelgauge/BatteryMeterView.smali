@@ -61,7 +61,7 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const v0, 0x7f060292
+    const v0, 0x7f06029c
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
 
@@ -83,7 +83,7 @@
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
 
-    const v2, 0x7f060060
+    const v2, 0x7f06006a
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getColor(I)I
 

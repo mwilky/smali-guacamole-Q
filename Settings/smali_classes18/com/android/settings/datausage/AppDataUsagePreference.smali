@@ -37,7 +37,7 @@
 
     if-gtz v0, :cond_0
 
-    const v0, 0x7f12051e
+    const v0, 0x7f120520
 
     invoke-virtual {p0, v0}, Lcom/android/settings/datausage/AppDataUsagePreference;->setSummary(I)V
 
@@ -91,7 +91,7 @@
 
     iget-object v0, p0, Lcom/android/settings/datausage/AppDataUsagePreference;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1209ea
+    const v1, 0x7f1209ec
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -113,7 +113,7 @@
 
     iget-object v1, p0, Lcom/android/settings/datausage/AppDataUsagePreference;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f060321
+    const v2, 0x7f06032b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
 

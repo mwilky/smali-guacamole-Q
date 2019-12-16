@@ -1267,7 +1267,7 @@
 
     iget v0, p0, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->mLastSortMode:I
 
-    const v1, 0x7f0a0642
+    const v1, 0x7f0a0646
 
     if-ne v0, v1, :cond_0
 
@@ -1742,7 +1742,7 @@
 
     iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->mManageApplications:Lcom/android/settings/applications/manageapplications/ManageApplications;
 
-    invoke-static {v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/widget/SearchView;
+    invoke-static {v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/oneplus/lib/widget/SearchView;
 
     move-result-object v2
 
@@ -1750,11 +1750,11 @@
 
     iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->mManageApplications:Lcom/android/settings/applications/manageapplications/ManageApplications;
 
-    invoke-static {v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/widget/SearchView;
+    invoke-static {v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/oneplus/lib/widget/SearchView;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/widget/SearchView;->isVisibleToUser()Z
+    invoke-virtual {v2}, Lcom/oneplus/lib/widget/SearchView;->isVisibleToUser()Z
 
     move-result v2
 
@@ -1762,11 +1762,11 @@
 
     iget-object v2, p0, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->mManageApplications:Lcom/android/settings/applications/manageapplications/ManageApplications;
 
-    invoke-static {v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Landroid/widget/SearchView;
+    invoke-static {v2}, Lcom/android/settings/applications/manageapplications/ManageApplications;->access$1500(Lcom/android/settings/applications/manageapplications/ManageApplications;)Lcom/oneplus/lib/widget/SearchView;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/widget/SearchView;->getQuery()Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Lcom/oneplus/lib/widget/SearchView;->getQuery()Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -2207,7 +2207,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0a0640
+    .packed-switch 0x7f0a0644
         :pswitch_2
         :pswitch_1
         :pswitch_0
@@ -2324,7 +2324,7 @@
 
     if-ne v1, v0, :cond_0
 
-    const v0, 0x7f0a0640
+    const v0, 0x7f0a0644
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 
@@ -2339,7 +2339,7 @@
 
     if-ne v0, v1, :cond_1
 
-    const v0, 0x7f0a0641
+    const v0, 0x7f0a0645
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 
@@ -2354,7 +2354,7 @@
 
     if-ne v0, v1, :cond_2
 
-    const v0, 0x7f0a063f
+    const v0, 0x7f0a0643
 
     invoke-virtual {p0, v0}, Lcom/android/settings/applications/manageapplications/ManageApplications$ApplicationsAdapter;->rebuild(I)V
 

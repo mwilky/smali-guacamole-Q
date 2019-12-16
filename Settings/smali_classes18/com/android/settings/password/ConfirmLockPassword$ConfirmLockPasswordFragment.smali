@@ -219,12 +219,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120980
+    const v0, 0x7f120982
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f12098a
+    const v0, 0x7f12098c
 
     :goto_0
     return v0
@@ -278,12 +278,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120984
+    const v0, 0x7f120986
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f12098e
+    const v0, 0x7f120990
 
     :goto_0
     return v0
@@ -293,12 +293,12 @@
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f120983
+    const v0, 0x7f120985
 
     goto :goto_1
 
     :cond_2
-    const v0, 0x7f12098d
+    const v0, 0x7f12098f
 
     :goto_1
     return v0
@@ -311,12 +311,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120993
+    const v0, 0x7f120995
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f120994
+    const v0, 0x7f120996
 
     :goto_0
     return v0
@@ -994,12 +994,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f12093b
+    const v0, 0x7f12093d
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f120941
+    const v0, 0x7f120943
 
     :goto_0
     return v0
@@ -1030,12 +1030,12 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f12093a
+    const v0, 0x7f12093c
 
     goto :goto_1
 
     :cond_3
-    const v0, 0x7f120940
+    const v0, 0x7f120942
 
     :goto_1
     return v0
@@ -1045,12 +1045,12 @@
 
     if-eqz v0, :cond_5
 
-    const v0, 0x7f120939
+    const v0, 0x7f12093b
 
     goto :goto_2
 
     :cond_5
-    const v0, 0x7f12093f
+    const v0, 0x7f120941
 
     :goto_2
     return v0
@@ -1075,7 +1075,7 @@
 
     if-eq v0, v1, :cond_1
 
-    const v1, 0x7f0a042e
+    const v1, 0x7f0a0432
 
     if-eq v0, v1, :cond_0
 
@@ -1187,7 +1187,7 @@
 
     move-result-object v3
 
-    const v7, 0x7f0a050f
+    const v7, 0x7f0a0513
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1213,7 +1213,7 @@
 
     iput-object v7, v0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mPasswordEntryInputDisabler:Lcom/android/internal/widget/TextViewInputDisabler;
 
-    const v7, 0x7f0a02cf
+    const v7, 0x7f0a02d0
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1227,7 +1227,7 @@
 
     if-nez v7, :cond_1
 
-    const v7, 0x7f0a0679
+    const v7, 0x7f0a067d
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1238,7 +1238,7 @@
     iput-object v7, v0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mHeaderTextView:Landroid/widget/TextView;
 
     :cond_1
-    const v7, 0x7f0a0685
+    const v7, 0x7f0a0689
 
     invoke-virtual {v3, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1650,7 +1650,7 @@
 
     iget-object v1, p0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mHideFodIconRunnable:Ljava/lang/Runnable;
 
-    const-wide/16 v2, 0xfa
+    const-wide/16 v2, 0xc8
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -1727,8 +1727,22 @@
     goto :goto_0
 
     :cond_0
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->isFingerprintAllowed()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    :cond_1
     invoke-direct {p0}, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->updatePasswordEntry()V
 
+    :cond_2
     iget-object v2, p0, Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;->mErrorTextView:Landroid/widget/TextView;
 
     const-string v3, ""
@@ -1766,7 +1780,7 @@
 .end method
 
 .method public onWindowFocusChanged(Z)V
-    .locals 2
+    .locals 4
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
 
@@ -1818,7 +1832,9 @@
 
     invoke-direct {v1, p0}, Lcom/android/settings/password/-$$Lambda$ConfirmLockPassword$ConfirmLockPasswordFragment$Myp25CGN_sn9Gs6wDwuZ61aKfg8;-><init>(Lcom/android/settings/password/ConfirmLockPassword$ConfirmLockPasswordFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/widget/ImeAwareEditText;->post(Ljava/lang/Runnable;)Z
+    const-wide/16 v2, 0x32
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/widget/ImeAwareEditText;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

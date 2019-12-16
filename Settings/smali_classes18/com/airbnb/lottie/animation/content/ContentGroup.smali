@@ -28,6 +28,10 @@
 
 .field private final name:Ljava/lang/String;
 
+.field private offScreenPaint:Landroid/graphics/Paint;
+
+.field private offScreenRectF:Landroid/graphics/RectF;
+
 .field private final path:Landroid/graphics/Path;
 
 .field private pathContents:Ljava/util/List;
@@ -112,6 +116,18 @@
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/airbnb/lottie/animation/LPaint;
+
+    invoke-direct {v0}, Lcom/airbnb/lottie/animation/LPaint;-><init>()V
+
+    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenPaint:Landroid/graphics/Paint;
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenRectF:Landroid/graphics/RectF;
 
     new-instance v0, Landroid/graphics/Matrix;
 
@@ -331,6 +347,53 @@
     return-object v0
 .end method
 
+.method private hasTwoOrMoreDrawableContent()Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    iget-object v2, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->contents:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    iget-object v2, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->contents:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    instance-of v2, v2, Lcom/airbnb/lottie/animation/content/DrawingContent;
+
+    if-eqz v2, :cond_0
+
+    add-int/lit8 v0, v0, 0x1
+
+    const/4 v2, 0x2
+
+    if-lt v0, v2, :cond_0
+
+    const/4 v2, 0x1
+
+    return v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    return v1
+.end method
+
 
 # virtual methods
 .method public addValueCallback(Ljava/lang/Object;Lcom/airbnb/lottie/value/LottieValueCallback;)V
@@ -360,7 +423,7 @@
 .end method
 
 .method public draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
-    .locals 5
+    .locals 7
 
     iget-boolean v0, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->hidden:Z
 
@@ -439,41 +502,107 @@
     move v0, p3
 
     :goto_1
-    iget-object v1, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->contents:Ljava/util/List;
+    iget-object v1, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/LottieDrawable;->isApplyingOpacityToLayersEnabled()Z
 
     move-result v1
 
-    add-int/lit8 v1, v1, -0x1
+    const/16 v2, 0xff
 
-    :goto_2
-    if-ltz v1, :cond_4
+    const/4 v3, 0x1
 
-    iget-object v2, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->contents:Ljava/util/List;
+    if-eqz v1, :cond_3
 
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/ContentGroup;->hasTwoOrMoreDrawableContent()Z
 
-    move-result-object v2
+    move-result v1
 
-    instance-of v3, v2, Lcom/airbnb/lottie/animation/content/DrawingContent;
+    if-eqz v1, :cond_3
 
-    if-eqz v3, :cond_3
+    if-eq v0, v2, :cond_3
 
-    move-object v3, v2
-
-    check-cast v3, Lcom/airbnb/lottie/animation/content/DrawingContent;
-
-    iget-object v4, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->matrix:Landroid/graphics/Matrix;
-
-    invoke-interface {v3, p1, v4, v0}, Lcom/airbnb/lottie/animation/content/DrawingContent;->draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
-
-    :cond_3
-    add-int/lit8 v1, v1, -0x1
+    move v1, v3
 
     goto :goto_2
 
+    :cond_3
+    const/4 v1, 0x0
+
+    :goto_2
+    if-eqz v1, :cond_4
+
+    iget-object v4, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenRectF:Landroid/graphics/RectF;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5, v5, v5, v5}, Landroid/graphics/RectF;->set(FFFF)V
+
+    iget-object v4, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenRectF:Landroid/graphics/RectF;
+
+    iget-object v5, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {p0, v4, v5, v3}, Lcom/airbnb/lottie/animation/content/ContentGroup;->getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
+
+    iget-object v4, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v4, v0}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    iget-object v4, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenRectF:Landroid/graphics/RectF;
+
+    iget-object v5, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->offScreenPaint:Landroid/graphics/Paint;
+
+    invoke-static {p1, v4, v5}, Lcom/airbnb/lottie/utils/Utils;->saveLayerCompat(Landroid/graphics/Canvas;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+
     :cond_4
+    if-eqz v1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v2, v0
+
+    :goto_3
+    iget-object v4, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->contents:Ljava/util/List;
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    sub-int/2addr v4, v3
+
+    :goto_4
+    if-ltz v4, :cond_7
+
+    iget-object v3, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->contents:Ljava/util/List;
+
+    invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    instance-of v5, v3, Lcom/airbnb/lottie/animation/content/DrawingContent;
+
+    if-eqz v5, :cond_6
+
+    move-object v5, v3
+
+    check-cast v5, Lcom/airbnb/lottie/animation/content/DrawingContent;
+
+    iget-object v6, p0, Lcom/airbnb/lottie/animation/content/ContentGroup;->matrix:Landroid/graphics/Matrix;
+
+    invoke-interface {v5, p1, v6, v2}, Lcom/airbnb/lottie/animation/content/DrawingContent;->draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
+
+    :cond_6
+    add-int/lit8 v4, v4, -0x1
+
+    goto :goto_4
+
+    :cond_7
+    if-eqz v1, :cond_8
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    :cond_8
     return-void
 .end method
 

@@ -26,7 +26,6 @@
     <string name="aod_clock_minimalism">किमानजीवी</string>
     <string name="aod_clock_none">कोणताही नाही</string>
     <string name="aod_clock_select_style_text">घड्याळाची शैली निवडा</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">निळा</string>
     <string name="aod_horizon_light_effect_2">लाल</string>
     <string name="aod_horizon_light_effect_3">जांभळा</string>
@@ -493,7 +492,7 @@
     <string name="oneplus_fullscreen_gesture_guide_will_enable">नॅविगेशन हावभाव सक्षम केले जातील</string>
     <string name="oneplus_fullscreen_home_guide_summary">स्‍क्रीनच्‍या खालच्या कडेवरून वर स्‍वाइप करा</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">स्क्रीनच्या खालच्या मध्यभागातून वर स्वाइप करा</string>
-    <string name="oneplus_fullscreen_home_guide_title">स्वगृह</string>
+    <string name="oneplus_fullscreen_home_guide_title">होम</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">नेव्हिगेशन जेश्‍चर्स स्‍क्रीनच्‍या खालच्या कडेपासून अजूनही ट्रिगर होऊ शकतात, मागे जाण्‍यासाठी कृपया डाव्‍या किंवा उजव्‍या कडेपासून स्‍वाइप करा</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">पोट्रेट सारखेच, नेव्हिगेशन जेश्चर्स अजूनही डिव्हाइसच्या खालच्या भागात आहेत</string>
     <string name="oneplus_fullscreen_landscape_guide_title">लँडस्केप</string>
@@ -668,7 +667,7 @@
     <string name="oneplus_no_choice">कोणतीही रिंगटोन निवडलेली नाही</string>
     <string name="oneplus_no_device_connected">कोणतेही साधन जोडलेले नाही</string>
     <string name="oneplus_no_file_tips">कोणत्‍याही रिंगटोन फाइल्‍स नाहीत</string>
-    <string name="oneplus_no_supported_apps">कोणतेही समर्थित अनुप्रायोग स्‍थापित केलेले नाहीत</string>
+    <string name="oneplus_no_supported_apps">कोणतेही समर्थित अनुप्रयोग इन्स्टॉल केलेले नाहीत</string>
     <string name="oneplus_noise_tips">वायब्रेशन सक्रिय करा</string>
     <string name="oneplus_none_default_camera">डिफॉल्ट कॅमेरा नाही</string>
     <string name="oneplus_none_default_email">डिफॉल्ट मेल अॅप नाही</string>
@@ -836,7 +835,7 @@
     <string name="oneplus_schedule">वेळापत्रक</string>
     <string name="oneplus_screen">स्क्रीन</string>
     <string name="oneplus_screen_better_cold">थंड</string>
-    <string name="oneplus_screen_better_nature">नैसर्गिक</string>
+    <string name="oneplus_screen_better_nature">नॅचरल</string>
     <string name="oneplus_screen_better_warm">ऊबदार</string>
     <string name="oneplus_screen_color_mode_auto">जुळवून घेणार्‍या रंग प्रोफाइल्स</string>
     <string name="oneplus_screen_color_mode_default">प्रदर्शन-P3（डिफॉल्ट）</string>
@@ -895,7 +894,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">स्वॅप बटन्स</string>
     <string name="oneplus_search_keyword_switch">स्थानांतरित करा, डेटा स्थलांतरण</string>
     <string name="oneplus_search_keyword_theme_settings">लॉक स्‍क्रीन सानुकूल करणे, वॉलपेपर्स, घड्याळ शैली, फिंगरप्रिंट अॅनिमेशन, Horizon light, सिस्‍टम सानूकल करणे, ऍक्‍सेंंट रंंग, आकार, फॉंट, टोन, आयकॉन पॅक, प्रकाशमान लाइट, कमी अंधार, तीव्र रंगछटा</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">लॉक स्‍क्रीन सानुकूलन, वॉलपेपर्स, घड्याळाची शैली, फिंगरप्रिंट अ‍ॅनिमेशन, ‍Horizon Light, प्रणाली सानुकूलन, असेंट रंग, आकार, फॉन्ट, टोन, आयकॉन पॅक, प्रकाशमय प्रकाश, अंधूक, दोलायमान ‍रंगछटा, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">लॉक स्क्रीन सानुकूलीकरण, वॉलपेपर्स, क्लॉक स्टाईल, फिंगरप्रिंट अॅनिमेशन, होराझन लाईट, सिस्टम कस्टमायझेशन, ऍक्‍सेंट रंग, आकार, फाँट, टोन, आयकॉन पॅक, इल्युमिनेटिंग लाईट, नाॅन्स्ड डार्क, व्हायब्रंट टिंटस, मॅकलॅरेन</string>
     <string name="oneplus_search_keyword_three_screenshots">स्क्रीनशॉट</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">अधिसूचना,अनुभव,कार्यक्रम,सुधारणा</string>
@@ -992,7 +991,7 @@
     <string name="oneplus_theme_clock">घड्याळाची शैली</string>
     <string name="oneplus_theme_clock_snake_action">सभोवतालचे प्रदर्शन चालू करा</string>
     <string name="oneplus_theme_clock_snake_tip">सभोवतालचे प्रदर्शन चालू असताना हे वैशिष्‍ट्य उपलब्‍ध होईल</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">रंग कोड</string>
     <string name="oneplus_theme_drop_summary">बदल काढून टाकायचे का?</string>
     <string name="oneplus_theme_drop_title">संपादन मोडमधून बाहेर पडा</string>
     <string name="oneplus_theme_entrance_summary">वॉलपेपर्स, असेंट रंग, फॉंट, टोन</string>
@@ -1076,8 +1075,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">अलार्म्स सोडल्यास, कॉल्स आणि सूचना शांत केल्या जातील आणि फक्त कंपनवर सेट केल्या जातील</string>
     <string name="oneplus_vibration_summary">गजर नेहमीच वाजतील</string>
     <string name="oneplus_video_enhancer">व्हिडिओ एन्हांसर</string>
-    <string name="oneplus_video_enhancer_footer">व्हिडिओ प्ले करत असताना रंग वाढवा</string>
-    <string name="oneplus_video_enhancer_summary">व्हिडिओ प्ले करत असताना रंग वाढवा</string>
+    <string name="oneplus_video_enhancer_footer">व्हिडीयो चालवित असताना रंग एनहान्स करा</string>
+    <string name="oneplus_video_enhancer_summary">व्हिडीयो चालवित असताना रंग एनहान्स करा</string>
     <string name="oneplus_volume_keys_adjust">अॅडजस्ट करण्यासाठी व्हॉल्यूम बटणे वापरा</string>
     <string name="oneplus_volume_keys_adjust_media">मीडियाचा आवाज</string>
     <string name="oneplus_volume_keys_adjust_ringtones">रिंगटोनचा आवाज</string>
@@ -1146,6 +1145,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">फेस अनलॉकचा वापर करण्यासाठी, पासवर्ड सेट करा</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">फेस अनलॉकचा वापर करण्यासाठी, पॅटर्न सेट करा</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">फेस अनलॉकचा वापर करण्यासाठी, PIN सेट करा</string>
+    <string name="op_member_description">अनन्य लाभ मिळवण्‍यासाठी आपले डिव्हाइस बाइंड करा</string>
+    <string name="op_member_title">OnePlus खात्यात लॉगिन करा</string>
     <string name="op_not_disturb">व्यत्यय आणू नका ची प्राधान्ये</string>
     <string name="op_not_disturb_summary">गजर वगळता कॉल्स आणि सूचना मूक करा आणि कंपन बंद करा</string>
     <string name="op_oneplus_roaming_summary">वैश्विक इंटरनेट ऍक्सेस सेवा पुरवा</string>

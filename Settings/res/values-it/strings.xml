@@ -320,7 +320,6 @@ L'amministratore ha la possibilità di monitorare e gestire impostazioni, access
     <string name="aod_clock_minimalism">Minimalista</string>
     <string name="aod_clock_none">Nessuno</string>
     <string name="aod_clock_select_style_text">"Seleziona lo stile dell'orologio"</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Blu</string>
     <string name="aod_horizon_light_effect_2">Rosso</string>
     <string name="aod_horizon_light_effect_3">Viola</string>
@@ -3242,7 +3241,7 @@ Per andare alla schermata home in qualsiasi momento, scorri verso l'alto dal bor
     <string name="oneplus_hand_up_to_show">Solleva il telefono per visualizzare</string>
     <string name="oneplus_haptic_feedback_no_app">Non sono installati giochi supportati</string>
     <string name="oneplus_haptic_feedback_no_app_tip">È possibile installare PUBG Mobile e Asphalt 9</string>
-    <string name="oneplus_haptic_feedback_summary">Fornisci un feedback aptico migliore per i giochi supportati</string>
+    <string name="oneplus_haptic_feedback_summary">Offre un miglior feedback aptico per i giochi supportati</string>
     <string name="oneplus_haptic_feedback_support">Giochi supportati</string>
     <string name="oneplus_haptic_feedback_tips">Fornisci un feedback aptico per scene di gioco specifiche, valido solo per i giochi supportati</string>
     <string name="oneplus_haptic_feedback_title">Miglioramento del feedback aptico</string>
@@ -3467,10 +3466,10 @@ Nota: l'impronta digitale potrebbe risultare meno sicura di un pattern o del PIN
     <string name="oneplus_quickpay_way_paytm">Paytm</string>
     <string name="oneplus_quickpay_way_wecaht_qrcode">Codice QR WeChat</string>
     <string name="oneplus_quickpay_way_wecaht_scanning">Analisi WeChat</string>
-    <string name="oneplus_ramboost_description">Apprendendo le modalità di utilizzo del telefono, RAM Boost può prevedere le app che desideri avviare e i dati che desideri caricare, sfruttando appieno la capacità della RAM per accelerare le prestazioni del tuo utilizzo quotidiano.</string>
+    <string name="oneplus_ramboost_description">Apprendendo le modalità di utilizzo del telefono, Potenziamento RAM può prevedere le app che desideri avviare e i dati che desideri caricare, sfruttando appieno la capacità della RAM per accelerare le prestazioni del tuo utilizzo quotidiano.</string>
     <string name="oneplus_ramboost_switch_summary">"Aumenta l'utilizzo della RAM in base alle tue abitudini"</string>
-    <string name="oneplus_ramboost_switch_title">Abilita RAM Boost</string>
-    <string name="oneplus_ramboost_title">RAM Boost</string>
+    <string name="oneplus_ramboost_switch_title">Abilita Potenziamento RAM</string>
+    <string name="oneplus_ramboost_title">Potenziamento RAM</string>
     <string name="oneplus_read_mode_app_list">Elenco app in modalità lettura</string>
     <string name="oneplus_reading_mode">Modalità lettura</string>
     <string name="oneplus_reading_mode_activate_manual">Attivare manualmente</string>
@@ -3671,7 +3670,7 @@ Nota:
     <string name="oneplus_theme_clock">Stile orologio</string>
     <string name="oneplus_theme_clock_snake_action">ATTIVA DISPLAY AMBIENT</string>
     <string name="oneplus_theme_clock_snake_tip">Questa funzione sarà disponibile quando display ambient è attivo</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">CODICE COLORE</string>
     <string name="oneplus_theme_drop_summary">Rimuovere modifiche?</string>
     <string name="oneplus_theme_drop_title">Esci dalla modalità di modifica</string>
     <string name="oneplus_theme_entrance_summary">Sfondi, colore principale, carattere, tono</string>
@@ -3826,6 +3825,8 @@ Impostare la rete come nascosta non cambierà le impostazioni del router."</stri
     <string name="op_lockpassword_choose_your_password_header_for_face">Per utilizzare Face Unlock, imposta la password</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Per utilizzare Face Unlock, imposta il motivo</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Per utilizzare Face Unlock, imposta il PIN</string>
+    <string name="op_member_description">Associa il tuo dispositivo per ottenere dei vantaggi esclusivi</string>
+    <string name="op_member_title">"Accedi all'account OnePlus"</string>
     <string name="op_not_disturb">Preferenze Non Disturbare</string>
     <string name="op_not_disturb_summary">"Disattiva l'audio di chiamate e notifiche e spegni la vibrazione, tranne per gli allarmi"</string>
     <string name="op_oneplus_roaming_summary">Fornire servizi di accesso a Internet globali</string>

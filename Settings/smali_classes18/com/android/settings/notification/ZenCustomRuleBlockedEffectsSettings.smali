@@ -249,7 +249,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12194e
+    const v1, 0x7f12195f
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPFooterPreference;->setTitle(I)V
 

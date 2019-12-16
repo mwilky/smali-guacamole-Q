@@ -97,7 +97,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d02c9
+    const v3, 0x7f0d02cb
 
     invoke-virtual {p1, v3, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -119,7 +119,7 @@
 
     check-cast v5, Landroid/widget/Button;
 
-    const v6, 0x7f12145c    # 1.94173E38f
+    const v6, 0x7f12146c
 
     invoke-virtual {p0, v6}, Lcom/android/settings/deviceinfo/PrivateVolumeFormat;->getText(I)Ljava/lang/CharSequence;
 

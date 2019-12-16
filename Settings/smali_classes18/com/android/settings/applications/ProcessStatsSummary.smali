@@ -70,7 +70,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207b1
+    const v0, 0x7f1207b3
 
     return v0
 .end method
@@ -194,7 +194,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120a2a
+    const v3, 0x7f120a2c
 
     invoke-virtual {v2, v3}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 

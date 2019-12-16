@@ -101,7 +101,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/BatterySaverConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f120c30
+    const v2, 0x7f120c35
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -129,7 +129,7 @@
 
     iget-object v2, p0, Lcom/android/settings/homepage/contextualcards/conditional/BatterySaverConditionController;->mAppContext:Landroid/content/Context;
 
-    const v3, 0x7f120454
+    const v3, 0x7f120456
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -161,7 +161,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/BatterySaverConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f120c2f
+    const v2, 0x7f120c34
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

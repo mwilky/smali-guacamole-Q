@@ -567,7 +567,7 @@
 
     if-ne p1, v0, :cond_0
 
-    const v0, 0x7f0d0064
+    const v0, 0x7f0d0065
 
     return v0
 

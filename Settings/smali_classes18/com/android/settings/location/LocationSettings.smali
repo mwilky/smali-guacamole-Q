@@ -230,7 +230,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207d3
+    const v0, 0x7f1207d5
 
     return v0
 .end method
@@ -274,7 +274,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120929
+    const v2, 0x7f12092b
 
     invoke-virtual {v1, v2, v2}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 

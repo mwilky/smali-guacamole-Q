@@ -181,7 +181,7 @@
 
     invoke-direct {v1, v2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f121153
+    const v2, 0x7f121163
 
     invoke-virtual {v1, v2}, Landroidx/preference/Preference;->setTitle(I)V
 
@@ -249,7 +249,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207ae
+    const v0, 0x7f1207b0
 
     return v0
 .end method
@@ -419,13 +419,13 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d009c
+    const v3, 0x7f0d009d
 
     invoke-virtual {v1, v3, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
-    const v3, 0x7f0a03cb
+    const v3, 0x7f0a03cf
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -433,7 +433,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f121157
+    const v4, 0x7f121167
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 

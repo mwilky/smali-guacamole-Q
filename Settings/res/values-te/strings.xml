@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">మినిమీలిజం</string>
     <string name="aod_clock_none">ఏదీ కాదు</string>
     <string name="aod_clock_select_style_text">గడియారం శైలిని ఎంచుకోండి</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">నీలం</string>
     <string name="aod_horizon_light_effect_2">ఎరుపు</string>
     <string name="aod_horizon_light_effect_3">ఊదారంగు</string>
@@ -3160,7 +3159,7 @@
     <string name="oneplus_forum_award_title">అవార్డ్</string>
     <string name="oneplus_fullscreen_back_guide_summary">స్క్రీన్ దిగువ ఎడమ లేదా దిగువ కుడి అంచు నుండి లోపలికి స్వైప్ చేయండి</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">స్క్రీన్ దిగువ భాగంలో ఎడమ లేదా కుడి వైపు నుండి పైకి స్వైప్ చేయండి</string>
-    <string name="oneplus_fullscreen_back_guide_title">వెనక్కి</string>
+    <string name="oneplus_fullscreen_back_guide_title">వెనుకకు</string>
     <string name="oneplus_fullscreen_disable_this_feature">నావిగేషన్ సంజ్ఞలను ప్రారంభించినప్పుడు, ఈ ఫీచర్ ఉపయోగించలేరు.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"బ్యాక్ బటన్‌ని రీప్లేస్ చేసే హావభావాలను మనం ఇప్పుడు ఉపయోగిద్దాం.
  స్క్రీన్ యొక్క దిగువ ఎడమ లేదా కుడివైపు నుంచి పైకి స్వైప్ చేయండి."</string>
@@ -3242,7 +3241,7 @@
     <string name="oneplus_hand_up_to_show">చూపడానికి మీ ఫోన్‌ను చేతిలోకి తీసుకోండి</string>
     <string name="oneplus_haptic_feedback_no_app">సపోర్ట్ చేయబడే గేమ్స్ ఇన్‌స్టాల్ చేయబడలేదు</string>
     <string name="oneplus_haptic_feedback_no_app_tip">మీరు PUBG మొబైల్ మరియు అస్ఫాల్ట్ 9 ఇన్‌స్టాల్ చేయవచ్చు</string>
-    <string name="oneplus_haptic_feedback_summary">మద్దతిచ్చే గేమ్స్ కోసం మెరుగైన స్పర్శ ఫీడ్‌బ్యాక్ అందిస్తుంది</string>
+    <string name="oneplus_haptic_feedback_summary">మద్దతు ఉన్న గేమ్‌ల కోసం మెరుగైన హాప్టిక్ అభిప్రాయాన్ని అందిస్తుంది</string>
     <string name="oneplus_haptic_feedback_support">సపోర్ట్ చేయబడే గేమ్స్</string>
     <string name="oneplus_haptic_feedback_tips">నిర్థిష్ట గేమ్ దృశ్యాలకి స్పర్శ ఫీడ్‌బ్యాక్ అందిస్తుంది, మద్దతిచ్చే గేమ్స్‌కి మాత్రమే ఇది వర్తిస్తుంది</string>
     <string name="oneplus_haptic_feedback_title">స్పర్శ ఫీడ్‌బ్యాక్ సంవృద్ధం</string>
@@ -3348,7 +3347,7 @@
     <string name="oneplus_no_choice">రింగ్‌టోన్ ఎంచుకోలేదు</string>
     <string name="oneplus_no_device_connected">ఏ పరికరం కనెక్ట్ చేయబడలేదు</string>
     <string name="oneplus_no_file_tips">రింగ్‌టోన్ ఫైల్‌లు లేవు</string>
-    <string name="oneplus_no_supported_apps">మద్దతు గల అప్లికేషన్‌లు ఇన్‌స్టాల్ చేయబడలేదు</string>
+    <string name="oneplus_no_supported_apps">మద్దతు గల యాప్‌లు ఇన్‌స్టాల్ చేయబడలేదు</string>
     <string name="oneplus_noise_tips">వైబ్రేషన్ ప్రారంభించు</string>
     <string name="oneplus_none_default_camera">డిఫాల్ట్ కెమెరా లేదు</string>
     <string name="oneplus_none_default_email">డిఫాల్ట్ మెయిల్ యాప్ లేదు</string>
@@ -3516,7 +3515,7 @@
     <string name="oneplus_schedule">షెడ్యూల్ చేయి</string>
     <string name="oneplus_screen">స్క్రీన్</string>
     <string name="oneplus_screen_better_cold">చల్లని</string>
-    <string name="oneplus_screen_better_nature">సహజ</string>
+    <string name="oneplus_screen_better_nature">సహజం</string>
     <string name="oneplus_screen_better_warm">వెచ్చని</string>
     <string name="oneplus_screen_color_mode_auto">అనుకూల కలర్ ప్రొఫైల్స్</string>
     <string name="oneplus_screen_color_mode_default">డిస్‌ప్లే-P3（డీఫాల్ట్）</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">గడియారం శైలి</string>
     <string name="oneplus_theme_clock_snake_action">పరిసర డిస్‌ప్లే ఆన్ చేయి</string>
     <string name="oneplus_theme_clock_snake_tip">పరిసర డిస్‌ప్లే ఆన్‌లో ఉన్నప్పుడు ఈ ఫీచర్ అందుబాటులో ఉంటుంది</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">రంగు కోడ్</string>
     <string name="oneplus_theme_drop_summary">సవరణలను విస్మరించాలా?</string>
     <string name="oneplus_theme_drop_title">సవరణ మోడ్ నుండి నిష్క్రమించండి</string>
     <string name="oneplus_theme_entrance_summary">వాల్‌పేపర్‌లు, యాక్సెంట్ రంగు, ఫాంట్, టోన్</string>
@@ -3756,8 +3755,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">అలారాలు మినహా కాల్‌లు మరియు నోటిఫికేషన్‌లు నిశ్శబ్దం చేయబడతాయి మరియు వైబ్రేట్ మాత్రమే అయ్యేలా సెట్ చేయబడతాయి</string>
     <string name="oneplus_vibration_summary">అలారం ఎల్లప్పుడూ మోగుతుంది</string>
     <string name="oneplus_video_enhancer">వీడియో వృద్ధికారకం</string>
-    <string name="oneplus_video_enhancer_footer">వీడియోలను ప్లే చేసేటప్పుడు కలర్‌ని పెంచండి</string>
-    <string name="oneplus_video_enhancer_summary">వీడియోలను ప్లే చేసేటప్పుడు కలర్‌ని పెంచండి</string>
+    <string name="oneplus_video_enhancer_footer">వీడియోలను ప్లే చేస్తున్నప్పుడు రంగును మెరుగుపరచండి</string>
+    <string name="oneplus_video_enhancer_summary">వీడియోలను ప్లే చేస్తున్నప్పుడు రంగును మెరుగుపరచండి</string>
     <string name="oneplus_volume_keys_adjust">సర్దుబాటు చేయడానికి వాల్యూమ్ బటన్‌లను ఉపయోగించండి</string>
     <string name="oneplus_volume_keys_adjust_media">మీడియా వాల్యూం</string>
     <string name="oneplus_volume_keys_adjust_ringtones">రింగ్‌టోన్ వాల్యూం</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">ఫేస్ అన్‌లాక్‌ను ఉపయోగించడానికి, పాస్‌వర్డ్‌ను సెట్ చేయండి</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">ఫేస్ అన్‌లాక్‌ను ఉపయోగించడానికి, నమూనాను సెట్ చేయండి</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">ఫేస్ అన్‌లాక్‌ను ఉపయోగించడానికి, PINను సెట్ చేయండి</string>
+    <string name="op_member_description">ప్రత్యేకమైన ప్రయోజనాలు పొందడానికి మీ పరికరాన్ని బైండ్ చేయండి</string>
+    <string name="op_member_title">OnePlus ఖాతాకి లాగిన్ చేయండి</string>
     <string name="op_not_disturb">అంతరాయం కలిగించవద్దు ప్రాధాన్యతలు</string>
     <string name="op_not_disturb_summary">అలారాలకు మినహా కాల్‌లు మరియు నోటిఫికేషన్‌లను మ్యూట్ చేయండి మరియు వైబ్రేషన్‌ని ఆఫ్ చేయండి</string>
     <string name="op_oneplus_roaming_summary">గ్లోబల్ ఇంటర్నెట్ యాక్సెస్ సేవలను అందించండి</string>

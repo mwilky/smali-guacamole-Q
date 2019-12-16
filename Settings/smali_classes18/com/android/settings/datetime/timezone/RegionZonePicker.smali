@@ -26,9 +26,9 @@
 .method public constructor <init>()V
     .locals 4
 
-    const v0, 0x7f120588
+    const v0, 0x7f12058a
 
-    const v1, 0x7f1212bd
+    const v1, 0x7f1212cd
 
     const/4 v2, 0x1
 

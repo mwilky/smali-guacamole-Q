@@ -575,8 +575,6 @@
 
     invoke-static {p0}, Lcom/android/settings/search/actionbar/SearchMenuController;->init(Lcom/android/settings/core/InstrumentedPreferenceFragment;)V
 
-    invoke-static {p0}, Lcom/android/settings/support/actionbar/HelpMenuController;->init(Lcom/android/settingslib/core/lifecycle/ObservablePreferenceFragment;)V
-
     if-eqz p1, :cond_0
 
     const-string v0, "android:preference_highlighted"
@@ -660,7 +658,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0536
+    const v1, 0x7f0a053a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1133,7 +1131,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a03a2
+    const v1, 0x7f0a03a6
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

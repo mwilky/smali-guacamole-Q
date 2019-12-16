@@ -393,7 +393,7 @@
 
     const/4 v0, 0x1
 
-    const v1, 0x7f0a0641
+    const v1, 0x7f0a0645
 
     if-ne p2, v1, :cond_1
 
@@ -405,7 +405,7 @@
 
     if-nez v1, :cond_0
 
-    const v0, 0x7f120b87
+    const v0, 0x7f120b8a
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -433,7 +433,7 @@
     return-object v0
 
     :cond_1
-    const v1, 0x7f0a0640
+    const v1, 0x7f0a0644
 
     if-ne p2, v1, :cond_3
 
@@ -807,7 +807,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a069c
+    const v1, 0x7f0a06a0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

@@ -52,7 +52,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0091
+    const v1, 0x7f0d0092
 
     const/4 v2, 0x0
 
@@ -339,7 +339,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f12036e
+    const v2, 0x7f120370
 
     new-instance v3, Lcom/android/settings/bluetooth/-$$Lambda$BluetoothNameDialogFragment$pGuotXbZkr5ej_7pdbB840goZcw;
 

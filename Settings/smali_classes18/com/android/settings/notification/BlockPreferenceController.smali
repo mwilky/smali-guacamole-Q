@@ -224,7 +224,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/LayoutPreference;->setSelectable(Z)V
 
-    const v2, 0x7f0a069d
+    const v2, 0x7f0a06a1
 
     invoke-virtual {v0, v2}, Lcom/android/settingslib/widget/LayoutPreference;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     if-eqz v3, :cond_a
 
-    const v3, 0x7f120b78
+    const v3, 0x7f120b7b
 
     invoke-virtual {v2, v3, v3}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 
@@ -295,6 +295,18 @@
     iget-object v3, v3, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
 
     const-string v4, "com.android.dialer"
+
+    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    iget-object v3, p0, Lcom/android/settings/notification/BlockPreferenceController;->mAppRow:Lcom/android/settings/notification/NotificationBackend$AppRow;
+
+    iget-object v3, v3, Lcom/android/settings/notification/NotificationBackend$AppRow;->pkg:Ljava/lang/String;
+
+    const-string v4, "com.oneplus.screenrecord"
 
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

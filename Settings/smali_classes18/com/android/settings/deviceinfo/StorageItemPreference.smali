@@ -37,11 +37,11 @@
 
     iput v0, p0, Lcom/android/settings/deviceinfo/StorageItemPreference;->mProgressPercent:I
 
-    const v0, 0x7f0d02cb
+    const v0, 0x7f0d02cd
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageItemPreference;->setLayoutResource(I)V
 
-    const v0, 0x7f120a16
+    const v0, 0x7f120a18
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageItemPreference;->setSummary(I)V
 

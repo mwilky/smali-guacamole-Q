@@ -3,7 +3,7 @@
 .source "BaseTimeZonePicker.java"
 
 # interfaces
-.implements Landroid/widget/SearchView$OnQueryTextListener;
+.implements Lcom/oneplus/lib/widget/SearchView$OnQueryTextListener;
 
 
 # annotations
@@ -33,7 +33,7 @@
 
 .field private final mSearchHintResId:I
 
-.field private mSearchView:Landroid/widget/SearchView;
+.field private mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
 .field private mTimeZoneData:Lcom/android/settings/datetime/timezone/model/TimeZoneData;
 
@@ -111,17 +111,17 @@
 .end method
 
 .method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
-    .locals 5
+    .locals 6
 
     iget-boolean v0, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchEnabled:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     const v0, 0x7f0e0007
 
     invoke-virtual {p2, v0, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
-    const v0, 0x7f0a06f0
+    const v0, 0x7f0a06f4
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
 
@@ -131,11 +131,11 @@
 
     move-result-object v1
 
-    check-cast v1, Landroid/widget/SearchView;
+    check-cast v1, Lcom/oneplus/lib/widget/SearchView;
 
-    iput-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iput-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
-    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
     iget v2, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchHintResId:I
 
@@ -143,11 +143,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/lib/widget/SearchView;->setQueryHint(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
-    invoke-virtual {v1, p0}, Landroid/widget/SearchView;->setOnQueryTextListener(Landroid/widget/SearchView$OnQueryTextListener;)V
+    invoke-virtual {v1, p0}, Lcom/oneplus/lib/widget/SearchView;->setOnQueryTextListener(Lcom/oneplus/lib/widget/SearchView$OnQueryTextListener;)V
 
     iget-boolean v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mDefaultExpandSearch:Z
 
@@ -157,66 +157,126 @@
 
     invoke-interface {v0}, Landroid/view/MenuItem;->expandActionView()Z
 
-    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
-    invoke-virtual {v1, v2}, Landroid/widget/SearchView;->setIconified(Z)V
+    invoke-virtual {v1, v2}, Lcom/oneplus/lib/widget/SearchView;->setIconified(Z)V
 
-    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v3}, Landroid/widget/SearchView;->setActivated(Z)V
+    invoke-virtual {v1, v3}, Lcom/oneplus/lib/widget/SearchView;->setActivated(Z)V
 
-    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
     const-string v4, ""
 
-    invoke-virtual {v1, v4, v3}, Landroid/widget/SearchView;->setQuery(Ljava/lang/CharSequence;Z)V
+    invoke-virtual {v1, v4, v3}, Lcom/oneplus/lib/widget/SearchView;->setQuery(Ljava/lang/CharSequence;Z)V
 
     :cond_0
-    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
+    iget-object v1, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
-    const v3, 0x102040b
+    const v3, 0x7f0a05ea
 
-    invoke-virtual {v1, v3}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/lib/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->getPaddingTop()I
+    iget-object v3, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
 
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/widget/TextView;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v2, v4}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    iget-object v3, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Landroid/widget/SearchView;
-
-    const v4, 0x1020407
-
-    invoke-virtual {v3, v4}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v3}, Lcom/oneplus/lib/widget/SearchView;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    nop
-
-    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
-    check-cast v4, Landroid/widget/LinearLayout$LayoutParams;
+    invoke-static {v4}, Lcom/oneplus/settings/utils/OPUtils;->isWhiteModeOn(Landroid/content/ContentResolver;)Z
 
-    invoke-virtual {v4, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
+    move-result v4
 
-    invoke-virtual {v4, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
+    if-eqz v4, :cond_1
 
-    invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f06033c
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const-string v4, "#44444444"
+
+    invoke-static {v4}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setHintTextColor(I)V
+
+    goto :goto_0
 
     :cond_1
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f06033a
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const-string v4, "#88888888"
+
+    invoke-static {v4}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setHintTextColor(I)V
+
+    :goto_0
+    invoke-virtual {v1}, Landroid/widget/TextView;->getPaddingTop()I
+
+    move-result v4
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getPaddingBottom()I
+
+    move-result v5
+
+    invoke-virtual {v1, v2, v4, v2, v5}, Landroid/widget/TextView;->setPadding(IIII)V
+
+    iget-object v4, p0, Lcom/android/settings/datetime/timezone/BaseTimeZonePicker;->mSearchView:Lcom/oneplus/lib/widget/SearchView;
+
+    const v5, 0x7f0a05e4
+
+    invoke-virtual {v4, v5}, Lcom/oneplus/lib/widget/SearchView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v4
+
+    nop
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-virtual {v5, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMarginStart(I)V
+
+    invoke-virtual {v5, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMarginEnd(I)V
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_2
     return-void
 .end method
 
@@ -225,13 +285,13 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f0d031c
+    const v1, 0x7f0d031e
 
     invoke-virtual {p1, v1, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
-    const v2, 0x7f0a058c
+    const v2, 0x7f0a0590
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

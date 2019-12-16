@@ -37,7 +37,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d00a1
+    const v1, 0x7f0d00a2
 
     const/4 v2, 0x1
 
@@ -58,7 +58,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0a06f3
+    const v3, 0x7f0a06f7
 
     invoke-virtual {p0, v3}, Lcom/android/settings/biometrics/face/FaceEnrollAccessibilityToggle;->findViewById(I)Landroid/view/View;
 
@@ -74,7 +74,7 @@
 
     nop
 
-    const v2, 0x7f0a06fc
+    const v2, 0x7f0a0700
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/face/FaceEnrollAccessibilityToggle;->findViewById(I)Landroid/view/View;
 

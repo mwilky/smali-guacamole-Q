@@ -126,7 +126,6 @@
         <Preference android:title="@string/autofill_reset_developer_options" android:key="autofill_reset_developer_options" />
     </com.android.settings.development.autofill.AutofillPreferenceCategory>
     <PreferenceCategory android:title="@string/theme_customization_category" android:key="theme_customization_category" android:order="1200">
-        <ListPreference android:title="@string/theme_customization_accent_color_title" android:key="android.theme.customization.accent_color" />
         <ListPreference android:title="@string/theme_customization_font_title" android:key="android.theme.customization.font" />
         <ListPreference android:title="@string/theme_customization_icon_shape_title" android:key="android.theme.customization.adaptive_icon_shape" />
     </PreferenceCategory>

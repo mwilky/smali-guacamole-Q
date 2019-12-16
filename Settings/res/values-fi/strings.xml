@@ -320,7 +320,6 @@ Aseta vain laitteet vierekkäin (yleensä takakannet vastakkain) ja kosketa näy
     <string name="aod_clock_minimalism">Minimalismi</string>
     <string name="aod_clock_none">Ei mitään</string>
     <string name="aod_clock_select_style_text">Valitse kellon tyyli</string>
-    <string name="aod_horizon_light">Horizon-valo</string>
     <string name="aod_horizon_light_effect_1">Sininen</string>
     <string name="aod_horizon_light_effect_2">Punainen</string>
     <string name="aod_horizon_light_effect_3">Violetti</string>
@@ -3160,7 +3159,7 @@ Varoitus: kasvojentunnistus on vähemmän turvallinen kuin sormenjälki tai sala
     <string name="oneplus_forum_award_title">Palkinto</string>
     <string name="oneplus_fullscreen_back_guide_summary">Pyyhkäise sisäänpäin näytön vasemmasta tai oikeasta alalaidasta</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">Pyyhkäise ylöspäin näytön alalaidan oikesta tai vasemmasta nurkasta</string>
-    <string name="oneplus_fullscreen_back_guide_title">Edellinen</string>
+    <string name="oneplus_fullscreen_back_guide_title">Takaisin</string>
     <string name="oneplus_fullscreen_disable_this_feature">Tätä ominaisuutta ei voi käyttää, kun navigointieleet ovat käytössä.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Kokeillaan paluupainikkeen korvaavaa elettä. 
 Pyyhkäise näytön vasemmasta tai oikeasta alareunasta ylös."</string>
@@ -3575,7 +3574,7 @@ Huomautus: Sormenjälki saattaa olla vähemmän turvallinen kuin vahva kuvio tai
     <string name="oneplus_search_keyword_swap_navkeys">vaihda painikkeet</string>
     <string name="oneplus_search_keyword_switch">siirto,tietojen siirto</string>
     <string name="oneplus_search_keyword_theme_settings">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahdetumma, Eloisat sävyt</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahde tumma, Eloisat sävyt, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">LUKITUSNÄYTÖN MUKAUTUS, Taustakuvat, Kellon tyyli, Sormenjälkianimaatio, Horizon-valo, JÄRJESTELMÄN MUKAUTUS, Korostusväri, Muoto, Kirjasin, Värisävy, Kuvakepaketti, Valaistus, Värivivahdetumma, Eloisat sävyt, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">näyttökuva</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ilmoitukset,kokemus,ohjelma,parannus</string>
@@ -3672,7 +3671,7 @@ Huomautus:
     <string name="oneplus_theme_clock">Kellon tyyli</string>
     <string name="oneplus_theme_clock_snake_action">OTA YMPÄRISTÖNÄYTTÖ KÄYTTÖÖN</string>
     <string name="oneplus_theme_clock_snake_tip">Tämä ominaisuus on käytettävissä, kun ympäristönäyttö on päällä</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">VÄRIKOODI</string>
     <string name="oneplus_theme_drop_summary">Hylätäänkö muutokset?</string>
     <string name="oneplus_theme_drop_title">Poistu muokkaustilasta</string>
     <string name="oneplus_theme_entrance_summary">Taustakuvat, korustusväri, kirjasin, värisävy</string>
@@ -3730,7 +3729,7 @@ Huomautus:
     <string name="oneplus_top_level_security_summary">Sormenjälki, Face Unlock, hätäpelastus</string>
     <string name="oneplus_top_level_sound_summary">Ei saa häiritä, kuuloketila, soittoääni</string>
     <string name="oneplus_top_level_system_summary">Kieli ja näppäimistö, aika, nollaus, järjestelmäpäivitykset</string>
-    <string name="oneplus_touch_vibrate">Värise ksketettaessa</string>
+    <string name="oneplus_touch_vibrate">Värise kosketettaessa</string>
     <string name="oneplus_turn_off_time">Mihin</string>
     <string name="oneplus_turn_on_feature_cancel">PERUUTA</string>
     <string name="oneplus_turn_on_feature_ok">OTA KÄYTTÖÖN</string>
@@ -3827,6 +3826,8 @@ Verkon asettaminen piilotetuksi ei muuta reitittimen asetuksia."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Kasvo-avauksen käyttämiseen, aseta salasana</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Kasvo-avauksen käyttämiseen, aseta kuvio</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Kasvo-avauksen käyttämiseen, aseta PIN</string>
+    <string name="op_member_description">Sido laitteesi, niin saat eksklusiivisia etuja</string>
+    <string name="op_member_title">Kirjaudu OnePlus-tilille</string>
     <string name="op_not_disturb">Älä häiritse -asetukset</string>
     <string name="op_not_disturb_summary">Mykistä puhelut ja imoitukset ja poista värinä käytöstä hälytyksiä lukuun ottamatta</string>
     <string name="op_oneplus_roaming_summary">Tarjoa kansainvälisiä Internet-käyttöpalveluita</string>

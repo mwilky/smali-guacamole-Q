@@ -37,7 +37,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f120631
+    const v1, 0x7f120633
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -56,12 +56,12 @@
 
     if-ne v2, v3, :cond_1
 
-    const v2, 0x7f120632
+    const v2, 0x7f120634
 
     goto :goto_0
 
     :cond_1
-    const v2, 0x7f120633
+    const v2, 0x7f120635
 
     :goto_0
     nop

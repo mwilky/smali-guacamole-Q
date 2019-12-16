@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final VIEW_TYPE:I = 0x7f0d00fd
+.field public static final VIEW_TYPE:I = 0x7f0d00fe
     .annotation build Landroidx/annotation/LayoutRes;
     .end annotation
 .end field

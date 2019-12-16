@@ -113,7 +113,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d0332
+    const v3, 0x7f0d0334
 
     invoke-virtual {v1, v3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -127,7 +127,7 @@
 
     check-cast v3, Landroid/view/ViewGroup;
 
-    const v4, 0x7f0d0331
+    const v4, 0x7f0d0333
 
     const/4 v5, 0x1
 
@@ -149,13 +149,13 @@
 
     move-result-object v5
 
-    const v6, 0x7f121676
+    const v6, 0x7f121686
 
     invoke-virtual {v5, v6}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    const v6, 0x7f120635
+    const v6, 0x7f120637
 
     invoke-virtual {v5, v6, v2}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -183,7 +183,7 @@
 
     invoke-direct {v7, p0, v6, v0}, Lcom/android/settings/UserCredentialsSettings$CredentialDialogFragment$1;-><init>(Lcom/android/settings/UserCredentialsSettings$CredentialDialogFragment;ILcom/android/settings/UserCredentialsSettings$Credential;)V
 
-    const v8, 0x7f121584
+    const v8, 0x7f121594
 
     invoke-virtual {v2, v8, v7}, Landroidx/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 

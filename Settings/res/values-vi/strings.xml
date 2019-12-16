@@ -320,7 +320,6 @@ Bạn chỉ cần đưa các thiết bị lại gần nhau (thường là chạm
     <string name="aod_clock_minimalism">Tối giản</string>
     <string name="aod_clock_none">Không có</string>
     <string name="aod_clock_select_style_text">Chọn kiểu đồng hồ</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Xanh dương</string>
     <string name="aod_horizon_light_effect_2">Màu đỏ</string>
     <string name="aod_horizon_light_effect_3">Tím</string>
@@ -1082,7 +1081,7 @@ Sau đây là danh sách các ứng dụng:
     <string name="clear_instant_app_data">Xóa ứng dụng</string>
     <string name="clear_uri_btn_text">Xóa quyền truy cập</string>
     <string name="clear_user_data_text">Xóa bộ nhớ</string>
-    <string name="close_dialog">Ok</string>
+    <string name="close_dialog">OK</string>
     <string name="color_black">Đen</string>
     <string name="color_blue">Lam</string>
     <string name="color_cyan">Lục lam</string>
@@ -1823,7 +1822,7 @@ Nếu sự cố này vẫn tiếp diễn, có thể bạn cần phải gỡ cài
     <string name="fingerprint_manage">Quản lý dấu vân tay</string>
     <string name="fingerprint_manage_category_title">Quản lý vân tay</string>
     <string name="fingerprint_next">Tiếp theo</string>
-    <string name="fingerprint_not_recognized">Không được nhận dạng</string>
+    <string name="fingerprint_not_recognized">Không thể nhận dạng</string>
     <string name="fingerprint_password_hint">Nhập mật khẩu dự phòng của bạn</string>
     <string name="fingerprint_password_manage_title">Dấu vân tay</string>
     <string name="fingerprint_pin_hint">Nhập PIN dự phòng của bạn</string>
@@ -3006,7 +3005,7 @@ Trình tiết kiệm pin sẽ tắt tự động khi thiết bị của bạn đ
     <string name="oneplus_custom_time">Khoảng thời gian tùy chỉnh</string>
     <string name="oneplus_customization">Tùy chỉnh thanh điều hướng</string>
     <string name="oneplus_customization_summary">Nhấn và giữ, nhấn đúp</string>
-    <string name="oneplus_customization_summary_hide_navbar">Nhấn và giữ, chạm đúp, ẩn thanh điều hướng</string>
+    <string name="oneplus_customization_summary_hide_navbar">Nhấn và giữ, nhấn đúp, ẩn thanh điều hướng</string>
     <string name="oneplus_data_usage_control_title">Kiểm soát sử dụng dữ liệu</string>
     <string name="oneplus_dc_dimming_summary">Làm mờ DC sẽ điều chỉnh độ sáng màn hình bằng cách thay đổi cường độ mạch điện của màn hình. Khi bật, nó sẽ giảm mức độ nhấp nháy của màn hình ở độ sáng thấp. Tuy nhiên trong một số trường hợp, điều này có thể dẫn đến hiển thị màu bất thường.</string>
     <string name="oneplus_dc_dimming_title">Làm mờ DC</string>
@@ -3516,7 +3515,7 @@ Còn %d lượt."</string>
     <string name="oneplus_schedule">Lịch biểu</string>
     <string name="oneplus_screen">MÀN HÌNH</string>
     <string name="oneplus_screen_better_cold">Lạnh</string>
-    <string name="oneplus_screen_better_nature">Thiên nhiên</string>
+    <string name="oneplus_screen_better_nature">Tự nhiên</string>
     <string name="oneplus_screen_better_warm">Ấm</string>
     <string name="oneplus_screen_color_mode_auto">Cấu hình màu thích ứng</string>
     <string name="oneplus_screen_color_mode_default">Display-P3（mặc định）</string>
@@ -3575,7 +3574,7 @@ Còn %d lượt."</string>
     <string name="oneplus_search_keyword_swap_navkeys">đổi chỗ các nút</string>
     <string name="oneplus_search_keyword_switch">chuyển, di chuyển dữ liệu</string>
     <string name="oneplus_search_keyword_theme_settings">TÙY CHỈNH MÀN HÌNH KHÓA, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon light, TÙY CHỈNH HỆ THỐNG, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">TÙY CHỈNH MÀN HÌNH KHÓA, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon light, TÙY CHỈNH HỆ THỐNG, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">TÙY CHỈNH MÀN HÌNH KHÓA, Hình nền, Kiểu đồng hồ, Hoạt ảnh vân tay, Horizon Light, TÙY CHỈNH HỆ THỐNG, Màu nhấn mạnh, Hình dạng, Phông chữ, Tông màu, Gói biểu tượng, Ánh sáng chói lòa, Sắc thái tối, Sắc thái rực rỡ, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">ảnh chụp màn hình</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">thông báo, trải nghiệm, chương trình, cải thiện</string>
@@ -3672,7 +3671,7 @@ Lưu ý:
     <string name="oneplus_theme_clock">Kiểu đồng hồ</string>
     <string name="oneplus_theme_clock_snake_action">BẬT HIỂN THỊ MÔI TRƯỜNG</string>
     <string name="oneplus_theme_clock_snake_tip">Tính năng này sẽ khả dụng khi hiển thị môi trường bật</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">MÃ MÀU</string>
     <string name="oneplus_theme_drop_summary">Bỏ các sửa đổi?</string>
     <string name="oneplus_theme_drop_title">Thoát khỏi chế độ chỉnh sửa</string>
     <string name="oneplus_theme_entrance_summary">Hình nền, màu nhấn mạnh, phông chữ, tông màu</string>
@@ -3825,6 +3824,8 @@ Việc cài đặt mạng dưới dạng ẩn sẽ không thay đổi cài đặ
     <string name="op_lockpassword_choose_your_password_header_for_face">Để sử dụng Mở khóa bằng gương mặt, hãy đặt mật khẩu</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Để sử dụng Mở khóa bằng gương mặt, hãy đặt mẫu hình</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Để sử dụng Mở khóa bằng gương mặt, hãy đặt mã PIN</string>
+    <string name="op_member_description">Kết ghép thiết bị của bạn để nhận các quyền lợi riêng</string>
+    <string name="op_member_title">Đăng nhập Tài khoản OnePlus</string>
     <string name="op_not_disturb">Thiết lập Không làm phiền</string>
     <string name="op_not_disturb_summary">Tắt tiếng các cuộc gọi, thông báo và tắt rung, ngoại trừ báo thức</string>
     <string name="op_oneplus_roaming_summary">Cung cấp dịch vụ truy cập internet trên toàn cầu</string>

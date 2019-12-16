@@ -331,7 +331,7 @@
 
     if-eqz v16, :cond_1
 
-    const v16, 0x7f1203fe
+    const v16, 0x7f120400
 
     move-object/from16 v20, v13
 
@@ -340,7 +340,7 @@
     goto :goto_1
 
     :cond_1
-    const v16, 0x7f1203fd
+    const v16, 0x7f1203ff
 
     move-object/from16 v20, v13
 
@@ -602,7 +602,7 @@
     move-result-object v5
 
     :cond_7
-    const v0, 0x7f0d0108
+    const v0, 0x7f0d0109
 
     const/4 v11, 0x0
 
@@ -692,7 +692,7 @@
     :goto_d
     iget-object v8, v1, Lcom/android/settings/MasterClear;->mContentView:Landroid/view/View;
 
-    const v10, 0x7f0a04f3
+    const v10, 0x7f0a04f7
 
     invoke-virtual {v8, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -746,7 +746,7 @@
 
     invoke-direct {v1, v2, p0}, Lcom/android/settings/password/ChooseLockSettingsHelper;-><init>(Landroid/app/Activity;Landroidx/fragment/app/Fragment;)V
 
-    const v2, 0x7f1209fe
+    const v2, 0x7f120a00
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -815,7 +815,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/MasterClear;->mContentView:Landroid/view/View;
 
-    const v1, 0x7f0a060f
+    const v1, 0x7f0a0613
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -839,7 +839,7 @@
 
     invoke-direct {v2, v3}, Lcom/google/android/setupcompat/template/FooterButton$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f1209ef
+    const v3, 0x7f1209f1
 
     invoke-virtual {v2, v3}, Lcom/google/android/setupcompat/template/FooterButton$Builder;->setText(I)Lcom/google/android/setupcompat/template/FooterButton$Builder;
 
@@ -1373,7 +1373,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1209fe
+    const v1, 0x7f120a00
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -1493,7 +1493,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1209f0
+    const v2, 0x7f1209f2
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 

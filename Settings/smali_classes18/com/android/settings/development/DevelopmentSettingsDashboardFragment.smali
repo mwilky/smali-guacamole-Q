@@ -759,14 +759,6 @@
 
     new-instance v1, Lcom/android/settings/development/OverlayCategoryPreferenceController;
 
-    const-string v2, "android.theme.customization.accent_color"
-
-    invoke-direct {v1, p0, v2}, Lcom/android/settings/development/OverlayCategoryPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Lcom/android/settings/development/OverlayCategoryPreferenceController;
-
     const-string v2, "android.theme.customization.font"
 
     invoke-direct {v1, p0, v2}, Lcom/android/settings/development/OverlayCategoryPreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
@@ -1215,7 +1207,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1205c1
+    const v1, 0x7f1205c3
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

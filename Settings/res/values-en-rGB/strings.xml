@@ -320,7 +320,6 @@ Just bring the devices together (typically back to back) and then tap your scree
     <string name="aod_clock_minimalism">Minimalism</string>
     <string name="aod_clock_none">None</string>
     <string name="aod_clock_select_style_text">Select the clock style</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Blue</string>
     <string name="aod_horizon_light_effect_2">Red</string>
     <string name="aod_horizon_light_effect_3">Purple</string>
@@ -3575,7 +3574,7 @@ Note: Your fingerprint may be less secure than a strong pattern or PIN"</string>
     <string name="oneplus_search_keyword_swap_navkeys">swap buttons</string>
     <string name="oneplus_search_keyword_switch">transfer, data migration</string>
     <string name="oneplus_search_keyword_theme_settings">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMISATION, Accent colour, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, Fingerprint animation, Horizon light, SYSTEM CUSTOMISATION, Accent colour, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">LOCK SCREEN CUSTOMISATION, Wallpapers, Clock style, Fingerprint animation, Horizon Light, SYSTEM CUSTOMISATION, Accent colour, Shape, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notifications, experience, program, improvement</string>
@@ -3672,7 +3671,7 @@ Note:
     <string name="oneplus_theme_clock">Clock style</string>
     <string name="oneplus_theme_clock_snake_action">TURN ON AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">This feature will be available when ambient display is on</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">COLOUR CODE</string>
     <string name="oneplus_theme_drop_summary">Discard modifications?</string>
     <string name="oneplus_theme_drop_title">Exit edit mode</string>
     <string name="oneplus_theme_entrance_summary">Wallpapers, accent color, font, tone</string>
@@ -3827,6 +3826,8 @@ Setting the network as hidden will not change your router settings."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">To use Face Unlock, set password</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">To use Face Unlock, set pattern</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">To use Face Unlock, set PIN</string>
+    <string name="op_member_description">Bind your device to get exclusive benefits</string>
+    <string name="op_member_title">Log in to OnePlus Account</string>
     <string name="op_not_disturb">Do Not Disturb preferences</string>
     <string name="op_not_disturb_summary">Mute calls and notifications and turn off vibration, except for alarms</string>
     <string name="op_oneplus_roaming_summary">Provide global Internet access services</string>

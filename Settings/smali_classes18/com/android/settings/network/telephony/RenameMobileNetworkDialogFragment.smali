@@ -312,7 +312,7 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0d0094
+    const v3, 0x7f0d0095
 
     invoke-virtual {v1, v3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -320,7 +320,7 @@
 
     invoke-virtual {p0, v3}, Lcom/android/settings/network/telephony/RenameMobileNetworkDialogFragment;->populateView(Landroid/view/View;)V
 
-    const v4, 0x7f120a68
+    const v4, 0x7f120a6a
 
     invoke-virtual {v0, v4}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -334,7 +334,7 @@
 
     invoke-direct {v5, p0}, Lcom/android/settings/network/telephony/-$$Lambda$RenameMobileNetworkDialogFragment$32uZAtr_w5Fn719afgZJG1yBu8g;-><init>(Lcom/android/settings/network/telephony/RenameMobileNetworkDialogFragment;)V
 
-    const v6, 0x7f120a6a
+    const v6, 0x7f120a6c
 
     invoke-virtual {v4, v6, v5}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -356,7 +356,7 @@
     .annotation build Landroidx/annotation/VisibleForTesting;
     .end annotation
 
-    const v0, 0x7f0a041e
+    const v0, 0x7f0a0422
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -438,7 +438,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0d0093
+    const v4, 0x7f0d0094
 
     iget-object v5, p0, Lcom/android/settings/network/telephony/RenameMobileNetworkDialogFragment;->mColors:[Lcom/android/settings/network/telephony/RenameMobileNetworkDialogFragment$Color;
 
@@ -482,7 +482,7 @@
 
     :cond_3
     :goto_1
-    const v3, 0x7f0a04d8
+    const v3, 0x7f0a04dc
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -504,7 +504,7 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v5, 0x7f0a044d
+    const v5, 0x7f0a0451
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -528,7 +528,7 @@
     :goto_2
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v6, 0x7f0a044e
+    const v6, 0x7f0a0452
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

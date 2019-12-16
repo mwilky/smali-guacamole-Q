@@ -239,7 +239,7 @@
 
     iget-object v6, p0, Lcom/android/settings/flashlight/FlashlightSlice;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f1210f9
+    const v7, 0x7f121109
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

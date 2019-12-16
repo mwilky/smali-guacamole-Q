@@ -320,7 +320,6 @@ Uređaje samo postavite jedan uz drugi (prislonite im poleđine) pa dodirnite za
     <string name="aod_clock_minimalism">Minimalistički</string>
     <string name="aod_clock_none">Ništa</string>
     <string name="aod_clock_select_style_text">Odaberite stil sata</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Plava</string>
     <string name="aod_horizon_light_effect_2">Crvena</string>
     <string name="aod_horizon_light_effect_3">Ljubičasta</string>
@@ -3173,7 +3172,7 @@ Za prijelaz na početni zaslon u bilo kojem trenutku, prijeđite prstom od sredi
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Bit će omogućene navigacijske geste</string>
     <string name="oneplus_fullscreen_home_guide_summary">Prijeđite prstom nagore od donjeg ruba zaslona</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">Prijeđite prstom nagore od sredine donjeg ruba zaslona</string>
-    <string name="oneplus_fullscreen_home_guide_title">Početak</string>
+    <string name="oneplus_fullscreen_home_guide_title">Početna</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Navigacijske geste i dalje se mogu pokrenuti s dna zaslona, za povratak prevucite prstom od lijevog ili desnog ruba</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Kao i kod portreta, navigacijske geste su i dalje s dna zaslona</string>
     <string name="oneplus_fullscreen_landscape_guide_title">Krajolik</string>
@@ -3672,7 +3671,7 @@ Napomena:
     <string name="oneplus_theme_clock">Stil sata</string>
     <string name="oneplus_theme_clock_snake_action">UKLJUČI AMBIJENTALNI ZASLON</string>
     <string name="oneplus_theme_clock_snake_tip">Ta će značajka biti dostupna kada se uključi ambijentalni zaslon</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">ŠIFRA BOJE</string>
     <string name="oneplus_theme_drop_summary">Odbaciti izmjene?</string>
     <string name="oneplus_theme_drop_title">Napuštanje uređivanja</string>
     <string name="oneplus_theme_entrance_summary">Pozadina, boja naglašavanja, font, ton</string>
@@ -3756,8 +3755,8 @@ Napomena: otključavanje licem može biti manje sigurno od otiska prsta, PIN kod
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Pozivi i obavijesti bit će utišani i postavljeni samo na vibraciju, osim alarma</string>
     <string name="oneplus_vibration_summary">Alarm će uvijek zvoniti</string>
     <string name="oneplus_video_enhancer">Poboljšavač videozapisa</string>
-    <string name="oneplus_video_enhancer_footer">Poboljšajte boju tijekom reprodukcije videozapisa</string>
-    <string name="oneplus_video_enhancer_summary">Poboljšajte boju tijekom reprodukcije videozapisa</string>
+    <string name="oneplus_video_enhancer_footer">Poboljšava boju tijekom reprodukcije videozapisa</string>
+    <string name="oneplus_video_enhancer_summary">Poboljšava boju tijekom reprodukcije videozapisa</string>
     <string name="oneplus_volume_keys_adjust">Prilagodite koristeći se tipkama za glasnoću</string>
     <string name="oneplus_volume_keys_adjust_media">Glasnoća medija</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Glasnoća zvona</string>
@@ -3827,6 +3826,8 @@ Postavljanje mreže kao skrivene neće promijeniti postavke usmjerivača."</stri
     <string name="op_lockpassword_choose_your_password_header_for_face">Da biste se koristili otključavanjem licem, postavite lozinku</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Da biste se koristili otključavanjem licem, postavite uzorak</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Da biste se koristili otključavanjem licem, postavite PIN</string>
+    <string name="op_member_description">Povežite uređaj da biste dobili ekskluzivne pogodnosti</string>
+    <string name="op_member_title">Prijava na OnePlus račun</string>
     <string name="op_not_disturb">Postavke za \"Ne ometaj\"</string>
     <string name="op_not_disturb_summary">Isključite pozive, upozorenja i vibraciju, osim za alarme</string>
     <string name="op_oneplus_roaming_summary">Pružanje globalnih usluga pristupa internetu</string>

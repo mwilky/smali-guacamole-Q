@@ -111,7 +111,7 @@
 
     invoke-super {p0, p1, p2}, Lcom/android/settings/dashboard/DashboardFragment;->onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
-    const v0, 0x7f120ad9
+    const v0, 0x7f120adb
 
     invoke-interface {p1, v0}, Landroid/view/Menu;->add(I)Landroid/view/MenuItem;
 
@@ -183,7 +183,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d012d
+    const v2, 0x7f0d012e
 
     const/4 v3, 0x0
 

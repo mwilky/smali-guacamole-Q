@@ -324,7 +324,6 @@ Přiložte zařízení k sobě (zpravidla zadní stranou) a klepněte na obraz
     <string name="aod_clock_minimalism">Minimalismus</string>
     <string name="aod_clock_none">Žádný</string>
     <string name="aod_clock_select_style_text">Vyberte styl hodin</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Modrá</string>
     <string name="aod_horizon_light_effect_2">Červená</string>
     <string name="aod_horizon_light_effect_3">Fialový</string>
@@ -3256,7 +3255,7 @@ Pokud chcete kdykoliv přejít na úvodní obrazovku, potáhněte prstem nahoru 
     <string name="oneplus_hand_up_to_show">Zobrazte zvednutím telefonu</string>
     <string name="oneplus_haptic_feedback_no_app">Nejsou nainstalovány žádné podporované hry</string>
     <string name="oneplus_haptic_feedback_no_app_tip">Můžete nainstalovat PUBG Mobile a Asphalt 9</string>
-    <string name="oneplus_haptic_feedback_summary">Poskytuje pro podporované hry lepší hmatovou zpětnou vazbu</string>
+    <string name="oneplus_haptic_feedback_summary">Poskytovat pro podporované hry lepší hmatovou zpětnou vazbu</string>
     <string name="oneplus_haptic_feedback_support">Podporované hry</string>
     <string name="oneplus_haptic_feedback_tips">Poskytuje pro určité herní scény hmatovou zpětnou vazbu, lze použít pouze pro podporované hry</string>
     <string name="oneplus_haptic_feedback_title">Vylepšení hmatové zpětné vazby</string>
@@ -3597,7 +3596,7 @@ Poznámka: Váš otisk prstu může být méně bezpečný než silný vzor nebo
     <string name="oneplus_search_keyword_swap_navkeys">prohodit tlačítka</string>
     <string name="oneplus_search_keyword_switch">přenos,migrace dat</string>
     <string name="oneplus_search_keyword_theme_settings">VLASTNÍ NASTAVENÍ ZAMČENÉ OBRAZOVKY, tapety, styl hodin, animace otisku prstu, Horizon Light, VLASTNÍ NASTAVENÍ SYSTÉMU, barva zvýraznění, tvar, písmo, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">VLASTNÍ NASTAVENÍ ZAMČENÉ OBRAZOVKY, tapety, styl hodin, animace otisku prstu, Horizon light, VLASTNÍ NASTAVENÍ SYSTÉMU, barva zvýraznění, tvar, písmo, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">VLASTNÍ NASTAVENÍ ZAMČENÉ OBRAZOVKY, tapety, styl hodin, animace otisku prstu, Horizon Light, VLASTNÍ NASTAVENÍ SYSTÉMU, barva zvýraznění, tvar, písmo, odstín, balíček ikon, světlo podsvícení, jemná tmavá, živé tóny, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">snímek obrazovky</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">oznámení,zážitek,program,vylepšení</string>
@@ -3696,7 +3695,7 @@ Poznámka:
     <string name="oneplus_theme_clock">Styl hodin</string>
     <string name="oneplus_theme_clock_snake_action">ZAPNOUT AMBIENTNÍ DISPLEJ</string>
     <string name="oneplus_theme_clock_snake_tip">Tato funkce bude dostupná, pokud je zapnutý ambientní displej</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">KÓD BARVY</string>
     <string name="oneplus_theme_drop_summary">Zrušit změny?</string>
     <string name="oneplus_theme_drop_title">Ukončit režim úprav</string>
     <string name="oneplus_theme_entrance_summary">Tapety, barva zvýraznění, písmo, odstín</string>
@@ -3780,8 +3779,8 @@ Poznámka: Funkce Odemknutí obličejem je méně bezpečná než otisk prstu, k
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Hovory a oznámení budou, s výjimkou alarmů, ztišeny a nastaveny pouze na vibrace</string>
     <string name="oneplus_vibration_summary">Alarm vždy zazvoní</string>
     <string name="oneplus_video_enhancer">Vylepšení videa</string>
-    <string name="oneplus_video_enhancer_footer">Zlepšit barvu při přehrávání videí</string>
-    <string name="oneplus_video_enhancer_summary">Zlepšit barvu při přehrávání videí</string>
+    <string name="oneplus_video_enhancer_footer">Zlepšit barvu během přehrávání videí</string>
+    <string name="oneplus_video_enhancer_summary">Zlepšit barvu během přehrávání videí</string>
     <string name="oneplus_volume_keys_adjust">Pomocí tlačítek hlasitosti upravte</string>
     <string name="oneplus_volume_keys_adjust_media">Hlasitost médií</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Hlasitost vyzvánění</string>
@@ -3855,6 +3854,8 @@ Nastavení sítě jako skryté nezmění nastavení směrovače."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Chcete-li použít odemčení pomocí rozpoznání tváře, nastavte heslo</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Chcete-li použít odemčení pomocí rozpoznání tváře, nastavte vzor</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Chcete-li použít odemčení pomocí rozpoznání tváře, nastavte PIN</string>
+    <string name="op_member_description">Propojte svá zařízení a získejte exkluzivní výhody</string>
+    <string name="op_member_title">Přihlášení k účtu OnePlus</string>
     <string name="op_not_disturb">Předvolby Nerušit</string>
     <string name="op_not_disturb_summary">Ztišit hovory, upozornění a vypnout vibrace, s výjimkou budíků</string>
     <string name="op_oneplus_roaming_summary">Poskytuje globální služby přístupu k Internetu</string>

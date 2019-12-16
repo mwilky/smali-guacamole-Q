@@ -15,7 +15,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/android/settings/accessibility/ListDialogPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const v0, 0x7f0d00b5
+    const v0, 0x7f0d00b6
 
     invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ColorPreference;->setDialogLayoutResource(I)V
 
@@ -60,7 +60,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f120434
+    const v6, 0x7f120436
 
     const/4 v7, 0x3
 
@@ -120,7 +120,7 @@
 
     if-ge v1, v3, :cond_0
 
-    const v3, 0x7f08069a
+    const v3, 0x7f0806a8
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -162,7 +162,7 @@
 
     if-eqz v4, :cond_2
 
-    const v5, 0x7f0a0692
+    const v5, 0x7f0a0696
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -207,7 +207,7 @@
 
     if-ge v2, v3, :cond_0
 
-    const v2, 0x7f08069a
+    const v2, 0x7f0806a8
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -286,7 +286,7 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0d0254
+    const v0, 0x7f0d0256
 
     invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ColorPreference;->setWidgetLayoutResource(I)V
 

@@ -85,7 +85,7 @@
 
     iget-object v6, p0, Lcom/android/settings/applications/ProcessStatsSummary$SummaryProvider;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f120a28
+    const v7, 0x7f120a2a
 
     const/4 v8, 0x2
 

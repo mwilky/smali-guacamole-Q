@@ -452,7 +452,7 @@
 
     iget-object v3, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f1205a6
+    const v4, 0x7f1205a8
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -465,7 +465,7 @@
 
     iget-object v3, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f1205a5
+    const v4, 0x7f1205a7
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -478,7 +478,7 @@
 
     iget-object v3, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f1205a8
+    const v4, 0x7f1205aa
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -518,7 +518,7 @@
 
     iget-object v6, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f120a49
+    const v7, 0x7f120a4b
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -531,7 +531,7 @@
 
     iget-object v6, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f120a4d
+    const v7, 0x7f120a4f
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -542,7 +542,7 @@
     :cond_4
     iget-object v6, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f1205a7
+    const v7, 0x7f1205a9
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -589,7 +589,7 @@
     :cond_8
     iget-object v4, p0, Lcom/android/settings/network/SubscriptionsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1214d7
+    const v5, 0x7f1214e7
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -320,7 +320,6 @@ Houd de apparaten bij elkaar (meestal met de achterkanten tegen elkaar aan) en t
     <string name="aod_clock_minimalism">Minimalisme</string>
     <string name="aod_clock_none">Geen</string>
     <string name="aod_clock_select_style_text">Selecteer de klokstijl</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Blauw</string>
     <string name="aod_horizon_light_effect_2">Rood</string>
     <string name="aod_horizon_light_effect_3">Paars</string>
@@ -3049,7 +3048,7 @@ Batterij sparen schakelt automatisch uit wanneer het toestel oplaadt."</string>
     <string name="oneplus_double_tap_power_gesture">Dubbelklik op de aan-uitknop voor</string>
     <string name="oneplus_double_tap_power_gesture_app">DE FUNCTIE SELECTEREN</string>
     <string name="oneplus_double_tap_power_gesture_camera">Camera</string>
-    <string name="oneplus_double_tap_power_gesture_wallet">Betaalpasjes (Portemonnee)</string>
+    <string name="oneplus_double_tap_power_gesture_wallet">Kaarten doorhalen (Portemonnee)</string>
     <string name="oneplus_doze_summary_801">Klok en andere informatie weergeven op het stand-byscherm</string>
     <string name="oneplus_doze_title">Ambient display</string>
     <string name="oneplus_doze_title_801">Ambient display</string>
@@ -3160,7 +3159,7 @@ Let op: Gezichtsontgrendeling is minder veilig dan het gebruik van een vingerafd
     <string name="oneplus_forum_award_title">Award</string>
     <string name="oneplus_fullscreen_back_guide_summary">Veeg naar binnen vanaf de linkeronder- of rechteronderrand van het scherm</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">Veeg aan de onderzijde van het scherm aan de linker- of rechterzijde omhoog</string>
-    <string name="oneplus_fullscreen_back_guide_title">Terug</string>
+    <string name="oneplus_fullscreen_back_guide_title">Vorige</string>
     <string name="oneplus_fullscreen_disable_this_feature">Deze functie kan niet worden gebruikt wanneer navigatiegebaren zijn ingeschakeld.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Laat ons het gebaar proberen dat de knop terug vervangt.
 Veeg omhoog van de linker- of rechterzijde van de bodem van het scherm."</string>
@@ -3173,7 +3172,7 @@ Om op elk moment naar het Home-scherm te gaan, veeg omhoog vanaf de onderste cen
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Navigatiegebaren worden ingeschakeld</string>
     <string name="oneplus_fullscreen_home_guide_summary">Veeg omhoog vanaf de onderrand van het scherm</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">Veeg omhoog vanaf de onderste centrale rand van het scherm</string>
-    <string name="oneplus_fullscreen_home_guide_title">Home</string>
+    <string name="oneplus_fullscreen_home_guide_title">Start</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Navigatiegebaren kunnen nog steeds vanaf de onderrand van het scherm worden geactiveerd, veeg van de linker- of rechterrand om terug te gaan</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Net als bij portret gebruikt u navigatiegebaren nog steeds vanaf de onderzijde van het apparaat</string>
     <string name="oneplus_fullscreen_landscape_guide_title">Liggend</string>
@@ -3242,7 +3241,7 @@ Om op elk moment naar het Home-scherm te gaan, veeg omhoog vanaf de onderste cen
     <string name="oneplus_hand_up_to_show">Neem uw telefoon om te tonen</string>
     <string name="oneplus_haptic_feedback_no_app">Geen ondersteunde games geïnstalleerd</string>
     <string name="oneplus_haptic_feedback_no_app_tip">U kunt PUBG Mobile en Asphalt 9 installeren</string>
-    <string name="oneplus_haptic_feedback_summary">Biedt betere tastfeedback bij ondersteunde games</string>
+    <string name="oneplus_haptic_feedback_summary">Biedt betere haptische feedback bij ondersteunde games</string>
     <string name="oneplus_haptic_feedback_support">Ondersteunde games</string>
     <string name="oneplus_haptic_feedback_tips">Biedt tastfeedback bij specifieke gamescènes. Alleen van toepassing op ondersteunde games</string>
     <string name="oneplus_haptic_feedback_title">Verbetering van tastfeedback</string>
@@ -3293,7 +3292,7 @@ Opmerking: uw vingerafdruk kan minder veilig zijn dan een sterk patroon of een p
     <string name="oneplus_lock_after_timeout">Automatisch vergrendelen na slaapmodus</string>
     <string name="oneplus_lock_buttons">Knoppen Vergrendelen</string>
     <string name="oneplus_lock_buttons_summary">Capacitieve knoppen vergrendelen wanneer Spelmodus ingeschakeld is</string>
-    <string name="oneplus_lock_screen_intro_skip_dialog_text">Indien u kiest voor het overslaan van de opname van gezichtsgegevens, wordt u voorgesteld om een andere methode te activeren, zoals vingerafdruk of pin, om uw toestel en persoonlijke informatie te beschermen. U kunt een een wachtwoord instellen in bepaalde apps. Ga naar \"Instellingen\" > \"Beveiliging &amp; Schermvergrendeling\" om de bescherming in te schakelen.</string>
+    <string name="oneplus_lock_screen_intro_skip_dialog_text">Indien u kiest voor het overslaan van de opname van gezichtsgegevens, wordt u voorgesteld om een andere methode te activeren, zoals vingerafdruk of pin, om uw toestel en persoonlijke informatie te beschermen. U kunt een een wachtwoord instellen in bepaalde apps. Ga naar \"Instellingen\" > \"Beveiliging en vergrendelscherm\" om de bescherming in te schakelen.</string>
     <string name="oneplus_lock_screen_notifications_summary_hide">Privé-inhoud alleen weergeven wanneer het apparaat is ontgrendeld</string>
     <string name="oneplus_lock_screen_notifs_show_alerting">Alleen belangrijke meldingen weergeven</string>
     <string name="oneplus_lock_screen_notifs_show_all">Belangrijke en overige meldingen weergeven</string>
@@ -3672,7 +3671,7 @@ Opmerking:
     <string name="oneplus_theme_clock">Klokstijl</string>
     <string name="oneplus_theme_clock_snake_action">AMBIENT DISPLAY INSCHAKELEN</string>
     <string name="oneplus_theme_clock_snake_tip">Deze functie is beschikbaar wanneer ambient display is ingeschakeld</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">KLEURCODE</string>
     <string name="oneplus_theme_drop_summary">Wijzigingen verwijderen?</string>
     <string name="oneplus_theme_drop_title">Bewerkingsmodus afsluiten</string>
     <string name="oneplus_theme_entrance_summary">Achtergronden, accentkleur, lettertype, toon</string>
@@ -3827,6 +3826,8 @@ De instellingen van uw router worden niet gewijzigd als u het netwerk als verbor
     <string name="op_lockpassword_choose_your_password_header_for_face">Stel een wachtwoord in om Gezichtsontgrendeling te gebruiken</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Stel een patroon in om Gezichtsontgrendeling te gebruiken</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Stel een pincode in om Gezichtsontgrendeling te gebruiken</string>
+    <string name="op_member_description">Koppel uw apparaat voor exclusieve voordelen</string>
+    <string name="op_member_title">Aanmelden bij OnePlus-account</string>
     <string name="op_not_disturb">Niet Storen voorkeuren</string>
     <string name="op_not_disturb_summary">Oproepen en meldingen dempen en vibratie uitschakelen, uitgezonderd voor alarmen</string>
     <string name="op_oneplus_roaming_summary">Voorziet diensten voor wereldwijde Internettoegang</string>
@@ -3845,7 +3846,7 @@ De instellingen van uw router worden niet gewijzigd als u het netwerk als verbor
     <string name="op_reset">Resetten</string>
     <string name="op_reset_options_summary">Fabrieksinstellingen resetten, apps &amp; netwerk resetten</string>
     <string name="op_screenshot">Geluid schermafdruk</string>
-    <string name="op_security_lock_settings_title">Beveiliging &amp; schermvergrendeling</string>
+    <string name="op_security_lock_settings_title">Beveiliging en vergrendelscherm</string>
     <string name="op_security_settings_back_fingerprint_enroll_find_sensor_message">Deze kunt u vinden op de achterzijde van uw telefoon</string>
     <string name="op_security_settings_fingerprint_enroll_find_sensor_message">Zoek de vingerafdruk sensor op de home-knop</string>
     <string name="op_security_settings_title">Beveiliging &amp; vingerafdruk</string>

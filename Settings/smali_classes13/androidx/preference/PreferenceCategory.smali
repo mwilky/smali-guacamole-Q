@@ -17,7 +17,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    const v0, 0x7f0403aa
+    const v0, 0x7f0403ab
 
     const v1, 0x101008c
 
@@ -124,7 +124,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f06042f
+    const v3, 0x7f06043a
 
     invoke-static {v2, v3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

@@ -107,7 +107,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0a05cd
+    const v1, 0x7f0a05d1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -240,7 +240,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060332
+    const v2, 0x7f06033c
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -254,7 +254,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f060336
+    const v3, 0x7f060340
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getColor(I)I
 
@@ -292,7 +292,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f06039e
+    const v2, 0x7f0603a9
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -375,7 +375,7 @@
 
     iget-object v0, p0, Lcom/android/settings/password/SetupChooseLockPattern$SetupChooseLockPatternFragment;->mSkipOrClearButton:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f1213dd
+    const v1, 0x7f1213ed
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 

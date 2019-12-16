@@ -738,6 +738,52 @@
     return v0
 .end method
 
+.method public static isNetworkException(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Ljava/net/SocketException;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljava/nio/channels/ClosedChannelException;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljava/io/InterruptedIOException;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljava/net/ProtocolException;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljavax/net/ssl/SSLException;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljava/net/UnknownHostException;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljava/net/UnknownServiceException;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+.end method
+
 .method public static renderPath(Landroid/graphics/Path;)Landroid/graphics/Bitmap;
     .locals 5
 
@@ -785,7 +831,7 @@
 .end method
 
 .method public static resizeBitmapIfNeeded(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
-    .locals 3
+    .locals 1
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -802,33 +848,49 @@
     return-object p0
 
     :cond_0
-    int-to-float v0, p1
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-static {p0, p1, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    int-to-float v1, p2
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr v1, v2
-
-    const/4 v2, 0x1
-
-    invoke-static {p0, p1, p2, v2}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-
-    move-result-object v2
+    move-result-object v0
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
-    return-object v2
+    return-object v0
+.end method
+
+.method public static saveLayerCompat(Landroid/graphics/Canvas;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
+    .locals 1
+
+    const/16 v0, 0x1f
+
+    invoke-static {p0, p1, p2, v0}, Lcom/airbnb/lottie/utils/Utils;->saveLayerCompat(Landroid/graphics/Canvas;Landroid/graphics/RectF;Landroid/graphics/Paint;I)V
+
+    return-void
+.end method
+
+.method public static saveLayerCompat(Landroid/graphics/Canvas;Landroid/graphics/RectF;Landroid/graphics/Paint;I)V
+    .locals 3
+
+    const-string v0, "Utils#saveLayer"
+
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x17
+
+    if-ge v1, v2, :cond_0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/graphics/Canvas;->saveLayer(Landroid/graphics/RectF;Landroid/graphics/Paint;I)I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Landroid/graphics/Canvas;->saveLayer(Landroid/graphics/RectF;Landroid/graphics/Paint;)I
+
+    :goto_0
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
+
+    return-void
 .end method

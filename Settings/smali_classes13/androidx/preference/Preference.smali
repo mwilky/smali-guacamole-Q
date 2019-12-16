@@ -150,7 +150,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    const v0, 0x7f0403b1
+    const v0, 0x7f0403b2
 
     const v1, 0x101008e
 
@@ -208,7 +208,7 @@
 
     iput-boolean v2, p0, Landroidx/preference/Preference;->mShouldDisableView:Z
 
-    const v3, 0x7f0d0249
+    const v3, 0x7f0d024b
 
     iput v3, p0, Landroidx/preference/Preference;->mLayoutResId:I
 
@@ -2004,7 +2004,7 @@
 
     :cond_a
     :goto_3
-    const v8, 0x7f0a02f1
+    const v8, 0x7f0a02f2
 
     invoke-virtual {p1, v8}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

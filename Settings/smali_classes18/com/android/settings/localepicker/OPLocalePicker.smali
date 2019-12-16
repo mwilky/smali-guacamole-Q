@@ -96,12 +96,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f1208c0
+    const v1, 0x7f1208c2
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1208bf
+    const v1, 0x7f1208c1
 
     :goto_0
     new-instance v2, Lcom/android/settings/localepicker/OPLocalePicker$1;

@@ -21,7 +21,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    const v0, 0x7f0403b1
+    const v0, 0x7f0403b2
 
     const v1, 0x101008e
 
@@ -33,7 +33,7 @@
 
     iput-object p1, p0, Lcom/android/settings/accessibility/BalanceSeekBarPreference;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0d024d
+    const v0, 0x7f0d024f
 
     invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/BalanceSeekBarPreference;->setLayoutResource(I)V
 

@@ -141,7 +141,7 @@
 
     iput-object v0, p0, Lcom/android/settings/notification/ImportancePreference;->unselectedBackground:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f0d0131
+    const v0, 0x7f0d0132
 
     invoke-virtual {p0, v0}, Lcom/android/settings/notification/ImportancePreference;->setLayoutResource(I)V
 
@@ -281,7 +281,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    const v0, 0x7f0a0621
+    const v0, 0x7f0a0625
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -445,11 +445,11 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f0a0624
+    const v4, 0x7f0a0628
 
-    const v5, 0x7f0a0623
+    const v5, 0x7f0a0627
 
-    const v6, 0x7f0a0622
+    const v6, 0x7f0a0626
 
     const v7, 0x7f0a007d
 

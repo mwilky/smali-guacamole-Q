@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">Минимализм</string>
     <string name="aod_clock_none">Нет</string>
     <string name="aod_clock_select_style_text">Выбор стиля часов</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Синий</string>
     <string name="aod_horizon_light_effect_2">Красный</string>
     <string name="aod_horizon_light_effect_3">Фиолетовый</string>
@@ -3049,7 +3048,7 @@
     <string name="oneplus_double_tap_power_gesture">Дважды нажмите кнопку питания, чтобы выполнить следующее действие</string>
     <string name="oneplus_double_tap_power_gesture_app">ВЫБОР ФУНКЦИИ</string>
     <string name="oneplus_double_tap_power_gesture_camera">Камера</string>
-    <string name="oneplus_double_tap_power_gesture_wallet">Использование карточек (Кошелек)</string>
+    <string name="oneplus_double_tap_power_gesture_wallet">Проведите картами (Кошелек)</string>
     <string name="oneplus_doze_summary_801">Отображать часы и другую информацию на экране в режиме сна</string>
     <string name="oneplus_doze_title">Черно-белый экран</string>
     <string name="oneplus_doze_title_801">Черно-белый экран</string>
@@ -3173,7 +3172,7 @@
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Будут включены жесты навигации</string>
     <string name="oneplus_fullscreen_home_guide_summary">Проведите пальцем вверх от нижнего края экрана</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">Проведите пальцем вверх от центра нижнего края экрана</string>
-    <string name="oneplus_fullscreen_home_guide_title">Домой</string>
+    <string name="oneplus_fullscreen_home_guide_title">Главная</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Жесты навигации все еще можно использовать, проводя пальцем от нижнего края экрана. Чтобы вернуться назад, проведите пальцем от левого или правого края экрана.</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Так же, как и портретная ориентация, жесты навигации работают в нижней части устройства</string>
     <string name="oneplus_fullscreen_landscape_guide_title">Альбомная ориентация</string>
@@ -3516,7 +3515,7 @@
     <string name="oneplus_schedule">Расписание</string>
     <string name="oneplus_screen">ЭКРАН</string>
     <string name="oneplus_screen_better_cold">Холоднее</string>
-    <string name="oneplus_screen_better_nature">Естественные цвета</string>
+    <string name="oneplus_screen_better_nature">Естественный</string>
     <string name="oneplus_screen_better_warm">Теплее</string>
     <string name="oneplus_screen_color_mode_auto">Адаптивные цветовые профили</string>
     <string name="oneplus_screen_color_mode_default">Display-P3 (по умолчанию)</string>
@@ -3575,7 +3574,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">поменять кнопки местами</string>
     <string name="oneplus_search_keyword_switch">передача,перенос данных</string>
     <string name="oneplus_search_keyword_theme_settings">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, Анимация отпечатка пальца, Horizon light, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, Анимация отпечатка пальца, Horizon light, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ПЕРСОНАЛИЗАЦИЯ ЭКРАНА БЛОКИРОВКИ, Обои, Стиль часов, Анимация отпечатка пальца, Horizon Light, ПЕРСОНАЛИЗАЦИЯ СИСТЕМЫ, Цвет подсветки, Форма, Шрифт, Оттенок, Пакет значков, Иллюминация, Темная с нюансами, Яркие оттенки, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">скриншот</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">уведомления,опыт,программа,улучшение</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">Стиль часов</string>
     <string name="oneplus_theme_clock_snake_action">ВКЛЮЧИТЬ ЧЕРНО-БЕЛЫЙ ЭКРАН</string>
     <string name="oneplus_theme_clock_snake_tip">Эта функция будет доступна при включенном черно-белом экране</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">КОД ЦВЕТА</string>
     <string name="oneplus_theme_drop_summary">Отменить изменения?</string>
     <string name="oneplus_theme_drop_title">Выход из редактора</string>
     <string name="oneplus_theme_entrance_summary">Обои, цвет подсветки, шрифт, оттенок</string>
@@ -3756,8 +3755,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Вызовы и уведомления, кроме сигналов будильника, будут без звука и в режиме вибрации</string>
     <string name="oneplus_vibration_summary">Сигнал будильника будет всегда со звуком</string>
     <string name="oneplus_video_enhancer">Оптимизатор видео</string>
-    <string name="oneplus_video_enhancer_footer">Улучшает цветопередачу во время показа видео</string>
-    <string name="oneplus_video_enhancer_summary">Улучшает цветопередачу во время показа видео</string>
+    <string name="oneplus_video_enhancer_footer">Улучшение цветопередачи во время воспроизведения видео</string>
+    <string name="oneplus_video_enhancer_summary">Улучшение цветопередачи во время воспроизведения видео</string>
     <string name="oneplus_volume_keys_adjust">Используйте кнопки громкости для регулировки</string>
     <string name="oneplus_volume_keys_adjust_media">Громкость медиафайлов</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Громкость мелодии</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">Чтобы использовать разблокировку распознаванием лица, установите пароль</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Чтобы использовать разблокировку распознаванием лица, установите графический ключ</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Чтобы использовать разблокировку распознаванием лица, установите PIN-код</string>
+    <string name="op_member_description">Привяжите свое устройство, чтобы получить эксклюзивные преимущества</string>
+    <string name="op_member_title">Вход в учетную запись OnePlus</string>
     <string name="op_not_disturb">Настройки режима \"Не беспокоить\"</string>
     <string name="op_not_disturb_summary">Отключить звук и вибрацию для всех вызовов и уведомлений, кроме будильников</string>
     <string name="op_oneplus_roaming_summary">Предоставить глобальные услуги доступа к Интернету</string>

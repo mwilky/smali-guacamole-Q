@@ -99,14 +99,14 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f1217c7
+    const p1, 0x7f1217d7
 
     invoke-virtual {p0, p1}, Lcom/android/settings/wfd/WifiDisplaySettings$RoutePreference;->setSummary(I)V
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f1217c6
+    const p1, 0x7f1217d6
 
     invoke-virtual {p0, p1}, Lcom/android/settings/wfd/WifiDisplaySettings$RoutePreference;->setSummary(I)V
 
@@ -138,14 +138,14 @@
 
     if-ne p1, v0, :cond_3
 
-    const p1, 0x7f1217c8
+    const p1, 0x7f1217d8
 
     invoke-virtual {p0, p1}, Lcom/android/settings/wfd/WifiDisplaySettings$RoutePreference;->setSummary(I)V
 
     goto :goto_0
 
     :cond_3
-    const p1, 0x7f1217c9
+    const p1, 0x7f1217d9
 
     invoke-virtual {p0, p1}, Lcom/android/settings/wfd/WifiDisplaySettings$RoutePreference;->setSummary(I)V
 

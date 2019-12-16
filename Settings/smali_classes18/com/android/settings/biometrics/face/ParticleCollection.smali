@@ -92,7 +92,7 @@
 
     move-result-object v12
 
-    const v3, 0x7f060167
+    const v3, 0x7f060171
 
     invoke-virtual {v12, v3, v11}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
@@ -104,7 +104,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const v3, 0x7f060168
+    const v3, 0x7f060172
 
     invoke-virtual {v12, v3, v11}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
@@ -116,7 +116,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const v3, 0x7f060169
+    const v3, 0x7f060173
 
     invoke-virtual {v12, v3, v11}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
@@ -128,7 +128,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const v3, 0x7f06016a
+    const v3, 0x7f060174
 
     invoke-virtual {v12, v3, v11}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 

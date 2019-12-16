@@ -149,7 +149,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/WifiInfoPreferenceController;->mWifiMacAddressPref:Landroidx/preference/Preference;
 
-    const v1, 0x7f121441
+    const v1, 0x7f121451
 
     if-eqz v0, :cond_4
 
@@ -195,7 +195,7 @@
 
     iget-object v4, p0, Lcom/android/settings/wifi/WifiInfoPreferenceController;->mWifiMacAddressPref:Landroidx/preference/Preference;
 
-    const v5, 0x7f1218ae
+    const v5, 0x7f1218be
 
     invoke-virtual {v4, v5}, Landroidx/preference/Preference;->setSummary(I)V
 

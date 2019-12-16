@@ -1,4 +1,4 @@
-.class final Lcom/airbnb/lottie/LottieCompositionFactory$3;
+.class Lcom/airbnb/lottie/LottieCompositionFactory$3;
 .super Ljava/lang/Object;
 .source "LottieCompositionFactory.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,16 +30,20 @@
 # instance fields
 .field final synthetic val$appContext:Landroid/content/Context;
 
+.field final synthetic val$contextRef:Ljava/lang/ref/WeakReference;
+
 .field final synthetic val$rawRes:I
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;I)V
+.method constructor <init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$appContext:Landroid/content/Context;
+    iput-object p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$contextRef:Ljava/lang/ref/WeakReference;
 
-    iput p2, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$rawRes:I
+    iput-object p2, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$appContext:Landroid/content/Context;
+
+    iput p3, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$rawRes:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +53,7 @@
 
 # virtual methods
 .method public call()Lcom/airbnb/lottie/LottieResult;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -59,15 +63,31 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$appContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$contextRef:Ljava/lang/ref/WeakReference;
 
-    iget v1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$rawRes:I
-
-    invoke-static {v0, v1}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromRawResSync(Landroid/content/Context;I)Lcom/airbnb/lottie/LottieResult;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Landroid/content/Context;
+
+    if-eqz v0, :cond_0
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$appContext:Landroid/content/Context;
+
+    :goto_0
+    iget v2, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$rawRes:I
+
+    invoke-static {v1, v2}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromRawResSync(Landroid/content/Context;I)Lcom/airbnb/lottie/LottieResult;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 
 .method public bridge synthetic call()Ljava/lang/Object;

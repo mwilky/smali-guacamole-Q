@@ -176,18 +176,6 @@
 
     iget-object v0, p0, Lcom/android/settings/dashboard/SummaryLoader;->mActivity:Landroid/app/Activity;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/android/settingslib/drawer/Tile;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
@@ -195,6 +183,28 @@
     return-object v1
 
     :cond_0
+    if-nez p1, :cond_1
+
+    return-object v1
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/android/settingslib/drawer/Tile;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return-object v1
+
+    :cond_2
     invoke-virtual {p1}, Lcom/android/settingslib/drawer/Tile;->getMetaData()Landroid/os/Bundle;
 
     move-result-object v0
@@ -205,7 +215,7 @@
 
     const-string v3, "SummaryLoader"
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -229,14 +239,14 @@
 
     return-object v1
 
-    :cond_1
+    :cond_3
     const-string v4, "com.android.settings.FRAGMENT_CLASS"
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    if-nez v4, :cond_2
+    if-nez v4, :cond_4
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -260,7 +270,7 @@
 
     return-object v1
 
-    :cond_2
+    :cond_4
     :try_start_0
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 

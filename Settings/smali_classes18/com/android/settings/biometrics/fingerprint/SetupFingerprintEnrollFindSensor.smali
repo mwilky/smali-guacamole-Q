@@ -31,7 +31,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0d0147
+    const v0, 0x7f0d0148
 
     goto :goto_0
 
@@ -42,12 +42,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0d0143
+    const v0, 0x7f0d0144
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f0d00ac
+    const v0, 0x7f0d00ad
 
     :goto_0
     return v0
@@ -103,7 +103,7 @@
 
     invoke-super {p0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollFindSensor;->initViews()V
 
-    const v0, 0x7f0a0685
+    const v0, 0x7f0a0689
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0a0679
+    const v1, 0x7f0a067d
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
@@ -119,7 +119,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a042e
+    const v2, 0x7f0a0432
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 
@@ -131,7 +131,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f060332
+    const v4, 0x7f06033c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -153,7 +153,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f06039e
+    const v5, 0x7f0603a9
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -236,7 +236,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0603ee
+    const v2, 0x7f0603f9
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -253,7 +253,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0603ec
+    const v2, 0x7f0603f7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -269,7 +269,7 @@
 
     if-eqz v0, :cond_5
 
-    const v0, 0x7f0a0499
+    const v0, 0x7f0a049d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFindSensor;->findViewById(I)Landroid/view/View;
 

@@ -126,9 +126,23 @@
 
 .field private static final OP_THEME_PACKAGE:Ljava/lang/String; = "com.oneplus.skin"
 
+.field private static final OVERLAY_INFO_COMPARATOR:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator<",
+            "Landroid/content/om/OverlayInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final OVERLAY_TARGET_PACKAGE:Ljava/lang/String; = "android"
+
 .field private static final OXYGEN_THEME_INTENT:Ljava/lang/String; = "com.oneplus.oxygen.changetheme"
 
 .field private static final OXYGEN_THEME_INTENT_EXTRA:Ljava/lang/String; = "oxygen_theme_status"
+
+.field static final PACKAGE_DEVICE_DEFAULT:Ljava/lang/String; = "package_device_default"
 
 .field public static final SCREEN_AUTO_BRIGHTNESS_ADJ:Ljava/lang/String; = "screen_auto_brightness_adj"
 
@@ -266,6 +280,8 @@
 
 .field private mNotifyLightPreference:Landroidx/preference/SwitchPreference;
 
+.field private mOverlayManager:Landroid/content/om/IOverlayManager;
+
 .field private mPower:Landroid/os/IPowerManager;
 
 .field private mReadingModePreference:Landroidx/preference/Preference;
@@ -306,6 +322,14 @@
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/settings/DisplaySettings;->ValueAnimatorFlag:Z
+
+    sget-object v0, Lcom/android/settings/-$$Lambda$DisplaySettings$wM_9Bt3skwAC5Cl088qhtv6C9Vc;->INSTANCE:Lcom/android/settings/-$$Lambda$DisplaySettings$wM_9Bt3skwAC5Cl088qhtv6C9Vc;
+
+    invoke-static {v0}, Ljava/util/Comparator;->comparingInt(Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/settings/DisplaySettings;->OVERLAY_INFO_COMPARATOR:Ljava/util/Comparator;
 
     new-instance v0, Lcom/android/settings/DisplaySettings$6;
 
@@ -861,6 +885,148 @@
     return v0
 .end method
 
+.method private getCurrenMode()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const-string v1, "package_device_default"
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-direct {p0}, Lcom/android/settings/DisplaySettings;->getOverlayInfos()Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/om/OverlayInfo;
+
+    iget-object v4, v3, Landroid/content/om/OverlayInfo;->packageName:Ljava/lang/String;
+
+    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v3}, Landroid/content/om/OverlayInfo;->isEnabled()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, -0x1
+
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v1, v4
+
+    check-cast v1, Ljava/lang/String;
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    return-object v1
+.end method
+
+.method private getOverlayInfos()Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/content/om/OverlayInfo;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    :try_start_0
+    iget-object v1, p0, Lcom/android/settings/DisplaySettings;->mOverlayManager:Landroid/content/om/IOverlayManager;
+
+    const-string v2, "android"
+
+    const/4 v3, 0x0
+
+    invoke-interface {v1, v2, v3}, Landroid/content/om/IOverlayManager;->getOverlayInfosForTarget(Ljava/lang/String;I)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/content/om/OverlayInfo;
+
+    const-string v4, "com.android.internal.display_cutout_emulation"
+
+    iget-object v5, v3, Landroid/content/om/OverlayInfo;->category:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    nop
+
+    sget-object v1, Lcom/android/settings/DisplaySettings;->OVERLAY_INFO_COMPARATOR:Ljava/util/Comparator;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->sort(Ljava/util/Comparator;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Landroid/os/RemoteException;->rethrowFromSystemServer()Ljava/lang/RuntimeException;
+
+    move-result-object v2
+
+    throw v2
+.end method
+
 .method private getPrefs()Landroid/content/SharedPreferences;
     .locals 3
 
@@ -933,7 +1099,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
-    const v4, 0x7f0603c7
+    const v4, 0x7f0603d2
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -943,7 +1109,7 @@
 
     aput-object v4, v3, v5
 
-    const v4, 0x7f0603cb
+    const v4, 0x7f0603d6
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -953,7 +1119,7 @@
 
     aput-object v4, v3, v6
 
-    const v4, 0x7f0603d2
+    const v4, 0x7f0603dd
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -963,7 +1129,7 @@
 
     aput-object v4, v3, v7
 
-    const v4, 0x7f0603cd
+    const v4, 0x7f0603d8
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -973,7 +1139,7 @@
 
     aput-object v4, v3, v8
 
-    const v4, 0x7f0603c5
+    const v4, 0x7f0603d0
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -983,7 +1149,7 @@
 
     aput-object v4, v3, v9
 
-    const v4, 0x7f0603d6
+    const v4, 0x7f0603e1
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -993,7 +1159,7 @@
 
     aput-object v4, v3, v10
 
-    const v4, 0x7f0603e2
+    const v4, 0x7f0603ed
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1003,7 +1169,7 @@
 
     aput-object v4, v3, v11
 
-    const v4, 0x7f0603c9
+    const v4, 0x7f0603d4
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1013,7 +1179,7 @@
 
     aput-object v4, v3, v12
 
-    const v4, 0x7f0603d4
+    const v4, 0x7f0603df
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1023,7 +1189,7 @@
 
     aput-object v4, v3, v13
 
-    const v4, 0x7f0603c1
+    const v4, 0x7f0603cc
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1033,7 +1199,7 @@
 
     aput-object v4, v3, v14
 
-    const v4, 0x7f0603d0
+    const v4, 0x7f0603db
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1043,7 +1209,7 @@
 
     aput-object v4, v3, v15
 
-    const v4, 0x7f0603ce
+    const v4, 0x7f0603d9
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1057,7 +1223,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
-    const v2, 0x7f0603c6
+    const v2, 0x7f0603d1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1065,7 +1231,7 @@
 
     aput-object v2, v3, v5
 
-    const v2, 0x7f0603ca
+    const v2, 0x7f0603d5
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1073,7 +1239,7 @@
 
     aput-object v2, v3, v6
 
-    const v2, 0x7f0603d1
+    const v2, 0x7f0603dc
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1081,7 +1247,7 @@
 
     aput-object v2, v3, v7
 
-    const v2, 0x7f0603cc
+    const v2, 0x7f0603d7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1089,7 +1255,7 @@
 
     aput-object v2, v3, v8
 
-    const v2, 0x7f0603c4
+    const v2, 0x7f0603cf
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1097,7 +1263,7 @@
 
     aput-object v2, v3, v9
 
-    const v2, 0x7f0603d5
+    const v2, 0x7f0603e0
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1105,7 +1271,7 @@
 
     aput-object v2, v3, v10
 
-    const v2, 0x7f0603e1
+    const v2, 0x7f0603ec
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1113,7 +1279,7 @@
 
     aput-object v2, v3, v11
 
-    const v2, 0x7f0603c8
+    const v2, 0x7f0603d3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1121,7 +1287,7 @@
 
     aput-object v2, v3, v12
 
-    const v2, 0x7f0603d3
+    const v2, 0x7f0603de
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1129,7 +1295,7 @@
 
     aput-object v2, v3, v13
 
-    const v2, 0x7f0603c0
+    const v2, 0x7f0603cb
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1137,7 +1303,7 @@
 
     aput-object v2, v3, v14
 
-    const v2, 0x7f0603cf
+    const v2, 0x7f0603da
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1210,34 +1376,34 @@
 
     :array_0
     .array-data 4
-        0x7f121065
-        0x7f12106b
+        0x7f121075
+        0x7f12107b
+        0x7f121081
+        0x7f12107e
         0x7f121071
-        0x7f12106e
-        0x7f121061
-        0x7f121076
-        0x7f121079
-        0x7f121068
+        0x7f121086
+        0x7f121089
+        0x7f121078
+        0x7f121082    # 1.94153E38f
+        0x7f121083
         0x7f121072
-        0x7f121073
-        0x7f121062
-        0x7f1204f8
+        0x7f1204fa
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f121063
-        0x7f121069
-        0x7f12106f
-        0x7f12106c
-        0x7f12105f
-        0x7f121074
-        0x7f121077
-        0x7f121066
-        0x7f121072
         0x7f121073
-        0x7f121062
-        0x7f1204f8
+        0x7f121079
+        0x7f12107f    # 1.9415294E38f
+        0x7f12107c
+        0x7f12106f
+        0x7f121084
+        0x7f121087
+        0x7f121076
+        0x7f121082    # 1.94153E38f
+        0x7f121083
+        0x7f121072
+        0x7f1204fa
     .end array-data
 .end method
 
@@ -1477,6 +1643,14 @@
     invoke-virtual {p0}, Lcom/android/settings/DisplaySettings;->finish()V
 
     return-void
+.end method
+
+.method static synthetic lambda$static$0(Landroid/content/om/OverlayInfo;)I
+    .locals 1
+
+    iget v0, p0, Landroid/content/om/OverlayInfo;->priority:I
+
+    return v0
 .end method
 
 .method private saveColorInfo(I)V
@@ -1811,7 +1985,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0603c7
+    const v1, 0x7f0603d2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2128,7 +2302,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f12126d
+    const v4, 0x7f12127d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2147,7 +2321,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f12126b
+    const v4, 0x7f12127b
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2168,7 +2342,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eaf
+    const v4, 0x7f120ebb
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2187,7 +2361,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb7
+    const v4, 0x7f120ec3
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2208,7 +2382,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb5
+    const v4, 0x7f120ec1
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2227,7 +2401,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb8
+    const v4, 0x7f120ec4
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2248,7 +2422,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120eb6
+    const v4, 0x7f120ec2
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2269,7 +2443,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120ba8
+    const v4, 0x7f120bab
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2290,7 +2464,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120ebb
+    const v4, 0x7f120ec7
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2432,9 +2606,9 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mSliderAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/android/settings/-$$Lambda$DisplaySettings$qOh46548JQf3cUmLta2I9UEyRo4;
+    new-instance v3, Lcom/android/settings/-$$Lambda$DisplaySettings$M8sTGcycV-JDqm4SlSBVx8hp03M;
 
-    invoke-direct {v3, p0}, Lcom/android/settings/-$$Lambda$DisplaySettings$qOh46548JQf3cUmLta2I9UEyRo4;-><init>(Lcom/android/settings/DisplaySettings;)V
+    invoke-direct {v3, p0}, Lcom/android/settings/-$$Lambda$DisplaySettings$M8sTGcycV-JDqm4SlSBVx8hp03M;-><init>(Lcom/android/settings/DisplaySettings;)V
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -2737,7 +2911,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f120ebd
+    const v7, 0x7f120ec9
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2764,7 +2938,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f120eba
+    const v7, 0x7f120ec6
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2793,56 +2967,49 @@
 
     move-result v0
 
-    iget-object v3, p0, Lcom/android/settings/DisplaySettings;->mVideoEnhancerPreference:Landroidx/preference/Preference;
+    iget-object v1, p0, Lcom/android/settings/DisplaySettings;->mVideoEnhancerPreference:Landroidx/preference/Preference;
 
     if-eqz v0, :cond_13
 
-    const v4, 0x7f1214ff
+    const v3, 0x7f12150f
 
     goto :goto_a
 
     :cond_13
-    const v4, 0x7f1214fe
+    const v3, 0x7f12150e
 
     :goto_a
-    invoke-virtual {v3, v4}, Landroidx/preference/Preference;->setSummary(I)V
+    invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
     :cond_14
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportScreenCutting()Z
 
     move-result v0
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_15
 
     iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mNotchModeAppPreference:Landroidx/preference/Preference;
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_15
 
-    invoke-virtual {p0}, Lcom/android/settings/DisplaySettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-direct {p0}, Lcom/android/settings/DisplaySettings;->getCurrenMode()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v3, "op_camera_notch_ignore"
+    const-string v3, "package_device_default"
 
-    invoke-static {v0, v3, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    iget-object v3, p0, Lcom/android/settings/DisplaySettings;->mNotchModeAppPreference:Landroidx/preference/Preference;
-
-    if-nez v0, :cond_15
-
-    move v1, v2
+    invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
     :cond_15
-    invoke-virtual {v3, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
-
-    :cond_16
     iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
     const/4 v1, 0x2
 
-    if-eqz v0, :cond_19
+    if-eqz v0, :cond_18
 
     iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
@@ -2856,39 +3023,39 @@
 
     move-result v0
 
-    if-ne v0, v2, :cond_17
+    if-ne v0, v2, :cond_16
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
-    const v3, 0x7f120ec7
+    const v3, 0x7f120ed3
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
     goto :goto_b
 
-    :cond_17
-    if-nez v0, :cond_18
+    :cond_16
+    if-nez v0, :cond_17
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
-    const v3, 0x7f120ecb
+    const v3, 0x7f120ed7
+
+    invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
+
+    :cond_17
+    :goto_b
+    if-ne v0, v1, :cond_18
+
+    iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
+
+    const v3, 0x7f120ed5
 
     invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
     :cond_18
-    :goto_b
-    if-ne v0, v1, :cond_19
-
-    iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
-
-    const v3, 0x7f120ec9
-
-    invoke-virtual {v2, v3}, Landroidx/preference/Preference;->setSummary(I)V
-
-    :cond_19
     iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mScreenRefreshRate:Landroidx/preference/Preference;
 
-    if-eqz v0, :cond_1b
+    if-eqz v0, :cond_1a
 
     iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mContext:Landroid/content/Context;
 
@@ -2904,19 +3071,19 @@
 
     iget-object v2, p0, Lcom/android/settings/DisplaySettings;->mScreenRefreshRate:Landroidx/preference/Preference;
 
-    if-ne v0, v1, :cond_1a
+    if-ne v0, v1, :cond_19
 
-    const v1, 0x7f120ec3
+    const v1, 0x7f120ecf
 
     goto :goto_c
 
-    :cond_1a
-    const v1, 0x7f120ec1
+    :cond_19
+    const v1, 0x7f120ecd
 
     :goto_c
     invoke-virtual {v2, v1}, Landroidx/preference/Preference;->setSummary(I)V
 
-    :cond_1b
+    :cond_1a
     return-void
 .end method
 
@@ -2946,7 +3113,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1205f1
+    const v2, 0x7f1205f3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -3020,7 +3187,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f121279
+    const v5, 0x7f121289
 
     const/4 v6, 0x1
 
@@ -3055,7 +3222,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207a9
+    const v0, 0x7f1207ab
 
     return v0
 .end method
@@ -3103,7 +3270,7 @@
     return v1
 .end method
 
-.method public synthetic lambda$updateSlider$0$DisplaySettings(Landroid/animation/ValueAnimator;)V
+.method public synthetic lambda$updateSlider$1$DisplaySettings(Landroid/animation/ValueAnimator;)V
     .locals 2
 
     iget-object v0, p0, Lcom/android/settings/DisplaySettings;->mBrightPreference:Lcom/oneplus/settings/ui/OPBrightnessSeekbarPreferenceCategory;
@@ -3232,6 +3399,18 @@
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+    const-string v3, "overlay"
+
+    invoke-static {v3}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/content/om/IOverlayManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/om/IOverlayManager;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/android/settings/DisplaySettings;->mOverlayManager:Landroid/content/om/IOverlayManager;
 
     invoke-direct {p0, v2}, Lcom/android/settings/DisplaySettings;->initAccentColors(Landroid/content/res/Resources;)V
 
@@ -3416,7 +3595,7 @@
 
     if-eqz v3, :cond_6
 
-    const v5, 0x7f120d43
+    const v5, 0x7f120d4a
 
     invoke-virtual {v3, v5}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -3460,7 +3639,7 @@
 
     new-array v7, v5, [Ljava/lang/CharSequence;
 
-    const v8, 0x7f12060d
+    const v8, 0x7f12060f
 
     invoke-virtual {v0, v8}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -3468,7 +3647,7 @@
 
     aput-object v8, v7, v4
 
-    const v8, 0x7f12060e
+    const v8, 0x7f120610
 
     invoke-virtual {v0, v8}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -3931,28 +4110,37 @@
 
     :cond_11
     :goto_3
-    iget-object v5, p0, Lcom/android/settings/DisplaySettings;->mNotchModePreference:Landroidx/preference/Preference;
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
-    invoke-virtual {v5, v4}, Landroidx/preference/Preference;->setVisible(Z)V
-
-    iget-object v5, p0, Lcom/android/settings/DisplaySettings;->mSliderAnimator:Landroid/animation/ValueAnimator;
+    move-result v5
 
     if-eqz v5, :cond_12
 
-    invoke-virtual {v5}, Landroid/animation/ValueAnimator;->cancel()V
+    iget-object v5, p0, Lcom/android/settings/DisplaySettings;->mNotchModePreference:Landroidx/preference/Preference;
+
+    if-eqz v5, :cond_12
+
+    invoke-virtual {v5, v4}, Landroidx/preference/Preference;->setVisible(Z)V
 
     :cond_12
+    iget-object v5, p0, Lcom/android/settings/DisplaySettings;->mSliderAnimator:Landroid/animation/ValueAnimator;
+
+    if-eqz v5, :cond_13
+
+    invoke-virtual {v5}, Landroid/animation/ValueAnimator;->cancel()V
+
+    :cond_13
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v5
 
-    if-eqz v5, :cond_13
+    if-eqz v5, :cond_14
 
     const-string v5, "status_bar_custom"
 
     invoke-virtual {p0, v5}, Lcom/android/settings/DisplaySettings;->removePreference(Ljava/lang/String;)Z
 
-    :cond_13
+    :cond_14
     const-string v5, "oneplus_screen_refresh_rate"
 
     invoke-virtual {p0, v5}, Lcom/android/settings/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -3965,13 +4153,13 @@
 
     move-result v5
 
-    if-nez v5, :cond_14
+    if-nez v5, :cond_15
 
     iget-object v5, p0, Lcom/android/settings/DisplaySettings;->mScreenRefreshRate:Landroidx/preference/Preference;
 
     invoke-virtual {v5, v4}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_14
+    :cond_15
     const-string v5, "oneplus_screen_resolution_adjust"
 
     invoke-virtual {p0, v5}, Lcom/android/settings/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
@@ -3986,20 +4174,20 @@
 
     move-result v5
 
-    if-eqz v5, :cond_15
+    if-eqz v5, :cond_16
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isGuestMode()Z
 
     move-result v5
 
-    if-eqz v5, :cond_16
+    if-eqz v5, :cond_17
 
-    :cond_15
+    :cond_16
     iget-object v5, p0, Lcom/android/settings/DisplaySettings;->mScreenResolutionAdjust:Landroidx/preference/Preference;
 
     invoke-virtual {v5, v4}, Landroidx/preference/Preference;->setVisible(Z)V
 
-    :cond_16
+    :cond_17
     return-void
 .end method
 

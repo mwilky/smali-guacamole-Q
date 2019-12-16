@@ -391,7 +391,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1216f5
+    const v6, 0x7f121705
 
     invoke-virtual {v5, v6}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -405,7 +405,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1216ee
+    const v6, 0x7f1216fe
 
     invoke-virtual {v5, v6}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -429,7 +429,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f1216f4
+    const v6, 0x7f121704
 
     invoke-virtual {v5, v6}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 

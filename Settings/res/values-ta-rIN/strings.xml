@@ -26,7 +26,6 @@
     <string name="aod_clock_minimalism">குறைந்தபட்சதன்மை</string>
     <string name="aod_clock_none">ஏதுமில்லை</string>
     <string name="aod_clock_select_style_text">கடிகாரம் பாணியைத் தேர்வுசெய்யவும்</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">நீலம்</string>
     <string name="aod_horizon_light_effect_2">சிவப்பு</string>
     <string name="aod_horizon_light_effect_3">ஊதா</string>
@@ -673,7 +672,7 @@
     <string name="oneplus_no_choice">ரிங்டோன் தேர்ந்தெடுக்கப்படவில்லை</string>
     <string name="oneplus_no_device_connected">சாதனம் எதுவும் இணைக்கப்படவில்லை</string>
     <string name="oneplus_no_file_tips">ரிங்டோன் கோப்புகள் இல்லை</string>
-    <string name="oneplus_no_supported_apps">ஆதரிக்கப்படும் பயன்பாடுகள் நிறுவப்படவில்லை</string>
+    <string name="oneplus_no_supported_apps">ஆதரிக்கப்படும் பயன்பாடுகள் எதுவும் நிறுவப்படவில்லை</string>
     <string name="oneplus_noise_tips">அதிர்வை செயல்படுத்துக</string>
     <string name="oneplus_none_default_camera">இயல்புநிலை கேமரா இல்லை</string>
     <string name="oneplus_none_default_email">இயல்புநிலை மின்னஞ்சல் பயன்பாடு இல்லை</string>
@@ -997,7 +996,7 @@
     <string name="oneplus_theme_clock">கடிகாரம் பாணி</string>
     <string name="oneplus_theme_clock_snake_action">ஆம்பியன்ட் காட்சியை ஆன் செய்</string>
     <string name="oneplus_theme_clock_snake_tip">ஆம்பியன்ட் காட்சி ஆனில் இருக்கும்போது இந்த அம்சம் கிடைக்கும்</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">நிறத்தின் குறியீடு</string>
     <string name="oneplus_theme_drop_summary">மாற்றங்களை புறக்கணிக்க விரும்புகிறீர்களா?</string>
     <string name="oneplus_theme_drop_title">திருத்த முறையிலிருந்து வெளியேறுக</string>
     <string name="oneplus_theme_entrance_summary">வால்பேப்பர்கள், ஆக்சென்ட் கலர், எழுத்துரு, டோன்</string>
@@ -1151,6 +1150,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">முகப் பூட்டுநீக்கலைப் பயன்படுத்த, கடவுச்சொல்லை அமைக்கவும்</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">முகப் பூட்டுநீக்கலைப் பயன்படுத்த, பேட்டர்னை அமைக்கவும்</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">முகப் பூட்டுநீக்கலைப் பயன்படுத்த, பின்னை அமைக்கவும்</string>
+    <string name="op_member_description">பிரத்யேக பலன்களைப் பெற உங்கள் சாதனத்தை ஒருங்கிணைக்கவும்</string>
+    <string name="op_member_title">OnePlus கணக்கிற்கு உள்நுழைக</string>
     <string name="op_not_disturb">தொந்தரவு செய்யாதீர் விருப்பத்தேர்வுகள்</string>
     <string name="op_not_disturb_summary">அலாரங்களைத் தவிர, அழைப்புகள் மற்றும் அறிவிப்புகளை ஒலிதடுத்து அதிர்வுறுதலை ஆஃப் செய்யவும்</string>
     <string name="op_oneplus_roaming_summary">உலகளாவிய இணைய அணுகல் சேவைகளை வழங்குகிறது</string>

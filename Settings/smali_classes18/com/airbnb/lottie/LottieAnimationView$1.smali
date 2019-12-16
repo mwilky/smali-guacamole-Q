@@ -20,21 +20,15 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/airbnb/lottie/LottieListener<",
-        "Lcom/airbnb/lottie/LottieComposition;",
+        "Ljava/lang/Throwable;",
         ">;"
     }
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/airbnb/lottie/LottieAnimationView;
-
-
 # direct methods
-.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,22 +37,37 @@
 
 
 # virtual methods
-.method public onResult(Lcom/airbnb/lottie/LottieComposition;)V
-    .locals 1
+.method public bridge synthetic onResult(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$1;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/LottieComposition;)V
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$1;->onResult(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public bridge synthetic onResult(Ljava/lang/Object;)V
-    .locals 0
+.method public onResult(Ljava/lang/Throwable;)V
+    .locals 2
 
-    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
+    invoke-static {p1}, Lcom/airbnb/lottie/utils/Utils;->isNetworkException(Ljava/lang/Throwable;)Z
 
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$1;->onResult(Lcom/airbnb/lottie/LottieComposition;)V
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Unable to load composition."
+
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Unable to parse composition"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

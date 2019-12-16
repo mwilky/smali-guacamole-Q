@@ -164,7 +164,7 @@
 
     if-ne p1, v0, :cond_0
 
-    const v0, 0x7f120936
+    const v0, 0x7f120938
 
     return v0
 
@@ -190,12 +190,12 @@
     throw v0
 
     :cond_1
-    const v0, 0x7f120935
+    const v0, 0x7f120937
 
     return v0
 
     :cond_2
-    const v0, 0x7f120933
+    const v0, 0x7f120935
 
     return v0
 .end method
@@ -269,7 +269,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a03b2
+    const v1, 0x7f0a03b6
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentActivity;->findViewById(I)Landroid/view/View;
 
@@ -308,7 +308,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0806a4
+    const v3, 0x7f0806b2
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -320,7 +320,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0600d6
+    const v4, 0x7f0600e0
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1148,7 +1148,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f120932
+    const v4, 0x7f120934
 
     const/4 v5, 0x2
 
@@ -1196,7 +1196,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f120938
+    const v6, 0x7f12093a
 
     invoke-virtual {v3, v6}, Landroidx/fragment/app/FragmentActivity;->getString(I)Ljava/lang/String;
 
@@ -1219,7 +1219,7 @@
 
     const/4 v6, 0x0
 
-    const v7, 0x7f120934
+    const v7, 0x7f120936
 
     invoke-static {v4, v6, v2, v7, v3}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseFragment$LastTryDialog;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;IIZ)Z
 

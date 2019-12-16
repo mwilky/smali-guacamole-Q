@@ -320,7 +320,6 @@ Stačí priložiť zariadenia k sebe (obyčajne zadnými stranami) a potom kle
     <string name="aod_clock_minimalism">Minimalizmus</string>
     <string name="aod_clock_none">Žiadne</string>
     <string name="aod_clock_select_style_text">Vybrať štýl hodín</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Modrá</string>
     <string name="aod_horizon_light_effect_2">Červená</string>
     <string name="aod_horizon_light_effect_3">Fialová</string>
@@ -3008,8 +3007,8 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť nastavenie Nerušiť
     <string name="oneplus_customization_summary">Dlhé stlačenie, dvojité ťuknutie</string>
     <string name="oneplus_customization_summary_hide_navbar">Dlhé stlačenie, dvojité ťuknutie, skryť navigačný panel</string>
     <string name="oneplus_data_usage_control_title">Kontrola používania dát</string>
-    <string name="oneplus_dc_dimming_summary">Zníženie jasu znížením energie upraví jas obrazovky zmenu napájania obvodov obrazovky. Po zapnutí obmedzí mihotanie obrazovky pri nízkom jase. Toto však môže spôsobiť v niektorých prípadoch zobrazenie nezvyklých farieb.</string>
-    <string name="oneplus_dc_dimming_title">Zníženie jasu znížením energie</string>
+    <string name="oneplus_dc_dimming_summary">Zníženie jasu znížením energie (DC) upraví jas obrazovky zmenu napájania obvodov obrazovky. Po zapnutí obmedzí mihotanie obrazovky pri nízkom jase. Toto však môže spôsobiť v niektorých prípadoch zobrazenie nezvyklých farieb.</string>
+    <string name="oneplus_dc_dimming_title">Zníženie jasu znížením energie (DC)</string>
     <string name="oneplus_deep_clear_way">Dôkladné vyčistenie</string>
     <string name="oneplus_deep_clear_way_summary">Vymaže procesy na pozadí, čo môže spôsobiť, že niektoré aplikácie môžu prestať pracovať a nebudete dostávať oznámenia</string>
     <string name="oneplus_deep_optimization">Dôkladná optimalizácia</string>
@@ -3049,7 +3048,7 @@ Aplikácia tým získa aj možnosť vypnúť alebo zapnúť nastavenie Nerušiť
     <string name="oneplus_double_tap_power_gesture">Dvojité stlačenie tlačidla napájania na</string>
     <string name="oneplus_double_tap_power_gesture_app">VYBRAŤ FUNKCIU</string>
     <string name="oneplus_double_tap_power_gesture_camera">Kamera</string>
-    <string name="oneplus_double_tap_power_gesture_wallet">Potiahnutie karty (Peňaženka)</string>
+    <string name="oneplus_double_tap_power_gesture_wallet">Potiahnite karty (Peňaženka)</string>
     <string name="oneplus_doze_summary_801">Zobraziť na pohotovostnej obrazovke hodiny a iné informácie</string>
     <string name="oneplus_doze_title">Ambient display</string>
     <string name="oneplus_doze_title_801">Ambientné zobrazenie</string>
@@ -3516,10 +3515,10 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_schedule">Plán</string>
     <string name="oneplus_screen">OBRAZOVKA</string>
     <string name="oneplus_screen_better_cold">Studená</string>
-    <string name="oneplus_screen_better_nature">Prirodzená</string>
+    <string name="oneplus_screen_better_nature">Prirodzený</string>
     <string name="oneplus_screen_better_warm">Teplá</string>
     <string name="oneplus_screen_color_mode_auto">Adaptívne farebné profily</string>
-    <string name="oneplus_screen_color_mode_default">Displej-P3（predvolené）</string>
+    <string name="oneplus_screen_color_mode_default">Display-P3（predvolené）</string>
     <string name="oneplus_screen_color_mode_defined">Vlastná farba</string>
     <string name="oneplus_screen_color_mode_ntsc">Široký farebný rozsah AMOLED</string>
     <string name="oneplus_screen_color_mode_reading_mode_on_summary">Nie je k dispozícii, pretože režim čítania je aktívny</string>
@@ -3575,7 +3574,7 @@ Počet zostávajúcich pokusov: %d."</string>
     <string name="oneplus_search_keyword_swap_navkeys">vymeniť tlačidlá</string>
     <string name="oneplus_search_keyword_switch">prenos,migrácia dát</string>
     <string name="oneplus_search_keyword_theme_settings">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, PRISPÔSOBENIE SYSTÉMU, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon light, PRISPÔSOBENIE SYSTÉMU, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PRISPÔSOBENIE UZAMKNUTIA OBRAZOVKY, Tapety, Štýl hodín, Animácia odtlačku prsta, Horizon Light, PRISPÔSOBENIE SYSTÉMU, Farba zvýraznenia, Tvar, Písmo, Odtieň, Balík ikon, Svetlo podsvietenia, Jemná tmavá, Žiarivý odtieň, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">snímka obrazovky</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">oznámenia,skúsenosť,program,zlepšovanie</string>
@@ -3650,7 +3649,7 @@ Poznámka:
     <string name="oneplus_supported_apps">Podporované aplikácie</string>
     <string name="oneplus_suspension_notice">Vyskakovacie oznámenia</string>
     <string name="oneplus_suspension_notice_summary">Povoliť aplikáciám zobraziť vyskakovacie oznámenia</string>
-    <string name="oneplus_switch">Prepínač OnePlus</string>
+    <string name="oneplus_switch">OnePlus Switch</string>
     <string name="oneplus_switch_resolution_kill_process_confirm">Prepnúť</string>
     <string name="oneplus_switch_resolution_kill_process_tips">Prepnutie rozlíšenia môže spôsobiť zatvorenie niektorých aplikácií na pozadí. Chcete potvrdiť prepnutie?</string>
     <string name="oneplus_switch_screen_lock_type">Typu uzamknutia obrazovky sa prepína, čakajte...</string>
@@ -3672,7 +3671,7 @@ Poznámka:
     <string name="oneplus_theme_clock">Štýl hodín</string>
     <string name="oneplus_theme_clock_snake_action">ZAPNÚŤ AMBIENTNÉ ZOBRAZENIE</string>
     <string name="oneplus_theme_clock_snake_tip">Táto funkcia bude dostupná len pri zapnutom ambientnom zobrazení</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">KÓD FARBY</string>
     <string name="oneplus_theme_drop_summary">Zahodiť zmeny?</string>
     <string name="oneplus_theme_drop_title">Ukončiť režim úprav</string>
     <string name="oneplus_theme_entrance_summary">Tapety, farba zvýraznenia, písmo, odtieň</string>
@@ -3827,6 +3826,8 @@ Nastavenie siete ako skrytej nezmení nastavenia vášho smerovača."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Na použitie funkcie Odomknúť tvárou, nastavte najprv heslo</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Na použitie funkcie Odomknúť tvárou, nastavte najprv vzor</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Na použitie funkcie Odomknúť tvárou, nastavte najprv kód PIN</string>
+    <string name="op_member_description">Priraďte svoje zariadenie, aby ste získali exkluzívne výhody</string>
+    <string name="op_member_title">Prihláste sa do účtu OnePlus</string>
     <string name="op_not_disturb">Vlastnosti režimu Nerušiť</string>
     <string name="op_not_disturb_summary">Stíšiť volania a oznámenia a vypnúť vibrácie, s výnimkou budíkov</string>
     <string name="op_oneplus_roaming_summary">Poskytuje služby globálneho prístupu na internet</string>

@@ -162,14 +162,14 @@
 
     if-eqz v6, :cond_2
 
-    const v6, 0x7f120a53
+    const v6, 0x7f120a55
 
     invoke-virtual {v5, v6}, Landroidx/preference/Preference;->setSummary(I)V
 
     goto :goto_1
 
     :cond_2
-    const v6, 0x7f120a62
+    const v6, 0x7f120a64
 
     invoke-virtual {v5, v6}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -184,7 +184,7 @@
 
     if-eqz v6, :cond_4
 
-    const v6, 0x7f120a54
+    const v6, 0x7f120a56
 
     invoke-virtual {v5, v6}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -193,7 +193,7 @@
     :cond_4
     iget-object v6, p0, Lcom/android/settings/network/MobileNetworkListController;->mContext:Landroid/content/Context;
 
-    const v7, 0x7f120a6c
+    const v7, 0x7f120a6e
 
     const/4 v8, 0x1
 

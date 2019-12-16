@@ -434,8 +434,6 @@
     :try_start_3
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
 
-    nop
-
     throw v3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1

@@ -26,7 +26,6 @@
     <string name="aod_clock_minimalism">મિનિમેલિસ્મ</string>
     <string name="aod_clock_none">કોઈ નહી</string>
     <string name="aod_clock_select_style_text">ઘડિયાળ શૈલી પસંદ કરો</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">બ્લુ</string>
     <string name="aod_horizon_light_effect_2">લાલ</string>
     <string name="aod_horizon_light_effect_3">જાંબલી</string>
@@ -78,7 +77,7 @@
     <string name="buttons_swap_navkeys_summary">તાજેતરના અને પાછળ બટનના ક્રમ સ્વેપ કરો</string>
     <string name="buttons_swap_navkeys_title">સ્વેપ બટન</string>
     <string name="camera_application_title">કેમેરા એપ</string>
-    <string name="close_dialog">ઓકે</string>
+    <string name="close_dialog">ઑકે</string>
     <string name="color_picker_accent_color_message">એક એક્સેન્ટ રંગ પસંદ કરો</string>
     <string name="color_picker_default">ડિફૉલ્ટ</string>
     <string name="color_picker_led_color_message">LED રંગ પસંદ કરો</string>
@@ -966,7 +965,7 @@
     <string name="oneplus_snooze_options_title">સૂચના શેડથી સૂચનાઓ સ્નૂઝ કરો</string>
     <string name="oneplus_sound_and_vibrate">અવાજ; વાઈબ્રશન</string>
     <string name="oneplus_sound_settings_summary">ખલેલ પાડશો નહીં, ઇયરફોન મોડ</string>
-    <string name="oneplus_sound_tuner">ડોલ્બી ઍટોમ્સ</string>
+    <string name="oneplus_sound_tuner">Dolby Atmos</string>
     <string name="oneplus_status_summary">ફોન નંબર, સિગ્નલ વિગેરે</string>
     <string name="oneplus_stop_run">ફોર્સ સ્ટોપ</string>
     <string name="oneplus_storage">સ્ટોરેજ</string>
@@ -996,7 +995,7 @@
     <string name="oneplus_theme_clock">ઘડિયાળ શૈલી</string>
     <string name="oneplus_theme_clock_snake_action">એમ્બિયન્ટ ડિસ્પ્લે ચાલુ કરો</string>
     <string name="oneplus_theme_clock_snake_tip">જ્યારે એમ્બિયન્ટ ડિસ્પ્લે ચાલુ હોય ત્યારે જ આ સુવિધા ઉપલબ્ઘ હશે</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">રંગ કોડ</string>
     <string name="oneplus_theme_drop_summary">ફેરફારોને રદ્દ કરીએ?</string>
     <string name="oneplus_theme_drop_title">એડિટ મોડમાંથી બહાર નિકળો</string>
     <string name="oneplus_theme_entrance_summary">વૉલપેપરો, એક્સેન્ટ રંગ, ફોન્ટ, ટોન</string>
@@ -1080,8 +1079,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">એલાર્મ સિવાય, કોલ્સ અને સૂચનાઓને સાયલન્ટ કરવામાં અને ફક્ત વાઇબ્રેટ પર સેટ કરવામાં આવશે</string>
     <string name="oneplus_vibration_summary">એલાર્મ હંમેશા વાગશે</string>
     <string name="oneplus_video_enhancer">વિડિઓ ઉન્નતીકરણ</string>
-    <string name="oneplus_video_enhancer_footer">વીડિયો ચલાવતી વખતે રંગને ઉભારો</string>
-    <string name="oneplus_video_enhancer_summary">વીડિયો ચલાવતી વખતે રંગને ઉભારો</string>
+    <string name="oneplus_video_enhancer_footer">વિડિયો ચલાવતી વખતે રંગને ઉભારો</string>
+    <string name="oneplus_video_enhancer_summary">વિડિયો ચલાવતી વખતે રંગને ઉભારો</string>
     <string name="oneplus_volume_keys_adjust">ગોઠવવા માટે વૉલ્યૂમ બટનોનો ઉપયોગ કરો</string>
     <string name="oneplus_volume_keys_adjust_media">મીડિયા વોલ્યુમ</string>
     <string name="oneplus_volume_keys_adjust_ringtones">રિંગટોન વોલ્યુમ</string>
@@ -1150,6 +1149,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">ફેસ અનલૉકનો ઉપયોગ કરવા માટે, પાસવર્ડ સેટ કરો</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">ફેસ અનલૉકનો ઉપયોગ કરવા માટે, પેટર્ન સેટ કરો</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">ફેસ અનલૉકનો ઉપયોગ કરવા માટે, PIN સેટ કરો</string>
+    <string name="op_member_description">વિશિષ્ટ લાભ મેળવવા માટે તમારા ઉપકરણને જોડો</string>
+    <string name="op_member_title">OnePlus એકાઉન્ટમાં લૉગિન કરો</string>
     <string name="op_not_disturb">ખલેલ પાડશો નહીં પસંદગીઓ</string>
     <string name="op_not_disturb_summary">એલાર્મ સિવાયના કોલ્સ અને ચેતવણીઓને મ્યુટ કરો અને વાઇબ્રેશન બંધ કરો</string>
     <string name="op_oneplus_roaming_summary">વૈશ્વિક ઈન્ટરનેટ ઍક્સેસ સેવાઓ પ્રદાન કરો</string>

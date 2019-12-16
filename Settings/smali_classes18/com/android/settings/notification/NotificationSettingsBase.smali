@@ -587,7 +587,7 @@
 
     iget-object v3, p0, Lcom/android/settings/notification/NotificationSettingsBase;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f060284
+    const v4, 0x7f06028e
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getColor(I)I
 
@@ -1542,7 +1542,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120b30
+    const v3, 0x7f120b32
 
     invoke-virtual {v2, v3}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 

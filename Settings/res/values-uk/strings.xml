@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">Мінімалізм</string>
     <string name="aod_clock_none">Ні</string>
     <string name="aod_clock_select_style_text">Виберіть стиль годинника</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Синій</string>
     <string name="aod_horizon_light_effect_2">Червоний</string>
     <string name="aod_horizon_light_effect_3">Пурпурний</string>
@@ -3173,7 +3172,7 @@
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Жести навігації буде ввімкнено</string>
     <string name="oneplus_fullscreen_home_guide_summary">Проведіть пальцем угору від нижнього краю екрана</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">Провести вгору із середини нижнього краю екрана</string>
-    <string name="oneplus_fullscreen_home_guide_title">Головний екран</string>
+    <string name="oneplus_fullscreen_home_guide_title">Головна сторінка</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Жести навігації все ще можна використовувати, проводячи від нижнього краю екрана. Щоб повернутися назад, проведіть від лівого чи правого краю екрана.</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Як і в портретній орієнтації, жести навігації здійснюються від нижнього краю екрана</string>
     <string name="oneplus_fullscreen_landscape_guide_title">Альбомна орієнтація</string>
@@ -3242,7 +3241,7 @@
     <string name="oneplus_hand_up_to_show">Підніміть телефон, щоб показати</string>
     <string name="oneplus_haptic_feedback_no_app">Не встановлено жодної підтримуваної гри</string>
     <string name="oneplus_haptic_feedback_no_app_tip">Можна встановити PUBG Mobile і Asphalt 9</string>
-    <string name="oneplus_haptic_feedback_summary">Забезпечувати кращу тактильну віддачу в підтримуваних іграх</string>
+    <string name="oneplus_haptic_feedback_summary">Кращий тактильний відгук у підтримуваних іграх</string>
     <string name="oneplus_haptic_feedback_support">Підтримувані ігри</string>
     <string name="oneplus_haptic_feedback_tips">Забезпечувати тактильну віддачу в певних ігрових ситуаціях (лише в підтримуваних іграх)</string>
     <string name="oneplus_haptic_feedback_title">Покращення тактильної віддачі</string>
@@ -3348,7 +3347,7 @@
     <string name="oneplus_no_choice">Мелодію дзвінка не вибрано</string>
     <string name="oneplus_no_device_connected">Відсутні підключені пристрої</string>
     <string name="oneplus_no_file_tips">Немає файлів мелодій дзвінка</string>
-    <string name="oneplus_no_supported_apps">Немає встановлених підтримуваних додатків</string>
+    <string name="oneplus_no_supported_apps">Не встановлено підтримуваних додатків</string>
     <string name="oneplus_noise_tips">Увімкнути вібрацію</string>
     <string name="oneplus_none_default_camera">Не вибрано камеру за замовчуванням</string>
     <string name="oneplus_none_default_email">Не вибрано поштовий клієнт за замовчуванням</string>
@@ -3516,7 +3515,7 @@
     <string name="oneplus_schedule">Розклад</string>
     <string name="oneplus_screen">ЕКРАН</string>
     <string name="oneplus_screen_better_cold">Холодний</string>
-    <string name="oneplus_screen_better_nature">Природні кольори</string>
+    <string name="oneplus_screen_better_nature">Реалістичність</string>
     <string name="oneplus_screen_better_warm">Теплий</string>
     <string name="oneplus_screen_color_mode_auto">Адаптивні кольори</string>
     <string name="oneplus_screen_color_mode_default">Display-P3（за замовчуванням）</string>
@@ -3575,7 +3574,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">змінити положення кнопок</string>
     <string name="oneplus_search_keyword_switch">передавання,перенесення даних</string>
     <string name="oneplus_search_keyword_theme_settings">ПЕРСОНАЛІЗАЦІЯ ЕКРАНА БЛОКУВАННЯ, шпалери, стиль годинника, анімація відбитка пальця, Horizon Light, ПЕРСОНАЛІЗАЦІЯ СИСТЕМИ, акцентний колір, форма, шрифт, відтінок, набір піктограм, ілюмінація, темні кольори, яскраві тони</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ПЕРСОНАЛІЗАЦІЯ ЕКРАНА БЛОКУВАННЯ, шпалери, стиль годинника, анімація відбитка пальця, Horizon Light, ПЕРСОНАЛІЗАЦІЯ СИСТЕМИ, акцентний колір, форма, шрифт, відтінок, набір піктограм, ілюмінація, темні кольори, яскраві тони, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ПЕРСОНАЛІЗАЦІЯ ЕКРАНА БЛОКУВАННЯ, шпалери, стиль годинника, анімація відбитка пальця, Horizon Light, ПЕРСОНАЛІЗАЦІЯ СИСТЕМИ, акцентний колір, форма, шрифт, відтінок, набір піктограм, підсвічування, виражено темні кольори, яскраві тони, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">знімок екрана</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">сповіщення,взаємодія,програма,покращення,удосконалення</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">Стиль годинника</string>
     <string name="oneplus_theme_clock_snake_action">УВІМКНУТИ АКТИВАЦІЮ ЕКРАНА</string>
     <string name="oneplus_theme_clock_snake_tip">Ця функція доступна, коли ввімкнено Активацію екрана</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">КОД КОЛЬОРУ</string>
     <string name="oneplus_theme_drop_summary">Скасувати зміни?</string>
     <string name="oneplus_theme_drop_title">Вихід із редактора</string>
     <string name="oneplus_theme_entrance_summary">Фонові малюнки, колір оздоблення, шрифт, відтінок</string>
@@ -3756,8 +3755,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Звук викликів і сповіщень буде вимкнено (крім сигналів будильника), а вібрацію буде ввімкнено</string>
     <string name="oneplus_vibration_summary">Будильник завжди дзвонитиме</string>
     <string name="oneplus_video_enhancer">Поліпшувач відео</string>
-    <string name="oneplus_video_enhancer_footer">Поліпшіть колір під час відтворення відео</string>
-    <string name="oneplus_video_enhancer_summary">Поліпшіть колір під час відтворення відео</string>
+    <string name="oneplus_video_enhancer_footer">Покращувати передавання кольорів під час відтворення відео</string>
+    <string name="oneplus_video_enhancer_summary">Покращувати передавання кольорів під час відтворення відео</string>
     <string name="oneplus_volume_keys_adjust">Регулювати за допомогою клавіш змінення гучності</string>
     <string name="oneplus_volume_keys_adjust_media">Гучність медіафайлів</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Гучність рингтону</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">Щоб використовувати Face Unlock, установіть пароль</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Щоб використовувати Face Unlock, установіть графічний ключ</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Щоб використовувати Face Unlock, установіть PIN-код</string>
+    <string name="op_member_description">Підключіть свій пристрій, щоб отримати ексклюзивні переваги</string>
+    <string name="op_member_title">Увійти в обліковий запис OnePlus</string>
     <string name="op_not_disturb">Налаштування \"Не турбувати\"</string>
     <string name="op_not_disturb_summary">Вимкнути звук та вібрацію для викликів і сповіщень, крім сигналів будильника</string>
     <string name="op_oneplus_roaming_summary">Використовувати глобальні послуги доступу до Інтернету</string>

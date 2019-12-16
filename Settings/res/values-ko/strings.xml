@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">미니멀리즘</string>
     <string name="aod_clock_none">없음</string>
     <string name="aod_clock_select_style_text">시계 스타일 선택</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">파랑</string>
     <string name="aod_horizon_light_effect_2">빨강</string>
     <string name="aod_horizon_light_effect_3">보라</string>
@@ -3160,7 +3159,7 @@
     <string name="oneplus_forum_award_title">상</string>
     <string name="oneplus_fullscreen_back_guide_summary">화면의 왼쪽 하단 또는 오른쪽 하단 가장자리에서 안쪽으로 살짝 밉니다.</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">화면 하단의 왼쪽 또는 오른쪽에서 위로 살짝 밉니다.</string>
-    <string name="oneplus_fullscreen_back_guide_title">뒤로</string>
+    <string name="oneplus_fullscreen_back_guide_title">뒤로가기</string>
     <string name="oneplus_fullscreen_disable_this_feature">탐색 제스처를 사용하는 경우 이 기능을 사용할 수 없습니다.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"뒤로 버튼을 대체하는 제스처를 사용해 보세요.
 화면 하단의 왼쪽 또는 오른쪽에서 위로 살짝 미세요."</string>
@@ -3220,12 +3219,12 @@
     <string name="oneplus_gesture_of_answer_call_title">제스처로 전화에 응답하기</string>
     <string name="oneplus_gesture_start_learning">학습 시작</string>
     <string name="oneplus_gesture_to_answer_summary">휴대폰을 귀에 들어 올려서 자동으로 수신 전화에 응답</string>
-    <string name="oneplus_gesture_to_answer_title">올려서 응답</string>
+    <string name="oneplus_gesture_to_answer_title">들어 올려서 응답</string>
     <string name="oneplus_gesture_to_control_call_info">휴대폰을 귀에 들어 올려서 자동으로 전화 제어</string>
     <string name="oneplus_gesture_to_control_calls_summary">제스처로 전화에 응답하거나 이어폰으로 전환</string>
-    <string name="oneplus_gesture_to_control_calls_title">올려서 응답/전환</string>
+    <string name="oneplus_gesture_to_control_calls_title">들어 올려서 응답/전환</string>
     <string name="oneplus_gesture_to_route_audio_summary">Bluetooth 헤드셋에 연결되어 있는 경우 전화를 걸거나 응답할 때 5초 내에 휴대폰을 귀에 들어 올려서 전화를 휴대폰의 이어폰으로 전환</string>
-    <string name="oneplus_gesture_to_route_audio_title">올려서 전환</string>
+    <string name="oneplus_gesture_to_route_audio_title">들어 올려서 전환</string>
     <string name="oneplus_gestures_fast_entrance">바로 가기</string>
     <string name="oneplus_gestures_open_apps">응용 프로그램 열기</string>
     <string name="oneplus_gestures_open_camera">카메라 열기</string>
@@ -3575,7 +3574,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">버튼 바꾸기</string>
     <string name="oneplus_search_keyword_switch">전송, 데이터 마이그레이션</string>
     <string name="oneplus_search_keyword_theme_settings">잠금 화면 사용자 지정, 배경 화면, 시계 스타일, 지문 애니메이션, Horizon light, 시스템 사용자 지정, 테마 컬러, 모양, 글꼴, 톤, 아이콘 팩, 조명, 몰입형 어둠, 강렬한 색조</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">잠금 화면 사용자 지정, 배경 화면, 시계 스타일, 지문 애니메이션, Horizon Light, 시스템 사용자 지정, 테마 컬러, 모양, 글꼴, 톤, 아이콘 팩, 조명, 몰입형 어둠, 강렬한 색조, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">잠금 화면 사용자 지정, 배경 화면, 시계 스타일, 지문 애니메이션, Horizon light, 시스템 사용자 지정, 테마 컬러, 모양, 글꼴, 톤, 아이콘 팩, 조명, 몰입형 어둠, 강렬한 색조, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">스크린샷</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">알림, 환경, 프로그램, 개선</string>
@@ -3671,7 +3670,7 @@
     <string name="oneplus_theme_clock">시계 스타일</string>
     <string name="oneplus_theme_clock_snake_action">앰비언트 디스플레이 켜기</string>
     <string name="oneplus_theme_clock_snake_tip">이 기능은 앰비언트 디스플레이가 켜져 있을 때 사용할 수 있습니다.</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">색상 코드</string>
     <string name="oneplus_theme_drop_summary">수정 사항을 취소하시겠습니까?</string>
     <string name="oneplus_theme_drop_title">편집 모드 끝내기</string>
     <string name="oneplus_theme_entrance_summary">배경 화면, 테마 컬러, 글꼴, 톤</string>
@@ -3826,6 +3825,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">얼굴 잠금 해제를 사용하려면 비밀번호를 설정하세요.</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">얼굴 잠금 해제를 사용하려면 패턴을 설정하세요.</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">얼굴 잠금 해제를 사용하려면 PIN을 설정하세요.</string>
+    <string name="op_member_description">특별한 혜택을 이용하려면 장치를 바인딩하세요.</string>
+    <string name="op_member_title">OnePlus 계정에 로그인</string>
     <string name="op_not_disturb">방해 금지 기본 설정</string>
     <string name="op_not_disturb_summary">알람을 제외하고 통화 및 알림이 음소거되고 진동이 꺼집니다.</string>
     <string name="op_oneplus_roaming_summary">글로벌 인터넷 액세스 서비스 제공</string>

@@ -190,7 +190,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1207a6
+    const v2, 0x7f1207a8
 
     invoke-static {v0, p1, v2, v1}, Lcom/android/settingslib/HelpUtils;->prepareHelpMenuItem(Landroid/app/Activity;Landroid/view/Menu;ILjava/lang/String;)Z
 
@@ -273,7 +273,7 @@
     return-object v2
 
     :cond_0
-    const v2, 0x7f0d025a
+    const v2, 0x7f0d025c
 
     const/4 v3, 0x0
 

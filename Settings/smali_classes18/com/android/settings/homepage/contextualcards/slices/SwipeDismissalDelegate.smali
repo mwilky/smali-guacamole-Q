@@ -37,7 +37,7 @@
 
     move-result v0
 
-    const v1, 0x7f0d0065
+    const v1, 0x7f0d0066
 
     if-ne v0, v1, :cond_0
 
@@ -133,7 +133,7 @@
     return v0
 
     :pswitch_data_0
-    .packed-switch 0x7f0d0064
+    .packed-switch 0x7f0d0065
         :pswitch_0
         :pswitch_0
     .end packed-switch

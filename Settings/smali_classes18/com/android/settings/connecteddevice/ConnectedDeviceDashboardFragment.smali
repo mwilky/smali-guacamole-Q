@@ -111,7 +111,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207c7
+    const v0, 0x7f1207c9
 
     return v0
 .end method
@@ -205,7 +205,7 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f12047e
+    const v2, 0x7f120480
 
     invoke-virtual {p0, v2}, Lcom/android/settings/connecteddevice/ConnectedDeviceDashboardFragment;->getString(I)Ljava/lang/String;
 

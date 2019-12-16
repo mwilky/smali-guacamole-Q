@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">เรียบง่าย</string>
     <string name="aod_clock_none">ไม่มี</string>
     <string name="aod_clock_select_style_text">เลือกรูปแบบนาฬิกา</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">สีฟ้า</string>
     <string name="aod_horizon_light_effect_2">สีแดง</string>
     <string name="aod_horizon_light_effect_3">สีม่วง</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">รูปแบบนาฬิกา</string>
     <string name="oneplus_theme_clock_snake_action">เปิดการแจ้งเตือนอัตโนมัติเมื่อหยิบเครื่อง</string>
     <string name="oneplus_theme_clock_snake_tip">ฟีเจอร์นี้จะพร้อมใช้งานเมื่อการแสดงการแจ้งเตือนโดยไม่ต้องเปิดหน้าจอเปิดอยู่</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">รหัสสี</string>
     <string name="oneplus_theme_drop_summary">ละทิ้งการแก้ไขหรือไม่</string>
     <string name="oneplus_theme_drop_title">ออกจากโหมดแก้ไข</string>
     <string name="oneplus_theme_entrance_summary">ภาพพื้นหลัง, เน้นสี, แบบอักษร, โทน</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">ในการใช้การปลดล็อคด้วยใบหน้า ให้ตั้งค่ารหัสผ่าน</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">ในการใช้การปลดล็อคด้วยใบหน้า ให้ตั้งค่ารูปแบบ</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">ในการใช้การปลดล็อคด้วยใบหน้า ให้ตั้งค่า PIN</string>
+    <string name="op_member_description">ผูกอุปกรณ์ของคุณเพื่อรับสิทธิประโยชน์สุดพิเศษ</string>
+    <string name="op_member_title">เข้าสู่ระบบบัญชี OnePlus</string>
     <string name="op_not_disturb">การตั้งค่า ห้ามรบกวน</string>
     <string name="op_not_disturb_summary">ปิดเสียงการโทรและการแจ้งเตือนและปิดการสั่น ยกเว้นการปลุก</string>
     <string name="op_oneplus_roaming_summary">ให้บริการการเข้าถึงอินเทอร์เน็ตทั่วโลก</string>

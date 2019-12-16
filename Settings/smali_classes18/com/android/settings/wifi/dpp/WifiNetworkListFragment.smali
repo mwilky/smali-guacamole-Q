@@ -201,7 +201,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f121761
+    const v1, 0x7f121771
 
     invoke-virtual {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -708,7 +708,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/dpp/WifiNetworkListFragment;->mAddPreference:Landroidx/preference/Preference;
 
-    const v1, 0x7f121761
+    const v1, 0x7f121771
 
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setTitle(I)V
 

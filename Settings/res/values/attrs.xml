@@ -944,6 +944,7 @@
     </attr>
     <attr name="lottie_colorFilter" format="color" />
     <attr name="lottie_enableMergePathsForKitKatAndAbove" format="boolean" />
+    <attr name="lottie_fallbackRes" format="reference" />
     <attr name="lottie_fileName" format="string" />
     <attr name="lottie_imageAssetsFolder" format="string" />
     <attr name="lottie_loop" format="boolean" />

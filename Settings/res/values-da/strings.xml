@@ -320,7 +320,6 @@ Du skal blot placere enhederne tæt på hinanden (normalt bagside mod bagside) o
     <string name="aod_clock_minimalism">Minimalisme</string>
     <string name="aod_clock_none">Ingen</string>
     <string name="aod_clock_select_style_text">Vælg urtypen</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Blå</string>
     <string name="aod_horizon_light_effect_2">Rød</string>
     <string name="aod_horizon_light_effect_3">Lilla</string>
@@ -969,7 +968,7 @@ Valg"</string>
     <string name="bugreport_in_power_summary">Vis en knap til oprettelse af fejlrapporter i afbrydermenuen</string>
     <string name="build_number">Buildnummer</string>
     <string name="built_in_app_updates_summary">Tillad OnePlus at kontrollere for og tilbyde dig opdateringer til indbyggede apps, så de forhåbentlig bliver mere stabile</string>
-    <string name="built_in_app_updates_title">Indbyggede opdateringer</string>
+    <string name="built_in_app_updates_title">Indbyggede appopdateringer</string>
     <string name="builtin_keyboard_settings_summary">Indstillinger for fysisk tastatur</string>
     <string name="builtin_keyboard_settings_title">Fysisk tastatur</string>
     <string name="button_confirm_convert_fbe">Ryd og konvertér</string>
@@ -1082,7 +1081,7 @@ Valg"</string>
     <string name="clear_instant_app_data">Ryd appen</string>
     <string name="clear_uri_btn_text">Ryd adgang</string>
     <string name="clear_user_data_text">Ryd lagerplads</string>
-    <string name="close_dialog">Ok</string>
+    <string name="close_dialog">OK</string>
     <string name="color_black">Sort</string>
     <string name="color_blue">Blå</string>
     <string name="color_cyan">Grønblå</string>
@@ -3672,7 +3671,7 @@ Bemærk:
     <string name="oneplus_theme_clock">Urtype</string>
     <string name="oneplus_theme_clock_snake_action">SLÅ INAKTIVITETSVISNING TIL</string>
     <string name="oneplus_theme_clock_snake_tip">Denne funktion er tilgængelig, når inaktivitetsvisning er slået til</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">FARVEKODE</string>
     <string name="oneplus_theme_drop_summary">Vil du kassere ændringer?</string>
     <string name="oneplus_theme_drop_title">Afslut redigeringstilstand</string>
     <string name="oneplus_theme_entrance_summary">Baggrunde, accentfarve, skrifttype, tone</string>
@@ -3827,6 +3826,8 @@ Det ændrer ikke ved dine routerindstillinger, hvis netværket indstilles til at
     <string name="op_lockpassword_choose_your_password_header_for_face">Hvis du vil bruge Ansigtsgenkendelse, skal du indstille en adgangskode</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Hvis du vil bruge Ansigtsgenkendelse, skal du indstille et mønster</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Hvis du vil bruge Ansigtsgenkendelse, skal du indstille en pinkode</string>
+    <string name="op_member_description">Bind din enhed for at få eksklusive fordele</string>
+    <string name="op_member_title">Log på OnePlus-konto</string>
     <string name="op_not_disturb">Indstillinger for Må ikke forstyrres</string>
     <string name="op_not_disturb_summary">Slå lyden fra opkald og meddelelser og slå vibration fra, undtaget for alarmer</string>
     <string name="op_oneplus_roaming_summary">Lever globale tjenester til internetadgang</string>

@@ -164,7 +164,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0d0078
+    const v5, 0x7f0d0079
 
     const/4 v6, 0x0
 
@@ -220,7 +220,7 @@
 
     invoke-virtual {v8, v9}, Landroid/widget/NumberPicker;->setWrapSelectorWheel(Z)V
 
-    const v8, 0x7f12052c
+    const v8, 0x7f12052e
 
     invoke-virtual {v3, v8}, Landroidx/appcompat/app/AlertDialog$Builder;->setTitle(I)Landroidx/appcompat/app/AlertDialog$Builder;
 
@@ -230,7 +230,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f12052a
+    const v9, 0x7f12052c
 
     invoke-virtual {v8, v9, p0}, Landroidx/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/AlertDialog$Builder;
 

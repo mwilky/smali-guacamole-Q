@@ -114,8 +114,6 @@
     .end annotation
 .end field
 
-.field private final shaderMatrix:Landroid/graphics/Matrix;
-
 .field private final startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -147,12 +145,6 @@
     invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->radialGradientCache:Landroidx/collection/LongSparseArray;
-
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->shaderMatrix:Landroid/graphics/Matrix;
 
     new-instance v0, Landroid/graphics/Path;
 
@@ -311,8 +303,6 @@
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->getValue()Ljava/lang/Object;
 
     move-result-object v0
-
-    check-cast v0, [Ljava/lang/Integer;
 
     check-cast v0, [Ljava/lang/Integer;
 
@@ -854,13 +844,7 @@
     move-result-object v1
 
     :goto_1
-    iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->shaderMatrix:Landroid/graphics/Matrix;
-
-    invoke-virtual {v2, p2}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->shaderMatrix:Landroid/graphics/Matrix;
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
+    invoke-virtual {v1, p2}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paint:Landroid/graphics/Paint;
 

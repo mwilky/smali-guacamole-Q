@@ -320,7 +320,6 @@ Preprosto približajte napravi (običajno s hrbtno stranjo) in se dotaknite zasl
     <string name="aod_clock_minimalism">Minimalizem</string>
     <string name="aod_clock_none">Brez</string>
     <string name="aod_clock_select_style_text">Izberite slog ure</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Modra</string>
     <string name="aod_horizon_light_effect_2">Rdeča</string>
     <string name="aod_horizon_light_effect_3">Vijolična</string>
@@ -3348,7 +3347,7 @@ Opomba: Vaš prstni odtis je morda manj varen od zapletenega vzorca ali kode PIN
     <string name="oneplus_no_choice">Ni izbranega zvonjenja</string>
     <string name="oneplus_no_device_connected">Ni priključenih naprav</string>
     <string name="oneplus_no_file_tips">Ni datotek zvonjenja</string>
-    <string name="oneplus_no_supported_apps">Ni nameščenih podprtih aplikacij</string>
+    <string name="oneplus_no_supported_apps">Nameščena ni nobena podprta aplikacija</string>
     <string name="oneplus_noise_tips">Omogoči vibriranje</string>
     <string name="oneplus_none_default_camera">Ni privzetega fotoaparata</string>
     <string name="oneplus_none_default_email">Ni privzete aplikacije za e-pošto</string>
@@ -3575,7 +3574,7 @@ Opomba: Vaš prstni odtis je morda manj varen od zapletenega vzorca ali kode PIN
     <string name="oneplus_search_keyword_swap_navkeys">zamenjaj gumbe</string>
     <string name="oneplus_search_keyword_switch">prenos,selitev podatkov</string>
     <string name="oneplus_search_keyword_theme_settings">PRILAGODITEV ZAKLENJENEGA ZASLONA, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon light, PRILAGODITEV SISTEMA, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">PRILAGODITEV ZAKLENJENEGA ZASLONA, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon light, PRILAGODITEV SISTEMA, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PRILAGODITEV ZAKLENJENEGA ZASLONA, slike za ozadje, slog ure, animacija prstnega odtisa, Horizon Light, PRILAGODITEV SISTEMA, barva poudarka, oblika, pisava, ton, paket ikon, osvetlitev, temna z niansami, živahni odtenki, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">posnetek zaslona</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">obvestila,izkušnja,program,izboljšava</string>
@@ -3672,7 +3671,7 @@ Opomba:
     <string name="oneplus_theme_clock">V slogu ure</string>
     <string name="oneplus_theme_clock_snake_action">VKLJUČI AMBIENTALNI ZASLON</string>
     <string name="oneplus_theme_clock_snake_tip">Ta funkcija je na voljo, ko je vključen ambientalni zaslon</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">BARVNA KODA</string>
     <string name="oneplus_theme_drop_summary">Želite zavreči spremembe?</string>
     <string name="oneplus_theme_drop_title">Izhod iz načina za urejanje</string>
     <string name="oneplus_theme_entrance_summary">Slika za ozadje, barva poudarka, pisava, ton</string>
@@ -3827,6 +3826,8 @@ Nastavljanje skritega omrežja ne bo spremenilo nastavitev usmerjevalnika."</str
     <string name="op_lockpassword_choose_your_password_header_for_face">Če želite uporabiti odklepanje z obrazom, nastavite geslo</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Če želite uporabiti odklepanje z obrazom, nastavite vzorec</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Če želite uporabiti odklepanje z obrazom, nastavite PIN</string>
+    <string name="op_member_description">Povežite svojo napravo in koristite ekskluzivne prednosti</string>
+    <string name="op_member_title">Prijava v račun OnePlus</string>
     <string name="op_not_disturb">Nastavitve funkcije Ne moti</string>
     <string name="op_not_disturb_summary">Utišaj klice in obvestila ter izklopi vibriranjem razen za alarme</string>
     <string name="op_oneplus_roaming_summary">Zagotavljanje storitve globalnega internetnega dostopa</string>

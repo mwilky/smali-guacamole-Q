@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">מינימליזם</string>
     <string name="aod_clock_none">ללא</string>
     <string name="aod_clock_select_style_text">בחר את סגנון השעון</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">כחול</string>
     <string name="aod_horizon_light_effect_2">אדום</string>
     <string name="aod_horizon_light_effect_3">סגול</string>
@@ -3158,7 +3157,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_forum_award_title">פרס</string>
     <string name="oneplus_fullscreen_back_guide_summary">החלק פנימה מהקצה השמאלי התחתון או מהקצה הימני התחתון של המסך</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">החלק מעלה מצד ימין או שמאל של החלק התחתון של המסך</string>
-    <string name="oneplus_fullscreen_back_guide_title">הקודם</string>
+    <string name="oneplus_fullscreen_back_guide_title">חזרה</string>
     <string name="oneplus_fullscreen_disable_this_feature">לא ניתן להשתמש בתכונה זו כשמחוות הניווט מופעלות.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"בואו ננסה להשתמש במחווה שמחליפה את הלחצן האחורי.
 החליקו כלפי מעלה מהצד השמאלי או הימני בתחתית המסך."</string>
@@ -3240,7 +3239,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_hand_up_to_show">הרם את הטלפון כדי להציג</string>
     <string name="oneplus_haptic_feedback_no_app">לא מותקנים משחקים נתמכים</string>
     <string name="oneplus_haptic_feedback_no_app_tip">באפשרותך להתקין PUBG Mobile ו-Asphalt 9</string>
-    <string name="oneplus_haptic_feedback_summary">מספק משוב מגע משופר עבור משחקים נתמכים</string>
+    <string name="oneplus_haptic_feedback_summary">ספק משוב תחושתי טוב יותר עבור המשחקים הנתמכים</string>
     <string name="oneplus_haptic_feedback_support">משחקים נתמכים</string>
     <string name="oneplus_haptic_feedback_tips">מספק משוב מגע משופר עבור סצנות משחק ספציפיות , חל רק על משחקים נתמכים</string>
     <string name="oneplus_haptic_feedback_title">שיפור משוב מגע</string>
@@ -3346,7 +3345,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_no_choice">לא נבחר רינגטון</string>
     <string name="oneplus_no_device_connected">אין מכשיר מחובר</string>
     <string name="oneplus_no_file_tips">אין קבצי רינגטון</string>
-    <string name="oneplus_no_supported_apps">אין יישומים נתמכים מותקנים</string>
+    <string name="oneplus_no_supported_apps">אין אפליקציות נתמכות מותקנות</string>
     <string name="oneplus_noise_tips">אפשר רטט</string>
     <string name="oneplus_none_default_camera">אין מצלמת ברירת מחדל</string>
     <string name="oneplus_none_default_email">אין יישום דוא\"ל של ברירת מחדל</string>
@@ -3572,7 +3571,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_search_keyword_swap_navkeys">החלף מקשים</string>
     <string name="oneplus_search_keyword_switch">העברה, העברת נתונים</string>
     <string name="oneplus_search_keyword_theme_settings">התאמה אישית של נעילת מסך, רקעים, סגנון שעון, הנפשה של טביעת אצבע, Horizon light, התאמה אישית של מערכת, צבע הדגשה, צורה, גופן, צליל, ערכת סמלים, אור תאורה, רקע כהה, גוונים חזקים</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">התאמה אישית של נעילת מסך, רקעים, סגנון שעון, הנפשה של טביעת אצבע, Horizon light, התאמה אישית של מערכת, צבע הדגשה, צורה, גופן, צליל, ערכת סמלים, אור תאורה, רקע כהה, גוונים חזקים, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">התאמה אישית של נעילת מסך, רקעים, סגנון שעון, הנפשה של טביעת אצבע, Horizon light, התאמה אישית של מערכת, צבע הדגשה, צורה, גופן, צליל, גוון, ערכת סמלים, אור תאורה, רקע כהה, גוונים חזקים, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">צילום מסך</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">הודעות, ניסיון, תכנית, שיפור</string>
@@ -3669,7 +3668,7 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_theme_clock">סגנון השעון</string>
     <string name="oneplus_theme_clock_snake_action">הפעל תצוגת אמביינט</string>
     <string name="oneplus_theme_clock_snake_tip">מאפיין זה יהיה זמין כשתצוגת אמביינט מופעלת</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">קוד הצבע</string>
     <string name="oneplus_theme_drop_summary">לבטל שינויים?</string>
     <string name="oneplus_theme_drop_title">יציאה ממצב עריכה</string>
     <string name="oneplus_theme_entrance_summary">רקעים, צבע הדגשה, גופן, צליל</string>
@@ -3753,8 +3752,8 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="oneplus_vibration_settings_soc_tri_state_summary">שיחות והודעות יושתקו ויוגדרו למצב רטט בלבד, מלבד התראות</string>
     <string name="oneplus_vibration_summary">השעון המעורר יצלצל תמיד</string>
     <string name="oneplus_video_enhancer">שיפור וידאו</string>
-    <string name="oneplus_video_enhancer_footer">משפר את הצבעים בעת ניגון סרטונים</string>
-    <string name="oneplus_video_enhancer_summary">משפר את הצבעים בעת ניגון סרטונים</string>
+    <string name="oneplus_video_enhancer_footer">שפר את הצבעים תוך הפעלת סרטונים</string>
+    <string name="oneplus_video_enhancer_summary">שפר את הצבעים תוך הפעלת סרטונים</string>
     <string name="oneplus_volume_keys_adjust">השתמש בלחצני עוצמת הקול כדי להתאים</string>
     <string name="oneplus_volume_keys_adjust_media">עוצמת המדיה</string>
     <string name="oneplus_volume_keys_adjust_ringtones">עוצמת הצלצול</string>
@@ -3824,6 +3823,8 @@ Battery נכבה אוטומטית כאשר המכשיר במצב טעינה."</s
     <string name="op_lockpassword_choose_your_password_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר סיסמה</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר תבנית</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">כדי להשתמש בפונקציית שחרור הנעילה באמצעות פנים, הגדר קוד PIN</string>
+    <string name="op_member_description">אגד את המכשיר שלך כדי לקבל הטבות בלעדיות</string>
+    <string name="op_member_title">התחבר לחשבון OnePlus</string>
     <string name="op_not_disturb">העדפות נא לא להפריע</string>
     <string name="op_not_disturb_summary">השתקת שיחות והתראות וכיבוי רטט, למעט שעון מעורר</string>
     <string name="op_oneplus_roaming_summary">מעניק שירותי גישה גלובלית לאינטרנט</string>

@@ -10,11 +10,11 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "SliceCardRenderer"
 
-.field public static final VIEW_TYPE_DEFERRED_SETUP:I = 0x7f0d0063
+.field public static final VIEW_TYPE_DEFERRED_SETUP:I = 0x7f0d0064
 
-.field public static final VIEW_TYPE_FULL_WIDTH:I = 0x7f0d0064
+.field public static final VIEW_TYPE_FULL_WIDTH:I = 0x7f0d0065
 
-.field public static final VIEW_TYPE_HALF_WIDTH:I = 0x7f0d0065
+.field public static final VIEW_TYPE_HALF_WIDTH:I = 0x7f0d0066
 
 
 # instance fields
@@ -119,7 +119,7 @@
 
     move-result v0
 
-    const v1, 0x7f0d0065
+    const v1, 0x7f0d0066
 
     if-ne v0, v1, :cond_0
 
@@ -146,7 +146,7 @@
 
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v1, 0x7f0a033f
+    const v1, 0x7f0a0343
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -162,7 +162,7 @@
 
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    const v2, 0x7f0a059b
+    const v2, 0x7f0a059f
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -325,11 +325,11 @@
 
     move-result v3
 
-    const v4, 0x7f0d0063
+    const v4, 0x7f0d0064
 
     if-eq v3, v4, :cond_4
 
-    const v4, 0x7f0d0065
+    const v4, 0x7f0d0066
 
     if-eq v3, v4, :cond_3
 
@@ -369,11 +369,11 @@
         .end annotation
     .end param
 
-    const v0, 0x7f0d0063
+    const v0, 0x7f0d0064
 
     if-eq p2, v0, :cond_1
 
-    const v0, 0x7f0d0065
+    const v0, 0x7f0d0066
 
     if-eq p2, v0, :cond_0
 
@@ -491,11 +491,11 @@
 
     move-result v0
 
-    const v1, 0x7f0d0063
+    const v1, 0x7f0d0064
 
     if-eq v0, v1, :cond_3
 
-    const v1, 0x7f0d0065
+    const v1, 0x7f0d0066
 
     if-eq v0, v1, :cond_2
 

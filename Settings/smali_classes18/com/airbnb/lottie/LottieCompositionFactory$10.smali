@@ -1,4 +1,4 @@
-.class final Lcom/airbnb/lottie/LottieCompositionFactory$10;
+.class Lcom/airbnb/lottie/LottieCompositionFactory$10;
 .super Ljava/lang/Object;
 .source "LottieCompositionFactory.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -46,19 +46,6 @@
 .method public onResult(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$10;->val$cacheKey:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$10;->val$cacheKey:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p1}, Lcom/airbnb/lottie/model/LottieCompositionCache;->put(Ljava/lang/String;Lcom/airbnb/lottie/LottieComposition;)V
-
-    :cond_0
     invoke-static {}, Lcom/airbnb/lottie/LottieCompositionFactory;->access$000()Ljava/util/Map;
 
     move-result-object v0

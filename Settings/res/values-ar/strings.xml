@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">الحد الأدنى</string>
     <string name="aod_clock_none">لا شيء</string>
     <string name="aod_clock_select_style_text">تحديد نمط الساعة</string>
-    <string name="aod_horizon_light">ضوء أفقي</string>
     <string name="aod_horizon_light_effect_1">أزرق</string>
     <string name="aod_horizon_light_effect_2">أحمر</string>
     <string name="aod_horizon_light_effect_3">أرجواني</string>
@@ -3242,7 +3241,7 @@
     <string name="oneplus_hand_up_to_show">التقط هاتفك للإظهار</string>
     <string name="oneplus_haptic_feedback_no_app">لا توجد ألعاب مدعومة مثبتة</string>
     <string name="oneplus_haptic_feedback_no_app_tip">يمكنك تثبيت PUBG Mobile وAsphalt 9</string>
-    <string name="oneplus_haptic_feedback_summary">تقديم استجابة لمسية أفضل للألعاب المدعومة</string>
+    <string name="oneplus_haptic_feedback_summary">تقديم إفادة لمسية أفضل للألعاب المدعومة</string>
     <string name="oneplus_haptic_feedback_support">الألعاب المدعومة</string>
     <string name="oneplus_haptic_feedback_tips">تقديم استجابة لمسية لمشاهد ألعاب محددة، لا تنطبق إلا على الألعاب المدعومة</string>
     <string name="oneplus_haptic_feedback_title">تحسين الاستجابة اللمسية</string>
@@ -3574,8 +3573,8 @@
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">عدم ’ الإزعاج، قاطع، المقاطعة، الاستراحة، الوضع</string>
     <string name="oneplus_search_keyword_swap_navkeys">بدل الأزرار</string>
     <string name="oneplus_search_keyword_switch">النقل، ترحيل البيانات</string>
-    <string name="oneplus_search_keyword_theme_settings">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، الضوء الأفقي، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضيء، الظلام الملون، الألوان النابضة بالحياة</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، الضوء الأفقي، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضيء، الظلام الملون، الألوان النابضة بالحياة، McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، Horizon Light، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضيء، الظلام الملون، الألوان النابضة بالحياة</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">تخصيص شاشة القفل، الخلفيات، نمط الساعة، حركة بصمة الإصبع، Horizon Light، تخصيص النظام، درجة اللون، الشكل، الخط، الأسلوب، حزم الأيقونات، المصباح المضئ، الظلام الملون، الألوان النابضة بالحياة، McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">لقطة شاشة</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">الإشعارات،التجربة،البرنامج،التحسن</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">نمط الساعة</string>
     <string name="oneplus_theme_clock_snake_action">تشغيل العرض المحيط</string>
     <string name="oneplus_theme_clock_snake_tip">سيتم إتاحة تلك الميزة عند تشغيل العرض المحيط</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">رمز اللون</string>
     <string name="oneplus_theme_drop_summary">تجاهل التعديلات؟</string>
     <string name="oneplus_theme_drop_title">الخروج من وضع التحرير</string>
     <string name="oneplus_theme_entrance_summary">الخلفيات، لون تمييزي، الخط، الأسلوب</string>
@@ -3756,8 +3755,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">سيتم كتم صوت المكالمات والإخطارات والتعيين على الاهتزاز فقط، باستثناء التنبيهات</string>
     <string name="oneplus_vibration_summary">سيتم تشغيل رنين التنبيه دائمًا</string>
     <string name="oneplus_video_enhancer">محسن الفيديو</string>
-    <string name="oneplus_video_enhancer_footer">تحسين اللون أثناء تشغيل الفيديوهات</string>
-    <string name="oneplus_video_enhancer_summary">تحسين اللون أثناء تشغيل الفيديوهات</string>
+    <string name="oneplus_video_enhancer_footer">تحسين اللون أثناء تشغيل مقاطع الفيديو</string>
+    <string name="oneplus_video_enhancer_summary">تحسين اللون أثناء تشغيل مقاطع الفيديو</string>
     <string name="oneplus_volume_keys_adjust">استخدام أزرار مستوى الصوت للضبط</string>
     <string name="oneplus_volume_keys_adjust_media">مستوى صوت الوسائط</string>
     <string name="oneplus_volume_keys_adjust_ringtones">مستوى صوت نغمة الرنين</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">لاستخدام إلغاء القفل باستخدام الوجه، قم بتعيين كلمة مرور</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">لاستخدام إلغاء القفل باستخدام الوجه، قم بتعيين نمط</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">لاستخدام إلغاء القفل باستخدام الوجه، قم بتعيين رقم دخول</string>
+    <string name="op_member_description">قم بربط جهازك للتمتع بمزايا استثنائية</string>
+    <string name="op_member_title">تسجيل الدخول إلى حساب OnePlus</string>
     <string name="op_not_disturb">تفضيلات عدم الإزعاج</string>
     <string name="op_not_disturb_summary">كتم صوت المكالمات والتنبيهات وإيقاف تشغيل الاهتزاز، باستثناء المنبهات</string>
     <string name="op_oneplus_roaming_summary">توفير خدمات الوصول إلى شبكة الإنترنت الدولية</string>

@@ -115,7 +115,7 @@
 
     iget-object v0, p0, Lcom/android/settings/homepage/contextualcards/deviceinfo/DeviceInfoSlice;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f1205cc
+    const v1, 0x7f1205ce
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1205cb
+    const v1, 0x7f1205cd
 
     if-nez v0, :cond_0
 
@@ -236,7 +236,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/deviceinfo/DeviceInfoSlice;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1205cc
+    const v2, 0x7f1205ce
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

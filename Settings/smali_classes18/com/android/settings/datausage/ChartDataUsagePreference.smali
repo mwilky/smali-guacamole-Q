@@ -65,7 +65,7 @@
 
     iput v0, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mWarningColor:I
 
-    const v0, 0x7f0d007b
+    const v0, 0x7f0d007c
 
     invoke-virtual {p0, v0}, Lcom/android/settings/datausage/ChartDataUsagePreference;->setLayoutResource(I)V
 
@@ -102,7 +102,7 @@
 
     iget-wide v7, p2, Landroid/net/NetworkPolicy;->limitBytes:J
 
-    const v4, 0x7f12055f
+    const v4, 0x7f120561
 
     iget v9, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mLimitColor:I
 
@@ -151,7 +151,7 @@
 
     iget-wide v6, p2, Landroid/net/NetworkPolicy;->warningBytes:J
 
-    const v8, 0x7f120560
+    const v8, 0x7f120562
 
     iget v9, p0, Lcom/android/settings/datausage/ChartDataUsagePreference;->mWarningColor:I
 

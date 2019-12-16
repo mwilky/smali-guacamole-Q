@@ -556,7 +556,7 @@
     :cond_4
     const v0, 0x7f110087
 
-    const v1, 0x7f080684
+    const v1, 0x7f080692
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -565,7 +565,7 @@
     :cond_5
     const v0, 0x7f110086
 
-    const v1, 0x7f080683
+    const v1, 0x7f080691
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -574,7 +574,7 @@
     :cond_6
     const v0, 0x7f110088
 
-    const v1, 0x7f080685
+    const v1, 0x7f080693
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/widget/VideoPreference;->setVideo(II)V
 
@@ -730,13 +730,13 @@
 
     new-instance v2, Lcom/android/settings/gestures/SystemNavigationGestureSettings$NavModeCandidateInfo;
 
-    const v4, 0x7f12064c
+    const v4, 0x7f12064e
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    const v5, 0x7f12064b
+    const v5, 0x7f12064d
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -759,13 +759,13 @@
 
     new-instance v2, Lcom/android/settings/gestures/SystemNavigationGestureSettings$NavModeCandidateInfo;
 
-    const v4, 0x7f1214fd
+    const v4, 0x7f12150d
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    const v5, 0x7f1214fc
+    const v5, 0x7f12150c
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -788,13 +788,13 @@
 
     new-instance v2, Lcom/android/settings/gestures/SystemNavigationGestureSettings$NavModeCandidateInfo;
 
-    const v4, 0x7f1208fe
+    const v4, 0x7f120900
 
     invoke-virtual {v0, v4}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    const v5, 0x7f1208fd
+    const v5, 0x7f1208ff
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

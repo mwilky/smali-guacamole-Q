@@ -166,7 +166,7 @@
 
     invoke-virtual {p1}, Landroid/app/Dialog;->create()V
 
-    const v0, 0x7f0a03aa
+    const v0, 0x7f0a03ae
 
     invoke-virtual {p1, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
     :goto_0
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setEnabled(Z)V
 
-    const v1, 0x7f0a05a7
+    const v1, 0x7f0a05ab
 
     invoke-virtual {p1, v1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
@@ -351,7 +351,7 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/settings/notification/NotificationLockscreenPreference;->mAllowRemoteInput:Z
 
-    const v0, 0x7f0d0102
+    const v0, 0x7f0d0103
 
     invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertDialog$Builder;->setView(I)Landroidx/appcompat/app/AlertDialog$Builder;
 

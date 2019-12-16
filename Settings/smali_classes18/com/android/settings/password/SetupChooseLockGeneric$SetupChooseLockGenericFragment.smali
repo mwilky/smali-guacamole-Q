@@ -43,7 +43,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0d02bb
+    const v0, 0x7f0d02bd
 
     invoke-virtual {p0, v0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->setHeaderView(I)V
 
@@ -51,7 +51,7 @@
 
     :cond_1
     :goto_0
-    const v0, 0x7f0d02ba
+    const v0, 0x7f0d02bc
 
     invoke-virtual {p0, v0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->setHeaderView(I)V
 
@@ -379,12 +379,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f12095d
+    const v1, 0x7f12095f
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f121360
+    const v1, 0x7f121370
 
     :goto_0
     invoke-virtual {p0}, Lcom/android/settings/password/SetupChooseLockGeneric$SetupChooseLockGenericFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;

@@ -29,7 +29,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    const v0, 0x7f0403b1
+    const v0, 0x7f0403b2
 
     const v1, 0x101008e
 
@@ -67,7 +67,7 @@
 
     iput-boolean v0, p0, Lcom/android/settingslib/OPRestrictedPreference;->mHideDivider:Z
 
-    const v1, 0x7f0d01f6
+    const v1, 0x7f0d01f8
 
     invoke-virtual {p0, v1}, Lcom/android/settingslib/OPRestrictedPreference;->setLayoutResource(I)V
 
@@ -111,7 +111,7 @@
 .method protected getSecondTargetResId()I
     .locals 1
 
-    const v0, 0x7f0d0293
+    const v0, 0x7f0d0295
 
     return v0
 .end method
@@ -168,7 +168,7 @@
 
     invoke-virtual {v0, p1}, Lcom/android/settingslib/RestrictedPreferenceHelper;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a05a5
+    const v0, 0x7f0a05a9
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_1
-    const v2, 0x7f0a0758
+    const v2, 0x7f0a075f
 
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

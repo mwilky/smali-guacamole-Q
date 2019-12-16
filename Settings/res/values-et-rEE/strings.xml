@@ -26,7 +26,6 @@ Kas soovite selle funktsiooni lubada?"</string>
     <string name="aod_clock_minimalism">Minimalism</string>
     <string name="aod_clock_none">Puudub</string>
     <string name="aod_clock_select_style_text">Valige kella stiil</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Sinine</string>
     <string name="aod_horizon_light_effect_2">Punane</string>
     <string name="aod_horizon_light_effect_3">Lilla</string>
@@ -374,7 +373,7 @@ Akusäästja lülitub seadme laadimisel automaatselt välja."</string>
     <string name="oneplus_double_tap_power_gesture">Tehke toitenupul topeltklõps</string>
     <string name="oneplus_double_tap_power_gesture_app">VALI FUNKTSIOON</string>
     <string name="oneplus_double_tap_power_gesture_camera">Kaamera</string>
-    <string name="oneplus_double_tap_power_gesture_wallet">Nipsamiskaardid (rahakott)</string>
+    <string name="oneplus_double_tap_power_gesture_wallet">Nipsake kaarte (rahakott)</string>
     <string name="oneplus_doze_summary_801">Kuva kell ja muu teave ooterežiimi ekraanil</string>
     <string name="oneplus_doze_title">Muutuv kuva</string>
     <string name="oneplus_doze_title_801">Muutuv kuva</string>
@@ -997,7 +996,7 @@ Märkus.
     <string name="oneplus_theme_clock">Kella stiil</string>
     <string name="oneplus_theme_clock_snake_action">LÜLITA EKRAAN SISSE</string>
     <string name="oneplus_theme_clock_snake_tip">See funktsioon on saadaval, kui ekraan on sisse lülitatud</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">VÄRVIKOOD</string>
     <string name="oneplus_theme_drop_summary">Viskad muudatused ära?</string>
     <string name="oneplus_theme_drop_title">Välju töötlusrežiimist</string>
     <string name="oneplus_theme_entrance_summary">Taustapildid, rõhutusvärv, kirjatüüp, toon</string>
@@ -1081,8 +1080,8 @@ Märkus. Näotuvastus võib olla ebaturvalisem kui sõrmejälg, PIN-kood või mu
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Kõned ja teavitused vaigistatakse ning nende saabumisel telefon vibreerib, v.a alarmide puhul</string>
     <string name="oneplus_vibration_summary">Alarm heliseb alati</string>
     <string name="oneplus_video_enhancer">Videotäiustus</string>
-    <string name="oneplus_video_enhancer_footer">Täiustage videote esitamisel nende värve</string>
-    <string name="oneplus_video_enhancer_summary">Täiustage videote esitamisel nende värve</string>
+    <string name="oneplus_video_enhancer_footer">Täiusta videote esitamisel nende värve</string>
+    <string name="oneplus_video_enhancer_summary">Täiusta videote esitamisel nende värve</string>
     <string name="oneplus_volume_keys_adjust">Seadistamiseks kasutage helitugevuse nuppe</string>
     <string name="oneplus_volume_keys_adjust_media">Meediumi helitugevus</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Helina helitugevus</string>
@@ -1151,6 +1150,8 @@ Kui võrgu peidate, ei muuda see ruuteri sätteid."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Näotuvastusega avamiseks määrake parool</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Näotuvastusega avamiseks määrake muster</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Näotuvastusega avamiseks määrake PIN-kood</string>
+    <string name="op_member_description">Siduge seade eksklusiivsete eeliste saamiseks</string>
+    <string name="op_member_title">Logi OnePlus kontole sisse</string>
     <string name="op_not_disturb">Režiimi „Ära sega“ eelistused</string>
     <string name="op_not_disturb_summary">Vaigista kõned ja teavitused ning lülita vibratsioon välja, v.a alarmid</string>
     <string name="op_oneplus_roaming_summary">Pakub globaalseid Internetiteenuseid</string>

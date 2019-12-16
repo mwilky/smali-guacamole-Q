@@ -349,7 +349,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f0d0323
+    const v8, 0x7f0d0325
 
     const/4 v9, 0x0
 
@@ -863,7 +863,7 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    const v2, 0x7f12157e
+    const v2, 0x7f12158e
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->setTitle(I)V
 
@@ -873,7 +873,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f0d0324
+    const v0, 0x7f0d0326
 
     const/4 v1, 0x0
 

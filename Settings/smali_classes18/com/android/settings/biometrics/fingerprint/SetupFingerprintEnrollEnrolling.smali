@@ -140,7 +140,7 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollEnrolling;->mStartMessage:Landroid/widget/TextView;
 
-    const v1, 0x7f060332
+    const v1, 0x7f06033c
 
     if-eqz v0, :cond_2
 

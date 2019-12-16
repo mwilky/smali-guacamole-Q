@@ -294,8 +294,6 @@
     move-result v6
 
     :goto_0
-    nop
-
     invoke-static {v3, v5}, Ljava/lang/Math;->min(FF)F
 
     move-result v8

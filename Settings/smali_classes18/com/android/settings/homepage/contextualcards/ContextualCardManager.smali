@@ -239,7 +239,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0d0063
+    const v4, 0x7f0d0064
 
     invoke-virtual {v3, v4}, Lcom/android/settings/homepage/contextualcards/ContextualCard$Builder;->setViewType(I)Lcom/android/settings/homepage/contextualcards/ContextualCard$Builder;
 
@@ -323,7 +323,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0d0065
+    const v7, 0x7f0d0066
 
     invoke-virtual {v6, v7}, Lcom/android/settings/homepage/contextualcards/ContextualCard$Builder;->setViewType(I)Lcom/android/settings/homepage/contextualcards/ContextualCard$Builder;
 

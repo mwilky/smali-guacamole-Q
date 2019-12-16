@@ -981,6 +981,9 @@
     move-object v4, v3
 
     :goto_0
+    nop
+
+    :goto_1
     if-eqz v4, :cond_1
 
     iget-object v5, v1, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
@@ -989,7 +992,7 @@
 
     move-result v5
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_1
     iget-object v5, v1, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->key:Ljava/lang/Object;
@@ -998,7 +1001,7 @@
 
     move-result v5
 
-    :goto_1
+    :goto_2
     move v2, v5
 
     if-nez v2, :cond_2
@@ -1010,31 +1013,31 @@
 
     iget-object v5, v1, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->left:Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
 
-    goto :goto_2
+    goto :goto_3
 
     :cond_3
     iget-object v5, v1, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->right:Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
 
-    :goto_2
+    :goto_3
     if-nez v5, :cond_4
 
     move-object v13, v1
 
     move v14, v2
 
-    goto :goto_3
+    goto :goto_4
 
     :cond_4
     move-object v1, v5
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_5
     move-object v13, v1
 
     move v14, v2
 
-    :goto_3
+    :goto_4
     if-nez p2, :cond_6
 
     return-object v3
@@ -1052,7 +1055,7 @@
 
     if-eqz v1, :cond_7
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_7
     new-instance v1, Ljava/lang/ClassCastException;
@@ -1084,7 +1087,7 @@
     throw v1
 
     :cond_8
-    :goto_4
+    :goto_5
     new-instance v16, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
 
     iget-object v6, v15, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->prev:Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
@@ -1103,7 +1106,7 @@
 
     aput-object v1, v9, v12
 
-    goto :goto_6
+    goto :goto_7
 
     :cond_9
     new-instance v16, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
@@ -1126,15 +1129,15 @@
 
     iput-object v1, v13, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->left:Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_a
     iput-object v1, v13, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;->right:Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;
 
-    :goto_5
+    :goto_6
     invoke-direct {v0, v13, v11}, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap;->rebalance(Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap$Node;Z)V
 
-    :goto_6
+    :goto_7
     iget v2, v0, Lcom/airbnb/lottie/parser/moshi/LinkedHashTreeMap;->size:I
 
     add-int/lit8 v3, v2, 0x1

@@ -1,9 +1,6 @@
 .class Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper$1;
-.super Ljava/lang/Object;
+.super Landroid/os/Handler;
 .source "FingerprintUiHelper.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -27,44 +24,37 @@
 
     iput-object p1, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper$1;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper$1;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;->access$000(Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;)Landroid/widget/TextView;
+    const/4 v1, 0x1
 
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    if-ne v0, v1, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper$1;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;
 
-    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;->access$100(Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper$1;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;
-
-    invoke-static {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;->access$100(Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    const v1, 0x7f0801e0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;->startAuthenticate()V
 
     :cond_0
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper$1;->this$0:Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;
+
+    invoke-virtual {v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintUiHelper;->cancelAuthenticate()V
+
+    :cond_1
     return-void
 .end method

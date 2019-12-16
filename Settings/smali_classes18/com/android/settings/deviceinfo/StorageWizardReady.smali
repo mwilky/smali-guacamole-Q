@@ -28,11 +28,11 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0d02d0
+    const v0, 0x7f0d02d2
 
     invoke-virtual {p0, v0}, Lcom/android/settings/deviceinfo/StorageWizardReady;->setContentView(I)V
 
-    const v0, 0x7f1214c0
+    const v0, 0x7f1214d0
 
     const/4 v1, 0x1
 
@@ -66,7 +66,7 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f1214c2
+    const v2, 0x7f1214d2
 
     new-array v1, v1, [Ljava/lang/CharSequence;
 
@@ -81,7 +81,7 @@
     goto :goto_0
 
     :cond_1
-    const v2, 0x7f1214c3
+    const v2, 0x7f1214d3
 
     const/4 v3, 0x2
 
@@ -104,7 +104,7 @@
     goto :goto_0
 
     :cond_2
-    const v2, 0x7f1214c1
+    const v2, 0x7f1214d1
 
     new-array v1, v1, [Ljava/lang/CharSequence;
 
@@ -117,7 +117,7 @@
     invoke-virtual {p0, v2, v1}, Lcom/android/settings/deviceinfo/StorageWizardReady;->setBodyText(I[Ljava/lang/CharSequence;)V
 
     :goto_0
-    const v1, 0x7f120635
+    const v1, 0x7f120637
 
     new-array v2, v4, [Ljava/lang/CharSequence;
 

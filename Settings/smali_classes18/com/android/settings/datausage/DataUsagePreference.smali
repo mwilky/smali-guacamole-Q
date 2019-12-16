@@ -30,7 +30,7 @@
 
     aput v2, v0, v1
 
-    const v2, 0x7f0403b1
+    const v2, 0x7f0403b2
 
     const v3, 0x101008e
 
@@ -207,7 +207,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120566
+    const v4, 0x7f120568
 
     const/4 v5, 0x2
 

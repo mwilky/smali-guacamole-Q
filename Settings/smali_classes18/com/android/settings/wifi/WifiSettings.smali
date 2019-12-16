@@ -859,7 +859,7 @@
 
     invoke-direct {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f121761
+    const v1, 0x7f121771
 
     invoke-virtual {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -920,7 +920,7 @@
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f121115
+    const v2, 0x7f121125
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1107,7 +1107,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1217f7
+    const v1, 0x7f121807
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -1124,7 +1124,7 @@
 .method private setOffMessage()V
     .locals 6
 
-    const v0, 0x7f1217f8
+    const v0, 0x7f121808
 
     invoke-virtual {p0, v0}, Lcom/android/settings/wifi/WifiSettings;->getText(I)Ljava/lang/CharSequence;
 
@@ -1157,7 +1157,7 @@
 
     if-eqz v1, :cond_1
 
-    const v2, 0x7f121862
+    const v2, 0x7f121872
 
     invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiSettings;->getText(I)Ljava/lang/CharSequence;
 
@@ -1166,7 +1166,7 @@
     goto :goto_0
 
     :cond_1
-    const v2, 0x7f121863
+    const v2, 0x7f121873
 
     invoke-virtual {p0, v2}, Lcom/android/settings/wifi/WifiSettings;->getText(I)Ljava/lang/CharSequence;
 
@@ -1269,7 +1269,7 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f121741
+    const v1, 0x7f121751
 
     invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiSettings;->getString(I)Ljava/lang/String;
 
@@ -1285,7 +1285,7 @@
 
     invoke-direct {v1, p0}, Lcom/android/settings/wifi/WifiSettings$4;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
 
-    const v2, 0x7f12174f
+    const v2, 0x7f12175f
 
     invoke-virtual {v0, v2, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1293,7 +1293,7 @@
 
     invoke-direct {v1, p0}, Lcom/android/settings/wifi/WifiSettings$5;-><init>(Lcom/android/settings/wifi/WifiSettings;)V
 
-    const v2, 0x7f121740
+    const v2, 0x7f121750
 
     invoke-virtual {v0, v2, v1}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1562,7 +1562,7 @@
 
     invoke-virtual {v4, v3}, Landroidx/preference/Preference;->setSelectable(Z)V
 
-    const v3, 0x7f1217f9
+    const v3, 0x7f121809
 
     invoke-virtual {v4, v3}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -1917,7 +1917,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207ee
+    const v0, 0x7f1207f0
 
     return v0
 .end method
@@ -2050,7 +2050,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120925
+    const v1, 0x7f120927
 
     invoke-virtual {v0, v1}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -2557,7 +2557,7 @@
 
     const/4 v1, 0x7
 
-    const v3, 0x7f12179c
+    const v3, 0x7f1217ac
 
     invoke-interface {p1, v2, v1, v2, v3}, Landroid/view/ContextMenu;->add(IIII)Landroid/view/MenuItem;
 
@@ -2606,12 +2606,12 @@
 
     if-eqz v3, :cond_3
 
-    const v3, 0x7f1217b2
+    const v3, 0x7f1217c2
 
     goto :goto_0
 
     :cond_3
-    const v3, 0x7f120740
+    const v3, 0x7f120742
 
     :goto_0
     const/16 v4, 0x8
@@ -2629,7 +2629,7 @@
 
     const/16 v3, 0x9
 
-    const v4, 0x7f121833
+    const v4, 0x7f121843
 
     invoke-interface {p1, v2, v3, v2, v4}, Landroid/view/ContextMenu;->add(IIII)Landroid/view/MenuItem;
 
@@ -3090,7 +3090,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f0d0284
+    const v1, 0x7f0d0286
 
     invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiSettings;->setPinnedHeaderView(I)Landroid/view/View;
 
@@ -3100,7 +3100,7 @@
 
     iget-object v1, p0, Lcom/android/settings/wifi/WifiSettings;->mProgressHeader:Landroid/view/View;
 
-    const v2, 0x7f0a0566
+    const v2, 0x7f0a056a
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3121,7 +3121,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121892
+    const v2, 0x7f1218a2
 
     invoke-virtual {v1, v2, v2}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 
@@ -3170,7 +3170,7 @@
 
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings;->removeAccessPointPreference()V
 
-    const v2, 0x7f1218a6
+    const v2, 0x7f1218b6
 
     invoke-direct {p0, v2}, Lcom/android/settings/wifi/WifiSettings;->addMessagePreference(I)V
 
@@ -3194,7 +3194,7 @@
 
     invoke-direct {p0}, Lcom/android/settings/wifi/WifiSettings;->removeAccessPointPreference()V
 
-    const v1, 0x7f1218b2
+    const v1, 0x7f1218c2
 
     invoke-direct {p0, v1}, Lcom/android/settings/wifi/WifiSettings;->addMessagePreference(I)V
 
@@ -3217,12 +3217,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f12179a
+    const v1, 0x7f1217aa
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f121799
+    const v1, 0x7f1217a9
 
     :goto_0
     invoke-virtual {p0, v1}, Lcom/android/settings/wifi/WifiSettings;->getString(I)Ljava/lang/String;

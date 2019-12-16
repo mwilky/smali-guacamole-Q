@@ -95,6 +95,11 @@
 
     move/from16 v1, p2
 
+    if-ne v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
     shr-int/lit8 v2, v0, 0x18
 
     and-int/lit16 v2, v2, 0xff

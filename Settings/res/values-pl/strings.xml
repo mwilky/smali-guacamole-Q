@@ -320,7 +320,6 @@ Wystarczy zetknąć urządzenia ze sobą i kliknąć ekran. Aplikacja automatycz
     <string name="aod_clock_minimalism">Minimalizm</string>
     <string name="aod_clock_none">Brak</string>
     <string name="aod_clock_select_style_text">Wybierz styl zegarka</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Niebieski</string>
     <string name="aod_horizon_light_effect_2">Czerwony</string>
     <string name="aod_horizon_light_effect_3">Fioletowy</string>
@@ -1082,7 +1081,7 @@ Wybór"</string>
     <string name="clear_instant_app_data">Wyczyść dane aplikacji</string>
     <string name="clear_uri_btn_text">Anuluj dostęp</string>
     <string name="clear_user_data_text">Wyczyść pamięć</string>
-    <string name="close_dialog">Ok</string>
+    <string name="close_dialog">OK</string>
     <string name="color_black">Czarny</string>
     <string name="color_blue">Niebieski</string>
     <string name="color_cyan">Cyjan</string>
@@ -2984,7 +2983,7 @@ Tryb Oszczędzanie baterii jest automatycznie wyłączany na czas ładowania tel
     <string name="oneplus_clean_storage">Wyczyść</string>
     <string name="oneplus_clear_intenal_storage_data_summary">W tym muzykę, zdjęcia, filmy oraz inne dane osobowe</string>
     <string name="oneplus_clear_intenal_storage_data_title">Wymaż pamięć wewnętrzną</string>
-    <string name="oneplus_colorful_mode_cannot_change_color_accent">Kolorowy motyw może używać tylko kolorów systemowych</string>
+    <string name="oneplus_colorful_mode_cannot_change_color_accent">Kolorowy ton może używać tylko kolorów systemowych</string>
     <string name="oneplus_colorful_mode_title">Kolorowy</string>
     <string name="oneplus_compatibility_mode_summary">Aplikacje pełnoekranowe nie mogą korzystać z obszaru wycięcia</string>
     <string name="oneplus_compatibility_mode_title">Tryb zgodności</string>
@@ -3516,7 +3515,7 @@ Pozostało prób:%d."</string>
     <string name="oneplus_schedule">Zaplanuj</string>
     <string name="oneplus_screen">EKRAN</string>
     <string name="oneplus_screen_better_cold">Zimny</string>
-    <string name="oneplus_screen_better_nature">Naturalna</string>
+    <string name="oneplus_screen_better_nature">Naturalny</string>
     <string name="oneplus_screen_better_warm">Ciepły</string>
     <string name="oneplus_screen_color_mode_auto">Adaptacyjne profile kolorów</string>
     <string name="oneplus_screen_color_mode_default">Display-P3（domyślny）</string>
@@ -3574,8 +3573,8 @@ Pozostało prób:%d."</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">nie nie’ przeszkadzać, przerywać, zakłócenie, zakłócać, tryb</string>
     <string name="oneplus_search_keyword_swap_navkeys">zamień przyciski</string>
     <string name="oneplus_search_keyword_switch">transfer, migracja danych</string>
-    <string name="oneplus_search_keyword_theme_settings">DOSTOSOWYWANIE EKRANU BLOKADY, Tapety, Styl zegarka, Animacja odcisku palca, Horizon Light, DOSTOSOWYWANIE SYSTEMU, Kolor wiodący, Kształt, Czcionka, Dźwięk, Pakiet ikon, Światło podświetlające, Ciemny o zróżnicowanym odcieniu, Żywe odcienie</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">DOSTOSOWYWANIE EKRANU BLOKADY, Tapety, Styl zegarka, Animacja odcisku palca, Horizon Light, DOSTOSOWYWANIE SYSTEMU, Kolor wiodący, Kształt, Czcionka, Dźwięk, Pakiet ikon, Światło podświetlające, Ciemny o zróżnicowanym odcieniu, Żywe odcienie, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings">DOSTOSOWYWANIE EKRANU BLOKADY, Tapety, Styl zegarka, Animacja odcisku palca, Horizon Light, DOSTOSOWYWANIE SYSTEMU, Kolor wiodący, Kształt, Czcionka, Ton, Pakiet ikon, Światło podświetlające, Ciemny o zróżnicowanym odcieniu, Żywe odcienie</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">DOSTOSOWYWANIE EKRANU BLOKADY, Tapety, Styl zegarka, Animacja odcisku palca, Horizon Light, DOSTOSOWYWANIE SYSTEMU, Kolor wiodący, Kształt, Czcionka, Ton, Pakiet ikon, Światło podświetlające, Ciemny o zróżnicowanym odcieniu, Żywe odcienie, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">zrzut ekranu</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">powiadomienia, doświadczenie, program, doskonalenie</string>
@@ -3672,10 +3671,10 @@ Uwaga:
     <string name="oneplus_theme_clock">Styl zegarka</string>
     <string name="oneplus_theme_clock_snake_action">WŁĄCZ WYŚWIETLACZ AMBIENT</string>
     <string name="oneplus_theme_clock_snake_tip">Ta funkcja będzie dostępna po włączeniu wyświetlacza Ambient</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">KOD KOLORU</string>
     <string name="oneplus_theme_drop_summary">Odrzucić zmiany?</string>
     <string name="oneplus_theme_drop_title">Zamknij tryb edycji</string>
-    <string name="oneplus_theme_entrance_summary">Tapety, kolor wiodący, czcionka, dźwięk</string>
+    <string name="oneplus_theme_entrance_summary">Tapety, kolor wiodący, czcionka, ton</string>
     <string name="oneplus_theme_entrance_title">Dostosowywanie</string>
     <string name="oneplus_theme_fingerprint">Animacja odcisku palca</string>
     <string name="oneplus_theme_fingerprint_snake_action">WŁĄCZ ODCISK PALCA</string>
@@ -3698,11 +3697,11 @@ Uwaga:
     <string name="oneplus_theme_shape_effect_teardrop">Łza</string>
     <string name="oneplus_theme_shape_effect_title">WYBIERZ KSZTAŁT</string>
     <string name="oneplus_theme_system_customization">DOSTOSOWYWANIE SYSTEMU</string>
-    <string name="oneplus_theme_tone">Dźwięk</string>
+    <string name="oneplus_theme_tone">Ton</string>
     <string name="oneplus_theme_tone_effect_color">Kolorowy</string>
     <string name="oneplus_theme_tone_effect_dark">Ciemny</string>
     <string name="oneplus_theme_tone_effect_light">Jasny</string>
-    <string name="oneplus_theme_tone_effect_title">WYBIERZ DŹWIĘK</string>
+    <string name="oneplus_theme_tone_effect_title">WYBIERZ TON</string>
     <string name="oneplus_theme_wallpaper">Tapety</string>
     <string name="oneplus_three_screenshots_enable_summary">Przesuń trzema palcami po ekranie, aby zrobić zrzut</string>
     <string name="oneplus_three_screenshots_enable_title">Zrzut ekranu trzema palcami</string>
@@ -3827,6 +3826,8 @@ Ustawienie sieci jako ukrytej nie ma wpływa na ustawienia routera."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">Aby użyć funkcji odblokowywania twarzą, ustaw hasło</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Aby użyć funkcji odblokowywania twarzą, ustaw wzór</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Aby użyć funkcji odblokowywania twarzą, ustaw PIN</string>
+    <string name="op_member_description">Powiąż urządzenie, aby uzyskać wyjątkowe korzyści</string>
+    <string name="op_member_title">Zaloguj się na konto OnePlus</string>
     <string name="op_not_disturb">Preferencje trybu \"Nie przeszkadzać\"</string>
     <string name="op_not_disturb_summary">Wycisz połączenia i powiadomienia oraz wyłącz wibrację z wyjątkiem alarmów</string>
     <string name="op_oneplus_roaming_summary">Świadcz globalne usługi dostępu do Internetu</string>

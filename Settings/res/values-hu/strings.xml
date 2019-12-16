@@ -320,7 +320,6 @@ A rendszergazda képes a beállítások, hozzáférések, alkalmazások és a fe
     <string name="aod_clock_minimalism">Minimális</string>
     <string name="aod_clock_none">Nincs</string>
     <string name="aod_clock_select_style_text">Óra stílusának kiválasztása</string>
-    <string name="aod_horizon_light">Horizon fény</string>
     <string name="aod_horizon_light_effect_1">Kék</string>
     <string name="aod_horizon_light_effect_2">Piros</string>
     <string name="aod_horizon_light_effect_3">Lila</string>
@@ -3574,7 +3573,7 @@ Megjegyzés: Előfordulhat, hogy az ujjlenyomata kevésbé biztonságos, mint eg
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ne zavarjanak, megszakítás, megszakítás, szünet, üzemmód</string>
     <string name="oneplus_search_keyword_swap_navkeys">gombok felcserélése</string>
     <string name="oneplus_search_keyword_switch">átvitel,adatok áttelepítése</string>
-    <string name="oneplus_search_keyword_theme_settings">ZÁRKÉPERNYŐ TESTRESZABÁSA, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon fény, RENDSZER TESTRESZABÁSA, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek</string>
+    <string name="oneplus_search_keyword_theme_settings">ZÁRKÉPERNYŐ TESTRESZABÁSA, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon Light, RENDSZER TESTRESZABÁSA, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">ZÁRKÉPERNYŐ TESTRESZABÁSA, Háttérképek, Órastílus, Ujjlenyomat-animáció, Horizon fény, RENDSZER TESTRESZABÁSA, Kiemelés színe, Forma, Betűtípus, Tónus, Ikoncsomag, Világító fény, Árnyalt sötét, Élénk színek, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">képernyőfelvétel</string>
     <string name="oneplus_search_keyword_timer_boot" />
@@ -3672,7 +3671,7 @@ Megjegyzés:
     <string name="oneplus_theme_clock">Óra stílusa</string>
     <string name="oneplus_theme_clock_snake_action">KÖRNYEZETI KIJELZŐ BEKAPCSOLÁSA</string>
     <string name="oneplus_theme_clock_snake_tip">A funkció akkor lesz elérhető, amikor a környezeti kijelző be van kapcsolva</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">SZÍNKÓD</string>
     <string name="oneplus_theme_drop_summary">Elveti a módosításokat?</string>
     <string name="oneplus_theme_drop_title">Kilépés a szerkesztési üzemmódból</string>
     <string name="oneplus_theme_entrance_summary">Háttérképek, kiemelés színe, betűtípus, hang</string>
@@ -3802,7 +3801,7 @@ Ha a hálózatot rejtett állapotra állítja be, az nem fogja megváltoztatni a
     <string name="op_china_unicom">CUCC</string>
     <string name="op_choose_lock_generic_title">Először válasszon egy elmentett képernyőzárat</string>
     <string name="op_cloud_service_summary">Szinkronizálja névjegyeit, jegyzeteit, fotóit stb.</string>
-    <string name="op_cloud_service_title">Felhő szolgáltatás</string>
+    <string name="op_cloud_service_title">Felhőszolgáltatás</string>
     <string name="op_confirm_enable_oem_unlock_text">FIGYELEM: Előfordulhat, hogy a készülékvédelmi és -ellenőrzési funkciók, például az ujjlenyomattal történő fizetés és a speciális DRM-kulcs, nem működik OEM feloldás esetén.</string>
     <string name="op_custom_color_value">Színérték</string>
     <string name="op_custom_color_value_edit">Adjon meg egy színértéket</string>
@@ -3827,6 +3826,8 @@ Ha a hálózatot rejtett állapotra állítja be, az nem fogja megváltoztatni a
     <string name="op_lockpassword_choose_your_password_header_for_face">Az arcfelismeréssel működő zár használatához állítson be jelszót</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Az arcfelismeréssel működő zár használatához állítson be mintát</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Az arcfelismeréssel működő zár használatához állítson be PIN-kódot</string>
+    <string name="op_member_description">Kapcsolja össze a készülékét az exkluzív előnyök megszerzéséhez</string>
+    <string name="op_member_title">Bejelentkezés a OnePlus fiókba</string>
     <string name="op_not_disturb">A Ne zavarjanak mód beállításai</string>
     <string name="op_not_disturb_summary">Hívások és értesítések némítása, valamint rezgések kikapcsolása a riasztások kivételével</string>
     <string name="op_oneplus_roaming_summary">Globális internet-hozzáférési szolgáltatások nyújtása</string>

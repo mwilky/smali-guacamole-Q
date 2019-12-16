@@ -145,7 +145,7 @@
 .method public getSettingsIntelligencePkgName(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    const v0, 0x7f120481
+    const v0, 0x7f120483
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

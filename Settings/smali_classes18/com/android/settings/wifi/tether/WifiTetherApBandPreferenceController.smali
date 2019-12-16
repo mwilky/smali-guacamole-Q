@@ -172,7 +172,7 @@
 
     iget-object v0, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f121772
+    const v1, 0x7f121782
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -369,7 +369,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/preference/ListPreference;->setEnabled(Z)V
 
-    const v3, 0x7f12176e
+    const v3, 0x7f12177e
 
     invoke-virtual {v2, v3}, Landroidx/preference/ListPreference;->setSummary(I)V
 
@@ -409,17 +409,17 @@
 
     move-result-object v0
 
-    const v1, 0x7f030116
+    const v1, 0x7f030117
 
-    const v2, 0x7f030119
+    const v2, 0x7f03011a
 
     iget-boolean v3, p0, Lcom/android/settings/wifi/tether/WifiTetherApBandPreferenceController;->isDualMode:Z
 
     if-eqz v3, :cond_0
 
-    const v1, 0x7f030117
+    const v1, 0x7f030118
 
-    const v2, 0x7f030118
+    const v2, 0x7f030119
 
     goto :goto_0
 
@@ -428,9 +428,9 @@
 
     if-eqz v3, :cond_1
 
-    const v1, 0x7f03011a
+    const v1, 0x7f03011b
 
-    const v2, 0x7f03011b
+    const v2, 0x7f03011c
 
     :cond_1
     :goto_0

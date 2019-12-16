@@ -61,19 +61,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f120b49
+    const v1, 0x7f120b4c
 
     invoke-virtual {v0, v1}, Lcom/android/settings/utils/ManagedServiceSettings$Config$Builder;->setWarningDialogTitle(I)Lcom/android/settings/utils/ManagedServiceSettings$Config$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f120b48
+    const v1, 0x7f120b4b
 
     invoke-virtual {v0, v1}, Lcom/android/settings/utils/ManagedServiceSettings$Config$Builder;->setWarningDialogSummary(I)Lcom/android/settings/utils/ManagedServiceSettings$Config$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f120b12
+    const v1, 0x7f120b14
 
     invoke-virtual {v0, v1}, Lcom/android/settings/utils/ManagedServiceSettings$Config$Builder;->setEmptyText(I)Lcom/android/settings/utils/ManagedServiceSettings$Config$Builder;
 
@@ -280,7 +280,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f120b6d
+    const v1, 0x7f120b70
 
     const/4 v2, 0x0
 

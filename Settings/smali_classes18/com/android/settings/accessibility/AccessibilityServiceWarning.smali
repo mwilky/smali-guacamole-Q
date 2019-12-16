@@ -111,7 +111,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0096
+    const v1, 0x7f0d0097
 
     const/4 v2, 0x0
 
@@ -119,7 +119,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a051f
+    const v2, 0x7f0a0523
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -139,7 +139,7 @@
 
     aput-object v5, v4, v6
 
-    const v5, 0x7f1205ea
+    const v5, 0x7f1205ec
 
     invoke-virtual {p0, v5, v4}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     nop
 
-    const v4, 0x7f0a051e
+    const v4, 0x7f0a0522
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -175,7 +175,7 @@
 
     aput-object v6, v5, v3
 
-    const v3, 0x7f1205e9
+    const v3, 0x7f1205eb
 
     invoke-virtual {p0, v3, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -183,7 +183,7 @@
 
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v3, 0x7f0a0523
+    const v3, 0x7f0a0527
 
     invoke-virtual {v1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +191,7 @@
 
     check-cast v3, Landroid/widget/Button;
 
-    const v5, 0x7f0a0522
+    const v5, 0x7f0a0526
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d009e
+    const v1, 0x7f0d009f
 
     const/4 v2, 0x0
 
@@ -243,7 +243,7 @@
 
     if-eqz v3, :cond_0
 
-    const v3, 0x7f12066a
+    const v3, 0x7f12066c
 
     new-array v6, v4, [Ljava/lang/Object;
 
@@ -301,7 +301,7 @@
     move-result-object v3
 
     :goto_1
-    const v6, 0x7f0a0520
+    const v6, 0x7f0a0524
 
     invoke-virtual {v1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +311,7 @@
 
     invoke-virtual {v6, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v7, 0x7f0a0521
+    const v7, 0x7f0a0525
 
     invoke-virtual {v1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -319,7 +319,7 @@
 
     check-cast v7, Landroid/widget/TextView;
 
-    const v8, 0x7f12066e
+    const v8, 0x7f120670
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -335,7 +335,7 @@
 
     invoke-virtual {v7, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v4, 0x7f0a0524
+    const v4, 0x7f0a0528
 
     invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -343,7 +343,7 @@
 
     check-cast v4, Landroid/widget/Button;
 
-    const v5, 0x7f0a0525
+    const v5, 0x7f0a0529
 
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -458,7 +458,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f12156d
+    const v3, 0x7f12157d
 
     invoke-static {v0, v3, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

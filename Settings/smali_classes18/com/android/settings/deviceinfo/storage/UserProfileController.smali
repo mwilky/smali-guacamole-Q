@@ -286,7 +286,7 @@
 
     iget-object v1, p0, Lcom/android/settings/deviceinfo/storage/UserProfileController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f080566
+    const v2, 0x7f080574
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -294,7 +294,7 @@
 
     iget-object v1, p0, Lcom/android/settings/deviceinfo/storage/UserProfileController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f060321
+    const v2, 0x7f06032b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
 

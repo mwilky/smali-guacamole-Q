@@ -320,7 +320,6 @@ Du holder bare enhetene mot hverandre (vanligvis rygg mot rygg) og trykker på s
     <string name="aod_clock_minimalism">Minimalisme</string>
     <string name="aod_clock_none">Ingen</string>
     <string name="aod_clock_select_style_text">Velg klokkestil</string>
-    <string name="aod_horizon_light">Horisontalt lys</string>
     <string name="aod_horizon_light_effect_1">Blå</string>
     <string name="aod_horizon_light_effect_2">Rød</string>
     <string name="aod_horizon_light_effect_3">Lilla</string>
@@ -3574,7 +3573,7 @@ Merk: Fingeravtrykket kan være mindre sikkert enn et sterkt mønster eller PIN-
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">ikke ’t forstyrre, avbryte, avbrytelse, brudd, modus</string>
     <string name="oneplus_search_keyword_swap_navkeys">bytt knapper</string>
     <string name="oneplus_search_keyword_switch">overføring,dataoverføring</string>
-    <string name="oneplus_search_keyword_theme_settings">TILPASNING AV LÅSESKJERMEN, bakgrunner, klokkestil, animasjon med fingeravtrykk, horisontalt lys, TILPASNING AV SYSTEMET, aksentfarge, form, font, tone, ikonpakke, Nyanserte mørke, vibrerende fargetoner</string>
+    <string name="oneplus_search_keyword_theme_settings">TILPASNING AV LÅSESKJERMEN, bakgrunner, klokkestil, animasjon med fingeravtrykk, Horizon Light, TILPASNING AV SYSTEMET, aksentfarge, form, font, tone, ikonpakke, Nyanserte mørke, vibrerende fargetoner</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">TILPASNING AV LÅSESKJERMEN, bakgrunner, klokkestil, animasjon med fingeravtrykk, horisontalt lys, TILPASNING AV SYSTEMET, aksentfarge, form, font, tone, ikonpakke, Nyanserte mørke, vibrerende fargetoner, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">skjermbilde</string>
     <string name="oneplus_search_keyword_timer_boot" />
@@ -3672,7 +3671,7 @@ Merk:
     <string name="oneplus_theme_clock">Klokkestil</string>
     <string name="oneplus_theme_clock_snake_action">SLÅ PÅ AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">Denne funksjonen er tilgjengelig når ambient display er på</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">FARGE KODE</string>
     <string name="oneplus_theme_drop_summary">Forkast endringer?</string>
     <string name="oneplus_theme_drop_title">Avslutt redigeringsmodus</string>
     <string name="oneplus_theme_entrance_summary">Bakgrunner, aksentfage, font, tone</string>
@@ -3827,6 +3826,8 @@ Skjuling av nettverket vil ikke endre ruterinnstillingene dine."</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">å bruke ansikt slåsing, sett passord</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">å bruke ansikt slåsing, sett mønster</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">å bruke ansikt slåsing, sett PIN-kode</string>
+    <string name="op_member_description">Bind enheten din for å få eksklusive fordeler</string>
+    <string name="op_member_title">Logg inn på OnePlus-konto</string>
     <string name="op_not_disturb">Ikke forstyrr-innstillinger</string>
     <string name="op_not_disturb_summary">Demp anrop og varslinger, og skru av vibrasjon, bortsett fra alarmer</string>
     <string name="op_oneplus_roaming_summary">Gi globale internettjenester</string>

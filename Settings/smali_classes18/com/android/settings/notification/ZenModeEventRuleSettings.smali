@@ -371,7 +371,7 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    const v3, 0x7f12196d
+    const v3, 0x7f12197e
 
     invoke-virtual {p0, v3}, Lcom/android/settings/notification/ZenModeEventRuleSettings;->getString(I)Ljava/lang/String;
 
@@ -679,7 +679,7 @@
 
     new-array v4, v3, [Ljava/lang/CharSequence;
 
-    const v5, 0x7f12196f
+    const v5, 0x7f121980
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/ZenModeEventRuleSettings;->getString(I)Ljava/lang/String;
 
@@ -689,7 +689,7 @@
 
     aput-object v5, v4, v6
 
-    const v5, 0x7f121971
+    const v5, 0x7f121982
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/ZenModeEventRuleSettings;->getString(I)Ljava/lang/String;
 
@@ -697,7 +697,7 @@
 
     aput-object v5, v4, v0
 
-    const v5, 0x7f121970
+    const v5, 0x7f121981
 
     invoke-virtual {p0, v5}, Lcom/android/settings/notification/ZenModeEventRuleSettings;->getString(I)Ljava/lang/String;
 

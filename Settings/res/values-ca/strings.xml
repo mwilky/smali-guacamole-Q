@@ -320,7 +320,6 @@ Col·loca els dispositius a prop (normalment encarant-los per la part posterior)
     <string name="aod_clock_minimalism">Minimalisme</string>
     <string name="aod_clock_none">Cap</string>
     <string name="aod_clock_select_style_text">"Selecciona l'estil de rellotge"</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Blau</string>
     <string name="aod_horizon_light_effect_2">Vermell</string>
     <string name="aod_horizon_light_effect_3">Porpra</string>
@@ -3348,7 +3347,7 @@ Nota: L'empremta digital pot ser menys segura que un patró o un PIN fort"</stri
     <string name="oneplus_no_choice">"No s'ha seleccionat cap to de trucada"</string>
     <string name="oneplus_no_device_connected">Cap dispositiu connectat</string>
     <string name="oneplus_no_file_tips">No hi ha fitxers de to de trucada</string>
-    <string name="oneplus_no_supported_apps">No hi ha aplicacions admeses instal·lades</string>
+    <string name="oneplus_no_supported_apps">No hi ha aplicacions compatibles instal·lades</string>
     <string name="oneplus_noise_tips">Habilita la vibració</string>
     <string name="oneplus_none_default_camera">Cap càmera per defecte</string>
     <string name="oneplus_none_default_email">Cap aplicació de correu per defecte</string>
@@ -3672,7 +3671,7 @@ Nota:
     <string name="oneplus_theme_clock">Estil de rellotge</string>
     <string name="oneplus_theme_clock_snake_action">ACTIVEU LA PANTALLA AMBIENT</string>
     <string name="oneplus_theme_clock_snake_tip">"Aquesta funció estarà disponible quan s'activi la pantalla ambient"</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">CODI DE COLOR</string>
     <string name="oneplus_theme_drop_summary">Voleu descartar les modificacions?</string>
     <string name="oneplus_theme_drop_title">"Surt del mode d'edició"</string>
     <string name="oneplus_theme_entrance_summary">"Fons de pantalla, color d'accent, tipus de lletra, to"</string>
@@ -3827,6 +3826,8 @@ La configuració de la xarxa com a oculta no canviarà la configuració del vost
     <string name="op_lockpassword_choose_your_password_header_for_face">Per utilitzar el Desbloqueig facial, configureu una contrasenya</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Per utilitzar el Desbloqueig facial, configureu un patró</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Per utilitzar el Desbloqueig facial, configureu un PIN</string>
+    <string name="op_member_description">Vinculeu el vostre dispositiu per obtenir beneficis exclusius</string>
+    <string name="op_member_title">Inicia sessió al compte OnePlus</string>
     <string name="op_not_disturb">Preferències de \"No molesteu\"</string>
     <string name="op_not_disturb_summary">Silencia les trucades i les notificacions, i activa la vibració, exceptuant les alarmes</string>
     <string name="op_oneplus_roaming_summary">"Ofereix serveis globals d'accés a internet"</string>

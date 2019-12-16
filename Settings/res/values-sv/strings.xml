@@ -320,7 +320,6 @@ Håll bara enheterna mot varandra (oftast baksida mot baksida) och tryck sedan p
     <string name="aod_clock_minimalism">Minimalism</string>
     <string name="aod_clock_none">Ingen</string>
     <string name="aod_clock_select_style_text">Välj klockstil</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Blå</string>
     <string name="aod_horizon_light_effect_2">Röd</string>
     <string name="aod_horizon_light_effect_3">Lila</string>
@@ -1133,8 +1132,8 @@ Val"</string>
     <string name="condition_expand_show">Visa</string>
     <string name="condition_grayscale_summary">Visa bara i gråskala</string>
     <string name="condition_grayscale_title">Gråskala</string>
-    <string name="condition_hotspot_summary">Bärbar Wi-Fi-hotspot %1$s är aktiv, Wi-Fi för denna enhet är avstängd.</string>
-    <string name="condition_hotspot_title">Hotspot är på</string>
+    <string name="condition_hotspot_summary">Bärbar trådlös Wi-Fi-surfzon %1$s är aktiv, Wi-Fi för denna enhet är avstängd.</string>
+    <string name="condition_hotspot_title">Trådlös surfzon är på</string>
     <string name="condition_night_display_summary">Bärnstenstonad skärm</string>
     <string name="condition_night_display_title">Nattljus är aktiverat</string>
     <string name="condition_turn_off">Inaktivera</string>
@@ -2926,7 +2925,7 @@ Appen kan också aktivera eller inaktivera Stör ej och ändra relaterade instä
     <string name="oneplus_auto_answer_via_bluetooth_summary">Det inkommande samtalet besvaras automatiskt under uppkoppling till en Bluetooth-ljudenhet</string>
     <string name="oneplus_auto_answer_via_bluetooth_title">Smart svar för Bluetooth</string>
     <string name="oneplus_auto_check_pin_length">Bekräfta PIN-koden utan att trycka på \"✓\"</string>
-    <string name="oneplus_auto_disconect_the_ap">Hotspot stängs av automatiskt efter 5 minuter om inga enheter är anslutna.</string>
+    <string name="oneplus_auto_disconect_the_ap">Trådlös surfzon stängs av automatiskt efter 5 minuter om inga enheter är anslutna.</string>
     <string name="oneplus_auto_open_app_none">Ingen</string>
     <string name="oneplus_auto_open_app_other_applications">ANDRA APPLIKATIONER</string>
     <string name="oneplus_auto_open_app_recommended">REKOMMENDERAS</string>
@@ -2993,7 +2992,7 @@ Batteribesparing stängs av automatiskt när enheten laddar."</string>
     <string name="oneplus_condition_battery_turn_off">SLÅ AV BATTERISPARARE</string>
     <string name="oneplus_condition_bg_data_summary">Bakgrundsdata är endast tillgängligt via Wi-Fi. Detta kan påverka vissa appar eller tjänster när Wi-Fi inte är tillgängligt</string>
     <string name="oneplus_condition_bg_data_title">Datasparare är på</string>
-    <string name="oneplus_condition_hotspot_turn_off">SLÅ AV HOTSPOT</string>
+    <string name="oneplus_condition_hotspot_turn_off">STÄNG AV TRÅDLÖS SURFZON</string>
     <string name="oneplus_condition_night_mode_title">Nattläge är på</string>
     <string name="oneplus_condition_night_mode_turn_off">SLÅ AV NATTLÄGE</string>
     <string name="oneplus_condition_ota_summary">Ny version detekterad för uppdatering</string>
@@ -3672,7 +3671,7 @@ Obs!
     <string name="oneplus_theme_clock">Klockstil</string>
     <string name="oneplus_theme_clock_snake_action">SLÅ PÅ AKTIV LÅSSKÄRM</string>
     <string name="oneplus_theme_clock_snake_tip">Den här funktionen är tillgänglig när aktiv låsskärm är på</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">FÄRGKOD</string>
     <string name="oneplus_theme_drop_summary">Vill du ignorera ändringar?</string>
     <string name="oneplus_theme_drop_title">Avsluta redigeringsläge</string>
     <string name="oneplus_theme_entrance_summary">Bakgrunder, accentfärg, teckensnitt, färgton</string>
@@ -3724,7 +3723,7 @@ Obs!
     <string name="oneplus_top_level_cloud_o2_summary">Synkronisera data med molnet</string>
     <string name="oneplus_top_level_connected_summary">NFC, casta, peka och betala</string>
     <string name="oneplus_top_level_display_summary">Statusfält, aktiv låsskärm, nattläge, läsläge</string>
-    <string name="oneplus_top_level_network_summary">SIM, mobilnätverk, dataanvändning, hotspot</string>
+    <string name="oneplus_top_level_network_summary">SIM, mobilnätverk, dataanvändning, trådlös surfzon</string>
     <string name="oneplus_top_level_privacy_summary">Behörigheter, personuppgifter</string>
     <string name="oneplus_top_level_security_dashboard_summary">Fingeravtryck, Ansiktsupplåsning, nödfallsräddning</string>
     <string name="oneplus_top_level_security_summary">Fingeravtryck, Ansiktsupplåsning, nödfallsräddning</string>
@@ -3756,8 +3755,8 @@ Obs! Ansiktsupplåsning kan vara mindre säkert än fingeravtryck, PIN-kod eller
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Samtal och meddelanden är ljudlösa och inställda på att endast vibrera, förutom för larm</string>
     <string name="oneplus_vibration_summary">Larm ringer alltid</string>
     <string name="oneplus_video_enhancer">Videoförbättrare</string>
-    <string name="oneplus_video_enhancer_footer">Förbättra färgen när du spelar upp videoklipp</string>
-    <string name="oneplus_video_enhancer_summary">Förbättra färgen när du spelar upp videoklipp</string>
+    <string name="oneplus_video_enhancer_footer">Förbättra färgen under videouppspelning</string>
+    <string name="oneplus_video_enhancer_summary">Förbättra färgen under videouppspelning</string>
     <string name="oneplus_volume_keys_adjust">Använd volymknapparna för att justera</string>
     <string name="oneplus_volume_keys_adjust_media">Mediavolym</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Volym för ringsignal</string>
@@ -3773,14 +3772,14 @@ Att ställa in nätverket som dolt ändrar inte routerns inställningar."</strin
     <string name="oneplus_wifi_ipv6_surport_summary">Genom att inaktivera IPv6 kan du undvika kompatibilitetsproblem med vissa Wi-Fi-routrar.</string>
     <string name="oneplus_wifi_ipv6_surport_title">IPv6-stöd</string>
     <string name="oneplus_wifi_list">Wi‑Fi-lista</string>
-    <string name="oneplus_wifi_name">Namn på mobil HotSpot</string>
-    <string name="oneplus_wifi_name_dialog_message">Om du stänger av alternativet Namn på broadcast-nätverk (SSID) är telefonen inte synlig för andra enheter och visas inte i listan med tillgängliga Wi-Fi-nätverk. Andra enheter kan fortfarande ansluta till din HotSpot genom att ange nätverksnamnet manuellt.</string>
-    <string name="oneplus_wifi_name_dialog_title">Din HotSpot syns inte nu</string>
+    <string name="oneplus_wifi_name">Namn på mobil trådlös surfzon</string>
+    <string name="oneplus_wifi_name_dialog_message">Om du stänger av alternativet Namn på broadcast-nätverk (SSID) är telefonen inte synlig för andra enheter och visas inte i listan med tillgängliga Wi-Fi-nätverk. Andra enheter kan fortfarande ansluta till din trådlösa surfzon genom att ange nätverksnamnet manuellt.</string>
+    <string name="oneplus_wifi_name_dialog_title">Din trådlösa surfzon syns inte nu</string>
     <string name="oneplus_wifi_scan_always_available">Skanning är alltid tillgänglig</string>
     <string name="oneplus_wifi_scan_always_available_summary">Tillåt platstjänster eller andra appar att söka efter nätverk när Wi‑Fi är av</string>
     <string name="oneplus_wifi_scan_always_available_title">Tillåt alltid skanning</string>
     <string name="oneplus_wireless_adb_debugging">Trådlös ADB-felsökning</string>
-    <string name="oneplus_wirelesssettings_summary">NFC, bärbar hotspot</string>
+    <string name="oneplus_wirelesssettings_summary">NFC, bärbar trådlös surfzon</string>
     <string name="oneplus_zen_mode_automation_settings_title">Sätt på automatiskt</string>
     <string name="oneplus_zen_mode_duration_settings_title">Längd</string>
     <string name="oneplus_zen_mode_duration_summary_always_prompt">Fråga alltid (om inte funktionen är automatiskt aktiverad)</string>
@@ -3827,6 +3826,8 @@ Att ställa in nätverket som dolt ändrar inte routerns inställningar."</strin
     <string name="op_lockpassword_choose_your_password_header_for_face">För att använda ansiktsupplåsning, välj lösenord</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">För att använda ansiktsupplåsning, välj mönster</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">För att använda ansiktsupplåsning, välj PIN</string>
+    <string name="op_member_description">Bind enheten för att få exklusiva förmåner</string>
+    <string name="op_member_title">Logga in på OnePlus-kontot</string>
     <string name="op_not_disturb">Inställningar för Stör inte</string>
     <string name="op_not_disturb_summary">Stäng av ljudet för samtal och aviseringar och stäng av vibrationer, förutom för larm</string>
     <string name="op_oneplus_roaming_summary">Tillhandahåller Global Internet Access Services</string>
@@ -4600,7 +4601,7 @@ Obs! Du kan inte använda fingeravtrycket för att låsa upp den här enheten. K
     <string name="share_remote_bugreport_dialog_message">IT-administratören har bett om en felrapport som hjälp vid felsökningen av den här enheten. Appar och data kan komma att delas. Detta kan tillfälligt göra enheten långsammare.</string>
     <string name="share_remote_bugreport_dialog_message_finished">IT-administratören har bett om en felrapport som hjälp vid felsökningen av den här enheten. Appar och data kan komma att delas.</string>
     <string name="share_remote_bugreport_dialog_title">Vill du dela felrapporten?</string>
-    <string name="share_wifi_chekbox">Dela anslutet Wi‑Fi-nätverk via hotspot</string>
+    <string name="share_wifi_chekbox">Dela anslutet Wi‑Fi-nätverk via trådlös surfzon</string>
     <string name="sharing_remote_bugreport_dialog_message">Felrapporten delas med IT-administratören. Kontakta administratören om du vill veta mer.</string>
     <string name="short_summary_font_size">Gör texten större eller mindre.</string>
     <string name="show_all_anrs">Visa ANR-fel i bakgruden</string>
@@ -4785,7 +4786,7 @@ Detta är möjligt eftersom betrodda autentiseringsuppgifter har installerats p�
     <string name="status_bar_settings_cellular_title">Mobildata</string>
     <string name="status_bar_settings_dnd_title">Stör inte</string>
     <string name="status_bar_settings_headset_title">Headset</string>
-    <string name="status_bar_settings_hotspot_title">Hotspot</string>
+    <string name="status_bar_settings_hotspot_title">Trådlös surfzon</string>
     <string name="status_bar_settings_network_speed_title">Visa nätverkshastighet</string>
     <string name="status_bar_settings_time_title">Tid</string>
     <string name="status_bar_settings_wifi_title">Wi-Fi</string>
@@ -5096,7 +5097,7 @@ En funktion i Google som du kan använda om du vill synkronisera så att du komm
     <string name="tether_error_item_default">Internetdelning</string>
     <string name="tether_error_message">Du prenumererar inte på %1$s.</string>
     <string name="tether_error_title">Fel för %1$s</string>
-    <string name="tether_no_sim_message">Sätt i ett SIM-kort för att använda Mobil hotspot och andra alternativ för internetdelning</string>
+    <string name="tether_no_sim_message">Sätt i ett SIM-kort för att använda mobil trådlös surfzon och andra alternativ för internetdelning</string>
     <string name="tether_no_sim_title">Inget SIM-kort</string>
     <string name="tether_settings_disabled_on_data_saver">Det går inte att använda internetdelning eller trådlösa surfzoner när Databesparing är aktiverat.</string>
     <string name="tether_settings_summary_hotspot_off_tether_on">Internetdelning</string>
@@ -5884,7 +5885,7 @@ Vill du tillåta detta för alla appar som vill söka efter nätverk?"</string>
     <string name="wifi_scan_throttling">Begränsning av Wi-Fi-sökning</string>
     <string name="wifi_scan_throttling_summary">Sänker batteriförbrukningen och förbättrar nätverksprestandan</string>
     <string name="wifi_security">Säkerhet</string>
-    <string name="wifi_security_dialog">Med Öppen säkerhet kan alla enheter ansluta till din mobila HotSpot och använda din mobildataanslutning.</string>
+    <string name="wifi_security_dialog">Med Öppen säkerhet kan alla enheter ansluta till din mobila trådlösa surfzon och använda din mobildataanslutning.</string>
     <string name="wifi_security_none">Ingen</string>
     <string name="wifi_security_open">Öppna</string>
     <string name="wifi_select_network">Välj Wi-Fi</string>

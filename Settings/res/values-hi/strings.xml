@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">अतिसूक्ष्मवाद</string>
     <string name="aod_clock_none">कोई नहीं</string>
     <string name="aod_clock_select_style_text">घड़ी शैली चुनें</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">नीला</string>
     <string name="aod_horizon_light_effect_2">लाल</string>
     <string name="aod_horizon_light_effect_3">बैंगनी</string>
@@ -3242,7 +3241,7 @@
     <string name="oneplus_hand_up_to_show">दिखाने के लिए अपना फ़ोन उठाएँ</string>
     <string name="oneplus_haptic_feedback_no_app">कोई भी समर्थित गेम्स इंस्टॉल नहीं हैं</string>
     <string name="oneplus_haptic_feedback_no_app_tip">आप PUBG मोबाइल और Asphalt 9 इंस्टॉल कर सकते हैं</string>
-    <string name="oneplus_haptic_feedback_summary">समर्थित गेम्स के लिए बेहतर हैप्टिक प्रतिक्रिया प्रदान कररें</string>
+    <string name="oneplus_haptic_feedback_summary">समर्थित गेम्स के लिए बेहतर हैप्टिक प्रतिक्रिया प्रदान करें</string>
     <string name="oneplus_haptic_feedback_support">समर्थित गेम्स</string>
     <string name="oneplus_haptic_feedback_tips">विशिष्ट गेम दृश्यों के लिए हैप्टिक प्रतिक्रिया प्रदान कररें, केवल समर्थित गेम्स के लिए लागू</string>
     <string name="oneplus_haptic_feedback_title">हैप्टिक प्रतिक्रिया सुधार</string>
@@ -3348,7 +3347,7 @@
     <string name="oneplus_no_choice">कोई रिंगटोन चयनित नहीं की गई</string>
     <string name="oneplus_no_device_connected">कोई भी डिवाइस कनेक्ट नहीं</string>
     <string name="oneplus_no_file_tips">कोई रिंगटोन फ़ाइलें नहीं</string>
-    <string name="oneplus_no_supported_apps">कोई भी समर्थित ऐप्स स्थापित नहीं किया गया है</string>
+    <string name="oneplus_no_supported_apps">समर्थित ऐप्स इंस्टॉल नहीं किया गया</string>
     <string name="oneplus_noise_tips">वाइब्रेशन सक्षम करें</string>
     <string name="oneplus_none_default_camera">कोई डिफ़ॉल्ट कैमरा नहीं</string>
     <string name="oneplus_none_default_email">कोई डिफ़ॉल्ट मेल ऐप नहीं</string>
@@ -3575,7 +3574,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">स्वैप बटन</string>
     <string name="oneplus_search_keyword_switch">स्थानांतरण, डेटा माइग्रेशन</string>
     <string name="oneplus_search_keyword_theme_settings">लॉक स्क्रीन अनुकूलन, वॉलपेपर, घड़ी की शैली, फ़िंगरप्रिंट एनिमेशन, Horizon Light, सिस्टम अनुकूलन, एक्सेंट रंग, आकार, फ़ॉन्ट, टोन, आइकन पैक</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">लॉक स्क्रीन कस्टमाइज़ेशन, वॉलपेपर, क्लॉक स्टाइल, घड़ी की शैली, फ़िंगरप्रिंट एनिमेशन, होराइज़न लाइट, सिस्टम अनुकूलन, एक्सेंट रंग, आकार, फ़ॉन्ट, टोन, आइकन पैक, इल्यूमिनेटिंग लाइट, नूआन्स डार्क, वाइब्रैंट टिंट, मैकलैरन</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">लॉक स्क्रीन अनुकूलन, वॉलपेपर, घड़ी स्टाइल, फ़िंगरप्रिंट एनिमेशन, Horizon Light, सिस्टम अनुकूलन, एक्सेंट रंग, आकार, फ़ॉन्ट, टोन, आइकन पैक, इल्यूमिनेटिंग लाइट, नूआन्स डार्क, वाइब्रैंट टिंट, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">स्क्रीनशॉट</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">अधिसूचनाएं,अनुभव,प्रोग्राम,सुधार</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">घड़ी की शैली</string>
     <string name="oneplus_theme_clock_snake_action">एम्बीएंट डिस्प्ले चालू करें</string>
     <string name="oneplus_theme_clock_snake_tip">एम्बीएंट डिस्प्ले चालू होने पर यह सुविधा उपलब्ध होगी</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">रंग कोड</string>
     <string name="oneplus_theme_drop_summary">संशोधन छोड़ें?</string>
     <string name="oneplus_theme_drop_title">एडिट मोड से बाहर जाएँ</string>
     <string name="oneplus_theme_entrance_summary">वॉलपेपर, एक्सेंट रंग, फ़ॉन्ट, टोन</string>
@@ -3756,8 +3755,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">अलार्म के सिवाय, कॉल और नोटिफ़िकेशन मौन हो जाएँगी और केवल कंपन पर सेट कर दी जाएँगी</string>
     <string name="oneplus_vibration_summary">अलार्म हमेशा बजेगा</string>
     <string name="oneplus_video_enhancer">वीडियो एन्हांसर</string>
-    <string name="oneplus_video_enhancer_footer">वीडियो प्ले करने के दौरान रंग गुणवत्ता बढ़ाएँ</string>
-    <string name="oneplus_video_enhancer_summary">वीडियो प्ले करने के दौरान रंग गुणवत्ता बढ़ाएँ</string>
+    <string name="oneplus_video_enhancer_footer">वीडियो प्ले करने के दौरान रंग गुणवत्ता बेहतर बनाएँ</string>
+    <string name="oneplus_video_enhancer_summary">वीडियो प्ले करने के दौरान रंग गुणवत्ता बेहतर बनाएँ</string>
     <string name="oneplus_volume_keys_adjust">समायोजित करने के लिए वॉल्यूम बटनों का उपयोग करें</string>
     <string name="oneplus_volume_keys_adjust_media">मीडिया वॉल्यूम</string>
     <string name="oneplus_volume_keys_adjust_ringtones">रिंगटोन वॉल्यूम</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">फ़ेस अनलॉक का उपयोग करने के लिए, पासवर्ड सेट करें</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">फ़ेस अनलॉक का उपयोग करने के लिए, पैटर्न सेट करें</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">फ़ेस अनलॉक का उपयोग करने के लिए, पिन सेट करें</string>
+    <string name="op_member_description">विशेष लाभ पाने के लिए अपने डिवाइस को बाइंड करें</string>
+    <string name="op_member_title">OnePlus अकाउंट में लॉगिन करें</string>
     <string name="op_not_disturb">\"परेशान न करें\" प्राथमिकताएँ</string>
     <string name="op_not_disturb_summary">कॉल और नोटीफ़िकेशन म्यूट करें और वाइब्रेशन ऑफ़ करें, सिवाय अलार्म के</string>
     <string name="op_oneplus_roaming_summary">वैश्विक इंटरनेट पहुंच सेवाएं प्रदान करें</string>

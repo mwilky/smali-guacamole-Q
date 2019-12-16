@@ -270,10 +270,10 @@ Seu administrador pode monitorar e gerenciar configurações, acesso, apps e dad
     <string name="alarm_volume_title">Alarme</string>
     <string name="alarms_summary">A ativação do modo silencia as chamadas e notificações e desliga a vibração, exceto os alarmes e as suas exceções selecionadas.</string>
     <string name="alert_dialog_cancel">Cancelar</string>
-    <string name="alert_slider_settings_title">Configurações de prioridade</string>
-    <string name="alert_slider_silent_title">Configurações de silêncio</string>
-    <string name="alertslider_settings">Deslizador de alerta</string>
-    <string name="alertslider_settings_soc_tri_state">Deslizador de alerta</string>
+    <string name="alert_slider_settings_title">Definições de prioridade</string>
+    <string name="alert_slider_silent_title">Definições de silêncio</string>
+    <string name="alertslider_settings">Alert Slider</string>
+    <string name="alertslider_settings_soc_tri_state">Alert Slider</string>
     <string name="all_volume_title">Volumes</string>
     <string name="allow">Permitir</string>
     <string name="allow_bind_app_widget_activity_allow_bind">Após a criação do widget, %1$s poderá acessar todos os dados exibidos.</string>
@@ -320,7 +320,6 @@ Basta aproximar os dispositivos (normalmente de costas um para o outro) e tocar 
     <string name="aod_clock_minimalism">Minimalismo</string>
     <string name="aod_clock_none">Nenhum</string>
     <string name="aod_clock_select_style_text">Selecionar estilo do relógio</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Azul</string>
     <string name="aod_horizon_light_effect_2">Vermelho</string>
     <string name="aod_horizon_light_effect_3">Roxo</string>
@@ -1098,7 +1097,7 @@ Seleção"</string>
     <string name="color_mode_title">Cores</string>
     <string name="color_none">Nenhum</string>
     <string name="color_orange">Laranja</string>
-    <string name="color_picker_accent_color_message">Selecione uma cor de acento</string>
+    <string name="color_picker_accent_color_message">Selecione uma cor de destaque</string>
     <string name="color_picker_default">Predefinição</string>
     <string name="color_picker_led_color_message">Selecione a cor do LED</string>
     <string name="color_picker_message_default">Escolha a sua cor preferida.</string>
@@ -2901,7 +2900,7 @@ Isso também autoriza o app a ativar ou desativar o modo \"Não perturbe\" e alt
     <string name="oneplus_app_list_empty">Lista vazia</string>
     <string name="oneplus_app_locker_add_apps">Adicionar aplicações</string>
     <string name="oneplus_app_locker_catagory">Privacidade</string>
-    <string name="oneplus_app_locker_open_apps">Lista do bloqueador de Aplicações</string>
+    <string name="oneplus_app_locker_open_apps">Lista de aplicações protegidas</string>
     <string name="oneplus_app_locker_summary">Selecionar aplicações para encriptação</string>
     <string name="oneplus_app_locker_switch">Ocultar o conteúdo da notificação</string>
     <string name="oneplus_app_locker_switch_summary">O conteúdo da notificação será oculto das aplicações compatíveis com as Aplicações protegidas</string>
@@ -2967,7 +2966,7 @@ bateria desliga-se automaticamente quando o dispositivo está a carregar."</stri
     <string name="oneplus_bluetooth_volume_switch_summary">Sincroniza automaticamente o volume do auricular e do dispositivo quando ligado por Bluetooth</string>
     <string name="oneplus_broadcat_wifi_name">Nome da rede de transmissão (SSID)</string>
     <string name="oneplus_buttons_and_gestures_settings">Botões &amp; gestos</string>
-    <string name="oneplus_buttons_dashboard_summary">Controlo de deslize de alerta, navegação, gestos</string>
+    <string name="oneplus_buttons_dashboard_summary">Alert Slider, navegação, gestos</string>
     <string name="oneplus_buttons_settings">Configurações de botões</string>
     <string name="oneplus_buttons_settings_summary">Gesto de navegação</string>
     <string name="oneplus_call_information_broadcast">Dizer a ID do autor da chamada</string>
@@ -2986,7 +2985,7 @@ bateria desliga-se automaticamente quando o dispositivo está a carregar."</stri
     <string name="oneplus_clean_storage">Limpar</string>
     <string name="oneplus_clear_intenal_storage_data_summary">Incluindo música, fotos, vídeos e outros dados pessoais</string>
     <string name="oneplus_clear_intenal_storage_data_title">Apagar o armazenamento interno</string>
-    <string name="oneplus_colorful_mode_cannot_change_color_accent">O tom colorido só pode utilizar as cores do sistema</string>
+    <string name="oneplus_colorful_mode_cannot_change_color_accent">O tom colorido apenas pode utilizar as cores do sistema</string>
     <string name="oneplus_colorful_mode_title">Colorido</string>
     <string name="oneplus_compatibility_mode_summary">As aplicações de ecrã inteiro não podem usar a área do entalhe</string>
     <string name="oneplus_compatibility_mode_title">Modo de compatibilidade</string>
@@ -3002,7 +3001,7 @@ bateria desliga-se automaticamente quando o dispositivo está a carregar."</stri
     <string name="oneplus_connected_device_count">Há %1$s dispositivo ligado</string>
     <string name="oneplus_connected_device_management_title">Gestor de dispositivo ligado</string>
     <string name="oneplus_connected_devices_count">Há %1$s dispositivos ligados</string>
-    <string name="oneplus_connected_devices_dashboard_summary">NFC, transmitir, imprimir</string>
+    <string name="oneplus_connected_devices_dashboard_summary">NFC, projeção de ecrã, imprimir</string>
     <string name="oneplus_connected_devices_dashboard_title">Bluetooth &amp; ligação do dispositivo</string>
     <string name="oneplus_cpu">PROCESSADOR</string>
     <string name="oneplus_custom_time">Intervalo de tempo personalizado</string>
@@ -3073,9 +3072,9 @@ bateria desliga-se automaticamente quando o dispositivo está a carregar."</stri
     <string name="oneplus_e_sports_mode_title">Modo E-sports</string>
     <string name="oneplus_earphone">Auricular</string>
     <string name="oneplus_earphone_mode">Modo auricular</string>
-    <string name="oneplus_emergency_rescue_settings">Resgate de emergência</string>
+    <string name="oneplus_emergency_rescue_settings">Salvamento de emergência</string>
     <string name="oneplus_emergency_rescue_settings_summary">Liga automaticamente a pedir ajuda ao premir rapidamente o botão de alimentação</string>
-    <string name="oneplus_emergency_tap_power_gesture_tips">Disponível depois de modificar as configurações do BOTÃO LIGAR/DESLIGAR do Resgate de emergência</string>
+    <string name="oneplus_emergency_tap_power_gesture_tips">Disponível depois de modificar as configurações do BOTÃO LIGAR/DESLIGAR do Salvamento de emergência</string>
     <string name="oneplus_enroll_fingerprint_tips_summary">"1.Volte a inserir a sua impressão digital após cada substituição da película de proteção para assegurar a disponibilidade da impressão digital
 
 2.Num único processo de configuração, introduza a informação da impressão digital de um dedo apenas"</string>
@@ -3162,7 +3161,7 @@ Aviso: o Desbloqueio facial é menos seguro que utilizar a impressão digital ou
     <string name="oneplus_forum_award_title">Prémio</string>
     <string name="oneplus_fullscreen_back_guide_summary">Deslize para dentro a partir da margem inferior esquerda ou inferior direita do ecrã</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">Deslize para cima a partir da margem direita ou esquerda do fundo do ecrã</string>
-    <string name="oneplus_fullscreen_back_guide_title">Anterior</string>
+    <string name="oneplus_fullscreen_back_guide_title">Voltar</string>
     <string name="oneplus_fullscreen_disable_this_feature">Esta funcionalidade não pode ser utilizada quando os gestos de navegação estão ativados.</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"Vamos tentar utilizar o gesto que substitui o botão de retroceder.
 Deslize para cima a partir do lado esquerdo ou direito da parte inferior do ecrã."</string>
@@ -3311,7 +3310,7 @@ Nota: a sua impressão digital poderá ser menos segura que um padrão forte ou 
     <string name="oneplus_media_ring_summary">Silenciar volume de conteúdos media</string>
     <string name="oneplus_mobile_device_name_title">Nome do telefone</string>
     <string name="oneplus_mode_choose">Seleção de modo</string>
-    <string name="oneplus_mode_settings">Configurações do controle de alertas deslizante</string>
+    <string name="oneplus_mode_settings">Configurações do Alert Slider</string>
     <string name="oneplus_moderate">Média</string>
     <string name="oneplus_more">Mais</string>
     <string name="oneplus_motion_sensor_settings_title">Gestos do sistema</string>
@@ -3385,7 +3384,7 @@ Nota: a sua impressão digital poderá ser menos segura que um padrão forte ou 
     <string name="oneplus_notifications_3rd_calls">Notificações para chamadas de terceiros</string>
     <string name="oneplus_notifications_3rd_calls_summary">As chamadas de voz ou de vídeo de aplicações de redes sociais serão apresentadas como notificações</string>
     <string name="oneplus_notifications_and_vibration">Som e vibração de notificação</string>
-    <string name="oneplus_notifications_free">Grátis</string>
+    <string name="oneplus_notifications_free">Livre</string>
     <string name="oneplus_notifications_meet">Reunião</string>
     <string name="oneplus_o2_contributors">Contribuidores OxygenOS</string>
     <string name="oneplus_opfinger_input_completed_comfirm">Confirmar</string>
@@ -3572,23 +3571,23 @@ Nota: a sua impressão digital poderá ser menos segura que um padrão forte ou 
     <string name="oneplus_search_keyword_rotation_silent">sem microfone</string>
     <string name="oneplus_search_keyword_screen_color_mode">modo, cor</string>
     <string name="oneplus_search_keyword_show_pwd">apresentar, PIN, palavras-passe</string>
-    <string name="oneplus_search_keyword_soc_tri_state">controlo deslizante de alerta, silêncio, vibrar, tocar</string>
+    <string name="oneplus_search_keyword_soc_tri_state">alert slider, silêncio, vibrar, tocar</string>
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">não incomodar, interromper, interrupção, pausa, modo</string>
     <string name="oneplus_search_keyword_swap_navkeys">permutar os botões</string>
     <string name="oneplus_search_keyword_switch">transferir, migração de dados</string>
-    <string name="oneplus_search_keyword_theme_settings">PERSONALIZAÇÃO DO ECRÃ DE BLOQUEIO, Papéis de parede, Estilo do relógio, Animação da impressão digital, Horizon Light, PERSONALIZAÇÃO DO SISTEMA, Acento de cor, Formato, Tipo de letra, Tom, Conjunto de ícones, Luz de iluminação, Escuro matizado, Tonalidades vibrantes</string>
+    <string name="oneplus_search_keyword_theme_settings">PERSONALIZAÇÃO DO ECRÃ DE BLOQUEIO, Papéis de parede, Estilo do relógio, Animação da impressão digital, Horizon Light, PERSONALIZAÇÃO DO SISTEMA, Cor de Destaque, Formato, Tipo de letra, Tom, Conjunto de ícones, Luz de iluminação, Escuro matizado, Tonalidades vibrantes</string>
     <string name="oneplus_search_keyword_theme_settings_mcl">PERSONALIZAÇÃO DO ECRÃ DE BLOQUEIO, Papéis de parede, Estilo do relógio, Animação da impressão digital, Horizon Light, PERSONALIZAÇÃO DO SISTEMA, Acento de cor, Formato, Tipo de letra, Tom, Conjunto de ícones, Luz de iluminação, Escuro matizado, Tonalidades vibrantes, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">captura de ecrã</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">notificações, experiência, programa, melhoramento</string>
     <string name="oneplus_search_keyword_wallpaper_settings">papel de parede, bloquear ecrã</string>
     <string name="oneplus_search_keyword_wifi_direct">direto, P2P, ligação</string>
-    <string name="oneplus_search_keyword_wifi_display_settings_screen">lançado</string>
+    <string name="oneplus_search_keyword_wifi_display_settings_screen">projetar</string>
     <string name="oneplus_security_dashboard_summary">Impressão digital, desbloqueio facial, localização</string>
     <string name="oneplus_security_dashboard_summary_no_faceunlock">Impressão digital, localização</string>
     <string name="oneplus_security_detection_summary">Deteçãod e segurança para aplicações de fontes desconhecidas</string>
     <string name="oneplus_security_detection_title">Deteção de segurança OnePlus</string>
-    <string name="oneplus_security_lock_settings_summary">Preferências de desbloqueio, serviço de localização, bloqueador de aplicações</string>
+    <string name="oneplus_security_lock_settings_summary">Preferências de desbloqueio, serviço de localização, aplicações protegidas</string>
     <string name="oneplus_security_lock_settings_title">Segurança &amp; privacidade</string>
     <string name="oneplus_security_settings_fingerprint_enroll_error_dialog_title">Falha na configuração</string>
     <string name="oneplus_security_settings_fingerprint_enroll_introduction_message">"Basta premir a área de identificação da impressão digital para desbloquear o seu telefone, autorizar compras ou iniciar sessão em aplicações. 
@@ -3665,19 +3664,19 @@ Nota:
     <string name="oneplus_system_stability_summary">Permite que o OnePlus aceda de forma anónima aos registos do sistema. Em caso de erro, permite que seja enviado um relatório de erro com registos. Os registos serão usados apenas para a análise de erros do sistema e para a melhora da estabilidade</string>
     <string name="oneplus_system_stability_title">Programa de estabilidade do sistema</string>
     <string name="oneplus_system_vibrate">Vibração do sistema</string>
-    <string name="oneplus_theme_accent_color">Cor do tema</string>
+    <string name="oneplus_theme_accent_color">Cor de Destaque</string>
     <string name="oneplus_theme_accent_color_customization">PERSONALIZAÇÃO</string>
     <string name="oneplus_theme_accent_color_presetcolor">COR PREDEFINIDA</string>
-    <string name="oneplus_theme_accent_color_select">SELECIONAR COR DO TEMA</string>
+    <string name="oneplus_theme_accent_color_select">SELECIONAR COR DE DESTAQUE</string>
     <string name="oneplus_theme_apply_summary">Após aplicar este tema, as suas opções de personalização serão substituídas</string>
     <string name="oneplus_theme_apply_title">Quer aplicar este tema?</string>
     <string name="oneplus_theme_clock">Estilo do relógio</string>
     <string name="oneplus_theme_clock_snake_action">ATIVAR VISTA AMBIENTAL</string>
     <string name="oneplus_theme_clock_snake_tip">Esta funcionalidade estará disponível quando a vista ambiental estiver ligada</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">CÓDIGO DE CORES</string>
     <string name="oneplus_theme_drop_summary">Descartar as modificações?</string>
     <string name="oneplus_theme_drop_title">Sair do modo de edição</string>
-    <string name="oneplus_theme_entrance_summary">Papéis de parede, cor do tema, tipo de letra, tom</string>
+    <string name="oneplus_theme_entrance_summary">Papéis de parede, cor de destaque, tipo de letra, tom</string>
     <string name="oneplus_theme_entrance_title">Personalização</string>
     <string name="oneplus_theme_fingerprint">Animação da impressão digital</string>
     <string name="oneplus_theme_fingerprint_snake_action">ATIVAR IMPRESSÃO DIGITAL</string>
@@ -3713,15 +3712,15 @@ Nota:
     <string name="oneplus_timer_shutdown_disable_summary">Desativar a senha na inicialização para desbloquear esta funcionalidade</string>
     <string name="oneplus_timer_shutdown_summary">O seu telefone será automaticamente desligado dentro de %ds. Confirme para desligar imediatamente.</string>
     <string name="oneplus_to_select_assistant_app_dialog">Selecione a aplicação de assistência que quer ativar</string>
-    <string name="oneplus_tools_quicklaunch_summary">Modo de jogo, início rápido, bloqueio de aplicações, aplicações paralelas</string>
-    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Início rápido, cacifo de aplicações, aplicações paralelas</string>
-    <string name="oneplus_tools_summary">Modo de jogo, bloqueio de aplicações, aplicações paralelas</string>
+    <string name="oneplus_tools_quicklaunch_summary">Modo de jogo, início rápido, aplicações protegidas, aplicações paralelas</string>
+    <string name="oneplus_tools_quicklaunch_summary_no_gamingmode">Início rápido, aplicações protegidas, aplicações paralelas</string>
+    <string name="oneplus_tools_summary">Modo de jogo, aplicações protegidas, aplicações paralelas</string>
     <string name="oneplus_tools_summary_U30">Modo de jogo, modo de bolso, ativação/desativação agendadas</string>
-    <string name="oneplus_tools_summary_no_gamingmode">Cacifo de aplicações, aplicações paralelas</string>
+    <string name="oneplus_tools_summary_no_gamingmode">Aplicações protegidas, aplicações paralelas</string>
     <string name="oneplus_tools_title">Utilitários</string>
     <string name="oneplus_top_level_accounts_summary">OnePlus account, other accounts</string>
     <string name="oneplus_top_level_apps_and_notifs_summary">Aplicações predefinidas, permissões</string>
-    <string name="oneplus_top_level_buttons_and_gestures_summary">Controlo de deslize de alerta, barra de navegação e gestos</string>
+    <string name="oneplus_top_level_buttons_and_gestures_summary">Alert Slider, barra de navegação e gestos</string>
     <string name="oneplus_top_level_cloud_h2_summary">Sincronizar dados com a nuvem, Localizar Telemóvel</string>
     <string name="oneplus_top_level_cloud_o2_summary">Sincronizar dados com a nuvem</string>
     <string name="oneplus_top_level_connected_summary">NFC, projeção de ecrã, tocar e pagar</string>
@@ -3796,7 +3795,7 @@ Definir a rede como ocultada não irá alterar as definições do router."</stri
     <string name="onplus_software_version_info">Versão do software</string>
     <string name="onscreen_keyboard_settings_summary">Configurações do teclado virtual</string>
     <string name="op_advanced_settings">Avançado</string>
-    <string name="op_android_mode_cannot_change_color_accent">O tema predefinido só pode utilizar o tema de cores do sistema</string>
+    <string name="op_android_mode_cannot_change_color_accent">O tema predefinido apenas pode utilizar o tema de cores do sistema</string>
     <string name="op_app_already_uninstalled">Desinstalado</string>
     <string name="op_audio_settings">Sintonizador de áudio</string>
     <string name="op_china_mobile">CMCC</string>
@@ -3829,6 +3828,8 @@ Definir a rede como ocultada não irá alterar as definições do router."</stri
     <string name="op_lockpassword_choose_your_password_header_for_face">Para utilizar o Desbloqueio facial, defina uma palavra-passe</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Para utilizar o Desbloqueio facial, defina o padrão</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Para utilizar o Desbloqueio facial, defina o PIN</string>
+    <string name="op_member_description">Associe o seu dispositivo para obter benefícios exclusivos</string>
+    <string name="op_member_title">Iniciar sessão na conta OnePlus</string>
     <string name="op_not_disturb">Preferências de Não Incomodar</string>
     <string name="op_not_disturb_summary">Desligar as notificações e vibração das chamadas, exceto para os alarmes</string>
     <string name="op_oneplus_roaming_summary">Prestar serviços de acesso à Internet globais</string>
@@ -3856,13 +3857,13 @@ Definir a rede como ocultada não irá alterar as definições do router."</stri
     <string name="op_sim_cord_summary">Cartão SIM predefinido, utilização da largura de banda</string>
     <string name="op_sim_name_with_prefix">  (%1$s)</string>
     <string name="op_sms_ringtone">Toque de SMS</string>
-    <string name="op_starwar_mode_cannot_change_color_accent">O tema Star Wars só pode utilizar o tema de cores do sistema</string>
+    <string name="op_starwar_mode_cannot_change_color_accent">O tema Star Wars apenas pode utilizar o tema de cores do sistema</string>
     <string name="op_starwar_mode_title">Star Wars</string>
     <string name="op_storage">Armazenamento e memória</string>
     <string name="op_system_dashboard_summary">Idiomas, hora, reposição, atualizações</string>
     <string name="op_tcp_timestamps_randomization_dialog_title">Selecione o marcador de carimbos de hora aleatórios TCP</string>
     <string name="op_tcp_timestamps_randomization_title">Marcador de carimbos de hora aleatórios TCP</string>
-    <string name="op_theme_2__cannot_change_color_accent">O tema The Avengers apenas pode utilizar o tema das cores do sistema</string>
+    <string name="op_theme_2__cannot_change_color_accent">O tema The Avengers apenas pode utilizar o tema de cores do sistema</string>
     <string name="op_theme_2__title">The Avengers</string>
     <string name="op_theme_3_cannot_change_color_accent">O tema McLaren apenas pode utilizar o tema de cores do sistema</string>
     <string name="op_theme_3_title">McLaren</string>
@@ -3873,7 +3874,7 @@ Definir a rede como ocultada não irá alterar as definições do router."</stri
 ©2014 CNES / Astrium, DigitalGlobe, Bluesky 
 
 ©2016 Hampus Olsson"</string>
-    <string name="op_wifi_display_summary">Transmitir</string>
+    <string name="op_wifi_display_summary">Projetar</string>
     <string name="op_wifi_verbose_multi_broadcast_summary">Quando em standby, as especificações WLAN Multi/Radiodifusão para aplicações que ativam a WLAN e consomem recursos do sistema se o filtro não estiver ligado, resultando em descarga excessiva da bateria.</string>
     <string name="op_wifi_verbose_multi_broadcast_title">Filtro de Multi/radiodifusão aplicação WLAN</string>
     <string name="openid_dialog_reset">REPOR</string>
@@ -4783,7 +4784,7 @@ Uma credencial confiável instalada no dispositivo permite isso."</string>
     <string name="status_bar_settings_alarm_title">Alarme</string>
     <string name="status_bar_settings_auto_rotation_title">Rotação automática do ecrã</string>
     <string name="status_bar_settings_bluetooth_title">Bluetooth</string>
-    <string name="status_bar_settings_cast_title">Elenco</string>
+    <string name="status_bar_settings_cast_title">Projetar</string>
     <string name="status_bar_settings_cellular_title">Dados de telemóvel</string>
     <string name="status_bar_settings_dnd_title">Não incomodar</string>
     <string name="status_bar_settings_headset_title">Auriculares</string>
@@ -5114,7 +5115,7 @@ Um método do Google para sincronizar dados a fim de permitir acesso aos seus co
     <string name="tethering_hardware_offload_summary">Usar aceleração de hardware de tethering quando disponível</string>
     <string name="tethering_help_button_text">Ajuda</string>
     <string name="tethering_settings_not_available">As configurações de tethering não estão disponíveis para este usuário</string>
-    <string name="theme_accent_color_title">Cor do tema</string>
+    <string name="theme_accent_color_title">Cor de Destaque</string>
     <string name="theme_customization_accent_color_title">Cor de destaque</string>
     <string name="theme_customization_category">Aplicação de temas</string>
     <string name="theme_customization_device_default">Padrão do dispositivo</string>

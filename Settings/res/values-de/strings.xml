@@ -320,7 +320,6 @@ Halte die Geräte einfach aneinander, am besten Rückseite an Rückseite, und be
     <string name="aod_clock_minimalism">Minimalismus</string>
     <string name="aod_clock_none">Keine</string>
     <string name="aod_clock_select_style_text">Wählen Sie den Stil der Uhr</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Blau</string>
     <string name="aod_horizon_light_effect_2">Rot</string>
     <string name="aod_horizon_light_effect_3">Lila</string>
@@ -1120,8 +1119,8 @@ Auswahl"</string>
     <string name="condition_bg_data_title">Datensparmodus</string>
     <string name="condition_cellular_summary">Internet nur über WLAN verfügbar</string>
     <string name="condition_cellular_title">Mobile Daten sind deaktiviert</string>
-    <string name="condition_cloud_summary">Klicken Sie, um den Cloud-Service zu verwenden, damit Ihre Daten nicht verloren gehen</string>
-    <string name="condition_cloud_title">Mit der Nutzung des Cloud-Service beginnen</string>
+    <string name="condition_cloud_summary">Klicken Sie, um den Cloud-Dienst zu verwenden, damit Ihre Daten nicht verloren gehen</string>
+    <string name="condition_cloud_title">Mit der Nutzung des Cloud-Diensts beginnen</string>
     <string name="condition_cloud_turn_off">VERWERFEN</string>
     <string name="condition_device_muted_action_turn_on_sound">Ton einschalten</string>
     <string name="condition_device_muted_summary">Für Anrufe &amp; Benachrichtigungen</string>
@@ -3239,7 +3238,7 @@ Von der Mitte des unteren Bildschirmrands nach oben wischen, um jederzeit zum St
     <string name="oneplus_h2_contributors">Mitwirkende an HydrogenOS</string>
     <string name="oneplus_hand_up_proximity_summary">Bildschirm aktivieren, wenn Sie das Telefon in die Hand nehmen</string>
     <string name="oneplus_hand_up_proximity_title">Display beim Hochheben aktivieren</string>
-    <string name="oneplus_hand_up_to_show">Zum Anzeigen Ihr Telefon in die Hand nehmen</string>
+    <string name="oneplus_hand_up_to_show">Zum Aktivieren Ihr Telefon in die Hand nehmen</string>
     <string name="oneplus_haptic_feedback_no_app">Es sind keine unterstützten Spiele installiert</string>
     <string name="oneplus_haptic_feedback_no_app_tip">Sie könnten PUBG Mobile und Asphalt 9 installieren</string>
     <string name="oneplus_haptic_feedback_summary">Besseres haptisches Feedback für unterstützte Spiele liefern</string>
@@ -3574,8 +3573,8 @@ Hinweis: Ihr Fingerabdruck ist möglicherweise weniger sicher als ein starkes Mu
     <string name="oneplus_search_keyword_sounds_and_notifications_interruptions">bitte nich’t stören, unterbrechen, Unterbrechung, Pause, Modus</string>
     <string name="oneplus_search_keyword_swap_navkeys">Tasten vertauschen</string>
     <string name="oneplus_search_keyword_switch">übertragen, Datenmigration</string>
-    <string name="oneplus_search_keyword_theme_settings">ANPASSUNG DES SPERRBILDSCHIRMS, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, SYSTEMANPASSUNG, Akzentfarbe, Form, Schriftart, Ton, Icon Pack, Beleuchtung, Dunkel (nuanciert), Lebendige Töne</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ANPASSUNG DES SPERRBILDSCHIRMS, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, SYSTEMANPASSUNG, Akzentfarbe, Form, Schriftart, Ton, Icon Pack, Beleuchtung, Dunkel (nuanciert), Lebendige Töne, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings">ANPASSUNG DES SPERRBILDSCHIRMS, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, SYSTEMANPASSUNG, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ANPASSUNG DES SPERRBILDSCHIRMS, Bildschirmhintergründe, Uhr-Stil, Fingerabdruckanimation, Horizon Light, SYSTEMANPASSUNG, Akzentfarbe, Form, Schriftart, Tönung, Icon Pack, Leuchtender Hellton, Nuancierter Dunkelton, Lebendige Farbtöne, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">Screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">Benachrichtigungen, Erfahrung, Programm, Verbesserung</string>
@@ -3598,8 +3597,8 @@ Hinweis:
     <string name="oneplus_security_settings_fingerprint_toggle_category_title">Fingerabdruck auf Inaktivitätsdisplay anzeigen</string>
     <string name="oneplus_security_settings_fingerprint_toggle_one_title">Zum Anzeigen leicht Ihr Telefon bewegen</string>
     <string name="oneplus_security_settings_fingerprint_toggle_two_title">Zum Anzeigen auf den Bildschirm tippen</string>
-    <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">\"Doppeltippen zum Aufwecken\" ist aktiviert und \"Zum Anzeigen auf den Bildschirm tippen\" wird deaktiviert</string>
-    <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">\"Zum Anzeigen auf den Bildschirm tippen\" ist aktiviert und \"Doppeltippen zum Aufwecken\" wird deaktiviert</string>
+    <string name="oneplus_security_settings_fingerprint_toggle_two_toast_1">\"Zum Aktivieren doppeltippen\" ist aktiviert und \"Zum Aktivieren auf den Bildschirm tippen\" wird deaktiviert</string>
+    <string name="oneplus_security_settings_fingerprint_toggle_two_toast_2">\"Zum Aktivieren auf den Bildschirm tippen\" ist aktiviert und \"Zum Aktivieren doppeltippen\" wird deaktiviert</string>
     <string name="oneplus_select_fingerprint_animation_effect_1">Kosmos</string>
     <string name="oneplus_select_fingerprint_animation_effect_2">Wellen</string>
     <string name="oneplus_select_fingerprint_animation_effect_3">Streifen</string>
@@ -3672,10 +3671,10 @@ Hinweis:
     <string name="oneplus_theme_clock">Uhr-Stil</string>
     <string name="oneplus_theme_clock_snake_action">INAKTIVITÄTSDISPLAY AKTIVIEREN</string>
     <string name="oneplus_theme_clock_snake_tip">Diese Funktion ist verfügbar, wenn das Inaktivitätsdisplay aktiviert ist</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">FARBCODE</string>
     <string name="oneplus_theme_drop_summary">Änderungen verwerfen?</string>
     <string name="oneplus_theme_drop_title">Bearbeitungsmodus beenden</string>
-    <string name="oneplus_theme_entrance_summary">Bildschirmhintergründe, Akzentfarbe, Schriftart, Ton</string>
+    <string name="oneplus_theme_entrance_summary">Bildschirmhintergründe, Akzentfarbe, Schriftart, Tönung</string>
     <string name="oneplus_theme_entrance_title">Anpassung</string>
     <string name="oneplus_theme_fingerprint">Fingerabdruckanimation</string>
     <string name="oneplus_theme_fingerprint_snake_action">FINGERABDRUCK AKTIVIEREN</string>
@@ -3686,8 +3685,8 @@ Hinweis:
     <string name="oneplus_theme_lock_screen_customization">ANPASSUNG DES SPERRBILDSCHIRMS</string>
     <string name="oneplus_theme_preset">Voreingestelltes Thema</string>
     <string name="oneplus_theme_preset_color">Lebendige Töne</string>
-    <string name="oneplus_theme_preset_dark">Dunkel (nuanciert)</string>
-    <string name="oneplus_theme_preset_light">Beleuchtung</string>
+    <string name="oneplus_theme_preset_dark">Nuancierter Dunkelton</string>
+    <string name="oneplus_theme_preset_light">Leuchtender Hellton</string>
     <string name="oneplus_theme_preset_mcl">McLaren</string>
     <string name="oneplus_theme_preset_summary">Preset themes come with a wide range of accent colors, tones, etc</string>
     <string name="oneplus_theme_preset_summary_tmp">Preset themes come with a wide range of wallpapers, accent colors, tones, etc</string>
@@ -3698,11 +3697,11 @@ Hinweis:
     <string name="oneplus_theme_shape_effect_teardrop">Tropfen</string>
     <string name="oneplus_theme_shape_effect_title">FORM AUSWÄHLEN</string>
     <string name="oneplus_theme_system_customization">SYSTEMANPASSUNG</string>
-    <string name="oneplus_theme_tone">Ton</string>
+    <string name="oneplus_theme_tone">Tönung</string>
     <string name="oneplus_theme_tone_effect_color">Farbig</string>
     <string name="oneplus_theme_tone_effect_dark">Dunkel</string>
     <string name="oneplus_theme_tone_effect_light">Hell</string>
-    <string name="oneplus_theme_tone_effect_title">TON AUSWÄHLEN</string>
+    <string name="oneplus_theme_tone_effect_title">TÖNUNG AUSWÄHLEN</string>
     <string name="oneplus_theme_wallpaper">Hintergrundbilder</string>
     <string name="oneplus_three_screenshots_enable_summary">Mit drei Fingern über den Bildschirm streichen, um einen Screenshot zu machen</string>
     <string name="oneplus_three_screenshots_enable_title">Drei-Finger-Screenshot</string>
@@ -3756,8 +3755,8 @@ Hinweis: Die Gesichtsentsperrung ist möglicherweise unsicherer als Fingerabdruc
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Anrufe und Benachrichtigungen werden mit Ausnahme von Alarmen stummgeschaltet und nur Vibrieren wird aktiviert</string>
     <string name="oneplus_vibration_summary">Alarm immer zulassen</string>
     <string name="oneplus_video_enhancer">Video Enhancer</string>
-    <string name="oneplus_video_enhancer_footer">Farben während der Video-Wiedergabe optimieren</string>
-    <string name="oneplus_video_enhancer_summary">Farben während der Video-Wiedergabe optimieren</string>
+    <string name="oneplus_video_enhancer_footer">Die Farbe während der Video-Wiedergabe optimieren</string>
+    <string name="oneplus_video_enhancer_summary">Die Farbe während der Video-Wiedergabe optimieren</string>
     <string name="oneplus_volume_keys_adjust">Mithilfe von Lautstärke-Tasten anpassen</string>
     <string name="oneplus_volume_keys_adjust_media">Medienlautstärke</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Klingeltonlautstärke</string>
@@ -3802,7 +3801,7 @@ Wird das Netzwerk als verborgen eingestellt, ändern sich die Einstellungen Ihre
     <string name="op_china_unicom">CUCC</string>
     <string name="op_choose_lock_generic_title">Bildschirmsperre für Sicherung zuerst auswählen</string>
     <string name="op_cloud_service_summary">Ihre Kontakte, Notizen, Fotos usw. synchronisieren</string>
-    <string name="op_cloud_service_title">Cloud-Service</string>
+    <string name="op_cloud_service_title">Cloud-Dienst</string>
     <string name="op_confirm_enable_oem_unlock_text">ACHTUNG: Funktionen zum Schutz und zur Überprüfung des Geräts, z. B. Zahlung per Fingerabdruck und erweiterte DRM-Taste, funktionieren bei OEM-Entsperrung unter Umständen nicht.</string>
     <string name="op_custom_color_value">Farbwert</string>
     <string name="op_custom_color_value_edit">Einen Farbwert eingeben</string>
@@ -3827,6 +3826,8 @@ Wird das Netzwerk als verborgen eingestellt, ändern sich die Einstellungen Ihre
     <string name="op_lockpassword_choose_your_password_header_for_face">Passwort zum Verwenden der Gesichtsentsperrung (Face Unlock) festlegen</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Muster zum Verwenden der Gesichtsentsperrung (Face Unlock) festlegen</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">PIN zum Verwenden der Gesichtsentsperrung (Face Unlock) festlegen</string>
+    <string name="op_member_description">Ihr Gerät binden, um exklusive Vorteile zu erhalten</string>
+    <string name="op_member_title">Anmeldung beim OnePlus Konto</string>
     <string name="op_not_disturb">Präferenzen für Modus \"Nicht stören\"</string>
     <string name="op_not_disturb_summary">Anrufe und Benachrichtigungen stummschalten, Vibration deaktivieren außer Alarme</string>
     <string name="op_oneplus_roaming_summary">Globale Internet-Zugangsdienste bereitstellen</string>
@@ -5149,7 +5150,7 @@ Mit dieser Funktion von Google kannst du deine Daten synchronisieren, um auf dei
     <string name="touchscreen_camera_gesture_summary">Zum Öffnen der Kamera ein O zeichnen</string>
     <string name="touchscreen_camera_gesture_title">Kamera öffnen</string>
     <string name="touchscreen_double_tap_to_wake_gesture_summary">Tippen Sie zweimal auf den Bildschirm, um das Gerät zu aktivieren</string>
-    <string name="touchscreen_double_tap_to_wake_gesture_title">Doppeltippen zum Aufwecken</string>
+    <string name="touchscreen_double_tap_to_wake_gesture_title">Zum Aktivieren doppeltippen</string>
     <string name="touchscreen_flashlight_gesture_summary">Zum Ein- und Ausschalten des Blitzlichts ein V zeichnen</string>
     <string name="touchscreen_flashlight_gesture_title">Blitzlicht ein- und ausschalten</string>
     <string name="touchscreen_music_gesture_summary">Zum Einschalten oder Pausieren der Musik mit zwei Fingern ein || zeichnen. Durch Zeichnen von &lt; oder > zum vorigen oder nächsten Track wechseln</string>

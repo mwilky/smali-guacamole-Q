@@ -123,7 +123,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0067
+    const v2, 0x7f0d0068
 
     invoke-virtual {v1, v2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -131,7 +131,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0066
+    const v2, 0x7f0d0067
 
     invoke-virtual {v1, v2, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -201,12 +201,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f060290
+    const v0, 0x7f06029a
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f060291
+    const v0, 0x7f06029b
 
     :goto_0
     nop
@@ -215,12 +215,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f06051e
+    const v1, 0x7f060529
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f06051f
+    const v1, 0x7f06052a
 
     :goto_1
     nop
@@ -341,12 +341,12 @@
 
     if-eqz v12, :cond_3
 
-    const v12, 0x7f06028a
+    const v12, 0x7f060294
 
     goto :goto_3
 
     :cond_3
-    const v12, 0x7f06028b
+    const v12, 0x7f060295
 
     :goto_3
     nop
@@ -481,7 +481,7 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    const v0, 0x7f0a03cd
+    const v0, 0x7f0a03d1
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -491,7 +491,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mMessageBubble:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a03d1
+    const v0, 0x7f0a03d5
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -501,7 +501,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mMessageTextAndInfoView:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a03d0
+    const v0, 0x7f0a03d4
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 
@@ -511,7 +511,7 @@
 
     iput-object v0, p0, Lcom/android/settings/display/ConversationMessageView;->mMessageTextView:Landroid/widget/TextView;
 
-    const v0, 0x7f0a03cf
+    const v0, 0x7f0a03d3
 
     invoke-virtual {p0, v0}, Lcom/android/settings/display/ConversationMessageView;->findViewById(I)Landroid/view/View;
 

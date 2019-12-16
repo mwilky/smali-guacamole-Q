@@ -107,7 +107,7 @@
 
     if-eqz v1, :cond_2
 
-    const v2, 0x7f121269
+    const v2, 0x7f121279
 
     goto :goto_1
 
@@ -116,7 +116,7 @@
 
     if-nez v1, :cond_3
 
-    const v2, 0x7f121268
+    const v2, 0x7f121278
 
     goto :goto_1
 
@@ -125,12 +125,12 @@
 
     if-eqz v1, :cond_4
 
-    const v2, 0x7f121267
+    const v2, 0x7f121277
 
     goto :goto_1
 
     :cond_4
-    const v2, 0x7f121266
+    const v2, 0x7f121276
 
     :goto_1
     iget-object v3, p0, Lcom/android/settings/location/LocationScanningPreferenceController;->mContext:Landroid/content/Context;

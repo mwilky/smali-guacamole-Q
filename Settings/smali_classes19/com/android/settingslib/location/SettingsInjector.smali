@@ -75,6 +75,38 @@
     return-object v0
 .end method
 
+.method private hasMultipleUsers(Landroid/content/Context;)Z
+    .locals 2
+
+    const-string v0, "user"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/UserManager;
+
+    invoke-virtual {v0}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+.end method
+
 .method private static parseAttributes(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;Landroid/content/res/Resources;Landroid/util/AttributeSet;)Lcom/android/settingslib/location/InjectedSetting;
     .locals 8
 
@@ -276,7 +308,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -356,9 +388,29 @@
     invoke-virtual {v2, v7, v5}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    goto :goto_0
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    const/4 v6, 0x3
+
+    if-ge v5, v6, :cond_3
+
+    iget-object v5, p0, Lcom/android/settingslib/location/SettingsInjector;->mContext:Landroid/content/Context;
+
+    invoke-direct {p0, v5}, Lcom/android/settingslib/location/SettingsInjector;->hasMultipleUsers(Landroid/content/Context;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    goto :goto_2
 
     :cond_3
+    goto :goto_0
+
+    :cond_4
+    :goto_2
     invoke-virtual {p0}, Lcom/android/settingslib/location/SettingsInjector;->reloadStatusMessages()V
 
     return-object v2

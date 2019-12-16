@@ -303,7 +303,7 @@
 
     iget v2, v0, Landroid/content/pm/ActivityInfo;->icon:I
 
-    const v3, 0x7f0d02c0
+    const v3, 0x7f0d02c2
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -579,7 +579,7 @@
 
     iget v5, v2, Landroid/content/pm/ActivityInfo;->icon:I
 
-    const v6, 0x7f0d02bf
+    const v6, 0x7f0d02c1
 
     iget-object v7, p0, Lcom/android/settings/shortcut/CreateShortcutPreferenceController;->mContext:Landroid/content/Context;
 

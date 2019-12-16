@@ -70,14 +70,14 @@
 
     if-nez v1, :cond_0
 
-    const v2, 0x7f12060d
+    const v2, 0x7f12060f
 
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setSummary(I)V
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f12060e
+    const v2, 0x7f120610
 
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setSummary(I)V
 

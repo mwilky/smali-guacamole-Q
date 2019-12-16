@@ -134,7 +134,7 @@
 
     invoke-super {p0}, Lcom/android/settings/biometrics/BiometricEnrollBase;->initViews()V
 
-    const v0, 0x7f0a0685
+    const v0, 0x7f0a0689
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -444,22 +444,55 @@
 
     invoke-virtual {p0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->updatePasswordQuality()V
 
+    invoke-virtual {p0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->isInMultiWindowMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "onCreate  isInMultiWindowMode"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const v1, 0x7f1206de
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
+
+    invoke-virtual {p0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->finish()V
+
+    return-void
+
+    :cond_2
     iget-boolean v1, p0, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->mNeedLaunchLock:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-boolean v1, p0, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->mHasPassword:Z
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     invoke-virtual {p0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->launchChooseLock()V
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v1, p0, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->mToken:[B
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
     invoke-virtual {p0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->getConfirmLockTitleResId()I
 
@@ -471,7 +504,7 @@
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->launchConfirmLock(IJ)V
 
-    :cond_3
+    :cond_4
     :goto_1
     return-void
 .end method
@@ -577,7 +610,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f120635
+    const v4, 0x7f120637
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

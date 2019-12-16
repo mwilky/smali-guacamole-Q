@@ -26,7 +26,6 @@ Vai tiešām vēlaties iespējot šo funkciju?"</string>
     <string name="aod_clock_minimalism">Minimālisms</string>
     <string name="aod_clock_none">Neviens</string>
     <string name="aod_clock_select_style_text">Atlasīt pulksteņa stilu</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Zila</string>
     <string name="aod_horizon_light_effect_2">Sarkana</string>
     <string name="aod_horizon_light_effect_3">Purpura</string>
@@ -86,7 +85,7 @@ Vai tiešām vēlaties iespējot šo funkciju?"</string>
     <string name="color_picker_unknown_label">Nezināms</string>
     <string name="condition_cloud_summary">Noklikšķiniet, lai izmantotu mākoņpakalpojumu un nodrošinātu, ka jūsu dati netiks pazaudēti</string>
     <string name="condition_cloud_title">Sākt izmantot mākoņpakalpojumu</string>
-    <string name="condition_cloud_turn_off">NERĀDĪT</string>
+    <string name="condition_cloud_turn_off">NORAIDĪT</string>
     <string name="condition_hotspot_summary">Pārvietojamais Wi-Fi tīklājs %1$s ir aktīvs, šīs ierīces Wi-Fi tīkls ir izslēgts.</string>
     <string name="condition_hotspot_title">Tīklājs ir ieslēgts</string>
     <string name="crypt_failed_factory_content">Jūsu tālruņa krātuve ir bojāta. Lūdzu, lejupielādējiet aparātprogrammatūras pakotni, lai veiktu labojumus.</string>
@@ -330,7 +329,7 @@ Enerģijas taupīšanas režīms izslēdzas automātiski, kad ierīce uzlādēja
     <string name="oneplus_cpu">PROCESORS</string>
     <string name="oneplus_custom_time">Individuāls laika posms</string>
     <string name="oneplus_customization">Navigācijas joslas pielāgošana</string>
-    <string name="oneplus_customization_summary">Pieturēšana, dubultskāriens</string>
+    <string name="oneplus_customization_summary">Piespiešana, dubultskāriens</string>
     <string name="oneplus_customization_summary_hide_navbar">Piespiešana, dubultskāriens, navigācijas joslas paslēpšana</string>
     <string name="oneplus_data_usage_control_title">Datu lietojuma kontrole</string>
     <string name="oneplus_dc_dimming_summary">DC aptumšošanas funkcija noregulē ekrāna spilgtumu, izmainot ekrāna ķēdes jaudu. Kad tā ir iespējota, ekrāna mirgošana zema spilgtuma apstākļos tiek samazināta. Taču atsevišķos gadījumos tā rezultātā krāsas var tikt neatbilstoši rādītas.</string>
@@ -841,7 +840,7 @@ Atlikuši %d mēģinājumi."</string>
     <string name="oneplus_schedule">Grafiks</string>
     <string name="oneplus_screen">EKRĀNS</string>
     <string name="oneplus_screen_better_cold">Auksts</string>
-    <string name="oneplus_screen_better_nature">Dabisks</string>
+    <string name="oneplus_screen_better_nature">Dabīgs</string>
     <string name="oneplus_screen_better_warm">Silts</string>
     <string name="oneplus_screen_color_mode_auto">Adaptīvie krāsu profili</string>
     <string name="oneplus_screen_color_mode_default">Display-P3 (pēc noklusējuma)</string>
@@ -997,7 +996,7 @@ Piezīme.
     <string name="oneplus_theme_clock">Pulksteņa stils</string>
     <string name="oneplus_theme_clock_snake_action">IESLĒGT AMBIENTO DISPLEJU</string>
     <string name="oneplus_theme_clock_snake_tip">Šī funkcija ir pieejama, kad ir ieslēgts ambientais displejs</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">KRĀSAS KODS</string>
     <string name="oneplus_theme_drop_summary">Vai atmest izmaiņas?</string>
     <string name="oneplus_theme_drop_title">Iziet no rediģēšanas režīma</string>
     <string name="oneplus_theme_entrance_summary">Fona tapetes, akcentu krāsa, fonts, tonis</string>
@@ -1081,8 +1080,8 @@ Piezīme. Šāda atbloķēšana var būt nedrošāka par pirkstu nospiedumu, PIN
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Zvaniem un paziņojumiem tiks izslēgta skaņa, iestatot tiem tikai vibrācijas režīmu, izņemot modinātājus</string>
     <string name="oneplus_vibration_summary">Modinātājs vienmēr tiks atskaņots</string>
     <string name="oneplus_video_enhancer">Video uzlabotājs</string>
-    <string name="oneplus_video_enhancer_footer">Uzlabojiet krāsu, spēlējot video spēles</string>
-    <string name="oneplus_video_enhancer_summary">Uzlabojiet krāsu, spēlējot video spēles</string>
+    <string name="oneplus_video_enhancer_footer">Uzlabojiet krāsu, atskaņojot video</string>
+    <string name="oneplus_video_enhancer_summary">Uzlabojiet krāsu, atskaņojot video</string>
     <string name="oneplus_volume_keys_adjust">Izmantojiet skaļuma regulēšanas pogas, lai to pielāgotu</string>
     <string name="oneplus_volume_keys_adjust_media">Multivides skaļums</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Zvana signāla skaļums</string>
@@ -1151,6 +1150,8 @@ Iestatot tīkla paslēpšanu, netiks mainīti jūsu maršrutētāja iestatījumi
     <string name="op_lockpassword_choose_your_password_header_for_face">Lai izmantotu atbloķēšanu ar seju, iestatiet paroli</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Lai izmantotu atbloķēšanu ar seju, iestatiet rakstu</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Lai izmantotu atbloķēšanu ar seju, iestatiet PIN kodu</string>
+    <string name="op_member_description">Sasaistiet savu ierīci, lai iegūtu īpašas priekšrocības</string>
+    <string name="op_member_title">Pieteikties OnePlus kontā</string>
     <string name="op_not_disturb">Režīma Netraucēt preferences</string>
     <string name="op_not_disturb_summary">Izslēgt skaņu zvaniem un paziņojumiem, kā arī izslēgt vibrāciju, izņemot modinātājus</string>
     <string name="op_oneplus_roaming_summary">Nodrošina interneta piekļuves pakalpojumus visā pasaulē</string>

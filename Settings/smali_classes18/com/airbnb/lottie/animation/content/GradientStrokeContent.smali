@@ -247,8 +247,6 @@
 
     check-cast v0, [Ljava/lang/Integer;
 
-    check-cast v0, [Ljava/lang/Integer;
-
     array-length v1, p1
 
     array-length v2, v0
@@ -443,109 +441,29 @@
 
     move-result-object v15
 
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
+    iget v14, v3, Landroid/graphics/PointF;->x:F
 
-    iget v7, v7, Landroid/graphics/RectF;->left:F
+    iget v13, v3, Landroid/graphics/PointF;->y:F
 
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
+    iget v12, v4, Landroid/graphics/PointF;->x:F
 
-    invoke-virtual {v8}, Landroid/graphics/RectF;->width()F
-
-    move-result v8
-
-    const/high16 v9, 0x40000000    # 2.0f
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v3, Landroid/graphics/PointF;->x:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v14, v7
-
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    iget v7, v7, Landroid/graphics/RectF;->top:F
-
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    invoke-virtual {v8}, Landroid/graphics/RectF;->height()F
-
-    move-result v8
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v3, Landroid/graphics/PointF;->y:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v13, v7
-
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    iget v7, v7, Landroid/graphics/RectF;->left:F
-
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    invoke-virtual {v8}, Landroid/graphics/RectF;->width()F
-
-    move-result v8
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v4, Landroid/graphics/PointF;->x:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v12, v7
-
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    iget v7, v7, Landroid/graphics/RectF;->top:F
-
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    invoke-virtual {v8}, Landroid/graphics/RectF;->height()F
-
-    move-result v8
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v4, Landroid/graphics/PointF;->y:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v11, v7
+    iget v11, v4, Landroid/graphics/PointF;->y:F
 
     new-instance v16, Landroid/graphics/LinearGradient;
 
-    int-to-float v8, v14
-
-    int-to-float v9, v13
-
-    int-to-float v10, v12
-
-    int-to-float v7, v11
-
     sget-object v17, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    move/from16 v18, v7
 
     move-object/from16 v7, v16
 
-    move/from16 v19, v11
+    move v8, v14
 
-    move/from16 v11, v18
+    move v9, v13
 
-    move/from16 v18, v12
+    move v10, v12
+
+    move/from16 v18, v11
+
+    move/from16 v19, v12
 
     move-object v12, v6
 
@@ -630,95 +548,21 @@
 
     move-result-object v14
 
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
+    iget v15, v3, Landroid/graphics/PointF;->x:F
 
-    iget v7, v7, Landroid/graphics/RectF;->left:F
+    iget v13, v3, Landroid/graphics/PointF;->y:F
 
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
+    iget v12, v4, Landroid/graphics/PointF;->x:F
 
-    invoke-virtual {v8}, Landroid/graphics/RectF;->width()F
+    iget v11, v4, Landroid/graphics/PointF;->y:F
 
-    move-result v8
+    sub-float v7, v12, v15
 
-    const/high16 v9, 0x40000000    # 2.0f
+    float-to-double v7, v7
 
-    div-float/2addr v8, v9
+    sub-float v9, v11, v13
 
-    add-float/2addr v7, v8
-
-    iget v8, v3, Landroid/graphics/PointF;->x:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v15, v7
-
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    iget v7, v7, Landroid/graphics/RectF;->top:F
-
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    invoke-virtual {v8}, Landroid/graphics/RectF;->height()F
-
-    move-result v8
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v3, Landroid/graphics/PointF;->y:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v13, v7
-
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    iget v7, v7, Landroid/graphics/RectF;->left:F
-
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    invoke-virtual {v8}, Landroid/graphics/RectF;->width()F
-
-    move-result v8
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v4, Landroid/graphics/PointF;->x:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v12, v7
-
-    iget-object v7, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    iget v7, v7, Landroid/graphics/RectF;->top:F
-
-    iget-object v8, v0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->boundsRect:Landroid/graphics/RectF;
-
-    invoke-virtual {v8}, Landroid/graphics/RectF;->height()F
-
-    move-result v8
-
-    div-float/2addr v8, v9
-
-    add-float/2addr v7, v8
-
-    iget v8, v4, Landroid/graphics/PointF;->y:F
-
-    add-float/2addr v7, v8
-
-    float-to-int v11, v7
-
-    sub-int v7, v12, v15
-
-    int-to-double v7, v7
-
-    sub-int v9, v11, v13
-
-    int-to-double v9, v9
+    float-to-double v9, v9
 
     invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->hypot(DD)D
 
@@ -728,13 +572,13 @@
 
     new-instance v16, Landroid/graphics/RadialGradient;
 
-    int-to-float v8, v15
-
-    int-to-float v9, v13
-
     sget-object v17, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
     move-object/from16 v7, v16
+
+    move v8, v15
+
+    move v9, v13
 
     move/from16 v18, v10
 
@@ -862,6 +706,8 @@
     move-result-object v0
 
     :goto_0
+    invoke-virtual {v0, p2}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
+
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientStrokeContent;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;

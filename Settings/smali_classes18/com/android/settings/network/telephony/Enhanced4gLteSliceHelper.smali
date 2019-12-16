@@ -179,7 +179,7 @@
 
     iget-object v1, p0, Lcom/android/settings/network/telephony/Enhanced4gLteSliceHelper;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f12068d
+    const v2, 0x7f12068f
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

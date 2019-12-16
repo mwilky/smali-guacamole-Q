@@ -468,6 +468,8 @@
 
     move-result v2
 
+    mul-float/2addr v2, v1
+
     :goto_2
     iget-object v3, p0, Lcom/airbnb/lottie/animation/content/BaseStrokeContent;->paint:Landroid/graphics/Paint;
 

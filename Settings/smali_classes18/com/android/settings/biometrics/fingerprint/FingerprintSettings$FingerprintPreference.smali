@@ -36,7 +36,7 @@
 
     invoke-direct {p0, p1}, Lcom/android/settingslib/TwoTargetPreference;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0d01f4
+    const v0, 0x7f0d01f6
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintPreference;->setLayoutResource(I)V
 
@@ -66,7 +66,7 @@
 .method protected getSecondTargetResId()I
     .locals 1
 
-    const v0, 0x7f0d026e
+    const v0, 0x7f0d0270
 
     return v0
 .end method

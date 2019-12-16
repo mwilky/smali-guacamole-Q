@@ -318,7 +318,6 @@
     <string name="aod_clock_minimalism">مینیمالیسم</string>
     <string name="aod_clock_none">هیچ کدام</string>
     <string name="aod_clock_select_style_text">سبک ساعت را انتخاب کنید</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">آبی</string>
     <string name="aod_horizon_light_effect_2">قرمز</string>
     <string name="aod_horizon_light_effect_3">ارغوانی</string>
@@ -3171,7 +3170,7 @@
     <string name="oneplus_fullscreen_gesture_guide_will_enable">حرکات پیمایشی فعال خواهد شد</string>
     <string name="oneplus_fullscreen_home_guide_summary">انگشت خود را از لبهٔ پایینی صفحهٔ نمایش به سمت بالا بکشید</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">انگشت خود را از لبه وسطی پایین صفحه نمایش به سمت بالا بکشید</string>
-    <string name="oneplus_fullscreen_home_guide_title">صفحه اصلی</string>
+    <string name="oneplus_fullscreen_home_guide_title">صفحۀ اصلی</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">همچنان امکان فراخوانی فرمان‌های حرکتی پیمایش از لبۀ پایینی صفحۀ نمایش وجود دارد، لطفاً برای برگشت، انگشت خود را از لبۀ سمت چپ یا راست بکشید</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">مانند حالت عمودی، فرمان‌های حرکتی همچنان از پایین دستگاه انجام می‌شود</string>
     <string name="oneplus_fullscreen_landscape_guide_title">افقی</string>
@@ -3221,7 +3220,7 @@
     <string name="oneplus_gesture_to_answer_title">بالا بردن برای پاسخ دادن</string>
     <string name="oneplus_gesture_to_control_call_info">کنترل خودکار تماس‌ها با بلند کردن تلفن تا نزدیک گوش</string>
     <string name="oneplus_gesture_to_control_calls_summary">پاسخ دادن خودکار به تماس‌ها یا تغییر وضعیت به گوشی با فرمان حرکتی</string>
-    <string name="oneplus_gesture_to_control_calls_title">بالا بردن برای پاسخ دادن/تغییر وضعیت</string>
+    <string name="oneplus_gesture_to_control_calls_title">بلند کرند برای پاسخ دادن/تغییر وضعیت</string>
     <string name="oneplus_gesture_to_route_audio_summary">در صورت اتصال به هدست بلوتوث، تا 5 ثانیه پس از برقراری تماس یا پاسخ دادن به آن، بالا بردن تلفن تا نزدیک گوش باعث تغییر وضعیت تماس به گوشی تلفن می‌شود</string>
     <string name="oneplus_gesture_to_route_audio_title">بالا بردن برای تغییر وضعیت</string>
     <string name="oneplus_gestures_fast_entrance">میانبرها</string>
@@ -3240,7 +3239,7 @@
     <string name="oneplus_hand_up_to_show">بلند کردن تلفن برای بیدار شدن</string>
     <string name="oneplus_haptic_feedback_no_app">هیچ برنامۀ پشتیبانی‌شده‌ای نصب نشده است</string>
     <string name="oneplus_haptic_feedback_no_app_tip">می‌توانید PUBG Mobile و Asphalt 9 را نصب کنید</string>
-    <string name="oneplus_haptic_feedback_summary">ارائۀ بازخورد لمسی بهتر برای بازی‌های پشتیبانی‌شده</string>
+    <string name="oneplus_haptic_feedback_summary">بازخورد لمسی بهتری برای بازی‌های پشتیبانی‌شده ارائه می‌شود</string>
     <string name="oneplus_haptic_feedback_support">بازی‌های پشتیبانی‌شده</string>
     <string name="oneplus_haptic_feedback_tips">ارائۀ بازخورد لمسی برای برخی صحنه‌های بازی؛ فقط به بازی‌های پشتیبانی‌شده مربوط می‌شود</string>
     <string name="oneplus_haptic_feedback_title">بهبود بازخورد لمسی</string>
@@ -3509,7 +3508,7 @@
     <string name="oneplus_ringtone_and_vibrate">آهنگ زنگ و لرزش</string>
     <string name="oneplus_ringtones_oneplus_tune">زنگ وان پلاس</string>
     <string name="oneplus_rotation_silent_enable_summary">هنگام دریافت تماس‌ ورودی دستگاه را تکان دهید تا صدای آن قطع شود</string>
-    <string name="oneplus_rotation_silent_enable_title">برای قطع صدا، تکان دهید</string>
+    <string name="oneplus_rotation_silent_enable_title">وارونه کردن برای قطع صدا</string>
     <string name="oneplus_scene_mode">صحنه‌ها</string>
     <string name="oneplus_schedule">زمان‌بندی</string>
     <string name="oneplus_screen">صفحه‌نمایش</string>
@@ -3573,7 +3572,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">دکمه سواپ یا معاوضه</string>
     <string name="oneplus_search_keyword_switch">انتقال، انتقال دائمی داده</string>
     <string name="oneplus_search_keyword_theme_settings">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بستۀ آیکون‌ها، نور درخشان، تاریکی با جزئیات، ته‌رنگ‌های درخشان</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعتصفحۀ قفل، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بستۀ آیکون‌ها، نور درخشان، تاریکی با جزئیات، ته‌رنگ‌های درخشان، McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">سفارشی‌سازی صفحۀ قفل، تصاویر زمینه، سبک ساعت، پویانمایی اثر انگشت، Horizon Light، سفارشی‌سازی سیستم، رنگ برجسته، شکل، فونت، تون، بستۀ آیکون‌ها، نور درخشان، تاریکی با جزئیات، ته‌رنگ‌های درخشان، McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">عکس صفحه</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">اعلانات، تجربه، برنامه، بهبود</string>
@@ -3670,7 +3669,7 @@
     <string name="oneplus_theme_clock">سبک ساعت</string>
     <string name="oneplus_theme_clock_snake_action">روشن کردن صفحۀ نمایش محدود</string>
     <string name="oneplus_theme_clock_snake_tip">این قابلیت هنگام روشن بودن صفحۀ نمایش محدود در دسترس خواهد بود</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">کد رنگ</string>
     <string name="oneplus_theme_drop_summary">از تغییرات انجام‌شده صرف‌نظر می‌کنید؟</string>
     <string name="oneplus_theme_drop_title">خروج از حالت ویرایش</string>
     <string name="oneplus_theme_entrance_summary">تصاویر زمینه، رنگ برجسته، فونت، تون</string>
@@ -3754,8 +3753,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">تماس‌ها و اعلان‌ها به‌جز زنگ‌های ساعت، بی‌صدا می‌شوند و روی «فقط لرزش» تنظیم می‌شوند</string>
     <string name="oneplus_vibration_summary">هشدارا همیشه زنگ خواهد زد</string>
     <string name="oneplus_video_enhancer">بهبوددهنده ویدئو</string>
-    <string name="oneplus_video_enhancer_footer">بهبود رنگ هنگام پخش ویدئوها</string>
-    <string name="oneplus_video_enhancer_summary">بهبود رنگ هنگام پخش ویدئوها</string>
+    <string name="oneplus_video_enhancer_footer">بهبود رنگ هنگام پخش ویدیو</string>
+    <string name="oneplus_video_enhancer_summary">بهبود رنگ هنگام پخش ویدیو</string>
     <string name="oneplus_volume_keys_adjust">با استفاده از کلیدهای میزان صدا تنظیم کنید</string>
     <string name="oneplus_volume_keys_adjust_media">حجم صدای رسانه ها</string>
     <string name="oneplus_volume_keys_adjust_ringtones">حجم صدای زنگ</string>
@@ -3825,6 +3824,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">برای استفاده از «قفل‌گشایی با چهره»، رمز عبور تنظیم کنید</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">برای استفاده از «قفل‌گشایی با چهره»، الگو تنظیم کنید</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">برای استفاده از «قفل‌گشایی با چهره»، پین تنظیم کنید</string>
+    <string name="op_member_description">برای بهره‌مندی از مزایای انحصاری، دستگاه خود را متصل کنید</string>
+    <string name="op_member_title">وارد حساب OnePlus شوید</string>
     <string name="op_not_disturb">تنظیمات «مزاحم نشوید»</string>
     <string name="op_not_disturb_summary">بی‌صدا کردن تماس‌ها و اعلان‌ها و خاموش کردن لرزش، به جز برای زنگ‌های هشدار</string>
     <string name="op_oneplus_roaming_summary">ارائه خدمات دسترسی به اینترنت جهانی</string>

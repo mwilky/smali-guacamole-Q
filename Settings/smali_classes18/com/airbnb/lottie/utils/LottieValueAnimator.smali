@@ -231,7 +231,7 @@
 .end method
 
 .method public doFrame(J)V
-    .locals 10
+    .locals 11
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->postFrameCallback()V
 
@@ -248,67 +248,55 @@
     goto/16 :goto_6
 
     :cond_0
-    move-wide v0, p1
+    const-string v0, "LottieValueAnimator#doFrame"
 
-    iget-wide v2, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->lastFrameTimeNs:J
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
-    const-wide/16 v4, 0x0
+    move-wide v1, p1
 
-    cmp-long v6, v2, v4
+    iget-wide v3, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->lastFrameTimeNs:J
 
-    if-nez v6, :cond_1
+    const-wide/16 v5, 0x0
+
+    cmp-long v7, v3, v5
+
+    if-nez v7, :cond_1
 
     goto :goto_0
 
     :cond_1
-    sub-long v4, v0, v2
+    sub-long v5, v1, v3
 
     :goto_0
-    move-wide v2, v4
+    move-wide v3, v5
 
     invoke-direct {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getFrameDurationNs()F
 
-    move-result v4
+    move-result v5
 
-    long-to-float v5, v2
+    long-to-float v6, v3
 
-    div-float/2addr v5, v4
+    div-float/2addr v6, v5
 
-    iget v6, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+    iget v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
 
     invoke-direct {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->isReversed()Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_2
+    if-eqz v8, :cond_2
 
-    neg-float v7, v5
+    neg-float v8, v6
 
     goto :goto_1
 
     :cond_2
-    move v7, v5
+    move v8, v6
 
     :goto_1
-    add-float/2addr v6, v7
+    add-float/2addr v7, v8
 
-    iput v6, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
-
-    iget v6, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
-
-    invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMinFrame()F
-
-    move-result v7
-
-    invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMaxFrame()F
-
-    move-result v8
-
-    invoke-static {v6, v7, v8}, Lcom/airbnb/lottie/utils/MiscUtils;->contains(FFF)Z
-
-    move-result v6
-
-    xor-int/lit8 v6, v6, 0x1
+    iput v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
 
     iget v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
 
@@ -320,88 +308,104 @@
 
     move-result v9
 
-    invoke-static {v7, v8, v9}, Lcom/airbnb/lottie/utils/MiscUtils;->clamp(FFF)F
+    invoke-static {v7, v8, v9}, Lcom/airbnb/lottie/utils/MiscUtils;->contains(FFF)Z
 
     move-result v7
 
-    iput v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+    xor-int/lit8 v7, v7, 0x1
 
-    iput-wide v0, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->lastFrameTimeNs:J
+    iget v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMinFrame()F
+
+    move-result v9
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMaxFrame()F
+
+    move-result v10
+
+    invoke-static {v8, v9, v10}, Lcom/airbnb/lottie/utils/MiscUtils;->clamp(FFF)F
+
+    move-result v8
+
+    iput v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+
+    iput-wide v1, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->lastFrameTimeNs:J
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->notifyUpdate()V
 
-    if-eqz v6, :cond_7
-
-    invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getRepeatCount()I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_4
-
-    iget v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->repeatCount:I
+    if-eqz v7, :cond_7
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getRepeatCount()I
 
     move-result v8
 
-    if-lt v7, v8, :cond_4
+    const/4 v9, -0x1
 
-    iget v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->speed:F
+    if-eq v8, v9, :cond_4
 
-    const/4 v8, 0x0
+    iget v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->repeatCount:I
 
-    cmpg-float v7, v7, v8
+    invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getRepeatCount()I
 
-    if-gez v7, :cond_3
+    move-result v9
+
+    if-lt v8, v9, :cond_4
+
+    iget v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->speed:F
+
+    const/4 v9, 0x0
+
+    cmpg-float v8, v8, v9
+
+    if-gez v8, :cond_3
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMinFrame()F
 
-    move-result v7
+    move-result v8
 
     goto :goto_2
 
     :cond_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMaxFrame()F
 
-    move-result v7
+    move-result v8
 
     :goto_2
-    iput v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+    iput v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->removeFrameCallback()V
 
     invoke-direct {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->isReversed()Z
 
-    move-result v7
+    move-result v8
 
-    invoke-virtual {p0, v7}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->notifyEnd(Z)V
+    invoke-virtual {p0, v8}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->notifyEnd(Z)V
 
     goto :goto_5
 
     :cond_4
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->notifyRepeat()V
 
-    iget v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->repeatCount:I
+    iget v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->repeatCount:I
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v8, v8, 0x1
 
-    iput v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->repeatCount:I
+    iput v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->repeatCount:I
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getRepeatMode()I
 
-    move-result v7
+    move-result v8
 
-    const/4 v8, 0x2
+    const/4 v9, 0x2
 
-    if-ne v7, v8, :cond_5
+    if-ne v8, v9, :cond_5
 
-    iget-boolean v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->speedReversedForRepeatMode:Z
+    iget-boolean v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->speedReversedForRepeatMode:Z
 
-    xor-int/lit8 v7, v7, 0x1
+    xor-int/lit8 v8, v8, 0x1
 
-    iput-boolean v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->speedReversedForRepeatMode:Z
+    iput-boolean v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->speedReversedForRepeatMode:Z
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->reverseAnimationSpeed()V
 
@@ -410,30 +414,32 @@
     :cond_5
     invoke-direct {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->isReversed()Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_6
+    if-eqz v8, :cond_6
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMaxFrame()F
 
-    move-result v7
+    move-result v8
 
     goto :goto_3
 
     :cond_6
     invoke-virtual {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->getMinFrame()F
 
-    move-result v7
+    move-result v8
 
     :goto_3
-    iput v7, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
+    iput v8, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->frame:F
 
     :goto_4
-    iput-wide v0, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->lastFrameTimeNs:J
+    iput-wide v1, p0, Lcom/airbnb/lottie/utils/LottieValueAnimator;->lastFrameTimeNs:J
 
     :cond_7
     :goto_5
     invoke-direct {p0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->verifyFrame()V
+
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
 

@@ -1,99 +1,62 @@
-.class synthetic Lcom/airbnb/lottie/LottieAnimationView$4;
-.super Ljava/lang/Object;
+.class Lcom/airbnb/lottie/LottieAnimationView$4;
+.super Lcom/airbnb/lottie/value/LottieValueCallback;
 .source "LottieAnimationView.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/airbnb/lottie/LottieAnimationView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/airbnb/lottie/LottieAnimationView;->addValueCallback(Lcom/airbnb/lottie/model/KeyPath;Ljava/lang/Object;Lcom/airbnb/lottie/value/SimpleLottieValueCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/airbnb/lottie/value/LottieValueCallback<",
+        "TT;>;"
+    }
+.end annotation
 
-# static fields
-.field static final synthetic $SwitchMap$com$airbnb$lottie$RenderMode:[I
+
+# instance fields
+.field final synthetic this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+.field final synthetic val$callback:Lcom/airbnb/lottie/value/SimpleLottieValueCallback;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Lcom/airbnb/lottie/value/SimpleLottieValueCallback;)V
+    .locals 0
 
-    invoke-static {}, Lcom/airbnb/lottie/RenderMode;->values()[Lcom/airbnb/lottie/RenderMode;
+    iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->val$callback:Lcom/airbnb/lottie/value/SimpleLottieValueCallback;
+
+    invoke-direct {p0}, Lcom/airbnb/lottie/value/LottieValueCallback;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/airbnb/lottie/value/LottieFrameInfo<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->val$callback:Lcom/airbnb/lottie/value/SimpleLottieValueCallback;
+
+    invoke-interface {v0, p1}, Lcom/airbnb/lottie/value/SimpleLottieValueCallback;->getValue(Lcom/airbnb/lottie/value/LottieFrameInfo;)Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$4;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
-
-    :try_start_0
-    sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$4;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
-
-    sget-object v1, Lcom/airbnb/lottie/RenderMode;->HARDWARE:Lcom/airbnb/lottie/RenderMode;
-
-    invoke-virtual {v1}, Lcom/airbnb/lottie/RenderMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$4;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
-
-    sget-object v1, Lcom/airbnb/lottie/RenderMode;->SOFTWARE:Lcom/airbnb/lottie/RenderMode;
-
-    invoke-virtual {v1}, Lcom/airbnb/lottie/RenderMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$4;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
-
-    sget-object v1, Lcom/airbnb/lottie/RenderMode;->AUTOMATIC:Lcom/airbnb/lottie/RenderMode;
-
-    invoke-virtual {v1}, Lcom/airbnb/lottie/RenderMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    :goto_2
-    return-void
+    return-object v0
 .end method

@@ -93,7 +93,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1214ee
+    const v2, 0x7f1214fe
 
     if-eqz v1, :cond_1
 
@@ -369,7 +369,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121518
+    const v2, 0x7f121528
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -379,7 +379,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1212ca
+    const v1, 0x7f1212da
 
     const/4 v2, 0x1
 
@@ -397,7 +397,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120616
+    const v1, 0x7f120618
 
     new-instance v2, Lcom/android/settings/dashboard/-$$Lambda$DashboardFeatureProviderImpl$6P-o9T84dGHpyBqqhzxbPIuOBk4;
 
@@ -558,7 +558,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f080571
+    const v3, 0x7f08057f
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -581,7 +581,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f08056e
+    const v3, 0x7f08057c
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -604,7 +604,7 @@
 
     iget-object v2, p0, Lcom/android/settings/dashboard/DashboardFeatureProviderImpl;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f080570
+    const v3, 0x7f08057e
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -723,9 +723,15 @@
 
     move/from16 v9, p7
 
-    if-nez v7, :cond_0
+    if-eqz v7, :cond_8
 
-    return-void
+    if-nez p1, :cond_0
+
+    move/from16 v11, p2
+
+    move-object/from16 v10, p6
+
+    goto/16 :goto_5
 
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroidx/fragment/app/FragmentActivity;->getApplicationContext()Landroid/content/Context;
@@ -906,6 +912,14 @@
 
     :cond_7
     :goto_4
+    return-void
+
+    :cond_8
+    move/from16 v11, p2
+
+    move-object/from16 v10, p6
+
+    :goto_5
     return-void
 .end method
 

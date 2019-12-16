@@ -320,7 +320,6 @@ Il vous suffit de rapprocher les appareil (en les plaçant dos à dos), puis d'a
     <string name="aod_clock_minimalism">Minimalisme</string>
     <string name="aod_clock_none">Aucune</string>
     <string name="aod_clock_select_style_text">"Sélectionner le style de l'horloge"</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Bleu</string>
     <string name="aod_horizon_light_effect_2">Rouge</string>
     <string name="aod_horizon_light_effect_3">Violet</string>
@@ -3049,7 +3048,7 @@ L'économiseur de batterie se désactive automatiquement quand votre téléphone
     <string name="oneplus_double_tap_power_gesture">Double appui sur le bouton d’alimentation pour</string>
     <string name="oneplus_double_tap_power_gesture_app">SÉLÉCTIONNER LA FONCTION</string>
     <string name="oneplus_double_tap_power_gesture_camera">Appareil photo</string>
-    <string name="oneplus_double_tap_power_gesture_wallet">Cartes magnétiques (Portefeuille)</string>
+    <string name="oneplus_double_tap_power_gesture_wallet">Passer des cartes (portefeuille)</string>
     <string name="oneplus_doze_summary_801">"Afficher l'heure et d'autres informations sur l'écran de veille"</string>
     <string name="oneplus_doze_title">Affichage en mode Veille</string>
     <string name="oneplus_doze_title_801">Affichage ambiant</string>
@@ -3216,15 +3215,15 @@ Pour vous rendre à tout moment sur l'écran d'accueil, balayez vers le haut dep
     <string name="oneplus_gesture_navigation_bar_title_for_bottom">Gestes de navigation (inférieur)</string>
     <string name="oneplus_gesture_navigation_bar_title_for_deprecated">Gestes de navigation (gauche et droite)</string>
     <string name="oneplus_gesture_of_answer_call_info">"Lorsque vous recevez un appel, vous pouvez y répondre simplement en portant le téléphone à l'oreille."</string>
-    <string name="oneplus_gesture_of_answer_call_summary">"Répondez automatiquement aux appels entrants simplement en portant le téléphone à l'oreille"</string>
+    <string name="oneplus_gesture_of_answer_call_summary">Répondez automatiquement aux appels entrants en portant le téléphone à votre oreille</string>
     <string name="oneplus_gesture_of_answer_call_title">"Répondez d'un geste aux appels"</string>
     <string name="oneplus_gesture_start_learning">"Démarrer l'apprentissage"</string>
-    <string name="oneplus_gesture_to_answer_summary">"Répondez automatiquement aux appels entrants simplement en portant le téléphone à l'oreille"</string>
+    <string name="oneplus_gesture_to_answer_summary">Répondez automatiquement aux appels entrants en portant le téléphone à votre oreille</string>
     <string name="oneplus_gesture_to_answer_title">Soulever pour répondre</string>
-    <string name="oneplus_gesture_to_control_call_info">Commandez automatiquement les appels en soulevant le téléphone à votre oreille</string>
+    <string name="oneplus_gesture_to_control_call_info">Commandez automatiquement les appels en portant le téléphone à votre oreille</string>
     <string name="oneplus_gesture_to_control_calls_summary">"Répondre automatiquement aux appels ou basculer vers l'écouteur au moyen d'un geste"</string>
     <string name="oneplus_gesture_to_control_calls_title">Soulever pour répondre/basculer</string>
-    <string name="oneplus_gesture_to_route_audio_summary">"Lorsqu'il est connecté au casque Bluetooth, dans les 5 s après avoir passé ou répondu à un appel, basculez l’appel vers l’écouteur du téléphone en soulevant le téléphone à votre oreille"</string>
+    <string name="oneplus_gesture_to_route_audio_summary">"Lorsqu'il est connecté au casque Bluetooth, dans les 5 s après avoir passé ou répondu à un appel, basculez l’appel vers l’écouteur du téléphone en portant le téléphone à votre oreille"</string>
     <string name="oneplus_gesture_to_route_audio_title">Soulever pour basculer</string>
     <string name="oneplus_gestures_fast_entrance">Raccourcis</string>
     <string name="oneplus_gestures_open_apps">Ouvrir des applications</string>
@@ -3348,7 +3347,7 @@ Remarque : votre empreinte digitale risque d'être moins sécurisée qu'un moti
     <string name="oneplus_no_choice">Aucune sonnerie sélectionnée</string>
     <string name="oneplus_no_device_connected">Aucun appareil connecté</string>
     <string name="oneplus_no_file_tips">Aucun fichier de sonnerie</string>
-    <string name="oneplus_no_supported_apps">Applications non prises en charge installées</string>
+    <string name="oneplus_no_supported_apps">Aucune application prise en charge installée</string>
     <string name="oneplus_noise_tips">Activer les vibrations</string>
     <string name="oneplus_none_default_camera">Pas de caméra par défaut</string>
     <string name="oneplus_none_default_email">"Pas d'application de messagerie par défaut"</string>
@@ -3672,7 +3671,7 @@ Remarque :
     <string name="oneplus_theme_clock">"Style d'horloge"</string>
     <string name="oneplus_theme_clock_snake_action">"ACTIVER L'AFFICHAGE AMBIANT"</string>
     <string name="oneplus_theme_clock_snake_tip">"Cette fonctionnalité sera disponible lorsque l'affichage ambiant est activé"</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">CODE COULEUR</string>
     <string name="oneplus_theme_drop_summary">Annuler les modifications ?</string>
     <string name="oneplus_theme_drop_title">Quitter le mode retouche</string>
     <string name="oneplus_theme_entrance_summary">"Fonds d'écran, couleur d'accentuation, police, tonalité"</string>
@@ -3756,8 +3755,8 @@ Remarque : la reconnaissance faciale peut être moins sécurisée qu'une emprei
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Désactiver les sons pour les appels et les notifications et définir sur vibrations uniquement, sauf pour les alarmes</string>
     <string name="oneplus_vibration_summary">"L'alarme sonne toujours"</string>
     <string name="oneplus_video_enhancer">Améliorateur de vidéo</string>
-    <string name="oneplus_video_enhancer_footer">Améliore les couleurs lors de la lecture des vidéos</string>
-    <string name="oneplus_video_enhancer_summary">Améliore les couleurs lors de la lecture des vidéos</string>
+    <string name="oneplus_video_enhancer_footer">Améliorer les couleurs lors de la lecture de vidéos</string>
+    <string name="oneplus_video_enhancer_summary">Améliorer les couleurs lors de la lecture de vidéos</string>
     <string name="oneplus_volume_keys_adjust">Veuillez ajuster au moyen des boutons du volume</string>
     <string name="oneplus_volume_keys_adjust_media">Volume multimédia</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Volume de la sonnerie</string>
@@ -3827,6 +3826,8 @@ La configuration du réseau comme étant masqué ne change pas les paramètres d
     <string name="op_lockpassword_choose_your_password_header_for_face">Pour utiliser le Déverrouillage facial, définissez le mot de passe</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Pour utiliser le Déverrouillage facial, définissez le motif</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Pour utiliser le Déverrouillage facial, définissez le code PIN</string>
+    <string name="op_member_description">"Lier votre appareil pour profiter d'avantages exclusifs"</string>
+    <string name="op_member_title">Connexion au compte OnePlus</string>
     <string name="op_not_disturb">Préférences de Ne pas déranger</string>
     <string name="op_not_disturb_summary">"Mettre vos appels et vos notifications en sourdine et désactiver les vibrations, à l'exception des alarmes"</string>
     <string name="op_oneplus_roaming_summary">"Offre des services d'accès mondial à Internet"</string>

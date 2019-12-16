@@ -3924,6 +3924,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">要使用人臉識別，請設定複雜密碼</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">要使用人臉識別，請設定圖案</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">要使用人臉識別，請設定 PIN 碼</string>
+    <string name="op_member_description">綁定設備以獲得專屬權益</string>
+    <string name="op_member_title">登錄一加賬號</string>
     <string name="op_more_settings">其他連接方式</string>
     <string name="op_nfc_how_it_works_content">"1.下載支援感應付款的應用；
 2.按照應用指引完成設定；

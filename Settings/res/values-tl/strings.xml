@@ -320,7 +320,6 @@ Paglapitin lang ang mga device (karaniwang magkatalikuran) at pagkatapos ay i-ta
     <string name="aod_clock_minimalism">Minimalism</string>
     <string name="aod_clock_none">Wala</string>
     <string name="aod_clock_select_style_text">Piliin ang estilo ng orasan</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Asul</string>
     <string name="aod_horizon_light_effect_2">Pula</string>
     <string name="aod_horizon_light_effect_3">Purple</string>
@@ -3242,7 +3241,7 @@ Upang pumunta sa home screen kahit anu mang oras, i-swipe pataas mula sa ibabang
     <string name="oneplus_hand_up_to_show">Kunin ang iyong telepono para maipakita</string>
     <string name="oneplus_haptic_feedback_no_app">Walang naka-install na mga suportadong laro</string>
     <string name="oneplus_haptic_feedback_no_app_tip">Maaari kang mag-install ng PUBG Mobile at Asphalt 9</string>
-    <string name="oneplus_haptic_feedback_summary">Magdulot ng mas mainam na haptic feedback para sa mga suportadong laro</string>
+    <string name="oneplus_haptic_feedback_summary">Magbigay ng mas magandang haptic na feedback para sa mga sinusuportahang laro</string>
     <string name="oneplus_haptic_feedback_support">Mga suportadong laro</string>
     <string name="oneplus_haptic_feedback_tips">Magdulot ng haptic feedback para sa mga payak na eksena ng laro, mailalapat lamang sa mga suportadong laro</string>
     <string name="oneplus_haptic_feedback_title">Pagpapabuti ng haptic feedback</string>
@@ -3348,7 +3347,7 @@ Paalala: Maaaring hindi gaanong secure ang iyong fingerprint kumpara sa isang ma
     <string name="oneplus_no_choice">Walang napiling ringtone</string>
     <string name="oneplus_no_device_connected">Walang device ang nakakonekta</string>
     <string name="oneplus_no_file_tips">Walang mga ringtone file</string>
-    <string name="oneplus_no_supported_apps">Walang naka-install na mga sinusuportahang app</string>
+    <string name="oneplus_no_supported_apps">Walang naka-install na sinusuportahang app</string>
     <string name="oneplus_noise_tips">Paganahin ang pagnginig</string>
     <string name="oneplus_none_default_camera">Walang default na kamera</string>
     <string name="oneplus_none_default_email">Walang default na mail app</string>
@@ -3575,7 +3574,7 @@ Paalala: Maaaring hindi gaanong secure ang iyong fingerprint kumpara sa isang ma
     <string name="oneplus_search_keyword_swap_navkeys">pagpalitin ang mga button</string>
     <string name="oneplus_search_keyword_switch">ilipat,paglilipat ng data</string>
     <string name="oneplus_search_keyword_theme_settings">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, Animation ng fingerprint, Horizon light, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, Animation ng fingerprint, Horizon light, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PAG-CUSTOMIZE SA LOCK SCREEN, Mga wallpaper, Estilo ng orasan, Animation ng fingerprint, Horizon Light, PAG-CUSTOMIZE SA SYSTEM, Kulay ng accent, Hugis, Font, Tone, Icon pack, Illuminating light, Nuanced dark, Vibrant tints, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">screenshot</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">mga notification,karanasan,program,pagpapahusay</string>
@@ -3672,7 +3671,7 @@ Paalala:
     <string name="oneplus_theme_clock">Estilo ng orasan</string>
     <string name="oneplus_theme_clock_snake_action">I-ON ANG AMBIENT DISPLAY</string>
     <string name="oneplus_theme_clock_snake_tip">Magiging available ang feature na ito kapag naka-on ang ambient display</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">CODE NG KULAY</string>
     <string name="oneplus_theme_drop_summary">I-discard ang mga pagbabago?</string>
     <string name="oneplus_theme_drop_title">Umalis sa edit mode</string>
     <string name="oneplus_theme_entrance_summary">Mga wallpaper, kulay ng accent, font, tono</string>
@@ -3827,6 +3826,8 @@ Kahit gawing nakatago ang network, hindi nito mababago ang mga setting ng iyong 
     <string name="op_lockpassword_choose_your_password_header_for_face">Para magamit ang Face Unlock, magtakda ng password</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Para magamit ang Face Unlock, magtakda ng pattern</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Para magamit ang Face Unlock, magtakda ng PIN</string>
+    <string name="op_member_description">I-bind ang iyong device para makakuha ng mga eksklusibong benepisyo</string>
+    <string name="op_member_title">Mag-log in sa OnePlus Account</string>
     <string name="op_not_disturb">Mga Naisin para sa Do Not Disturb</string>
     <string name="op_not_disturb_summary">I-mute ang mga tawag at notification at i-off ang pag-vibrate, maliban sa mga alarm</string>
     <string name="op_oneplus_roaming_summary">Magbigay ng mga serbisyo ng pag-access sa internet sa buong mundo</string>

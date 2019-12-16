@@ -15,9 +15,9 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f120582
+    const v1, 0x7f120584
 
-    const v2, 0x7f1212bd
+    const v2, 0x7f1212cd
 
     invoke-direct {p0, v1, v2, v0, v0}, Lcom/android/settings/datetime/timezone/BaseTimeZoneInfoPicker;-><init>(IIZZ)V
 

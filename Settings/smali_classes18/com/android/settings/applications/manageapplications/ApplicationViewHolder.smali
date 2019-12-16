@@ -77,7 +77,7 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDisabled:Landroid/widget/TextView;
 
-    const v0, 0x7f0a069c
+    const v0, 0x7f0a06a0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -157,7 +157,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120450
+    const v1, 0x7f120452
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -204,7 +204,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0d024b
+    const v2, 0x7f0d024d
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -232,7 +232,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0d0273
+    const v4, 0x7f0d0275
 
     const/4 v5, 0x1
 
@@ -246,7 +246,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0d0269
+    const v4, 0x7f0d026b
 
     invoke-virtual {v3, v4, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -369,7 +369,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDisabled:Landroid/widget/TextView;
 
-    const v1, 0x7f120b1b
+    const v1, 0x7f120b1d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -405,7 +405,7 @@
 
     iget-object v0, p0, Lcom/android/settings/applications/manageapplications/ApplicationViewHolder;->mDisabled:Landroid/widget/TextView;
 
-    const v1, 0x7f1205ec
+    const v1, 0x7f1205ee
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

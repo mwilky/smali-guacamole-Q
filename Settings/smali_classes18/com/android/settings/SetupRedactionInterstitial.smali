@@ -95,3 +95,19 @@
 
     return v0
 .end method
+
+.method protected onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/android/settings/SetupRedactionInterstitial;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/SetupWizardUtils;->getTheme(Landroid/content/Intent;)I
+
+    move-result p2
+
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/notification/RedactionInterstitial;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+
+    return-void
+.end method

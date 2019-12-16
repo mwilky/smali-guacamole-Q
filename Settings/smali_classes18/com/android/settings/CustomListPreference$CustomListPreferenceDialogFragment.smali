@@ -341,7 +341,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f120b98
+    const v0, 0x7f120b9b
 
     new-instance v1, Lcom/android/settings/CustomListPreference$CustomListPreferenceDialogFragment$1;
 

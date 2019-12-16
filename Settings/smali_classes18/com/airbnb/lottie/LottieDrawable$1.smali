@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/airbnb/lottie/LottieDrawable;-><init>()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/airbnb/lottie/LottieDrawable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -620,6 +620,7 @@
     <item type="id" name="gesture_tutorial_video" />
     <item type="id" name="ghost_view" />
     <item type="id" name="ghost_view_holder" />
+    <item type="id" name="glide_custom_view_target_tag" />
     <item type="id" name="gprs" />
     <item type="id" name="gps_group" />
     <item type="id" name="graph_label_group" />
@@ -763,6 +764,9 @@
     <item type="id" name="item_5" />
     <item type="id" name="item_6" />
     <item type="id" name="item_touch_helper_previous_elevation" />
+    <item type="id" name="iv_avatar_bg" />
+    <item type="id" name="iv_avatar_def" />
+    <item type="id" name="iv_avatar_tag" />
     <item type="id" name="keep" />
     <item type="id" name="key_faceunlock_swipe_up_mode" />
     <item type="id" name="key_faceunlock_swipe_up_mode_radiobutton" />
@@ -1662,10 +1666,13 @@
     <item type="id" name="tv" />
     <item type="id" name="tv_brightness_strong" />
     <item type="id" name="tv_color_temperature_strong" />
+    <item type="id" name="tv_content" />
     <item type="id" name="tv_filter_datetime" />
+    <item type="id" name="tv_new" />
     <item type="id" name="tv_redact_sensitive" />
     <item type="id" name="tv_show_all" />
     <item type="id" name="tv_summary_software_info" />
+    <item type="id" name="tv_title" />
     <item type="id" name="tv_title_brightness" />
     <item type="id" name="tv_title_color_temperature" />
     <item type="id" name="tv_title_software_info" />

@@ -59,7 +59,7 @@
 
     iget-object v1, p0, Lcom/android/settings/system/OPCollectDiagnosticsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120474
+    const v2, 0x7f120476
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -150,7 +150,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/system/OPCollectDiagnosticsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f120474
+    const v1, 0x7f120476
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

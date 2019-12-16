@@ -26,7 +26,6 @@
     <string name="aod_clock_minimalism">ਨਿਊਨਤਮ</string>
     <string name="aod_clock_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="aod_clock_select_style_text">ਘੜੀ ਦੀ ਸ਼ੈਲੀ ਚੁਣੋ</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">ਨੀਲਾ</string>
     <string name="aod_horizon_light_effect_2">ਲਾਲ</string>
     <string name="aod_horizon_light_effect_3">ਬੈਂਗਣੀ</string>
@@ -485,7 +484,7 @@
     <string name="oneplus_forum_award_title">ਇਨਾਮ</string>
     <string name="oneplus_fullscreen_back_guide_summary">ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਖੱਬੇ ਜਾਂ ਹੇਠਲੇ ਸੱਜੇ ਕਿਨਾਰੇ ਤੋਂ ਅੰਦਰਵਾਰ ਸਵਾਈਪ ਕਰੋ</string>
     <string name="oneplus_fullscreen_back_guide_summary_deprecated">ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਾਂ ਦੇ ਖੱਬੇ ਜਾਂ ਸੱਜੇ ਪਾਸੇ ਵੱਲੋਂ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
-    <string name="oneplus_fullscreen_back_guide_title">ਪਿੱਛੇ ਜਾਓ</string>
+    <string name="oneplus_fullscreen_back_guide_title">ਵਾਪਸ</string>
     <string name="oneplus_fullscreen_disable_this_feature">"ਨੈਵੀਗੇਸ਼ਨ ਜੈਸਚਰ ਸਮਰੱਥ ਕੀਤੇ ਹੋਣ 'ਤੇ ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਵਰਤਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।"</string>
     <string name="oneplus_fullscreen_gesture_guide_back">"ਆਓ ਪਿੱਛੇ ਜਾਣ ਲਈ ਵਰਤੇ ਜਾਣ ਵਾਲੇ ਬਟਨ ਦਾ ਕੰਮ ਕਰਨ ਵਾਲੇ ਇਸ਼ਾਰੇ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਦੇਖੀਏ।
 ਸਕ੍ਰੀਨ ਦੇ ਥੱਲੇ ਖੱਬਿਓਂ ਜਾਂ ਸੱਜਿਓਂ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ।"</string>
@@ -498,7 +497,7 @@
     <string name="oneplus_fullscreen_gesture_guide_will_enable">ਨੈਵੀਗੇਸ਼ਨ ਇਸ਼ਾਰੇ ਸਮਰੱਥ ਕੀਤੇ ਜਾਣਗੇ</string>
     <string name="oneplus_fullscreen_home_guide_summary">ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਕਿਨਾਰੇ ਤੋਂ ਉੱਪਰ ਸਵਾਈਪ ਕਰੋ</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਾਂ ਮੱਧ ਕਿਨਾਰੇ ਤੋਂ ਉੱਪਰ ਵੱਲ ਸਵਾਈਪ ਕਰੋ</string>
-    <string name="oneplus_fullscreen_home_guide_title">ਹੋਮ</string>
+    <string name="oneplus_fullscreen_home_guide_title">ਮੁੱਖ ਪੰਨਾ</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">ਨੈਵੀਗੇਸ਼ਨ ਜੈਸਚਰ ਹਾਲੇ ਵੀ ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਕਿਨਾਰੇ ਤੋਂ ਚਲਾਏ ਜਾ ਸਕਦੇ ਹਨ, ਕਿਰਪਾ ਕਰਕੇ ਖੱਬੇ ਜਾਂ ਸੱਜੇ ਕਿਨਾਰੇ ਤੋਂ ਵਾਪਸ ਜਾਣ ਲਈ ਸਵਾਈਪ ਕਰੋ</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">ਪੋਰਟਰੇਟ ਦੀ ਹੀ ਤਰ੍ਹਾਂ, ਨੈਵੀਗੇਸ਼ਨ ਜੈਸਚਰ ਹਾਲੇ ਵੀ ਡਿਵਾਈਸ ਦੇ ਹੇਠਾਂ ਤੋਂ ਹੀ ਹਨ</string>
     <string name="oneplus_fullscreen_landscape_guide_title">ਲੈਂਡਸਕੇਪ</string>
@@ -900,7 +899,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">ਸਵੈਪ ਬਟਨ</string>
     <string name="oneplus_search_keyword_switch">ਟ੍ਰਾਂਸਫਰ, ਡੇਟਾ ਮਾਈਗ੍ਰੇਸ਼ਨ</string>
     <string name="oneplus_search_keyword_theme_settings">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ਲਾੱਕ ਸਕ੍ਰੀਨ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਵਾਲਪੇਪਰ, ਕਲਾੱਕ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨਿਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਕਸਟਮਾਇਜ਼ੇਸ਼ਨ, ਐਕਸੇਂਟ ਕਲੱਰ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਇਕਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ਲੌਕ ਸਕ੍ਰੀਨ ਅਨੁਕੂਲਨ, ਵਾਲਪੇਪਰ, ਘੜੀ ਦਾ ਸਟਾਇਲ, ਫਿੰਗਰਪ੍ਰਿੰਟ ਐਨੀਮੇਸ਼ਨ, Horizon Light, ਸਿਸਟਮ ਅਨੁਕੂਲਨ, ਐਕਸੇਂਟ ਰੰਗ, ਆਕਾਰ, ਫੌਂਟ, ਟੋਨ, ਆਈਕੋਨ ਪੈਕ, ਪ੍ਰਕਾਸ਼ਮਈ ਰੋਸ਼ਨੀ, ਸੂਖਮ ਹਨੇਰਾ, ਚਮਕੀਲੀਆਂ ਰੰਗਤਾਂ, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">ਸਕ੍ਰੀਨਸ਼ੌਟ</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ਸੂਚਨਾਵਾਂ,ਅਨੁਭਵ,ਪ੍ਰੋਗਰਾਮ,ਸੁਧਾਰ</string>
@@ -997,7 +996,7 @@
     <string name="oneplus_theme_clock">ਘੜੀ ਦੀ ਸ਼ੈਲੀ</string>
     <string name="oneplus_theme_clock_snake_action">ਐਂਬੀਐਂਟ ਡਿਸਪਲੇ ਆੱਨ ਕਰੋ</string>
     <string name="oneplus_theme_clock_snake_tip">ਇਹ ਫੀਚਰ ਉਦੋਂ ਹੀ ਉਪਲੱਬਧ ਹੋਵੇਗਾ ਜਦੋਂ ਐਂਬੀਐਂਟ ਡਿਸਪਲੇ ਆੱਨ ਹੋਵੇਗਾ</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">ਰੰਗ ਦਾ ਕੋਡ</string>
     <string name="oneplus_theme_drop_summary">ਸੋਧਾਂ ਖਾਰਜ ਕਰਨੀਆਂ ਹਨ?</string>
     <string name="oneplus_theme_drop_title">ਸੰਪਾਦਨ ਮੋਡ ਚੋਂ ਬਾਹਰ ਜਾਓ</string>
     <string name="oneplus_theme_entrance_summary">ਵਾਲ ਪੇਪਰ, ਐਕਸੇਂਟ ਕਲਰ, ਫੌਂਟ, ਟੋਨ</string>
@@ -1081,8 +1080,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">ਅਲਾਰਮਾਂ ਨੂੰ ਛੱਡ ਕੇ, ਕਾਲਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ ਨੂੰ ਸਾਇਲੈਂਟ ਕੀਤਾ ਜਾਵੇਗਾ ਅਤੇ ਸਿਰਫ਼ ਵਾਈਬ੍ਰੇਟ ਕਰਨ ਲਈ ਸੈੱਟ ਕੀਤਾ ਜਾਵੇਗਾ</string>
     <string name="oneplus_vibration_summary">ਅਲਾਰਮ ਹਮੇਸ਼ਾ ਵੱਜੇਗਾ</string>
     <string name="oneplus_video_enhancer">ਵੀਡੀਓ ਉੱਨਤਕਾਰ</string>
-    <string name="oneplus_video_enhancer_footer">ਵੀਡੀਓ ਚਲਾਉਣ ਦੌਰਾਨ ਰੰਗ ਦੀ ਗੁਣਵੱਤਾ ਵਧਾਓ</string>
-    <string name="oneplus_video_enhancer_summary">ਵੀਡੀਓ ਚਲਾਉਣ ਦੌਰਾਨ ਰੰਗ ਦੀ ਗੁਣਵੱਤਾ ਵਧਾਓ</string>
+    <string name="oneplus_video_enhancer_footer">ਵੀਡੀਓ ਚੱਲਣ ਦੌਰਾਨ ਰੰਗ ਨੂੰ ਬਿਹਤਰ ਬਣਾਓ</string>
+    <string name="oneplus_video_enhancer_summary">ਵੀਡੀਓ ਚੱਲਣ ਦੌਰਾਨ ਰੰਗ ਨੂੰ ਬਿਹਤਰ ਬਣਾਓ</string>
     <string name="oneplus_volume_keys_adjust">ਵਿਵਸਥਿਤ ਕਰਨ ਲਈ ਵੌਲਿਊਮ ਬਟਨ ਦੀ ਵਰਤੋਂ ਕਰੋ</string>
     <string name="oneplus_volume_keys_adjust_media">ਮੀਡੀਆ ਵੌਲਿਊਮ</string>
     <string name="oneplus_volume_keys_adjust_ringtones">ਰਿੰਗਟੋਨ ਦਾ ਵੌਲਿਊਮ</string>
@@ -1151,6 +1150,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">ਚਿਹਰਾ ਅਨਲੌਕ ਵਰਤਣ ਲਈ ਪਾਸਵਰਡ ਸੈੱਟ ਕਰੋ</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">ਚਿਹਰਾ ਅਨਲੌਕ ਵਰਤਣ ਲਈ ਪੈਟਰਨ ਸੈੱਟ ਕਰੋ</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">ਚਿਹਰਾ ਅਨਲੌਕ ਵਰਤਣ ਲਈ PIN ਸੈੱਟ ਕਰੋ</string>
+    <string name="op_member_description">ਖਾਸ ਫ਼ਾਇਦੇ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਆਪਣੇ ਡਿਵਾਈਸ ਨੂੰ ਬਾਈਂਡ ਕਰੋ</string>
+    <string name="op_member_title">OnePlus ਖਾਤਾ ਵਿੱਚ ਲੌਗਇਨ ਕਰੋ</string>
     <string name="op_not_disturb">ਪਰੇਸ਼ਾਨ ਨਾ ਕਰੋ ਤਰਜੀਹਾਂ</string>
     <string name="op_not_disturb_summary">ਅਲਾਰਮਾਂ ਨੂੰ ਛੱਡਕੇ ਕਾਲਾਂ ਅਤੇ ਸੂਚਨਾਵਾਂ ਦੀ ਆਵਾਜ਼ ਬੰਦ ਕਰੋ ਅਤੇ ਵਾਈਬ੍ਰੇਸ਼ਨ ਨੂੰ ਬੰਦ ਕਰੋ</string>
     <string name="op_oneplus_roaming_summary">ਵਿਸ਼ਪ-ਵਿਆਪੀ ਇੰਟਰਨੈੱਟ ਪਹੁੰਚ ਸੇਵਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ</string>

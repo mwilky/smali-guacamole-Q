@@ -585,7 +585,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121648
+    const v1, 0x7f121658
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -600,7 +600,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120394
+    const v1, 0x7f120396
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -715,7 +715,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f12152b
+    const v3, 0x7f12153b
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -732,7 +732,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f12152d
+    const v4, 0x7f12153d
 
     new-array v5, v0, [Ljava/lang/Object;
 
@@ -748,7 +748,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f12152c
+    const v5, 0x7f12153c
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -779,7 +779,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f12152f
+    const v3, 0x7f12153f
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -789,7 +789,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f12152e
+    const v4, 0x7f12153e
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -838,7 +838,7 @@
 
     invoke-virtual {v2, v3}, Landroidx/preference/SwitchPreference;->setEnabled(Z)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_1
     const/16 v2, 0xb
@@ -901,19 +901,38 @@
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
+    if-nez v2, :cond_4
+
+    nop
+
+    invoke-virtual {p0}, Lcom/android/settings/TetherSettings;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroidx/fragment/app/FragmentActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcom/android/settings/TetherSettings;->mProfileServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
+
+    const/4 v6, 0x5
+
+    invoke-virtual {v0, v4, v5, v6}, Landroid/bluetooth/BluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z
+
+    :cond_4
     const/16 v4, 0xc
 
     const/4 v5, 0x1
 
-    if-ne v1, v4, :cond_4
+    if-ne v1, v4, :cond_5
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothPan;->isTetheringOn()Z
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_5
 
     iget-object v3, p0, Lcom/android/settings/TetherSettings;->mBluetoothTether:Landroidx/preference/SwitchPreference;
 
@@ -929,7 +948,7 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     iget-object v4, p0, Lcom/android/settings/TetherSettings;->mBluetoothTether:Landroidx/preference/SwitchPreference;
 
     iget-boolean v6, p0, Lcom/android/settings/TetherSettings;->mDataSaverEnabled:Z
@@ -1257,7 +1276,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207e5
+    const v0, 0x7f1207e7
 
     return v0
 .end method
@@ -1309,7 +1328,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121539
+    const v1, 0x7f121549
 
     invoke-virtual {v0, v1}, Lcom/oneplus/settings/widget/OPFooterPreference;->setTitle(I)V
 
@@ -1714,7 +1733,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12153d
+    const v1, 0x7f12154d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

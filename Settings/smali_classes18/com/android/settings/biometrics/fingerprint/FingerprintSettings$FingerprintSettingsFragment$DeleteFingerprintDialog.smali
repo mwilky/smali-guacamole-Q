@@ -158,7 +158,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f1206fc
+    const v1, 0x7f1206fe
 
     invoke-virtual {p0, v1, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintSettings$FingerprintSettingsFragment$DeleteFingerprintDialog;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -176,19 +176,19 @@
 
     move-result-object v1
 
-    const v2, 0x7f1206fa
+    const v2, 0x7f1206fc
 
     invoke-virtual {v1, v2}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setMessage(I)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
     move-result-object v1
 
-    const v2, 0x7f1212f5
+    const v2, 0x7f121305
 
     invoke-virtual {v1, v2, p0}, Lcom/oneplus/lib/app/OPAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/oneplus/lib/app/OPAlertDialog$Builder;
 
     move-result-object v1
 
-    const v2, 0x7f1203d8
+    const v2, 0x7f1203da
 
     const/4 v3, 0x0
 

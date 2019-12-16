@@ -389,7 +389,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_3
+    if-ge v2, v1, :cond_4
 
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -406,6 +406,15 @@
     goto :goto_2
 
     :cond_1
+    iget-object v4, v3, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->extraInfo:Ljava/lang/Object;
+
+    instance-of v4, v4, Lcom/android/settings/datausage/AppStateDataUsageBridge$DataUsageState;
+
+    if-nez v4, :cond_2
+
+    goto :goto_2
+
+    :cond_2
     invoke-static {v3}, Lcom/android/settings/datausage/UnrestrictedDataAccessPreference;->generateKey(Lcom/android/settingslib/applications/ApplicationsState$AppEntry;)Ljava/lang/String;
 
     move-result-object v10
@@ -422,7 +431,7 @@
 
     check-cast v11, Lcom/android/settings/datausage/UnrestrictedDataAccessPreference;
 
-    if-nez v11, :cond_2
+    if-nez v11, :cond_3
 
     new-instance v12, Lcom/android/settings/datausage/UnrestrictedDataAccessPreference;
 
@@ -454,7 +463,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v4, p0, Lcom/android/settings/datausage/UnrestrictedDataAccessPreferenceController;->mContext:Landroid/content/Context;
 
     iget-object v5, v3, Lcom/android/settingslib/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
@@ -485,7 +494,7 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     invoke-direct {p0, v0}, Lcom/android/settings/datausage/UnrestrictedDataAccessPreferenceController;->removeUselessPrefs(Ljava/util/Set;)V
 
     return-void

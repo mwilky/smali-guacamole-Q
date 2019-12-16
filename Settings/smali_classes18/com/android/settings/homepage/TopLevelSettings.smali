@@ -93,6 +93,31 @@
     return-void
 .end method
 
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
+
+    invoke-super {p0, p1, p2, p3}, Lcom/android/settings/dashboard/DashboardFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/android/settings/homepage/TopLevelSettings;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/homepage/TopLevelSettings;->getListView()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOverScrollMode(I)V
+
+    :cond_0
+    return-object v0
+.end method
+
 .method public onPreferenceStartFragment(Landroidx/preference/PreferenceFragmentCompat;Landroidx/preference/Preference;)Z
     .locals 2
 

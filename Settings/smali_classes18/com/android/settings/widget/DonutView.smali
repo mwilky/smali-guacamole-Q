@@ -55,7 +55,7 @@
 
     iput-boolean v0, p0, Lcom/android/settings/widget/DonutView;->mShowPercentString:Z
 
-    const v1, 0x7f060292
+    const v1, 0x7f06029c
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/android/settings/widget/DonutView;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f060293
+    const v2, 0x7f06029d
 
     invoke-static {v1, v2}, Lcom/android/settings/Utils;->getColorStateListDefaultColor(Landroid/content/Context;I)I
 
@@ -721,7 +721,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f121477
+    const v1, 0x7f121487
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -762,7 +762,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f120849
+    const v1, 0x7f12084b
 
     const/4 v2, 0x2
 

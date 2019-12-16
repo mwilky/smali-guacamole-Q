@@ -53,7 +53,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/settings/nfc/SecureNfcEnabler;->mPreference:Landroidx/preference/SwitchPreference;
 
-    const v2, 0x7f120ae4
+    const v2, 0x7f120ae6
 
     invoke-virtual {v1, v2}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 
@@ -81,7 +81,7 @@
     :cond_3
     iget-object v0, p0, Lcom/android/settings/nfc/SecureNfcEnabler;->mPreference:Landroidx/preference/SwitchPreference;
 
-    const v2, 0x7f120acd
+    const v2, 0x7f120acf
 
     invoke-virtual {v0, v2}, Landroidx/preference/SwitchPreference;->setSummary(I)V
 

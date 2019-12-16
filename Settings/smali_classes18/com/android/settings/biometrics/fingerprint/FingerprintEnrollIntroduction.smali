@@ -85,7 +85,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0679
+    const v0, 0x7f0a067d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -97,7 +97,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    const v0, 0x7f0a0685
+    const v0, 0x7f0a0689
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -160,7 +160,7 @@
 
     if-lt v1, v0, :cond_0
 
-    const v2, 0x7f120703
+    const v2, 0x7f120705
 
     return v2
 
@@ -172,7 +172,7 @@
     return v0
 
     :cond_1
-    const v0, 0x7f120704
+    const v0, 0x7f120706
 
     return v0
 .end method
@@ -213,7 +213,7 @@
 .method protected getConfirmLockTitleResId()I
     .locals 1
 
-    const v0, 0x7f12131a
+    const v0, 0x7f12132a
 
     return v0
 .end method
@@ -221,7 +221,7 @@
 .method protected getDescriptionResDisabledByAdmin()I
     .locals 1
 
-    const v0, 0x7f12130a
+    const v0, 0x7f12131a
 
     return v0
 .end method
@@ -320,7 +320,7 @@
 .method protected getHeaderResDefault()I
     .locals 1
 
-    const v0, 0x7f12130b
+    const v0, 0x7f12131b
 
     return v0
 .end method
@@ -328,7 +328,7 @@
 .method protected getHeaderResDisabledByAdmin()I
     .locals 1
 
-    const v0, 0x7f12130c
+    const v0, 0x7f12131c
 
     return v0
 .end method
@@ -342,7 +342,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0d01a8
+    const v0, 0x7f0d01a9
 
     return v0
 
@@ -353,12 +353,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0d00b1
+    const v0, 0x7f0d00b2
 
     return v0
 
     :cond_1
-    const v0, 0x7f0d01aa
+    const v0, 0x7f0d01ab
 
     return v0
 .end method
@@ -426,7 +426,7 @@
 
     invoke-super {p0}, Lcom/android/settings/biometrics/BiometricEnrollIntroduction;->initViews()V
 
-    const v0, 0x7f0a0685
+    const v0, 0x7f0a0689
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -438,7 +438,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f12130a
+    const v1, 0x7f12131a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -561,7 +561,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f1207cf
+    const v0, 0x7f1207d1
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->getString(I)Ljava/lang/String;
 
@@ -651,11 +651,11 @@
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f0d01a8
+    const v0, 0x7f0d01a9
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->setContentView(I)V
 
-    const v0, 0x7f0a04a5
+    const v0, 0x7f0a04a9
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -708,14 +708,14 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0d00b1
+    const v0, 0x7f0d00b2
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->setContentView(I)V
 
     goto :goto_1
 
     :cond_3
-    const v0, 0x7f0d01aa
+    const v0, 0x7f0d01ab
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->setContentView(I)V
 
@@ -724,7 +724,7 @@
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f12130c
+    const v0, 0x7f12131c
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->setHeaderText(I)V
 
@@ -737,14 +737,14 @@
 
     if-eqz v0, :cond_5
 
-    const v0, 0x7f120ccb
+    const v0, 0x7f120cd2
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->setHeaderText(I)V
 
     goto :goto_2
 
     :cond_5
-    const v0, 0x7f12130b
+    const v0, 0x7f12131b
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->setHeaderText(I)V
 
@@ -938,7 +938,7 @@
 .method protected setHeaderText(I)V
     .locals 1
 
-    const v0, 0x7f0a0679
+    const v0, 0x7f0a067d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/FingerprintEnrollIntroduction;->findViewById(I)Landroid/view/View;
 

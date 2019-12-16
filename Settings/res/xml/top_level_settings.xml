@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:key="top_level_settings"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.oneplus.settings.ui.OPMemberPreference android:key="member_sign" android:order="-195" settings:controller="com.oneplus.settings.OPMemberController" />
     <Preference android:icon="@drawable/op_ic_homepage_network_settings" android:title="@string/oneplus_network_dashboard_title" android:key="top_level_network" android:summary="@string/summary_placeholder" android:order="-190" android:fragment="com.android.settings.network.NetworkDashboardFragment" settings:controller="com.android.settings.network.TopLevelNetworkEntryPreferenceController" />
     <Preference android:icon="@drawable/op_ic_homepage_connected_device_settings" android:title="@string/oneplus_connected_devices_dashboard_title" android:key="top_level_connected_devices" android:summary="@string/summary_placeholder" android:order="-180" android:fragment="com.android.settings.connecteddevice.AdvancedConnectedDeviceDashboardFragment" settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController" />
     <com.oneplus.settings.ui.OPTopLevelPreferenceDivider android:key="top_level_wireless_network_divider" android:order="-175" />

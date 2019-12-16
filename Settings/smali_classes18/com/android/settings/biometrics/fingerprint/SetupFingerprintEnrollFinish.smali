@@ -70,7 +70,7 @@
 
     iget-object v0, p0, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFinish;->mBtnNext:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f120acc
+    const v1, 0x7f120ace
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 
@@ -190,7 +190,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0d01b5
+    const v0, 0x7f0d01b6
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFinish;->setContentView(I)V
 
@@ -254,7 +254,7 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0a03cb
+    const v0, 0x7f0a03cf
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
@@ -262,11 +262,11 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f121303
+    const v1, 0x7f121313
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v1, 0x7f060330
+    const v1, 0x7f06033a
 
     invoke-virtual {p0, v1}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFinish;->getColor(I)I
 
@@ -274,7 +274,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v2, 0x7f0a03ce
+    const v2, 0x7f0a03d2
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 
@@ -282,7 +282,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f120e94
+    const v3, 0x7f120ea0
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -293,7 +293,7 @@
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :cond_3
-    const v0, 0x7f0a042e
+    const v0, 0x7f0a0432
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/fingerprint/SetupFingerprintEnrollFinish;->findViewById(I)Landroid/view/View;
 

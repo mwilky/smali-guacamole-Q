@@ -26,7 +26,6 @@ Adakah anda benar-benar mahu membolehkan fungsi ini?"</string>
     <string name="aod_clock_minimalism">Minimalisme</string>
     <string name="aod_clock_none">Tiada</string>
     <string name="aod_clock_select_style_text">Pilih gaya jam</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Biru</string>
     <string name="aod_horizon_light_effect_2">Merah</string>
     <string name="aod_horizon_light_effect_3">Ungu</string>
@@ -668,7 +667,7 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding corak atau PIN yang k
     <string name="oneplus_no_choice">Tiada nada dering dipilih</string>
     <string name="oneplus_no_device_connected">Tiada peranti disambung</string>
     <string name="oneplus_no_file_tips">Tiada fail nada dering</string>
-    <string name="oneplus_no_supported_apps">Tiada aplikasi disokong</string>
+    <string name="oneplus_no_supported_apps">Tiada aplikasi disokong yang dipasang</string>
     <string name="oneplus_noise_tips">Bolehkan getaran</string>
     <string name="oneplus_none_default_camera">Tiada kamera lalai</string>
     <string name="oneplus_none_default_email">Tiada aplikasi mel lalai</string>
@@ -836,7 +835,7 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding corak atau PIN yang k
     <string name="oneplus_schedule">Jadual</string>
     <string name="oneplus_screen">SKRIN</string>
     <string name="oneplus_screen_better_cold">Sejuk</string>
-    <string name="oneplus_screen_better_nature">Natural</string>
+    <string name="oneplus_screen_better_nature">Semula jadi</string>
     <string name="oneplus_screen_better_warm">Hangat</string>
     <string name="oneplus_screen_color_mode_auto">Profil warna adaptif</string>
     <string name="oneplus_screen_color_mode_default">Display-P3（lalai）</string>
@@ -895,7 +894,7 @@ Perhatian: Cap jari anda mungkin kurang selamat berbanding corak atau PIN yang k
     <string name="oneplus_search_keyword_swap_navkeys">tukar butang</string>
     <string name="oneplus_search_keyword_switch">pindahan,pemindahan data</string>
     <string name="oneplus_search_keyword_theme_settings">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, Animasi cap jari, Horizon light, PENYESUAIAN SISTEM, Warna serlah, Bentuk, Fon, Warna, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, Animasi cap jari, Horizon light, PENYESUAIAN SISTEM, Warna aksen, Bentuk, Fon, Warna, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">PENYESUAIAN SKRIN KUNCI, Kertas dinding, Gaya jam, Animasi cap jari, Horizon Light, PENYESUAIAN SISTEM, Warna aksen, Bentuk, Fon, Warna, Pek ikon, Cahaya iluminasi, Nuansa gelap, Warna meriah, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">syot layar</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">pemberitahuan,pengalaman,program,peningkatan</string>
@@ -992,7 +991,7 @@ Perhatian:
     <string name="oneplus_theme_clock">Gaya jam</string>
     <string name="oneplus_theme_clock_snake_action">HIDUPKAN PAPARAN AMBIEN</string>
     <string name="oneplus_theme_clock_snake_tip">Ciri ini akan tersedia apabila paparan ambien dihidupkan</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">KOD WARNA</string>
     <string name="oneplus_theme_drop_summary">Buang pengubahsuaian?</string>
     <string name="oneplus_theme_drop_title">Keluar mod editor</string>
     <string name="oneplus_theme_entrance_summary">Kertas dinding, warna serlah, fon, nada</string>
@@ -1146,6 +1145,8 @@ Menetapkan rangkaian sebagai tersembunyi tidak akan mengubah tetapan penghala an
     <string name="op_lockpassword_choose_your_password_header_for_face">Untuk menggunakan Buka Kunci Muka, tetapkan kata laluan</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Untuk menggunakan Buka Kunci Muka, tetapkan corak</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Untuk menggunakan Buka Kunci Muka, tetapkan PIN</string>
+    <string name="op_member_description">Ikat peranti anda untuk mendapatkan faedah eksklusif</string>
+    <string name="op_member_title">Log masuk Akaun OnePlus</string>
     <string name="op_not_disturb">Keutamaan Jangan Mengganggu</string>
     <string name="op_not_disturb_summary">Bisukan panggilan dan pemberitahuan serta matikan getaran, kecuali untuk penggera</string>
     <string name="op_oneplus_roaming_summary">Sediakan perkhidmatan akses Internet global</string>

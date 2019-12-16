@@ -3946,6 +3946,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">要使用人脸识别，请设置复杂密码</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">要使用人脸识别，请设置解锁图案</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">要使用人脸识别，请设置数字密码</string>
+    <string name="op_member_description">绑定设备以获得专属权益</string>
+    <string name="op_member_title">登录一加账号</string>
     <string name="op_more_settings">其他连接方式</string>
     <string name="op_nfc_how_it_works_content">"1. 下载支持触碰付款的应用；
 2. 按照应用指引完成设置；

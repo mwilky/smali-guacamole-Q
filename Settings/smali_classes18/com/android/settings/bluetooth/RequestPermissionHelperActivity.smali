@@ -165,7 +165,7 @@
 
     if-eqz v1, :cond_1
 
-    const v4, 0x7f1202bc
+    const v4, 0x7f1202bd
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -178,7 +178,7 @@
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f1202bd
+    const v1, 0x7f1202be
 
     invoke-virtual {p0, v1}, Lcom/android/settings/bluetooth/RequestPermissionHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -198,7 +198,7 @@
 
     if-eqz v1, :cond_3
 
-    const v4, 0x7f1202c0
+    const v4, 0x7f1202c1
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -211,7 +211,7 @@
     goto :goto_1
 
     :cond_3
-    const v1, 0x7f1202c5
+    const v1, 0x7f1202c6
 
     invoke-virtual {p0, v1}, Lcom/android/settings/bluetooth/RequestPermissionHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -229,7 +229,7 @@
 
     if-eqz v1, :cond_5
 
-    const v4, 0x7f1202c3
+    const v4, 0x7f1202c4
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -242,7 +242,7 @@
     goto :goto_2
 
     :cond_5
-    const v1, 0x7f1202c4
+    const v1, 0x7f1202c5
 
     invoke-virtual {p0, v1}, Lcom/android/settings/bluetooth/RequestPermissionHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -258,7 +258,7 @@
 
     if-eqz v4, :cond_7
 
-    const v5, 0x7f1202c1
+    const v5, 0x7f1202c2
 
     const/4 v6, 0x2
 
@@ -279,7 +279,7 @@
     goto :goto_3
 
     :cond_7
-    const v4, 0x7f1202c2
+    const v4, 0x7f1202c3
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -309,7 +309,7 @@
 
     iput-object p0, v0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    const v1, 0x7f1205b8
+    const v1, 0x7f1205ba
 
     invoke-virtual {p0, v1}, Lcom/android/settings/bluetooth/RequestPermissionHelperActivity;->getString(I)Ljava/lang/String;
 

@@ -66,7 +66,7 @@
 
     sget-object v0, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->PRIVATE_DNS_MAP:Ljava/util/Map;
 
-    const v1, 0x7f0a055c
+    const v1, 0x7f0a0560
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -78,7 +78,7 @@
 
     sget-object v0, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->PRIVATE_DNS_MAP:Ljava/util/Map;
 
-    const v1, 0x7f0a055d
+    const v1, 0x7f0a0561
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -90,7 +90,7 @@
 
     sget-object v0, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->PRIVATE_DNS_MAP:Ljava/util/Map;
 
-    const v1, 0x7f0a055e
+    const v1, 0x7f0a0562
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -288,7 +288,7 @@
 .method private initialize()V
     .locals 1
 
-    const v0, 0x7f0d0293
+    const v0, 0x7f0d0295
 
     invoke-virtual {p0, v0}, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->setWidgetLayoutResource(I)V
 
@@ -324,7 +324,7 @@
 
     nop
 
-    const v1, 0x7f1207af
+    const v1, 0x7f1207b1
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -472,7 +472,7 @@
 
     iput-object v2, p0, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->mMode:Ljava/lang/String;
 
-    const v2, 0x7f0a055f
+    const v2, 0x7f0a0563
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -494,7 +494,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const v2, 0x7f0a0560
+    const v2, 0x7f0a0564
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -514,7 +514,7 @@
 
     iget-object v4, p0, Lcom/android/settings/network/PrivateDnsModeDialogPreference;->mMode:Ljava/lang/String;
 
-    const v5, 0x7f0a055d
+    const v5, 0x7f0a0561
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -532,7 +532,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/RadioGroup;->check(I)V
 
-    const v2, 0x7f0a055b
+    const v2, 0x7f0a055f
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -548,7 +548,7 @@
 
     nop
 
-    const v3, 0x7f1207af
+    const v3, 0x7f1207b1
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -578,7 +578,7 @@
 
     if-eqz v5, :cond_0
 
-    const v5, 0x7f121167
+    const v5, 0x7f121177
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -620,7 +620,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
     :cond_0
-    const v0, 0x7f0a05a5
+    const v0, 0x7f0a05a9
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -684,7 +684,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0a055c
+    .packed-switch 0x7f0a0560
         :pswitch_2
         :pswitch_1
         :pswitch_0

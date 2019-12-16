@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">ミニマリズム</string>
     <string name="aod_clock_none">なし</string>
     <string name="aod_clock_select_style_text">クロックスタイルを選択</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">青</string>
     <string name="aod_horizon_light_effect_2">赤</string>
     <string name="aod_horizon_light_effect_3">紫</string>
@@ -3348,7 +3347,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_no_choice">着信音が選択されていません</string>
     <string name="oneplus_no_device_connected">接続されているデバイスがありません</string>
     <string name="oneplus_no_file_tips">着信音ファイルがありません</string>
-    <string name="oneplus_no_supported_apps">サポートされているアプリがインストールされていません</string>
+    <string name="oneplus_no_supported_apps">サポート対象のアプリがインストールされていません</string>
     <string name="oneplus_noise_tips">バイブを有効化</string>
     <string name="oneplus_none_default_camera">既定のカメラがありません</string>
     <string name="oneplus_none_default_email">既定のメールアプリがありません</string>
@@ -3442,7 +3441,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
 2. スワイプしてショートカットを選択し、指を離すと起動します"</string>
     <string name="oneplus_quick_launch_how_to_use_title">クイック起動を使用</string>
     <string name="oneplus_quick_launch_summary">クイック決済を起動したり、アプリをアクティブ化したりするには、指紋認証エリアを長押ししてください</string>
-    <string name="oneplus_quick_launch_title">Quick launch</string>
+    <string name="oneplus_quick_launch_title">クイック起動</string>
     <string name="oneplus_quick_launch_toggle_summary">スマートフォンがロックされている際にクイック決済を起動したり、アプリをアクティブ化したりするには、指紋認証エリアを長押ししてください</string>
     <string name="oneplus_quick_launch_toggle_title">クイック起動をオンにする</string>
     <string name="oneplus_quick_reply">横向き画面でのクイック返信</string>
@@ -3672,7 +3671,7 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_theme_clock">クロックスタイル</string>
     <string name="oneplus_theme_clock_snake_action">アンビエントディスプレイをオンにする</string>
     <string name="oneplus_theme_clock_snake_tip">この機能はアンビエントディスプレイがオンのときに使用できます</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">色コード</string>
     <string name="oneplus_theme_drop_summary">変更を破棄しますか？</string>
     <string name="oneplus_theme_drop_title">編集モードを終了</string>
     <string name="oneplus_theme_entrance_summary">壁紙、アクセントカラー、フォント、トーン</string>
@@ -3756,8 +3755,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="oneplus_vibration_settings_soc_tri_state_summary">アラーム以外の着信音や通知音が鳴らなくなり、バイブのみに設定されます</string>
     <string name="oneplus_vibration_summary">アラームが常に鳴ります</string>
     <string name="oneplus_video_enhancer">ビデオエンハンサー</string>
-    <string name="oneplus_video_enhancer_footer">再生中のビデオの色を強化します。</string>
-    <string name="oneplus_video_enhancer_summary">再生中のビデオの色を強化します。</string>
+    <string name="oneplus_video_enhancer_footer">再生中のビデオの色を強化します</string>
+    <string name="oneplus_video_enhancer_summary">再生中のビデオの色を強化します</string>
     <string name="oneplus_volume_keys_adjust">音量ボタンを使用して、調整してください</string>
     <string name="oneplus_volume_keys_adjust_media">メディアの音量</string>
     <string name="oneplus_volume_keys_adjust_ringtones">着信音量</string>
@@ -3827,6 +3826,8 @@ Googleアカウントなど、アカウントによっては、スマートフ�
     <string name="op_lockpassword_choose_your_password_header_for_face">顔認証を使用するには、パスワードを設定してください</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">顔認証を使用するには、パターンを設定してください</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">顔認証を使用するには、PIN を設定してください</string>
+    <string name="op_member_description">メンバー限定の特典を利用するには、デバイスをバインドしてください</string>
+    <string name="op_member_title">OnePlus アカウントにログイン</string>
     <string name="op_not_disturb">おやすみモード設定</string>
     <string name="op_not_disturb_summary">アラーム以外の着信や通知をミュートして、バイブをオフにします</string>
     <string name="op_oneplus_roaming_summary">グローバルなインターネットアクセスサービスを提供します</string>

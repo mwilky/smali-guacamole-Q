@@ -162,7 +162,7 @@
 
     nop
 
-    const v1, 0x7f1209fc
+    const v1, 0x7f1209fe
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -192,7 +192,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f121208
+    const v0, 0x7f121218
 
     const/4 v1, 0x0
 
@@ -359,7 +359,7 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0d012b
+    const v1, 0x7f0d012c
 
     invoke-virtual {p1, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -399,7 +399,7 @@
     return-object v1
 
     :cond_1
-    const v1, 0x7f0d0290
+    const v1, 0x7f0d0292
 
     invoke-virtual {p1, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -510,7 +510,7 @@
 
     iget-object v0, p0, Lcom/android/settings/ResetNetworkConfirm;->mContentView:Landroid/view/View;
 
-    const v1, 0x7f0a059f
+    const v1, 0x7f0a05a3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -518,7 +518,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f121213
+    const v1, 0x7f121223
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

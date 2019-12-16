@@ -67,7 +67,7 @@
 .method public getHelpResource()I
     .locals 1
 
-    const v0, 0x7f1207c8
+    const v0, 0x7f1207ca
 
     return v0
 .end method
@@ -99,7 +99,7 @@
 
     iget-object v0, p0, Lcom/android/settings/datausage/DataSaverSummary;->mSwitchBar:Lcom/android/settings/widget/SwitchBar;
 
-    const v1, 0x7f12050e
+    const v1, 0x7f120510
 
     invoke-virtual {v0, v1, v1}, Lcom/android/settings/widget/SwitchBar;->setSwitchBarText(II)V
 

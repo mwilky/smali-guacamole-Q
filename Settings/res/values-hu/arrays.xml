@@ -574,7 +574,7 @@
     </string-array>
     <string-array name="status_bar_settings_clock_options">
         <item>Óra, perc és másodperc megjelenítése</item>
-        <item>Óra, perc és másodperc megjelenítése (alapértelmezett)</item>
+        <item>Óra és perc megjelenítése (alapértelmezett)</item>
         <item>Ne jelenjen meg ez az ikon</item>
     </string-array>
     <string-array name="swipe_direction_values">

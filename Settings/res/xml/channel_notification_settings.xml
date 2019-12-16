@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen android:title="@string/notification_channel_title" android:key="channel_settings"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
-    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/settings_entity_header" android:key="pref_app_header" android:order="1" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/op_settings_entity_header" android:key="pref_app_header" android:order="1" />
     <com.android.settingslib.widget.LayoutPreference android:layout="@layout/styled_switch_bar" android:key="block" android:order="2" />
     <com.oneplus.settings.ui.OPRestrictedSwitchPreference android:title="@string/allow_interruption" android:key="allow_sound" android:summary="@string/allow_interruption_summary" android:order="3" />
     <com.android.settings.notification.ImportancePreference android:title="@string/notification_importance_title" android:key="importance" android:order="4" settings:allowDividerBelow="true" />

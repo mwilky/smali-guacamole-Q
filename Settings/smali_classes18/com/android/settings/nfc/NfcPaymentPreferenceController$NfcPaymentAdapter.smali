@@ -158,7 +158,7 @@
 
     iget-object v1, p0, Lcom/android/settings/nfc/NfcPaymentPreferenceController$NfcPaymentAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f0d012f
+    const v2, 0x7f0d0130
 
     const/4 v3, 0x0
 
@@ -172,7 +172,7 @@
 
     invoke-direct {v1, p0, v2}, Lcom/android/settings/nfc/NfcPaymentPreferenceController$NfcPaymentAdapter$ViewHolder;-><init>(Lcom/android/settings/nfc/NfcPaymentPreferenceController$NfcPaymentAdapter;Lcom/android/settings/nfc/NfcPaymentPreferenceController$1;)V
 
-    const v2, 0x7f0a0436
+    const v2, 0x7f0a043a
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     iput-object v2, v1, Lcom/android/settings/nfc/NfcPaymentPreferenceController$NfcPaymentAdapter$ViewHolder;->root:Landroid/view/View;
 
-    const v2, 0x7f0a0517
+    const v2, 0x7f0a051b
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

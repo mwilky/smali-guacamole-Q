@@ -62,7 +62,7 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f0d00fd
+    const v4, 0x7f0d00fe
 
     invoke-direct {v0, v3, v4, v1, v2}, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;-><init>(IILjava/lang/Class;Ljava/lang/Class;)V
 
@@ -75,18 +75,6 @@
     const-class v2, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardRenderer;
 
     const/4 v3, 0x1
-
-    const v4, 0x7f0d0063
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;-><init>(IILjava/lang/Class;Ljava/lang/Class;)V
-
-    invoke-virtual {p0, v0}, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$1;->add(Ljava/lang/Object;)Z
-
-    new-instance v0, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;
-
-    const-class v1, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardController;
-
-    const-class v2, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardRenderer;
 
     const v4, 0x7f0d0064
 
@@ -101,6 +89,18 @@
     const-class v2, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardRenderer;
 
     const v4, 0x7f0d0065
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;-><init>(IILjava/lang/Class;Ljava/lang/Class;)V
+
+    invoke-virtual {p0, v0}, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$1;->add(Ljava/lang/Object;)Z
+
+    new-instance v0, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;
+
+    const-class v1, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardController;
+
+    const-class v2, Lcom/android/settings/homepage/contextualcards/slices/SliceContextualCardRenderer;
+
+    const v4, 0x7f0d0066
 
     invoke-direct {v0, v3, v4, v1, v2}, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;-><init>(IILjava/lang/Class;Ljava/lang/Class;)V
 

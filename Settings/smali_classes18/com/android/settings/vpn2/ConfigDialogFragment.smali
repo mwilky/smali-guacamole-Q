@@ -93,7 +93,7 @@
 
     iget-object v1, p0, Lcom/android/settings/vpn2/ConfigDialogFragment;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f12170e
+    const v2, 0x7f12171e
 
     const/4 v3, 0x1
 
@@ -292,7 +292,7 @@
 
     iget-object v0, p0, Lcom/android/settings/vpn2/ConfigDialogFragment;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f121704
+    const v1, 0x7f121714
 
     const/4 v2, 0x1
 

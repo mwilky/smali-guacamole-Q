@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">മിനിമലിസം</string>
     <string name="aod_clock_none">ഒന്നുമില്ല</string>
     <string name="aod_clock_select_style_text">ക്ലോക്ക് സ്റ്റൈല്‍ തിരഞ്ഞെടുക്കുക</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">നീല</string>
     <string name="aod_horizon_light_effect_2">ചുവപ്പ്</string>
     <string name="aod_horizon_light_effect_3">പര്‍പ്പിള്‍</string>
@@ -2910,7 +2909,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_app_notification_allow_led">LED ഓണ്‍</string>
     <string name="oneplus_app_notification_not_allow_led">LED ഓഫ്</string>
     <string name="oneplus_app_ops_title">ആപ്പ് അനുമതികള്‍</string>
-    <string name="oneplus_app_uninstall_remark">ക്വിക്ക് പേആപ്പ് ഉപയോഗിക്കുന്നതിന് ദയവായി മുകളിലുള്ള പെയ്മെന്‍റ് ആപ്പുകള്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്യുക</string>
+    <string name="oneplus_app_uninstall_remark">Quick pay ആപ്പ് ഉപയോഗിക്കുന്നതിന് ദയവായി മുകളിലുള്ള പെയ്മെന്‍റ് ആപ്പുകള്‍ ഇന്‍സ്റ്റാള്‍ ചെയ്യുക</string>
     <string name="oneplus_app_wechat">WeChat</string>
     <string name="oneplus_applications_settings_summary">ആപ്പ് അറിയിപ്പുകൾ, സമാന്തര ആപ്പുകൾ, അനുമതികൾ</string>
     <string name="oneplus_applock_at_least_four_points">4 പോയിന്‍റുകളെങ്കിലും ഉള്‍പ്പെടുത്തി വരയ്ക്കുക</string>
@@ -3049,7 +3048,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_double_tap_power_gesture">ഇതിനായി പവർ ബട്ടൺ ഇരട്ട-ക്ലിക്കുചെയ്യുക</string>
     <string name="oneplus_double_tap_power_gesture_app">പ്രവർത്തനം തിരഞ്ഞെടുക്കുക</string>
     <string name="oneplus_double_tap_power_gesture_camera">ക്യാമറ</string>
-    <string name="oneplus_double_tap_power_gesture_wallet">കാർഡുകൾ സ്വൈപ്പ് ചെയ്യുക (വാലറ്റ്)</string>
+    <string name="oneplus_double_tap_power_gesture_wallet">സ്വൈപ്പ് കാർഡുകൾ (വാലറ്റ്)</string>
     <string name="oneplus_doze_summary_801">സ്റ്റാൻഡ്‌ബൈ സ്ക്രീനിൽ ക്ലോക്കും മറ്റ് വിവരങ്ങളും കാണിക്കുക</string>
     <string name="oneplus_doze_title">ആംബിയന്‍റ് ഡിസ്‍പ്ലേ</string>
     <string name="oneplus_doze_title_801">ആംബിയന്‍റ് ഡിസ്‍പ്ലേ</string>
@@ -3128,7 +3127,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_fingerprint_gesture_camera_title">ഒരു ഫോട്ടോ എടുക്കാന്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
     <string name="oneplus_fingerprint_gesture_settings_title">വിരലടയാള ആംഗ്യം</string>
     <string name="oneplus_fingerprint_longpress_for_quickpay_summary">ക്വിക് പേ ആരംഭിക്കുന്നതിന് വിരലടയാള സെന്‍സറില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
-    <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">ഫോണ്‍ ലോക്കായിരിക്കുമ്പോള്‍ ക്വിക് പേ ആരംഭിക്കാന്‍ വിരലടയാള സെന്‍സറില്‍ അമര്‍ത്തിപ്പിടിക്കുക.</string>
+    <string name="oneplus_fingerprint_quickpay_lock_swtch_summary">ഫോണ്‍ ലോക്കായിരിക്കുമ്പോള്‍ ക്വിക് പേ ആരംഭിക്കാന്‍ വിരലടയാള സെന്‍സറില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
     <string name="oneplus_fingerprint_sensor_longpress_for_quickpay_summary">ഫോണ്‍ അണ്‍ലോക്കായിരിക്കുമ്പോള്‍ ക്വിക് പേ ആരംഭിക്കാന്‍ വിരലടയാള സെന്‍സറില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
     <string name="oneplus_fingerprint_settings_list_title">വിരലടയാള ലിസ്റ്റ്</string>
     <string name="oneplus_fingerprint_swipe_for_notifications_summary">നിങ്ങളുടെ അറിയിപ്പുകള്‍ പരിശോധിക്കുന്നതിന് വിരലടയാള സെന്‍സറില്‍ താഴേക്ക് സ്ലൈഡ് ചെയ്യുക, നോട്ടിഫിക്കേഷന്‍ പാനല്‍ അടയ്ക്കുന്നതിന് മുകളിലേക്ക് സ്ലൈഡ് ചെയ്യുക</string>
@@ -3348,7 +3347,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_no_choice">റിംഗ്ടോണൊന്നും തെരഞ്ഞെടുത്തില്ല</string>
     <string name="oneplus_no_device_connected">ഒരു ഡിവൈസും ബന്ധിപ്പിച്ചിട്ടില്ല</string>
     <string name="oneplus_no_file_tips">റിംഗ്‍ടോണ്‍ ഫയലുകളൊന്നും ഇല്ല</string>
-    <string name="oneplus_no_supported_apps">പിന്തുണയ്ക്കാത്ത ആപ്പുകൾ ഇൻസ്റ്റാൾ ചെയ്തിരിക്കുന്നു</string>
+    <string name="oneplus_no_supported_apps">പിന്തുണയ്ക്കുന്ന ആപ്പുകളൊന്നും ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല</string>
     <string name="oneplus_noise_tips">വൈബ്രേഷന്‍ പ്രാപ്തമാക്കുക</string>
     <string name="oneplus_none_default_camera">ഡിഫോള്‍ട്ട് ക്യാമറ ഇല്ല</string>
     <string name="oneplus_none_default_email">ഡിഫോള്‍ട്ട് മെയില്‍ ആപ്പ് ഇല്ല</string>
@@ -3455,7 +3454,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_quick_turn_on_camera">ക്യാമറ വേഗത്തിൽ ഓണാക്കുക</string>
     <string name="oneplus_quickpay">ക്വിക് പേ</string>
     <string name="oneplus_quickpay_confirm_changehomebutton">%1$s ല്‍ നിന്ന് \"ക്വിക് പേ\" ക്ക് വേണ്ടി ഹോം ബട്ടണ്‍ ദീര്‍ഘസമയം അമര്‍ത്തിപ്പിടിക്കുന്ന നടപടി മാറ്റണമെന്ന് നിങ്ങള്‍ക്ക് തീര്‍ച്ചയാണോ?</string>
-    <string name="oneplus_quickpay_entry_summary">ക്വിക് പേ ആരംഭിക്കുന്നതിന് ഹോം ബട്ടണില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
+    <string name="oneplus_quickpay_entry_summary">ദ്രുതമായ പണമടയ്ക്കൽ ആരംഭിക്കുന്നതിന് ഹോം ബട്ടണില്‍ അമര്‍ത്തിപ്പിടിക്കുക</string>
     <string name="oneplus_quickpay_instructions">നിര്‍ദ്ദേശങ്ങള്‍</string>
     <string name="oneplus_quickpay_lock_swtch_summary">ഫോണ്‍ ലോക്കായിരിക്കുമ്പോള്‍ രജിസ്റ്റര്‍ ചെയ്ത വിരലടയാളം കൊണ്ട് ക്വിക് പേ ആരംഭിക്കാന്‍ ഹോം ബട്ടണില്‍ അമര്‍ത്തിപ്പിടിക്കുക.</string>
     <string name="oneplus_quickpay_lock_swtch_title">ഓഫായ സ്ക്രീനില്‍ നിന്ന് ക്വിക് പേ</string>
@@ -3575,7 +3574,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_search_keyword_swap_navkeys">സ്വാപ് ബട്ടണുകള്‍</string>
     <string name="oneplus_search_keyword_switch">കൈമാറ്റം,ഡാറ്റ മൈഗ്രേഷൻ</string>
     <string name="oneplus_search_keyword_theme_settings">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ലോക്ക് സ്ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ലോക്ക് സ്‌ക്രീൻ ഇഷ്‌ടാനുസൃതമാക്കൽ, വാൾപേപ്പറുകൾ, ക്ലോക്ക് സ്റ്റൈൽ, വിരലടയാള ആനിമേഷൻ, Horizon Light, സിസ്റ്റം ഇഷ്‌ടാനുസൃതമാക്കൽ, ആക്‌സന്റ് നിറം, ആകൃതി, ഫോണ്ട്, ടോൺ, ഐക്കൺ പായ്‌ക്ക്, ഇല്ലുമിനേറ്റിംഗ് ലൈറ്റ്, ന്യുവാൻസ്ഡ് ഡാർക്ക്, ആകർഷകമായ നിറങ്ങൾ, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">സ്ക്രീന്‍ഷോട്ട്</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">അറിയിപ്പുകൾ,അനുഭവം,പ്രോഗ്രാം,മെച്ചപ്പെടുത്തൽ</string>
@@ -3672,7 +3671,7 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="oneplus_theme_clock">ക്ലോക്ക് സ്റ്റൈല്‍</string>
     <string name="oneplus_theme_clock_snake_action">ആംബിയന്റ് ഡിസ്പ്ലേ ഓണാക്കുക</string>
     <string name="oneplus_theme_clock_snake_tip">ആംബിയന്റ് ഡിസ്പ്ലേ ഓണായിരിക്കുമ്പോൾ ഈ ഫീച്ചർ ലഭ്യമായിരിക്കും</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">കളർ കോഡ്</string>
     <string name="oneplus_theme_drop_summary">പരിഷ്കരണങ്ങള്‍ നിരാകരിക്കണോ?</string>
     <string name="oneplus_theme_drop_title">എഡിറ്റ് മോഡില്‍ നിന്ന് പുറത്ത് കടക്കുക</string>
     <string name="oneplus_theme_entrance_summary">വോൾപേപ്പറുകൾ, ആക്സന്റ് കളർ, ഫോണ്ട്, ടോൺ</string>
@@ -3827,6 +3826,8 @@ Selection ട്രിഗ്ഗര്‍ ചെയ്യുക"</string>
     <string name="op_lockpassword_choose_your_password_header_for_face">ഫേസ് അൺലോക്ക് ഉപയോഗിക്കുന്നതിന്, പാസ്‌വേഡ് സജ്ജീകരിക്കുക</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">ഫേസ് അൺലോക്ക് ഉപയോഗിക്കുന്നതിന്, പാറ്റേൺ സജ്ജീകരിക്കുക</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">ഫേസ് അൺലോക്ക് ഉപയോഗിക്കുന്നതിന്, PIN സജ്ജീകരിക്കുക</string>
+    <string name="op_member_description">സവിശേഷമായ ആനുകൂല്യങ്ങൾ സ്വന്തമാക്കാൻ നിങ്ങളുടെ ഉപകരണം ബന്ധിപ്പിക്കുക</string>
+    <string name="op_member_title">OnePlus അക്കൗണ്ടിലേക്ക് ലോഗിന്‍ ചെയ്യുക</string>
     <string name="op_not_disturb">ശല്യപ്പെടുത്തരുത് പരിഗണനകള്‍</string>
     <string name="op_not_disturb_summary">അലാറങ്ങൾ ഒഴികെ കോളുകളും അറിയിപ്പുകളും നിശബ്ദമാക്കുകയും വൈബ്രേഷൻ ഓഫാക്കുകയും ചെയ്യുക</string>
     <string name="op_oneplus_roaming_summary">ആഗോള ഇൻ്റർനെറ്റ് ആക്സസ്സ് സേവനങ്ങൾ നൽകുക</string>

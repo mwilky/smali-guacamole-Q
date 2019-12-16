@@ -113,7 +113,7 @@
 
     new-instance v1, Landroid/app/NotificationChannel;
 
-    const v2, 0x7f120662
+    const v2, 0x7f120664
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -135,7 +135,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0604a9
+    const v3, 0x7f0604b4
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getColor(I)I
 
@@ -238,7 +238,7 @@
     return-void
 
     :cond_0
-    const v2, 0x7f120649
+    const v2, 0x7f12064b
 
     const/4 v3, 0x1
 
@@ -254,7 +254,7 @@
 
     new-instance v4, Landroid/app/NotificationChannel;
 
-    const v6, 0x7f120648
+    const v6, 0x7f12064a
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -276,7 +276,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0604a9
+    const v7, 0x7f0604b4
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getColor(I)I
 
@@ -286,7 +286,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f121399
+    const v7, 0x7f1213a9
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -316,7 +316,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f1207b3
+    const v6, 0x7f1207b5
 
     invoke-virtual {p1, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -372,7 +372,7 @@
 
     new-instance v1, Landroid/app/NotificationChannel;
 
-    const v2, 0x7f1213d0
+    const v2, 0x7f1213e0
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -394,7 +394,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0604a9
+    const v3, 0x7f0604b4
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getColor(I)I
 
@@ -404,7 +404,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1213c3
+    const v3, 0x7f1213d3
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -414,7 +414,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1213c2
+    const v3, 0x7f1213d2
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -565,7 +565,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f120668
+    const v8, 0x7f12066a
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -580,7 +580,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f120669
+    const v8, 0x7f12066b
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -630,7 +630,7 @@
 
     move-result-object v4
 
-    const v8, 0x7f120663
+    const v8, 0x7f120665
 
     new-array v6, v6, [Ljava/lang/Object;
 

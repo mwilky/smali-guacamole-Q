@@ -209,7 +209,7 @@
 
     iget-object v1, p0, Lcom/android/settings/network/telephony/MobileDataSlice;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120a50
+    const v2, 0x7f120a52
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

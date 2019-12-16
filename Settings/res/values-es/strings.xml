@@ -320,7 +320,6 @@ Solo tienes que juntar los dispositivos (normalmente, por la parte de atrás) y 
     <string name="aod_clock_minimalism">Minimalista</string>
     <string name="aod_clock_none">Ninguno</string>
     <string name="aod_clock_select_style_text">Seleccionar estilo del reloj</string>
-    <string name="aod_horizon_light">Horizon Light</string>
     <string name="aod_horizon_light_effect_1">Azul</string>
     <string name="aod_horizon_light_effect_2">Rojo</string>
     <string name="aod_horizon_light_effect_3">Morado</string>
@@ -3672,7 +3671,7 @@ Nota:
     <string name="oneplus_theme_clock">Estilo del reloj</string>
     <string name="oneplus_theme_clock_snake_action">ACTIVAR PANTALLA AMBIENTE</string>
     <string name="oneplus_theme_clock_snake_tip">Esta función estará disponible cuando la pantalla ambiente esté activada</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">CÓDIGO DE COLOR</string>
     <string name="oneplus_theme_drop_summary">¿Quieres descartar las modificaciones?</string>
     <string name="oneplus_theme_drop_title">Salir del modo de edición</string>
     <string name="oneplus_theme_entrance_summary">Fondos de pantalla, color de acento, fuente, tono</string>
@@ -3756,8 +3755,8 @@ Nota: El Desbloqueo facial puede ser menos seguro que la huella digital, el PIN 
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Las llamadas y notificaciones se silenciarán y se establecerán en solo vibración, excepto las alarmas</string>
     <string name="oneplus_vibration_summary">La alarma sonará siempre</string>
     <string name="oneplus_video_enhancer">Mejora de vídeo</string>
-    <string name="oneplus_video_enhancer_footer">Mejora el color durante la reproducción de videos</string>
-    <string name="oneplus_video_enhancer_summary">Mejora el color durante la reproducción de videos</string>
+    <string name="oneplus_video_enhancer_footer">Mejorar el color durante la reproducción de vídeo</string>
+    <string name="oneplus_video_enhancer_summary">Mejorar el color durante la reproducción de vídeo</string>
     <string name="oneplus_volume_keys_adjust">Utilizar los botones de volumen para ajustar</string>
     <string name="oneplus_volume_keys_adjust_media">Volumen multimedia</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Volumen de tono</string>
@@ -3827,6 +3826,8 @@ Configurar la red como oculta no cambiará la configuración del router."</strin
     <string name="op_lockpassword_choose_your_password_header_for_face">Para poder utilizar Desbloqueo facial, debes establecer una contraseña.</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Para poder utilizar Desbloqueo facial, debes establecer un patrón.</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Para poder utilizar Desbloqueo facial, debes establecer un PIN.</string>
+    <string name="op_member_description">Vincula tu dispositivo para conseguir ventajas exclusivas</string>
+    <string name="op_member_title">Iniciar sesión en la cuenta OnePlus</string>
     <string name="op_not_disturb">Preferencias de \"No molestar\"</string>
     <string name="op_not_disturb_summary">Silenciar llamadas y notificaciones, y desactivar la vibración excepto para las alarmas</string>
     <string name="op_oneplus_roaming_summary">Proporcionar servicios de acceso global a Internet</string>

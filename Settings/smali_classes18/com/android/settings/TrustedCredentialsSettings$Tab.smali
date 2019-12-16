@@ -56,13 +56,13 @@
 
     const-string v3, "system"
 
-    const v4, 0x7f121586
+    const v4, 0x7f121596
 
-    const v5, 0x7f0a06ae
+    const v5, 0x7f0a06b2
 
-    const v6, 0x7f0a06ad
+    const v6, 0x7f0a06b1
 
-    const v7, 0x7f0a06a7
+    const v7, 0x7f0a06ab
 
     const/4 v8, 0x1
 
@@ -80,13 +80,13 @@
 
     const-string v13, "user"
 
-    const v14, 0x7f121588
+    const v14, 0x7f121598
 
-    const v15, 0x7f0a0749
+    const v15, 0x7f0a0750
 
-    const v16, 0x7f0a0748
+    const v16, 0x7f0a074f
 
-    const v17, 0x7f0a073e
+    const v17, 0x7f0a0745
 
     const/16 v18, 0x0
 

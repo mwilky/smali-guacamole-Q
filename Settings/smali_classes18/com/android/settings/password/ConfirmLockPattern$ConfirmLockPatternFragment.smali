@@ -201,7 +201,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f0a0369
+    const v0, 0x7f0a036d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -456,7 +456,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120985
+    const v0, 0x7f120987
 
     return v0
 
@@ -483,12 +483,12 @@
 
     if-eqz v0, :cond_1
 
-    const v1, 0x7f1209a5
+    const v1, 0x7f1209a7
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f120987
+    const v1, 0x7f120989
 
     :goto_0
     return v1
@@ -496,12 +496,12 @@
     :cond_2
     if-eqz v0, :cond_3
 
-    const v1, 0x7f1209a2
+    const v1, 0x7f1209a4
 
     goto :goto_1
 
     :cond_3
-    const v1, 0x7f120986
+    const v1, 0x7f120988
 
     :goto_1
     return v1
@@ -514,12 +514,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f120989
+    const v0, 0x7f12098b
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f120988
+    const v0, 0x7f12098a
 
     :goto_0
     return v0
@@ -782,7 +782,7 @@
     goto :goto_2
 
     :cond_1
-    const v0, 0x7f1209ac
+    const v0, 0x7f1209ae
 
     const-wide/16 v3, 0xbb8
 
@@ -1042,7 +1042,7 @@
 
     if-ne p1, v0, :cond_0
 
-    const v0, 0x7f12093e
+    const v0, 0x7f120940
 
     return v0
 
@@ -1068,12 +1068,12 @@
     throw v0
 
     :cond_1
-    const v0, 0x7f12093d
+    const v0, 0x7f12093f
 
     return v0
 
     :cond_2
-    const v0, 0x7f12093c
+    const v0, 0x7f12093e
 
     return v0
 .end method
@@ -1091,134 +1091,174 @@
 
     move-object/from16 v0, p0
 
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
     invoke-virtual/range {p0 .. p0}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Lcom/android/settings/password/ConfirmLockPattern;
+    check-cast v3, Lcom/android/settings/password/ConfirmLockPattern;
+
+    const/4 v4, 0x0
+
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportDynamicEnrollAnimation()Z
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    const v7, 0x7f0d005e
+
+    if-eqz v5, :cond_1
 
     nop
 
-    invoke-virtual {v1}, Lcom/android/settings/password/ConfirmLockPattern;->getConfirmCredentialTheme()Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;
+    invoke-virtual {v3}, Lcom/android/settings/password/ConfirmLockPattern;->getConfirmCredentialTheme()Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;
 
-    move-result-object v2
+    move-result-object v5
 
-    sget-object v3, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;->NORMAL:Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;
+    sget-object v8, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;->NORMAL:Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;
 
-    if-ne v2, v3, :cond_0
+    if-ne v5, v8, :cond_0
 
-    const v2, 0x7f0d0060
+    const v7, 0x7f0d0062
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f0d005e
+    nop
 
     :goto_0
-    const/4 v3, 0x0
+    nop
 
-    move-object/from16 v4, p1
+    invoke-virtual {v1, v7, v2, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    move-object/from16 v5, p2
+    move-result-object v4
 
-    invoke-virtual {v4, v2, v5, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    goto :goto_2
 
-    move-result-object v2
+    :cond_1
+    nop
 
-    const v3, 0x7f0a02cf
+    invoke-virtual {v3}, Lcom/android/settings/password/ConfirmLockPattern;->getConfirmCredentialTheme()Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v5
 
-    move-result-object v3
+    sget-object v8, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;->NORMAL:Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity$ConfirmCredentialTheme;
 
-    check-cast v3, Landroid/widget/TextView;
+    if-ne v5, v8, :cond_2
 
-    iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
+    const v7, 0x7f0d0060
 
-    iget-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
+    goto :goto_1
 
-    if-eqz v3, :cond_1
+    :cond_2
+    nop
+
+    :goto_1
+    nop
+
+    invoke-virtual {v1, v7, v2, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v4
+
+    :goto_2
+    const v5, 0x7f0a02d0
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/TextView;
+
+    iput-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
+
+    iget-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
+
+    if-eqz v5, :cond_3
 
     invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
 
-    move-result v3
+    move-result v5
 
-    if-eqz v3, :cond_1
+    if-eqz v5, :cond_3
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->isFingerprintNeedShowDarkTheme()Z
 
-    move-result v3
+    move-result v5
 
-    if-eqz v3, :cond_1
+    if-eqz v5, :cond_3
 
-    iget-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
+    iget-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mHeaderTextView:Landroid/widget/TextView;
 
-    const v6, 0x7f060330
+    const v6, 0x7f06033a
 
-    invoke-virtual {v1, v6}, Lcom/android/settings/password/ConfirmLockPattern;->getColor(I)I
+    invoke-virtual {v3, v6}, Lcom/android/settings/password/ConfirmLockPattern;->getColor(I)I
 
     move-result v6
 
-    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    :cond_1
-    const v3, 0x7f0a03a6
+    :cond_3
+    const v5, 0x7f0a03aa
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v5
 
-    check-cast v3, Lcom/android/internal/widget/LockPatternView;
+    check-cast v5, Lcom/android/internal/widget/LockPatternView;
 
-    iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
+    iput-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
-    const v3, 0x7f0a0685
+    const v5, 0x7f0a0689
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v5
 
-    check-cast v3, Landroid/widget/TextView;
+    check-cast v5, Landroid/widget/TextView;
 
-    iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mDetailsTextView:Landroid/widget/TextView;
+    iput-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mDetailsTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0a0246
+    const v5, 0x7f0a0246
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v5
 
-    check-cast v3, Landroid/widget/TextView;
+    check-cast v5, Landroid/widget/TextView;
 
-    iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mErrorTextView:Landroid/widget/TextView;
+    iput-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mErrorTextView:Landroid/widget/TextView;
 
-    const v3, 0x7f0a038f
+    const v5, 0x7f0a0393
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v5
 
-    iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLeftSpacerLandscape:Landroid/view/View;
+    iput-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLeftSpacerLandscape:Landroid/view/View;
 
-    const v3, 0x7f0a05ab
+    const v5, 0x7f0a05af
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v5
 
-    iput-object v3, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mRightSpacerLandscape:Landroid/view/View;
+    iput-object v5, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mRightSpacerLandscape:Landroid/view/View;
 
-    const v3, 0x7f0a0702
+    const v5, 0x7f0a0706
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v3
+    move-result-object v5
 
-    check-cast v3, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
+    check-cast v5, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;
 
     iget-object v6, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
-    invoke-virtual {v3, v6}, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;->setDefaultTouchRecepient(Landroid/view/View;)V
+    invoke-virtual {v5, v6}, Lcom/android/internal/widget/LinearLayoutWithDefaultTouchRecepient;->setDefaultTouchRecepient(Landroid/view/View;)V
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1228,7 +1268,7 @@
 
     move-result-object v6
 
-    if-eqz v6, :cond_2
+    if-eqz v6, :cond_4
 
     const-string v7, "com.android.settings.ConfirmCredentials.header"
 
@@ -1246,7 +1286,7 @@
 
     iput-object v7, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mDetailsText:Ljava/lang/CharSequence;
 
-    :cond_2
+    :cond_4
     iget-object v7, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternView:Lcom/android/internal/widget/LockPatternView;
 
     iget-object v8, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -1281,11 +1321,11 @@
 
     invoke-direct {v0, v7}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->updateStage(Lcom/android/settings/password/ConfirmLockPattern$Stage;)V
 
-    if-nez p3, :cond_3
+    if-nez p3, :cond_5
 
     iget-boolean v7, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mFrp:Z
 
-    if-nez v7, :cond_3
+    if-nez v7, :cond_5
 
     iget-object v7, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -1295,7 +1335,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_3
+    if-nez v7, :cond_5
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -1311,7 +1351,7 @@
 
     invoke-virtual {v7}, Landroidx/fragment/app/FragmentActivity;->finish()V
 
-    :cond_3
+    :cond_5
     new-instance v7, Lcom/android/settingslib/animation/AppearAnimationUtils;
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->getContext()Landroid/content/Context;
@@ -1394,7 +1434,7 @@
 
     iget-object v7, v0, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->mCredentialCheckResultTracker:Lcom/android/settings/password/CredentialCheckResultTracker;
 
-    if-nez v7, :cond_4
+    if-nez v7, :cond_6
 
     new-instance v7, Lcom/android/settings/password/CredentialCheckResultTracker;
 
@@ -1418,10 +1458,10 @@
 
     invoke-virtual {v7}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
-    :cond_4
-    invoke-direct {v0, v1, v2}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->adjustForLargerFontSize(Lcom/android/settings/password/ConfirmLockPattern;Landroid/view/View;)V
+    :cond_6
+    invoke-direct {v0, v3, v4}, Lcom/android/settings/password/ConfirmLockPattern$ConfirmLockPatternFragment;->adjustForLargerFontSize(Lcom/android/settings/password/ConfirmLockPattern;Landroid/view/View;)V
 
-    return-object v2
+    return-object v4
 .end method
 
 .method public onCredentialChecked(ZLandroid/content/Intent;IIZ)V

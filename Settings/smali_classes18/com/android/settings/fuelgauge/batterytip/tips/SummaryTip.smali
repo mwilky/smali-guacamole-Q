@@ -75,7 +75,7 @@
 .method public getIconTintColorId()I
     .locals 1
 
-    const v0, 0x7f06005f
+    const v0, 0x7f060069
 
     return v0
 .end method

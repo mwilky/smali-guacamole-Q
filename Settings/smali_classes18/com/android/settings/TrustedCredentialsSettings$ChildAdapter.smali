@@ -423,7 +423,7 @@
 
     iget-object v0, p0, Lcom/android/settings/TrustedCredentialsSettings$ChildAdapter;->mContainerView:Landroid/widget/LinearLayout;
 
-    const v2, 0x7f0a02d6
+    const v2, 0x7f0a02d7
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -439,7 +439,7 @@
 
     iget-object v0, p0, Lcom/android/settings/TrustedCredentialsSettings$ChildAdapter;->mHeaderView:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a02ab
+    const v2, 0x7f0a02ac
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -459,7 +459,7 @@
 
     iget-object v0, p0, Lcom/android/settings/TrustedCredentialsSettings$ChildAdapter;->mHeaderView:Landroid/view/ViewGroup;
 
-    const v2, 0x7f0a02d0
+    const v2, 0x7f0a02d1
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -514,7 +514,7 @@
 
     iget-object v0, p0, Lcom/android/settings/TrustedCredentialsSettings$ChildAdapter;->mHeaderView:Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a02d2
+    const v1, 0x7f0a02d3
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 

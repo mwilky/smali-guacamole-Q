@@ -780,7 +780,7 @@
 
     check-cast v0, Lcom/android/settingslib/widget/ActionButtonsPreference;
 
-    const v1, 0x7f1208c8
+    const v1, 0x7f1208ca
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton1Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -800,7 +800,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1215c9
+    const v1, 0x7f1215d9
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -822,7 +822,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f12073d
+    const v1, 0x7f12073f
 
     invoke-virtual {v0, v1}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton3Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -1128,7 +1128,7 @@
 
     const v2, 0x7f08033d
 
-    const v3, 0x7f1205eb
+    const v3, 0x7f1205ed
 
     if-nez v1, :cond_2
 
@@ -1240,7 +1240,7 @@
     :cond_1
     iget-object v1, p0, Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;->mButtonsPref:Lcom/android/settingslib/widget/ActionButtonsPreference;
 
-    const v2, 0x7f120671
+    const v2, 0x7f120673
 
     invoke-virtual {v1, v2}, Lcom/android/settingslib/widget/ActionButtonsPreference;->setButton2Text(I)Lcom/android/settingslib/widget/ActionButtonsPreference;
 
@@ -2235,7 +2235,7 @@
     :goto_4
     iget-object v1, p0, Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120c1d
+    const v4, 0x7f120c22
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2255,7 +2255,7 @@
 
     iget-object v1, p0, Lcom/android/settings/applications/appinfo/AppButtonsPreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120c1e
+    const v4, 0x7f120c23
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

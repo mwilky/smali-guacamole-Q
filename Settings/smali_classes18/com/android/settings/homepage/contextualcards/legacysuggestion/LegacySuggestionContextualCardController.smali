@@ -257,7 +257,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0d00fd
+    const v7, 0x7f0d00fe
 
     invoke-virtual {v6, v7}, Lcom/android/settings/homepage/contextualcards/ContextualCard$Builder;->setViewType(I)Lcom/android/settings/homepage/contextualcards/ContextualCard$Builder;
 

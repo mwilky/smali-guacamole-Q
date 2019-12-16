@@ -320,7 +320,6 @@
     <string name="aod_clock_minimalism">ಕನಿಷ್ಟತೆ</string>
     <string name="aod_clock_none">ಯಾವುದೂ ಇಲ್ಲ</string>
     <string name="aod_clock_select_style_text">ಗಡಿಯಾರ ಶೈಲಿ ಆಯ್ಕೆಮಾಡಿ</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">ನೀಲಿ</string>
     <string name="aod_horizon_light_effect_2">ಕೆಂಪು</string>
     <string name="aod_horizon_light_effect_3">ನೇರಳೆ</string>
@@ -1082,7 +1081,7 @@
     <string name="clear_instant_app_data">ಅಪ್ಲಿಕೇಶನ್ ತೆರವುಗೊಳಿಸಿ</string>
     <string name="clear_uri_btn_text">ಪ್ರವೇಶ ತೆರವುಗೊಳಿಸು</string>
     <string name="clear_user_data_text">ಸಂಗ್ರಹಣೆಯನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
-    <string name="close_dialog">ಓಕೆ</string>
+    <string name="close_dialog">ಸರಿ</string>
     <string name="color_black">ಕಪ್ಪು</string>
     <string name="color_blue">ನೀಲಿ</string>
     <string name="color_cyan">ಹಸಿರುನೀಲಿ</string>
@@ -3242,7 +3241,7 @@
     <string name="oneplus_hand_up_to_show">ತೋರಿಸಲು ನಿಮ್ಮ ಫೋನ್ ಎತ್ತಿಕೊಳ್ಳಿ</string>
     <string name="oneplus_haptic_feedback_no_app">ಯಾವುದೇ ಬೆಂಬಲಿತ ಗೇಮ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ</string>
     <string name="oneplus_haptic_feedback_no_app_tip">ನೀವು PUBG ಮೊಬೈಲ್ ಮತ್ತು ಆಸ್ಪಾಲ್ಟ್ 9 ಸ್ಥಾಪಿಸಿಕೊಳ್ಳಬಹುದು</string>
-    <string name="oneplus_haptic_feedback_summary">ಬೆಂಬಲಿತ ಗೇಮ್‌ಗಳಿಗೆ ಸ್ಪರ್ಶ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಒದಗಿಸಿ</string>
+    <string name="oneplus_haptic_feedback_summary">ಬೆಂಬಲಿತ ಗೇಮ್‌ಗಳಿಗೆ ಉತ್ತಮ ಹ್ಯಾಪ್ಟಿಕ್ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಒದಗಿಸಿ</string>
     <string name="oneplus_haptic_feedback_support">ಬೆಂಬಲಿತ ಗೇಮ್‌ಗಳು</string>
     <string name="oneplus_haptic_feedback_tips">ನಿರ್ದಿಷ್ಟ ಗೇಮ್ ದೃಶ್ಯಗಳಿಗೆ ಸ್ಪರ್ಶ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಒದಗಿಸಿ, ಬೆಂಬಲಿತ ಗೇಮ್‌ಗಳಿಗೆ ಮಾತ್ರವೇ ಅನ್ವಯವಾಗುತ್ತದೆ</string>
     <string name="oneplus_haptic_feedback_title">ಸ್ಪರ್ಶ ಪ್ರತಿಕ್ರಿಯೆ ಸುಧಾರಣೆ</string>
@@ -3348,7 +3347,7 @@
     <string name="oneplus_no_choice">ಯಾವುದೇ ರಿಂಗ್‌ಟೋನ್ ಆಯ್ಕೆ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="oneplus_no_device_connected">ಯಾವುದೇ ಸಾಧನ ಸಂಪರ್ಕಿಸಲ್ಪಟ್ಟಿಲ್ಲ</string>
     <string name="oneplus_no_file_tips">ರಿಂಗ್‌ಟೋನ್ ಫೈಲ್‌ಗಳಿಲ್ಲ</string>
-    <string name="oneplus_no_supported_apps">ಬೆಂಬಲಿತ ಆಪ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ</string>
+    <string name="oneplus_no_supported_apps">ಯಾವುದೇ ಬೆಂಬಲಿಸದ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ</string>
     <string name="oneplus_noise_tips">ವೈಬ್ರೇಶನ್ ಸಕ್ರಿಯಗೊಳಿಸಿ</string>
     <string name="oneplus_none_default_camera">ಡೀಫಾಲ್ಟ್ ಕ್ಯಾಮೆರಾ ಇಲ್ಲ</string>
     <string name="oneplus_none_default_email">ಡೀಫಾಲ್ಟ್ ಮೇಲ್ ಆಪ್ ಇಲ್ಲ</string>
@@ -3516,7 +3515,7 @@
     <string name="oneplus_schedule">ಶೆಡ್ಯೂಲ್</string>
     <string name="oneplus_screen">ಪರದೆ</string>
     <string name="oneplus_screen_better_cold">ಶೀತ</string>
-    <string name="oneplus_screen_better_nature">ಸ್ವಾಭಾವಿಕ</string>
+    <string name="oneplus_screen_better_nature">ಸಹಜ</string>
     <string name="oneplus_screen_better_warm">ಬಿಸಿ</string>
     <string name="oneplus_screen_color_mode_auto">ಹೊಂದಿಕೊಳ್ಳಬಲ್ಲ ಬಣ್ಣದ ಪ್ರೊಫೈಲ್‌ಗಳು</string>
     <string name="oneplus_screen_color_mode_default">ಡಿಸ್‌ಪ್ಲೇ-P3（ಡೀಫಾಲ್ಟ್）</string>
@@ -3575,7 +3574,7 @@
     <string name="oneplus_search_keyword_swap_navkeys">ಸ್ವಾಪ್ ಬಟನ್‌ಗಳು</string>
     <string name="oneplus_search_keyword_switch">ವರ್ಗಾವಣೆ,ಡೇಟಾ ವಲಸೆ</string>
     <string name="oneplus_search_keyword_theme_settings">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಶನ್, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರದ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆ್ಯನಿಮೇಶನ್, Horizon light, ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಹೊಳೆಯುವ ಬೆಳಕು, ಸೂಕ್ಷ್ಮವಾದ ಗಾಢಬಣ್ಣ, ರೋಮಾಂಚಕ ಟಿಂಟ್‌ಗಳು</string>
-    <string name="oneplus_search_keyword_theme_settings_mcl">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಶನ್, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರದ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆ್ಯನಿಮೇಶನ್, Horizon light, ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಹೊಳೆಯುವ ಬೆಳಕು, ಸೂಕ್ಷ್ಮವಾದ ಗಾಢಬಣ್ಣ, ರೋಮಾಂಚಕ ಟಿಂಟ್‌ಗಳು, McLaren</string>
+    <string name="oneplus_search_keyword_theme_settings_mcl">ಲಾಕ್ ಸ್ಕ್ರೀನ್ ಕಸ್ಟಮೈಸೇಶನ್, ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಗಡಿಯಾರದ ಶೈಲಿ, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್ ಆ್ಯನಿಮೇಶನ್, Horizon Light, ಸಿಸ್ಟಂ ಕಸ್ಟಮೈಸೇಶನ್, ಉಚ್ಚಾರಣೆ ಬಣ್ಣ, ಆಕಾರ, ಫಾಂಟ್, ಟೋನ್, ಐಕಾನ್ ಪ್ಯಾಕ್, ಹೊಳೆಯುವ ಬೆಳಕು, ಸೂಕ್ಷ್ಮವಾದ ಗಾಢಬಣ್ಣ, ರೋಮಾಂಚಕ ಟಿಂಟ್‌ಗಳು, McLaren</string>
     <string name="oneplus_search_keyword_three_screenshots">ಸ್ಕ್ರೀನ್‌ಶಾಟ್</string>
     <string name="oneplus_search_keyword_timer_boot" />
     <string name="oneplus_search_keyword_user_experience">ಅಧಿಸೂಚನೆಗಳು,ಅನುಭವ,ಪ್ರೋಗ್ರಾಂ,ಸುಧಾರಣೆ</string>
@@ -3672,7 +3671,7 @@
     <string name="oneplus_theme_clock">ಗಡಿಯಾರ ಶೈಲಿ</string>
     <string name="oneplus_theme_clock_snake_action">ಆ್ಯಂಬಿಯೆಂಟ್ ಡಿಸ್‌ಪ್ಲೇ ಆನ್ ಮಾಡಿ</string>
     <string name="oneplus_theme_clock_snake_tip">ಆ್ಯಂಬಿಯೆಂಟ್ ಡಿಸ್‌ಪ್ಲೇ ಆನ್ ಆಗಿರುವಾಗ ಈ ವೈಶಿಷ್ಟ್ಯವು ಲಭ್ಯವಿರುತ್ತದೆ</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">ಬಣ್ಣ ಕೋಡ್</string>
     <string name="oneplus_theme_drop_summary">ಮಾರ್ಪಾಡುಗಳನ್ನು ರದ್ದುಪಡಿಸುವುದೆ?</string>
     <string name="oneplus_theme_drop_title">ಸಂಪಾದನೆ ಮೋಡ್‌ನಿಂದ ನಿರ್ಗಮಿಸಿ</string>
     <string name="oneplus_theme_entrance_summary">ವಾಲ್‌ಪೇಪರ್‌ಗಳು, ಅಕ್ಸೆಂಟ್ ಬಣ್ಣ, ಫಾಂಟ್, ಟೋನ್</string>
@@ -3756,8 +3755,8 @@
     <string name="oneplus_vibration_settings_soc_tri_state_summary">ಅಲಾರಂಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಕರೆಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ನಿಶ್ಯಬ್ಧಗೊಳಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಕಂಪನ ಮಾತ್ರ ಮೋಡ್‌ಗೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ</string>
     <string name="oneplus_vibration_summary">ಅಲಾರಂ ಯಾವಾಗಲೂ ರಿಂಗ್ ಆಗುತ್ತದೆ</string>
     <string name="oneplus_video_enhancer">ವೀಡಿಯೊ ಎನ್‌ಹಾನ್ಸರ್</string>
-    <string name="oneplus_video_enhancer_footer">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುವಾಗ ಬಣ್ಣವನ್ನು ವರ್ಧಿಸಿ</string>
-    <string name="oneplus_video_enhancer_summary">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುವಾಗ ಬಣ್ಣವನ್ನು ವರ್ಧಿಸಿ</string>
+    <string name="oneplus_video_enhancer_footer">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತಿರುವಾಗ ಬಣ್ಣವನ್ನು ಹೆಚ್ಚಿಸಿ</string>
+    <string name="oneplus_video_enhancer_summary">ವೀಡಿಯೊಗಳನ್ನು ಪ್ಲೇ ಮಾಡುತ್ತಿರುವಾಗ ಬಣ್ಣವನ್ನು ಹೆಚ್ಚಿಸಿ</string>
     <string name="oneplus_volume_keys_adjust">ಸರಿಹೊಂದಿಸಲು ವಾಲ್ಯೂಮ್ ಬಟನ್ ಬಳಸಿ</string>
     <string name="oneplus_volume_keys_adjust_media">ಮೀಡಿಯಾ ವಾಲ್ಯೂಮ್</string>
     <string name="oneplus_volume_keys_adjust_ringtones">ರಿಂಗ್‌ಟೋನ್ ವಾಲ್ಯೂಮ್</string>
@@ -3827,6 +3826,8 @@
     <string name="op_lockpassword_choose_your_password_header_for_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಬಳಸಲು, ಪಾಸ್‌ವರ್ಡ್ ಹೊಂದಿಸಿ</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಬಳಸಲು, ಪ್ಯಾಟರ್ನ್ ಹೊಂದಿಸಿ</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">ಫೇಸ್ ಅನ್‌ಲಾಕ್ ಬಳಸಲು, ಪಿನ್ ಹೊಂದಿಸಿ</string>
+    <string name="op_member_description">ವಿಶೇಷ ಪ್ರಯೋಜನಗಳನ್ನು ಪಡೆಯಲು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಬೈಂಡ್ ಮಾಡಿ</string>
+    <string name="op_member_title">OnePlus ಖಾತೆಗೆ ಲಾಗ್ ಇನ್ ಮಾಡಿ</string>
     <string name="op_not_disturb">ತೊಂದರೆ ಕೊಡಬಾರದ ಆದ್ಯತೆಗಳು</string>
     <string name="op_not_disturb_summary">ಅಲಾರಂಗಳನ್ನು ಹೊರತುಪಡಿಸಿ, ಕರೆಗಳು ಮತ್ತು ಅಧಿಸೂಚನೆಗಳನ್ನು ಮ್ಯೂಟ್ ಮಾಡಿ ಮತ್ತು ಕಂಪನವನ್ನು ಆಫ್ ಮಾಡಿ</string>
     <string name="op_oneplus_roaming_summary">ಜಾಗತಿಕ ಇಂಟರ್ನೆಟ್ ಎಕ್ಸೆಸ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸಿ</string>

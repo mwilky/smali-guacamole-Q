@@ -179,7 +179,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120b30
+    const v2, 0x7f120b32
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -582,7 +582,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/slices/NotificationChannelSlice;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f120b16
+    const v2, 0x7f120b18
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1269,7 +1269,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f120b8a
+    const v2, 0x7f120b8d
 
     invoke-virtual {v1, v2}, Lcom/android/settings/core/SubSettingLauncher;->setTitleRes(I)Lcom/android/settings/core/SubSettingLauncher;
 
@@ -1362,7 +1362,7 @@
 
     iget-object v3, p0, Lcom/android/settings/homepage/contextualcards/slices/NotificationChannelSlice;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f1209d5
+    const v4, 0x7f1209d7
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -1470,7 +1470,7 @@
 
     iget-object v3, p0, Lcom/android/settings/homepage/contextualcards/slices/NotificationChannelSlice;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120b6a
+    const v4, 0x7f120b6d
 
     new-array v2, v2, [Ljava/lang/Object;
 

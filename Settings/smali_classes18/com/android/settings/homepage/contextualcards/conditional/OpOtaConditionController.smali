@@ -149,7 +149,7 @@
 
     iget-object v2, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
 
-    const v3, 0x7f120e2d
+    const v3, 0x7f120e39
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -181,7 +181,7 @@
 
     iget-object v1, p0, Lcom/android/settings/homepage/contextualcards/conditional/OpOtaConditionController;->mAppContext:Landroid/content/Context;
 
-    const v2, 0x7f120c36
+    const v2, 0x7f120c3b
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

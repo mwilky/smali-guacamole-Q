@@ -65,7 +65,7 @@
 
     iput-object v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mDividerDecoration:Landroidx/preference/PreferenceFragmentCompat$DividerDecoration;
 
-    const v0, 0x7f0d025e
+    const v0, 0x7f0d0260
 
     iput v0, p0, Landroidx/preference/PreferenceFragmentCompat;->mLayoutResId:I
 
@@ -342,7 +342,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0403b2
+    const v2, 0x7f0403b3
 
     const/4 v3, 0x1
 
@@ -454,7 +454,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a058c
+    const v0, 0x7f0a0590
 
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
@@ -467,7 +467,7 @@
     return-object v0
 
     :cond_0
-    const v0, 0x7f0d0264
+    const v0, 0x7f0d0266
 
     const/4 v1, 0x0
 
@@ -517,7 +517,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f0403ac
+    const v4, 0x7f0403ad
 
     invoke-virtual {v0, v3, v1, v4, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

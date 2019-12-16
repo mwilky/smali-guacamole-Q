@@ -132,7 +132,7 @@
 
     invoke-virtual {p1, v2}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    const v1, 0x7f1205ed
+    const v1, 0x7f1205ef
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setSummary(I)V
 
@@ -172,7 +172,7 @@
     :cond_1
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setEnabled(Z)V
 
-    const v1, 0x7f1209de
+    const v1, 0x7f1209e0
 
     invoke-virtual {p1, v1}, Landroidx/preference/Preference;->setSummary(I)V
 

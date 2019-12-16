@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/airbnb/lottie/LottieListener<",
-        "Ljava/lang/Throwable;",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;"
     }
 .end annotation
@@ -43,24 +43,22 @@
 
 
 # virtual methods
-.method public bridge synthetic onResult(Ljava/lang/Object;)V
-    .locals 0
+.method public onResult(Lcom/airbnb/lottie/LottieComposition;)V
+    .locals 1
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$2;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$2;->onResult(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method
 
-.method public onResult(Ljava/lang/Throwable;)V
-    .locals 2
+.method public bridge synthetic onResult(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    const-string v1, "Unable to parse composition"
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$2;->onResult(Lcom/airbnb/lottie/LottieComposition;)V
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
+    return-void
 .end method

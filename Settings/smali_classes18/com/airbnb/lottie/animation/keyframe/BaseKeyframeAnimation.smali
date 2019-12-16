@@ -214,7 +214,7 @@
 .end method
 
 .method protected getCurrentKeyframe()Lcom/airbnb/lottie/value/Keyframe;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -223,88 +223,96 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedKeyframe:Lcom/airbnb/lottie/value/Keyframe;
+    const-string v0, "BaseKeyframeAnimation#getCurrentKeyframe"
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
-    iget v1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
+    iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedKeyframe:Lcom/airbnb/lottie/value/Keyframe;
 
-    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/value/Keyframe;->containsProgress(F)Z
+    if-eqz v1, :cond_0
 
-    move-result v0
+    iget v2, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, v2}, Lcom/airbnb/lottie/value/Keyframe;->containsProgress(F)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedKeyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->keyframes:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/airbnb/lottie/value/Keyframe;
-
-    iget v1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
-
-    invoke-virtual {v0}, Lcom/airbnb/lottie/value/Keyframe;->getStartProgress()F
-
-    move-result v2
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_2
-
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->keyframes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
-    :goto_0
-    if-ltz v1, :cond_2
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->keyframes:Ljava/util/List;
+    move-result-object v1
 
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v0, v2
-
-    check-cast v0, Lcom/airbnb/lottie/value/Keyframe;
+    check-cast v1, Lcom/airbnb/lottie/value/Keyframe;
 
     iget v2, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
 
-    invoke-virtual {v0, v2}, Lcom/airbnb/lottie/value/Keyframe;->containsProgress(F)Z
+    invoke-virtual {v1}, Lcom/airbnb/lottie/value/Keyframe;->getStartProgress()F
+
+    move-result v3
+
+    cmpg-float v2, v2, v3
+
+    if-gez v2, :cond_2
+
+    iget-object v2, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->keyframes:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    add-int/lit8 v2, v2, -0x1
+
+    :goto_0
+    if-ltz v2, :cond_2
+
+    iget-object v3, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->keyframes:Ljava/util/List;
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v1, v3
+
+    check-cast v1, Lcom/airbnb/lottie/value/Keyframe;
+
+    iget v3, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
+
+    invoke-virtual {v1, v3}, Lcom/airbnb/lottie/value/Keyframe;->containsProgress(F)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
 
     goto :goto_1
 
     :cond_1
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
     :cond_2
     :goto_1
-    iput-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedKeyframe:Lcom/airbnb/lottie/value/Keyframe;
+    iput-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedKeyframe:Lcom/airbnb/lottie/value/Keyframe;
 
-    return-object v0
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
+
+    return-object v1
 .end method
 
 .method getEndProgress()F

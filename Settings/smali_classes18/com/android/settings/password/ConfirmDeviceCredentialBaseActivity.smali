@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a03b2
+    const v1, 0x7f0a03b6
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 
@@ -263,7 +263,7 @@
 
     if-eqz v1, :cond_2
 
-    const v1, 0x7f1206dc
+    const v1, 0x7f1206de
 
     invoke-static {p0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -274,6 +274,29 @@
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->finish()V
 
     :cond_2
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportCustomFingerprint()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->isFingerprintNeedShowDarkTheme()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    :cond_3
     const-class v1, Landroid/hardware/biometrics/BiometricManager;
 
     invoke-virtual {p0, v1}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -296,7 +319,7 @@
 
     const/4 v4, 0x1
 
-    if-ne v1, v3, :cond_3
+    if-ne v1, v3, :cond_4
 
     const v1, 0x7f0a0188
 
@@ -306,7 +329,7 @@
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
-    :cond_3
+    :cond_4
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
@@ -315,7 +338,7 @@
 
     invoke-virtual {v1, v3}, Landroid/view/Window;->addFlags(I)V
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
     const-class v1, Landroid/app/KeyguardManager;
 
@@ -331,7 +354,7 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     const-string v1, "STATE_IS_KEYGUARD_LOCKED"
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
@@ -343,7 +366,7 @@
 
     iget-boolean v1, p0, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->mIsKeyguardLocked:Z
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getIntent()Landroid/content/Intent;
 
@@ -355,7 +378,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getWindow()Landroid/view/Window;
 
@@ -365,12 +388,12 @@
 
     invoke-virtual {v1, v3}, Landroid/view/Window;->addFlags(I)V
 
-    :cond_5
+    :cond_6
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getActionBar()Landroid/app/ActionBar;
 
@@ -384,19 +407,19 @@
 
     invoke-virtual {v1, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    :cond_6
-    if-eqz p1, :cond_7
+    :cond_7
+    if-eqz p1, :cond_8
 
     move v2, v4
 
-    :cond_7
+    :cond_8
     iput-boolean v2, p0, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->mRestoring:Z
 
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     invoke-virtual {p0}, Lcom/android/settings/password/ConfirmDeviceCredentialBaseActivity;->getActionBar()Landroid/app/ActionBar;
 
@@ -406,7 +429,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/ActionBar;->setElevation(F)V
 
-    :cond_8
+    :cond_9
     return-void
 
     :catch_0
@@ -449,7 +472,7 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f1206dc
+    const v0, 0x7f1206de
 
     const/4 v1, 0x0
 

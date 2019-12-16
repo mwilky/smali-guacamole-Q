@@ -320,7 +320,6 @@ Cihazları bir araya getirmeniz (genellikle sırt sırta) ve ekranınıza dokunm
     <string name="aod_clock_minimalism">Minimalizm</string>
     <string name="aod_clock_none">Hiçbiri</string>
     <string name="aod_clock_select_style_text">Saat stilini seç</string>
-    <string name="aod_horizon_light">Horizon light</string>
     <string name="aod_horizon_light_effect_1">Mavi</string>
     <string name="aod_horizon_light_effect_2">Kırmızı</string>
     <string name="aod_horizon_light_effect_3">Mor</string>
@@ -1082,7 +1081,7 @@ Seçimi"</string>
     <string name="clear_instant_app_data">Uygulamayı temizle</string>
     <string name="clear_uri_btn_text">Erişimi temizle</string>
     <string name="clear_user_data_text">Depolama alanını temizle</string>
-    <string name="close_dialog">TAMAM</string>
+    <string name="close_dialog">Tamam</string>
     <string name="color_black">Siyah</string>
     <string name="color_blue">Mavi</string>
     <string name="color_cyan">Camgöbeği</string>
@@ -3172,7 +3171,7 @@ Ekrana gitmek için, parmağınızı ekranın alt orta köşesinden yukarıya do
     <string name="oneplus_fullscreen_gesture_guide_will_enable">Gezinme hareketleri etkinleştirilecek</string>
     <string name="oneplus_fullscreen_home_guide_summary">Ekranı alt kenarından yukarı kaydırın</string>
     <string name="oneplus_fullscreen_home_guide_summary_deprecated">Ekranın alt ortasından yukarıya doğru kaydırın</string>
-    <string name="oneplus_fullscreen_home_guide_title">Ana sayfa</string>
+    <string name="oneplus_fullscreen_home_guide_title">Başlangıç ekranı</string>
     <string name="oneplus_fullscreen_landscape_guide_summary">Gezinti hareketleri hâlâ ekranın alt kenarından tetiklenebilir, geri gitmek için lütfen sol veya sağ kenardan kaydırın</string>
     <string name="oneplus_fullscreen_landscape_guide_summary_deprecated">Dikey pozisyonda olduğu gibi gezinti hareketleri yine cihazın alt kısmından yapılır</string>
     <string name="oneplus_fullscreen_landscape_guide_title">Yatay</string>
@@ -3671,7 +3670,7 @@ Not:
     <string name="oneplus_theme_clock">Saat stili</string>
     <string name="oneplus_theme_clock_snake_action">ORTAM EKRANINI AÇ</string>
     <string name="oneplus_theme_clock_snake_tip">Bu özellik, ortam ekranı açıkken kullanılabilir olacaktır</string>
-    <string name="oneplus_theme_colorpicker_colorvalue">COLOR CODE</string>
+    <string name="oneplus_theme_colorpicker_colorvalue">RENK KODU</string>
     <string name="oneplus_theme_drop_summary">Değişiklikler iptal edilsin mi?</string>
     <string name="oneplus_theme_drop_title">Düzenleme modundan çık</string>
     <string name="oneplus_theme_entrance_summary">Duvar kağıtları, vurgu rengi, yazı tipi, ton</string>
@@ -3755,8 +3754,8 @@ Not: Yüz Kilidi parmak izi, PIN veya diğer ekran kilidi seçeneklerinden daha 
     <string name="oneplus_vibration_settings_soc_tri_state_summary">Alarmlar dışındaki tüm aramalar ve bildirimler sessize alınır ve sadece titreşim moduna ayarlanır</string>
     <string name="oneplus_vibration_summary">Alarmlar her zaman çalar</string>
     <string name="oneplus_video_enhancer">Video geliştirici</string>
-    <string name="oneplus_video_enhancer_footer">Videoları oynatılırken renkleri artırır</string>
-    <string name="oneplus_video_enhancer_summary">Videoları oynatılırken renkleri artırır</string>
+    <string name="oneplus_video_enhancer_footer">Videoları oynatırken rengi geliştirir</string>
+    <string name="oneplus_video_enhancer_summary">Videoları oynatırken rengi geliştirir</string>
     <string name="oneplus_volume_keys_adjust">Ayarlamak için ses düğmelerini kullanın</string>
     <string name="oneplus_volume_keys_adjust_media">Medya sesi</string>
     <string name="oneplus_volume_keys_adjust_ringtones">Zil sesi seviyesi</string>
@@ -3826,6 +3825,8 @@ Ağın gizli olarak ayarlanması yönlendiricinizin ayarlarını değiştirmeyec
     <string name="op_lockpassword_choose_your_password_header_for_face">Yüz ile Kilit Açmayı kullanmak için, şifre ayarlayın</string>
     <string name="op_lockpassword_choose_your_pattern_header_for_face">Yüz ile Kilit Açmayı kullanmak için, desen ayarlayın</string>
     <string name="op_lockpassword_choose_your_pin_header_for_face">Yüz ile Kilit Açmayı kullanmak için, PIN ayarlayın</string>
+    <string name="op_member_description">Özel avantajlar edinmek için cihazınızı bağlayın</string>
+    <string name="op_member_title">OnePlus Hesabında Oturum Aç</string>
     <string name="op_not_disturb">\"Rahatsız Etmeyin\" mod tercihleri</string>
     <string name="op_not_disturb_summary">Alarmlar hariç, aramaları ve bildirimleri sessize al ve titreşimi kapat</string>
     <string name="op_oneplus_roaming_summary">Küresel internet erişim hizmetleri sağlar</string>

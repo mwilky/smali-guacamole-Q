@@ -246,7 +246,7 @@
 
     aput-object v0, v3, v4
 
-    const v5, 0x7f120b49
+    const v5, 0x7f120b4c
 
     invoke-virtual {p0, v5, v3}, Lcom/android/settings/notification/NotificationAccessConfirmationActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -258,7 +258,7 @@
 
     aput-object v0, v2, v4
 
-    const v3, 0x7f120b48
+    const v3, 0x7f120b4b
 
     invoke-virtual {p0, v3, v2}, Lcom/android/settings/notification/NotificationAccessConfirmationActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -280,7 +280,7 @@
 
     iput-object v2, v1, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonListener:Landroid/content/DialogInterface$OnClickListener;
 
-    const v2, 0x7f1205b8
+    const v2, 0x7f1205ba
 
     invoke-virtual {p0, v2}, Lcom/android/settings/notification/NotificationAccessConfirmationActivity;->getString(I)Ljava/lang/String;
 

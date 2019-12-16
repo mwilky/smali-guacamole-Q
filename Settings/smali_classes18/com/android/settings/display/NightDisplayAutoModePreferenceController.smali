@@ -58,7 +58,7 @@
 
     iget-object v3, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f120aec
+    const v4, 0x7f120aee
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -70,7 +70,7 @@
 
     iget-object v3, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f120aeb
+    const v5, 0x7f120aed
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -82,7 +82,7 @@
 
     iget-object v3, p0, Lcom/android/settings/display/NightDisplayAutoModePreferenceController;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f120aee
+    const v6, 0x7f120af0
 
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

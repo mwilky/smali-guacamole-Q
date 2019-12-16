@@ -44,10 +44,25 @@
 .method protected getRedactionInterstitialIntent(Landroid/content/Context;)Landroid/content/Intent;
     .locals 1
 
+    invoke-static {}, Lcom/oneplus/settings/utils/OPUtils;->isSupportUstMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/android/settings/SetupRedactionInterstitial;->setEnabled(Landroid/content/Context;Z)V
 
+    iget v0, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mUserId:I
+
+    invoke-static {p1, v0}, Lcom/android/settings/SetupRedactionInterstitial;->createStartIntent(Landroid/content/Context;I)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return-object v0
@@ -84,7 +99,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f0d021b
+    const v0, 0x7f0d021d
 
     const/4 v1, 0x0
 
@@ -259,7 +274,7 @@
 
     if-eqz v3, :cond_2
 
-    const v6, 0x7f0a05cd
+    const v6, 0x7f0a05d1
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -296,7 +311,7 @@
 
     move-result-object v4
 
-    const v6, 0x7f060332
+    const v6, 0x7f06033c
 
     invoke-virtual {v4, v6}, Landroid/content/Context;->getColor(I)I
 
@@ -346,7 +361,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f06039e
+    const v7, 0x7f0603a9
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getColor(I)I
 
@@ -372,7 +387,7 @@
 
     iget-object v0, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mSkipOrClearButton:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f1213dd
+    const v1, 0x7f1213ed
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 
@@ -385,7 +400,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/settings/password/SetupChooseLockPassword$SetupChooseLockPasswordFragment;->mSkipOrClearButton:Lcom/oneplus/lib/widget/button/OPButton;
 
-    const v1, 0x7f12097c
+    const v1, 0x7f12097e
 
     invoke-virtual {v0, v1}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 

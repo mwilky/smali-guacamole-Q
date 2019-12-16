@@ -484,50 +484,47 @@
     const-string v1, "application/json"
 
     :cond_0
-    const/4 v2, -0x1
+    const-string v2, "application/zip"
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v2
 
-    const v4, -0x4a67ee1e
+    if-eqz v2, :cond_1
 
-    if-eq v3, v4, :cond_3
+    const-string v2, "Handling zip response."
 
-    const v4, -0x29cf5b9
+    invoke-static {v2}, Lcom/airbnb/lottie/utils/Logger;->debug(Ljava/lang/String;)V
 
-    if-eq v3, v4, :cond_2
+    sget-object v2, Lcom/airbnb/lottie/network/FileExtension;->ZIP:Lcom/airbnb/lottie/network/FileExtension;
+
+    iget-object v3, p0, Lcom/airbnb/lottie/network/NetworkFetcher;->networkCache:Lcom/airbnb/lottie/network/NetworkCache;
+
+    invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4, v2}, Lcom/airbnb/lottie/network/NetworkCache;->writeTempCacheFile(Ljava/io/InputStream;Lcom/airbnb/lottie/network/FileExtension;)Ljava/io/File;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/util/zip/ZipInputStream;
+
+    new-instance v5, Ljava/io/FileInputStream;
+
+    invoke-direct {v5, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    invoke-direct {v4, v5}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
+
+    iget-object v5, p0, Lcom/airbnb/lottie/network/NetworkFetcher;->url:Ljava/lang/String;
+
+    invoke-static {v4, v5}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromZipStreamSync(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_1
-    goto :goto_0
-
-    :cond_2
-    const-string v3, "application/json"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    const-string v3, "application/zip"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-eqz v2, :cond_4
-
     const-string v2, "Received json response."
 
     invoke-static {v2}, Lcom/airbnb/lottie/utils/Logger;->debug(Ljava/lang/String;)V
@@ -562,53 +559,18 @@
 
     move-result-object v0
 
-    goto :goto_1
-
-    :cond_4
-    const-string v2, "Handling zip response."
-
-    invoke-static {v2}, Lcom/airbnb/lottie/utils/Logger;->debug(Ljava/lang/String;)V
-
-    sget-object v2, Lcom/airbnb/lottie/network/FileExtension;->ZIP:Lcom/airbnb/lottie/network/FileExtension;
-
-    iget-object v3, p0, Lcom/airbnb/lottie/network/NetworkFetcher;->networkCache:Lcom/airbnb/lottie/network/NetworkCache;
-
-    invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4, v2}, Lcom/airbnb/lottie/network/NetworkCache;->writeTempCacheFile(Ljava/io/InputStream;Lcom/airbnb/lottie/network/FileExtension;)Ljava/io/File;
-
-    move-result-object v3
-
-    new-instance v4, Ljava/util/zip/ZipInputStream;
-
-    new-instance v5, Ljava/io/FileInputStream;
-
-    invoke-direct {v5, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    invoke-direct {v4, v5}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
-
-    iget-object v5, p0, Lcom/airbnb/lottie/network/NetworkFetcher;->url:Ljava/lang/String;
-
-    invoke-static {v4, v5}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromZipStreamSync(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
-
-    move-result-object v0
-
-    nop
-
-    :goto_1
+    :goto_0
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieResult;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    if-eqz v4, :cond_5
+    if-eqz v4, :cond_2
 
     iget-object v4, p0, Lcom/airbnb/lottie/network/NetworkFetcher;->networkCache:Lcom/airbnb/lottie/network/NetworkCache;
 
     invoke-virtual {v4, v2}, Lcom/airbnb/lottie/network/NetworkCache;->renameTempFile(Lcom/airbnb/lottie/network/FileExtension;)V
 
-    :cond_5
+    :cond_2
     return-object v0
 .end method
 

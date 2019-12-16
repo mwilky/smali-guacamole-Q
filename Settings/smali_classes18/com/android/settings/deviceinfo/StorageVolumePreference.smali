@@ -75,7 +75,7 @@
 
     iput-object v4, v1, Lcom/android/settings/deviceinfo/StorageVolumePreference;->mColorTintList:Landroid/content/res/ColorStateList;
 
-    const v4, 0x7f0d02ce
+    const v4, 0x7f0d02d0
 
     invoke-virtual {v1, v4}, Lcom/android/settings/deviceinfo/StorageVolumePreference;->setLayoutResource(I)V
 
@@ -233,7 +233,7 @@
 
     move-result-object v14
 
-    const v15, 0x7f12148a
+    const v15, 0x7f12149a
 
     const/4 v10, 0x2
 
@@ -329,7 +329,7 @@
 
     if-eqz v0, :cond_6
 
-    const v0, 0x7f0d0266
+    const v0, 0x7f0d0268
 
     invoke-virtual {v1, v0}, Lcom/android/settings/deviceinfo/StorageVolumePreference;->setWidgetLayoutResource(I)V
 
@@ -350,7 +350,7 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
     .locals 4
 
-    const v0, 0x7f0a0732
+    const v0, 0x7f0a0739
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

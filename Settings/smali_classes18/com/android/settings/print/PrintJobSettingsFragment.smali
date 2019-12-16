@@ -110,7 +110,7 @@
 
     if-nez v1, :cond_1
 
-    const v1, 0x7f12114a
+    const v1, 0x7f12115a
 
     invoke-virtual {p0, v1}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I)Ljava/lang/String;
 
@@ -131,7 +131,7 @@
 
     const/4 v1, 0x2
 
-    const v4, 0x7f12115b
+    const v4, 0x7f12116b
 
     invoke-virtual {p0, v4}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I)Ljava/lang/String;
 

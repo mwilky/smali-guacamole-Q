@@ -63,6 +63,16 @@
     <color name="amber_a200">#ffffd042</color>
     <color name="amber_a400">#ffefbe2a</color>
     <color name="amber_a700">#ffe0ad14</color>
+    <color name="avatar_bg_blue">#ff3f50b5</color>
+    <color name="avatar_bg_blue_violet">#ff673ab7</color>
+    <color name="avatar_bg_gray">#ff607d8d</color>
+    <color name="avatar_bg_green">#ff009688</color>
+    <color name="avatar_bg_green_blue">#ff02bcd4</color>
+    <color name="avatar_bg_magenta">#ff9c27b0</color>
+    <color name="avatar_bg_red">#ffe91e63</color>
+    <color name="avatar_bg_sky_blue">#ff2196f3</color>
+    <color name="avatar_bg_yellow">#ffff9801</color>
+    <color name="avatar_bg_yellow_green">#ff4caf50</color>
     <color name="background_color">#ffffffff</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@color/white</color>
@@ -729,6 +739,7 @@
     <color name="oneplus_contorl_text_color_secondary_dark">#7affffff</color>
     <color name="oneplus_contorl_text_color_secondary_default">@color/oneplus_contorl_text_color_secondary_light</color>
     <color name="oneplus_contorl_text_color_secondary_light">#66000000</color>
+    <color name="oneplus_default_avatar_texture">#28ffffff</color>
     <color name="oneplus_divider_crude">#1e000000</color>
     <color name="oneplus_divider_fine">@color/divider_fine</color>
     <color name="oneplus_finger_anim_bg_color">#ffe9e9e9</color>

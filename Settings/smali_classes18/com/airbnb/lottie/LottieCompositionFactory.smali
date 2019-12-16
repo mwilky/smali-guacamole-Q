@@ -535,12 +535,15 @@
 
     move-result-object v0
 
+    if-eqz p1, :cond_0
+
     invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
 
     move-result-object v1
 
     invoke-virtual {v1, p1, v0}, Lcom/airbnb/lottie/model/LottieCompositionCache;->put(Ljava/lang/String;Lcom/airbnb/lottie/LottieComposition;)V
 
+    :cond_0
     new-instance v1, Lcom/airbnb/lottie/LottieResult;
 
     invoke-direct {v1, v0}, Lcom/airbnb/lottie/LottieResult;-><init>(Ljava/lang/Object;)V
@@ -548,11 +551,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz p2, :cond_0
+    if-eqz p2, :cond_1
 
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
-    :cond_0
+    :cond_1
     return-object v1
 
     :catchall_0
@@ -570,19 +573,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz p2, :cond_1
-
-    invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
-
-    :cond_1
-    return-object v1
-
-    :goto_0
     if-eqz p2, :cond_2
 
     invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
 
     :cond_2
+    return-object v1
+
+    :goto_0
+    if-eqz p2, :cond_3
+
+    invoke-static {p0}, Lcom/airbnb/lottie/utils/Utils;->closeQuietly(Ljava/io/Closeable;)V
+
+    :cond_3
     throw v0
 .end method
 
@@ -699,7 +702,7 @@
 .end method
 
 .method public static fromRawRes(Landroid/content/Context;I)Lcom/airbnb/lottie/LottieTask;
-    .locals 3
+    .locals 4
     .param p1    # I
         .annotation build Landroidx/annotation/RawRes;
         .end annotation
@@ -715,23 +718,27 @@
         }
     .end annotation
 
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v0
-
-    invoke-static {p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->rawResCacheKey(I)Ljava/lang/String;
-
     move-result-object v1
 
-    new-instance v2, Lcom/airbnb/lottie/LottieCompositionFactory$3;
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->rawResCacheKey(Landroid/content/Context;I)Ljava/lang/String;
 
-    invoke-direct {v2, v0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory$3;-><init>(Landroid/content/Context;I)V
+    move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/airbnb/lottie/LottieCompositionFactory;->cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
+    new-instance v3, Lcom/airbnb/lottie/LottieCompositionFactory$3;
 
-    move-result-object v1
+    invoke-direct {v3, v0, v1, p1}, Lcom/airbnb/lottie/LottieCompositionFactory$3;-><init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;I)V
 
-    return-object v1
+    invoke-static {v2, v3}, Lcom/airbnb/lottie/LottieCompositionFactory;->cache(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/LottieTask;
+
+    move-result-object v2
+
+    return-object v2
 .end method
 
 .method public static fromRawResSync(Landroid/content/Context;I)Lcom/airbnb/lottie/LottieResult;
@@ -763,7 +770,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->rawResCacheKey(I)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory;->rawResCacheKey(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1218,12 +1225,15 @@
     goto :goto_4
 
     :cond_9
+    if-eqz p1, :cond_a
+
     invoke-static {}, Lcom/airbnb/lottie/model/LottieCompositionCache;->getInstance()Lcom/airbnb/lottie/model/LottieCompositionCache;
 
     move-result-object v2
 
     invoke-virtual {v2, p1, v0}, Lcom/airbnb/lottie/model/LottieCompositionCache;->put(Ljava/lang/String;Lcom/airbnb/lottie/LottieComposition;)V
 
+    :cond_a
     new-instance v2, Lcom/airbnb/lottie/LottieResult;
 
     invoke-direct {v2, v0}, Lcom/airbnb/lottie/LottieResult;-><init>(Ljava/lang/Object;)V
@@ -1240,9 +1250,39 @@
     return-object v3
 .end method
 
-.method private static rawResCacheKey(I)Ljava/lang/String;
+.method private static isNightMode(Landroid/content/Context;)Z
     .locals 2
-    .param p0    # I
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v0, v0, 0x30
+
+    const/16 v1, 0x20
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return v1
+.end method
+
+.method private static rawResCacheKey(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 2
+    .param p1    # I
         .annotation build Landroidx/annotation/RawRes;
         .end annotation
     .end param
@@ -1251,11 +1291,27 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "rawRes_"
+    const-string v1, "rawRes"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lcom/airbnb/lottie/LottieCompositionFactory;->isNightMode(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "_night_"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "_day_"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -76,7 +76,11 @@
     .end annotation
 .end field
 
+.field private isApplyingOpacityToLayersEnabled:Z
+
 .field private isDirty:Z
+
+.field private isExtraScaleEnabled:Z
 
 .field private final lazyCompositionTasks:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -92,7 +96,14 @@
 
 .field private performanceTrackingEnabled:Z
 
+.field private final progressUpdateListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
 .field private scale:F
+
+.field private scaleType:Landroid/widget/ImageView$ScaleType;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
 
 .field private systemAnimationsEnabled:Z
 
@@ -142,21 +153,29 @@
 
     iput-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->systemAnimationsEnabled:Z
 
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v1, Ljava/util/HashSet;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->colorFilterData:Ljava/util/Set;
+    iput-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->colorFilterData:Ljava/util/Set;
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->lazyCompositionTasks:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->lazyCompositionTasks:Ljava/util/ArrayList;
 
-    const/16 v0, 0xff
+    new-instance v1, Lcom/airbnb/lottie/LottieDrawable$1;
 
-    iput v0, p0, Lcom/airbnb/lottie/LottieDrawable;->alpha:I
+    invoke-direct {v1, p0}, Lcom/airbnb/lottie/LottieDrawable$1;-><init>(Lcom/airbnb/lottie/LottieDrawable;)V
+
+    iput-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->progressUpdateListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+    const/16 v1, 0xff
+
+    iput v1, p0, Lcom/airbnb/lottie/LottieDrawable;->alpha:I
+
+    iput-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->isExtraScaleEnabled:Z
 
     const/4 v0, 0x0
 
@@ -164,9 +183,7 @@
 
     iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
 
-    new-instance v1, Lcom/airbnb/lottie/LottieDrawable$1;
-
-    invoke-direct {v1, p0}, Lcom/airbnb/lottie/LottieDrawable$1;-><init>(Lcom/airbnb/lottie/LottieDrawable;)V
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->progressUpdateListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -212,6 +229,270 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
 
+    return-void
+.end method
+
+.method private drawWithNewAspectRatio(Landroid/graphics/Canvas;)V
+    .locals 12
+
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, -0x1
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    invoke-virtual {v3}, Lcom/airbnb/lottie/LottieComposition;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    invoke-virtual {v4}, Lcom/airbnb/lottie/LottieComposition;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    div-float/2addr v3, v4
+
+    iget-boolean v4, p0, Lcom/airbnb/lottie/LottieDrawable;->isExtraScaleEnabled:Z
+
+    if-eqz v4, :cond_2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
+
+    move-result v4
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    cmpg-float v7, v4, v6
+
+    if-gez v7, :cond_1
+
+    div-float/2addr v5, v4
+
+    div-float/2addr v2, v5
+
+    div-float/2addr v3, v5
+
+    :cond_1
+    cmpl-float v6, v5, v6
+
+    if-lez v6, :cond_2
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    move-result v0
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    const/high16 v7, 0x40000000    # 2.0f
+
+    div-float/2addr v6, v7
+
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    div-float/2addr v8, v7
+
+    mul-float v7, v6, v4
+
+    mul-float v9, v8, v4
+
+    sub-float v10, v6, v7
+
+    sub-float v11, v8, v9
+
+    invoke-virtual {p1, v10, v11}, Landroid/graphics/Canvas;->translate(FF)V
+
+    invoke-virtual {p1, v5, v5, v7, v9}, Landroid/graphics/Canvas;->scale(FFFF)V
+
+    :cond_2
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4, v2, v3}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
+
+    iget-object v5, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
+
+    iget v6, p0, Lcom/airbnb/lottie/LottieDrawable;->alpha:I
+
+    invoke-virtual {v4, p1, v5, v6}, Lcom/airbnb/lottie/model/layer/CompositionLayer;->draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
+
+    if-lez v0, :cond_3
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    :cond_3
+    return-void
+.end method
+
+.method private drawWithOriginalAspectRatio(Landroid/graphics/Canvas;)V
+    .locals 10
+
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget v0, p0, Lcom/airbnb/lottie/LottieDrawable;->scale:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-direct {p0, p1}, Lcom/airbnb/lottie/LottieDrawable;->getMaxScale(Landroid/graphics/Canvas;)F
+
+    move-result v2
+
+    cmpl-float v3, v0, v2
+
+    if-lez v3, :cond_1
+
+    move v0, v2
+
+    iget v3, p0, Lcom/airbnb/lottie/LottieDrawable;->scale:F
+
+    div-float v1, v3, v0
+
+    :cond_1
+    const/4 v3, -0x1
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    cmpl-float v4, v1, v4
+
+    if-lez v4, :cond_2
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    invoke-virtual {v4}, Lcom/airbnb/lottie/LottieComposition;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    div-float/2addr v4, v5
+
+    iget-object v6, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
+
+    invoke-virtual {v6}, Lcom/airbnb/lottie/LottieComposition;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    div-float/2addr v6, v5
+
+    mul-float v5, v4, v0
+
+    mul-float v7, v6, v0
+
+    nop
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getScale()F
+
+    move-result v8
+
+    mul-float/2addr v8, v4
+
+    sub-float/2addr v8, v5
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getScale()F
+
+    move-result v9
+
+    mul-float/2addr v9, v6
+
+    sub-float/2addr v9, v7
+
+    invoke-virtual {p1, v8, v9}, Landroid/graphics/Canvas;->translate(FF)V
+
+    invoke-virtual {p1, v1, v1, v5, v7}, Landroid/graphics/Canvas;->scale(FFFF)V
+
+    :cond_2
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4, v0, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    iget-object v4, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
+
+    iget-object v5, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
+
+    iget v6, p0, Lcom/airbnb/lottie/LottieDrawable;->alpha:I
+
+    invoke-virtual {v4, p1, v5, v6}, Lcom/airbnb/lottie/model/layer/CompositionLayer;->draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
+
+    if-lez v3, :cond_3
+
+    invoke-virtual {p1, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    :cond_3
     return-void
 .end method
 
@@ -648,8 +929,18 @@
     return-void
 .end method
 
+.method public disableExtraScaleModeInFitXY()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->isExtraScaleEnabled:Z
+
+    return-void
+.end method
+
 .method public draw(Landroid/graphics/Canvas;)V
-    .locals 11
+    .locals 3
     .param p1    # Landroid/graphics/Canvas;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -663,124 +954,22 @@
 
     invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
-    if-nez v1, :cond_0
+    iget-object v2, p0, Lcom/airbnb/lottie/LottieDrawable;->scaleType:Landroid/widget/ImageView$ScaleType;
 
-    return-void
+    if-ne v1, v2, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/airbnb/lottie/LottieDrawable;->drawWithNewAspectRatio(Landroid/graphics/Canvas;)V
+
+    goto :goto_0
 
     :cond_0
-    iget v1, p0, Lcom/airbnb/lottie/LottieDrawable;->scale:F
+    invoke-direct {p0, p1}, Lcom/airbnb/lottie/LottieDrawable;->drawWithOriginalAspectRatio(Landroid/graphics/Canvas;)V
 
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-direct {p0, p1}, Lcom/airbnb/lottie/LottieDrawable;->getMaxScale(Landroid/graphics/Canvas;)F
-
-    move-result v3
-
-    cmpl-float v4, v1, v3
-
-    if-lez v4, :cond_1
-
-    move v1, v3
-
-    iget v4, p0, Lcom/airbnb/lottie/LottieDrawable;->scale:F
-
-    div-float v2, v4, v1
-
-    :cond_1
-    const/4 v4, -0x1
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    cmpl-float v5, v2, v5
-
-    if-lez v5, :cond_2
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v4
-
-    iget-object v5, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
-
-    invoke-virtual {v5}, Lcom/airbnb/lottie/LottieComposition;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    const/high16 v6, 0x40000000    # 2.0f
-
-    div-float/2addr v5, v6
-
-    iget-object v7, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
-
-    invoke-virtual {v7}, Lcom/airbnb/lottie/LottieComposition;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    div-float/2addr v7, v6
-
-    mul-float v6, v5, v1
-
-    mul-float v8, v7, v1
-
-    nop
-
-    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getScale()F
-
-    move-result v9
-
-    mul-float/2addr v9, v5
-
-    sub-float/2addr v9, v6
-
-    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getScale()F
-
-    move-result v10
-
-    mul-float/2addr v10, v7
-
-    sub-float/2addr v10, v8
-
-    invoke-virtual {p1, v9, v10}, Landroid/graphics/Canvas;->translate(FF)V
-
-    invoke-virtual {p1, v2, v2, v6, v8}, Landroid/graphics/Canvas;->scale(FFFF)V
-
-    :cond_2
-    iget-object v5, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
-
-    invoke-virtual {v5}, Landroid/graphics/Matrix;->reset()V
-
-    iget-object v5, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
-
-    invoke-virtual {v5, v1, v1}, Landroid/graphics/Matrix;->preScale(FF)Z
-
-    iget-object v5, p0, Lcom/airbnb/lottie/LottieDrawable;->compositionLayer:Lcom/airbnb/lottie/model/layer/CompositionLayer;
-
-    iget-object v6, p0, Lcom/airbnb/lottie/LottieDrawable;->matrix:Landroid/graphics/Matrix;
-
-    iget v7, p0, Lcom/airbnb/lottie/LottieDrawable;->alpha:I
-
-    invoke-virtual {v5, p1, v6, v7}, Lcom/airbnb/lottie/model/layer/CompositionLayer;->draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
-
+    :goto_0
     invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
-    if-lez v4, :cond_3
-
-    invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    :cond_3
     return-void
 .end method
 
@@ -1220,9 +1409,24 @@
 
     iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
 
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
     invoke-virtual {v0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->isRunning()Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method public isApplyingOpacityToLayersEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->isApplyingOpacityToLayersEnabled:Z
 
     return v0
 .end method
@@ -1371,6 +1575,10 @@
 
     invoke-virtual {p0, v0}, Lcom/airbnb/lottie/LottieDrawable;->setFrame(I)V
 
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
+
+    invoke-virtual {v0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->endAnimation()V
+
     :cond_4
     return-void
 .end method
@@ -1386,11 +1594,17 @@
 .end method
 
 .method public removeAllUpdateListeners()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->removeAllUpdateListeners()V
+
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
+
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->progressUpdateListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     return-void
 .end method
@@ -1482,10 +1696,57 @@
     return-void
 
     :cond_0
+    iget-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->systemAnimationsEnabled:Z
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getRepeatCount()I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
     iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->resumeAnimation()V
 
+    :cond_2
+    iget-boolean v0, p0, Lcom/airbnb/lottie/LottieDrawable;->systemAnimationsEnabled:Z
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getSpeed()F
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_3
+
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getMinFrame()F
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->getMaxFrame()F
+
+    move-result v0
+
+    :goto_0
+    float-to-int v0, v0
+
+    invoke-virtual {p0, v0}, Lcom/airbnb/lottie/LottieDrawable;->setFrame(I)V
+
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
+
+    invoke-virtual {v0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->endAnimation()V
+
+    :cond_4
     return-void
 .end method
 
@@ -1536,6 +1797,14 @@
     iput p1, p0, Lcom/airbnb/lottie/LottieDrawable;->alpha:I
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieDrawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public setApplyingOpacityToLayersEnabled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/airbnb/lottie/LottieDrawable;->isApplyingOpacityToLayersEnabled:Z
 
     return-void
 .end method
@@ -2146,7 +2415,7 @@
 .end method
 
 .method public setProgress(F)V
-    .locals 3
+    .locals 4
     .param p1    # F
         .annotation build Landroidx/annotation/FloatRange;
             from = 0.0
@@ -2169,23 +2438,31 @@
     return-void
 
     :cond_0
+    const-string v0, "Drawable#setProgress"
+
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
+
     iget-object v1, p0, Lcom/airbnb/lottie/LottieDrawable;->animator:Lcom/airbnb/lottie/utils/LottieValueAnimator;
-
-    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieComposition;->getStartFrame()F
-
-    move-result v0
 
     iget-object v2, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {v2}, Lcom/airbnb/lottie/LottieComposition;->getEndFrame()F
+    invoke-virtual {v2}, Lcom/airbnb/lottie/LottieComposition;->getStartFrame()F
 
     move-result v2
 
-    invoke-static {v0, v2, p1}, Lcom/airbnb/lottie/utils/MiscUtils;->lerp(FFF)F
+    iget-object v3, p0, Lcom/airbnb/lottie/LottieDrawable;->composition:Lcom/airbnb/lottie/LottieComposition;
 
-    move-result v0
+    invoke-virtual {v3}, Lcom/airbnb/lottie/LottieComposition;->getEndFrame()F
 
-    invoke-virtual {v1, v0}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->setFrame(F)V
+    move-result v3
+
+    invoke-static {v2, v3, p1}, Lcom/airbnb/lottie/utils/MiscUtils;->lerp(FFF)F
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/airbnb/lottie/utils/LottieValueAnimator;->setFrame(F)V
+
+    invoke-static {v0}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
 .end method
@@ -2216,6 +2493,14 @@
     iput p1, p0, Lcom/airbnb/lottie/LottieDrawable;->scale:F
 
     invoke-direct {p0}, Lcom/airbnb/lottie/LottieDrawable;->updateBounds()V
+
+    return-void
+.end method
+
+.method setScaleType(Landroid/widget/ImageView$ScaleType;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable;->scaleType:Landroid/widget/ImageView$ScaleType;
 
     return-void
 .end method

@@ -93,7 +93,7 @@
 .method private adjustForGuideImage()V
     .locals 3
 
-    const v0, 0x7f0a0308
+    const v0, 0x7f0a0309
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -160,7 +160,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0a0679
+    const v0, 0x7f0a067d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +172,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    const v0, 0x7f0a0685
+    const v0, 0x7f0a0689
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -431,7 +431,7 @@
 
     invoke-super {p0}, Lcom/android/settings/biometrics/face/FingerprintEnrollBase;->initViews()V
 
-    const v0, 0x7f0a0685
+    const v0, 0x7f0a0689
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -439,7 +439,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f121309
+    const v1, 0x7f121319
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -451,17 +451,17 @@
 
     move-result v2
 
-    const v3, 0x7f120ca6
+    const v3, 0x7f120cad
 
     if-eqz v2, :cond_0
 
     invoke-virtual {p0, v3}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v2, 0x7f120cb8
+    const v2, 0x7f120cbf
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    const v2, 0x7f0a05a9
+    const v2, 0x7f0a05ad
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 
@@ -480,22 +480,22 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f120fbb
+    const v2, 0x7f120fc6
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v2, 0x7f120fba
+    const v2, 0x7f120fc5
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 
     :cond_1
-    const v2, 0x7f120ca5
+    const v2, 0x7f120cac
 
     invoke-virtual {p0, v2}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->setHeaderText(I)V
 
-    const v2, 0x7f120ca4
+    const v2, 0x7f120cab
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -512,7 +512,7 @@
 
     invoke-virtual {v2, p0}, Lcom/oneplus/lib/widget/button/OPButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v3, 0x7f120e35
+    const v3, 0x7f120e41
 
     invoke-virtual {v2, v3}, Lcom/oneplus/lib/widget/button/OPButton;->setText(I)V
 
@@ -657,7 +657,7 @@
     iput-boolean v0, p0, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->mAlreadyHadLockScreenSetup:Z
 
     :goto_0
-    const v0, 0x7f0d01a2
+    const v0, 0x7f0d01a3
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->setContentView(I)V
 
@@ -807,7 +807,7 @@
 .method protected setHeaderText(I)V
     .locals 1
 
-    const v0, 0x7f0a0679
+    const v0, 0x7f0a067d
 
     invoke-virtual {p0, v0}, Lcom/android/settings/biometrics/face/FaceUnlockEnrollIntroduction;->findViewById(I)Landroid/view/View;
 

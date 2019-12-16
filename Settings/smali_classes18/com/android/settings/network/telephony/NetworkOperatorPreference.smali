@@ -110,7 +110,7 @@
     return v1
 
     :cond_0
-    const v1, 0x7f08066a
+    const v1, 0x7f080678
 
     return v1
 
@@ -124,18 +124,18 @@
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f08066c
+    const v1, 0x7f08067a
 
     :goto_0
     return v1
 
     :cond_3
-    const v1, 0x7f080669
+    const v1, 0x7f080677
 
     return v1
 
     :cond_4
-    const v1, 0x7f08066b
+    const v1, 0x7f080679
 
     return v1
 .end method
@@ -230,7 +230,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f120732
+    const v3, 0x7f120734
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
