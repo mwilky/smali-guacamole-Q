@@ -40023,35 +40023,9 @@
 
     iget v1, v1, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v2, p1, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "dec provider count provider:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p2, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-
-    iget v3, v3, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, " client:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p1, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
-
-    iget v3, v3, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
+    invoke-static {v1, v0, v2}, Lcom/android/server/am/OpBGFrozenInjector;->importantProviderChangeEvent(IZLcom/android/server/am/ProcessRecord;)V
 
     :cond_2
     const/4 v1, 0x1
@@ -55387,57 +55361,31 @@
     iput v4, v2, Lcom/android/server/am/ContentProviderConnection;->numUnstableIncs:I
 
     :goto_2
-    iget-object v4, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
+    iget-object v5, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
-    if-eqz v4, :cond_5
-
-    iget-object v4, v2, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
-
-    if-eqz v4, :cond_5
-
-    iget-object v4, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-
-    iget v4, v4, Lcom/android/server/am/ProcessRecord;->uid:I
+    if-eqz v5, :cond_5
 
     iget-object v5, v2, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
 
+    if-eqz v5, :cond_5
+
+    iget-object v5, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
+
     iget v5, v5, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    if-eq v4, v5, :cond_5
-
-    iget-object v4, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-
-    iget v4, v4, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "inc provider count provider:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v6, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
-
-    iget v6, v6, Lcom/android/server/am/ProcessRecord;->uid:I
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v6, " client:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v6, v2, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
 
     iget v6, v6, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eq v5, v6, :cond_5
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v5, v1, Lcom/android/server/am/ContentProviderRecord;->proc:Lcom/android/server/am/ProcessRecord;
 
-    move-result-object v5
+    iget v5, v5, Lcom/android/server/am/ProcessRecord;->uid:I
 
-    invoke-static {v4, v5}, Lcom/android/server/am/OpBGFrozenInjector;->triggerResume(ILjava/lang/String;)V
+    iget-object v6, v2, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
+
+    invoke-static {v5, v4, v6}, Lcom/android/server/am/OpBGFrozenInjector;->importantProviderChangeEvent(IZLcom/android/server/am/ProcessRecord;)V
 
     :cond_5
     iget-object v4, v1, Lcom/android/server/am/ContentProviderRecord;->connections:Ljava/util/ArrayList;

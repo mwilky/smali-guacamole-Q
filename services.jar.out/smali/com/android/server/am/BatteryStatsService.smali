@@ -115,6 +115,12 @@
 
     iput-object v0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
 
+    iget-object v0, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;
+
+    iget-object v1, p0, Lcom/android/server/am/BatteryStatsService;->mContext:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Landroid/os/OpBatteryStatsInjector;->initInstance(Lcom/android/internal/os/BatteryStatsImpl;Landroid/content/Context;)V
+
     new-instance v0, Lcom/android/server/am/BatteryExternalStatsWorker;
 
     iget-object v1, p0, Lcom/android/server/am/BatteryStatsService;->mStats:Lcom/android/internal/os/BatteryStatsImpl;

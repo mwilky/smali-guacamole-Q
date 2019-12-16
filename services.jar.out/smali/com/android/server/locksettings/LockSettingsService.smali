@@ -74,6 +74,8 @@
 
 .field private final mNotificationManager:Landroid/app/NotificationManager;
 
+.field private final mPackageBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
 .field private final mRecoverableKeyStoreManager:Lcom/android/server/locksettings/recoverablekeystore/RecoverableKeyStoreManager;
 
 .field private final mSeparateChallengeLock:Ljava/lang/Object;
@@ -252,7 +254,7 @@
 .end method
 
 .method protected constructor <init>(Lcom/android/server/locksettings/LockSettingsService$Injector;)V
-    .locals 7
+    .locals 8
     .annotation build Lcom/android/internal/annotations/VisibleForTesting;
     .end annotation
 
@@ -273,6 +275,12 @@
     new-instance v0, Lcom/android/server/locksettings/LockSettingsService$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/locksettings/LockSettingsService$2;-><init>(Lcom/android/server/locksettings/LockSettingsService;)V
+
+    iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsService;->mPackageBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    new-instance v0, Lcom/android/server/locksettings/LockSettingsService$3;
+
+    invoke-direct {v0, p0}, Lcom/android/server/locksettings/LockSettingsService$3;-><init>(Lcom/android/server/locksettings/LockSettingsService;)V
 
     iput-object v0, p0, Lcom/android/server/locksettings/LockSettingsService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
@@ -348,19 +356,25 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
+    new-instance v1, Landroid/content/IntentFilter;
+
+    invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
+
+    move-object v7, v1
+
     const-string v1, "android.intent.action.PACKAGE_DATA_CLEARED"
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string/jumbo v1, "package"
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
+    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/android/server/locksettings/LockSettingsService$Injector;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsService;->mPackageBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
@@ -369,6 +383,16 @@
     const/4 v6, 0x0
 
     move-object v4, v0
+
+    invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+
+    invoke-virtual {p1}, Lcom/android/server/locksettings/LockSettingsService$Injector;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/android/server/locksettings/LockSettingsService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+
+    sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual/range {v1 .. v6}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
@@ -568,15 +592,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/locksettings/LockSettingsService;IZ)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/android/server/locksettings/LockSettingsService;->removeUser(IZ)V
-
-    return-void
-.end method
-
-.method static synthetic access$800(Lcom/android/server/locksettings/LockSettingsService;I)Z
+.method static synthetic access$700(Lcom/android/server/locksettings/LockSettingsService;I)Z
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/android/server/locksettings/LockSettingsService;->isSyntheticPasswordBasedCredentialLocked(I)Z
@@ -586,10 +602,18 @@
     return v0
 .end method
 
-.method static synthetic access$900(Lcom/android/server/locksettings/LockSettingsService;I)V
+.method static synthetic access$800(Lcom/android/server/locksettings/LockSettingsService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/locksettings/LockSettingsService;->removeKeystoreProfileKey(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$900(Lcom/android/server/locksettings/LockSettingsService;IZ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/server/locksettings/LockSettingsService;->removeUser(IZ)V
 
     return-void
 .end method
@@ -6664,9 +6688,9 @@
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    new-instance v2, Lcom/android/server/locksettings/LockSettingsService$3;
+    new-instance v2, Lcom/android/server/locksettings/LockSettingsService$4;
 
-    invoke-direct {v2, p0, v1}, Lcom/android/server/locksettings/LockSettingsService$3;-><init>(Lcom/android/server/locksettings/LockSettingsService;Ljava/util/concurrent/CountDownLatch;)V
+    invoke-direct {v2, p0, v1}, Lcom/android/server/locksettings/LockSettingsService$4;-><init>(Lcom/android/server/locksettings/LockSettingsService;Ljava/util/concurrent/CountDownLatch;)V
 
     :try_start_0
     iget-object v3, p0, Lcom/android/server/locksettings/LockSettingsService;->mActivityManager:Landroid/app/IActivityManager;

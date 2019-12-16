@@ -6,6 +6,8 @@
 # static fields
 .field private static final DEBUG_ONEPLUS:Z
 
+.field private static final DESKCLOCK:Ljava/lang/String; = "com.oneplus.deskclock"
+
 .field public static final FLAG_ALLOW_WHILE_IDLE:I = 0x4
 
 .field public static final FLAG_ALLOW_WHILE_IDLE_UNRESTRICTED:I = 0x8
@@ -374,6 +376,25 @@
     aput-wide p4, v0, v1
 
     return-object v0
+.end method
+
+.method public static needDeferred(Ljava/lang/String;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    const-string v1, "com.oneplus.deskclock"
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    return v0
 .end method
 
 .method public static onStart(Lcom/android/server/AlarmManagerService$AmsInner;)V

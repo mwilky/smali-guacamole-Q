@@ -7,6 +7,9 @@
 .method public abstract init(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/am/BatteryStatsService;)Z
 .end method
 
+.method public abstract initPlugState(ZIZ)Z
+.end method
+
 .method public abstract notifyBatteryLevelEvent(I)V
 .end method
 
@@ -26,6 +29,9 @@
 .end method
 
 .method public abstract processBatteryValues(IIZZ)V
+.end method
+
+.method public abstract registerResetParamListener(Lcom/android/server/wm/OpPowerConsumpStatsInjector$ResetParamListener;)V
 .end method
 
 .method public abstract updateScreenState(I)V

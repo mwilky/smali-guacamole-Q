@@ -90,7 +90,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$5000(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$5100(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
 
     return-void
 .end method
@@ -238,7 +238,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v2}, Lcom/android/server/display/DisplayManagerService;->access$5500(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/server/display/DisplayManagerService;->access$5600(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -250,7 +250,7 @@
 
     iget-object v2, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v2}, Lcom/android/server/display/DisplayManagerService;->access$5500(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcom/android/server/display/DisplayManagerService;->access$5600(Lcom/android/server/display/DisplayManagerService;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -355,7 +355,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$4700(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
+    invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$4800(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
 
     return-void
 
@@ -417,6 +417,18 @@
     return-object v0
 .end method
 
+.method public screenshot(III)Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
+
+    invoke-static {v0, p1, p2, p3}, Lcom/android/server/display/DisplayManagerService;->access$4700(Lcom/android/server/display/DisplayManagerService;III)Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public setDisplayAccessUIDs(Landroid/util/SparseArray;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -430,7 +442,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$5400(Lcom/android/server/display/DisplayManagerService;Landroid/util/SparseArray;)V
+    invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$5500(Lcom/android/server/display/DisplayManagerService;Landroid/util/SparseArray;)V
 
     return-void
 .end method
@@ -440,7 +452,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$4900(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$5000(Lcom/android/server/display/DisplayManagerService;ILandroid/view/DisplayInfo;)V
 
     return-void
 .end method
@@ -450,7 +462,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/android/server/display/DisplayManagerService;->access$5200(Lcom/android/server/display/DisplayManagerService;III)V
+    invoke-static {v0, p1, p2, p3}, Lcom/android/server/display/DisplayManagerService;->access$5300(Lcom/android/server/display/DisplayManagerService;III)V
 
     return-void
 .end method
@@ -470,7 +482,7 @@
 
     move v5, p5
 
-    invoke-static/range {v0 .. v5}, Lcom/android/server/display/DisplayManagerService;->access$5100(Lcom/android/server/display/DisplayManagerService;IZFIZ)V
+    invoke-static/range {v0 .. v5}, Lcom/android/server/display/DisplayManagerService;->access$5200(Lcom/android/server/display/DisplayManagerService;IZFIZ)V
 
     return-void
 .end method
@@ -480,7 +492,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$5300(Lcom/android/server/display/DisplayManagerService;IZ)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/display/DisplayManagerService;->access$5400(Lcom/android/server/display/DisplayManagerService;IZ)V
 
     return-void
 .end method
@@ -518,7 +530,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$4800(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
+    invoke-static {v0, p1}, Lcom/android/server/display/DisplayManagerService;->access$4900(Lcom/android/server/display/DisplayManagerService;Landroid/hardware/display/DisplayManagerInternal$DisplayTransactionListener;)V
 
     return-void
 

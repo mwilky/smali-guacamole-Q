@@ -19,6 +19,9 @@
 .method public abstract isKeyguardDone()Z
 .end method
 
+.method public abstract isPackageInPassedList(Ljava/lang/String;)Z
+.end method
+
 .method public abstract isTopAppLocked(Landroid/app/ActivityManager$RecentTaskInfo;I)Z
 .end method
 

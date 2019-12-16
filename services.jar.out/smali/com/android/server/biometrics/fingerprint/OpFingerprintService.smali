@@ -14,7 +14,11 @@
 
 .field private static final FINISH_FP_ENROLL:I = 0xa
 
+.field private static final RESUME_FP_AUTHENTICATE:I = 0xb
+
 .field private static final RESUME_FP_ENROLL:I = 0x8
+
+.field private static final SUSPEND_FP_AUTHENTICATE:I = 0xc
 
 .field private static final SUSPEND_FP_ENROLL:I = 0x9
 
@@ -1857,17 +1861,55 @@
     :cond_1
     const/16 v1, 0xa
 
-    if-ne p1, v1, :cond_2
+    if-ne p1, v1, :cond_4
 
     const/16 p1, 0x8
 
+    goto :goto_0
+
     :cond_2
+    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getCurrentClient()Lcom/android/server/biometrics/ClientMonitor;
+
+    move-result-object v1
+
+    instance-of v1, v1, Lcom/android/server/biometrics/AuthenticationClient;
+
+    if-eqz v1, :cond_4
+
+    const/16 v1, 0xc
+
+    if-ne p1, v1, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getCurrentClient()Lcom/android/server/biometrics/ClientMonitor;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/biometrics/AuthenticationClient;
+
+    invoke-virtual {v1}, Lcom/android/server/biometrics/AuthenticationClient;->suspend()V
+
+    goto :goto_0
+
+    :cond_3
+    const/16 v1, 0xb
+
+    if-ne p1, v1, :cond_4
+
+    invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getCurrentClient()Lcom/android/server/biometrics/ClientMonitor;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/server/biometrics/AuthenticationClient;
+
+    invoke-virtual {v1}, Lcom/android/server/biometrics/AuthenticationClient;->resume()V
+
+    :cond_4
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/biometrics/fingerprint/OpFingerprintService;->getExtFingerprintDaemon()Lvendor/oneplus/fingerprint/extension/V1_0/IVendorFingerprintExtensions;
 
     move-result-object v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_5
 
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1901,7 +1943,7 @@
 
     invoke-static {v0, v3, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_3
+    :cond_5
     const/4 v0, 0x0
 
     return v0

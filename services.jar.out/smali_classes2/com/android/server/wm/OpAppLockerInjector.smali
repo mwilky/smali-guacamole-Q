@@ -129,6 +129,20 @@
     return v0
 .end method
 
+.method public static isPackageInPassedList(Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-static {}, Lcom/android/server/wm/OpAppLockerInjector;->initInstance()V
+
+    sget-object v0, Lcom/android/server/wm/OpAppLockerInjector;->sOpAppLocker:Lcom/android/server/wm/IOpAppLocker;
+
+    invoke-interface {v0, p0}, Lcom/android/server/wm/IOpAppLocker;->isPackageInPassedList(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static isTopAppLocked(Landroid/app/ActivityManager$RecentTaskInfo;I)Z
     .locals 1
 

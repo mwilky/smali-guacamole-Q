@@ -462,6 +462,34 @@
     return v0
 .end method
 
+.method public static importantProviderChangeEvent(IZLcom/android/server/am/ProcessRecord;)V
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_background_freeze:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpBGFrozen;
+
+    sput-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/am/IOpBGFrozen;->importantProviderChangeEvent(IZLcom/android/server/am/ProcessRecord;)V
+
+    :cond_1
+    return-void
+.end method
+
 .method public static initFromLMS(Lcom/android/server/LocationManagerService;Lcom/android/server/LocationManagerService$LocationManagerServiceInner;)V
     .locals 1
 
@@ -584,6 +612,34 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public static mediaProjectionEvent(IZ)V
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_background_freeze:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpBGFrozen;
+
+    sput-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/am/IOpBGFrozen;->mediaProjectionEvent(IZ)V
+
+    :cond_1
+    return-void
 .end method
 
 .method public static permRequestDecEvent(I)V
@@ -1057,6 +1113,34 @@
     if-eqz v0, :cond_1
 
     invoke-interface {v0, p0, p1, p2, p3}, Lcom/android/server/am/IOpBGFrozen;->updateLocationReceiverUidsChange(IZZZ)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public static virtualDeviceChangeEvent(IZLjava/lang/String;)V
+    .locals 1
+
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_background_freeze:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
+
+    invoke-static {v0}, Lcom/oneplus/android/server/context/OneplusContextStub;->queryInterface(Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/android/server/am/IOpBGFrozen;
+
+    sput-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    :cond_0
+    sget-object v0, Lcom/android/server/am/OpBGFrozenInjector;->opBGFrozen:Lcom/android/server/am/IOpBGFrozen;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/am/IOpBGFrozen;->virtualDeviceChangeEvent(IZLjava/lang/String;)V
 
     :cond_1
     return-void

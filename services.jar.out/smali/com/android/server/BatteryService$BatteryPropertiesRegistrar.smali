@@ -137,12 +137,12 @@
 
     const-string v0, "HealthGetProperty"
 
-    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1300(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1600(Ljava/lang/String;)V
 
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$BatteryPropertiesRegistrar;->this$0:Lcom/android/server/BatteryService;
 
-    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1700(Lcom/android/server/BatteryService;)Lcom/android/server/BatteryService$HealthServiceWrapper;
+    invoke-static {v0}, Lcom/android/server/BatteryService;->access$2000(Lcom/android/server/BatteryService;)Lcom/android/server/BatteryService$HealthServiceWrapper;
 
     move-result-object v0
 
@@ -221,7 +221,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     return v2
 
@@ -240,7 +240,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     throw v0
 
@@ -267,12 +267,12 @@
 
     const-string v0, "HealthScheduleUpdate"
 
-    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1300(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1600(Ljava/lang/String;)V
 
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$BatteryPropertiesRegistrar;->this$0:Lcom/android/server/BatteryService;
 
-    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1700(Lcom/android/server/BatteryService;)Lcom/android/server/BatteryService$HealthServiceWrapper;
+    invoke-static {v0}, Lcom/android/server/BatteryService;->access$2000(Lcom/android/server/BatteryService;)Lcom/android/server/BatteryService$HealthServiceWrapper;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
 
     nop
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     nop
 
@@ -309,7 +309,7 @@
     :catchall_0
     move-exception v0
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     throw v0
 .end method

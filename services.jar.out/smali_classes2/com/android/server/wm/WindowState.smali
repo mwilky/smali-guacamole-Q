@@ -6119,43 +6119,51 @@
 
     iget-object v7, v7, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
 
+    iget v7, v7, Landroid/graphics/Rect;->top:I
+
     move-object/from16 v19, v10
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v10, v10, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+    iget-object v10, v10, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    move/from16 v20, v9
 
-    iget-object v7, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v7, v7, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v9}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
     iget-object v10, v10, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v9, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    iget-object v7, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v7, v7, Lcom/android/server/wm/WindowFrames;->mStableFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mStableFrame:Landroid/graphics/Rect;
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
     iget-object v10, v10, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v9, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     if-eqz v8, :cond_10
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/WindowState;->inFreeformWindowingMode()Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_10
+    if-eqz v9, :cond_10
 
-    add-int v7, v2, v12
+    add-int v9, v2, v12
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6163,18 +6171,18 @@
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
-    if-ge v7, v10, :cond_f
+    if-ge v9, v10, :cond_f
 
-    iget-object v7, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v7, v7, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
 
     add-int v10, v2, v12
 
-    iput v10, v7, Landroid/graphics/Rect;->bottom:I
+    iput v10, v9, Landroid/graphics/Rect;->bottom:I
 
     :cond_f
-    add-int v7, v4, v12
+    add-int v9, v4, v12
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6182,45 +6190,55 @@
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
-    if-ge v7, v10, :cond_10
+    if-ge v9, v10, :cond_10
 
-    iget-object v7, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v7, v7, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
 
     add-int v10, v4, v12
 
-    iput v10, v7, Landroid/graphics/Rect;->bottom:I
+    iput v10, v9, Landroid/graphics/Rect;->bottom:I
 
     :cond_10
     invoke-static/range {p0 .. p0}, Lcom/android/server/wm/OpQuickReplyInjector;->isQuickReplyIMWin(Lcom/android/server/wm/WindowState;)Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_11
+    if-eqz v9, :cond_11
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/WindowState;->getOwningPackage()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v9
 
-    invoke-static {v7}, Lcom/android/server/wm/OpQuickReplyInjector;->isForceShowStatusBar(Ljava/lang/String;)Z
+    invoke-static {v9}, Lcom/android/server/wm/OpQuickReplyInjector;->isForceShowStatusBar(Ljava/lang/String;)Z
 
-    move-result v7
+    move-result v9
 
-    if-eqz v7, :cond_11
+    if-eqz v9, :cond_11
 
-    iget-object v7, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v7, v7, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
     const/4 v10, 0x0
 
-    iput v10, v7, Landroid/graphics/Rect;->top:I
+    iput v10, v9, Landroid/graphics/Rect;->top:I
+
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
+
+    iput v7, v9, Landroid/graphics/Rect;->top:I
+
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
+
+    iput v7, v9, Landroid/graphics/Rect;->top:I
 
     :cond_11
     move-object/from16 v16, v6
-
-    move/from16 v20, v8
 
     goto/16 :goto_6
 
@@ -6228,6 +6246,8 @@
     move-object/from16 v17, v2
 
     move-object/from16 v18, v7
+
+    move/from16 v20, v9
 
     move-object/from16 v19, v10
 
@@ -6279,14 +6299,10 @@
 
     move-object/from16 v16, v6
 
-    move/from16 v20, v8
-
     goto/16 :goto_6
 
     :cond_13
     move-object/from16 v16, v6
-
-    move/from16 v20, v8
 
     goto/16 :goto_6
 
@@ -6317,33 +6333,31 @@
 
     iget v7, v7, Landroid/graphics/Rect;->top:I
 
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+
+    iget v9, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-static {v7, v9}, Ljava/lang/Math;->max(II)I
+
+    move-result v7
+
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
+
+    iget v9, v9, Landroid/graphics/Rect;->right:I
+
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
     iget-object v10, v10, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
-    iget v10, v10, Landroid/graphics/Rect;->top:I
-
-    invoke-static {v7, v10}, Ljava/lang/Math;->max(II)I
-
-    move-result v7
-
-    iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
-
-    iget-object v10, v10, Lcom/android/server/wm/WindowFrames;->mContentFrame:Landroid/graphics/Rect;
-
     iget v10, v10, Landroid/graphics/Rect;->right:I
 
-    move-object/from16 v16, v6
+    invoke-static {v9, v10}, Ljava/lang/Math;->min(II)I
 
-    iget-object v6, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
-
-    iget-object v6, v6, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->right:I
-
-    invoke-static {v10, v6}, Ljava/lang/Math;->min(II)I
-
-    move-result v6
+    move-result v9
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6351,19 +6365,19 @@
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
-    move/from16 v20, v8
+    move-object/from16 v16, v6
 
-    iget-object v8, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v6, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v8, v8, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+    iget-object v6, v6, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
-    iget v8, v8, Landroid/graphics/Rect;->bottom:I
+    iget v6, v6, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {v10, v8}, Ljava/lang/Math;->min(II)I
+    invoke-static {v10, v6}, Ljava/lang/Math;->min(II)I
 
-    move-result v8
+    move-result v6
 
-    invoke-virtual {v2, v4, v7, v6, v8}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v2, v4, v7, v9, v6}, Landroid/graphics/Rect;->set(IIII)V
 
     iget-object v2, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6407,21 +6421,21 @@
 
     iget v7, v7, Landroid/graphics/Rect;->right:I
 
-    iget-object v8, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v8, v8, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
-    iget v8, v8, Landroid/graphics/Rect;->right:I
+    iget v9, v9, Landroid/graphics/Rect;->right:I
 
-    invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
+    invoke-static {v7, v9}, Ljava/lang/Math;->min(II)I
 
     move-result v7
 
-    iget-object v8, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v8, v8, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mVisibleFrame:Landroid/graphics/Rect;
 
-    iget v8, v8, Landroid/graphics/Rect;->bottom:I
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6429,11 +6443,11 @@
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {v8, v10}, Ljava/lang/Math;->min(II)I
+    invoke-static {v9, v10}, Ljava/lang/Math;->min(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-virtual {v2, v4, v6, v7, v8}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v2, v4, v6, v7, v9}, Landroid/graphics/Rect;->set(IIII)V
 
     iget-object v2, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6477,21 +6491,21 @@
 
     iget v7, v7, Landroid/graphics/Rect;->right:I
 
-    iget-object v8, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v8, v8, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
 
-    iget v8, v8, Landroid/graphics/Rect;->right:I
+    iget v9, v9, Landroid/graphics/Rect;->right:I
 
-    invoke-static {v7, v8}, Ljava/lang/Math;->min(II)I
+    invoke-static {v7, v9}, Ljava/lang/Math;->min(II)I
 
     move-result v7
 
-    iget-object v8, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
+    iget-object v9, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    iget-object v8, v8, Lcom/android/server/wm/WindowFrames;->mStableFrame:Landroid/graphics/Rect;
+    iget-object v9, v9, Lcom/android/server/wm/WindowFrames;->mStableFrame:Landroid/graphics/Rect;
 
-    iget v8, v8, Landroid/graphics/Rect;->bottom:I
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
 
     iget-object v10, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
@@ -6499,11 +6513,11 @@
 
     iget v10, v10, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {v8, v10}, Ljava/lang/Math;->min(II)I
+    invoke-static {v9, v10}, Ljava/lang/Math;->min(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-virtual {v2, v4, v6, v7, v8}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v2, v4, v6, v7, v9}, Landroid/graphics/Rect;->set(IIII)V
 
     :goto_6
     if-eqz v3, :cond_15
@@ -6667,22 +6681,30 @@
 
     iget v7, v4, Landroid/view/DisplayInfo;->logicalWidth:I
 
-    iget v8, v4, Landroid/view/DisplayInfo;->logicalHeight:I
+    iget v9, v4, Landroid/view/DisplayInfo;->logicalHeight:I
 
     const/4 v10, 0x0
 
-    invoke-virtual {v6, v0, v7, v8, v10}, Lcom/android/server/wm/WallpaperController;->updateWallpaperOffset(Lcom/android/server/wm/WindowState;IIZ)Z
+    invoke-virtual {v6, v0, v7, v9, v10}, Lcom/android/server/wm/WallpaperController;->updateWallpaperOffset(Lcom/android/server/wm/WindowState;IIZ)Z
 
     :cond_19
     sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-nez v2, :cond_1a
+    if-nez v2, :cond_1b
 
     sget-boolean v2, Lcom/android/server/wm/WindowManagerService;->localLOGV:Z
 
-    if-eqz v2, :cond_1b
+    if-eqz v2, :cond_1a
+
+    goto :goto_8
 
     :cond_1a
+    move/from16 v4, v20
+
+    goto :goto_9
+
+    :cond_1b
+    :goto_8
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -6713,53 +6735,55 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move/from16 v4, v20
 
-    const-string v4, "): frame="
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, "): frame="
 
-    iget-object v4, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
-
-    iget-object v4, v4, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
-
-    invoke-virtual {v4}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, " "
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v6, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    invoke-virtual {v6}, Lcom/android/server/wm/WindowFrames;->getInsetsInfo()Ljava/lang/String;
+    iget-object v6, v6, Lcom/android/server/wm/WindowFrames;->mFrame:Landroid/graphics/Rect;
+
+    invoke-virtual {v6}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, " "
 
-    iget-object v4, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+    iget-object v7, v0, Lcom/android/server/wm/WindowState;->mWindowFrames:Lcom/android/server/wm/WindowFrames;
 
-    move-result-object v4
+    invoke-virtual {v7}, Lcom/android/server/wm/WindowFrames;->getInsetsInfo()Ljava/lang/String;
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v7
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v6, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-virtual {v6}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    const-string v4, "WindowManager"
+    const-string v6, "WindowManager"
 
-    invoke-static {v4, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1b
+    :goto_9
     return-void
 .end method
 

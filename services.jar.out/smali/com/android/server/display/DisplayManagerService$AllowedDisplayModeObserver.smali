@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$AllowedDisplayModeObserver;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    invoke-static {v0}, Lcom/android/server/display/DisplayManagerService;->access$5600(Lcom/android/server/display/DisplayManagerService;)V
+    invoke-static {v0}, Lcom/android/server/display/DisplayManagerService;->access$5700(Lcom/android/server/display/DisplayManagerService;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "BatteryService.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/android/server/wm/OpPowerConsumpStatsInjector$ResetParamListener;
 
 
 # annotations
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/BatteryService;
 
-.field final synthetic val$statusIntent:Landroid/content/Intent;
+.field final synthetic val$fastChargeStatus:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/BatteryService;Landroid/content/Intent;)V
+.method constructor <init>(Lcom/android/server/BatteryService;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
 
-    iput-object p2, p0, Lcom/android/server/BatteryService$7;->val$statusIntent:Landroid/content/Intent;
+    iput-boolean p2, p0, Lcom/android/server/BatteryService$7;->val$fastChargeStatus:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,20 +38,79 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public getPlugState()I
+    .locals 1
 
     iget-object v0, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
 
-    invoke-static {v0}, Lcom/android/server/BatteryService;->access$900(Lcom/android/server/BatteryService;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1200(Lcom/android/server/BatteryService;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public resetParamForOPCS()Z
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
+
+    invoke-static {v0}, Lcom/android/server/BatteryService;->access$1000(Lcom/android/server/BatteryService;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/BatteryService$7;->val$statusIntent:Landroid/content/Intent;
+    monitor-enter v0
 
-    sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    const/4 v2, 0x0
 
-    return-void
+    invoke-static {v1, v2}, Lcom/android/server/BatteryService;->access$1102(Lcom/android/server/BatteryService;Z)Z
+
+    iget-object v1, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
+
+    iget-object v3, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
+
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1200(Lcom/android/server/BatteryService;)I
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const/4 v2, 0x1
+
+    :cond_0
+    iget-object v3, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
+
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1200(Lcom/android/server/BatteryService;)I
+
+    move-result v3
+
+    iget-boolean v4, p0, Lcom/android/server/BatteryService$7;->val$fastChargeStatus:Z
+
+    invoke-static {v2, v3, v4}, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->initPlugState(ZIZ)Z
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lcom/android/server/BatteryService;->access$1102(Lcom/android/server/BatteryService;Z)Z
+
+    iget-object v1, p0, Lcom/android/server/BatteryService$7;->this$0:Lcom/android/server/BatteryService;
+
+    invoke-static {v1}, Lcom/android/server/BatteryService;->access$1100(Lcom/android/server/BatteryService;)Z
+
+    move-result v1
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

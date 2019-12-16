@@ -112,7 +112,7 @@
 
 # virtual methods
 .method protected dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonServer;->mContext:Landroid/content/Context;
 
@@ -163,20 +163,31 @@
 
     const-string v2, "HoustonServer"
 
-    if-lt v0, v1, :cond_1
+    if-lt v0, v1, :cond_2
 
     const/4 v0, 0x0
 
+    aget-object v1, p3, v0
+
+    const-string v3, "--fps"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     aget-object v0, p3, v0
 
-    const-string v1, "--fps"
+    const-string v1, "--ai_config_controller"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
+    :cond_1
     const-string v0, " dumps system_server native here!"
 
     invoke-static {v2, v0}, Lcom/oneplus/houston/common/client/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -189,7 +200,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const-string v0, " dumps client info!"
 
     invoke-static {v2, v0}, Lcom/oneplus/houston/common/client/utils/Logger;->d(Ljava/lang/String;Ljava/lang/String;)V

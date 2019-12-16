@@ -46,6 +46,9 @@
 .method public abstract getEnable()Z
 .end method
 
+.method public abstract importantProviderChangeEvent(IZLcom/android/server/am/ProcessRecord;)V
+.end method
+
 .method public abstract initFromLMS(Lcom/android/server/LocationManagerService;Lcom/android/server/LocationManagerService$LocationManagerServiceInner;)V
 .end method
 
@@ -56,6 +59,9 @@
 .end method
 
 .method public abstract isDeliverDisplayChange(I)Z
+.end method
+
+.method public abstract mediaProjectionEvent(IZ)V
 .end method
 
 .method public abstract permRequestDecEvent(I)V
@@ -104,4 +110,7 @@
 .end method
 
 .method public abstract updateLocationReceiverUidsChange(IZZZ)V
+.end method
+
+.method public abstract virtualDeviceChangeEvent(IZLjava/lang/String;)V
 .end method

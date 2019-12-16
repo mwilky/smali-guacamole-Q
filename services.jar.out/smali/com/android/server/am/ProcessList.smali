@@ -5974,6 +5974,12 @@
     :cond_2
     iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
+    iget-boolean v0, v0, Lcom/android/server/am/ActivityManagerService;->mProcessesReady:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
+
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
 
     iget-object v3, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -5984,6 +5990,7 @@
 
     invoke-static {v0, v3, v4}, Lcom/android/server/am/ActivityManagerServiceInjector;->sendApplicationStart(Landroid/os/Handler;Landroid/content/Context;Ljava/lang/String;)V
 
+    :cond_3
     iget-wide v3, v2, Lcom/android/server/am/ProcessRecord;->startTime:J
 
     const-string/jumbo v0, "startProcess: building log message"
@@ -6018,7 +6025,7 @@
 
     iget-object v0, v2, Lcom/android/server/am/ProcessRecord;->isolatedEntryPoint:Ljava/lang/String;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     const-string v0, " ["
 
@@ -6032,7 +6039,7 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
+    :cond_4
     const-string v0, " for "
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -6051,7 +6058,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     const-string v0, " "
 
@@ -6065,7 +6072,7 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
+    :cond_5
     iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -6096,7 +6103,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -6104,7 +6111,7 @@
 
     iget-boolean v0, v0, Lcom/android/server/am/ActivityManagerConstants;->FLAG_PROCESS_START_ASYNC:Z
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -6112,10 +6119,10 @@
 
     invoke-static/range {p1 .. p1}, Lcom/android/server/am/EmbryoManagerInjector;->processStarted(Lcom/android/server/am/ProcessRecord;)V
 
-    :cond_5
+    :cond_6
     return v15
 
-    :cond_6
+    :cond_7
     iget-wide v4, v2, Lcom/android/server/am/ProcessRecord;->startTime:J
 
     const-string/jumbo v0, "startProcess: starting to update pids map"
@@ -6143,11 +6150,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_8
 
     iget-boolean v0, v2, Lcom/android/server/am/ProcessRecord;->isolated:Z
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_8
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -6215,7 +6222,7 @@
 
     invoke-virtual/range {v16 .. v21}, Lcom/android/server/am/ActivityManagerService;->cleanUpApplicationRecordLocked(Lcom/android/server/am/ProcessRecord;ZZIZ)Z
 
-    :cond_7
+    :cond_8
     iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mPidsSelfLocked:Lcom/android/server/am/ActivityManagerService$PidMap;
@@ -6228,7 +6235,7 @@
 
     monitor-enter v6
 
-    if-nez p6, :cond_9
+    if-nez p6, :cond_a
 
     :try_start_2
     iget-object v0, v1, Lcom/android/server/am/ProcessList;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -6247,26 +6254,26 @@
 
     iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
 
-    if-eqz v10, :cond_8
+    if-eqz v10, :cond_9
 
     const-wide/32 v7, 0x124f80
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     const-wide/16 v7, 0x2710
 
     :goto_2
     invoke-virtual {v4, v0, v7, v8}, Lcom/android/server/am/ActivityManagerService$MainHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    :cond_9
+    :cond_a
     iget v0, v2, Lcom/android/server/am/ProcessRecord;->uid:I
 
     invoke-static {v0}, Landroid/os/UserHandle;->isApp(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     iget v0, v2, Lcom/android/server/am/ProcessRecord;->uid:I
 
@@ -6274,7 +6281,7 @@
 
     invoke-static {v0, v4, v2}, Lcom/android/server/am/OpBGFrozenInjector;->addProc(IILcom/android/server/am/ProcessRecord;)V
 
-    :cond_a
+    :cond_b
     monitor-exit v6
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

@@ -13117,7 +13117,7 @@
 .end method
 
 .method shouldUseSizeCompatMode()Z
-    .locals 1
+    .locals 2
 
     invoke-virtual {p0}, Lcom/android/server/wm/ActivityRecord;->isResizeable()Z
 
@@ -13147,6 +13147,16 @@
     move-result v0
 
     if-eqz v0, :cond_1
+
+    sget-object v0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sForceNotSizeCompatList:Ljava/util/List;
+
+    iget-object v1, p0, Lcom/android/server/wm/ActivityRecord;->packageName:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/android/server/wm/ActivityRecord;->mAtmService:Lcom/android/server/wm/ActivityTaskManagerService;
 

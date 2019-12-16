@@ -382,7 +382,7 @@
 
     const/4 v4, 0x1
 
-    if-eqz p2, :cond_a
+    if-eqz p2, :cond_b
 
     iput-boolean v4, p0, Lcom/android/server/biometrics/AuthenticationClient;->mAlreadyDone:Z
     :try_end_0
@@ -606,6 +606,8 @@
     invoke-super {p0}, Lcom/android/server/biometrics/OpClientMonitor;->notifySurfaceFlinger()V
 
     :cond_9
+    if-eqz v1, :cond_a
+
     nop
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->getHalDeviceId()J
@@ -618,11 +620,12 @@
 
     invoke-interface {v1, v5, v6, p1, v3}, Lcom/android/server/biometrics/BiometricServiceBase$ServiceListener;->onAuthenticationSucceeded(JLandroid/hardware/biometrics/BiometricAuthenticator$Identifier;I)V
 
+    :cond_a
     :goto_3
     goto :goto_6
 
-    :cond_a
-    if-eqz v1, :cond_b
+    :cond_b
+    if-eqz v1, :cond_c
 
     const/16 v5, 0x3fc
 
@@ -632,18 +635,18 @@
 
     invoke-direct {p0, v5, v6, v7}, Lcom/android/server/biometrics/AuthenticationClient;->opHandleErrorVibration(III)V
 
-    :cond_b
+    :cond_c
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->handleFailedAttempt()I
 
     move-result v5
 
-    if-eqz v5, :cond_d
+    if-eqz v5, :cond_e
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->shouldFrameworkHandleLockout()Z
 
     move-result v6
 
-    if-eqz v6, :cond_d
+    if-eqz v6, :cond_e
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->getLogTag()Ljava/lang/String;
 
@@ -671,13 +674,13 @@
 
     invoke-virtual {p0, v3}, Lcom/android/server/biometrics/AuthenticationClient;->stop(Z)I
 
-    if-ne v5, v4, :cond_c
+    if-ne v5, v4, :cond_d
 
     const/4 v6, 0x7
 
     goto :goto_4
 
-    :cond_c
+    :cond_d
     const/16 v6, 0x9
 
     :goto_4
@@ -693,14 +696,14 @@
 
     goto :goto_5
 
-    :cond_d
-    if-eqz v1, :cond_f
+    :cond_e
+    if-eqz v1, :cond_10
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->isBiometricPrompt()Z
 
     move-result v6
 
-    if-eqz v6, :cond_e
+    if-eqz v6, :cond_f
 
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->getCookie()I
 
@@ -714,7 +717,7 @@
 
     goto :goto_5
 
-    :cond_e
+    :cond_f
     invoke-virtual {p0}, Lcom/android/server/biometrics/AuthenticationClient;->getHalDeviceId()J
 
     move-result-wide v6
@@ -723,13 +726,13 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
 
-    :cond_f
+    :cond_10
     :goto_5
-    if-eqz v5, :cond_10
+    if-eqz v5, :cond_11
 
     move v3, v4
 
-    :cond_10
+    :cond_11
     move v2, v3
 
     :goto_6

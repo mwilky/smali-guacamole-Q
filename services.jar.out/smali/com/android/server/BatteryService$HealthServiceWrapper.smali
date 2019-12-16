@@ -117,7 +117,7 @@
     return-void
 .end method
 
-.method static synthetic access$2200(Lcom/android/server/BatteryService$HealthServiceWrapper;)Ljava/lang/String;
+.method static synthetic access$2400(Lcom/android/server/BatteryService$HealthServiceWrapper;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/BatteryService$HealthServiceWrapper;->mInstanceName:Ljava/lang/String;
@@ -125,7 +125,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/BatteryService$HealthServiceWrapper;)Lcom/android/server/BatteryService$HealthServiceWrapper$IHealthSupplier;
+.method static synthetic access$2500(Lcom/android/server/BatteryService$HealthServiceWrapper;)Lcom/android/server/BatteryService$HealthServiceWrapper$IHealthSupplier;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/BatteryService$HealthServiceWrapper;->mHealthSupplier:Lcom/android/server/BatteryService$HealthServiceWrapper$IHealthSupplier;
@@ -133,7 +133,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2400(Lcom/android/server/BatteryService$HealthServiceWrapper;)Ljava/util/concurrent/atomic/AtomicReference;
+.method static synthetic access$2600(Lcom/android/server/BatteryService$HealthServiceWrapper;)Ljava/util/concurrent/atomic/AtomicReference;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/BatteryService$HealthServiceWrapper;->mLastService:Ljava/util/concurrent/atomic/AtomicReference;
@@ -141,7 +141,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/BatteryService$HealthServiceWrapper;)Lcom/android/server/BatteryService$HealthServiceWrapper$Callback;
+.method static synthetic access$2700(Lcom/android/server/BatteryService$HealthServiceWrapper;)Lcom/android/server/BatteryService$HealthServiceWrapper$Callback;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/BatteryService$HealthServiceWrapper;->mCallback:Lcom/android/server/BatteryService$HealthServiceWrapper$Callback;
@@ -149,7 +149,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/BatteryService$HealthServiceWrapper;)Landroid/os/HandlerThread;
+.method static synthetic access$2800(Lcom/android/server/BatteryService$HealthServiceWrapper;)Landroid/os/HandlerThread;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/BatteryService$HealthServiceWrapper;->mHandlerThread:Landroid/os/HandlerThread;
@@ -238,7 +238,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1300(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/server/BatteryService;->access$1600(Ljava/lang/String;)V
 
     :try_start_0
     invoke-interface {p3, v2}, Lcom/android/server/BatteryService$HealthServiceWrapper$IHealthSupplier;->get(Ljava/lang/String;)Landroid/hardware/health/V2_0/IHealth;
@@ -251,14 +251,14 @@
     move-object v0, v3
 
     :goto_1
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     goto :goto_2
 
     :catchall_0
     move-exception v1
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     throw v1
 
@@ -297,7 +297,7 @@
 
     const-string v1, "HealthInitRegisterNotification"
 
-    invoke-static {v1}, Lcom/android/server/BatteryService;->access$1300(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/server/BatteryService;->access$1600(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/android/server/BatteryService$HealthServiceWrapper;->mHandlerThread:Landroid/os/HandlerThread;
 
@@ -318,7 +318,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     nop
 
@@ -347,7 +347,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {}, Lcom/android/server/BatteryService;->access$1400()V
+    invoke-static {}, Lcom/android/server/BatteryService;->access$1700()V
 
     throw v1
 

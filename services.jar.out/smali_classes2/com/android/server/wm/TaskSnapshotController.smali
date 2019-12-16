@@ -757,7 +757,7 @@
     goto :goto_0
 
     :cond_6
-    iget v6, v0, Lcom/android/server/wm/TaskSnapshotController;->mFullSnapshotScale:F
+    sget v6, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sOpSnapshotScaleFraction:F
 
     :goto_0
     move v15, v6
@@ -799,7 +799,7 @@
 
     iget v6, v6, Landroid/content/res/Configuration;->orientation:I
 
-    invoke-virtual {v14}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
+    invoke-virtual {v14}, Lcom/android/server/wm/WindowState;->getParentFrame()Landroid/graphics/Rect;
 
     move-result-object v7
 

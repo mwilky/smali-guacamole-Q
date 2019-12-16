@@ -2791,17 +2791,44 @@
     return-void
 
     :cond_0
-    invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->isOnScreen()Z
+    iget-object v1, p3, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    const/16 v2, 0x7eb
+
+    if-ne v1, v2, :cond_1
+
+    invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/WindowManager$LayoutParams;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    const-string v2, "GestureButtonRegion"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->isOnScreen()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-virtual {p3}, Lcom/android/server/wm/WindowState;->getFrameLw()Landroid/graphics/Rect;
 
@@ -2811,7 +2838,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     iget-object v1, p3, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
@@ -2821,7 +2848,7 @@
 
     return-void
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 

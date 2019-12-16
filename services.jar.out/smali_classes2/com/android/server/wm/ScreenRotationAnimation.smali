@@ -503,29 +503,61 @@
 
     invoke-virtual {v10, v0}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    move-object/from16 v16, v3
+
+    const-string v3, "screenshot width-height "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mWidth:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, "-"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mHeight:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v9, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mService:Lcom/android/server/wm/WindowManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mDisplayManagerInternal:Landroid/hardware/display/DisplayManagerInternal;
 
-    invoke-virtual {v0, v2}, Landroid/hardware/display/DisplayManagerInternal;->screenshot(I)Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;
+    iget v3, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mWidth:I
+
+    iget v4, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mHeight:I
+
+    invoke-virtual {v0, v2, v3, v4}, Landroid/hardware/display/DisplayManagerInternal;->screenshot(III)Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;
 
     move-result-object v0
 
-    move-object/from16 v16, v0
+    move-object/from16 v17, v0
 
-    if-eqz v16, :cond_4
+    if-eqz v17, :cond_4
 
     iget-object v0, v1, Lcom/android/server/wm/ScreenRotationAnimation;->mSurfaceControl:Landroid/view/SurfaceControl;
     :try_end_0
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_0 .. :try_end_0} :catch_2
 
-    move v8, v2
+    move v4, v2
 
     move-object/from16 v2, p2
 
-    move-object/from16 v17, v3
-
     move/from16 v3, p3
+
+    move v8, v4
 
     move/from16 v4, p4
 
@@ -539,7 +571,7 @@
 
     move/from16 v19, v7
 
-    move-object/from16 v7, v16
+    move-object/from16 v7, v17
 
     :try_start_1
     invoke-static/range {v2 .. v7}, Lcom/android/server/wm/OpScreenRotationImprovementInjector;->init(Lcom/android/server/wm/DisplayContent;ZZLcom/android/server/wm/WindowManagerService;Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;)V
@@ -547,7 +579,7 @@
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_1 .. :try_end_1} :catch_1
 
     :try_start_2
-    invoke-virtual/range {v16 .. v16}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getGraphicBuffer()Landroid/graphics/GraphicBuffer;
+    invoke-virtual/range {v17 .. v17}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->getGraphicBuffer()Landroid/graphics/GraphicBuffer;
 
     move-result-object v0
 
@@ -583,7 +615,7 @@
     invoke-static {v9, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_3
-    invoke-virtual/range {v16 .. v16}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->containsSecureLayers()Z
+    invoke-virtual/range {v17 .. v17}, Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;->containsSecureLayers()Z
 
     move-result v0
 
@@ -616,8 +648,6 @@
 
     :cond_4
     move v8, v2
-
-    move-object/from16 v17, v3
 
     move-object v11, v5
 

@@ -1844,7 +1844,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_f
+    iget-boolean v1, p0, Lcom/android/server/display/DisplayPowerController;->mBoostBrightnessNormal:Z
+
+    if-eqz v1, :cond_f
+
+    iget-object v1, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
+
+    const/16 v2, 0x9c4
+
+    invoke-virtual {v1, p1, v2}, Lcom/android/server/display/RampAnimator;->animateTo(II)Z
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
 
@@ -1856,10 +1871,10 @@
 
     goto :goto_1
 
-    :cond_f
+    :cond_10
     const/4 v1, -0x1
 
-    if-eq p2, v1, :cond_10
+    if-eq p2, v1, :cond_11
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
 
@@ -1869,7 +1884,7 @@
 
     goto :goto_1
 
-    :cond_10
+    :cond_11
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController;->mScreenBrightnessRampAnimator:Lcom/android/server/display/RampAnimator;
 
     invoke-virtual {v1, p1}, Lcom/android/server/display/RampAnimator;->animateTo(I)Z
@@ -1877,7 +1892,7 @@
     move-result v1
 
     :goto_1
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_12
 
     const-wide/32 v2, 0x20000
 
@@ -1897,7 +1912,7 @@
     :catch_0
     move-exception v2
 
-    :cond_11
+    :cond_12
     :goto_2
     return-void
 .end method

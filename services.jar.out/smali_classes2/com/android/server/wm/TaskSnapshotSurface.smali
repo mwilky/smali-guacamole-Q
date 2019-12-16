@@ -22,7 +22,7 @@
 
 .field private static final PRIVATE_FLAG_INHERITS:I = 0x20000
 
-.field private static final SIZE_MISMATCH_MINIMUM_TIME_MS:J = 0x1c2L
+.field public static SIZE_MISMATCH_MINIMUM_TIME_MS:J = 0x0L
 
 .field private static final TAG:Ljava/lang/String; = "WindowManager"
 
@@ -79,6 +79,18 @@
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
+
+    const-string v0, "persist.sys.snapshot.mismatch.time"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lcom/android/server/wm/TaskSnapshotSurface;->SIZE_MISMATCH_MINIMUM_TIME_MS:J
 
     new-instance v0, Lcom/android/server/wm/TaskSnapshotSurface$1;
 
@@ -1761,7 +1773,7 @@
 
     sub-long v3, v1, v3
 
-    const-wide/16 v5, 0x1c2
+    sget-wide v5, Lcom/android/server/wm/TaskSnapshotSurface;->SIZE_MISMATCH_MINIMUM_TIME_MS:J
 
     cmp-long v3, v3, v5
 
@@ -1773,11 +1785,13 @@
 
     invoke-direct {v4, p0}, Lcom/android/server/wm/-$$Lambda$-OevXHSXgaSE351ZqRnMoA024MM;-><init>(Lcom/android/server/wm/TaskSnapshotSurface;)V
 
-    iget-wide v7, p0, Lcom/android/server/wm/TaskSnapshotSurface;->mShownTime:J
+    iget-wide v5, p0, Lcom/android/server/wm/TaskSnapshotSurface;->mShownTime:J
 
-    add-long/2addr v7, v5
+    sget-wide v7, Lcom/android/server/wm/TaskSnapshotSurface;->SIZE_MISMATCH_MINIMUM_TIME_MS:J
 
-    invoke-virtual {v3, v4, v7, v8}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+    add-long/2addr v5, v7
+
+    invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
     sget-boolean v3, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_STARTING_WINDOW:Z
 

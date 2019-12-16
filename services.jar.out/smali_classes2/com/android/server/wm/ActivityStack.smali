@@ -10357,10 +10357,16 @@
     invoke-virtual {v1, v4}, Lcom/android/server/wm/WindowManagerService;->isKeyguardSecure(I)Z
 
     move-result v1
+
+    if-eqz v1, :cond_c
+
+    invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/ActivityStack;->inPinnedWindowingMode()Z
+
+    move-result v1
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    if-eqz v1, :cond_c
+    if-nez v1, :cond_c
 
     const/4 v1, 0x1
 

@@ -13,12 +13,20 @@
 
 
 # static fields
+.field public static final AI_BOOST_DIED:I = 0x0
+
+.field public static final AI_BOOST_PAUSE:I = 0x1
+
+.field public static final AI_BOOST_RESUME:I = 0x2
+
 .field public static final MAX_JANK_INFO_SIZE:I = 0x32
 
 .field public static final MAX_LAUNCH_INFO_SIZE:I = 0x32
 
 
 # instance fields
+.field public mAiBoostFlag:I
+
 .field public mAppInfo:Landroid/content/pm/ApplicationInfo;
 
 .field public mColdStartCounts:I
@@ -67,6 +75,8 @@
     iput v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mColdStartCounts:I
 
     iput v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mWarmStartCounts:I
+
+    iput v0, p0, Lcom/oneplus/houston/apkserver/bridge/HoustonPackage;->mAiBoostFlag:I
 
     new-instance v0, Ljava/util/ArrayList;
 

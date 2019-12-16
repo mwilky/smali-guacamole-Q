@@ -43,6 +43,8 @@
 
 .field private static final DEBUG_PROPERTIES_FILE:Ljava/lang/String; = "/etc/gps_debug.conf"
 
+.field private static final LOCATION_ATTRIBUTION_APP:Ljava/lang/String; = "com.oneplus.carrierlocation"
+
 .field static final LPP_PROFILE:Ljava/lang/String; = "persist.sys.gps.lpp"
 
 .field private static final MAX_EMERGENCY_MODE_EXTENSION_SECONDS:I = 0x12c
@@ -669,9 +671,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-object v1
+    const-string v0, "com.oneplus.carrierlocation"
 
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;

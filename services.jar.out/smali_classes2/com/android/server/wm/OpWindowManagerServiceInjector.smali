@@ -10,6 +10,18 @@
 
 .field private static final TAG:Ljava/lang/String; = "OpWindowManagerServiceInjector"
 
+.field public static sForceNotSizeCompatList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static sOpSnapshotScaleFraction:F
+
 .field private static sOpWindowManagerService:Lcom/android/server/wm/IOpWindowManagerService;
 
 
@@ -36,6 +48,36 @@
     move-result v0
 
     sput-boolean v0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->IS_LANDSCAPE_APP_ANIMATION_IMPROVEMENT_ENABLED:Z
+
+    const-string v0, "persist.sys.snapshot.scale"
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    const v1, 0x3dcccccd    # 0.1f
+
+    mul-float/2addr v0, v1
+
+    sput v0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sOpSnapshotScaleFraction:F
+
+    const-string v0, "com.oneplus.note"
+
+    const-string v1, "com.oneplus.filemanager"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/android/server/wm/OpWindowManagerServiceInjector;->sForceNotSizeCompatList:Ljava/util/List;
 
     return-void
 .end method

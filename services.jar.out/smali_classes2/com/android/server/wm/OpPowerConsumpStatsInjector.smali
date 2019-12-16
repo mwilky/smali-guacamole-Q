@@ -3,16 +3,24 @@
 .source "OpPowerConsumpStatsInjector.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/wm/OpPowerConsumpStatsInjector$ResetParamListener;
+    }
+.end annotation
+
+
 # static fields
 .field private static final DEBUG:Z = true
 
-.field private static final ENABLED:Z
+.field public static final ENABLED:Z
 
 .field private static final TAG:Ljava/lang/String; = "OpPowerConsumpStatsInjector"
 
 .field private static opPowerConsumpStats:Lcom/android/server/wm/IOpPowerConsumpStats;
 
-.field private static sIsInited:Z
+.field public static sIsInited:Z
 
 
 # direct methods
@@ -96,6 +104,42 @@
     return v0
 
     :cond_2
+    return v1
+.end method
+
+.method public static initPlugState(ZIZ)Z
+    .locals 3
+
+    sget-boolean v0, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->ENABLED:Z
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    const-string v0, "OpPowerConsumpStatsInjector"
+
+    const-string v2, "initPlugState"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->opPowerConsumpStats:Lcom/android/server/wm/IOpPowerConsumpStats;
+
+    if-eqz v0, :cond_1
+
+    sget-boolean v2, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->sIsInited:Z
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0, p0, p1, p2}, Lcom/android/server/wm/IOpPowerConsumpStats;->initPlugState(ZIZ)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
     return v1
 .end method
 
@@ -304,6 +348,36 @@
     if-eqz v1, :cond_1
 
     invoke-interface {v0, p0, p1, p2, p3}, Lcom/android/server/wm/IOpPowerConsumpStats;->processBatteryValues(IIZZ)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public static registerResetParamListener(Lcom/android/server/wm/OpPowerConsumpStatsInjector$ResetParamListener;)V
+    .locals 2
+
+    sget-boolean v0, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->ENABLED:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string v0, "OpPowerConsumpStatsInjector"
+
+    const-string v1, "registerResetParamListener"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->opPowerConsumpStats:Lcom/android/server/wm/IOpPowerConsumpStats;
+
+    if-eqz v0, :cond_1
+
+    sget-boolean v1, Lcom/android/server/wm/OpPowerConsumpStatsInjector;->sIsInited:Z
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0, p0}, Lcom/android/server/wm/IOpPowerConsumpStats;->registerResetParamListener(Lcom/android/server/wm/OpPowerConsumpStatsInjector$ResetParamListener;)V
 
     :cond_1
     return-void

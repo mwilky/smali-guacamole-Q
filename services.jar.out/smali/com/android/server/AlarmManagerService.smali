@@ -12038,6 +12038,14 @@
 
     add-long/2addr v3, v1
 
+    iget-object v5, v7, Lcom/android/server/AlarmManagerService$Alarm;->packageName:Ljava/lang/String;
+
+    invoke-static {v5}, Lcom/android/server/OpAlarmManagerInjector;->needDeferred(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
     cmp-long v5, v1, v15
 
     if-ltz v5, :cond_2
