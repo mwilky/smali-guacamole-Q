@@ -24,18 +24,18 @@
 
 .field public static final oneplus_widget_label_font_size:I = 0x7f0704ab
 
-.field public static final password_char_padding:I = 0x7f0705c1
+.field public static final password_char_padding:I = 0x7f0705c3
 
-.field public static final password_dot_size:I = 0x7f0705c3
+.field public static final password_dot_size:I = 0x7f0705c5
 
-.field public static final status_bar_height:I = 0x7f0706d6
+.field public static final status_bar_height:I = 0x7f0706d8
 
-.field public static final title_clock_padding:I = 0x7f070736
+.field public static final title_clock_padding:I = 0x7f070738
 
-.field public static final widget_small_font_size:I = 0x7f070788
+.field public static final widget_small_font_size:I = 0x7f07078a
 
-.field public static final widget_vertical_padding:I = 0x7f07078a
+.field public static final widget_vertical_padding:I = 0x7f07078c
 
-.field public static final widget_vertical_padding_clock:I = 0x7f07078b
+.field public static final widget_vertical_padding_clock:I = 0x7f07078d
 
-.field public static final widget_vertical_padding_with_header:I = 0x7f07078c
+.field public static final widget_vertical_padding_with_header:I = 0x7f07078e
