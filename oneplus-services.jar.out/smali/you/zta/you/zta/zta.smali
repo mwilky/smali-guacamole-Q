@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field Xoa:[B
+.field Ata:Lorg/bouncycastle/asn1/x509/zta;
+
+.field Bta:Lorg/bouncycastle/asn1/x509/zta;
+
+.field Cta:Ljava/lang/String;
+
+.field Dta:Ljava/security/PublicKey;
 
 .field content:Lorg/bouncycastle/asn1/n;
 
-.field pta:Lorg/bouncycastle/asn1/x509/zta;
-
-.field qta:Lorg/bouncycastle/asn1/x509/zta;
-
-.field rta:Ljava/lang/String;
-
-.field sta:Ljava/security/PublicKey;
+.field gpa:[B
 
 
 # direct methods
@@ -30,11 +30,11 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/oif;-><init>()V
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
 
-    iput-object p2, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p2, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
-    iput-object p3, p0, Lyou/zta/you/zta/zta;->sta:Ljava/security/PublicKey;
+    iput-object p3, p0, Lyou/zta/you/zta/zta;->Dta:Ljava/security/PublicKey;
 
     new-instance p2, Lorg/bouncycastle/asn1/cno;
 
@@ -119,7 +119,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object v1, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
     const/4 v1, 0x2
 
@@ -133,7 +133,7 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lyou/zta/you/zta/zta;->Xoa:[B
+    iput-object v2, p0, Lyou/zta/you/zta/zta;->gpa:[B
 
     const/4 v2, 0x0
 
@@ -159,7 +159,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iput-object v0, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
 
     new-instance v0, Lorg/bouncycastle/asn1/n;
 
@@ -191,9 +191,9 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->qta:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Bta:Lorg/bouncycastle/asn1/x509/zta;
 
-    iget-object p1, p0, Lyou/zta/you/zta/zta;->qta:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p1, p0, Lyou/zta/you/zta/zta;->Bta:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
 
@@ -213,7 +213,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->sta:Ljava/security/PublicKey;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Dta:Ljava/security/PublicKey;
 
     return-void
 
@@ -315,7 +315,7 @@
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     :try_start_0
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->sta:Ljava/security/PublicKey;
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->Dta:Ljava/security/PublicKey;
 
     invoke-interface {p0}, Ljava/security/PublicKey;->getEncoded()[B
 
@@ -388,10 +388,18 @@
 
 
 # virtual methods
-.method public Ei()Ljava/lang/String;
+.method public Di()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public Ei()Lorg/bouncycastle/asn1/x509/zta;
+    .locals 0
+
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->Bta:Lorg/bouncycastle/asn1/x509/zta;
 
     return-object p0
 .end method
@@ -399,15 +407,7 @@
 .method public Fi()Lorg/bouncycastle/asn1/x509/zta;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->qta:Lorg/bouncycastle/asn1/x509/zta;
-
-    return-object p0
-.end method
-
-.method public Gi()Lorg/bouncycastle/asn1/x509/zta;
-    .locals 0
-
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
     return-object p0
 .end method
@@ -415,7 +415,7 @@
 .method public getPublicKey()Ljava/security/PublicKey;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->sta:Ljava/security/PublicKey;
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->Dta:Ljava/security/PublicKey;
 
     return-object p0
 .end method
@@ -423,7 +423,7 @@
 .method public setPublicKey(Ljava/security/PublicKey;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->sta:Ljava/security/PublicKey;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Dta:Ljava/security/PublicKey;
 
     return-void
 .end method
@@ -431,7 +431,7 @@
 .method public sis(Lorg/bouncycastle/asn1/x509/zta;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
@@ -459,7 +459,7 @@
     :catch_0
     new-instance v2, Lorg/bouncycastle/asn1/x;
 
-    iget-object v3, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iget-object v3, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Lorg/bouncycastle/asn1/x;-><init>(Ljava/lang/String;)V
 
@@ -471,13 +471,13 @@
 
     invoke-virtual {v0, v2}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object v1, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     new-instance v1, Lorg/bouncycastle/asn1/n;
 
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->Xoa:[B
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->gpa:[B
 
     invoke-direct {v1, p0}, Lorg/bouncycastle/asn1/n;-><init>([B)V
 
@@ -501,7 +501,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iget-object v0, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -514,7 +514,7 @@
     return p0
 
     :cond_0
-    iget-object p1, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p1, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
 
@@ -530,7 +530,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lyou/zta/you/zta/zta;->sta:Ljava/security/PublicKey;
+    iget-object v0, p0, Lyou/zta/you/zta/zta;->Dta:Ljava/security/PublicKey;
 
     invoke-virtual {p1, v0}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
 
@@ -542,7 +542,7 @@
 
     invoke-virtual {p1, v0}, Ljava/security/Signature;->update([B)V
 
-    iget-object p0, p0, Lyou/zta/you/zta/zta;->Xoa:[B
+    iget-object p0, p0, Lyou/zta/you/zta/zta;->gpa:[B
 
     invoke-virtual {p1, p0}, Ljava/security/Signature;->verify([B)Z
 
@@ -551,10 +551,10 @@
     return p0
 .end method
 
-.method public wa(Ljava/lang/String;)V
+.method public xa(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
 
     return-void
 .end method
@@ -562,7 +562,7 @@
 .method public you(Lorg/bouncycastle/asn1/x509/zta;)V
     .locals 0
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->qta:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->Bta:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
@@ -598,7 +598,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lyou/zta/you/zta/zta;->pta:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object v0, p0, Lyou/zta/you/zta/zta;->Ata:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
 
@@ -636,7 +636,7 @@
 
     new-instance p2, Lorg/bouncycastle/asn1/x;
 
-    iget-object v1, p0, Lyou/zta/you/zta/zta;->rta:Ljava/lang/String;
+    iget-object v1, p0, Lyou/zta/you/zta/zta;->Cta:Ljava/lang/String;
 
     invoke-direct {p2, v1}, Lorg/bouncycastle/asn1/x;-><init>(Ljava/lang/String;)V
 
@@ -661,7 +661,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lyou/zta/you/zta/zta;->Xoa:[B
+    iput-object p1, p0, Lyou/zta/you/zta/zta;->gpa:[B
 
     return-void
 

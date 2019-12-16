@@ -10,21 +10,35 @@
 
 .field private static final ATTR_VERSION:Ljava/lang/String; = "version"
 
-.field private static final Aca:Ljava/lang/String; = "ouid"
-
-.field private static final Bca:Ljava/lang/String; = "auid"
-
-.field private static final Cca:Ljava/lang/String; = "apid"
-
 .field private static final DB_VERSION:I = 0x1
 
 .field private static final DEBUG:Z
 
-.field private static final Dca:[I
+.field private static final Eca:I = 0x1
 
-.field private static final Eca:[Ljava/lang/String;
+.field private static final Fca:Ljava/lang/String; = "GUID"
+
+.field private static final Gca:Ljava/lang/String; = "OUID"
+
+.field private static final Hca:Ljava/lang/String; = "AUID"
+
+.field private static final Ica:Ljava/lang/String; = "APID"
+
+.field private static final Jca:Ljava/lang/String; = "openid_config"
+
+.field private static final Kca:Ljava/lang/String; = "guid"
+
+.field private static final Lca:Ljava/lang/String; = "ouid"
+
+.field private static final Mca:Ljava/lang/String; = "auid"
+
+.field private static final Nca:Ljava/lang/String; = "apid"
+
+.field private static final Oca:[I
 
 .field private static final PARAM_ENC_TARGET_SW_ID:I = 0x18
+
+.field private static final Pca:[Ljava/lang/String;
 
 .field private static final SHA256:Ljava/lang/String; = "SHA-256"
 
@@ -32,27 +46,15 @@
 
 .field private static final TAG:Ljava/lang/String; = "OpenIdManager"
 
-.field private static final tca:I = 0x1
-
-.field private static final uca:Ljava/lang/String; = "GUID"
-
-.field private static final vca:Ljava/lang/String; = "OUID"
-
-.field private static final wca:Ljava/lang/String; = "AUID"
-
-.field private static final xca:Ljava/lang/String; = "APID"
-
-.field private static final yca:Ljava/lang/String; = "openid_config"
-
-.field private static final zca:Ljava/lang/String; = "guid"
-
 
 # instance fields
-.field private jca:I
+.field private Aca:Landroid/util/SparseBooleanArray;
 
-.field private kca:Ljava/lang/String;
+.field private Bca:Z
 
-.field private lca:Ljava/lang/String;
+.field private final Cca:Landroid/content/BroadcastReceiver;
+
+.field private Dca:Landroid/content/BroadcastReceiver;
 
 .field private mConfigFile:Landroid/util/AtomicFile;
 
@@ -64,7 +66,13 @@
 
 .field private mUserId:I
 
-.field private mca:Ljava/util/Map;
+.field private uca:I
+
+.field private vca:Ljava/lang/String;
+
+.field private wca:Ljava/lang/String;
+
+.field private xca:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -75,7 +83,7 @@
     .end annotation
 .end field
 
-.field private nca:Ljava/util/Map;
+.field private yca:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -86,7 +94,7 @@
     .end annotation
 .end field
 
-.field private oca:Ljava/util/Map;
+.field private zca:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -96,14 +104,6 @@
         }
     .end annotation
 .end field
-
-.field private pca:Landroid/util/SparseBooleanArray;
-
-.field private qca:Z
-
-.field private final rca:Landroid/content/BroadcastReceiver;
-
-.field private sca:Landroid/content/BroadcastReceiver;
 
 
 # direct methods
@@ -120,7 +120,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/oneplus/android/server/openid/cno;->Dca:[I
+    sput-object v0, Lcom/oneplus/android/server/openid/cno;->Oca:[I
 
     const-string v1, "DEFAULT"
 
@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/openid/cno;->Eca:[Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/openid/cno;->Pca:[Ljava/lang/String;
 
     return-void
 
@@ -163,23 +163,23 @@
 
     const/high16 v0, -0x80000000
 
-    iput v0, p0, Lcom/oneplus/android/server/openid/cno;->jca:I
+    iput v0, p0, Lcom/oneplus/android/server/openid/cno;->uca:I
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/openid/cno;->qca:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/openid/cno;->Bca:Z
 
     new-instance v0, Lcom/oneplus/android/server/openid/tsu;
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/openid/tsu;-><init>(Lcom/oneplus/android/server/openid/cno;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->rca:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->Cca:Landroid/content/BroadcastReceiver;
 
     new-instance v0, Lcom/oneplus/android/server/openid/rtg;
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/openid/rtg;-><init>(Lcom/oneplus/android/server/openid/cno;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->sca:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->Dca:Landroid/content/BroadcastReceiver;
 
     iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->mContext:Landroid/content/Context;
 
@@ -193,33 +193,33 @@
 
     const-string p1, ""
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->kca:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->vca:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     new-instance p1, Landroid/util/SparseBooleanArray;
 
     invoke-direct {p1}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->pca:Landroid/util/SparseBooleanArray;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->Aca:Landroid/util/SparseBooleanArray;
 
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     new-instance p1, Landroid/os/HandlerThread;
 
@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/openid/cno;->qc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/openid/cno;->rc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -269,7 +269,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/openid/cno;->qc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/openid/cno;->rc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -305,11 +305,11 @@
 .method private Kr()Ljava/lang/String;
     .locals 2
 
-    iget p0, p0, Lcom/oneplus/android/server/openid/cno;->jca:I
+    iget p0, p0, Lcom/oneplus/android/server/openid/cno;->uca:I
 
     if-ltz p0, :cond_0
 
-    sget-object v0, Lcom/oneplus/android/server/openid/cno;->Eca:[Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/openid/cno;->Pca:[Ljava/lang/String;
 
     array-length v1, v0
 
@@ -329,7 +329,7 @@
 .method private Lr()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->kca:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->vca:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -343,10 +343,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->kca:Ljava/lang/String;
+    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->vca:Ljava/lang/String;
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -354,9 +354,9 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->kca:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->vca:Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -371,18 +371,18 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->kca:Ljava/lang/String;
+    iput-object v0, p0, Lcom/oneplus/android/server/openid/cno;->vca:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->clear()V
 
@@ -393,7 +393,7 @@
     invoke-direct {p0}, Lcom/oneplus/android/server/openid/cno;->Rr()V
 
     :cond_2
-    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     return-object p0
 
@@ -486,7 +486,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/oneplus/android/server/openid/cno;->jca:I
+    iput v1, p0, Lcom/oneplus/android/server/openid/cno;->uca:I
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -496,7 +496,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/oneplus/android/server/openid/cno;->jca:I
+    iget v2, p0, Lcom/oneplus/android/server/openid/cno;->uca:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -551,9 +551,9 @@
 .method private Or()Z
     .locals 1
 
-    sget-object v0, Lcom/oneplus/android/server/openid/cno;->Dca:[I
+    sget-object v0, Lcom/oneplus/android/server/openid/cno;->Oca:[I
 
-    iget p0, p0, Lcom/oneplus/android/server/openid/cno;->jca:I
+    iget p0, p0, Lcom/oneplus/android/server/openid/cno;->uca:I
 
     invoke-static {v0, p0}, Lcom/android/internal/util/ArrayUtils;->contains([II)Z
 
@@ -639,7 +639,7 @@
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     :goto_0
-    iput-boolean v2, p0, Lcom/oneplus/android/server/openid/cno;->qca:Z
+    iput-boolean v2, p0, Lcom/oneplus/android/server/openid/cno;->Bca:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -751,7 +751,7 @@
     :goto_2
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    iput-boolean v2, p0, Lcom/oneplus/android/server/openid/cno;->qca:Z
+    iput-boolean v2, p0, Lcom/oneplus/android/server/openid/cno;->Bca:Z
 
     throw v3
 
@@ -768,7 +768,7 @@
 .method private Rr()V
     .locals 2
 
-    iget-boolean v0, p0, Lcom/oneplus/android/server/openid/cno;->qca:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/openid/cno;->Bca:Z
 
     if-nez v0, :cond_0
 
@@ -791,12 +791,12 @@
 .method private _b(I)Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -838,12 +838,12 @@
 .method private ac(I)V
     .locals 5
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -1057,7 +1057,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     sget-boolean p1, Lcom/oneplus/android/server/openid/cno;->DEBUG:Z
 
@@ -1143,12 +1143,12 @@
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    iget-object v2, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v2, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     monitor-enter v2
 
     :try_start_0
-    iget-object v3, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v3, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1227,12 +1227,12 @@
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
-    iget-object v2, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v2, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     monitor-enter v2
 
     :try_start_1
-    iget-object v3, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v3, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v3, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1303,12 +1303,12 @@
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_6
-    iget-object v2, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v2, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter v2
 
     :try_start_2
-    iget-object v3, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v3, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {v3, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1436,12 +1436,12 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1593,12 +1593,12 @@
     return-object p0
 
     :cond_1
-    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     monitor-enter p2
 
     :try_start_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1612,7 +1612,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/openid/cno;->pc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/openid/cno;->qc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1735,12 +1735,12 @@
     goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -1833,40 +1833,6 @@
     return-void
 .end method
 
-.method private irq(IZ)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Set ouid toggle to "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, " for user "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OpenIdManager"
-
-    invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->pca:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {p0, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
-
-    return-void
-.end method
-
 .method private isParallelUser(I)Z
     .locals 0
 
@@ -1907,12 +1873,12 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {v1, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1983,7 +1949,7 @@
 .method private oxb(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->pca:Landroid/util/SparseBooleanArray;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->Aca:Landroid/util/SparseBooleanArray;
 
     const/4 v1, 0x1
 
@@ -2025,12 +1991,12 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2057,7 +2023,7 @@
     throw p0
 .end method
 
-.method private pc(Ljava/lang/String;)Ljava/lang/String;
+.method private qc(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     invoke-direct {p0}, Lcom/oneplus/android/server/openid/cno;->Lr()Ljava/lang/String;
@@ -2087,14 +2053,14 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/openid/cno;->qc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/openid/cno;->rc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private qc(Ljava/lang/String;)Ljava/lang/String;
+.method private rc(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     :try_start_0
@@ -2178,12 +2144,12 @@
     return-object p0
 
     :cond_1
-    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter p2
 
     :try_start_0
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2247,6 +2213,40 @@
     return-object p1
 .end method
 
+.method private vdw(IZ)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Set ouid toggle to "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " for user "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpenIdManager"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->Aca:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {p0, p1, p2}, Landroid/util/SparseBooleanArray;->put(IZ)V
+
+    return-void
+.end method
+
 .method private wtn(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
@@ -2268,7 +2268,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/openid/cno;->qc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/openid/cno;->rc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -2345,7 +2345,7 @@
 
     invoke-interface {v0, v2, p1, v1}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     const-string v1, "value"
 
@@ -2355,12 +2355,12 @@
 
     invoke-interface {v0, v2, p1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     monitor-enter p1
 
     :try_start_0
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -2387,7 +2387,7 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -2426,12 +2426,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter v1
 
     :try_start_1
-    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -2455,7 +2455,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2492,12 +2492,12 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object p1, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     monitor-enter p1
 
     :try_start_2
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -2521,7 +2521,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v4, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2654,12 +2654,12 @@
 
     iget v0, p0, Lcom/oneplus/android/server/openid/cno;->mUserId:I
 
-    invoke-direct {p0, v0, p1}, Lcom/oneplus/android/server/openid/cno;->irq(IZ)V
+    invoke-direct {p0, v0, p1}, Lcom/oneplus/android/server/openid/cno;->vdw(IZ)V
 
     return-void
 .end method
 
-.method public synthetic Te()V
+.method public synthetic Se()V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/android/server/openid/cno;->Pr()V
@@ -2749,12 +2749,12 @@
 
     move-result-object p1
 
-    iget-object p3, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object p3, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     monitor-enter p3
 
     :try_start_0
-    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -2762,7 +2762,7 @@
 
     if-eqz p2, :cond_5
 
-    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2792,7 +2792,7 @@
     :cond_7
     const-string p1, ""
 
-    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     :goto_2
     invoke-direct {p0}, Lcom/oneplus/android/server/openid/cno;->Rr()V
@@ -3030,7 +3030,7 @@
 
     iget-object v5, v0, Lcom/oneplus/android/server/openid/cno;->mContext:Landroid/content/Context;
 
-    iget-object v6, v0, Lcom/oneplus/android/server/openid/cno;->rca:Landroid/content/BroadcastReceiver;
+    iget-object v6, v0, Lcom/oneplus/android/server/openid/cno;->Cca:Landroid/content/BroadcastReceiver;
 
     sget-object v7, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
@@ -3058,7 +3058,7 @@
 
     iget-object v11, v0, Lcom/oneplus/android/server/openid/cno;->mContext:Landroid/content/Context;
 
-    iget-object v12, v0, Lcom/oneplus/android/server/openid/cno;->sca:Landroid/content/BroadcastReceiver;
+    iget-object v12, v0, Lcom/oneplus/android/server/openid/cno;->Dca:Landroid/content/BroadcastReceiver;
 
     sget-object v13, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
@@ -3091,7 +3091,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oneplus/android/server/openid/cno;->jca:I
+    iget v1, p0, Lcom/oneplus/android/server/openid/cno;->uca:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3134,7 +3134,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->lca:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->wca:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3151,18 +3151,18 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     monitor-enter v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
@@ -3170,7 +3170,7 @@
 
     if-nez v1, :cond_2
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->mca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->xca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -3223,7 +3223,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->pca:Landroid/util/SparseBooleanArray;
+    iget-object v4, p0, Lcom/oneplus/android/server/openid/cno;->Aca:Landroid/util/SparseBooleanArray;
 
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3267,18 +3267,18 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter v0
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     :try_start_3
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
@@ -3286,7 +3286,7 @@
 
     if-nez v1, :cond_3
 
-    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object v1, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -3368,18 +3368,18 @@
 
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->nca:Ljava/util/Map;
+    iget-object p2, p0, Lcom/oneplus/android/server/openid/cno;->yca:Ljava/util/Map;
 
     monitor-enter p2
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
     :try_start_5
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object v0, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
@@ -3387,7 +3387,7 @@
 
     if-nez v0, :cond_5
 
-    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->oca:Ljava/util/Map;
+    iget-object p0, p0, Lcom/oneplus/android/server/openid/cno;->zca:Ljava/util/Map;
 
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 

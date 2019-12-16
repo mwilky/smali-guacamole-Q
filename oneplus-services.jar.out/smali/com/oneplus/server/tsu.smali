@@ -8,27 +8,27 @@
 
 .field private static final HAS_HW_KEYS:Z
 
-.field private static Ofa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController; = null
-
-.field private static Pfa:Lcom/oneplus/android/server/scene/OemSceneButtonController; = null
-
-.field private static Qfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController; = null
-
-.field private static Rfa:Lcom/oneplus/android/server/scene/OemSceneActivityController; = null
-
-.field private static Sfa:Lcom/oneplus/android/server/scene/OemSceneLightsController; = null
-
 .field static final TAG:Ljava/lang/String; = "OIMCManagerUtil"
 
-.field private static Tfa:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
+.field private static Zfa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
 
-.field private static Ufa:Lcom/oneplus/android/server/scene/OemSceneAudioController;
+.field private static _fa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
 
-.field private static Vfa:Lcom/oneplus/android/server/scene/ESportMode;
+.field private static aga:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
 
-.field private static Wfa:Lcom/oneplus/android/server/scene/qbh;
+.field private static bga:Lcom/oneplus/android/server/scene/OemSceneActivityController;
 
-.field private static Xfa:Landroid/content/BroadcastReceiver;
+.field private static cga:Lcom/oneplus/android/server/scene/OemSceneLightsController;
+
+.field private static dga:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
+
+.field private static ega:Lcom/oneplus/android/server/scene/OemSceneAudioController;
+
+.field private static fga:Lcom/oneplus/android/server/scene/ESportMode;
+
+.field private static gga:Lcom/oneplus/android/server/scene/qbh;
+
+.field private static hga:Landroid/content/BroadcastReceiver;
 
 .field private static sOemSceneCallBlock:Lcom/oneplus/android/server/scene/OemSceneCallBlock;
 
@@ -59,7 +59,7 @@
 
     invoke-direct {v0}, Lcom/oneplus/server/sis;-><init>()V
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Xfa:Landroid/content/BroadcastReceiver;
+    sput-object v0, Lcom/oneplus/server/tsu;->hga:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method public static ka(Ljava/lang/String;)I
+.method public static la(Ljava/lang/String;)I
     .locals 5
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -171,17 +171,17 @@
 
     move-result-object p0
 
-    sput-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sput-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
-    sget-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sget-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
     if-eqz p0, :cond_0
 
-    sget-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sget-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/qbh;->We()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/qbh;->Ve()V
 
-    sget-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sget-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
     invoke-virtual {p0, p1}, Lcom/oneplus/android/server/scene/qbh;->T(I)V
     :try_end_0
@@ -230,7 +230,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Xfa:Landroid/content/BroadcastReceiver;
+    sget-object v1, Lcom/oneplus/server/tsu;->hga:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -241,13 +241,13 @@
     .locals 3
 
     :try_start_0
-    sget-object v0, Lcom/oneplus/server/tsu;->Pfa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
+    sget-object v0, Lcom/oneplus/server/tsu;->_fa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Pfa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
+    sget-object v0, Lcom/oneplus/server/tsu;->_fa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
 
     invoke-virtual {v0, v1}, Lcom/oneplus/android/server/scene/OemSceneButtonController;->updateFunctionRule(I)V
 
@@ -275,13 +275,13 @@
 
     move-result-object p0
 
-    sput-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sput-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
-    sget-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sget-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/qbh;->We()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/qbh;->Ve()V
 
-    sget-object p0, Lcom/oneplus/server/tsu;->Wfa:Lcom/oneplus/android/server/scene/qbh;
+    sget-object p0, Lcom/oneplus/server/tsu;->gga:Lcom/oneplus/android/server/scene/qbh;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -315,11 +315,11 @@
     invoke-virtual {p0}, Lcom/oneplus/android/server/scene/OemSceneXLinearVibrationMotorController;->updateFunctionRule()V
 
     :cond_3
-    sget-object p0, Lcom/oneplus/server/tsu;->Ofa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
+    sget-object p0, Lcom/oneplus/server/tsu;->Zfa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
 
     if-eqz p0, :cond_4
 
-    sget-object p0, Lcom/oneplus/server/tsu;->Ofa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
+    sget-object p0, Lcom/oneplus/server/tsu;->Zfa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
 
     invoke-virtual {p0, v1}, Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;->updateFunctionRule(I)V
     :try_end_0
@@ -377,15 +377,15 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Pfa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
+    sput-object v0, Lcom/oneplus/server/tsu;->_fa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Pfa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
+    sget-object v0, Lcom/oneplus/server/tsu;->_fa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
 
     if-eqz v0, :cond_0
 
     const-string v0, "KeyBlocking"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Pfa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
+    sget-object v1, Lcom/oneplus/server/tsu;->_fa:Lcom/oneplus/android/server/scene/OemSceneButtonController;
 
     invoke-interface {p0, v0, v1}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
@@ -402,17 +402,17 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Rfa:Lcom/oneplus/android/server/scene/OemSceneActivityController;
+    sput-object v0, Lcom/oneplus/server/tsu;->bga:Lcom/oneplus/android/server/scene/OemSceneActivityController;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Rfa:Lcom/oneplus/android/server/scene/OemSceneActivityController;
+    sget-object v0, Lcom/oneplus/server/tsu;->bga:Lcom/oneplus/android/server/scene/OemSceneActivityController;
 
     if-eqz v0, :cond_1
 
     const-string v0, "AllowWhiteActivity"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Rfa:Lcom/oneplus/android/server/scene/OemSceneActivityController;
+    sget-object v1, Lcom/oneplus/server/tsu;->bga:Lcom/oneplus/android/server/scene/OemSceneActivityController;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneActivityController;->Ve()Lcom/oneplus/android/server/scene/OemSceneActivityController$AllowWhiteActivity;
+    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneActivityController;->Ue()Lcom/oneplus/android/server/scene/OemSceneActivityController$AllowWhiteActivity;
 
     move-result-object v1
 
@@ -423,17 +423,17 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Qfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
+    sput-object v0, Lcom/oneplus/server/tsu;->aga:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Qfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
+    sget-object v0, Lcom/oneplus/server/tsu;->aga:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
 
     if-eqz v0, :cond_2
 
     const-string v0, "AllowWhiteVibration"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Qfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
+    sget-object v1, Lcom/oneplus/server/tsu;->aga:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->of()Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->nf()Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     move-result-object v1
 
@@ -444,17 +444,17 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Sfa:Lcom/oneplus/android/server/scene/OemSceneLightsController;
+    sput-object v0, Lcom/oneplus/server/tsu;->cga:Lcom/oneplus/android/server/scene/OemSceneLightsController;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Sfa:Lcom/oneplus/android/server/scene/OemSceneLightsController;
+    sget-object v0, Lcom/oneplus/server/tsu;->cga:Lcom/oneplus/android/server/scene/OemSceneLightsController;
 
     if-eqz v0, :cond_3
 
     const-string v0, "ZenModeLedController"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Sfa:Lcom/oneplus/android/server/scene/OemSceneLightsController;
+    sget-object v1, Lcom/oneplus/server/tsu;->cga:Lcom/oneplus/android/server/scene/OemSceneLightsController;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneLightsController;->ef()Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
+    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneLightsController;->df()Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
 
     move-result-object v1
 
@@ -465,17 +465,17 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Tfa:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
+    sput-object v0, Lcom/oneplus/server/tsu;->dga:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Tfa:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
+    sget-object v0, Lcom/oneplus/server/tsu;->dga:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
 
     if-eqz v0, :cond_4
 
     const-string v0, "FloatingWindowController"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Tfa:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
+    sget-object v1, Lcom/oneplus/server/tsu;->dga:Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;->Ye()Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController$FloatingWindowController;
+    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController;->Xe()Lcom/oneplus/android/server/scene/OemSceneFloatingWindowController$FloatingWindowController;
 
     move-result-object v1
 
@@ -486,17 +486,17 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Ufa:Lcom/oneplus/android/server/scene/OemSceneAudioController;
+    sput-object v0, Lcom/oneplus/server/tsu;->ega:Lcom/oneplus/android/server/scene/OemSceneAudioController;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Ufa:Lcom/oneplus/android/server/scene/OemSceneAudioController;
+    sget-object v0, Lcom/oneplus/server/tsu;->ega:Lcom/oneplus/android/server/scene/OemSceneAudioController;
 
     if-eqz v0, :cond_5
 
     const-string v0, "AudioProcessesController"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Ufa:Lcom/oneplus/android/server/scene/OemSceneAudioController;
+    sget-object v1, Lcom/oneplus/server/tsu;->ega:Lcom/oneplus/android/server/scene/OemSceneAudioController;
 
-    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Xe()Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    invoke-virtual {v1}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->We()Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     move-result-object v1
 
@@ -524,15 +524,15 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/server/tsu;->Vfa:Lcom/oneplus/android/server/scene/ESportMode;
+    sput-object v0, Lcom/oneplus/server/tsu;->fga:Lcom/oneplus/android/server/scene/ESportMode;
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Vfa:Lcom/oneplus/android/server/scene/ESportMode;
+    sget-object v0, Lcom/oneplus/server/tsu;->fga:Lcom/oneplus/android/server/scene/ESportMode;
 
     if-eqz v0, :cond_7
 
     const-string v0, "ESportMode"
 
-    sget-object v1, Lcom/oneplus/server/tsu;->Vfa:Lcom/oneplus/android/server/scene/ESportMode;
+    sget-object v1, Lcom/oneplus/server/tsu;->fga:Lcom/oneplus/android/server/scene/ESportMode;
 
     invoke-interface {p0, v0, v1}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
@@ -543,31 +543,31 @@
 
     const-string v1, "GrayColor"
 
-    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->Pba:Lcom/oneplus/android/server/display/OpOIMCColorManager$GrayColor;
+    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->_ba:Lcom/oneplus/android/server/display/OpOIMCColorManager$GrayColor;
 
     invoke-interface {p0, v1, v2}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
     const-string v1, "ColorBalance"
 
-    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->Oba:Lcom/oneplus/android/server/display/OpOIMCColorManager$ColorBalance;
+    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->Zba:Lcom/oneplus/android/server/display/OpOIMCColorManager$ColorBalance;
 
     invoke-interface {p0, v1, v2}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
     const-string v1, "ColorDisable"
 
-    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->Rba:Lcom/oneplus/android/server/display/OpOIMCColorManager$ColorDisable;
+    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->bca:Lcom/oneplus/android/server/display/OpOIMCColorManager$ColorDisable;
 
     invoke-interface {p0, v1, v2}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
     const-string v1, "PaperColor"
 
-    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->Qba:Lcom/oneplus/android/server/display/OpOIMCColorManager$PaperColor;
+    iget-object v2, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->aca:Lcom/oneplus/android/server/display/OpOIMCColorManager$PaperColor;
 
     invoke-interface {p0, v1, v2}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
     const-string v1, "gooleMatrix"
 
-    iget-object v0, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->Sba:Lcom/oneplus/android/server/display/OpOIMCColorManager$GoogleMatrix;
+    iget-object v0, v0, Lcom/oneplus/android/server/display/OpOIMCColorManager;->cca:Lcom/oneplus/android/server/display/OpOIMCColorManager$GoogleMatrix;
 
     invoke-interface {p0, v1, v0}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
 
@@ -616,15 +616,15 @@
 
     move-result-object p1
 
-    sput-object p1, Lcom/oneplus/server/tsu;->Ofa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
+    sput-object p1, Lcom/oneplus/server/tsu;->Zfa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
 
-    sget-object p1, Lcom/oneplus/server/tsu;->Ofa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
+    sget-object p1, Lcom/oneplus/server/tsu;->Zfa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
 
     if-eqz p1, :cond_b
 
     const-string p1, "TurnOffAutoBacklight"
 
-    sget-object v0, Lcom/oneplus/server/tsu;->Ofa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
+    sget-object v0, Lcom/oneplus/server/tsu;->Zfa:Lcom/oneplus/android/server/scene/OemSceneAutoBrightnessController;
 
     invoke-interface {p0, p1, v0}, Lcom/oneplus/core/oimc/IOIMCServiceManager;->registerRemoteAction(Ljava/lang/String;Lcom/oneplus/core/oimc/IOIMCRemoteAction;)V
     :try_end_0

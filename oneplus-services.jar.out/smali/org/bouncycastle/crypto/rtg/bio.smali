@@ -7,13 +7,13 @@
 
 
 # static fields
-.field private static final Pxa:I = 0x100
+.field private static final Zxa:I = 0x100
 
 
 # instance fields
-.field private Oxa:[B
+.field private Yxa:[B
 
-.field private mxa:[B
+.field private wxa:[B
 
 .field private x:I
 
@@ -28,7 +28,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     const/4 v1, 0x0
 
@@ -36,7 +36,7 @@
 
     iput v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->y:I
 
-    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->mxa:[B
+    iput-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->wxa:[B
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 .method private irq([B)V
     .locals 7
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/bio;->mxa:[B
+    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/bio;->wxa:[B
 
     const/4 v0, 0x0
 
@@ -52,7 +52,7 @@
 
     iput v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->y:I
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     const/16 v2, 0x100
 
@@ -60,7 +60,7 @@
 
     new-array v1, v2, [B
 
-    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iput-object v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     :cond_0
     move v1, v0
@@ -68,7 +68,7 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    iget-object v3, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iget-object v3, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     int-to-byte v4, v1
 
@@ -90,7 +90,7 @@
 
     and-int/lit16 v4, v4, 0xff
 
-    iget-object v5, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iget-object v5, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     aget-byte v6, v5, v0
 
@@ -127,7 +127,7 @@
 .method public reset()V
     .locals 1
 
-    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->mxa:[B
+    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->wxa:[B
 
     invoke-direct {p0, v0}, Lorg/bouncycastle/crypto/rtg/bio;->irq([B)V
 
@@ -153,7 +153,7 @@
 
     iput v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->x:I
 
-    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iget-object v0, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     iget v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->x:I
 
@@ -222,7 +222,7 @@
 
     iput v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->x:I
 
-    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->Oxa:[B
+    iget-object v1, p0, Lorg/bouncycastle/crypto/rtg/bio;->Yxa:[B
 
     iget v2, p0, Lorg/bouncycastle/crypto/rtg/bio;->x:I
 
@@ -307,9 +307,9 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/bio;->mxa:[B
+    iput-object p1, p0, Lorg/bouncycastle/crypto/rtg/bio;->wxa:[B
 
-    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/bio;->mxa:[B
+    iget-object p1, p0, Lorg/bouncycastle/crypto/rtg/bio;->wxa:[B
 
     invoke-direct {p0, p1}, Lorg/bouncycastle/crypto/rtg/bio;->irq([B)V
 

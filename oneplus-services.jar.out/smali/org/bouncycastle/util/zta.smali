@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method private static a(II)I
+.method private static b(II)I
     .locals 1
 
     sub-int v0, p1, p0
@@ -356,7 +356,7 @@
 .method public static copyOfRange([BII)[B
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->b(II)I
 
     move-result p2
 
@@ -383,7 +383,7 @@
 .method public static copyOfRange([III)[I
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->b(II)I
 
     move-result p2
 
@@ -410,7 +410,7 @@
 .method public static copyOfRange([JII)[J
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->b(II)I
 
     move-result p2
 
@@ -2272,7 +2272,7 @@
 .method public static zta([Ljava/math/BigInteger;II)[Ljava/math/BigInteger;
     .locals 3
 
-    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->a(II)I
+    invoke-static {p1, p2}, Lorg/bouncycastle/util/zta;->b(II)I
 
     move-result p2
 

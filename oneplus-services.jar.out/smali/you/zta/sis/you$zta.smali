@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private dCa:Z
-
 .field private factor:Ljava/math/BigInteger;
+
+.field private nCa:Z
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lyou/zta/sis/you$zta;->dCa:Z
+    iput-boolean p1, p0, Lyou/zta/sis/you$zta;->nCa:Z
 
     iput-object p2, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
 
@@ -106,9 +106,25 @@
 
 # virtual methods
 .method public Aj()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lyou/zta/sis/you$zta;->nCa:Z
+
+    return p0
+.end method
+
+.method public yj()Ljava/math/BigInteger;
+    .locals 0
+
+    iget-object p0, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
+
+    return-object p0
+.end method
+
+.method public zj()Z
     .locals 1
 
-    iget-boolean v0, p0, Lyou/zta/sis/you$zta;->dCa:Z
+    iget-boolean v0, p0, Lyou/zta/sis/you$zta;->nCa:Z
 
     if-eqz v0, :cond_0
 
@@ -125,20 +141,4 @@
 
     :goto_0
     return p0
-.end method
-
-.method public Bj()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lyou/zta/sis/you$zta;->dCa:Z
-
-    return p0
-.end method
-
-.method public zj()Ljava/math/BigInteger;
-    .locals 0
-
-    iget-object p0, p0, Lyou/zta/sis/you$zta;->factor:Ljava/math/BigInteger;
-
-    return-object p0
 .end method

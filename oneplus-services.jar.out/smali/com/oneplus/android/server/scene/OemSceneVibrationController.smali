@@ -15,17 +15,17 @@
 # static fields
 .field private static final ACTION_VIBRATION_CANCEL:Ljava/lang/String; = "com.oem.intent.action.CANCEL_VIBRATION"
 
+.field private static final Afa:I
+
 .field public static final DEBUG:Z
 
 .field public static final TAG:Ljava/lang/String; = "OemSceneVibrationController"
 
-.field private static nfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
-
-.field private static final ofa:I
-
-.field private static final pfa:I
-
 .field private static sInstance:Lcom/oneplus/android/server/scene/OemSceneVibrationController;
+
+.field private static yfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+
+.field private static final zfa:I
 
 
 # instance fields
@@ -37,7 +37,7 @@
 
 .field private mResolver:Landroid/content/ContentResolver;
 
-.field private mfa:I
+.field private xfa:I
 
 
 # direct methods
@@ -48,7 +48,7 @@
 
     sput-boolean v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->DEBUG:Z
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->lka:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->wka:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -58,9 +58,9 @@
 
     shl-int v0, v1, v0
 
-    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->ofa:I
+    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->zfa:I
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->mka:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;->xka:Lcom/oneplus/android/server/scene/OemSceneVibrationController$VibrationMode;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -68,7 +68,7 @@
 
     shl-int v0, v1, v0
 
-    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->pfa:I
+    sput v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Afa:I
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
+    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
 
     new-instance v1, Ljava/lang/Object;
 
@@ -107,7 +107,7 @@
     monitor-enter p1
 
     :try_start_0
-    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
+    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
 
     monitor-exit p1
 
@@ -117,6 +117,54 @@
     move-exception p0
 
     monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method private a(IZ)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    if-eqz p2, :cond_0
+
+    :try_start_0
+    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
+
+    shl-int p1, v1, p1
+
+    or-int/2addr p1, p2
+
+    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
+
+    goto :goto_0
+
+    :cond_0
+    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
+
+    shl-int p1, v1, p1
+
+    not-int p1, p1
+
+    and-int/2addr p1, p2
+
+    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
+
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -173,60 +221,12 @@
     return-object p0
 .end method
 
-.method private ivd(IZ)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mLock:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    if-eqz p2, :cond_0
-
-    :try_start_0
-    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
-
-    shl-int p1, v1, p1
-
-    or-int/2addr p1, p2
-
-    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
-
-    goto :goto_0
-
-    :cond_0
-    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
-
-    shl-int p1, v1, p1
-
-    not-int p1, p1
-
-    and-int/2addr p1, p2
-
-    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
-
-    :goto_0
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
 .method private rtg(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
-    iget p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->mfa:I
+    iget p1, p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xfa:I
 
-    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->ofa:I
+    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->zfa:I
 
     and-int/2addr v0, p1
 
@@ -237,13 +237,13 @@
     return v1
 
     :cond_0
-    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->pfa:I
+    sget v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->Afa:I
 
     and-int/2addr p1, v0
 
     if-eqz p1, :cond_1
 
-    invoke-direct {p0, p2}, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->wc(Ljava/lang/String;)Z
+    invoke-direct {p0, p2}, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->xc(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -253,7 +253,7 @@
     return v1
 .end method
 
-.method private wc(Ljava/lang/String;)Z
+.method private xc(Ljava/lang/String;)Z
     .locals 0
 
     sget-object p0, Lcom/oneplus/android/server/scene/ZenModeObserver;->whiteListInZenMode:Ljava/util/ArrayList;
@@ -291,17 +291,17 @@
 .method static synthetic zta(Lcom/oneplus/android/server/scene/OemSceneVibrationController;IZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->ivd(IZ)V
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->a(IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public of()Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+.method public nf()Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->nfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->yfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     if-nez v0, :cond_0
 
@@ -309,10 +309,10 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;-><init>(Lcom/oneplus/android/server/scene/OemSceneVibrationController;)V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->nfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    sput-object v0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->yfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     :cond_0
-    sget-object p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->nfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
+    sget-object p0, Lcom/oneplus/android/server/scene/OemSceneVibrationController;->yfa:Lcom/oneplus/android/server/scene/OemSceneVibrationController$AllowWhiteVibration;
 
     return-object p0
 .end method

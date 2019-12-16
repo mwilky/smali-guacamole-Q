@@ -68,7 +68,7 @@
 
     check-cast p1, Lorg/bouncycastle/asn1/lqr;
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/lqr;->Cg()Z
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
 
     move-result v0
 

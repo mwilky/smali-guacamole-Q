@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final u:I = 0x1
+.field static final v:I = 0x1
 
 
 # instance fields

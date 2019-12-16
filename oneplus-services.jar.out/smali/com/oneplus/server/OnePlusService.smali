@@ -186,6 +186,16 @@
     return-object p0
 .end method
 
+.method public getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    invoke-static {p1}, Lcom/android/server/am/OnePlusGameShakeControllerInjector;->getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public isInConfigList(ILjava/lang/String;)Z
     .locals 0
 
@@ -408,7 +418,7 @@
 
     iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOnePlusThemeController:Lcom/oneplus/server/zta/sis;
 
-    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->zf()V
+    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->yf()V
 
     invoke-static {}, Lcom/android/server/fto;->getInstance()Lcom/android/server/fto;
 

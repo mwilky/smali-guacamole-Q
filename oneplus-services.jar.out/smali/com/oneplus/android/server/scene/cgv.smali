@@ -15,33 +15,47 @@
 
 
 # static fields
-.field private static final Cda:Ljava/lang/String; = "-1"
-
 .field private static final DBG:Z
 
-.field private static final Dda:Ljava/lang/String; = "android.intent.action.PHONE_STATE"
+.field private static final Nda:Ljava/lang/String; = "-1"
 
-.field private static final Eda:J = 0x1f4L
+.field private static final Oda:Ljava/lang/String; = "android.intent.action.PHONE_STATE"
 
-.field private static final Fda:Landroid/net/Uri;
+.field private static final Pda:J = 0x1f4L
 
-.field private static Gda:Lcom/oneplus/android/server/scene/vju; = null
+.field private static final Qda:Landroid/net/Uri;
 
-.field private static Hda:Lcom/oneplus/android/server/scene/vju; = null
-
-.field private static Ida:Landroid/view/View; = null
+.field private static Rda:Lcom/oneplus/android/server/scene/vju; = null
 
 .field private static final SHORT_DURATION_TIMEOUT:J = 0x5dcL
 
+.field private static Sda:Lcom/oneplus/android/server/scene/vju; = null
+
 .field private static final TAG:Ljava/lang/String; = "OemSceneGameModePanel"
+
+.field private static Tda:Landroid/view/View; = null
 
 .field private static final VALUE_ON:Ljava/lang/String; = "1"
 
 
 # instance fields
-.field private Ada:Z
+.field private Eda:Landroid/view/WindowManager;
 
-.field private Bda:Ljava/util/ArrayList;
+.field private Fda:Landroid/animation/ValueAnimator;
+
+.field private Gda:Landroid/animation/ValueAnimator;
+
+.field private Hda:Lcom/oneplus/android/server/scene/vju;
+
+.field private Ida:Lcom/oneplus/android/server/scene/cgv$zta;
+
+.field private Jda:Ljava/lang/String;
+
+.field private Kda:Z
+
+.field private Lda:Z
+
+.field private Mda:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -51,7 +65,7 @@
     .end annotation
 .end field
 
-.field private gb:Landroid/view/WindowManager$LayoutParams;
+.field private hb:Landroid/view/WindowManager$LayoutParams;
 
 .field private mContext:Landroid/content/Context;
 
@@ -62,20 +76,6 @@
 .field private mWindowManagerInternal:Lcom/android/server/wm/WindowManagerInternal;
 
 .field private mWindowManagerService:Landroid/view/IWindowManager;
-
-.field private tda:Landroid/view/WindowManager;
-
-.field private uda:Landroid/animation/ValueAnimator;
-
-.field private vda:Landroid/animation/ValueAnimator;
-
-.field private wda:Lcom/oneplus/android/server/scene/vju;
-
-.field private xda:Lcom/oneplus/android/server/scene/cgv$zta;
-
-.field private yda:Ljava/lang/String;
-
-.field private zda:Z
 
 
 # direct methods
@@ -92,13 +92,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Qda:Landroid/net/Uri;
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Gda:Lcom/oneplus/android/server/scene/vju;
+    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Rda:Lcom/oneplus/android/server/scene/vju;
 
-    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
+    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Sda:Lcom/oneplus/android/server/scene/vju;
 
     return-void
 .end method
@@ -110,27 +110,27 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->tda:Landroid/view/WindowManager;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Eda:Landroid/view/WindowManager;
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->mESportGuider:Lcom/oneplus/android/server/scene/tsu;
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->yda:Ljava/lang/String;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Jda:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->zda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Kda:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Ada:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Lda:Z
 
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Bda:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Mda:Ljava/util/ArrayList;
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->mContext:Landroid/content/Context;
 
@@ -144,7 +144,7 @@
 
     check-cast p2, Landroid/view/WindowManager;
 
-    iput-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->tda:Landroid/view/WindowManager;
+    iput-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->Eda:Landroid/view/WindowManager;
 
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
@@ -172,7 +172,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iput-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     new-array p2, p2, [F
 
@@ -182,7 +182,7 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iput-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     invoke-direct {p0}, Lcom/oneplus/android/server/scene/cgv;->listenForCallState()V
 
@@ -233,7 +233,7 @@
 
     invoke-direct {p2, p0, p1, v1}, Lcom/oneplus/android/server/scene/cgv$zta;-><init>(Lcom/oneplus/android/server/scene/cgv;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->xda:Lcom/oneplus/android/server/scene/cgv$zta;
+    iput-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->Ida:Lcom/oneplus/android/server/scene/cgv$zta;
 
     iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->mContext:Landroid/content/Context;
 
@@ -241,9 +241,9 @@
 
     move-result-object p1
 
-    sget-object p2, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/net/Uri;
+    sget-object p2, Lcom/oneplus/android/server/scene/cgv;->Qda:Landroid/net/Uri;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->xda:Lcom/oneplus/android/server/scene/cgv$zta;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Ida:Lcom/oneplus/android/server/scene/cgv$zta;
 
     const/4 v2, -0x1
 
@@ -272,10 +272,10 @@
     .end array-data
 .end method
 
-.method private Ua(Z)V
+.method private Va(Z)V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/oneplus/android/server/scene/ire;
 
@@ -283,7 +283,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/oneplus/android/server/scene/hmo;
 
@@ -291,7 +291,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     const-wide/16 v1, 0x1f4
 
@@ -299,14 +299,14 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0x7d0
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
 
@@ -361,7 +361,7 @@
 
     aget-object v3, v3, v1
 
-    iget-object v4, p0, Lcom/oneplus/android/server/scene/cgv;->Bda:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/oneplus/android/server/scene/cgv;->Mda:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -378,7 +378,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Bda:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Mda:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
 
@@ -425,6 +425,25 @@
     return-void
 .end method
 
+.method public static _e()I
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/android/server/scene/cgv;->Tda:Landroid/view/View;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method private _r()V
     .locals 8
 
@@ -438,9 +457,9 @@
 
     invoke-direct {v0, v1, v2, p0, v3}, Lcom/oneplus/android/server/scene/vdb;-><init>(Landroid/content/Context;ILcom/oneplus/android/server/scene/cgv;Z)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     const v1, 0x507001c
 
@@ -450,7 +469,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     const v4, 0x507001e
 
@@ -468,7 +487,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->rc(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->sc(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -497,7 +516,7 @@
 
     invoke-direct {v0, v1, v4, p0, v3}, Lcom/oneplus/android/server/scene/vdb;-><init>(Landroid/content/Context;ILcom/oneplus/android/server/scene/cgv;Z)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -512,7 +531,7 @@
 
     invoke-direct {v1, v4, v2, p0, v3}, Lcom/oneplus/android/server/scene/vdb;-><init>(Landroid/content/Context;ILcom/oneplus/android/server/scene/cgv;Z)V
 
-    iput-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iput-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -554,9 +573,9 @@
 
     invoke-direct/range {v2 .. v7}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->gb:Landroid/view/WindowManager$LayoutParams;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->hb:Landroid/view/WindowManager$LayoutParams;
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->gb:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->hb:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v1, 0x31
 
@@ -572,21 +591,21 @@
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->tda:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Eda:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/cgv;->gb:Landroid/view/WindowManager$LayoutParams;
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/cgv;->hb:Landroid/view/WindowManager$LayoutParams;
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     const/16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setSystemUiVisibility(I)V
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/cgv;->Ze()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/cgv;->Ye()V
 
     return-void
 .end method
@@ -599,31 +618,12 @@
     return v0
 .end method
 
-.method public static af()I
-    .locals 1
-
-    sget-object v0, Lcom/oneplus/android/server/scene/cgv;->Ida:Landroid/view/View;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method private as()V
     .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->Ua(Z)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->Va(Z)V
 
     return-void
 .end method
@@ -631,7 +631,7 @@
 .method private cs()V
     .locals 3
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/oneplus/android/server/scene/oxb;
 
@@ -639,7 +639,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/oneplus/android/server/scene/cjf;
 
@@ -647,13 +647,13 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     const-wide/16 v1, 0x1f4
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p0}, Landroid/animation/ValueAnimator;->start()V
 
@@ -663,19 +663,19 @@
 .method private hide(Z)V
     .locals 2
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
 
@@ -688,15 +688,15 @@
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     if-eqz p1, :cond_1
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->tda:Landroid/view/WindowManager;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Eda:Landroid/view/WindowManager;
 
     invoke-interface {v1, p1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     :cond_1
     :goto_0
@@ -704,7 +704,7 @@
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/scene/tsu;->hide()V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Ida:Landroid/view/View;
+    sput-object v0, Lcom/oneplus/android/server/scene/cgv;->Tda:Landroid/view/View;
 
     return-void
 .end method
@@ -731,7 +731,15 @@
     return-void
 .end method
 
-.method private rc(Ljava/lang/String;)Z
+.method static synthetic rtg(Lcom/oneplus/android/server/scene/cgv;)Landroid/view/WindowManager;
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Eda:Landroid/view/WindowManager;
+
+    return-object p0
+.end method
+
+.method private sc(Ljava/lang/String;)Z
     .locals 1
 
     const/4 p0, 0x0
@@ -761,18 +769,10 @@
     return p0
 .end method
 
-.method static synthetic rtg(Lcom/oneplus/android/server/scene/cgv;)Landroid/view/WindowManager;
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->tda:Landroid/view/WindowManager;
-
-    return-object p0
-.end method
-
 .method private show(Z)V
     .locals 0
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     if-eqz p1, :cond_0
 
@@ -785,19 +785,19 @@
     return-void
 
     :cond_0
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->uda:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Fda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->end()V
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->vda:Landroid/animation/ValueAnimator;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Gda:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->end()V
 
@@ -809,7 +809,7 @@
 .method static synthetic sis(Lcom/oneplus/android/server/scene/cgv;)Lcom/oneplus/android/server/scene/vju;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     return-object p0
 .end method
@@ -817,7 +817,7 @@
 .method static synthetic ssp(Lcom/oneplus/android/server/scene/cgv;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/cgv;->zda:Z
+    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/cgv;->Kda:Z
 
     return p0
 .end method
@@ -841,7 +841,7 @@
 .method static synthetic you(Lcom/oneplus/android/server/scene/cgv;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/cgv;->zda:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/cgv;->Kda:Z
 
     return p1
 .end method
@@ -849,7 +849,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/scene/cgv;Lcom/oneplus/android/server/scene/vju;)Lcom/oneplus/android/server/scene/vju;
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     return-object p1
 .end method
@@ -901,7 +901,7 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/cgv;->Ada:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/cgv;->Lda:Z
 
     const/4 p1, 0x0
 
@@ -943,19 +943,19 @@
     return-void
 .end method
 
-.method protected Ze()V
+.method protected Ye()V
     .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/android/server/scene/cgv;->cs()V
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->Ua(Z)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->Va(Z)V
 
     return-void
 .end method
 
-.method public _e()V
+.method public Ze()V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/cgv;->mHandler:Landroid/os/Handler;
@@ -969,26 +969,26 @@
     return-void
 .end method
 
-.method public bf()Ljava/lang/String;
+.method public af()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->yda:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Jda:Ljava/lang/String;
 
     return-object p0
+.end method
+
+.method public bf()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/cgv;->Kda:Z
+
+    return p0
 .end method
 
 .method public cf()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/cgv;->zda:Z
-
-    return p0
-.end method
-
-.method public df()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     if-eqz p0, :cond_0
 
@@ -1029,17 +1029,17 @@
     invoke-static {p3, p2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->yda:Ljava/lang/String;
+    iget-object p2, p0, Lcom/oneplus/android/server/scene/cgv;->Jda:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->yda:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Jda:Ljava/lang/String;
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     if-eqz p1, :cond_1
 
     if-eqz p2, :cond_1
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->yda:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/cgv;->Jda:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1062,15 +1062,29 @@
 .method public getWindowManager()Landroid/view/WindowManager;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->tda:Landroid/view/WindowManager;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Eda:Landroid/view/WindowManager;
 
     return-object p0
 .end method
 
-.method public ha(Ljava/lang/String;)Z
+.method public hide()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Lda:Z
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->hide(Z)V
+
+    return-void
+.end method
+
+.method public ia(Ljava/lang/String;)Z
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Bda:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/cgv;->Mda:Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -1088,28 +1102,14 @@
     return p0
 .end method
 
-.method public hide()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Ada:Z
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/cgv;->hide(Z)V
-
-    return-void
-.end method
-
 .method public show()V
     .locals 2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Ada:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/cgv;->Lda:Z
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->wda:Lcom/oneplus/android/server/scene/vju;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/cgv;->Hda:Lcom/oneplus/android/server/scene/vju;
 
     if-eqz v1, :cond_0
 
@@ -1148,7 +1148,7 @@
 
     iput p1, v1, Landroid/content/res/Configuration;->orientation:I
 
-    iget-boolean p1, p0, Lcom/oneplus/android/server/scene/cgv;->Ada:Z
+    iget-boolean p1, p0, Lcom/oneplus/android/server/scene/cgv;->Lda:Z
 
     if-eqz p1, :cond_0
 

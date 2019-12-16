@@ -90,7 +90,7 @@
 
     check-cast p0, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->pj()Lorg/bouncycastle/crypto/wtn/bio;
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/dh/BCDHPublicKey;->oj()Lorg/bouncycastle/crypto/wtn/bio;
 
     move-result-object p0
 

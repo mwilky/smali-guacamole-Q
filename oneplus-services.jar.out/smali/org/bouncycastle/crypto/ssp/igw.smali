@@ -126,7 +126,17 @@
     return-object v0
 .end method
 
-.method public gwm(II)Lorg/bouncycastle/crypto/kth;
+.method public init([B[B)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-super {p0, p1, p2, v0}, Lorg/bouncycastle/crypto/gwm;->zta([B[BI)V
+
+    return-void
+.end method
+
+.method public ugm(II)Lorg/bouncycastle/crypto/kth;
     .locals 3
 
     div-int/lit8 p1, p1, 0x8
@@ -150,14 +160,4 @@
     invoke-direct {v0, v1, p0, p1, p2}, Lorg/bouncycastle/crypto/wtn/ire;-><init>(Lorg/bouncycastle/crypto/kth;[BII)V
 
     return-object v0
-.end method
-
-.method public init([B[B)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-super {p0, p1, p2, v0}, Lorg/bouncycastle/crypto/gwm;->zta([B[BI)V
-
-    return-void
 .end method

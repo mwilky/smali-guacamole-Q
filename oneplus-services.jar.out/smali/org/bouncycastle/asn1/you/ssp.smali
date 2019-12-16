@@ -4,19 +4,19 @@
 
 
 # static fields
-.field public static final KGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final UGa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final LGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final VGa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final MGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final WGa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final NGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final XGa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final OGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final YGa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final PGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final ZGa:Lorg/bouncycastle/asn1/bvj;
 
-.field public static final QGa:Lorg/bouncycastle/asn1/bvj;
+.field public static final _Ga:Lorg/bouncycastle/asn1/bvj;
 
 .field public static final data:Lorg/bouncycastle/asn1/bvj;
 
@@ -61,19 +61,19 @@
 
     sget-object v0, Lorg/bouncycastle/asn1/dma/gwm;->id_ct_authData:Lorg/bouncycastle/asn1/bvj;
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->KGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->UGa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v0, Lorg/bouncycastle/asn1/dma/gwm;->id_ct_compressedData:Lorg/bouncycastle/asn1/bvj;
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->LGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->VGa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v0, Lorg/bouncycastle/asn1/dma/gwm;->id_ct_authEnvelopedData:Lorg/bouncycastle/asn1/bvj;
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->MGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->WGa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v0, Lorg/bouncycastle/asn1/dma/gwm;->id_ct_timestampedData:Lorg/bouncycastle/asn1/bvj;
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->NGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->XGa:Lorg/bouncycastle/asn1/bvj;
 
     new-instance v0, Lorg/bouncycastle/asn1/bvj;
 
@@ -81,27 +81,27 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/bvj;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->OGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->YGa:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v0, Lorg/bouncycastle/asn1/you/ssp;->OGa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/you/ssp;->YGa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "2"
 
-    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/bvj;->ra(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/bvj;->sa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->PGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->ZGa:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v0, Lorg/bouncycastle/asn1/you/ssp;->OGa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/you/ssp;->YGa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v1, "4"
 
-    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/bvj;->ra(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/bvj;->sa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->QGa:Lorg/bouncycastle/asn1/bvj;
+    sput-object v0, Lorg/bouncycastle/asn1/you/ssp;->_Ga:Lorg/bouncycastle/asn1/bvj;
 
     return-void
 .end method

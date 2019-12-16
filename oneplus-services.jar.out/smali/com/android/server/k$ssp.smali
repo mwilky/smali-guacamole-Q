@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcom/android/server/k$ssp;->this$0:Lcom/android/server/k;
 
-    iget-object v0, v0, Lcom/android/server/k;->lg:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/android/server/k;->mg:Ljava/util/ArrayList;
 
     monitor-enter v0
 
@@ -118,7 +118,7 @@
 
     iget-object v1, p0, Lcom/android/server/k$ssp;->this$0:Lcom/android/server/k;
 
-    iget-object v1, v1, Lcom/android/server/k;->lg:Ljava/util/ArrayList;
+    iget-object v1, v1, Lcom/android/server/k;->mg:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -132,7 +132,7 @@
 
     iget-object p0, p0, Lcom/android/server/k$ssp;->this$0:Lcom/android/server/k;
 
-    iget-object p0, p0, Lcom/android/server/k;->lg:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/k;->mg:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -372,7 +372,7 @@
 
     iget-object p1, p0, Lcom/android/server/k$ssp;->this$0:Lcom/android/server/k;
 
-    iget-object p1, p1, Lcom/android/server/k;->jg:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/android/server/k;->kg:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -382,13 +382,13 @@
 
     iget-object p1, p0, Lcom/android/server/k$ssp;->this$0:Lcom/android/server/k;
 
-    iget-object p1, p1, Lcom/android/server/k;->jg:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/android/server/k;->kg:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     iget-object p1, p0, Lcom/android/server/k$ssp;->this$0:Lcom/android/server/k;
 
-    iget-object p1, p1, Lcom/android/server/k;->jg:Ljava/util/ArrayList;
+    iget-object p1, p1, Lcom/android/server/k;->kg:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 

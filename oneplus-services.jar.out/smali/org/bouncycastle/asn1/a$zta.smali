@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field private Kga:[B
+.field private Vga:[B
 
-.field private Lga:I
+.field private Wga:I
 
-.field private Mga:Lorg/bouncycastle/asn1/E;
+.field private Xga:Lorg/bouncycastle/asn1/E;
 
 .field final synthetic this$0:Lorg/bouncycastle/asn1/a;
 
@@ -32,19 +32,19 @@
 
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/a$zta;->Kga:[B
+    iput-object p2, p0, Lorg/bouncycastle/asn1/a$zta;->Vga:[B
 
     const/4 p2, 0x0
 
-    iput p2, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iput p2, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     new-instance p2, Lorg/bouncycastle/asn1/E;
 
-    iget-object p1, p1, Lorg/bouncycastle/asn1/gck;->Gna:Ljava/io/OutputStream;
+    iget-object p1, p1, Lorg/bouncycastle/asn1/gck;->Qna:Ljava/io/OutputStream;
 
     invoke-direct {p2, p1}, Lorg/bouncycastle/asn1/E;-><init>(Ljava/io/OutputStream;)V
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/a$zta;->Mga:Lorg/bouncycastle/asn1/E;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/a$zta;->Xga:Lorg/bouncycastle/asn1/E;
 
     return-void
 .end method
@@ -59,26 +59,26 @@
         }
     .end annotation
 
-    iget v0, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget v0, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     if-eqz v0, :cond_0
 
     new-array v1, v0, [B
 
-    iget-object v2, p0, Lorg/bouncycastle/asn1/a$zta;->Kga:[B
+    iget-object v2, p0, Lorg/bouncycastle/asn1/a$zta;->Vga:[B
 
     const/4 v3, 0x0
 
     invoke-static {v2, v3, v1, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/a$zta;->Mga:Lorg/bouncycastle/asn1/E;
+    iget-object v0, p0, Lorg/bouncycastle/asn1/a$zta;->Xga:Lorg/bouncycastle/asn1/E;
 
     invoke-static {v0, v1}, Lorg/bouncycastle/asn1/C;->zta(Lorg/bouncycastle/asn1/E;[B)V
 
     :cond_0
     iget-object p0, p0, Lorg/bouncycastle/asn1/a$zta;->this$0:Lorg/bouncycastle/asn1/a;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/vdw;->jg()V
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/vdw;->ig()V
 
     return-void
 .end method
@@ -91,31 +91,31 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/a$zta;->Kga:[B
+    iget-object v0, p0, Lorg/bouncycastle/asn1/a$zta;->Vga:[B
 
-    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iput v2, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     int-to-byte p1, p1
 
     aput-byte p1, v0, v1
 
-    iget p1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget p1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     array-length v1, v0
 
     if-ne p1, v1, :cond_0
 
-    iget-object p1, p0, Lorg/bouncycastle/asn1/a$zta;->Mga:Lorg/bouncycastle/asn1/E;
+    iget-object p1, p0, Lorg/bouncycastle/asn1/a$zta;->Xga:Lorg/bouncycastle/asn1/E;
 
     invoke-static {p1, v0}, Lorg/bouncycastle/asn1/C;->zta(Lorg/bouncycastle/asn1/E;[B)V
 
     const/4 p1, 0x0
 
-    iput p1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iput p1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     :cond_0
     return-void
@@ -132,11 +132,11 @@
     :goto_0
     if-lez p3, :cond_1
 
-    iget-object v0, p0, Lorg/bouncycastle/asn1/a$zta;->Kga:[B
+    iget-object v0, p0, Lorg/bouncycastle/asn1/a$zta;->Vga:[B
 
     array-length v0, v0
 
-    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     sub-int/2addr v0, v1
 
@@ -144,21 +144,21 @@
 
     move-result v0
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/a$zta;->Kga:[B
+    iget-object v1, p0, Lorg/bouncycastle/asn1/a$zta;->Vga:[B
 
-    iget v2, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget v2, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     invoke-static {p1, p2, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     add-int/2addr v1, v0
 
-    iput v1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iput v1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
-    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iget v1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
-    iget-object v2, p0, Lorg/bouncycastle/asn1/a$zta;->Kga:[B
+    iget-object v2, p0, Lorg/bouncycastle/asn1/a$zta;->Vga:[B
 
     array-length v3, v2
 
@@ -167,13 +167,13 @@
     goto :goto_1
 
     :cond_0
-    iget-object v1, p0, Lorg/bouncycastle/asn1/a$zta;->Mga:Lorg/bouncycastle/asn1/E;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/a$zta;->Xga:Lorg/bouncycastle/asn1/E;
 
     invoke-static {v1, v2}, Lorg/bouncycastle/asn1/C;->zta(Lorg/bouncycastle/asn1/E;[B)V
 
     const/4 v1, 0x0
 
-    iput v1, p0, Lorg/bouncycastle/asn1/a$zta;->Lga:I
+    iput v1, p0, Lorg/bouncycastle/asn1/a$zta;->Wga:I
 
     add-int/2addr p2, v0
 

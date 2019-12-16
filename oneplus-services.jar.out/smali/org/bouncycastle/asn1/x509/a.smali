@@ -22,23 +22,23 @@
 
 .field public static final UNUSED:I = 0x80
 
-.field public static final Una:I = 0x80
+.field public static final doa:I = 0x80
 
-.field public static final Vna:I = 0x40
+.field public static final eoa:I = 0x40
 
-.field public static final Wna:I = 0x20
+.field public static final foa:I = 0x20
 
-.field public static final Xna:I = 0x10
+.field public static final goa:I = 0x10
 
-.field public static final Yna:I = 0x8
+.field public static final hoa:I = 0x8
 
-.field public static final Zna:I = 0x4
+.field public static final ioa:I = 0x4
 
-.field public static final _na:I = 0x2
+.field public static final joa:I = 0x2
 
-.field public static final aoa:I = 0x1
+.field public static final koa:I = 0x1
 
-.field public static final boa:I = 0x8000
+.field public static final loa:I = 0x8000
 
 
 # direct methods
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/sis;->qg()I
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/sis;->pg()I
 
     move-result p1
 

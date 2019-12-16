@@ -17,15 +17,15 @@
 # instance fields
 .field private Af:I
 
-.field private Bf:J
+.field private Bf:I
+
+.field private Cf:J
 
 .field private mCharging:Z
 
 .field private mTemp:I
 
 .field final synthetic this$0:Lcom/android/server/k;
-
-.field private zf:I
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lcom/android/server/k$sis;->zf:I
+    iput p2, p0, Lcom/android/server/k$sis;->Af:I
 
     iput p3, p0, Lcom/android/server/k$sis;->mTemp:I
 
@@ -44,7 +44,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/android/server/k$sis;->Bf:J
+    iput-wide p1, p0, Lcom/android/server/k$sis;->Cf:J
 
     return-void
 .end method
@@ -56,11 +56,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lcom/android/server/k$sis;->zf:I
+    iput p2, p0, Lcom/android/server/k$sis;->Af:I
 
     iput p3, p0, Lcom/android/server/k$sis;->mTemp:I
 
-    iput p5, p0, Lcom/android/server/k$sis;->Af:I
+    iput p5, p0, Lcom/android/server/k$sis;->Bf:I
 
     iput-boolean p4, p0, Lcom/android/server/k$sis;->mCharging:Z
 
@@ -68,7 +68,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lcom/android/server/k$sis;->Bf:J
+    iput-wide p1, p0, Lcom/android/server/k$sis;->Cf:J
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 .method Z()I
     .locals 0
 
-    iget p0, p0, Lcom/android/server/k$sis;->Af:I
+    iget p0, p0, Lcom/android/server/k$sis;->Bf:I
 
     return p0
 .end method
@@ -102,7 +102,7 @@
 .method getTime()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/k$sis;->Bf:J
+    iget-wide v0, p0, Lcom/android/server/k$sis;->Cf:J
 
     return-wide v0
 .end method
@@ -174,7 +174,7 @@
 
     new-instance v0, Ljava/util/Date;
 
-    iget-wide v1, p0, Lcom/android/server/k$sis;->Bf:J
+    iget-wide v1, p0, Lcom/android/server/k$sis;->Cf:J
 
     invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
 
@@ -198,7 +198,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/android/server/k$sis;->zf:I
+    iget v0, p0, Lcom/android/server/k$sis;->Af:I
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -222,7 +222,7 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/android/server/k$sis;->Af:I
+    iget v0, p0, Lcom/android/server/k$sis;->Bf:I
 
     invoke-virtual {p0, v0}, Lcom/android/server/k$sis;->oif(I)Ljava/lang/String;
 

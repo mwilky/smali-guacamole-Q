@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field public Df:Z
-
 .field public Ef:Z
 
 .field public Ff:Z
 
-.field public Gf:I
+.field public Gf:Z
 
 .field public Hf:I
 
-.field public If:Ljava/lang/String;
+.field public If:I
+
+.field public Jf:Ljava/lang/String;
 
 .field final synthetic this$0:Lcom/android/server/k;
 
@@ -38,17 +38,17 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lcom/android/server/k$cno;->Df:Z
+    iput-boolean p2, p0, Lcom/android/server/k$cno;->Ef:Z
 
-    iput-boolean p3, p0, Lcom/android/server/k$cno;->Ef:Z
+    iput-boolean p3, p0, Lcom/android/server/k$cno;->Ff:Z
 
-    iput-boolean p4, p0, Lcom/android/server/k$cno;->Ff:Z
+    iput-boolean p4, p0, Lcom/android/server/k$cno;->Gf:Z
 
-    iput p5, p0, Lcom/android/server/k$cno;->Gf:I
+    iput p5, p0, Lcom/android/server/k$cno;->Hf:I
 
-    iput p6, p0, Lcom/android/server/k$cno;->Hf:I
+    iput p6, p0, Lcom/android/server/k$cno;->If:I
 
-    iput-object p7, p0, Lcom/android/server/k$cno;->If:Ljava/lang/String;
+    iput-object p7, p0, Lcom/android/server/k$cno;->Jf:Ljava/lang/String;
 
     return-void
 .end method
@@ -66,7 +66,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/android/server/k$cno;->Df:Z
+    iget-boolean v1, p0, Lcom/android/server/k$cno;->Ef:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -74,7 +74,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/android/server/k$cno;->Ef:Z
+    iget-boolean v1, p0, Lcom/android/server/k$cno;->Ff:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/android/server/k$cno;->Ff:Z
+    iget-boolean v1, p0, Lcom/android/server/k$cno;->Gf:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/k$cno;->Gf:I
+    iget v1, p0, Lcom/android/server/k$cno;->Hf:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/k$cno;->Hf:I
+    iget v1, p0, Lcom/android/server/k$cno;->If:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -106,7 +106,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/k$cno;->If:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/k$cno;->Jf:Ljava/lang/String;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,17 +120,17 @@
 .method public zta(ZZZIILjava/lang/String;)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/k$cno;->Df:Z
+    iput-boolean p1, p0, Lcom/android/server/k$cno;->Ef:Z
 
-    iput-boolean p2, p0, Lcom/android/server/k$cno;->Ef:Z
+    iput-boolean p2, p0, Lcom/android/server/k$cno;->Ff:Z
 
-    iput-boolean p3, p0, Lcom/android/server/k$cno;->Ff:Z
+    iput-boolean p3, p0, Lcom/android/server/k$cno;->Gf:Z
 
-    iput p4, p0, Lcom/android/server/k$cno;->Gf:I
+    iput p4, p0, Lcom/android/server/k$cno;->Hf:I
 
-    iput p5, p0, Lcom/android/server/k$cno;->Hf:I
+    iput p5, p0, Lcom/android/server/k$cno;->If:I
 
-    iput-object p6, p0, Lcom/android/server/k$cno;->If:Ljava/lang/String;
+    iput-object p6, p0, Lcom/android/server/k$cno;->Jf:Ljava/lang/String;
 
     return-void
 .end method

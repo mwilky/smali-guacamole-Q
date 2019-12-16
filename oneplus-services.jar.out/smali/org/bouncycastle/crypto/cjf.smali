@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private final Fla:Lorg/bouncycastle/crypto/rtg;
+.field private final Qla:Lorg/bouncycastle/crypto/rtg;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/cjf;->Fla:Lorg/bouncycastle/crypto/rtg;
+    iput-object p1, p0, Lorg/bouncycastle/crypto/cjf;->Qla:Lorg/bouncycastle/crypto/rtg;
 
     return-void
 .end method
@@ -27,7 +27,7 @@
 .method public b()Lorg/bouncycastle/crypto/rtg;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/cjf;->Fla:Lorg/bouncycastle/crypto/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/cjf;->Qla:Lorg/bouncycastle/crypto/rtg;
 
     return-object p0
 .end method

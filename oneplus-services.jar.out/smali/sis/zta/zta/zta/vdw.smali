@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public AFa:B
+.field public KFa:B
 
-.field public BFa:B
+.field public LFa:B
 
 .field public step:S
 
@@ -193,18 +193,18 @@
     :cond_2
     check-cast p1, Lsis/zta/zta/zta/vdw;
 
-    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->AFa:B
+    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->KFa:B
 
-    iget-byte v3, p1, Lsis/zta/zta/zta/vdw;->AFa:B
+    iget-byte v3, p1, Lsis/zta/zta/zta/vdw;->KFa:B
 
     if-eq v2, v3, :cond_3
 
     return v1
 
     :cond_3
-    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->BFa:B
+    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->LFa:B
 
-    iget-byte v3, p1, Lsis/zta/zta/zta/vdw;->BFa:B
+    iget-byte v3, p1, Lsis/zta/zta/zta/vdw;->LFa:B
 
     if-eq v2, v3, :cond_4
 
@@ -230,7 +230,7 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->AFa:B
+    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->KFa:B
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -248,7 +248,7 @@
 
     aput-object v1, v0, v2
 
-    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->BFa:B
+    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->LFa:B
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
@@ -302,7 +302,7 @@
 
     move-result p1
 
-    iput-byte p1, p0, Lsis/zta/zta/zta/vdw;->AFa:B
+    iput-byte p1, p0, Lsis/zta/zta/zta/vdw;->KFa:B
 
     const-wide/16 v0, 0x1
 
@@ -312,7 +312,7 @@
 
     move-result p1
 
-    iput-byte p1, p0, Lsis/zta/zta/zta/vdw;->BFa:B
+    iput-byte p1, p0, Lsis/zta/zta/zta/vdw;->LFa:B
 
     const-wide/16 v0, 0x2
 
@@ -358,7 +358,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->AFa:B
+    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->KFa:B
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -366,7 +366,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->BFa:B
+    iget-byte v1, p0, Lsis/zta/zta/zta/vdw;->LFa:B
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -396,7 +396,7 @@
 
     add-long/2addr v0, p2
 
-    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->AFa:B
+    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->KFa:B
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/HwBlob;->putInt8(JB)V
 
@@ -404,7 +404,7 @@
 
     add-long/2addr v0, p2
 
-    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->BFa:B
+    iget-byte v2, p0, Lsis/zta/zta/zta/vdw;->LFa:B
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/HwBlob;->putInt8(JB)V
 

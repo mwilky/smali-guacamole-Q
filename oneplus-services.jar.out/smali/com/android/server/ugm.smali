@@ -16,7 +16,7 @@
 
 
 # static fields
-.field private static final Jc:J = 0x2bf20L
+.field private static final Kc:J = 0x2bf20L
 
 .field static final ONLINECONFIG_PROJECT_NAME:Ljava/lang/String; = "OnePlusSensorManager"
 
@@ -26,16 +26,6 @@
 
 
 # instance fields
-.field private Gc:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field private Hc:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -46,7 +36,17 @@
     .end annotation
 .end field
 
-.field private Ic:Landroid/content/pm/PackageManager;
+.field private Ic:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private Jc:Landroid/content/pm/PackageManager;
 
 .field private mConfigObserver:Lcom/oneplus/config/ConfigObserver;
 
@@ -109,7 +109,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/ugm;->Ic:Landroid/content/pm/PackageManager;
+    iput-object p1, p0, Lcom/android/server/ugm;->Jc:Landroid/content/pm/PackageManager;
 
     invoke-direct {p0}, Lcom/android/server/ugm;->init()V
 
@@ -132,7 +132,7 @@
     return p1
 .end method
 
-.method private hl()V
+.method private fl()V
     .locals 2
 
     new-instance v0, Landroid/content/IntentFilter;
@@ -167,13 +167,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/ugm;->Gc:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/ugm;->Ic:Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/android/server/ugm;->mHandler:Lcom/android/server/ugm$you;
 
@@ -181,7 +181,7 @@
 
     const/4 v2, 0x6
 
-    invoke-static {v1, v2}, Lcom/android/server/ugm;->ugm(II)I
+    invoke-static {v1, v2}, Lcom/android/server/ugm;->vdb(II)I
 
     move-result v1
 
@@ -195,7 +195,7 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    invoke-direct {p0}, Lcom/android/server/ugm;->hl()V
+    invoke-direct {p0}, Lcom/android/server/ugm;->fl()V
 
     invoke-static {}, Lcom/android/server/OnePlusUtil$zta;->getInstance()Lcom/android/server/OnePlusUtil$zta;
 
@@ -209,7 +209,7 @@
 .method static synthetic kth(II)I
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/android/server/ugm;->ugm(II)I
+    invoke-static {p0, p1}, Lcom/android/server/ugm;->vdb(II)I
 
     move-result p0
 
@@ -246,13 +246,13 @@
 
     const-string v3, "disable_sensor_after_light_idle"
 
-    iget-object v4, p0, Lcom/android/server/ugm;->Gc:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
 
     invoke-direct {p0, v2, v3, v4}, Lcom/android/server/ugm;->zta(Lorg/json/JSONObject;Ljava/lang/String;Ljava/util/ArrayList;)V
 
     const-string v3, "disable_sensor_background"
 
-    iget-object v4, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/android/server/ugm;->Ic:Ljava/util/ArrayList;
 
     invoke-direct {p0, v2, v3, v4}, Lcom/android/server/ugm;->zta(Lorg/json/JSONObject;Ljava/lang/String;Ljava/util/ArrayList;)V
     :try_end_0
@@ -288,7 +288,7 @@
 .method static synthetic rtg(Lcom/android/server/ugm;)Ljava/util/ArrayList;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/ugm;->Gc:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -317,7 +317,7 @@
     return-object p0
 .end method
 
-.method private static ugm(II)I
+.method private static vdb(II)I
     .locals 0
 
     mul-int/lit8 p0, p0, 0x64
@@ -517,7 +517,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/ugm;->Gc:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -535,7 +535,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/ugm;->Ic:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -586,7 +586,7 @@
     :cond_0
     if-eq p2, p5, :cond_2
 
-    iget-object p3, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
+    iget-object p3, p0, Lcom/android/server/ugm;->Ic:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -606,7 +606,7 @@
 
     iget-object p3, p0, Lcom/android/server/ugm;->mHandler:Lcom/android/server/ugm$you;
 
-    invoke-static {p2, v0}, Lcom/android/server/ugm;->ugm(II)I
+    invoke-static {p2, v0}, Lcom/android/server/ugm;->vdb(II)I
 
     move-result v2
 
@@ -616,7 +616,7 @@
 
     const/4 v2, 0x5
 
-    invoke-static {p2, v2}, Lcom/android/server/ugm;->ugm(II)I
+    invoke-static {p2, v2}, Lcom/android/server/ugm;->vdb(II)I
 
     move-result p2
 
@@ -649,7 +649,7 @@
     invoke-static {p6, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iget-object p1, p0, Lcom/android/server/ugm;->Hc:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/android/server/ugm;->Ic:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -665,7 +665,7 @@
 
     iget-object p1, p0, Lcom/android/server/ugm;->mHandler:Lcom/android/server/ugm$you;
 
-    invoke-static {p5, v0}, Lcom/android/server/ugm;->ugm(II)I
+    invoke-static {p5, v0}, Lcom/android/server/ugm;->vdb(II)I
 
     move-result p2
 

@@ -297,13 +297,13 @@
     :cond_4
     iget-object p1, p0, Lcom/android/server/am/ugm$you;->this$0:Lcom/android/server/am/ugm;
 
-    invoke-static {}, Lcom/android/server/am/ugm;->_a()Ljava/util/HashMap;
+    invoke-static {}, Lcom/android/server/am/ugm;->Za()Ljava/util/HashMap;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/android/server/am/ugm;->zta(Ljava/util/HashMap;)I
 
-    invoke-static {}, Lcom/android/server/am/ugm;->ab()Z
+    invoke-static {}, Lcom/android/server/am/ugm;->_a()Z
 
     move-result p1
 
@@ -315,7 +315,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/zgw;->mb()V
+    invoke-virtual {p0}, Lcom/android/server/am/zgw;->lb()V
 
     :cond_5
     :goto_1

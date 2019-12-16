@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic ME:I
+.field final synthetic VE:I
 
-.field final synthetic NE:F
+.field final synthetic WE:F
 
 .field final synthetic this$0:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
@@ -31,9 +31,9 @@
 
     iput-object p1, p0, Lcom/android/server/power/igw;->this$0:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    iput p2, p0, Lcom/android/server/power/igw;->ME:I
+    iput p2, p0, Lcom/android/server/power/igw;->VE:I
 
-    iput p3, p0, Lcom/android/server/power/igw;->NE:F
+    iput p3, p0, Lcom/android/server/power/igw;->WE:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -93,11 +93,11 @@
 
     sget-object v3, Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;->END:Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;
 
-    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;->Pja:Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;
+    sget-object v4, Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;->_ja:Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;
 
-    iget v5, p0, Lcom/android/server/power/igw;->ME:I
+    iget v5, p0, Lcom/android/server/power/igw;->VE:I
 
-    iget v6, p0, Lcom/android/server/power/igw;->NE:F
+    iget v6, p0, Lcom/android/server/power/igw;->WE:F
 
     iget-object v0, p0, Lcom/android/server/power/igw;->this$0:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
@@ -139,9 +139,9 @@
 
     iget-object p0, p0, Lcom/android/server/power/igw;->this$0:Lcom/android/server/power/OnePlusStandbyAnalyzer;
 
-    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;->gha:Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;
+    sget-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;->rha:Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;
 
-    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;->Pja:Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;
+    sget-object v2, Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;->_ja:Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;
 
     invoke-virtual {p0, v0, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer;->zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$SNAPSHOT_TYPE;Lcom/android/server/power/OnePlusStandbyAnalyzer$STATISTIC_TYPE;)V
     :try_end_0

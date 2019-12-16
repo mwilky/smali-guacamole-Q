@@ -6,7 +6,7 @@
 # static fields
 .field public static final Q:Ljava/math/BigInteger;
 
-.field private static final VCa:[I
+.field private static final eDa:[I
 
 
 # instance fields
@@ -27,7 +27,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lyou/zta/sis/zta/zta/zta/ywr;->VCa:[I
+    sput-object v0, Lyou/zta/sis/zta/zta/zta/ywr;->eDa:[I
 
     return-void
 
@@ -110,7 +110,7 @@
 
 
 # virtual methods
-.method public Qj()Lyou/zta/sis/zta/cno;
+.method public Pj()Lyou/zta/sis/zta/cno;
     .locals 1
 
     invoke-static {}, Lyou/zta/sis/sis/tsu;->create()[I
@@ -128,7 +128,7 @@
     return-object p0
 .end method
 
-.method public Rj()Ljava/lang/String;
+.method public Qj()Ljava/lang/String;
     .locals 0
 
     const-string p0, "SecP224K1Field"
@@ -136,7 +136,7 @@
     return-object p0
 .end method
 
-.method public Sj()Z
+.method public Rj()Z
     .locals 0
 
     iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/ywr;->x:[I
@@ -148,7 +148,7 @@
     return p0
 .end method
 
-.method public Tj()Lyou/zta/sis/zta/cno;
+.method public Sj()Lyou/zta/sis/zta/cno;
     .locals 8
 
     iget-object v0, p0, Lyou/zta/sis/zta/zta/zta/ywr;->x:[I
@@ -283,7 +283,7 @@
     return-object p0
 
     :cond_1
-    sget-object p0, Lyou/zta/sis/zta/zta/zta/ywr;->VCa:[I
+    sget-object p0, Lyou/zta/sis/zta/zta/zta/ywr;->eDa:[I
 
     invoke-static {v2, p0, v2}, Lyou/zta/sis/zta/zta/zta/dma;->tsu([I[I[I)V
 
@@ -309,25 +309,7 @@
     return-object p0
 .end method
 
-.method public Uj()Lyou/zta/sis/zta/cno;
-    .locals 1
-
-    invoke-static {}, Lyou/zta/sis/sis/tsu;->create()[I
-
-    move-result-object v0
-
-    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/ywr;->x:[I
-
-    invoke-static {p0, v0}, Lyou/zta/sis/zta/zta/zta/dma;->igw([I[I)V
-
-    new-instance p0, Lyou/zta/sis/zta/zta/zta/ywr;
-
-    invoke-direct {p0, v0}, Lyou/zta/sis/zta/zta/zta/ywr;-><init>([I)V
-
-    return-object p0
-.end method
-
-.method public Vj()Z
+.method public Tj()Z
     .locals 2
 
     iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/ywr;->x:[I
@@ -502,6 +484,24 @@
     iget-object p1, p1, Lyou/zta/sis/zta/zta/zta/ywr;->x:[I
 
     invoke-static {p0, p1, v0}, Lyou/zta/sis/zta/zta/zta/dma;->you([I[I[I)V
+
+    new-instance p0, Lyou/zta/sis/zta/zta/zta/ywr;
+
+    invoke-direct {p0, v0}, Lyou/zta/sis/zta/zta/zta/ywr;-><init>([I)V
+
+    return-object p0
+.end method
+
+.method public square()Lyou/zta/sis/zta/cno;
+    .locals 1
+
+    invoke-static {}, Lyou/zta/sis/sis/tsu;->create()[I
+
+    move-result-object v0
+
+    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/ywr;->x:[I
+
+    invoke-static {p0, v0}, Lyou/zta/sis/zta/zta/zta/dma;->igw([I[I)V
 
     new-instance p0, Lyou/zta/sis/zta/zta/zta/ywr;
 

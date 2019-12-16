@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field eU:I
-
-.field fU:I
-
-.field gU:[I
-
 .field mode:Landroid/view/Display$Mode;
+
+.field pU:I
+
+.field qU:I
+
+.field rU:[I
 
 .field final synthetic this$0:Lcom/android/server/wm/OpScreenModeService;
 
@@ -36,15 +36,15 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->eU:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->pU:I
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->fU:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->qU:I
 
     const/4 v0, 0x0
 
     new-array v1, v0, [I
 
-    iput-object v1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->gU:[I
+    iput-object v1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->rU:[I
 
     iput-object p2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->mode:Landroid/view/Display$Mode;
 
@@ -58,7 +58,7 @@
 
     if-ne v1, v3, :cond_0
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->fU:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->qU:I
 
     iget-object p1, p1, Lcom/android/server/wm/OpScreenModeService;->mContext:Landroid/content/Context;
 
@@ -73,7 +73,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->gU:[I
+    iput-object p1, p0, Lcom/android/server/wm/OpScreenModeService$zta;->rU:[I
 
     goto :goto_1
 
@@ -86,7 +86,7 @@
 
     if-ne v1, v3, :cond_1
 
-    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->fU:I
+    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->qU:I
 
     iget-object p1, p1, Lcom/android/server/wm/OpScreenModeService;->mContext:Landroid/content/Context;
 
@@ -120,7 +120,7 @@
 
     if-gez p1, :cond_2
 
-    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->eU:I
+    iput v2, p0, Lcom/android/server/wm/OpScreenModeService$zta;->pU:I
 
     goto :goto_2
 
@@ -143,7 +143,7 @@
 
     if-gez p1, :cond_3
 
-    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->eU:I
+    iput v0, p0, Lcom/android/server/wm/OpScreenModeService$zta;->pU:I
 
     :cond_3
     :goto_2

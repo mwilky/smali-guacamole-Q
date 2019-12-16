@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final Aaa:I = 0x0
+.field private static final Laa:I = 0x0
 
 .field private static final OP_DISPLAY_HALSRGB_COLOR_MODE:I = 0x12
 

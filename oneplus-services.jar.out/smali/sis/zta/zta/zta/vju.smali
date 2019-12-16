@@ -4,27 +4,27 @@
 
 
 # instance fields
+.field public AFa:D
+
+.field public BFa:D
+
+.field public CFa:D
+
+.field public DFa:D
+
+.field public EFa:D
+
+.field public FFa:D
+
+.field public GFa:D
+
 .field public b:D
 
 .field public c:D
 
 .field public g:D
 
-.field public qFa:D
-
 .field public r:D
-
-.field public rFa:D
-
-.field public sFa:D
-
-.field public tFa:D
-
-.field public uFa:D
-
-.field public vFa:D
-
-.field public wFa:D
 
 
 # direct methods
@@ -253,9 +253,9 @@
     return v1
 
     :cond_6
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->qFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->AFa:D
 
-    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->qFa:D
+    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->AFa:D
 
     cmpl-double v2, v2, v4
 
@@ -264,9 +264,9 @@
     return v1
 
     :cond_7
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->rFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->BFa:D
 
-    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->rFa:D
+    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->BFa:D
 
     cmpl-double v2, v2, v4
 
@@ -275,9 +275,9 @@
     return v1
 
     :cond_8
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->sFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->CFa:D
 
-    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->sFa:D
+    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->CFa:D
 
     cmpl-double v2, v2, v4
 
@@ -286,9 +286,9 @@
     return v1
 
     :cond_9
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->tFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->DFa:D
 
-    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->tFa:D
+    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->DFa:D
 
     cmpl-double v2, v2, v4
 
@@ -297,9 +297,9 @@
     return v1
 
     :cond_a
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->uFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->EFa:D
 
-    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->uFa:D
+    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->EFa:D
 
     cmpl-double v2, v2, v4
 
@@ -308,9 +308,9 @@
     return v1
 
     :cond_b
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->vFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->FFa:D
 
-    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->vFa:D
+    iget-wide v4, p1, Lsis/zta/zta/zta/vju;->FFa:D
 
     cmpl-double v2, v2, v4
 
@@ -319,9 +319,9 @@
     return v1
 
     :cond_c
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->wFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->GFa:D
 
-    iget-wide p0, p1, Lsis/zta/zta/zta/vju;->wFa:D
+    iget-wide p0, p1, Lsis/zta/zta/zta/vju;->GFa:D
 
     cmpl-double p0, v2, p0
 
@@ -412,7 +412,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->qFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->AFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -430,7 +430,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->rFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->BFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -448,7 +448,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->sFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->CFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -466,7 +466,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->tFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->DFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -484,7 +484,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->uFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->EFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -502,7 +502,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->vFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->FFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -520,7 +520,7 @@
 
     aput-object v1, v0, v2
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->wFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->GFa:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -596,7 +596,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->qFa:D
+    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->AFa:D
 
     const-wide/16 v0, 0x28
 
@@ -606,7 +606,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->rFa:D
+    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->BFa:D
 
     const-wide/16 v0, 0x30
 
@@ -616,7 +616,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->sFa:D
+    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->CFa:D
 
     const-wide/16 v0, 0x38
 
@@ -626,7 +626,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->tFa:D
+    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->DFa:D
 
     const-wide/16 v0, 0x40
 
@@ -636,7 +636,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->uFa:D
+    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->EFa:D
 
     const-wide/16 v0, 0x48
 
@@ -646,7 +646,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->vFa:D
+    iput-wide v0, p0, Lsis/zta/zta/zta/vju;->FFa:D
 
     const-wide/16 v0, 0x50
 
@@ -656,7 +656,7 @@
 
     move-result-wide p1
 
-    iput-wide p1, p0, Lsis/zta/zta/zta/vju;->wFa:D
+    iput-wide p1, p0, Lsis/zta/zta/zta/vju;->GFa:D
 
     return-void
 .end method
@@ -724,7 +724,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->qFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->AFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -732,7 +732,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->rFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->BFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -740,7 +740,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->sFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->CFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -748,7 +748,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->tFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->DFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -756,7 +756,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->uFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->EFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -764,7 +764,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->vFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->FFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -772,7 +772,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->wFa:D
+    iget-wide v1, p0, Lsis/zta/zta/zta/vju;->GFa:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -826,7 +826,7 @@
 
     add-long/2addr v0, p2
 
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->qFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->AFa:D
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/os/HwBlob;->putDouble(JD)V
 
@@ -834,7 +834,7 @@
 
     add-long/2addr v0, p2
 
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->rFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->BFa:D
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/os/HwBlob;->putDouble(JD)V
 
@@ -842,7 +842,7 @@
 
     add-long/2addr v0, p2
 
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->sFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->CFa:D
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/os/HwBlob;->putDouble(JD)V
 
@@ -850,7 +850,7 @@
 
     add-long/2addr v0, p2
 
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->tFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->DFa:D
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/os/HwBlob;->putDouble(JD)V
 
@@ -858,7 +858,7 @@
 
     add-long/2addr v0, p2
 
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->uFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->EFa:D
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/os/HwBlob;->putDouble(JD)V
 
@@ -866,7 +866,7 @@
 
     add-long/2addr v0, p2
 
-    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->vFa:D
+    iget-wide v2, p0, Lsis/zta/zta/zta/vju;->FFa:D
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/os/HwBlob;->putDouble(JD)V
 
@@ -874,7 +874,7 @@
 
     add-long/2addr p2, v0
 
-    iget-wide v0, p0, Lsis/zta/zta/zta/vju;->wFa:D
+    iget-wide v0, p0, Lsis/zta/zta/zta/vju;->GFa:D
 
     invoke-virtual {p1, p2, p3, v0, v1}, Landroid/os/HwBlob;->putDouble(JD)V
 

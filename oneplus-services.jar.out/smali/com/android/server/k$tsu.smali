@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field Cf:Lcom/android/server/k$kth;
+.field Df:Lcom/android/server/k$kth;
 
 .field mIsCharging:Z
 
@@ -44,7 +44,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/android/server/k$kth;-><init>(Lcom/android/server/k;Lcom/android/server/j;)V
 
-    iput-object p1, p0, Lcom/android/server/k$tsu;->Cf:Lcom/android/server/k$kth;
+    iput-object p1, p0, Lcom/android/server/k$tsu;->Df:Lcom/android/server/k$kth;
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     iput-boolean v0, p0, Lcom/android/server/k$tsu;->mIsCharging:Z
 
-    iget-object p0, p0, Lcom/android/server/k$tsu;->Cf:Lcom/android/server/k$kth;
+    iget-object p0, p0, Lcom/android/server/k$tsu;->Df:Lcom/android/server/k$kth;
 
     invoke-virtual {p0}, Lcom/android/server/k$kth;->reset()V
 
@@ -111,7 +111,7 @@
     :cond_0
     iput-boolean v1, p0, Lcom/android/server/k$tsu;->mIsCharging:Z
 
-    iget-object p0, p0, Lcom/android/server/k$tsu;->Cf:Lcom/android/server/k$kth;
+    iget-object p0, p0, Lcom/android/server/k$tsu;->Df:Lcom/android/server/k$kth;
 
     invoke-virtual {p0}, Lcom/android/server/k$kth;->start()Lcom/android/server/k$kth;
 
@@ -140,7 +140,7 @@
 
     iget-wide v1, p0, Lcom/android/server/k$tsu;->mTime:J
 
-    iget-object v3, p0, Lcom/android/server/k$tsu;->Cf:Lcom/android/server/k$kth;
+    iget-object v3, p0, Lcom/android/server/k$tsu;->Df:Lcom/android/server/k$kth;
 
     invoke-virtual {v3}, Lcom/android/server/k$kth;->stop()J
 
@@ -150,7 +150,7 @@
 
     iput-wide v1, p0, Lcom/android/server/k$tsu;->mTime:J
 
-    iget-object v1, p0, Lcom/android/server/k$tsu;->Cf:Lcom/android/server/k$kth;
+    iget-object v1, p0, Lcom/android/server/k$tsu;->Df:Lcom/android/server/k$kth;
 
     invoke-virtual {v1}, Lcom/android/server/k$kth;->reset()V
 

@@ -70,6 +70,8 @@
     .end annotation
 .end field
 
+.field private static final DAILY_PROTO_ENABLED:Z = false
+
 .field private static final DEBUG_IDLE_STATS:Z = false
 
 .field private static final DEBUG_KMEANS:Z = false
@@ -95,6 +97,8 @@
 .field public static final FULL_DATE_FORMAT:Ljava/text/SimpleDateFormat;
 
 .field private static final INTENT_OPSM_CHECK:Ljava/lang/String; = "net.oneplus.powercontroller.intent.OPSM"
+
+.field private static final LATEST_DAILY_PROTO_FILE:Ljava/lang/String; = "/data/system/latest_daily_proto.bin"
 
 .field private static final LOG_TAG:Ljava/lang/String; = "OpPowerControllerService"
 
@@ -335,6 +339,8 @@
 .field private mContentObserver:Landroid/database/ContentObserver;
 
 .field private mContext:Landroid/content/Context;
+
+.field private mDailyProtoReportEnabled:Z
 
 .field private mDeepCleanWhitelist:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -728,6 +734,8 @@
 
     iput-object v3, p0, Lcom/android/server/OpPowerControllerService;->mRestrictType:Lcom/oneplus/android/server/am/highpower/IHighPowerDetector$RestrictType;
 
+    iput-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mDailyProtoReportEnabled:Z
+
     iput-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mUserSleep:Z
 
     iput-boolean v1, p0, Lcom/android/server/OpPowerControllerService;->mSensorRestrict:Z
@@ -884,6 +892,8 @@
     sget-object v3, Lcom/oneplus/android/server/am/highpower/IHighPowerDetector$RestrictType;->NA:Lcom/oneplus/android/server/am/highpower/IHighPowerDetector$RestrictType;
 
     iput-object v3, p0, Lcom/android/server/OpPowerControllerService;->mRestrictType:Lcom/oneplus/android/server/am/highpower/IHighPowerDetector$RestrictType;
+
+    iput-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mDailyProtoReportEnabled:Z
 
     iput-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mUserSleep:Z
 
@@ -1755,7 +1765,7 @@
 
     check-cast v7, Lcom/android/server/OpPowerControllerService$sis;
 
-    iput-boolean v5, v7, Lcom/android/server/OpPowerControllerService$sis;->Te:Z
+    iput-boolean v5, v7, Lcom/android/server/OpPowerControllerService$sis;->Ue:Z
 
     iget-object v7, p0, Lcom/android/server/OpPowerControllerService;->mNetworkManagementService:Landroid/os/INetworkManagementService;
 
@@ -1869,7 +1879,7 @@
 
     check-cast v7, Lcom/android/server/OpPowerControllerService$sis;
 
-    iget-boolean v7, v7, Lcom/android/server/OpPowerControllerService$sis;->Te:Z
+    iget-boolean v7, v7, Lcom/android/server/OpPowerControllerService$sis;->Ue:Z
 
     if-eqz v7, :cond_b
 
@@ -1881,7 +1891,7 @@
 
     check-cast v7, Lcom/android/server/OpPowerControllerService$sis;
 
-    iput-boolean v6, v7, Lcom/android/server/OpPowerControllerService$sis;->Te:Z
+    iput-boolean v6, v7, Lcom/android/server/OpPowerControllerService$sis;->Ue:Z
 
     iget-object v7, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
@@ -2538,6 +2548,55 @@
     return-void
 .end method
 
+.method private dumpDailyProtoConfig(Ljava/lang/String;Ljava/io/PrintWriter;)V
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "mDailyProtoReportEnabled: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/android/server/OpPowerControllerService;->mDailyProtoReportEnabled:Z
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "OpPowerControllerService"
+
+    invoke-static {v2, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz p2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/android/server/OpPowerControllerService;->mDailyProtoReportEnabled:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private dumpDiagnosisRecords(Ljava/io/PrintWriter;Ljava/lang/String;)V
     .locals 11
 
@@ -3032,6 +3091,14 @@
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const-string v0, "    Query or enable or disable restriction"
+
+    invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    const-string v0, "  latestdaily [plain|proto|config]"
+
+    invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    const-string v0, "    Print the latest daily records in plain/proto format, or show config"
 
     invoke-virtual {p0, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
@@ -4308,7 +4375,7 @@
 
     invoke-static {v2}, Lcom/android/server/power/OpPowerManagerInjector;->disableExclusiveWakeLocks(Z)V
 
-    sget-boolean p1, Lcom/android/server/am/ugm;->kj:Z
+    sget-boolean p1, Lcom/android/server/am/ugm;->lj:Z
 
     if-eqz p1, :cond_3
 
@@ -4352,7 +4419,7 @@
 
     invoke-direct {p0, p1}, Lcom/android/server/OpPowerControllerService;->applyGMSFirewallLocked(Z)V
 
-    sget-boolean p2, Lcom/android/server/am/ugm;->kj:Z
+    sget-boolean p2, Lcom/android/server/am/ugm;->lj:Z
 
     if-eqz p2, :cond_5
 
@@ -4706,6 +4773,46 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
+.end method
+
+.method private parseDailyProtoConfig(Lorg/json/JSONObject;)V
+    .locals 2
+
+    const-string v0, "OpPowerControllerService"
+
+    const-string v1, "[OnlineConfig] parseDailyProtoConfig..."
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, "enabled"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/android/server/OpPowerControllerService;->mDailyProtoReportEnabled:Z
+
+    const-string p1, "[OnlineConfig] "
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/OpPowerControllerService;->dumpDailyProtoConfig(Ljava/lang/String;Ljava/io/PrintWriter;)V
+
+    iget-object p1, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    iget-boolean p0, p0, Lcom/android/server/OpPowerControllerService;->mDailyProtoReportEnabled:Z
+
+    const-string v0, "daily_batt_proto"
+
+    invoke-static {p1, v0, p0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    return-void
 .end method
 
 .method private parseDeepCleanWhitelist(Lorg/json/JSONObject;)V
@@ -5129,7 +5236,7 @@
     goto :goto_0
 
     :cond_3
-    sget-boolean p0, Lcom/android/server/am/ugm;->kj:Z
+    sget-boolean p0, Lcom/android/server/am/ugm;->lj:Z
 
     if-eqz p0, :cond_4
 
@@ -6209,6 +6316,19 @@
     goto :goto_3
 
     :sswitch_1
+    const-string v7, "dailyproto"
+
+    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    const/4 v5, 0x7
+
+    goto :goto_3
+
+    :sswitch_2
     const-string v7, "network_restrict"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6221,7 +6341,7 @@
 
     goto :goto_3
 
-    :sswitch_2
+    :sswitch_3
     const-string v7, "wakelocks"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6234,7 +6354,7 @@
 
     goto :goto_3
 
-    :sswitch_3
+    :sswitch_4
     const-string v7, "usersleep"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6247,7 +6367,7 @@
 
     goto :goto_3
 
-    :sswitch_4
+    :sswitch_5
     const-string v7, "idle_whitelist"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6260,7 +6380,7 @@
 
     goto :goto_3
 
-    :sswitch_5
+    :sswitch_6
     const-string v7, "opsm"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6273,7 +6393,7 @@
 
     goto :goto_3
 
-    :sswitch_6
+    :sswitch_7
     const-string v7, "bad_process"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6296,16 +6416,33 @@
     goto :goto_4
 
     :pswitch_0
-    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDeepCleanWhitelist(Lorg/json/JSONObject;)V
+    new-array v5, v8, [I
+
+    const/16 v6, 0xee
+
+    aput v6, v5, v2
+
+    invoke-static {v5}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDailyProtoConfig(Lorg/json/JSONObject;)V
 
     goto :goto_4
 
     :pswitch_1
-    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDozeWhitelist(Lorg/json/JSONObject;)V
+    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDeepCleanWhitelist(Lorg/json/JSONObject;)V
 
     goto :goto_4
 
     :pswitch_2
+    invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseDozeWhitelist(Lorg/json/JSONObject;)V
+
+    goto :goto_4
+
+    :pswitch_3
     new-array v5, v8, [I
 
     const/16 v6, 0x8d
@@ -6322,12 +6459,12 @@
 
     goto :goto_4
 
-    :pswitch_3
+    :pswitch_4
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseBadProcess(Lorg/json/JSONObject;)V
 
     goto :goto_4
 
-    :pswitch_4
+    :pswitch_5
     new-array v5, v8, [I
 
     const/16 v6, 0x56
@@ -6344,12 +6481,12 @@
 
     goto :goto_4
 
-    :pswitch_5
+    :pswitch_6
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseUserSleep(Lorg/json/JSONObject;)V
 
     goto :goto_4
 
-    :pswitch_6
+    :pswitch_7
     invoke-direct {p0, v4}, Lcom/android/server/OpPowerControllerService;->parseWakeLock(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -6386,17 +6523,19 @@
 
     :sswitch_data_0
     .sparse-switch
-        -0xbc793cb -> :sswitch_6
-        0x3427fb -> :sswitch_5
-        0x10ffc19c -> :sswitch_4
-        0x1552e9ec -> :sswitch_3
-        0x16dbb584 -> :sswitch_2
-        0x478c25ad -> :sswitch_1
+        -0xbc793cb -> :sswitch_7
+        0x3427fb -> :sswitch_6
+        0x10ffc19c -> :sswitch_5
+        0x1552e9ec -> :sswitch_4
+        0x16dbb584 -> :sswitch_3
+        0x478c25ad -> :sswitch_2
+        0x5bf4d36f -> :sswitch_1
         0x78cf647e -> :sswitch_0
     .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4
@@ -6632,11 +6771,11 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v2}, Lcom/android/server/qeg;->If()Z
+    invoke-virtual {v2}, Lcom/android/server/qeg;->Hf()Z
 
     move-result p0
 
-    invoke-virtual {v4}, Lcom/android/server/qeg;->If()Z
+    invoke-virtual {v4}, Lcom/android/server/qeg;->Hf()Z
 
     move-result v1
 
@@ -7121,7 +7260,7 @@
 .end method
 
 .method public bootCompleted()V
-    .locals 10
+    .locals 13
 
     sget-object v0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_alarm_manager:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
 
@@ -7163,72 +7302,13 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$cno;
-
-    const/4 v1, 0x6
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$cno;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    new-instance v7, Landroid/content/IntentFilter;
-
-    invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
-
-    const-string v0, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
-
-    invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v0, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
-
-    invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
     const/4 v0, 0x1
 
     new-array v1, v0, [I
 
     const/4 v2, 0x0
 
-    const/16 v3, 0x56
-
-    aput v3, v1, v2
-
-    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "android.intent.action.TIME_SET"
-
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.TIMEZONE_CHANGED"
-
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "net.oneplus.powercontroller.intent.SLEEP_CHANGED"
-
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "net.oneplus.powercontroller.intent.OPSM"
-
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
-
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    :cond_0
-    new-array v1, v0, [I
-
-    const/16 v3, 0x8d
+    const/16 v3, 0xee
 
     aput v3, v1, v2
 
@@ -7238,70 +7318,157 @@
 
     const-string v3, "OpPowerControllerService"
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_0
+
+    const-string v1, "OP_FEATURE_DAILY_PROTO_REPORTING enabled"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "OP_FEATURE_DAILY_PROTO_REPORTING disabled"
+
+    :goto_0
+    invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v1, 0x0
+
+    const-string v4, ""
+
+    invoke-direct {p0, v4, v1}, Lcom/android/server/OpPowerControllerService;->dumpDailyProtoConfig(Ljava/lang/String;Ljava/io/PrintWriter;)V
+
+    iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$cno;
+
+    const/4 v4, 0x6
+
+    invoke-virtual {v1, v4}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v1
+
+    iget-object v4, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$cno;
+
+    const-wide/16 v5, 0x1388
+
+    invoke-virtual {v4, v1, v5, v6}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    new-instance v10, Landroid/content/IntentFilter;
+
+    invoke-direct {v10}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    new-array v1, v0, [I
+
+    const/16 v4, 0x56
+
+    aput v4, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "android.intent.action.TIME_SET"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.TIMEZONE_CHANGED"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "net.oneplus.powercontroller.intent.SLEEP_CHANGED"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "net.oneplus.powercontroller.intent.OPSM"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.BATTERY_CHANGED"
+
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    :cond_1
+    new-array v1, v0, [I
+
+    const/16 v4, 0x8d
+
+    aput v4, v1, v2
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
 
     sget-boolean v1, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     const-string v1, "OP_FEATURE_RESRTICT_PKG_BASE_ON_NETWORK enabled"
 
     invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const/16 v1, 0x3e8
 
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->setPriority(I)V
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     sget-boolean v1, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     const-string v1, "OP_FEATURE_RESRTICT_PKG_BASE_ON_NETWORK disabled"
 
     invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_3
-    :goto_0
+    :cond_4
+    :goto_1
     sget-boolean v1, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     const-string v1, "net.oneplus.powercontroller.action.RECORD_IDLE_ITEM"
 
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "net.oneplus.powercontroller.action.RESTORE_IDLE_ITEM"
 
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "net.oneplus.powercontroller.action.PROCESS_KMEANS"
 
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "net.oneplus.powercontroller.action.IDLE_STATS_CONFIG"
 
-    invoke-virtual {v7, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v10, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    :cond_4
-    iget-object v4, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
+    :cond_5
+    iget-object v7, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
-    iget-object v5, p0, Lcom/android/server/OpPowerControllerService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
+    iget-object v8, p0, Lcom/android/server/OpPowerControllerService;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    sget-object v6, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+    sget-object v9, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    const/4 v8, 0x0
+    const/4 v11, 0x0
 
-    const/4 v9, 0x0
+    const/4 v12, 0x0
 
-    invoke-virtual/range {v4 .. v9}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual/range {v7 .. v12}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -7315,7 +7482,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_5
+    if-nez v4, :cond_6
 
     const-string v4, "{\"packageName\":\"com.google.android.gms\",\"tag\":\"NlpWakeLock\"}"
 
@@ -7331,25 +7498,25 @@
 
     move v4, v0
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_5
+    :cond_6
     const-string v4, "{\"packageName\":\"com.google.android.gms\"}"
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     move v4, v2
 
-    :goto_1
+    :goto_2
     move v5, v2
 
-    :goto_2
+    :goto_3
     :try_start_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v6
 
-    if-ge v5, v6, :cond_7
+    if-ge v5, v6, :cond_8
 
     new-instance v6, Lorg/json/JSONObject;
 
@@ -7363,16 +7530,16 @@
 
     iget-object v7, p0, Lcom/android/server/OpPowerControllerService;->mHandler:Lcom/android/server/OpPowerControllerService$cno;
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     const/4 v8, 0x3
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_6
+    :cond_7
     const/16 v8, 0xc
 
-    :goto_3
+    :goto_4
     invoke-virtual {v7, v8, v6}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v6
@@ -7383,7 +7550,7 @@
 
     add-int/lit8 v5, v5, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_0
     move-exception v1
@@ -7404,7 +7571,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_7
+    :cond_8
     new-array v1, v0, [I
 
     const/16 v3, 0x9c
@@ -7415,13 +7582,13 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService;->mOverHeatingDiagnosis:Lcom/android/server/k;
 
     invoke-virtual {v1}, Lcom/android/server/k;->start()V
 
-    :cond_8
+    :cond_9
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -7448,7 +7615,7 @@
 
     move-result v1
 
-    if-ne v1, v0, :cond_9
+    if-ne v1, v0, :cond_a
 
     const-string v1, "bond0"
 
@@ -7462,9 +7629,9 @@
 
     aput-object v1, v0, v2
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_9
+    :cond_a
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -7477,7 +7644,7 @@
 
     move-result-object v0
 
-    :goto_4
+    :goto_5
     iput-object v0, p0, Lcom/android/server/OpPowerControllerService;->tetherableWifiRegexs:[Ljava/lang/String;
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService;->mContext:Landroid/content/Context;
@@ -8669,7 +8836,7 @@
 
     invoke-static {v0}, Lcom/android/server/power/OpPowerManagerInjector;->disableExclusiveWakeLocks(Z)V
 
-    sget-boolean p0, Lcom/android/server/am/ugm;->kj:Z
+    sget-boolean p0, Lcom/android/server/am/ugm;->lj:Z
 
     if-eqz p0, :cond_0
 
@@ -8702,7 +8869,7 @@
 
     invoke-static {p0}, Lcom/android/server/power/OpPowerManagerInjector;->enableExclusiveWakeLocks(Z)V
 
-    sget-boolean p0, Lcom/android/server/am/ugm;->kj:Z
+    sget-boolean p0, Lcom/android/server/am/ugm;->lj:Z
 
     if-eqz p0, :cond_0
 
@@ -10158,7 +10325,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_0
     move-exception p1
@@ -10219,7 +10386,7 @@
 
     sput-boolean v3, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    sput-boolean v3, Lcom/android/server/you$zta;->Lb:Z
+    sput-boolean v3, Lcom/android/server/you$zta;->Mb:Z
 
     const-string p1, "log is on"
 
@@ -10239,7 +10406,7 @@
 
     sput-boolean v4, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    sput-boolean v4, Lcom/android/server/you$zta;->Lb:Z
+    sput-boolean v4, Lcom/android/server/you$zta;->Mb:Z
 
     const-string p1, "log is off"
 
@@ -10273,7 +10440,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_2
     move-exception p1
@@ -10384,7 +10551,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_4
     move-exception p1
@@ -10638,7 +10805,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_6
     move-exception p1
@@ -10721,7 +10888,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_8
     move-exception p1
@@ -10853,7 +11020,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_a
     move-exception p1
@@ -11596,7 +11763,7 @@
 
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_b
     move-exception p1
@@ -12159,7 +12326,7 @@
     :goto_14
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_e
     move-exception p1
@@ -12286,7 +12453,7 @@
     :goto_16
     monitor-exit p0
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_10
     move-exception p1
@@ -12314,7 +12481,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/android/server/OpPowerControllerService;->dumpDiagnosisRecords(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :cond_51
     const-string v1, "deepsleepwhitelist"
@@ -12329,7 +12496,7 @@
 
     move-result-object p2
 
-    if-eqz p2, :cond_6c
+    if-eqz p2, :cond_73
 
     const-string v1, "update"
 
@@ -12343,7 +12510,7 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_6c
+    if-eqz p1, :cond_73
 
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -12452,7 +12619,7 @@
 
     invoke-virtual {p1, p0}, Lcom/android/server/power/ugm;->setDeepSleepWhitelist([I)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :cond_53
     const-string p1, "get"
@@ -12510,7 +12677,7 @@
     :goto_19
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :cond_54
     const-string p1, "clean"
@@ -12519,7 +12686,7 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6c
+    if-eqz p1, :cond_73
 
     const-string p1, "OpPowerControllerService"
 
@@ -12539,7 +12706,7 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/power/ugm;->setDeepSleepWhitelist([I)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :cond_55
     const-string v1, "idle_whitelist"
@@ -12574,7 +12741,7 @@
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/OpPowerControllerService;->printStringList(Ljava/util/Set;Ljava/io/PrintWriter;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :cond_56
     const-string v1, "wifi"
@@ -12670,7 +12837,7 @@
 
     invoke-static {p1, p2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :catchall_11
     move-exception p0
@@ -12813,7 +12980,7 @@
 
     invoke-virtual {p1, p2, v4, p0}, Landroid/net/ConnectivityManager;->startTethering(IZLandroid/net/ConnectivityManager$OnStartTetheringCallback;)V
 
-    goto/16 :goto_20
+    goto/16 :goto_22
 
     :cond_60
     array-length p1, p2
@@ -12821,7 +12988,7 @@
     move v0, v4
 
     :goto_1d
-    if-ge v0, p1, :cond_6c
+    if-ge v0, p1, :cond_73
 
     aget-object v1, p2, v0
 
@@ -12989,7 +13156,7 @@
 
     invoke-direct {p0, v3}, Lcom/android/server/OpPowerControllerService;->enableDisableData(Z)V
 
-    goto :goto_20
+    goto/16 :goto_22
 
     :cond_67
     const-string p2, "query"
@@ -13055,7 +13222,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6d
+    if-eqz v1, :cond_6c
 
     const-string v1, "test"
 
@@ -13063,11 +13230,11 @@
 
     move-result v1
 
-    if-eqz v1, :cond_6d
+    if-eqz v1, :cond_6c
 
     sget-boolean p2, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    if-eqz p2, :cond_6c
+    if-eqz p2, :cond_73
 
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
@@ -13093,37 +13260,35 @@
 
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
-    goto :goto_20
+    goto/16 :goto_22
 
     :cond_6b
     const-string p0, "Unknown option"
 
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    :cond_6c
-    :goto_20
     return v4
 
-    :cond_6d
-    new-array p0, v3, [I
+    :cond_6c
+    new-array v1, v3, [I
 
-    const/16 v1, 0x5d
+    const/16 v5, 0x5d
 
-    aput v1, p0, v4
+    aput v5, v1, v4
 
-    invoke-static {p0}, Landroid/util/OpFeatures;->isSupport([I)Z
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_71
+    if-eqz v1, :cond_70
 
-    const-string p0, "smartcontrol"
+    const-string v1, "smartcontrol"
 
-    invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v1
 
-    if-eqz p0, :cond_71
+    if-eqz v1, :cond_70
 
     sget-object p0, Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;->oneplus_smart_power_control:Lcom/oneplus/android/server/context/IOneplusContextStub$EStubType;
 
@@ -13135,15 +13300,15 @@
 
     sget-boolean p2, Lcom/android/server/OpPowerControllerService;->mDebugOneplus:Z
 
-    if-eqz p2, :cond_70
+    if-eqz p2, :cond_6f
 
-    if-eqz p0, :cond_70
+    if-eqz p0, :cond_6f
 
     invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_6f
+    if-eqz p1, :cond_6e
 
     const-string p2, "deepclean"
 
@@ -13151,31 +13316,148 @@
 
     move-result p1
 
-    if-eqz p1, :cond_6e
+    if-eqz p1, :cond_6d
 
     invoke-virtual {p0, v0}, Lcom/android/server/h;->sis(Ljava/io/PrintWriter;)V
 
-    goto :goto_21
+    goto :goto_20
 
-    :cond_6e
+    :cond_6d
     const-string p0, "Unknown option"
 
     invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return v4
 
-    :cond_6f
+    :cond_6e
     invoke-virtual {p0, v0}, Lcom/android/server/h;->shellCommand(Ljava/io/PrintWriter;)Z
 
     return v4
 
-    :cond_70
-    :goto_21
+    :cond_6f
+    :goto_20
     const/4 p0, -0x1
 
     return p0
 
+    :cond_70
+    new-array v1, v3, [I
+
+    const/16 v3, 0xee
+
+    aput v3, v1, v4
+
+    invoke-static {v1}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_75
+
+    const-string v1, "latestdaily"
+
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_75
+
+    invoke-virtual {p1}, Landroid/os/ShellCommand;->getNextArg()Ljava/lang/String;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_74
+
+    const-string v1, "config"
+
+    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_71
+
+    const-string p1, "[shell] "
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/OpPowerControllerService;->dumpDailyProtoConfig(Ljava/lang/String;Ljava/io/PrintWriter;)V
+
+    goto :goto_22
+
     :cond_71
+    const-string p0, "plain"
+
+    invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_72
+
+    const/16 p0, 0x100
+
+    invoke-static {v0, p0, v2}, Landroid/os/OpBatteryStatsInjector;->dumpLatestDailyInfo(Ljava/io/PrintWriter;ILandroid/util/proto/ProtoOutputStream;)Z
+
+    move-result p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    :goto_21
+    const-string p2, "hasContent = "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "OpPowerControllerService"
+
+    invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_22
+
+    :cond_72
+    const-string p0, "proto"
+
+    invoke-virtual {p0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_73
+
+    new-instance p0, Landroid/util/proto/ProtoOutputStream;
+
+    invoke-virtual {p1}, Landroid/os/ShellCommand;->getOutFileDescriptor()Ljava/io/FileDescriptor;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Landroid/util/proto/ProtoOutputStream;-><init>(Ljava/io/FileDescriptor;)V
+
+    const/16 p1, 0x80
+
+    invoke-static {v2, p1, p0}, Landroid/os/OpBatteryStatsInjector;->dumpLatestDailyInfo(Ljava/io/PrintWriter;ILandroid/util/proto/ProtoOutputStream;)Z
+
+    move-result p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    goto :goto_21
+
+    :cond_73
+    :goto_22
+    return v4
+
+    :cond_74
+    const-string p0, "Unknown option"
+
+    invoke-virtual {v0, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    return v4
+
+    :cond_75
     invoke-virtual {p1, p2}, Landroid/os/ShellCommand;->handleDefaultCommands(Ljava/lang/String;)I
 
     move-result p0

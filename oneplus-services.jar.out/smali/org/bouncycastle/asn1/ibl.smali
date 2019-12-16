@@ -228,7 +228,7 @@
     return-object v0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method mg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/C;
@@ -240,7 +240,7 @@
     return-object v0
 .end method
 
-.method og()Lorg/bouncycastle/asn1/vdb;
+.method ng()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/C;

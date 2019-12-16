@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final key:I
+.field private final Eta:[B
 
-.field private final tta:[B
+.field private final key:I
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     iput v0, p0, Lorg/bouncycastle/asn1/bvj$zta;->key:I
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/bvj$zta;->tta:[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/bvj$zta;->Eta:[B
 
     return-void
 .end method
@@ -46,11 +46,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/bvj$zta;->tta:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/bvj$zta;->Eta:[B
 
     check-cast p1, Lorg/bouncycastle/asn1/bvj$zta;
 
-    iget-object p1, p1, Lorg/bouncycastle/asn1/bvj$zta;->tta:[B
+    iget-object p1, p1, Lorg/bouncycastle/asn1/bvj$zta;->Eta:[B
 
     invoke-static {p0, p1}, Lorg/bouncycastle/util/zta;->sis([B[B)Z
 

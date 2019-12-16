@@ -9,9 +9,9 @@
 # instance fields
 .field private curve:Lyou/zta/sis/zta/rtg;
 
-.field private kta:[B
+.field private uta:[B
 
-.field private nta:Lorg/bouncycastle/asn1/bvj;
+.field private xta:Lorg/bouncycastle/asn1/bvj;
 
 
 # direct methods
@@ -26,15 +26,15 @@
 
     const/4 v2, 0x0
 
-    iput-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iput-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual/range {p1 .. p1}, Lorg/bouncycastle/asn1/ibl/vdw;->getIdentifier()Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v2
 
-    iput-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iput-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
-    iget-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iget-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v3, Lorg/bouncycastle/asn1/ibl/ivd;->prime_field:Lorg/bouncycastle/asn1/bvj;
 
@@ -108,7 +108,7 @@
     goto/16 :goto_2
 
     :cond_0
-    iget-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iget-object v2, v0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v6, Lorg/bouncycastle/asn1/ibl/ivd;->characteristic_two_field:Lorg/bouncycastle/asn1/bvj;
 
@@ -317,7 +317,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lorg/bouncycastle/asn1/ibl/cgv;->kta:[B
+    iput-object v1, v0, Lorg/bouncycastle/asn1/ibl/cgv;->uta:[B
 
     :cond_2
     return-void
@@ -358,7 +358,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->curve:Lyou/zta/sis/zta/rtg;
 
@@ -366,7 +366,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->kta:[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->uta:[B
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/ibl/cgv;->Ss()V
 
@@ -387,7 +387,7 @@
     sget-object v0, Lorg/bouncycastle/asn1/ibl/ivd;->prime_field:Lorg/bouncycastle/asn1/bvj;
 
     :goto_0
-    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     goto :goto_1
 
@@ -430,7 +430,7 @@
 .method public getSeed()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->kta:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->uta:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -446,7 +446,7 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/asn1/cno;-><init>()V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/ibl/ivd;->prime_field:Lorg/bouncycastle/asn1/bvj;
 
@@ -492,7 +492,7 @@
     goto :goto_1
 
     :cond_0
-    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->nta:Lorg/bouncycastle/asn1/bvj;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/cgv;->xta:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/ibl/ivd;->characteristic_two_field:Lorg/bouncycastle/asn1/bvj;
 
@@ -532,7 +532,7 @@
 
     :cond_1
     :goto_1
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->kta:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/cgv;->uta:[B
 
     if-eqz p0, :cond_2
 

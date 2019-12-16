@@ -396,7 +396,7 @@
 
     if-nez p1, :cond_1
 
-    invoke-virtual {v1}, Lcom/android/server/am/you;->pa()I
+    invoke-virtual {v1}, Lcom/android/server/am/you;->oa()I
 
     move-result v2
 
@@ -1318,7 +1318,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->na()I
+    invoke-virtual {p0}, Lcom/android/server/am/you;->getFlag()I
 
     move-result p0
 
@@ -1426,7 +1426,7 @@
 
     check-cast v2, Lcom/android/server/am/you;
 
-    invoke-virtual {v2}, Lcom/android/server/am/you;->na()I
+    invoke-virtual {v2}, Lcom/android/server/am/you;->getFlag()I
 
     move-result v3
 
@@ -1470,7 +1470,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->oa()I
+    invoke-virtual {p0}, Lcom/android/server/am/you;->na()I
 
     move-result p0
 
@@ -1527,7 +1527,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->pa()I
+    invoke-virtual {p0}, Lcom/android/server/am/you;->oa()I
 
     move-result p0
 
@@ -1738,7 +1738,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->qa()Z
+    invoke-virtual {p0}, Lcom/android/server/am/you;->pa()Z
 
     move-result p0
 
@@ -1752,7 +1752,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ra()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->qa()V
 
     return-void
 .end method
@@ -1764,7 +1764,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->sa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ra()V
 
     return-void
 .end method
@@ -1848,7 +1848,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ta()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->sa()V
 
     return-void
 .end method
@@ -1860,7 +1860,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ua()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ta()V
 
     return-void
 .end method
@@ -1902,7 +1902,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->va()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ua()V
 
     :cond_0
     return-void
@@ -1915,7 +1915,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->wa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->va()V
 
     return-void
 .end method
@@ -1927,7 +1927,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->xa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->wa()V
 
     return-void
 .end method
@@ -1939,7 +1939,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->ya()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->xa()V
 
     return-void
 .end method
@@ -1979,7 +1979,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->za()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->ya()V
 
     return-void
 .end method
@@ -1991,7 +1991,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->Aa()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->za()V
 
     return-void
 .end method
@@ -2003,7 +2003,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->Ba()V
+    invoke-virtual {p0}, Lcom/android/server/am/you;->Aa()V
 
     return-void
 .end method

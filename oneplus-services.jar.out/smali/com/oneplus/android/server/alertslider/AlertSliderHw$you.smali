@@ -36,7 +36,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->re()Z
+    invoke-virtual {p1}, Lcom/oneplus/android/server/alertslider/AlertSliderHw;->qe()Z
 
     move-result p1
 

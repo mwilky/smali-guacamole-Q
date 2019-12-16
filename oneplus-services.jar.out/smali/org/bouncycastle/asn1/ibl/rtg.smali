@@ -109,23 +109,23 @@
     return-object v0
 .end method
 
-.method public static xa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+.method public static ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
     .locals 1
 
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ibl/lqr;->xa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ibl/lqr;->ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ywr/irq;->xa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ywr/irq;->ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v0
 
     :cond_0
     if-nez v0, :cond_1
 
-    invoke-static {p0}, Lorg/bouncycastle/asn1/bio/zta;->xa(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    invoke-static {p0}, Lorg/bouncycastle/asn1/bio/zta;->ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v0
 
@@ -153,11 +153,11 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->Ai()Ljava/math/BigInteger;
+    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->zi()Ljava/math/BigInteger;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->zi()Ljava/math/BigInteger;
+    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->yi()Ljava/math/BigInteger;
 
     move-result-object v4
 

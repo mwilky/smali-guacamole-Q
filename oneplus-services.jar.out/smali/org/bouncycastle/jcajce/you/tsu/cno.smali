@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final cna:Ljava/lang/Class;
+.field static final nna:Ljava/lang/Class;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sput-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     return-void
 .end method
@@ -32,10 +32,10 @@
     return-void
 .end method
 
-.method static rj()Z
+.method static qj()Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
@@ -63,7 +63,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     const/4 v1, 0x2
 
@@ -87,7 +87,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/you/kth;->Kg()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/you/kth;->Jg()I
 
     move-result v2
 
@@ -156,7 +156,7 @@
 .method static you(Ljava/lang/Class;)Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     if-ne v0, p0, :cond_0
 
@@ -174,7 +174,7 @@
 .method static you(Ljava/security/spec/AlgorithmParameterSpec;)Z
     .locals 1
 
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
@@ -204,7 +204,7 @@
     .end annotation
 
     :try_start_0
-    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sget-object v0, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     const-string v1, "getTLen"
 
@@ -216,7 +216,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lorg/bouncycastle/jcajce/you/tsu/cno;->cna:Ljava/lang/Class;
+    sget-object v1, Lorg/bouncycastle/jcajce/you/tsu/cno;->nna:Ljava/lang/Class;
 
     const-string v3, "getIV"
 

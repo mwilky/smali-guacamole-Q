@@ -1,4 +1,4 @@
-.class final Lcom/android/server/am/l$igw;
+.class final Lcom/android/server/am/n$igw;
 .super Ljava/lang/Object;
 .source ""
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/am/l;
+    value = Lcom/android/server/am/n;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Lcom/android/server/am/l$bio;",
+        "Lcom/android/server/am/n$bio;",
         ">;"
     }
 .end annotation
@@ -35,10 +35,10 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/server/am/k;)V
+.method synthetic constructor <init>(Lcom/android/server/am/m;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/am/l$igw;-><init>()V
+    invoke-direct {p0}, Lcom/android/server/am/n$igw;-><init>()V
 
     return-void
 .end method
@@ -48,27 +48,27 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    check-cast p1, Lcom/android/server/am/l$bio;
+    check-cast p1, Lcom/android/server/am/n$bio;
 
-    check-cast p2, Lcom/android/server/am/l$bio;
+    check-cast p2, Lcom/android/server/am/n$bio;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/l$igw;->zta(Lcom/android/server/am/l$bio;Lcom/android/server/am/l$bio;)I
+    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/n$igw;->zta(Lcom/android/server/am/n$bio;Lcom/android/server/am/n$bio;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public zta(Lcom/android/server/am/l$bio;Lcom/android/server/am/l$bio;)I
+.method public zta(Lcom/android/server/am/n$bio;Lcom/android/server/am/n$bio;)I
     .locals 4
 
-    iget-wide v0, p1, Lcom/android/server/am/l$bio;->yv:D
+    iget-wide v0, p1, Lcom/android/server/am/n$bio;->Gv:D
 
-    iget-wide v2, p1, Lcom/android/server/am/l$bio;->xv:D
+    iget-wide v2, p1, Lcom/android/server/am/n$bio;->Fv:D
 
     add-double/2addr v0, v2
 
-    iget-wide p0, p1, Lcom/android/server/am/l$bio;->zv:D
+    iget-wide p0, p1, Lcom/android/server/am/n$bio;->Hv:D
 
     add-double/2addr v0, p0
 
@@ -76,13 +76,13 @@
 
     move-result-object p0
 
-    iget-wide v0, p2, Lcom/android/server/am/l$bio;->yv:D
+    iget-wide v0, p2, Lcom/android/server/am/n$bio;->Gv:D
 
-    iget-wide v2, p2, Lcom/android/server/am/l$bio;->xv:D
+    iget-wide v2, p2, Lcom/android/server/am/n$bio;->Fv:D
 
     add-double/2addr v0, v2
 
-    iget-wide p1, p2, Lcom/android/server/am/l$bio;->zv:D
+    iget-wide p1, p2, Lcom/android/server/am/n$bio;->Hv:D
 
     add-double/2addr v0, p1
 

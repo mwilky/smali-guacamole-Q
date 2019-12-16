@@ -18,15 +18,15 @@
 
 
 # instance fields
-.field private JD:I
+.field private RD:I
 
-.field private KD:I
+.field private SD:I
 
-.field private LD:F
+.field private TD:F
 
-.field private MD:F
+.field private UD:F
 
-.field final synthetic ND:I
+.field final synthetic VD:I
 
 .field final synthetic this$0:Lcom/android/server/policy/OpQuickPay;
 
@@ -37,7 +37,7 @@
 
     iput-object p1, p0, Lcom/android/server/policy/lqr;->this$0:Lcom/android/server/policy/OpQuickPay;
 
-    iput p2, p0, Lcom/android/server/policy/lqr;->ND:I
+    iput p2, p0, Lcom/android/server/policy/lqr;->VD:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,13 +80,13 @@
 
     iget-object v0, v0, Lcom/android/server/policy/OpQuickPay;->mWindowParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v1, v8, Lcom/android/server/policy/lqr;->JD:I
+    iget v1, v8, Lcom/android/server/policy/lqr;->RD:I
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v2
 
-    iget v3, v8, Lcom/android/server/policy/lqr;->LD:F
+    iget v3, v8, Lcom/android/server/policy/lqr;->TD:F
 
     sub-float/2addr v2, v3
 
@@ -100,13 +100,13 @@
 
     iget-object v0, v0, Lcom/android/server/policy/OpQuickPay;->mWindowParams:Landroid/view/WindowManager$LayoutParams;
 
-    iget v1, v8, Lcom/android/server/policy/lqr;->KD:I
+    iget v1, v8, Lcom/android/server/policy/lqr;->SD:I
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v2
 
-    iget v3, v8, Lcom/android/server/policy/lqr;->MD:F
+    iget v3, v8, Lcom/android/server/policy/lqr;->UD:F
 
     sub-float/2addr v2, v3
 
@@ -207,7 +207,7 @@
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    iget v1, v8, Lcom/android/server/policy/lqr;->JD:I
+    iget v1, v8, Lcom/android/server/policy/lqr;->RD:I
 
     sub-int/2addr v0, v1
 
@@ -221,7 +221,7 @@
 
     iget v1, v1, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    iget v2, v8, Lcom/android/server/policy/lqr;->KD:I
+    iget v2, v8, Lcom/android/server/policy/lqr;->SD:I
 
     sub-int/2addr v1, v2
 
@@ -333,7 +333,7 @@
     move v7, v0
 
     :cond_4
-    iget-object v2, v2, Lcom/android/server/policy/OpQuickPay$zta;->RD:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/server/policy/OpQuickPay$zta;->ZD:Ljava/lang/String;
 
     aput-object v2, v5, v0
 
@@ -437,7 +437,7 @@
 
     if-ge v2, v3, :cond_7
 
-    iget v0, v8, Lcom/android/server/policy/lqr;->ND:I
+    iget v0, v8, Lcom/android/server/policy/lqr;->VD:I
 
     goto :goto_1
 
@@ -446,7 +446,7 @@
 
     sub-int/2addr v0, v1
 
-    iget v1, v8, Lcom/android/server/policy/lqr;->ND:I
+    iget v1, v8, Lcom/android/server/policy/lqr;->VD:I
 
     sub-int/2addr v0, v1
 
@@ -603,23 +603,23 @@
 
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    iput v1, v8, Lcom/android/server/policy/lqr;->JD:I
+    iput v1, v8, Lcom/android/server/policy/lqr;->RD:I
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    iput v0, v8, Lcom/android/server/policy/lqr;->KD:I
+    iput v0, v8, Lcom/android/server/policy/lqr;->SD:I
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
-    iput v0, v8, Lcom/android/server/policy/lqr;->LD:F
+    iput v0, v8, Lcom/android/server/policy/lqr;->TD:F
 
     invoke-virtual/range {p2 .. p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
 
-    iput v0, v8, Lcom/android/server/policy/lqr;->MD:F
+    iput v0, v8, Lcom/android/server/policy/lqr;->UD:F
 
     return v13
 .end method

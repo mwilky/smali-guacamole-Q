@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static Yoa:Ljava/util/Hashtable;
+.field private static hpa:Ljava/util/Hashtable;
 
-.field private static Zoa:Ljava/util/Hashtable;
+.field private static ipa:Ljava/util/Hashtable;
 
-.field private static _oa:Ljava/util/Set;
-
-.field private static ina:Ljava/util/Hashtable;
+.field private static jpa:Ljava/util/Set;
 
 .field private static params:Ljava/util/Hashtable;
+
+.field private static tna:Ljava/util/Hashtable;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sput-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Hashtable;
 
@@ -35,21 +35,21 @@
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lyou/zta/you/you;->Zoa:Ljava/util/Hashtable;
+    sput-object v0, Lyou/zta/you/you;->ipa:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sput-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sput-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -61,7 +61,7 @@
 
     invoke-virtual {v0, v3, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -71,7 +71,7 @@
 
     invoke-virtual {v0, v3, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, v4, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -93,7 +93,7 @@
 
     invoke-virtual {v0, v5, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -103,7 +103,7 @@
 
     invoke-virtual {v0, v5, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha224WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v6, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha224WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -119,7 +119,7 @@
 
     invoke-virtual {v0, v6, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha256WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -127,7 +127,7 @@
 
     invoke-virtual {v0, v7, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha256WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -135,7 +135,7 @@
 
     invoke-virtual {v0, v7, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha384WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -143,7 +143,7 @@
 
     invoke-virtual {v0, v8, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha384WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -151,7 +151,7 @@
 
     invoke-virtual {v0, v8, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha512WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -159,7 +159,7 @@
 
     invoke-virtual {v0, v9, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha512WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, v9, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_RSASSA_PSS:Lorg/bouncycastle/asn1/bvj;
 
@@ -175,7 +175,7 @@
 
     invoke-virtual {v0, v10, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_RSASSA_PSS:Lorg/bouncycastle/asn1/bvj;
 
@@ -183,7 +183,7 @@
 
     invoke-virtual {v0, v11, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_RSASSA_PSS:Lorg/bouncycastle/asn1/bvj;
 
@@ -191,7 +191,7 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_RSASSA_PSS:Lorg/bouncycastle/asn1/bvj;
 
@@ -199,7 +199,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_RSASSA_PSS:Lorg/bouncycastle/asn1/bvj;
 
@@ -207,7 +207,7 @@
 
     invoke-virtual {v0, v14, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -217,7 +217,7 @@
 
     invoke-virtual {v0, v15, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v14, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -243,39 +243,39 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->TKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->cLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v13, "SHA224WITHDSA"
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->UKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->dLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v13, "SHA256WITHDSA"
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->VKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->eLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v13, "SHA384WITHDSA"
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->WKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->fLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v13, "SHA512WITHDSA"
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA1:Lorg/bouncycastle/asn1/bvj;
 
@@ -283,7 +283,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA224:Lorg/bouncycastle/asn1/bvj;
 
@@ -291,7 +291,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA256:Lorg/bouncycastle/asn1/bvj;
 
@@ -299,7 +299,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA384:Lorg/bouncycastle/asn1/bvj;
 
@@ -307,7 +307,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA512:Lorg/bouncycastle/asn1/bvj;
 
@@ -315,7 +315,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA1:Lorg/bouncycastle/asn1/bvj;
 
@@ -323,7 +323,7 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -331,31 +331,31 @@
 
     invoke-virtual {v0, v1, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha224WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v1, v6}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha256WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v1, v7}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha384WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v1, v8}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->sha512WithRSAEncryption:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v1, v9}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -363,7 +363,7 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     new-instance v1, Lorg/bouncycastle/asn1/bvj;
 
@@ -371,7 +371,7 @@
 
     invoke-virtual {v0, v1, v14}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA1:Lorg/bouncycastle/asn1/bvj;
 
@@ -379,7 +379,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA224:Lorg/bouncycastle/asn1/bvj;
 
@@ -387,7 +387,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA256:Lorg/bouncycastle/asn1/bvj;
 
@@ -395,7 +395,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA384:Lorg/bouncycastle/asn1/bvj;
 
@@ -403,7 +403,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA512:Lorg/bouncycastle/asn1/bvj;
 
@@ -411,35 +411,35 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->kMa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->uMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v1, v5}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->jMa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->tMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, v1, v14}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->TKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->cLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v2, "SHA224WITHDSA"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->UKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->dLa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v2, "SHA256WITHDSA"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Zoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->ipa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->rsaEncryption:Lorg/bouncycastle/asn1/bvj;
 
@@ -447,7 +447,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->Zoa:Ljava/util/Hashtable;
+    sget-object v0, Lyou/zta/you/you;->ipa:Ljava/util/Hashtable;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->id_dsa:Lorg/bouncycastle/asn1/bvj;
 
@@ -455,57 +455,57 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA1:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA224:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA256:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA384:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->ecdsa_with_SHA512:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     sget-object v1, Lorg/bouncycastle/asn1/ibl/ivd;->id_dsa_with_sha1:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->TKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->cLa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v0, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->UKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->dLa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
-    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->iMa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/gck/zta;->sMa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/z;->INSTANCE:Lorg/bouncycastle/asn1/z;
 
@@ -523,7 +523,7 @@
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->fKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->pKa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/z;->INSTANCE:Lorg/bouncycastle/asn1/z;
 
@@ -541,7 +541,7 @@
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->cKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->mKa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/z;->INSTANCE:Lorg/bouncycastle/asn1/z;
 
@@ -559,7 +559,7 @@
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->dKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->nKa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/z;->INSTANCE:Lorg/bouncycastle/asn1/z;
 
@@ -579,7 +579,7 @@
 
     new-instance v0, Lorg/bouncycastle/asn1/x509/zta;
 
-    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->eKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v1, Lorg/bouncycastle/asn1/bio/you;->oKa:Lorg/bouncycastle/asn1/bvj;
 
     sget-object v2, Lorg/bouncycastle/asn1/z;->INSTANCE:Lorg/bouncycastle/asn1/z;
 
@@ -711,7 +711,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lyou/zta/you/you;->Yoa:Ljava/util/Hashtable;
+    sget-object v1, Lyou/zta/you/you;->hpa:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -745,7 +745,7 @@
 
     if-eqz p3, :cond_4
 
-    sget-object v2, Lyou/zta/you/you;->_oa:Ljava/util/Set;
+    sget-object v2, Lyou/zta/you/you;->jpa:Ljava/util/Set;
 
     invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -758,7 +758,7 @@
     invoke-direct {v0, v1}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;)V
 
     :goto_1
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
 
     goto :goto_2
 
@@ -783,7 +783,7 @@
 
     invoke-direct {v2, v1, v0}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ssp;)V
 
-    iput-object v2, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object v2, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
 
     goto :goto_2
 
@@ -816,7 +816,7 @@
 
     invoke-direct {v0, p2, p3, p4}, Lorg/bouncycastle/asn1/dma/ssp;-><init>(Lorg/bouncycastle/asn1/x509/q;Lorg/bouncycastle/asn1/x509/c;Lorg/bouncycastle/asn1/ear;)V
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Voa:Lorg/bouncycastle/asn1/dma/ssp;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->epa:Lorg/bouncycastle/asn1/dma/ssp;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
@@ -837,7 +837,7 @@
     invoke-virtual {p1, p5}, Ljava/security/Signature;->initSign(Ljava/security/PrivateKey;)V
 
     :try_start_2
-    iget-object p2, p0, Lorg/bouncycastle/asn1/dma/rtg;->Voa:Lorg/bouncycastle/asn1/dma/ssp;
+    iget-object p2, p0, Lorg/bouncycastle/asn1/dma/rtg;->epa:Lorg/bouncycastle/asn1/dma/ssp;
 
     const-string p3, "DER"
 
@@ -857,7 +857,7 @@
 
     invoke-direct {p2, p1}, Lorg/bouncycastle/asn1/n;-><init>([B)V
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/dma/rtg;->Xoa:Lorg/bouncycastle/asn1/n;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/dma/rtg;->gpa:Lorg/bouncycastle/asn1/n;
 
     return-void
 
@@ -948,7 +948,7 @@
     return-object p0
 
     :cond_0
-    sget-object v0, Lorg/bouncycastle/asn1/gck/zta;->iMa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/gck/zta;->sMa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -961,7 +961,7 @@
     return-object p0
 
     :cond_1
-    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->fKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->pKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -974,7 +974,7 @@
     return-object p0
 
     :cond_2
-    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->cKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->mKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -987,7 +987,7 @@
     return-object p0
 
     :cond_3
-    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->dKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->nKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -1000,7 +1000,7 @@
     return-object p0
 
     :cond_4
-    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->eKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/bio/you;->oKa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/vdb;->equals(Ljava/lang/Object;)Z
 
@@ -1111,7 +1111,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma/ear;->hh()Lorg/bouncycastle/asn1/x509/zta;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma/ear;->gh()Lorg/bouncycastle/asn1/x509/zta;
 
     move-result-object p0
 
@@ -1348,14 +1348,204 @@
 
     const-string v0, "BC"
 
-    invoke-virtual {p0, v0}, Lyou/zta/you/you;->va(Ljava/lang/String;)Ljava/security/PublicKey;
+    invoke-virtual {p0, v0}, Lyou/zta/you/you;->wa(Ljava/lang/String;)Ljava/security/PublicKey;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public va(Ljava/lang/String;)Ljava/security/PublicKey;
+.method public verify()Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/NoSuchProviderException;,
+            Ljava/security/InvalidKeyException;,
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    const-string v0, "BC"
+
+    invoke-virtual {p0, v0}, Lyou/zta/you/you;->verify(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public verify(Ljava/lang/String;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/NoSuchProviderException;,
+            Ljava/security/InvalidKeyException;,
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lyou/zta/you/you;->wa(Ljava/lang/String;)Ljava/security/PublicKey;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p1}, Lyou/zta/you/you;->verify(Ljava/security/PublicKey;Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public verify(Ljava/security/PublicKey;Ljava/lang/String;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/NoSuchProviderException;,
+            Ljava/security/InvalidKeyException;,
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    if-nez p2, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
+
+    invoke-static {v0}, Lyou/zta/you/you;->zta(Lorg/bouncycastle/asn1/x509/zta;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
+
+    invoke-static {v0}, Lyou/zta/you/you;->zta(Lorg/bouncycastle/asn1/x509/zta;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    sget-object v1, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
+
+    iget-object v2, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
+
+    invoke-virtual {v2}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    sget-object v0, Lyou/zta/you/you;->tna:Ljava/util/Hashtable;
+
+    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
+
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-nez p2, :cond_1
+
+    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v0, p2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    :goto_0
+    iget-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->fpa:Lorg/bouncycastle/asn1/x509/zta;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/x509/zta;->getParameters()Lorg/bouncycastle/asn1/ssp;
+
+    move-result-object v0
+
+    invoke-direct {p0, p2, v0}, Lyou/zta/you/you;->zta(Ljava/security/Signature;Lorg/bouncycastle/asn1/ssp;)V
+
+    invoke-virtual {p2, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
+
+    :try_start_1
+    iget-object p1, p0, Lorg/bouncycastle/asn1/dma/rtg;->epa:Lorg/bouncycastle/asn1/dma/ssp;
+
+    const-string v0, "DER"
+
+    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/oif;->getEncoded(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/security/Signature;->update([B)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/rtg;->gpa:Lorg/bouncycastle/asn1/n;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->getOctets()[B
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/security/Signature;->verify([B)Z
+
+    move-result p0
+
+    return p0
+
+    :catch_1
+    move-exception p0
+
+    new-instance p1, Ljava/security/SignatureException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "exception encoding TBS cert request - "
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    throw v0
+.end method
+
+.method public wa(Ljava/lang/String;)Ljava/security/PublicKey;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -1367,9 +1557,9 @@
 
     const-string v0, "error decoding public key"
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Voa:Lorg/bouncycastle/asn1/dma/ssp;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/rtg;->epa:Lorg/bouncycastle/asn1/dma/ssp;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma/ssp;->Zg()Lorg/bouncycastle/asn1/x509/c;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/dma/ssp;->Yg()Lorg/bouncycastle/asn1/x509/c;
 
     move-result-object p0
 
@@ -1441,7 +1631,7 @@
     move-exception v2
 
     :try_start_2
-    sget-object v3, Lyou/zta/you/you;->Zoa:Ljava/util/Hashtable;
+    sget-object v3, Lyou/zta/you/you;->ipa:Ljava/util/Hashtable;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
 
@@ -1453,7 +1643,7 @@
 
     if-eqz v3, :cond_2
 
-    sget-object v2, Lyou/zta/you/you;->Zoa:Ljava/util/Hashtable;
+    sget-object v2, Lyou/zta/you/you;->ipa:Ljava/util/Hashtable;
 
     invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
 
@@ -1507,194 +1697,4 @@
     invoke-direct {p0, v0}, Ljava/security/InvalidKeyException;-><init>(Ljava/lang/String;)V
 
     throw p0
-.end method
-
-.method public verify()Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/NoSuchAlgorithmException;,
-            Ljava/security/NoSuchProviderException;,
-            Ljava/security/InvalidKeyException;,
-            Ljava/security/SignatureException;
-        }
-    .end annotation
-
-    const-string v0, "BC"
-
-    invoke-virtual {p0, v0}, Lyou/zta/you/you;->verify(Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public verify(Ljava/lang/String;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/NoSuchAlgorithmException;,
-            Ljava/security/NoSuchProviderException;,
-            Ljava/security/InvalidKeyException;,
-            Ljava/security/SignatureException;
-        }
-    .end annotation
-
-    invoke-virtual {p0, p1}, Lyou/zta/you/you;->va(Ljava/lang/String;)Ljava/security/PublicKey;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, p1}, Lyou/zta/you/you;->verify(Ljava/security/PublicKey;Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public verify(Ljava/security/PublicKey;Ljava/lang/String;)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/NoSuchAlgorithmException;,
-            Ljava/security/NoSuchProviderException;,
-            Ljava/security/InvalidKeyException;,
-            Ljava/security/SignatureException;
-        }
-    .end annotation
-
-    if-nez p2, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
-
-    invoke-static {v0}, Lyou/zta/you/you;->zta(Lorg/bouncycastle/asn1/x509/zta;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
-
-    invoke-static {v0}, Lyou/zta/you/you;->zta(Lorg/bouncycastle/asn1/x509/zta;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, p2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-
-    move-result-object p2
-    :try_end_0
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    sget-object v1, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
-
-    iget-object v2, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
-
-    invoke-virtual {v2}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    sget-object v0, Lyou/zta/you/you;->ina:Ljava/util/Hashtable;
-
-    iget-object v1, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
-
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/x509/zta;->getAlgorithm()Lorg/bouncycastle/asn1/bvj;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    if-nez p2, :cond_1
-
-    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0, p2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
-
-    move-result-object p2
-
-    :goto_0
-    iget-object v0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Woa:Lorg/bouncycastle/asn1/x509/zta;
-
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/x509/zta;->getParameters()Lorg/bouncycastle/asn1/ssp;
-
-    move-result-object v0
-
-    invoke-direct {p0, p2, v0}, Lyou/zta/you/you;->zta(Ljava/security/Signature;Lorg/bouncycastle/asn1/ssp;)V
-
-    invoke-virtual {p2, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
-
-    :try_start_1
-    iget-object p1, p0, Lorg/bouncycastle/asn1/dma/rtg;->Voa:Lorg/bouncycastle/asn1/dma/ssp;
-
-    const-string v0, "DER"
-
-    invoke-virtual {p1, v0}, Lorg/bouncycastle/asn1/oif;->getEncoded(Ljava/lang/String;)[B
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Ljava/security/Signature;->update([B)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/dma/rtg;->Xoa:Lorg/bouncycastle/asn1/n;
-
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->getOctets()[B
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Ljava/security/Signature;->verify([B)Z
-
-    move-result p0
-
-    return p0
-
-    :catch_1
-    move-exception p0
-
-    new-instance p1, Ljava/security/SignatureException;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "exception encoding TBS cert request - "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    throw v0
 .end method

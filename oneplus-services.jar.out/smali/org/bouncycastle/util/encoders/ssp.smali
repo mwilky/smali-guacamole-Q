@@ -4,49 +4,49 @@
 
 
 # static fields
-.field private static final AEa:B = 0xat
+.field private static final AEa:B = 0x0t
 
-.field private static final BEa:B = -0x2t
+.field private static final BEa:B = 0x1t
 
-.field private static final CEa:B = -0x1t
+.field private static final CEa:B = 0x2t
 
-.field private static final DEa:B = 0x0t
+.field private static final DEa:B = 0x3t
 
-.field private static final EEa:B = 0x10t
+.field private static final EEa:B = 0x4t
 
-.field private static final FEa:B = 0x20t
+.field private static final FEa:B = 0x5t
 
-.field private static final GEa:B = 0x30t
+.field private static final GEa:B = 0x6t
 
-.field private static final HEa:B = 0x40t
+.field private static final HEa:B = 0x7t
 
-.field private static final IEa:B = 0x50t
+.field private static final IEa:B = 0x8t
 
-.field private static final JEa:B = 0x60t
+.field private static final JEa:B = 0x9t
 
-.field private static final KEa:[S
+.field private static final KEa:B = 0xat
 
-.field private static final LEa:[B
+.field private static final LEa:B = -0x2t
 
-.field private static final qEa:B = 0x0t
+.field private static final MEa:B = -0x1t
 
-.field private static final rEa:B = 0x1t
+.field private static final NEa:B = 0x0t
 
-.field private static final sEa:B = 0x2t
+.field private static final OEa:B = 0x10t
 
-.field private static final tEa:B = 0x3t
+.field private static final PEa:B = 0x20t
 
-.field private static final uEa:B = 0x4t
+.field private static final QEa:B = 0x30t
 
-.field private static final vEa:B = 0x5t
+.field private static final REa:B = 0x40t
 
-.field private static final wEa:B = 0x6t
+.field private static final SEa:B = 0x50t
 
-.field private static final xEa:B = 0x7t
+.field private static final TEa:B = 0x60t
 
-.field private static final yEa:B = 0x8t
+.field private static final UEa:[S
 
-.field private static final zEa:B = 0x9t
+.field private static final VEa:[B
 
 
 # direct methods
@@ -57,13 +57,13 @@
 
     new-array v1, v0, [S
 
-    sput-object v1, Lorg/bouncycastle/util/encoders/ssp;->KEa:[S
+    sput-object v1, Lorg/bouncycastle/util/encoders/ssp;->UEa:[S
 
     const/16 v1, 0x70
 
     new-array v2, v1, [B
 
-    sput-object v2, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sput-object v2, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     new-array v2, v0, [B
 
@@ -155,7 +155,7 @@
 
     invoke-static {v2, v1, v7, v4}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     array-length v7, v1
 
@@ -165,7 +165,7 @@
 
     invoke-static {v1, v4, v7, v3}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v3, 0xb
 
@@ -173,7 +173,7 @@
 
     invoke-static {v1, v6, v3, v7}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v7, 0x18
 
@@ -181,7 +181,7 @@
 
     invoke-static {v1, v7, v8, v4}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v7, 0x28
 
@@ -189,7 +189,7 @@
 
     invoke-static {v1, v7, v8, v5}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v7, 0x3a
 
@@ -197,7 +197,7 @@
 
     invoke-static {v1, v7, v8, v4}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v7, 0x48
 
@@ -205,7 +205,7 @@
 
     invoke-static {v1, v7, v8, v4}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v7, 0x59
 
@@ -213,7 +213,7 @@
 
     invoke-static {v1, v7, v8, v5}, Lorg/bouncycastle/util/encoders/ssp;->fill([BIIB)V
 
-    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v1, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     const/16 v7, 0x68
 
@@ -238,7 +238,7 @@
 
     aget-byte v5, v3, v5
 
-    sget-object v8, Lorg/bouncycastle/util/encoders/ssp;->KEa:[S
+    sget-object v8, Lorg/bouncycastle/util/encoders/ssp;->UEa:[S
 
     shl-int/2addr v7, v6
 
@@ -352,7 +352,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object v4, Lorg/bouncycastle/util/encoders/ssp;->KEa:[S
+    sget-object v4, Lorg/bouncycastle/util/encoders/ssp;->UEa:[S
 
     and-int/lit8 v0, v0, 0x7f
 
@@ -382,7 +382,7 @@
 
     or-int/2addr v4, v6
 
-    sget-object v6, Lorg/bouncycastle/util/encoders/ssp;->LEa:[B
+    sget-object v6, Lorg/bouncycastle/util/encoders/ssp;->VEa:[B
 
     and-int/lit16 v2, v2, 0xff
 

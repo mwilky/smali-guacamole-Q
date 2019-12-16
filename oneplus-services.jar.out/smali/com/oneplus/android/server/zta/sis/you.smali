@@ -19,69 +19,79 @@
 
 
 # static fields
-.field private static final AY:Ljava/lang/String; = "lastMDMTime"
-
-.field private static BY:Z = true
-
 .field private static final CONFIG_NAME:Ljava/lang/String; = "OnePlusJankManager"
 
-.field private static CY:Z = true
+.field private static final GY:Ljava/lang/String; = "PDJE7FI1KD"
 
-.field private static DY:Z = false
+.field private static final HY:Ljava/lang/String; = "/data/system/jankevent.log"
 
-.field private static EY:Z = true
-
-.field private static FY:Z = false
-
-.field private static GY:Z = false
-
-.field private static HY:Z = false
-
-.field private static final IY:Ljava/lang/String; = "persist.sys.jankmanager.state"
+.field private static final IY:Ljava/lang/String; = "/data/system/jankmdm.log"
 
 .field private static JANK_LEVEL_HIGH:I = 0xf
 
 .field private static JANK_LEVEL_LOW:I = 0x6
 
-.field private static final JY:Ljava/lang/String; = "persist.sys.jankmanager.enable"
+.field private static final JY:Ljava/lang/String; = "oneplus.intent.action.SAVE_JANK_DATE"
 
-.field private static final Ju:I = 0x1
+.field private static final KY:Ljava/lang/String; = "oneplus.intent.action.MDM_JANK_DATE"
 
-.field private static final KY:Ljava/lang/String; = "persist.sys.jankmanager.debug"
-
-.field private static final LY:Ljava/lang/String; = "persist.sys.jankmanager.mdm"
+.field private static final LY:Ljava/lang/String; = "lastMDMTime"
 
 .field private static final MSG_GET_ONLINECONFIG:I = 0x2
 
-.field private static final MY:Ljava/lang/String; = "persist.sys.jankmanager.disk"
+.field private static MY:Z = true
 
-.field private static final NY:Ljava/lang/String; = "persist.sys.jankmanager.systrace"
+.field private static NY:Z = true
 
-.field private static final OY:Ljava/lang/String; = "persist.sys.jankmanager.test"
+.field private static OY:Z = false
 
-.field private static PY:I = 0x1e
+.field private static PY:Z = true
 
-.field private static QY:I = 0x1e
+.field private static QY:Z = false
 
-.field private static final RY:Ljava/lang/String; = "persist.sys.jankmanager.levellow"
+.field private static RY:Z = false
 
-.field private static final SY:Ljava/lang/String; = "persist.sys.jankmanager.levelhigh"
+.field private static final Ru:I = 0x1
+
+.field private static SY:Z = false
 
 .field private static final TAG:Ljava/lang/String; = "OnePlusJankManager"
 
-.field private static final TY:Ljava/lang/String; = "persist.sys.jankmanager.long"
+.field private static final TY:Ljava/lang/String; = "persist.sys.jankmanager.state"
 
-.field private static final UY:Ljava/lang/String; = "persist.sys.jankmanager.levelsystrace"
+.field private static final UY:Ljava/lang/String; = "persist.sys.jankmanager.enable"
 
-.field private static VY:I = 0x5
+.field private static final VY:Ljava/lang/String; = "persist.sys.jankmanager.debug"
 
-.field private static WY:I = 0x1e
+.field private static final WY:Ljava/lang/String; = "persist.sys.jankmanager.mdm"
 
-.field private static final XY:Ljava/lang/String; = "persist.sys.jankmanager.tracetime"
+.field private static final XY:Ljava/lang/String; = "persist.sys.jankmanager.disk"
 
-.field private static final YY:Ljava/lang/String; = "sys.boot_completed"
+.field private static final YY:Ljava/lang/String; = "persist.sys.jankmanager.systrace"
 
-.field private static ZY:Ljava/util/HashMap; = null
+.field private static final ZY:Ljava/lang/String; = "persist.sys.jankmanager.test"
+
+.field private static _Y:I = 0x1e
+
+.field private static aZ:I = 0x1e
+
+.field private static final bZ:Ljava/lang/String; = "persist.sys.jankmanager.levellow"
+
+.field private static final cZ:Ljava/lang/String; = "persist.sys.jankmanager.levelhigh"
+
+.field private static final dZ:Ljava/lang/String; = "persist.sys.jankmanager.long"
+
+.field private static final eZ:Ljava/lang/String; = "persist.sys.jankmanager.levelsystrace"
+
+.field private static fZ:I = 0x5
+
+.field private static gZ:I = 0x1e
+
+.field private static final hZ:Ljava/lang/String; = "persist.sys.jankmanager.tracetime"
+
+.field private static final iZ:Ljava/lang/String; = "sys.boot_completed"
+
+.field private static jZ:Ljava/util/HashMap; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -92,49 +102,31 @@
     .end annotation
 .end field
 
-.field private static _Y:Lcom/oneplus/android/server/zta/sis/you$tsu; = null
+.field private static kZ:Lcom/oneplus/android/server/zta/sis/you$tsu; = null
 
-.field private static aZ:Lcom/oneplus/android/server/zta/sis/you$zta; = null
+.field private static lZ:Lcom/oneplus/android/server/zta/sis/you$zta; = null
 
-.field private static final bZ:I = 0x3
+.field private static final mZ:I = 0x3
 
-.field private static final cZ:I = 0x4
+.field private static final nZ:I = 0x4
 
-.field private static final dZ:I = 0x5
+.field private static final oZ:I = 0x5
 
-.field private static final eZ:I = 0x6
-
-.field private static final vY:Ljava/lang/String; = "PDJE7FI1KD"
-
-.field private static final wY:Ljava/lang/String; = "/data/system/jankevent.log"
-
-.field private static final xY:Ljava/lang/String; = "/data/system/jankmdm.log"
-
-.field private static final yY:Ljava/lang/String; = "oneplus.intent.action.SAVE_JANK_DATE"
-
-.field private static final zY:Ljava/lang/String; = "oneplus.intent.action.MDM_JANK_DATE"
+.field private static final pZ:I = 0x6
 
 
 # instance fields
-.field private mContext:Landroid/content/Context;
+.field private AY:Lcom/oneplus/os/IOnePlusExService;
 
-.field private mGeneralReceiver:Landroid/content/BroadcastReceiver;
+.field private BY:Z
 
-.field private mMyConfigObserver:Lcom/oneplus/config/ConfigObserver;
+.field private CY:Z
 
-.field private oY:Lcom/oneplus/android/server/zta/sis/you$you;
+.field private DY:Z
 
-.field private pY:Lcom/oneplus/os/IOnePlusExService;
+.field private EY:Z
 
-.field private qY:Z
-
-.field private rY:Z
-
-.field private sY:Z
-
-.field private tY:Z
-
-.field private uY:Ljava/util/ArrayList;
+.field private FY:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -143,6 +135,14 @@
         }
     .end annotation
 .end field
+
+.field private mContext:Landroid/content/Context;
+
+.field private mGeneralReceiver:Landroid/content/BroadcastReceiver;
+
+.field private mMyConfigObserver:Lcom/oneplus/config/ConfigObserver;
+
+.field private zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
 
 # direct methods
@@ -153,13 +153,13 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sput-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     new-instance v0, Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-direct {v0}, Lcom/oneplus/android/server/zta/sis/you$tsu;-><init>()V
 
-    sput-object v0, Lcom/oneplus/android/server/zta/sis/you;->_Y:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    sput-object v0, Lcom/oneplus/android/server/zta/sis/you;->kZ:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     new-instance v0, Lcom/oneplus/android/server/zta/sis/you$zta;
 
@@ -167,7 +167,7 @@
 
     invoke-direct {v0, v1}, Lcom/oneplus/android/server/zta/sis/you$zta;-><init>(Lcom/oneplus/android/server/zta/sis/zta;)V
 
-    sput-object v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sput-object v0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
     return-void
 .end method
@@ -179,7 +179,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->mContext:Landroid/content/Context;
 
@@ -187,19 +187,19 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->qY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->rY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->sY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->tY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/oneplus/android/server/zta/sis/zta;
 
@@ -207,7 +207,7 @@
 
     iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->mGeneralReceiver:Landroid/content/BroadcastReceiver;
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v0, :cond_0
 
@@ -232,7 +232,7 @@
 
     invoke-direct {p1, p0, v0}, Lcom/oneplus/android/server/zta/sis/you$you;-><init>(Lcom/oneplus/android/server/zta/sis/you;Landroid/os/Looper;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iput-object p1, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     return-void
 .end method
@@ -240,7 +240,7 @@
 .method static synthetic access$200()Ljava/util/HashMap;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     return-object v0
 .end method
@@ -276,15 +276,15 @@
 .method private static ear(Ljava/lang/String;Ljava/lang/String;)Lcom/oneplus/android/server/zta/sis/you$zta;
     .locals 6
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->_Y:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->kZ:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iput-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iput-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     :cond_0
     const-string v0, "-"
@@ -373,9 +373,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     const/4 v2, 0x1
 
@@ -401,9 +401,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -411,7 +411,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->kY:Ljava/lang/String;
+    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->wY:Ljava/lang/String;
 
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -427,9 +427,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -437,7 +437,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->lY:Ljava/lang/String;
+    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->xY:Ljava/lang/String;
 
     const/4 v0, 0x3
 
@@ -455,9 +455,9 @@
 
     move-result-object p0
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -465,9 +465,9 @@
 
     check-cast p0, Ljava/lang/String;
 
-    iput-object p0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->nY:Ljava/lang/String;
+    iput-object p0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->yY:Ljava/lang/String;
 
-    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
     iput-object p1, p0, Lcom/oneplus/android/server/zta/sis/you$zta;->times:Ljava/lang/String;
 
@@ -753,7 +753,7 @@
 
     const/4 v11, 0x1
 
-    iput-boolean v11, p0, Lcom/oneplus/android/server/zta/sis/you;->qY:Z
+    iput-boolean v11, p0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
 
     new-instance v1, Landroid/content/Intent;
 
@@ -785,7 +785,7 @@
 
     invoke-virtual/range {v1 .. v7}, Landroid/app/AlarmManager;->setInexactRepeating(IJJLandroid/app/PendingIntent;)V
 
-    iput-boolean v11, p0, Lcom/oneplus/android/server/zta/sis/you;->rY:Z
+    iput-boolean v11, p0, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
 
     return-void
 .end method
@@ -852,18 +852,26 @@
     return-object v0
 .end method
 
-.method private static lc(Ljava/lang/String;)Lcom/oneplus/android/server/zta/sis/you$zta;
+.method private lr()Z
+    .locals 0
+
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->PY:Z
+
+    return p0
+.end method
+
+.method private static mc(Ljava/lang/String;)Lcom/oneplus/android/server/zta/sis/you$zta;
     .locals 6
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->_Y:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->kZ:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iput-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iput-object v1, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     :cond_0
     const-string v0, "-"
@@ -952,9 +960,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     const/4 v2, 0x1
 
@@ -980,9 +988,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -990,7 +998,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->kY:Ljava/lang/String;
+    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->wY:Ljava/lang/String;
 
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1006,9 +1014,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1016,7 +1024,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->lY:Ljava/lang/String;
+    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->xY:Ljava/lang/String;
 
     const/4 v0, 0x3
 
@@ -1034,9 +1042,9 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
-    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v1, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1044,7 +1052,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->nY:Ljava/lang/String;
+    iput-object v0, v1, Lcom/oneplus/android/server/zta/sis/you$tsu;->yY:Ljava/lang/String;
 
     const/4 v0, 0x4
 
@@ -1062,7 +1070,7 @@
 
     move-result-object p0
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -1072,20 +1080,20 @@
 
     iput-object p0, v0, Lcom/oneplus/android/server/zta/sis/you$zta;->times:Ljava/lang/String;
 
-    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->aZ:Lcom/oneplus/android/server/zta/sis/you$zta;
+    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->lZ:Lcom/oneplus/android/server/zta/sis/you$zta;
 
     return-object p0
 .end method
 
-.method private lr()Z
+.method private mr()Z
     .locals 0
 
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->SY:Z
 
     return p0
 .end method
 
-.method private static mc(Ljava/lang/String;)Ljava/util/ArrayList;
+.method private static nc(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1172,15 +1180,7 @@
     return-object v0
 .end method
 
-.method private mr()Z
-    .locals 0
-
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->HY:Z
-
-    return p0
-.end method
-
-.method private static nc(Ljava/lang/String;)Ljava/util/HashMap;
+.method private static oc(Ljava/lang/String;)Ljava/util/HashMap;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1239,27 +1239,27 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {v1}, Lcom/oneplus/android/server/zta/sis/you;->lc(Ljava/lang/String;)Lcom/oneplus/android/server/zta/sis/you$zta;
+    invoke-static {v1}, Lcom/oneplus/android/server/zta/sis/you;->mc(Ljava/lang/String;)Lcom/oneplus/android/server/zta/sis/you$zta;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    iget-object v4, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v4, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     iget-object v4, v4, Lcom/oneplus/android/server/zta/sis/you$tsu;->packageName:Ljava/lang/String;
 
-    iget-object v5, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v5, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iget-object v5, v5, Lcom/oneplus/android/server/zta/sis/you$tsu;->kY:Ljava/lang/String;
+    iget-object v5, v5, Lcom/oneplus/android/server/zta/sis/you$tsu;->wY:Ljava/lang/String;
 
-    iget-object v6, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v6, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iget-object v6, v6, Lcom/oneplus/android/server/zta/sis/you$tsu;->lY:Ljava/lang/String;
+    iget-object v6, v6, Lcom/oneplus/android/server/zta/sis/you$tsu;->xY:Ljava/lang/String;
 
-    iget-object v7, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v7, v1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iget-object v7, v7, Lcom/oneplus/android/server/zta/sis/you$tsu;->nY:Ljava/lang/String;
+    iget-object v7, v7, Lcom/oneplus/android/server/zta/sis/you$tsu;->yY:Ljava/lang/String;
 
     invoke-static {v4, v5, v6, v7}, Lcom/oneplus/android/server/zta/sis/you;->you(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -1297,7 +1297,15 @@
     return-object v0
 .end method
 
-.method private oc(Ljava/lang/String;)V
+.method private or()Z
+    .locals 0
+
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->RY:Z
+
+    return p0
+.end method
+
+.method private pc(Ljava/lang/String;)V
     .locals 1
 
     iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->mContext:Landroid/content/Context;
@@ -1327,18 +1335,10 @@
     return-void
 .end method
 
-.method private or()Z
-    .locals 0
-
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->GY:Z
-
-    return p0
-.end method
-
 .method private pr()V
     .locals 5
 
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz p0, :cond_0
 
@@ -1349,7 +1349,7 @@
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->PY:Z
 
     if-eqz p0, :cond_4
 
@@ -1359,7 +1359,7 @@
 
     const-string p0, "/data/system/jankmdm.log"
 
-    invoke-static {p0}, Lcom/oneplus/android/server/zta/sis/you;->nc(Ljava/lang/String;)Ljava/util/HashMap;
+    invoke-static {p0}, Lcom/oneplus/android/server/zta/sis/you;->oc(Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -1369,7 +1369,7 @@
 
     if-nez v1, :cond_2
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -1460,12 +1460,12 @@
     goto :goto_0
 
     :cond_2
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     :cond_3
     invoke-static {v0, p0}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/util/HashMap;Ljava/lang/String;)V
 
-    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
 
@@ -1476,7 +1476,7 @@
 .method private qr()V
     .locals 3
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     const-string v1, "OnePlusJankManager"
 
@@ -1490,7 +1490,7 @@
     invoke-direct {p0}, Lcom/oneplus/android/server/zta/sis/you;->jr()V
 
     :try_start_0
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->pY:Lcom/oneplus/os/IOnePlusExService;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->AY:Lcom/oneplus/os/IOnePlusExService;
 
     if-nez v0, :cond_1
 
@@ -1498,10 +1498,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->pY:Lcom/oneplus/os/IOnePlusExService;
+    iput-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->AY:Lcom/oneplus/os/IOnePlusExService;
 
     :cond_1
-    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->pY:Lcom/oneplus/os/IOnePlusExService;
+    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->AY:Lcom/oneplus/os/IOnePlusExService;
 
     const-string v0, "jankmanager_outlier"
 
@@ -1537,7 +1537,7 @@
 .method private resolveConfigFromJSON(Lorg/json/JSONArray;)V
     .locals 9
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v0, :cond_0
 
@@ -1595,7 +1595,7 @@
 
     if-eqz v3, :cond_5
 
-    iget-object v3, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     monitor-enter v3
     :try_end_0
@@ -1603,11 +1603,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    iget-object v4, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    sget-boolean v4, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v4, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v4, :cond_2
 
@@ -1650,7 +1650,7 @@
 
     if-eqz v4, :cond_4
 
-    iget-object v5, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     monitor-enter v5
     :try_end_2
@@ -1658,11 +1658,11 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     :try_start_3
-    iget-object v6, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v6, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget-boolean v6, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v6, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v6, :cond_3
 
@@ -1744,11 +1744,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->MY:Z
 
     const-string v2, "persist.sys.jankmanager.state"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->MY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -1784,11 +1784,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->NY:Z
 
     const-string v2, "persist.sys.jankmanager.enable"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->NY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -1821,11 +1821,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     const-string v2, "persist.sys.jankmanager.debug"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -1858,11 +1858,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->PY:Z
 
     const-string v2, "persist.sys.jankmanager.mdm"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->PY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -1895,11 +1895,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->FY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->QY:Z
 
     const-string v2, "persist.sys.jankmanager.disk"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->FY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->QY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -1932,11 +1932,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->GY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->RY:Z
 
     const-string v2, "persist.sys.jankmanager.systrace"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->GY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->RY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -1969,11 +1969,11 @@
 
     move-result v2
 
-    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->HY:Z
+    sput-boolean v2, Lcom/oneplus/android/server/zta/sis/you;->SY:Z
 
     const-string v2, "persist.sys.jankmanager.test"
 
-    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->HY:Z
+    sget-boolean v3, Lcom/oneplus/android/server/zta/sis/you;->SY:Z
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
@@ -2080,11 +2080,11 @@
 
     move-result v2
 
-    sput v2, Lcom/oneplus/android/server/zta/sis/you;->PY:I
+    sput v2, Lcom/oneplus/android/server/zta/sis/you;->_Y:I
 
     const-string v2, "persist.sys.jankmanager.long"
 
-    sget v3, Lcom/oneplus/android/server/zta/sis/you;->PY:I
+    sget v3, Lcom/oneplus/android/server/zta/sis/you;->_Y:I
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2117,11 +2117,11 @@
 
     move-result v2
 
-    sput v2, Lcom/oneplus/android/server/zta/sis/you;->QY:I
+    sput v2, Lcom/oneplus/android/server/zta/sis/you;->aZ:I
 
     const-string v2, "persist.sys.jankmanager.levelsystrace"
 
-    sget v3, Lcom/oneplus/android/server/zta/sis/you;->QY:I
+    sget v3, Lcom/oneplus/android/server/zta/sis/you;->aZ:I
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2154,11 +2154,11 @@
 
     move-result v2
 
-    sput v2, Lcom/oneplus/android/server/zta/sis/you;->VY:I
+    sput v2, Lcom/oneplus/android/server/zta/sis/you;->fZ:I
 
     const-string v2, "persist.sys.jankmanager.tracetime"
 
-    sget v3, Lcom/oneplus/android/server/zta/sis/you;->VY:I
+    sget v3, Lcom/oneplus/android/server/zta/sis/you;->fZ:I
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2173,7 +2173,7 @@
     goto/16 :goto_0
 
     :cond_12
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz p0, :cond_13
 
@@ -2239,7 +2239,7 @@
 .method private rr()V
     .locals 2
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v0, :cond_0
 
@@ -2279,7 +2279,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->tY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
 
     return-void
 .end method
@@ -2295,7 +2295,7 @@
 .method private rtg(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 3
 
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz p0, :cond_0
 
@@ -2306,12 +2306,12 @@
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     monitor-enter p0
 
     :try_start_0
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-static {p1, p2, p3, p4}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -2325,7 +2325,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-static {p1, p2, p3, p4}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -2349,7 +2349,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-static {p1, p2, p3, p4}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -2360,7 +2360,7 @@
     goto :goto_1
 
     :cond_1
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-static {p1, p2, p3, p4}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -2376,7 +2376,7 @@
     goto :goto_1
 
     :cond_2
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-static {p1, p2, p3, p4}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -2414,7 +2414,7 @@
 .method static synthetic sis(Lcom/oneplus/android/server/zta/sis/you;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/zta/sis/you;->rY:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
 
     return p1
 .end method
@@ -2422,7 +2422,7 @@
 .method private sis(Ljava/lang/String;Ljava/lang/String;II)Z
     .locals 1
 
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->QY:Z
 
     if-nez p0, :cond_0
 
@@ -2495,7 +2495,7 @@
 .method private sr()V
     .locals 2
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v0, :cond_0
 
@@ -2516,7 +2516,7 @@
 .method static synthetic ssp(Lcom/oneplus/android/server/zta/sis/you;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/zta/sis/you;->rY:Z
+    iget-boolean p0, p0, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
 
     return p0
 .end method
@@ -2524,7 +2524,7 @@
 .method private tr()V
     .locals 3
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v0, :cond_0
 
@@ -2562,7 +2562,7 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     const/4 v0, 0x6
 
@@ -2570,7 +2570,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/oneplus/android/server/zta/sis/you;->WY:I
+    sget v1, Lcom/oneplus/android/server/zta/sis/you;->gZ:I
 
     mul-int/lit16 v1, v1, 0x3e8
 
@@ -2584,7 +2584,7 @@
 .method private tsu(Ljava/lang/String;Ljava/lang/String;II)V
     .locals 4
 
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -2592,7 +2592,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -2613,7 +2613,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz p0, :cond_1
 
@@ -2639,7 +2639,7 @@
 
     if-nez v0, :cond_4
 
-    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean p0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz p0, :cond_3
 
@@ -2669,14 +2669,14 @@
     :cond_6
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->sY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
 
     :cond_7
-    iget-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->tY:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
 
     if-nez v0, :cond_8
 
-    iget-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->sY:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
 
     if-eqz v0, :cond_8
 
@@ -2684,7 +2684,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->sY:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
 
     :cond_8
     invoke-direct {p0}, Lcom/oneplus/android/server/zta/sis/you;->lr()Z
@@ -2704,7 +2704,7 @@
 .method static synthetic tsu(Lcom/oneplus/android/server/zta/sis/you;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/zta/sis/you;->qY:Z
+    iget-boolean p0, p0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
 
     return p0
 .end method
@@ -2718,7 +2718,7 @@
 
     move-result-object p0
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     const-string v1, "OnePlusJankManager"
 
@@ -2785,7 +2785,7 @@
 .method private updateOnlineConfig()V
     .locals 3
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     const-string v1, "OnePlusJankManager"
 
@@ -2814,7 +2814,7 @@
 .method private ur()V
     .locals 7
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     if-eqz v0, :cond_0
 
@@ -2831,7 +2831,7 @@
 
     const-string v0, "/data/system/jankmdm.log"
 
-    invoke-static {v0}, Lcom/oneplus/android/server/zta/sis/you;->nc(Ljava/lang/String;)Ljava/util/HashMap;
+    invoke-static {v0}, Lcom/oneplus/android/server/zta/sis/you;->oc(Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v1
 
@@ -2846,7 +2846,7 @@
     goto :goto_1
 
     :cond_1
-    sget-object v2, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v2, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     if-eqz v2, :cond_5
 
@@ -2856,7 +2856,7 @@
 
     if-nez v2, :cond_5
 
-    sget-object v2, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v2, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -2948,7 +2948,7 @@
 
     :cond_3
     :goto_1
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     if-eqz v1, :cond_b
 
@@ -2961,7 +2961,7 @@
     goto/16 :goto_3
 
     :cond_4
-    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v1, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     :cond_5
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3083,7 +3083,7 @@
     invoke-virtual {v3, p0, v4, v1, v2}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveOsData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
 
     :cond_9
-    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     if-eqz p0, :cond_a
 
@@ -3093,7 +3093,7 @@
 
     if-nez p0, :cond_a
 
-    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object p0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
 
@@ -3208,7 +3208,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->ZY:Ljava/util/HashMap;
+    sget-object v0, Lcom/oneplus/android/server/zta/sis/you;->jZ:Ljava/util/HashMap;
 
     invoke-static {p1, p2, p3, p4}, Lcom/oneplus/android/server/zta/sis/you;->zta(Ljava/lang/String;Ljava/lang/String;II)Ljava/lang/String;
 
@@ -3226,7 +3226,7 @@
 
     const-string v0, "/data/system/jankmdm.log"
 
-    invoke-static {v0}, Lcom/oneplus/android/server/zta/sis/you;->nc(Ljava/lang/String;)Ljava/util/HashMap;
+    invoke-static {v0}, Lcom/oneplus/android/server/zta/sis/you;->oc(Ljava/lang/String;)Ljava/util/HashMap;
 
     move-result-object v0
 
@@ -3242,7 +3242,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/android/server/zta/sis/you;->rr()V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     const/4 v1, 0x5
 
@@ -3250,7 +3250,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/oneplus/android/server/zta/sis/you;->VY:I
+    sget v2, Lcom/oneplus/android/server/zta/sis/you;->fZ:I
 
     mul-int/lit16 v2, v2, 0x3e8
 
@@ -3263,7 +3263,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/zta/sis/you;->oc(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/zta/sis/you;->pc(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -3271,7 +3271,7 @@
 .method static synthetic you(Lcom/oneplus/android/server/zta/sis/you;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/zta/sis/you;->qY:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
 
     return p1
 .end method
@@ -3287,7 +3287,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
     iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->packageName:Ljava/lang/String;
 
@@ -3297,9 +3297,9 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->kY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->wY:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3307,9 +3307,9 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->lY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->xY:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3317,9 +3317,9 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->jY:Lcom/oneplus/android/server/zta/sis/you$tsu;
+    iget-object v0, p1, Lcom/oneplus/android/server/zta/sis/you$zta;->vY:Lcom/oneplus/android/server/zta/sis/you$tsu;
 
-    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->nY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/oneplus/android/server/zta/sis/you$tsu;->yY:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3523,7 +3523,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/zta/sis/you;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/zta/sis/you;->tY:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
 
     return p1
 .end method
@@ -3541,7 +3541,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->MY:Z
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3557,7 +3557,7 @@
 
     const-string p0, "/data/system/jankevent.log"
 
-    invoke-static {p0}, Lcom/oneplus/android/server/zta/sis/you;->mc(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {p0}, Lcom/oneplus/android/server/zta/sis/you;->nc(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -3615,7 +3615,7 @@
 .method public initOnlineConfig()V
     .locals 5
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->MY:Z
 
     const-string v1, "persist.sys.jankmanager.state"
 
@@ -3623,9 +3623,9 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->BY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->MY:Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->NY:Z
 
     const-string v1, "persist.sys.jankmanager.enable"
 
@@ -3633,9 +3633,9 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->CY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->NY:Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
     const-string v1, "persist.sys.jankmanager.debug"
 
@@ -3643,9 +3643,9 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->DY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->OY:Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->PY:Z
 
     const-string v1, "persist.sys.jankmanager.mdm"
 
@@ -3653,9 +3653,9 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->EY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->PY:Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->FY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->QY:Z
 
     const-string v1, "persist.sys.jankmanager.disk"
 
@@ -3663,9 +3663,9 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->FY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->QY:Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->GY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->RY:Z
 
     const-string v1, "persist.sys.jankmanager.systrace"
 
@@ -3673,9 +3673,9 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->GY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->RY:Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->HY:Z
+    sget-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->SY:Z
 
     const-string v1, "persist.sys.jankmanager.test"
 
@@ -3683,7 +3683,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->HY:Z
+    sput-boolean v0, Lcom/oneplus/android/server/zta/sis/you;->SY:Z
 
     sget v0, Lcom/oneplus/android/server/zta/sis/you;->JANK_LEVEL_LOW:I
 
@@ -3705,7 +3705,7 @@
 
     sput v0, Lcom/oneplus/android/server/zta/sis/you;->JANK_LEVEL_HIGH:I
 
-    sget v0, Lcom/oneplus/android/server/zta/sis/you;->PY:I
+    sget v0, Lcom/oneplus/android/server/zta/sis/you;->_Y:I
 
     const-string v1, "persist.sys.jankmanager.long"
 
@@ -3713,9 +3713,9 @@
 
     move-result v0
 
-    sput v0, Lcom/oneplus/android/server/zta/sis/you;->PY:I
+    sput v0, Lcom/oneplus/android/server/zta/sis/you;->_Y:I
 
-    sget v0, Lcom/oneplus/android/server/zta/sis/you;->QY:I
+    sget v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:I
 
     const-string v1, "persist.sys.jankmanager.levelsystrace"
 
@@ -3723,9 +3723,9 @@
 
     move-result v0
 
-    sput v0, Lcom/oneplus/android/server/zta/sis/you;->QY:I
+    sput v0, Lcom/oneplus/android/server/zta/sis/you;->aZ:I
 
-    sget v0, Lcom/oneplus/android/server/zta/sis/you;->VY:I
+    sget v0, Lcom/oneplus/android/server/zta/sis/you;->fZ:I
 
     const-string v1, "persist.sys.jankmanager.tracetime"
 
@@ -3733,13 +3733,13 @@
 
     move-result v0
 
-    sput v0, Lcom/oneplus/android/server/zta/sis/you;->VY:I
+    sput v0, Lcom/oneplus/android/server/zta/sis/you;->fZ:I
 
     new-instance v0, Lcom/oneplus/config/ConfigObserver;
 
     iget-object v1, p0, Lcom/oneplus/android/server/zta/sis/you;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iget-object v2, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     new-instance v3, Lcom/oneplus/android/server/zta/sis/you$rtg;
 
@@ -3755,7 +3755,7 @@
 
     invoke-virtual {v0}, Lcom/oneplus/config/ConfigObserver;->register()V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     const/4 v1, 0x1
 
@@ -3787,19 +3787,19 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/android/server/zta/sis/you;->igw(Landroid/content/Context;)V
 
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     const-string v1, "com.android.systemui"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     const-string v1, "fm.xiami.main"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->uY:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->FY:Ljava/util/ArrayList;
 
     const-string v0, "com.tencent.qt.qtl"
 
@@ -3827,7 +3827,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iget-object v0, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     const/4 v1, 0x3
 
@@ -3857,7 +3857,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->oY:Lcom/oneplus/android/server/zta/sis/you$you;
+    iget-object p0, p0, Lcom/oneplus/android/server/zta/sis/you;->zY:Lcom/oneplus/android/server/zta/sis/you$you;
 
     invoke-virtual {p0, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 

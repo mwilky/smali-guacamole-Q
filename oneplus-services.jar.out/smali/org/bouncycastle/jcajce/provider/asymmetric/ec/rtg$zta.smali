@@ -15,21 +15,21 @@
 
 
 # static fields
-.field private static Wka:Ljava/util/Hashtable;
+.field private static hla:Ljava/util/Hashtable;
 
 
 # instance fields
-.field Kka:Ljava/security/SecureRandom;
-
-.field Tka:Lorg/bouncycastle/crypto/ssp/bio;
-
-.field Uka:Z
-
-.field Vka:Ljava/lang/Object;
+.field Vka:Ljava/security/SecureRandom;
 
 .field algorithm:Ljava/lang/String;
 
 .field configuration:Lorg/bouncycastle/jcajce/provider/config/sis;
+
+.field ela:Lorg/bouncycastle/crypto/ssp/bio;
+
+.field fla:Z
+
+.field gla:Ljava/lang/Object;
 
 .field param:Lorg/bouncycastle/crypto/wtn/gwm;
 
@@ -44,9 +44,9 @@
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     const/16 v1, 0xc0
 
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     const/16 v1, 0xef
 
@@ -78,7 +78,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     const/16 v1, 0x100
 
@@ -94,7 +94,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     const/16 v1, 0xe0
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     const/16 v1, 0x180
 
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     const/16 v1, 0x209
 
@@ -156,25 +156,25 @@
 
     invoke-direct {v1}, Lorg/bouncycastle/crypto/ssp/bio;-><init>()V
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Tka:Lorg/bouncycastle/crypto/ssp/bio;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->ela:Lorg/bouncycastle/crypto/ssp/bio;
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     const/16 v1, 0x100
 
     iput v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->strength:I
 
-    invoke-static {}, Lorg/bouncycastle/crypto/igw;->Qi()Ljava/security/SecureRandom;
+    invoke-static {}, Lorg/bouncycastle/crypto/igw;->Pi()Ljava/security/SecureRandom;
 
     move-result-object v1
 
-    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Kka:Ljava/security/SecureRandom;
+    iput-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/security/SecureRandom;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Uka:Z
+    iput-boolean v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->fla:Z
 
     iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->algorithm:Ljava/lang/String;
 
@@ -194,25 +194,25 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/crypto/ssp/bio;-><init>()V
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Tka:Lorg/bouncycastle/crypto/ssp/bio;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->ela:Lorg/bouncycastle/crypto/ssp/bio;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     const/16 v0, 0x100
 
     iput v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->strength:I
 
-    invoke-static {}, Lorg/bouncycastle/crypto/igw;->Qi()Ljava/security/SecureRandom;
+    invoke-static {}, Lorg/bouncycastle/crypto/igw;->Pi()Ljava/security/SecureRandom;
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Kka:Ljava/security/SecureRandom;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/security/SecureRandom;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Uka:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->fla:Z
 
     iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->algorithm:Ljava/lang/String;
 
@@ -226,7 +226,7 @@
 .method public generateKeyPair()Ljava/security/KeyPair;
     .locals 9
 
-    iget-boolean v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Uka:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->fla:Z
 
     if-nez v0, :cond_0
 
@@ -239,7 +239,7 @@
     invoke-virtual {p0, v0, v1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->initialize(ILjava/security/SecureRandom;)V
 
     :cond_0
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Tka:Lorg/bouncycastle/crypto/ssp/bio;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->ela:Lorg/bouncycastle/crypto/ssp/bio;
 
     invoke-virtual {v0}, Lorg/bouncycastle/crypto/ssp/bio;->generateKeyPair()Lorg/bouncycastle/crypto/you;
 
@@ -259,7 +259,7 @@
 
     check-cast v4, Lorg/bouncycastle/crypto/wtn/zgw;
 
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     instance-of v2, v0, Lyou/zta/you/you/rtg;
 
@@ -359,10 +359,10 @@
 
     if-eqz p2, :cond_0
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Kka:Ljava/security/SecureRandom;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/security/SecureRandom;
 
     :cond_0
-    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Wka:Ljava/util/Hashtable;
+    sget-object v0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->hla:Ljava/util/Hashtable;
 
     invoke-static {p1}, Lorg/bouncycastle/util/cno;->valueOf(I)Ljava/lang/Integer;
 
@@ -412,7 +412,7 @@
 
     if-nez p2, :cond_0
 
-    iget-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Kka:Ljava/security/SecureRandom;
+    iget-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/security/SecureRandom;
 
     :cond_0
     if-nez p1, :cond_2
@@ -427,7 +427,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iput-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     goto :goto_0
 
@@ -445,7 +445,7 @@
 
     if-eqz v0, :cond_3
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     check-cast p1, Lyou/zta/you/you/rtg;
 
@@ -464,7 +464,7 @@
 
     if-eqz v0, :cond_4
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     check-cast p1, Ljava/security/spec/ECParameterSpec;
 
@@ -504,7 +504,7 @@
     goto :goto_2
 
     :goto_3
-    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Tka:Lorg/bouncycastle/crypto/ssp/bio;
+    iget-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->ela:Lorg/bouncycastle/crypto/ssp/bio;
 
     iget-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->param:Lorg/bouncycastle/crypto/wtn/gwm;
 
@@ -512,7 +512,7 @@
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Uka:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->fla:Z
 
     return-void
 
@@ -526,7 +526,7 @@
     throw p0
 .end method
 
-.method protected oa(Ljava/lang/String;)Lyou/zta/you/you/tsu;
+.method protected pa(Ljava/lang/String;)Lyou/zta/you/you/tsu;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -534,7 +534,7 @@
         }
     .end annotation
 
-    invoke-static {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/you;->Ba(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
+    invoke-static {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/you;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
 
     move-result-object v0
 
@@ -631,11 +631,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/ibl/vju;->Ai()Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/ibl/vju;->zi()Ljava/math/BigInteger;
 
     move-result-object v5
 
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/ibl/vju;->zi()Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/ibl/vju;->yi()Ljava/math/BigInteger;
 
     move-result-object v6
 
@@ -709,11 +709,11 @@
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lyou/zta/you/you/rtg;->Ai()Ljava/math/BigInteger;
+    invoke-virtual {p1}, Lyou/zta/you/you/rtg;->zi()Ljava/math/BigInteger;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lyou/zta/you/you/rtg;->zi()Ljava/math/BigInteger;
+    invoke-virtual {p1}, Lyou/zta/you/you/rtg;->yi()Ljava/math/BigInteger;
 
     move-result-object p1
 
@@ -732,11 +732,11 @@
         }
     .end annotation
 
-    invoke-virtual {p0, p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->oa(Ljava/lang/String;)Lyou/zta/you/you/tsu;
+    invoke-virtual {p0, p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->pa(Ljava/lang/String;)Lyou/zta/you/you/tsu;
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->Vka:Ljava/lang/Object;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->gla:Ljava/lang/Object;
 
     invoke-virtual {p0, p1, p2}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/rtg$zta;->zta(Ljava/security/spec/ECParameterSpec;Ljava/security/SecureRandom;)Lorg/bouncycastle/crypto/wtn/gwm;
 

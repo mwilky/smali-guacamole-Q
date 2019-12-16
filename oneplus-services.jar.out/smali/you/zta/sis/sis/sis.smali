@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static Tk()[J
+.method public static Rk()[J
     .locals 1
 
     const/4 v0, 0x3
@@ -26,7 +26,7 @@
     return-object v0
 .end method
 
-.method public static Uk()[I
+.method public static Sk()[I
     .locals 1
 
     const/16 v0, 0xc
@@ -36,7 +36,7 @@
     return-object v0
 .end method
 
-.method public static Vk()[J
+.method public static Tk()[J
     .locals 1
 
     const/4 v0, 0x6
@@ -63,7 +63,7 @@
 
     if-gt v0, v1, :cond_1
 
-    invoke-static {}, Lyou/zta/sis/sis/sis;->Tk()[J
+    invoke-static {}, Lyou/zta/sis/sis/sis;->Rk()[J
 
     move-result-object v0
 

@@ -1,14 +1,11 @@
 .class Lcom/android/server/am/ivd;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/OnePlusHighPowerDetector;->zta(Landroid/os/Message;)V
+    value = Lcom/android/server/am/OnePlusHighPowerDetector;->Um()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,19 +24,79 @@
 
     iput-object p1, p0, Lcom/android/server/am/ivd;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 0
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
+    const-string p1, "type"
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "[BgDetect] Notification Type:"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " is canceled by user"
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "OHPD"
+
+    invoke-static {v0, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     iget-object p0, p0, Lcom/android/server/am/ivd;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    invoke-virtual {p0}, Lcom/android/server/am/OnePlusHighPowerDetector;->forceUpdateOnlineConfigImmediately()V
+    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->Nr:Ljava/lang/String;
 
+    goto :goto_0
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/server/am/ivd;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
+
+    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->Ir:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/server/am/ivd;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
+
+    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->Kr:Ljava/lang/String;
+
+    :goto_0
     return-void
 .end method

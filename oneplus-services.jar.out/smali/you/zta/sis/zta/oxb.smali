@@ -7,15 +7,15 @@
 
 
 # static fields
-.field static final kCa:Ljava/lang/String; = "bc_validity"
+.field static final uCa:Ljava/lang/String; = "bc_validity"
 
 
 # instance fields
-.field private tDa:Z
+.field private DDa:Z
 
-.field private uDa:Z
+.field private EDa:Z
 
-.field private vDa:Z
+.field private FDa:Z
 
 
 # direct methods
@@ -26,31 +26,35 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->tDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->DDa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->uDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->EDa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->vDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->FDa:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method Ak()Z
-    .locals 0
+.method Ak()V
+    .locals 1
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->tDa:Z
+    const/4 v0, 0x1
 
-    return p0
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->EDa:Z
+
+    return-void
 .end method
 
-.method Bk()Z
-    .locals 0
+.method Bk()V
+    .locals 1
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->vDa:Z
+    const/4 v0, 0x1
 
-    return p0
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->DDa:Z
+
+    return-void
 .end method
 
 .method Ck()V
@@ -58,35 +62,31 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->uDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->FDa:Z
 
     return-void
 .end method
 
-.method Dk()V
-    .locals 1
+.method xk()Z
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->EDa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->tDa:Z
-
-    return-void
+    return p0
 .end method
 
-.method Ek()V
-    .locals 1
+.method yk()Z
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->DDa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->vDa:Z
-
-    return-void
+    return p0
 .end method
 
 .method zk()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->uDa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->FDa:Z
 
     return p0
 .end method

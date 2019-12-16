@@ -15,19 +15,19 @@
 
 
 # static fields
-.field private static final Aka:I = 0x1
+.field private static final Kka:I = 0x0
 
-.field private static final zka:I
+.field private static final Lka:I = 0x1
 
 
 # instance fields
+.field private final Ika:I
+
+.field private Jka:Z
+
 .field final synthetic this$0:Lcom/android/server/OpPowerControllerService;
 
 .field final synthetic val$latch:Ljava/util/concurrent/CountDownLatch;
-
-.field private final xka:I
-
-.field private yka:Z
 
 
 # direct methods
@@ -47,19 +47,19 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/server/qeg;->yka:Z
+    iput-boolean p1, p0, Lcom/android/server/qeg;->Jka:Z
 
-    iput p2, p0, Lcom/android/server/qeg;->xka:I
+    iput p2, p0, Lcom/android/server/qeg;->Ika:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public If()Z
+.method public Hf()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/qeg;->yka:Z
+    iget-boolean p0, p0, Lcom/android/server/qeg;->Jka:Z
 
     return p0
 .end method
@@ -67,7 +67,7 @@
 .method public run()V
     .locals 4
 
-    iget v0, p0, Lcom/android/server/qeg;->xka:I
+    iget v0, p0, Lcom/android/server/qeg;->Ika:I
 
     if-nez v0, :cond_0
 
@@ -82,7 +82,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/qeg;->yka:Z
+    iput-boolean v0, p0, Lcom/android/server/qeg;->Jka:Z
 
     goto :goto_1
 
@@ -101,7 +101,7 @@
 
     :cond_1
     :goto_1
-    iget-boolean v0, p0, Lcom/android/server/qeg;->yka:Z
+    iget-boolean v0, p0, Lcom/android/server/qeg;->Jka:Z
 
     if-eqz v0, :cond_2
 

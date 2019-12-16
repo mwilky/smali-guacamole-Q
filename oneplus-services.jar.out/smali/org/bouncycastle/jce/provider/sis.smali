@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final Fya:Ljava/util/logging/Logger;
+.field private static final Pya:Ljava/util/logging/Logger;
 
 
 # instance fields
-.field public final xBa:Ljava/util/Set;
+.field public final HBa:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -18,7 +18,7 @@
     .end annotation
 .end field
 
-.field public final yBa:Ljava/util/Set;
+.field public final IBa:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/sis;->Fya:Ljava/util/logging/Logger;
+    sput-object v0, Lorg/bouncycastle/jce/provider/sis;->Pya:Ljava/util/logging/Logger;
 
     return-void
 .end method
@@ -100,17 +100,17 @@
 
     move-result-object v0
 
-    invoke-static {v1}, Lorg/bouncycastle/jce/provider/sis;->Sc(Ljava/lang/String;)Ljava/util/Set;
+    invoke-static {v1}, Lorg/bouncycastle/jce/provider/sis;->Tc(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v1
 
-    iput-object v1, p0, Lorg/bouncycastle/jce/provider/sis;->yBa:Ljava/util/Set;
+    iput-object v1, p0, Lorg/bouncycastle/jce/provider/sis;->IBa:Ljava/util/Set;
 
-    invoke-static {v0}, Lorg/bouncycastle/jce/provider/sis;->Tc(Ljava/lang/String;)Ljava/util/Set;
+    invoke-static {v0}, Lorg/bouncycastle/jce/provider/sis;->Uc(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/sis;->xBa:Ljava/util/Set;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/sis;->HBa:Ljava/util/Set;
 
     return-void
 .end method
@@ -120,22 +120,22 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lorg/bouncycastle/jce/provider/sis;->Sc(Ljava/lang/String;)Ljava/util/Set;
+    invoke-static {p1}, Lorg/bouncycastle/jce/provider/sis;->Tc(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/sis;->yBa:Ljava/util/Set;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/sis;->IBa:Ljava/util/Set;
 
-    invoke-static {p2}, Lorg/bouncycastle/jce/provider/sis;->Tc(Ljava/lang/String;)Ljava/util/Set;
+    invoke-static {p2}, Lorg/bouncycastle/jce/provider/sis;->Uc(Ljava/lang/String;)Ljava/util/Set;
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/sis;->xBa:Ljava/util/Set;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/sis;->HBa:Ljava/util/Set;
 
     return-void
 .end method
 
-.method private static Oc(Ljava/lang/String;)Z
+.method private static Pc(Ljava/lang/String;)Z
     .locals 5
 
     :try_start_0
@@ -154,7 +154,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v1, Lorg/bouncycastle/jce/provider/sis;->Fya:Ljava/util/logging/Logger;
+    sget-object v1, Lorg/bouncycastle/jce/provider/sis;->Pya:Ljava/util/logging/Logger;
 
     sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
@@ -179,7 +179,7 @@
     return p0
 .end method
 
-.method private static Pc(Ljava/lang/String;)Z
+.method private static Qc(Ljava/lang/String;)Z
     .locals 4
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -190,7 +190,7 @@
 
     if-eq v0, v1, :cond_0
 
-    sget-object v0, Lorg/bouncycastle/jce/provider/sis;->Fya:Ljava/util/logging/Logger;
+    sget-object v0, Lorg/bouncycastle/jce/provider/sis;->Pya:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
@@ -219,14 +219,14 @@
     return p0
 
     :cond_0
-    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Oc(Ljava/lang/String;)Z
+    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Pc(Ljava/lang/String;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private static Qc(Ljava/lang/String;)Ljava/lang/String;
+.method private static Rc(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     :try_start_0
@@ -242,7 +242,7 @@
     :catch_0
     move-exception p0
 
-    sget-object v0, Lorg/bouncycastle/jce/provider/sis;->Fya:Ljava/util/logging/Logger;
+    sget-object v0, Lorg/bouncycastle/jce/provider/sis;->Pya:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
@@ -256,7 +256,7 @@
     return-object p0
 .end method
 
-.method private static Rc(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
+.method private static Sc(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -331,7 +331,7 @@
     throw p0
 .end method
 
-.method private static final Sc(Ljava/lang/String;)Ljava/util/Set;
+.method private static final Tc(Ljava/lang/String;)Ljava/util/Set;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -445,7 +445,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Qc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Rc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -474,7 +474,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lorg/bouncycastle/jce/provider/sis;->Pc(Ljava/lang/String;)Z
+    invoke-static {v2}, Lorg/bouncycastle/jce/provider/sis;->Qc(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -489,7 +489,7 @@
     goto :goto_1
 
     :cond_0
-    sget-object v4, Lorg/bouncycastle/jce/provider/sis;->Fya:Ljava/util/logging/Logger;
+    sget-object v4, Lorg/bouncycastle/jce/provider/sis;->Pya:Ljava/util/logging/Logger;
 
     sget-object v5, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
@@ -518,7 +518,7 @@
     return-object v0
 .end method
 
-.method private static final Tc(Ljava/lang/String;)Ljava/util/Set;
+.method private static final Uc(Ljava/lang/String;)Ljava/util/Set;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -645,7 +645,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Qc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Rc(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -684,7 +684,7 @@
     :catch_0
     move-exception v5
 
-    sget-object v6, Lorg/bouncycastle/jce/provider/sis;->Fya:Ljava/util/logging/Logger;
+    sget-object v6, Lorg/bouncycastle/jce/provider/sis;->Pya:Ljava/util/logging/Logger;
 
     sget-object v7, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
@@ -725,7 +725,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Rc(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
+    invoke-static {p0}, Lorg/bouncycastle/jce/provider/sis;->Sc(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
 
     move-result-object p0
 
@@ -767,7 +767,7 @@
 .method public igw(Ljava/math/BigInteger;)Z
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/sis;->xBa:Ljava/util/Set;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/sis;->HBa:Ljava/util/Set;
 
     invoke-interface {p0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -801,7 +801,7 @@
 
     invoke-interface {v0, p1, v2}, Lorg/bouncycastle/crypto/qbh;->doFinal([BI)I
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/sis;->yBa:Ljava/util/Set;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/sis;->IBa:Ljava/util/Set;
 
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 

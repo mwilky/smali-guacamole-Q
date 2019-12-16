@@ -120,11 +120,11 @@
 
     invoke-static {v6, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/cgv;->access$3600()Landroid/os/Handler;
+    invoke-static {}, Lcom/android/server/am/cgv;->access$3800()Landroid/os/Handler;
 
     move-result-object p0
 
-    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->access$3500(II)I
+    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->ywr(II)I
 
     move-result p1
 
@@ -142,11 +142,11 @@
     monitor-enter v2
 
     :try_start_1
-    invoke-static {}, Lcom/android/server/am/cgv;->access$3600()Landroid/os/Handler;
+    invoke-static {}, Lcom/android/server/am/cgv;->access$3800()Landroid/os/Handler;
 
     move-result-object p0
 
-    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->access$3500(II)I
+    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->ywr(II)I
 
     move-result p1
 
@@ -250,13 +250,13 @@
     goto/16 :goto_1
 
     :pswitch_4
-    invoke-static {}, Lcom/android/server/am/cgv;->access$3600()Landroid/os/Handler;
+    invoke-static {}, Lcom/android/server/am/cgv;->access$3800()Landroid/os/Handler;
 
     move-result-object p1
 
     const/16 v1, 0xa
 
-    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->access$3500(II)I
+    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->ywr(II)I
 
     move-result v1
 
@@ -376,7 +376,7 @@
     goto/16 :goto_1
 
     :pswitch_c
-    invoke-static {}, Lcom/android/server/am/cgv;->access$3400()Z
+    invoke-static {}, Lcom/android/server/am/cgv;->access$3600()Z
 
     move-result p1
 
@@ -435,11 +435,11 @@
 
     invoke-static {v6, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/cgv;->access$3600()Landroid/os/Handler;
+    invoke-static {}, Lcom/android/server/am/cgv;->access$3800()Landroid/os/Handler;
 
     move-result-object p0
 
-    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->access$3500(II)I
+    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->ywr(II)I
 
     move-result p1
 
@@ -469,11 +469,11 @@
     monitor-enter p1
 
     :try_start_3
-    invoke-static {}, Lcom/android/server/am/cgv;->access$3600()Landroid/os/Handler;
+    invoke-static {}, Lcom/android/server/am/cgv;->access$3800()Landroid/os/Handler;
 
     move-result-object v3
 
-    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->access$3500(II)I
+    invoke-static {v0, v1}, Lcom/android/server/am/cgv;->ywr(II)I
 
     move-result v1
 
@@ -586,7 +586,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/cgv$sis;->this$0:Lcom/android/server/am/cgv;
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->ibl(Lcom/android/server/am/cgv;)Lcom/oneplus/config/ConfigObserver;
+    invoke-static {p0}, Lcom/android/server/am/cgv;->gwm(Lcom/android/server/am/cgv;)Lcom/oneplus/config/ConfigObserver;
 
     move-result-object p0
 

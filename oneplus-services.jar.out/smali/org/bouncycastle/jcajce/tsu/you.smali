@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static volatile kBa:Ljava/security/Provider;
+.field private static volatile uBa:Ljava/security/Provider;
 
 
 # direct methods
@@ -50,11 +50,11 @@
 
     :cond_0
     :try_start_1
-    sget-object v1, Lorg/bouncycastle/jcajce/tsu/you;->kBa:Ljava/security/Provider;
+    sget-object v1, Lorg/bouncycastle/jcajce/tsu/you;->uBa:Ljava/security/Provider;
 
     if-eqz v1, :cond_1
 
-    sget-object v1, Lorg/bouncycastle/jcajce/tsu/you;->kBa:Ljava/security/Provider;
+    sget-object v1, Lorg/bouncycastle/jcajce/tsu/you;->uBa:Ljava/security/Provider;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -68,9 +68,9 @@
 
     invoke-direct {v1}, Lorg/bouncycastle/jce/provider/BouncyCastleProvider;-><init>()V
 
-    sput-object v1, Lorg/bouncycastle/jcajce/tsu/you;->kBa:Ljava/security/Provider;
+    sput-object v1, Lorg/bouncycastle/jcajce/tsu/you;->uBa:Ljava/security/Provider;
 
-    sget-object v1, Lorg/bouncycastle/jcajce/tsu/you;->kBa:Ljava/security/Provider;
+    sget-object v1, Lorg/bouncycastle/jcajce/tsu/you;->uBa:Ljava/security/Provider;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

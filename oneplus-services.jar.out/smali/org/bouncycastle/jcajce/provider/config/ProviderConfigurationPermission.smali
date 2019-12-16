@@ -10,27 +10,27 @@
 
 .field private static final ALL:I = 0x3f
 
-.field private static final Ala:Ljava/lang/String; = "all"
-
 .field private static final DH_DEFAULT_PARAMS:I = 0x8
 
 .field private static final EC_IMPLICITLY_CA:I = 0x2
 
+.field private static final Fla:Ljava/lang/String; = "threadlocalecimplicitlyca"
+
+.field private static final Gla:Ljava/lang/String; = "ecimplicitlyca"
+
+.field private static final Hla:Ljava/lang/String; = "threadlocaldhdefaultparams"
+
+.field private static final Ila:Ljava/lang/String; = "dhdefaultparams"
+
+.field private static final Jla:Ljava/lang/String; = "acceptableeccurves"
+
+.field private static final Kla:Ljava/lang/String; = "additionalecparameters"
+
+.field private static final Lla:Ljava/lang/String; = "all"
+
 .field private static final THREAD_LOCAL_DH_DEFAULT_PARAMS:I = 0x4
 
 .field private static final THREAD_LOCAL_EC_IMPLICITLY_CA:I = 0x1
-
-.field private static final ula:Ljava/lang/String; = "threadlocalecimplicitlyca"
-
-.field private static final vla:Ljava/lang/String; = "ecimplicitlyca"
-
-.field private static final wla:Ljava/lang/String; = "threadlocaldhdefaultparams"
-
-.field private static final xla:Ljava/lang/String; = "dhdefaultparams"
-
-.field private static final yla:Ljava/lang/String; = "acceptableeccurves"
-
-.field private static final zla:Ljava/lang/String; = "additionalecparameters"
 
 
 # instance fields
@@ -63,7 +63,7 @@
 
     iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;->actions:Ljava/lang/String;
 
-    invoke-direct {p0, p2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;->Ec(Ljava/lang/String;)I
+    invoke-direct {p0, p2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;->Fc(Ljava/lang/String;)I
 
     move-result p1
 
@@ -72,7 +72,7 @@
     return-void
 .end method
 
-.method private Ec(Ljava/lang/String;)I
+.method private Fc(Ljava/lang/String;)I
     .locals 2
 
     new-instance p0, Ljava/util/StringTokenizer;

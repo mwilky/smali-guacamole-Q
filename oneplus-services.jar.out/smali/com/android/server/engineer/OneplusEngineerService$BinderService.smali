@@ -205,7 +205,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->ywr(II)[B
+    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->qbh(II)[B
 
     move-result-object p0
 
@@ -1426,7 +1426,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->qbh(II)Z
+    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->oif(II)Z
 
     move-result p0
 

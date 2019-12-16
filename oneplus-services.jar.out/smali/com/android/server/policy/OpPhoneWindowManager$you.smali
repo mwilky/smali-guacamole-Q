@@ -15,11 +15,11 @@
 
 
 # static fields
-.field static final G:I = 0x2
+.field static final G:I = 0x1
 
-.field static final H:I = 0x3
+.field static final H:I = 0x2
 
-.field static final v:I = 0x1
+.field static final J:I = 0x3
 
 
 # instance fields

@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/server/am/OnePlusMemoryTracker;Lcom/android/server/am/a;)V
+.method synthetic constructor <init>(Lcom/android/server/am/OnePlusMemoryTracker;Lcom/android/server/am/c;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker$sis;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;)V

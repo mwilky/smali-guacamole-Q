@@ -4,13 +4,13 @@
 
 
 # static fields
-.field private static final OCa:I = 0x2
+.field private static final YCa:I = 0x2
 
 .field public static final q:Ljava/math/BigInteger;
 
 
 # instance fields
-.field protected FCa:Lyou/zta/sis/zta/zta/zta/les;
+.field protected PCa:Lyou/zta/sis/zta/zta/zta/les;
 
 
 # direct methods
@@ -47,7 +47,7 @@
 
     invoke-direct {v0, p0, v1, v1}, Lyou/zta/sis/zta/zta/zta/les;-><init>(Lyou/zta/sis/zta/rtg;Lyou/zta/sis/zta/cno;Lyou/zta/sis/zta/cno;)V
 
-    iput-object v0, p0, Lyou/zta/sis/zta/zta/zta/cgv;->FCa:Lyou/zta/sis/zta/zta/zta/les;
+    iput-object v0, p0, Lyou/zta/sis/zta/zta/zta/cgv;->PCa:Lyou/zta/sis/zta/zta/zta/les;
 
     new-instance v0, Ljava/math/BigInteger;
 
@@ -101,18 +101,18 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->tCa:Ljava/math/BigInteger;
+    iput-object v0, p0, Lyou/zta/sis/zta/rtg;->DCa:Ljava/math/BigInteger;
 
     const/4 v0, 0x2
 
-    iput v0, p0, Lyou/zta/sis/zta/rtg;->oCa:I
+    iput v0, p0, Lyou/zta/sis/zta/rtg;->yCa:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected Ej()Lyou/zta/sis/zta/rtg;
+.method protected Dj()Lyou/zta/sis/zta/rtg;
     .locals 0
 
     new-instance p0, Lyou/zta/sis/zta/zta/zta/cgv;
@@ -147,7 +147,7 @@
 .method public getInfinity()Lyou/zta/sis/zta/wtn;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/cgv;->FCa:Lyou/zta/sis/zta/zta/zta/les;
+    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/cgv;->PCa:Lyou/zta/sis/zta/zta/zta/les;
 
     return-object p0
 .end method
@@ -199,7 +199,7 @@
 
     aget-object v4, p1, v4
 
-    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->ek()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->ck()Lyou/zta/sis/zta/cno;
 
     move-result-object v5
 
@@ -213,7 +213,7 @@
 
     add-int/2addr v3, v6
 
-    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->fk()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v4}, Lyou/zta/sis/zta/wtn;->dk()Lyou/zta/sis/zta/cno;
 
     move-result-object v4
 

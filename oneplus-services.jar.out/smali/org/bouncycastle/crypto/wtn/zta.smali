@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private Iya:I
+.field private Sya:I
 
-.field private Xya:[B
+.field private gza:[B
 
 .field private key:Lorg/bouncycastle/crypto/wtn/cjf;
 
@@ -40,23 +40,23 @@
 
     iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/zta;->nonce:[B
 
-    iput p2, p0, Lorg/bouncycastle/crypto/wtn/zta;->Iya:I
+    iput p2, p0, Lorg/bouncycastle/crypto/wtn/zta;->Sya:I
 
     invoke-static {p4}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/zta;->Xya:[B
+    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/zta;->gza:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public aj()[B
+.method public _i()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/zta;->Xya:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/zta;->gza:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -88,7 +88,7 @@
 .method public you()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/zta;->Iya:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/zta;->Sya:I
 
     return p0
 .end method

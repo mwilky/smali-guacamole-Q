@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method public static Qa(Ljava/lang/String;)[B
+.method public static Ra(Ljava/lang/String;)[B
     .locals 0
 
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
@@ -85,7 +85,7 @@
     return-object p0
 .end method
 
-.method public static Wk()Lorg/bouncycastle/util/qbh;
+.method public static Uk()Lorg/bouncycastle/util/qbh;
     .locals 2
 
     new-instance v0, Lorg/bouncycastle/util/Strings$StringListImpl;

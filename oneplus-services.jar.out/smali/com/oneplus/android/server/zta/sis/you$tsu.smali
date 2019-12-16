@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public kY:Ljava/lang/String;
-
-.field public lY:Ljava/lang/String;
-
-.field public nY:Ljava/lang/String;
-
 .field public packageName:Ljava/lang/String;
+
+.field public wY:Ljava/lang/String;
+
+.field public xY:Ljava/lang/String;
+
+.field public yY:Ljava/lang/String;
 
 
 # direct methods

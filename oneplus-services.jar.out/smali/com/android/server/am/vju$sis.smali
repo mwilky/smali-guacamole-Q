@@ -189,7 +189,7 @@
 
     move-result-object v0
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/vju$sis;->gwm(Lcom/android/server/am/ProcessRecord;)Z
+    invoke-direct {v0, p0}, Lcom/android/server/am/vju$sis;->vdb(Lcom/android/server/am/ProcessRecord;)Z
 
     move-result p0
 
@@ -215,7 +215,7 @@
     return-object v0
 .end method
 
-.method private gwm(Lcom/android/server/am/ProcessRecord;)Z
+.method private vdb(Lcom/android/server/am/ProcessRecord;)Z
     .locals 2
 
     iget p0, p1, Lcom/android/server/am/ProcessRecord;->curAdj:I

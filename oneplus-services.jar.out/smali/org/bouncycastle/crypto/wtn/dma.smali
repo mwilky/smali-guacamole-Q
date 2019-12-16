@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static final vza:I = 0x1
+.field public static final Fza:I = 0x1
 
-.field public static final wza:I = 0x2
+.field public static final Gza:I = 0x2
 
 
 # instance fields
-.field private final Gva:I
+.field private final Qva:I
 
-.field private final Hya:I
+.field private final Rya:I
 
-.field private final Kka:Ljava/security/SecureRandom;
+.field private final Vka:Ljava/security/SecureRandom;
 
 .field private final l:I
 
@@ -51,37 +51,37 @@
 
     iput p2, p0, Lorg/bouncycastle/crypto/wtn/dma;->n:I
 
-    iput p3, p0, Lorg/bouncycastle/crypto/wtn/dma;->Gva:I
+    iput p3, p0, Lorg/bouncycastle/crypto/wtn/dma;->Qva:I
 
-    iput p5, p0, Lorg/bouncycastle/crypto/wtn/dma;->Hya:I
+    iput p5, p0, Lorg/bouncycastle/crypto/wtn/dma;->Rya:I
 
-    iput-object p4, p0, Lorg/bouncycastle/crypto/wtn/dma;->Kka:Ljava/security/SecureRandom;
+    iput-object p4, p0, Lorg/bouncycastle/crypto/wtn/dma;->Vka:Ljava/security/SecureRandom;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Ai()I
+.method public Qi()Ljava/security/SecureRandom;
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->n:I
-
-    return p0
-.end method
-
-.method public Ri()Ljava/security/SecureRandom;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->Kka:Ljava/security/SecureRandom;
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->Vka:Ljava/security/SecureRandom;
 
     return-object p0
+.end method
+
+.method public fj()I
+    .locals 0
+
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->Rya:I
+
+    return p0
 .end method
 
 .method public getCertainty()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->Gva:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->Qva:I
 
     return p0
 .end method
@@ -94,10 +94,10 @@
     return p0
 .end method
 
-.method public gj()I
+.method public zi()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->Hya:I
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/dma;->n:I
 
     return p0
 .end method

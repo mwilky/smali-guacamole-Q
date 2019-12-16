@@ -23,17 +23,17 @@
 
 
 # instance fields
-.field private Oh:Lcom/android/server/am/igw;
+.field private Ph:Lcom/android/server/am/igw;
 
-.field private Ph:J
-
-.field private Qh:Z
+.field private Qh:J
 
 .field private Rh:Z
 
 .field private Sh:Z
 
 .field private Th:Z
+
+.field private Uh:Z
 
 .field private info:Landroid/content/pm/ApplicationInfo;
 
@@ -68,25 +68,25 @@
 
     iput-wide v0, p0, Lcom/android/server/am/qbh;->launchCount:J
 
-    iput-wide v0, p0, Lcom/android/server/am/qbh;->Ph:J
+    iput-wide v0, p0, Lcom/android/server/am/qbh;->Qh:J
 
     const/4 v2, 0x0
 
-    iput-boolean v2, p0, Lcom/android/server/am/qbh;->Qh:Z
-
     iput-boolean v2, p0, Lcom/android/server/am/qbh;->Rh:Z
-
-    iput-wide v0, p0, Lcom/android/server/am/qbh;->startTime:J
 
     iput-boolean v2, p0, Lcom/android/server/am/qbh;->Sh:Z
 
+    iput-wide v0, p0, Lcom/android/server/am/qbh;->startTime:J
+
     iput-boolean v2, p0, Lcom/android/server/am/qbh;->Th:Z
+
+    iput-boolean v2, p0, Lcom/android/server/am/qbh;->Uh:Z
 
     iput-object p1, p0, Lcom/android/server/am/qbh;->packageName:Ljava/lang/String;
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lcom/android/server/am/qbh;->Sh:Z
+    iput-boolean p1, p0, Lcom/android/server/am/qbh;->Th:Z
 
     iput v2, p0, Lcom/android/server/am/qbh;->pid:I
 
@@ -95,7 +95,7 @@
     return-void
 .end method
 
-.method private Kl()V
+.method private Il()V
     .locals 4
 
     iget-object v0, p0, Lcom/android/server/am/qbh;->mHelper:Lcom/android/server/am/wtn;
@@ -106,7 +106,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/am/qbh;->Th:Z
+    iput-boolean v0, p0, Lcom/android/server/am/qbh;->Uh:Z
 
     iget-object v0, p0, Lcom/android/server/am/qbh;->mHelper:Lcom/android/server/am/wtn;
 
@@ -124,7 +124,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/am/qbh;->Sh:Z
+    iput-boolean v0, p0, Lcom/android/server/am/qbh;->Th:Z
 
     return-void
 .end method
@@ -148,25 +148,25 @@
 .method static synthetic zta(Lcom/android/server/am/qbh;)J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/am/qbh;->Ph:J
+    iget-wide v0, p0, Lcom/android/server/am/qbh;->Qh:J
 
     return-wide v0
 .end method
 
 
 # virtual methods
-.method public Ia()J
+.method public Ha()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/am/qbh;->Ph:J
+    iget-wide v0, p0, Lcom/android/server/am/qbh;->Qh:J
 
     return-wide v0
 .end method
 
-.method public Ja()Z
+.method public Ia()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object p0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     if-eqz p0, :cond_0
 
@@ -187,30 +187,22 @@
     return p0
 .end method
 
-.method public Ka()Z
+.method public Ja()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/server/am/qbh;->Sh:Z
+    iget-boolean v0, p0, Lcom/android/server/am/qbh;->Th:Z
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/am/qbh;->Kl()V
+    invoke-direct {p0}, Lcom/android/server/am/qbh;->Il()V
 
     :cond_0
-    iget-boolean p0, p0, Lcom/android/server/am/qbh;->Th:Z
+    iget-boolean p0, p0, Lcom/android/server/am/qbh;->Uh:Z
 
     return p0
 .end method
 
-.method public La()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/am/qbh;->Qh:Z
-
-    return p0
-.end method
-
-.method public Ma()Z
+.method public Ka()Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/am/qbh;->Rh:Z
@@ -218,22 +210,30 @@
     return p0
 .end method
 
-.method public Na()V
-    .locals 1
+.method public La()Z
+    .locals 0
 
-    const/4 v0, 0x1
+    iget-boolean p0, p0, Lcom/android/server/am/qbh;->Sh:Z
 
-    iput-boolean v0, p0, Lcom/android/server/am/qbh;->Rh:Z
-
-    return-void
+    return p0
 .end method
 
-.method public Oa()V
+.method public Ma()V
     .locals 1
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/am/qbh;->Sh:Z
+
+    return-void
+.end method
+
+.method public Na()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/android/server/am/qbh;->Th:Z
 
     return-void
 .end method
@@ -280,17 +280,17 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {v0, p0}, Lcom/android/server/am/igw;->you(Landroid/os/IBinder$DeathRecipient;)V
 
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {v0}, Lcom/android/server/am/igw;->destroy()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iput-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     monitor-exit p0
 
@@ -309,7 +309,7 @@
 .method public bio(J)V
     .locals 0
 
-    iput-wide p1, p0, Lcom/android/server/am/qbh;->Ph:J
+    iput-wide p1, p0, Lcom/android/server/am/qbh;->Qh:J
 
     return-void
 .end method
@@ -324,7 +324,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     if-nez v0, :cond_0
 
@@ -333,17 +333,17 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {v0, p0}, Lcom/android/server/am/igw;->you(Landroid/os/IBinder$DeathRecipient;)V
 
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {v0}, Lcom/android/server/am/igw;->destroy()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iput-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     monitor-exit p0
 
@@ -362,7 +362,7 @@
 .method public detach()Lcom/android/server/am/igw;
     .locals 2
 
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     const/4 v1, 0x0
 
@@ -373,7 +373,7 @@
     :cond_0
     invoke-virtual {v0, p0}, Lcom/android/server/am/igw;->you(Landroid/os/IBinder$DeathRecipient;)V
 
-    iput-object v1, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iput-object v1, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     const/4 v1, 0x0
 
@@ -401,7 +401,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/qbh;->Ph:J
+    iget-wide v1, p0, Lcom/android/server/am/qbh;->Qh:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -435,11 +435,11 @@
 .method public getInfo()Landroid/content/pm/ApplicationInfo;
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/server/am/qbh;->Sh:Z
+    iget-boolean v0, p0, Lcom/android/server/am/qbh;->Th:Z
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/am/qbh;->Kl()V
+    invoke-direct {p0}, Lcom/android/server/am/qbh;->Il()V
 
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/qbh;->info:Landroid/content/pm/ApplicationInfo;
@@ -510,11 +510,11 @@
 
     sub-long/2addr v0, v2
 
-    iget-wide v2, p0, Lcom/android/server/am/qbh;->Ph:J
+    iget-wide v2, p0, Lcom/android/server/am/qbh;->Qh:J
 
     add-long/2addr v2, v0
 
-    iput-wide v2, p0, Lcom/android/server/am/qbh;->Ph:J
+    iput-wide v2, p0, Lcom/android/server/am/qbh;->Qh:J
 
     return-void
 .end method
@@ -550,15 +550,15 @@
 .method public zgw(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/am/qbh;->Qh:Z
+    iput-boolean p1, p0, Lcom/android/server/am/qbh;->Rh:Z
 
-    iget-boolean p1, p0, Lcom/android/server/am/qbh;->Qh:Z
+    iget-boolean p1, p0, Lcom/android/server/am/qbh;->Rh:Z
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lcom/android/server/am/qbh;->Rh:Z
+    iput-boolean p1, p0, Lcom/android/server/am/qbh;->Sh:Z
 
     :cond_0
     return-void
@@ -567,7 +567,7 @@
 .method public zta(Lcom/android/server/am/igw;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     if-eqz v0, :cond_0
 
@@ -577,26 +577,26 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {v0, p0}, Lcom/android/server/am/igw;->you(Landroid/os/IBinder$DeathRecipient;)V
 
-    iget-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {v0}, Lcom/android/server/am/igw;->destroy()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iput-object v0, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     :cond_0
-    iput-object p1, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iput-object p1, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
-    iget-object p1, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object p1, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {p1, p0}, Lcom/android/server/am/igw;->zta(Landroid/os/IBinder$DeathRecipient;)V
 
-    iget-object p1, p0, Lcom/android/server/am/qbh;->Oh:Lcom/android/server/am/igw;
+    iget-object p1, p0, Lcom/android/server/am/qbh;->Ph:Lcom/android/server/am/igw;
 
     invoke-virtual {p1}, Lcom/android/server/am/igw;->getPid()I
 
@@ -607,7 +607,7 @@
     return-void
 .end method
 
-.method public zta(Ljava/io/PrintWriter;Lcom/android/server/am/r$you;)V
+.method public zta(Ljava/io/PrintWriter;Lcom/android/server/am/t$you;)V
     .locals 2
 
     iget v0, p0, Lcom/android/server/am/qbh;->pid:I
@@ -625,7 +625,7 @@
 
     invoke-static {v1, v0}, Landroid/os/Debug;->getMemoryInfo(ILandroid/os/Debug$MemoryInfo;)V
 
-    invoke-virtual {p2, v0}, Lcom/android/server/am/r$you;->zta(Landroid/os/Debug$MemoryInfo;)V
+    invoke-virtual {p2, v0}, Lcom/android/server/am/t$you;->zta(Landroid/os/Debug$MemoryInfo;)V
 
     new-instance p2, Ljava/lang/StringBuilder;
 

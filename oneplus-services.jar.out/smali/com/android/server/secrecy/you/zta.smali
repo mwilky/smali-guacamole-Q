@@ -22,9 +22,17 @@
 # instance fields
 .field private final ATTR_PACKAGE:Ljava/lang/String;
 
-.field private final NK:Ljava/lang/String;
+.field private final EA:Ljava/lang/String;
 
-.field private final PK:Ljava/util/ArrayList;
+.field private final START_TAG:Ljava/lang/String;
+
+.field private final TAG:Ljava/lang/String;
+
+.field private final TAG_ACTIVITY:Ljava/lang/Object;
+
+.field private final XK:Ljava/lang/String;
+
+.field private final YK:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -33,14 +41,6 @@
         }
     .end annotation
 .end field
-
-.field private final START_TAG:Ljava/lang/String;
-
-.field private final TAG:Ljava/lang/String;
-
-.field private final TAG_ACTIVITY:Ljava/lang/Object;
-
-.field private final vA:Ljava/lang/String;
 
 
 # direct methods
@@ -71,7 +71,7 @@
 
     const-string v0, "system/etc/activity_config.xml"
 
-    iput-object v0, p0, Lcom/android/server/secrecy/you/zta;->NK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/secrecy/you/zta;->XK:Ljava/lang/String;
 
     const-string v0, "activityconfig"
 
@@ -87,13 +87,13 @@
 
     const-string v0, "className"
 
-    iput-object v0, p0, Lcom/android/server/secrecy/you/zta;->vA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/secrecy/you/zta;->EA:Ljava/lang/String;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -222,7 +222,7 @@
 
     invoke-direct {v4, p0, v1, v3}, Lcom/android/server/secrecy/you/zta$zta;-><init>(Lcom/android/server/secrecy/you/zta;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -321,7 +321,7 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object p0, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
@@ -416,7 +416,7 @@
 
     :goto_0
     :try_start_0
-    iget-object v3, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -424,7 +424,7 @@
 
     if-ge v2, v3, :cond_2
 
-    iget-object v3, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -498,7 +498,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -512,7 +512,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -602,7 +602,7 @@
     monitor-enter v2
 
     :try_start_0
-    iget-object p0, p0, Lcom/android/server/secrecy/you/zta;->PK:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/secrecy/you/zta;->YK:Ljava/util/ArrayList;
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

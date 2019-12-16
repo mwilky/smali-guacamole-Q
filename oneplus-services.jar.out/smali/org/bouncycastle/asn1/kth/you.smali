@@ -4,21 +4,21 @@
 
 
 # static fields
-.field public static final Mna:I = 0x80
+.field public static final Wna:I = 0x80
 
-.field public static final Nna:I = 0x40
+.field public static final Xna:I = 0x40
 
-.field public static final Ona:I = 0x20
+.field public static final Yna:I = 0x20
 
-.field public static final Pna:I = 0x10
+.field public static final Zna:I = 0x10
 
-.field public static final Qna:I = 0x8
+.field public static final _na:I = 0x8
 
-.field public static final Rna:I = 0x4
+.field public static final aoa:I = 0x4
 
-.field public static final Sna:I = 0x2
+.field public static final boa:I = 0x2
 
-.field public static final Tna:I = 0x1
+.field public static final coa:I = 0x1
 
 
 # direct methods
@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/sis;->qg()I
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/sis;->pg()I
 
     move-result p1
 

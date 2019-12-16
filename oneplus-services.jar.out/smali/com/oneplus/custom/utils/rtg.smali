@@ -4,19 +4,25 @@
 
 
 # static fields
-.field private static final Gfa:Ljava/lang/String; = "/sys/module/param_read_write/parameters/cust_flag"
+.field private static final PARAM_BACKCOVER_COLOR:I = 0x2
 
-.field private static final Hfa:Ljava/lang/String; = "/sys/module/param_read_write/parameters/backcover_color"
+.field private static final PARAM_CUST_FLAG:I = 0x4
 
-.field private static final Ifa:Ljava/lang/String; = "com.oem.os.IParamService$Stub"
+.field private static final Rfa:Ljava/lang/String; = "/sys/module/param_read_write/parameters/cust_flag"
 
-.field private static final Jfa:Ljava/lang/String; = "com.oneplus.os.IParamService$Stub"
+.field private static final Sfa:Ljava/lang/String; = "/sys/module/param_read_write/parameters/backcover_color"
 
-.field private static final Kfa:I = 0x18
+.field private static final TAG:Ljava/lang/String; = "ParamReader"
 
-.field private static final Lfa:I = 0x1a
+.field private static final Tfa:Ljava/lang/String; = "com.oem.os.IParamService$Stub"
 
-.field private static Mfa:Ljava/util/ArrayList; = null
+.field private static final Ufa:Ljava/lang/String; = "com.oneplus.os.IParamService$Stub"
+
+.field private static final Vfa:I = 0x18
+
+.field private static final Wfa:I = 0x1a
+
+.field private static Xfa:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -26,13 +32,7 @@
     .end annotation
 .end field
 
-.field private static Nfa:Z = false
-
-.field private static final PARAM_BACKCOVER_COLOR:I = 0x2
-
-.field private static final PARAM_CUST_FLAG:I = 0x4
-
-.field private static final TAG:Ljava/lang/String; = "ParamReader"
+.field private static Yfa:Z
 
 
 # direct methods
@@ -43,11 +43,11 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/oneplus/custom/utils/rtg;->Mfa:Ljava/util/ArrayList;
+    sput-object v0, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/oneplus/custom/utils/rtg;->Nfa:Z
+    sput-boolean v0, Lcom/oneplus/custom/utils/rtg;->Yfa:Z
 
     return-void
 .end method
@@ -896,7 +896,7 @@
 .method static synthetic ssp(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 0
 
-    sput-object p0, Lcom/oneplus/custom/utils/rtg;->Mfa:Ljava/util/ArrayList;
+    sput-object p0, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -904,12 +904,12 @@
 .method static synthetic vju(Z)Z
     .locals 0
 
-    sput-boolean p0, Lcom/oneplus/custom/utils/rtg;->Nfa:Z
+    sput-boolean p0, Lcom/oneplus/custom/utils/rtg;->Yfa:Z
 
     return p0
 .end method
 
-.method public static xf()[B
+.method public static wf()[B
     .locals 6
 
     const-string v0, "ParamReader"
@@ -950,7 +950,7 @@
 
     invoke-virtual {v1, v3, v4, v5}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
-    sget-object v1, Lcom/oneplus/custom/utils/rtg;->Mfa:Ljava/util/ArrayList;
+    sget-object v1, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -961,7 +961,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Mfa:Ljava/util/ArrayList;
+    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -969,7 +969,7 @@
 
     if-ge v3, v4, :cond_2
 
-    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Mfa:Ljava/util/ArrayList;
+    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -986,7 +986,7 @@
     goto :goto_1
 
     :cond_1
-    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Mfa:Ljava/util/ArrayList;
+    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1048,7 +1048,7 @@
     return-object v2
 .end method
 
-.method public static yf()I
+.method public static xf()I
     .locals 9
 
     const-string v0, "ParamReader"

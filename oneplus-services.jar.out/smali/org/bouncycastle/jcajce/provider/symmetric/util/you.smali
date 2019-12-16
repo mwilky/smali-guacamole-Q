@@ -40,7 +40,7 @@
     throw p0
 .end method
 
-.method protected na(Ljava/lang/String;)Z
+.method protected oa(Ljava/lang/String;)Z
     .locals 0
 
     if-eqz p1, :cond_1

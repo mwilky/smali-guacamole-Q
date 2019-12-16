@@ -17,15 +17,17 @@
 
 
 # static fields
-.field private static final Ae:I = 0x1
+.field private static final Ae:I = 0x0
 
-.field private static final Be:I = 0x2
+.field private static final Be:I = 0x1
 
 .field private static final CMD_FETCH_CONFIG:I = 0x1
 
-.field private static final Ce:Ljava/lang/String; = "BlacklistVideoEnhancerConfig"
+.field private static final Ce:I = 0x2
 
 .field private static final DBG:Z
+
+.field private static final De:Ljava/lang/String; = "BlacklistVideoEnhancerConfig"
 
 .field private static final TAG:Ljava/lang/String; = "CommonFrontMonitor"
 
@@ -33,30 +35,26 @@
 
 .field private static final VALUE_ON:Ljava/lang/String; = "1"
 
-.field private static final re:I = 0x2
-
 .field private static sInstance:Lcom/android/server/fto; = null
 
-.field private static final se:I = 0x3
+.field private static final se:I = 0x2
 
-.field private static final te:Ljava/lang/String; = "op_video_enhancer"
+.field private static final te:I = 0x3
 
-.field private static final ue:Landroid/net/Uri;
+.field private static final ue:Ljava/lang/String; = "op_video_enhancer"
 
-.field private static final ve:Ljava/lang/String; = "oneplus.action.front_package_changed"
+.field private static final ve:Landroid/net/Uri;
 
-.field private static final we:Ljava/lang/String; = "com.heytap.speechassist"
+.field private static final we:Ljava/lang/String; = "oneplus.action.front_package_changed"
 
-.field private static final xe:Ljava/lang/String; = "driving_mode_state"
+.field private static final xe:Ljava/lang/String; = "com.heytap.speechassist"
 
-.field private static final ye:Landroid/net/Uri;
+.field private static final ye:Ljava/lang/String; = "driving_mode_state"
 
-.field private static final ze:I
+.field private static final ze:Landroid/net/Uri;
 
 
 # instance fields
-.field private ke:Landroid/database/ContentObserver;
-
 .field private le:Landroid/database/ContentObserver;
 
 .field private mContext:Landroid/content/Context;
@@ -65,15 +63,17 @@
 
 .field private final mLock:Ljava/lang/Object;
 
-.field private me:Z
+.field private me:Landroid/database/ContentObserver;
 
 .field private ne:Z
 
 .field private oe:Z
 
-.field private pe:Lcom/oneplus/config/ConfigObserver;
+.field private pe:Z
 
-.field private qe:Ljava/util/ArrayList;
+.field private qe:Lcom/oneplus/config/ConfigObserver;
+
+.field private re:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -102,7 +102,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/fto;->ue:Landroid/net/Uri;
+    sput-object v0, Lcom/android/server/fto;->ve:Landroid/net/Uri;
 
     const-string v0, "driving_mode_state"
 
@@ -110,7 +110,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/android/server/fto;->ye:Landroid/net/Uri;
+    sput-object v0, Lcom/android/server/fto;->ze:Landroid/net/Uri;
 
     new-instance v0, Lcom/android/server/fto;
 
@@ -132,17 +132,17 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/fto;->me:Z
-
     iput-boolean v0, p0, Lcom/android/server/fto;->ne:Z
 
     iput-boolean v0, p0, Lcom/android/server/fto;->oe:Z
+
+    iput-boolean v0, p0, Lcom/android/server/fto;->pe:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/android/server/fto;->qe:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/android/server/fto;->re:Ljava/util/ArrayList;
 
     new-instance v0, Ljava/lang/Object;
 
@@ -187,7 +187,7 @@
     return-object v0
 .end method
 
-.method private ml()V
+.method private kl()V
     .locals 5
 
     iget-object v0, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
@@ -198,7 +198,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lcom/android/server/fto;->oe:Z
+    iget-boolean v1, p0, Lcom/android/server/fto;->pe:Z
 
     if-nez v1, :cond_1
 
@@ -259,7 +259,7 @@
     return-void
 .end method
 
-.method private nl()Z
+.method private ll()Z
     .locals 3
 
     const/4 v0, 0x0
@@ -296,7 +296,7 @@
     return v0
 .end method
 
-.method private ol()Z
+.method private ml()Z
     .locals 2
 
     iget-object p0, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
@@ -392,7 +392,7 @@
     return-void
 
     :cond_0
-    iget-object v2, p0, Lcom/android/server/fto;->qe:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/android/server/fto;->re:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
@@ -418,7 +418,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/android/server/fto;->qe:Ljava/util/ArrayList;
+    iget-object v5, p0, Lcom/android/server/fto;->re:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -452,11 +452,11 @@
     goto :goto_0
 
     :cond_2
-    iget-boolean p1, p0, Lcom/android/server/fto;->oe:Z
+    iget-boolean p1, p0, Lcom/android/server/fto;->pe:Z
 
     if-nez p1, :cond_3
 
-    iput-boolean v3, p0, Lcom/android/server/fto;->oe:Z
+    iput-boolean v3, p0, Lcom/android/server/fto;->pe:Z
 
     sget-boolean p1, Lcom/android/server/fto;->DBG:Z
 
@@ -469,7 +469,7 @@
     :goto_1
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/fto;->qe:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/fto;->re:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
 
@@ -500,11 +500,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-boolean p1, p0, Lcom/android/server/fto;->oe:Z
+    iget-boolean p1, p0, Lcom/android/server/fto;->pe:Z
 
     if-nez p1, :cond_3
 
-    iput-boolean v3, p0, Lcom/android/server/fto;->oe:Z
+    iput-boolean v3, p0, Lcom/android/server/fto;->pe:Z
 
     sget-boolean p1, Lcom/android/server/fto;->DBG:Z
 
@@ -526,11 +526,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget-boolean p1, p0, Lcom/android/server/fto;->oe:Z
+    iget-boolean p1, p0, Lcom/android/server/fto;->pe:Z
 
     if-nez p1, :cond_3
 
-    iput-boolean v3, p0, Lcom/android/server/fto;->oe:Z
+    iput-boolean v3, p0, Lcom/android/server/fto;->pe:Z
 
     sget-boolean p1, Lcom/android/server/fto;->DBG:Z
 
@@ -547,11 +547,11 @@
     return-void
 
     :goto_3
-    iget-boolean v2, p0, Lcom/android/server/fto;->oe:Z
+    iget-boolean v2, p0, Lcom/android/server/fto;->pe:Z
 
     if-nez v2, :cond_4
 
-    iput-boolean v3, p0, Lcom/android/server/fto;->oe:Z
+    iput-boolean v3, p0, Lcom/android/server/fto;->pe:Z
 
     sget-boolean v2, Lcom/android/server/fto;->DBG:Z
 
@@ -563,7 +563,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/fto;->qe:Ljava/util/ArrayList;
+    iget-object p0, p0, Lcom/android/server/fto;->re:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
 
@@ -584,7 +584,7 @@
 .method static synthetic rtg(Lcom/android/server/fto;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/fto;->ne:Z
+    iget-boolean p0, p0, Lcom/android/server/fto;->oe:Z
 
     return p0
 .end method
@@ -592,7 +592,7 @@
 .method static synthetic sis(Lcom/android/server/fto;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/fto;->me:Z
+    iget-boolean p0, p0, Lcom/android/server/fto;->ne:Z
 
     return p0
 .end method
@@ -608,7 +608,7 @@
 .method static synthetic tsu(Lcom/android/server/fto;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ol()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ml()Z
 
     move-result p0
 
@@ -618,7 +618,7 @@
 .method static synthetic you(Lcom/android/server/fto;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/fto;->nl()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ll()Z
 
     move-result p0
 
@@ -628,7 +628,7 @@
 .method static synthetic you(Lcom/android/server/fto;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/fto;->ne:Z
+    iput-boolean p1, p0, Lcom/android/server/fto;->oe:Z
 
     return p1
 .end method
@@ -660,7 +660,7 @@
 .method static synthetic zta(Lcom/android/server/fto;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/fto;->me:Z
+    iput-boolean p1, p0, Lcom/android/server/fto;->ne:Z
 
     return p1
 .end method
@@ -675,7 +675,7 @@
     monitor-enter p2
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/fto;->nl()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ll()Z
 
     move-result p3
 
@@ -714,13 +714,13 @@
 
     if-eqz p4, :cond_2
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ol()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ml()Z
 
     move-result p4
 
     if-eqz p4, :cond_2
 
-    iget-object p4, p0, Lcom/android/server/fto;->qe:Ljava/util/ArrayList;
+    iget-object p4, p0, Lcom/android/server/fto;->re:Ljava/util/ArrayList;
 
     invoke-virtual {p4, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -766,7 +766,7 @@
     monitor-enter p1
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/fto;->nl()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ll()Z
 
     move-result v0
 
@@ -785,7 +785,7 @@
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iget-boolean v0, p0, Lcom/android/server/fto;->me:Z
+    iget-boolean v0, p0, Lcom/android/server/fto;->ne:Z
 
     if-nez v0, :cond_2
 
@@ -795,7 +795,7 @@
 
     invoke-virtual {v0, p0}, Lcom/android/server/OnePlusUtil$zta;->zta(Lcom/android/server/OnePlusUtil$zta$you;)V
 
-    iput-boolean v1, p0, Lcom/android/server/fto;->me:Z
+    iput-boolean v1, p0, Lcom/android/server/fto;->ne:Z
 
     :cond_2
     new-array v0, v1, [I
@@ -812,7 +812,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ol()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ml()Z
 
     move-result v0
 
@@ -831,7 +831,7 @@
     invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
-    iget-boolean v0, p0, Lcom/android/server/fto;->ne:Z
+    iget-boolean v0, p0, Lcom/android/server/fto;->oe:Z
 
     if-nez v0, :cond_4
 
@@ -841,7 +841,7 @@
 
     invoke-virtual {v0, p0}, Lcom/android/server/OnePlusUtil$zta;->zta(Lcom/android/server/OnePlusUtil$zta$you;)V
 
-    iput-boolean v1, p0, Lcom/android/server/fto;->ne:Z
+    iput-boolean v1, p0, Lcom/android/server/fto;->oe:Z
 
     :cond_4
     monitor-exit p1
@@ -856,7 +856,7 @@
 
     invoke-direct {p1, p0, v0, v4}, Lcom/android/server/fto$you;-><init>(Lcom/android/server/fto;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/android/server/fto;->le:Landroid/database/ContentObserver;
+    iput-object p1, p0, Lcom/android/server/fto;->me:Landroid/database/ContentObserver;
 
     iget-object p1, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
 
@@ -864,9 +864,9 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/android/server/fto;->ye:Landroid/net/Uri;
+    sget-object v0, Lcom/android/server/fto;->ze:Landroid/net/Uri;
 
-    iget-object v4, p0, Lcom/android/server/fto;->le:Landroid/database/ContentObserver;
+    iget-object v4, p0, Lcom/android/server/fto;->me:Landroid/database/ContentObserver;
 
     const/4 v5, -0x1
 
@@ -896,9 +896,9 @@
 
     invoke-direct {p1, v0, v1, v2, v4}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/android/server/fto;->pe:Lcom/oneplus/config/ConfigObserver;
+    iput-object p1, p0, Lcom/android/server/fto;->qe:Lcom/oneplus/config/ConfigObserver;
 
-    iget-object p1, p0, Lcom/android/server/fto;->pe:Lcom/oneplus/config/ConfigObserver;
+    iget-object p1, p0, Lcom/android/server/fto;->qe:Lcom/oneplus/config/ConfigObserver;
 
     invoke-virtual {p1}, Lcom/oneplus/config/ConfigObserver;->register()V
 
@@ -910,7 +910,7 @@
 
     invoke-direct {p1, p0, v0, v1}, Lcom/android/server/fto$sis;-><init>(Lcom/android/server/fto;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/android/server/fto;->ke:Landroid/database/ContentObserver;
+    iput-object p1, p0, Lcom/android/server/fto;->le:Landroid/database/ContentObserver;
 
     iget-object p1, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
 
@@ -918,14 +918,14 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/android/server/fto;->ue:Landroid/net/Uri;
+    sget-object v0, Lcom/android/server/fto;->ve:Landroid/net/Uri;
 
-    iget-object v1, p0, Lcom/android/server/fto;->ke:Landroid/database/ContentObserver;
+    iget-object v1, p0, Lcom/android/server/fto;->le:Landroid/database/ContentObserver;
 
     invoke-virtual {p1, v0, v3, v1, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     :cond_5
-    invoke-direct {p0}, Lcom/android/server/fto;->ml()V
+    invoke-direct {p0}, Lcom/android/server/fto;->kl()V
 
     return-void
 

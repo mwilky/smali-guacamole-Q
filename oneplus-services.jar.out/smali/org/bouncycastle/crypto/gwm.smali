@@ -161,7 +161,7 @@
     return-object p0
 .end method
 
-.method public abstract gwm(II)Lorg/bouncycastle/crypto/kth;
+.method public abstract ugm(II)Lorg/bouncycastle/crypto/kth;
 .end method
 
 .method public zta([B[BI)V

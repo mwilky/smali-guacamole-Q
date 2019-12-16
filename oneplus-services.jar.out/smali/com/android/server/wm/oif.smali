@@ -34,7 +34,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
-    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->access$000()Z
+    invoke-static {}, Lcom/android/server/wm/OpPowerConsumpStats;->access$100()Z
 
     move-result p1
 
@@ -79,7 +79,7 @@
 
     iget-object p2, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->zta(Lcom/android/server/wm/OpPowerConsumpStats;)Z
+    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->ssp(Lcom/android/server/wm/OpPowerConsumpStats;)Z
 
     move-result p2
 
@@ -91,7 +91,7 @@
 
     const-string p2, "BaseTimer not yet timing, return"
 
-    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->access$200(Ljava/lang/String;)V
+    invoke-static {p2}, Lcom/android/server/wm/OpPowerConsumpStats;->ga(Ljava/lang/String;)V
 
     new-array p2, v2, [I
 
@@ -115,7 +115,7 @@
 
     iget-object p1, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->gck(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$qbh;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->ugm(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$qbh;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->gck(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$qbh;
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->ugm(Lcom/android/server/wm/OpPowerConsumpStats;)Lcom/android/server/wm/OpPowerConsumpStats$qbh;
 
     move-result-object p0
 
@@ -143,11 +143,11 @@
 
     iget-object p1, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->vdb(Lcom/android/server/wm/OpPowerConsumpStats;)V
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->hmo(Lcom/android/server/wm/OpPowerConsumpStats;)V
 
     iget-object p1, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->fto(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->lqr(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -162,7 +162,7 @@
     :goto_1
     iget-object p1, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->fto(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->lqr(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 
@@ -171,7 +171,7 @@
     :cond_4
     iget-object p0, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->fto(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p0}, Lcom/android/server/wm/OpPowerConsumpStats;->lqr(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p0
 
@@ -219,7 +219,7 @@
     :goto_2
     iget-object p1, p0, Lcom/android/server/wm/oif;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->fto(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
+    invoke-static {p1}, Lcom/android/server/wm/OpPowerConsumpStats;->lqr(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/os/Handler;
 
     move-result-object p1
 

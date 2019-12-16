@@ -14,10 +14,10 @@
 
 
 # virtual methods
-.method protected Aa(Ljava/lang/String;)Z
+.method protected Ba(Ljava/lang/String;)Z
     .locals 0
 
-    invoke-static {p1}, Lorg/bouncycastle/asn1/F;->ua(Ljava/lang/String;)Z
+    invoke-static {p1}, Lorg/bouncycastle/asn1/F;->va(Ljava/lang/String;)Z
 
     move-result p0
 

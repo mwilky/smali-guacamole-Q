@@ -13,17 +13,17 @@
 
 
 # static fields
-.field private static final TA:Ljava/lang/String; = "sys_engineer_config_list"
-
 .field private static final TAG:Ljava/lang/String; = "you"
 
-.field private static final UA:Ljava/lang/String; = "/data/engineermode/sys_engineer_config_list.xml"
+.field private static final aB:Ljava/lang/String; = "sys_engineer_config_list"
 
-.field private static final VA:Ljava/lang/String; = "/system/etc/sys_engineer_config_list.xml"
+.field private static final bB:Ljava/lang/String; = "/data/engineermode/sys_engineer_config_list.xml"
+
+.field private static final cB:Ljava/lang/String; = "/system/etc/sys_engineer_config_list.xml"
 
 
 # instance fields
-.field private final kA:Lcom/android/server/engineer/you$zta;
+.field private final tA:Lcom/android/server/engineer/you$zta;
 
 
 # direct methods
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/engineer/bvj;->zta(Lcom/android/server/engineer/bvj$zta;Lcom/android/server/engineer/bvj$zta;)V
 
-    iput-object p2, p0, Lcom/android/server/engineer/you;->kA:Lcom/android/server/engineer/you$zta;
+    iput-object p2, p0, Lcom/android/server/engineer/you;->tA:Lcom/android/server/engineer/you$zta;
 
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/engineer/bvj;->init()V
@@ -87,7 +87,7 @@
 
     invoke-super {p0}, Lcom/android/server/engineer/bvj;->Bc()V
 
-    iget-object p0, p0, Lcom/android/server/engineer/you;->kA:Lcom/android/server/engineer/you$zta;
+    iget-object p0, p0, Lcom/android/server/engineer/you;->tA:Lcom/android/server/engineer/you$zta;
 
     if-eqz p0, :cond_0
 

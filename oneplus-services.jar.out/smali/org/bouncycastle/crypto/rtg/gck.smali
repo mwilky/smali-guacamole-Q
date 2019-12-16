@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private key:Lorg/bouncycastle/crypto/wtn/veq;
+.field private Bva:Z
 
-.field private rva:Z
+.field private key:Lorg/bouncycastle/crypto/wtn/veq;
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     if-ne p3, v0, :cond_1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/gck;->rva:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/gck;->Bva:Z
 
     if-eqz v0, :cond_0
 
@@ -120,7 +120,7 @@
 
     move-result v0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/crypto/rtg/gck;->rva:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/crypto/rtg/gck;->Bva:Z
 
     add-int/lit8 v0, v0, 0x7
 
@@ -147,7 +147,7 @@
 
     move-result v0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/crypto/rtg/gck;->rva:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/crypto/rtg/gck;->Bva:Z
 
     add-int/lit8 v0, v0, 0x7
 
@@ -170,7 +170,7 @@
 
     move-result-object p1
 
-    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/gck;->rva:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/crypto/rtg/gck;->Bva:Z
 
     const/4 v1, 0x1
 
@@ -283,15 +283,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/cgv;->bj()Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/cgv;->aj()Ljava/math/BigInteger;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/cgv;->cj()Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/cgv;->bj()Ljava/math/BigInteger;
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/cgv;->dj()Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lorg/bouncycastle/crypto/wtn/cgv;->cj()Ljava/math/BigInteger;
 
     move-result-object v0
 
@@ -369,7 +369,7 @@
 
     iput-object p2, p0, Lorg/bouncycastle/crypto/rtg/gck;->key:Lorg/bouncycastle/crypto/wtn/veq;
 
-    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/gck;->rva:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/crypto/rtg/gck;->Bva:Z
 
     return-void
 .end method

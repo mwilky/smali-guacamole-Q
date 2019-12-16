@@ -212,7 +212,7 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Una:Z
 
     if-eqz v0, :cond_0
 

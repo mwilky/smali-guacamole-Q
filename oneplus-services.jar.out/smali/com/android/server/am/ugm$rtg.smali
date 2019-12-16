@@ -19,7 +19,7 @@
 
 .field public mPkgName:Ljava/lang/String;
 
-.field public nh:I
+.field public oh:I
 
 .field final synthetic this$0:Lcom/android/server/am/ugm;
 
@@ -38,13 +38,13 @@
 
     const/4 p1, 0x0
 
-    iput p1, p0, Lcom/android/server/am/ugm$rtg;->nh:I
+    iput p1, p0, Lcom/android/server/am/ugm$rtg;->oh:I
 
     iput p1, p0, Lcom/android/server/am/ugm$rtg;->mAction:I
 
     iput-object p2, p0, Lcom/android/server/am/ugm$rtg;->mPkgName:Ljava/lang/String;
 
-    iput p3, p0, Lcom/android/server/am/ugm$rtg;->nh:I
+    iput p3, p0, Lcom/android/server/am/ugm$rtg;->oh:I
 
     iput p4, p0, Lcom/android/server/am/ugm$rtg;->mAction:I
 
@@ -72,7 +72,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/android/server/am/ugm$rtg;->nh:I
+    iget v1, p0, Lcom/android/server/am/ugm$rtg;->oh:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

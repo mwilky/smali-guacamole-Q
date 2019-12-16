@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final mza:I = -0x1f000000
+.field private static final wza:I = -0x1f000000
 
-.field private static final nza:J = -0x1f00000000000000L
+.field private static final xza:J = -0x1f00000000000000L
 
 
 # direct methods
@@ -18,7 +18,7 @@
     return-void
 .end method
 
-.method public static Xi()[B
+.method public static Wi()[B
     .locals 3
 
     const/16 v0, 0x10
@@ -34,7 +34,7 @@
     return-object v0
 .end method
 
-.method public static Yi()[I
+.method public static Xi()[I
     .locals 3
 
     const/4 v0, 0x4
@@ -50,7 +50,7 @@
     return-object v0
 .end method
 
-.method public static Zi()[J
+.method public static Yi()[J
     .locals 4
 
     const/4 v0, 0x2
@@ -66,7 +66,7 @@
     return-object v0
 .end method
 
-.method public static _i()[J
+.method public static Zi()[J
     .locals 4
 
     const/4 v0, 0x2

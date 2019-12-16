@@ -22,31 +22,31 @@
 
 .field public static final SUPERSEDED:I = 0x4
 
-.field public static final Tpa:I = 0x8
-
 .field public static final UNSPECIFIED:I = 0x0
 
-.field private static final Upa:[Ljava/lang/String;
+.field public static final cqa:I = 0x8
 
-.field public static final Vna:I = 0x1
+.field private static final dqa:[Ljava/lang/String;
 
-.field public static final Wna:I = 0x2
+.field public static final eoa:I = 0x1
 
-.field public static final Xna:I = 0x3
+.field public static final foa:I = 0x2
 
-.field private static final Yka:Ljava/util/Hashtable;
+.field public static final goa:I = 0x3
 
-.field public static final Yna:I = 0x4
+.field public static final hoa:I = 0x4
 
-.field public static final Zna:I = 0x5
+.field public static final ioa:I = 0x5
 
-.field public static final _na:I = 0x6
+.field private static final jla:Ljava/util/Hashtable;
 
-.field public static final aoa:I = 0x9
+.field public static final joa:I = 0x6
 
-.field public static final boa:I = 0xa
+.field public static final koa:I = 0x9
 
-.field public static final kka:I
+.field public static final loa:I = 0xa
+
+.field public static final vka:I
 
 
 # instance fields
@@ -83,13 +83,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->Upa:[Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->dqa:[Ljava/lang/String;
 
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->Yka:Ljava/util/Hashtable;
+    sput-object v0, Lorg/bouncycastle/asn1/x509/wtn;->jla:Ljava/util/Hashtable;
 
     return-void
 .end method
@@ -153,7 +153,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->Yka:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->jla:Ljava/util/Hashtable;
 
     invoke-virtual {v1, v0}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
@@ -161,7 +161,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->Yka:Ljava/util/Hashtable;
+    sget-object v1, Lorg/bouncycastle/asn1/x509/wtn;->jla:Ljava/util/Hashtable;
 
     new-instance v2, Lorg/bouncycastle/asn1/x509/wtn;
 
@@ -170,7 +170,7 @@
     invoke-virtual {v1, v0, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    sget-object p0, Lorg/bouncycastle/asn1/x509/wtn;->Yka:Ljava/util/Hashtable;
+    sget-object p0, Lorg/bouncycastle/asn1/x509/wtn;->jla:Ljava/util/Hashtable;
 
     invoke-virtual {p0, v0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -223,7 +223,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lorg/bouncycastle/asn1/x509/wtn;->Upa:[Ljava/lang/String;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/wtn;->dqa:[Ljava/lang/String;
 
     aget-object p0, v0, p0
 

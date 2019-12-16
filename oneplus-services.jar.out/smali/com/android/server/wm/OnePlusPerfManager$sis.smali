@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private tO:[I
+.field private mParam:[I
 
 
 # direct methods
@@ -24,12 +24,12 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager$sis;->Xb(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager$sis;->Yb(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private Xb(Ljava/lang/String;)V
+.method private Yb(Ljava/lang/String;)V
     .locals 5
 
     const-string v0, ","
@@ -49,14 +49,14 @@
     :try_start_0
     new-array v2, v1, [I
 
-    iput-object v2, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->tO:[I
+    iput-object v2, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->mParam:[I
 
     const/4 v2, 0x0
 
     :goto_0
     if-ge v2, v1, :cond_0
 
-    iget-object v3, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->tO:[I
+    iget-object v3, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->mParam:[I
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -116,7 +116,7 @@
 .method public Sd()[I
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->tO:[I
+    iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->mParam:[I
 
     return-object p0
 .end method
@@ -130,7 +130,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->tO:[I
+    iget-object v1, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->mParam:[I
 
     if-eqz v1, :cond_1
 
@@ -141,7 +141,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    iget-object v2, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->tO:[I
+    iget-object v2, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->mParam:[I
 
     array-length v3, v2
 

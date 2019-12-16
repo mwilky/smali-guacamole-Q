@@ -19,7 +19,7 @@
 
 .field public mType:Lcom/android/server/am/OnePlusBGController$ProcType;
 
-.field public tl:D
+.field public vl:D
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     iput-wide p2, p0, Lcom/android/server/am/OnePlusBGController$sis;->mTimestamp:J
 
-    iput-wide p4, p0, Lcom/android/server/am/OnePlusBGController$sis;->tl:D
+    iput-wide p4, p0, Lcom/android/server/am/OnePlusBGController$sis;->vl:D
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/OnePlusBGController$sis;->tl:D
+    iget-wide v1, p0, Lcom/android/server/am/OnePlusBGController$sis;->vl:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 

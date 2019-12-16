@@ -194,7 +194,17 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/OnePlusExService;Landroid/content/Context;Landroid/app/Notification$Builder;)V
+.method static synthetic access$1000(Lcom/android/server/OnePlusExService;)[I
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/OnePlusExService;->getRes()[I
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1100(Lcom/android/server/OnePlusExService;Landroid/content/Context;Landroid/app/Notification$Builder;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/OnePlusExService;->overrideNotificationAppName(Landroid/content/Context;Landroid/app/Notification$Builder;)V
@@ -202,7 +212,7 @@
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/OnePlusExService;)Landroid/app/NotificationManager;
+.method static synthetic access$1200(Lcom/android/server/OnePlusExService;)Landroid/app/NotificationManager;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mNotificationManager:Landroid/app/NotificationManager;
@@ -210,7 +220,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/OnePlusExService;)Landroid/app/Notification$Builder;
+.method static synthetic access$1300(Lcom/android/server/OnePlusExService;)Landroid/app/Notification$Builder;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->nb:Landroid/app/Notification$Builder;
@@ -218,7 +228,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1202(Lcom/android/server/OnePlusExService;Landroid/app/Notification$Builder;)Landroid/app/Notification$Builder;
+.method static synthetic access$1302(Lcom/android/server/OnePlusExService;Landroid/app/Notification$Builder;)Landroid/app/Notification$Builder;
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/OnePlusExService;->nb:Landroid/app/Notification$Builder;
@@ -226,7 +236,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/OnePlusExService;ILandroid/content/Context;IILandroid/app/Notification$Builder;)V
+.method static synthetic access$1400(Lcom/android/server/OnePlusExService;ILandroid/content/Context;IILandroid/app/Notification$Builder;)V
     .locals 0
 
     invoke-direct/range {p0 .. p5}, Lcom/android/server/OnePlusExService;->showCarModeNotification(ILandroid/content/Context;IILandroid/app/Notification$Builder;)V
@@ -234,7 +244,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/OnePlusExService;)I
+.method static synthetic access$1500(Lcom/android/server/OnePlusExService;)I
     .locals 0
 
     iget p0, p0, Lcom/android/server/OnePlusExService;->mBatteryStatus:I
@@ -242,7 +252,7 @@
     return p0
 .end method
 
-.method static synthetic access$1402(Lcom/android/server/OnePlusExService;I)I
+.method static synthetic access$1502(Lcom/android/server/OnePlusExService;I)I
     .locals 0
 
     iput p1, p0, Lcom/android/server/OnePlusExService;->mBatteryStatus:I
@@ -250,7 +260,7 @@
     return p1
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/OnePlusExService;)Landroid/os/Handler;
+.method static synthetic access$1600(Lcom/android/server/OnePlusExService;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mHandlerCarMode:Landroid/os/Handler;
@@ -258,7 +268,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$1600()Z
+.method static synthetic access$1700()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/OnePlusExService;->ifBootCompleted:Z
@@ -266,7 +276,7 @@
     return v0
 .end method
 
-.method static synthetic access$1602(Z)Z
+.method static synthetic access$1702(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/android/server/OnePlusExService;->ifBootCompleted:Z
@@ -274,7 +284,7 @@
     return p0
 .end method
 
-.method static synthetic access$1700()Z
+.method static synthetic access$1800()Z
     .locals 1
 
     sget-boolean v0, Lcom/android/server/OnePlusExService;->disableDuplicate:Z
@@ -282,7 +292,7 @@
     return v0
 .end method
 
-.method static synthetic access$1702(Z)Z
+.method static synthetic access$1802(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/android/server/OnePlusExService;->disableDuplicate:Z
@@ -290,22 +300,12 @@
     return p0
 .end method
 
-.method static synthetic access$1800(Lcom/android/server/OnePlusExService;)V
+.method static synthetic access$1900(Lcom/android/server/OnePlusExService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusExService;->createNotificationChannel()V
 
     return-void
-.end method
-
-.method static synthetic access$1900(Lcom/android/server/OnePlusExService;Landroid/content/Context;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->createNotificationBuilder(Landroid/content/Context;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method static synthetic access$200(Lcom/android/server/OnePlusExService;)Landroid/os/PowerManager$WakeLock;
@@ -316,7 +316,17 @@
     return-object p0
 .end method
 
-.method static synthetic access$2000(Lcom/android/server/OnePlusExService;)V
+.method static synthetic access$2000(Lcom/android/server/OnePlusExService;Landroid/content/Context;)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->createNotificationBuilder(Landroid/content/Context;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$2100(Lcom/android/server/OnePlusExService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusExService;->createNotificationChannelForPopup()V
@@ -324,7 +334,7 @@
     return-void
 .end method
 
-.method static synthetic access$2100(Lcom/android/server/OnePlusExService;Landroid/content/Context;)Landroid/app/Notification$Builder;
+.method static synthetic access$2200(Lcom/android/server/OnePlusExService;Landroid/content/Context;)Landroid/app/Notification$Builder;
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->createNotificationBuilderForPopup(Landroid/content/Context;)Landroid/app/Notification$Builder;
@@ -334,7 +344,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2200(Lcom/android/server/OnePlusExService;Z)V
+.method static synthetic access$2300(Lcom/android/server/OnePlusExService;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->saveDNDStateToFile(Z)V
@@ -342,7 +352,7 @@
     return-void
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/OnePlusExService;)Z
+.method static synthetic access$2400(Lcom/android/server/OnePlusExService;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/OnePlusExService;->mCarChargerNotificationShown:Z
@@ -350,7 +360,7 @@
     return p0
 .end method
 
-.method static synthetic access$2302(Lcom/android/server/OnePlusExService;Z)Z
+.method static synthetic access$2402(Lcom/android/server/OnePlusExService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/OnePlusExService;->mCarChargerNotificationShown:Z
@@ -358,7 +368,7 @@
     return p1
 .end method
 
-.method static synthetic access$2400(Lcom/android/server/OnePlusExService;)V
+.method static synthetic access$2500(Lcom/android/server/OnePlusExService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusExService;->setDontDisturbForCarMode()V
@@ -366,7 +376,7 @@
     return-void
 .end method
 
-.method static synthetic access$2500(Lcom/android/server/OnePlusExService;Ljava/lang/String;)V
+.method static synthetic access$2600(Lcom/android/server/OnePlusExService;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->startSelectApp(Ljava/lang/String;)V
@@ -374,7 +384,7 @@
     return-void
 .end method
 
-.method static synthetic access$2600(Lcom/android/server/OnePlusExService;)Ljava/lang/Runnable;
+.method static synthetic access$2700(Lcom/android/server/OnePlusExService;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mCarModeRunnable:Ljava/lang/Runnable;
@@ -382,7 +392,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$2700(Lcom/android/server/OnePlusExService;)I
+.method static synthetic access$2800(Lcom/android/server/OnePlusExService;)I
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusExService;->getDNDStateFromFile()I
@@ -392,7 +402,7 @@
     return p0
 .end method
 
-.method static synthetic access$2800(Lcom/android/server/OnePlusExService;)V
+.method static synthetic access$2900(Lcom/android/server/OnePlusExService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusExService;->disableDontDisturbForCarMode()V
@@ -432,7 +442,17 @@
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/android/server/OnePlusExService;I)V
+.method static synthetic access$600(Lcom/android/server/OnePlusExService;)I
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/OnePlusExService;->getParamSwId()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$700(Lcom/android/server/OnePlusExService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->trackSwIdData(I)V
@@ -440,7 +460,7 @@
     return-void
 .end method
 
-.method static synthetic access$700(Lcom/android/server/OnePlusExService;I)V
+.method static synthetic access$800(Lcom/android/server/OnePlusExService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OnePlusExService;->setParamSwId(I)V
@@ -448,20 +468,10 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/server/OnePlusExService;)Ljava/lang/String;
+.method static synthetic access$900(Lcom/android/server/OnePlusExService;)Ljava/lang/String;
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/OnePlusExService;->getCountryFromLocation()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$900(Lcom/android/server/OnePlusExService;)[I
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/OnePlusExService;->getRes()[I
 
     move-result-object p0
 
@@ -1340,7 +1350,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->uf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v2
 
@@ -1354,7 +1364,7 @@
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->uf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v1
 
@@ -1605,7 +1615,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
     const-string v1, "sdm845"
 
@@ -1626,26 +1636,6 @@
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/OnePlusExService;->getParamSwId()I
-
-    move-result v1
-
-    if-lez v1, :cond_2
-
-    sget-boolean p0, Lcom/android/server/OnePlusExService;->debugOnePlus:Z
-
-    if-eqz p0, :cond_1
-
-    const-string p0, "OnePlusExService"
-
-    const-string v0, "already set sw id."
-
-    invoke-static {p0, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-void
-
-    :cond_2
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -1656,7 +1646,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_3
+    :cond_1
     :goto_0
     return-void
 .end method
@@ -2873,7 +2863,7 @@
     :cond_1
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mSceneModeController:Lcom/oneplus/android/server/scene/ivd;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->lf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->kf()V
 
     goto :goto_0
 
@@ -2882,7 +2872,7 @@
 
     if-eqz p0, :cond_4
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->nf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->mf()V
 
     goto :goto_0
 
@@ -2981,7 +2971,7 @@
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mSceneModeController:Lcom/oneplus/android/server/scene/ivd;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->mf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->lf()V
 
     goto :goto_0
 

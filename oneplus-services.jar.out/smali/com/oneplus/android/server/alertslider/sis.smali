@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final CX:I = 0x2
+.field public static final NX:I = 0x2
 
-.field public static final DX:I = 0x3
+.field public static final OX:I = 0x3
 
-.field public static final EX:I = -0x1
+.field public static final QX:I = -0x1
 
 .field public static final SWITCH_STATE_ON:I = 0x1
 
@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private BX:I
+.field private MX:I
 
 .field private mContext:Landroid/content/Context;
 
@@ -29,7 +29,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iput v0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     iput-object p1, p0, Lcom/oneplus/android/server/alertslider/sis;->mContext:Landroid/content/Context;
 
@@ -75,7 +75,7 @@
     invoke-virtual {p0}, Lcom/oneplus/android/server/alertslider/sis;->setUp()V
 
     :goto_0
-    iput p1, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iput p1, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 .method public getAlertSliderMode()I
     .locals 0
 
-    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     return p0
 .end method
@@ -91,9 +91,9 @@
 .method public init(I)V
     .locals 0
 
-    iput p1, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iput p1, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
-    iget p1, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget p1, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     invoke-virtual {p0, p1}, Lcom/oneplus/android/server/alertslider/sis;->A(I)V
 
@@ -103,7 +103,7 @@
 .method public isDown()Z
     .locals 1
 
-    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     const/4 v0, 0x3
 
@@ -123,7 +123,7 @@
 .method public isUp()Z
     .locals 1
 
-    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     const/4 v0, 0x1
 
@@ -138,10 +138,10 @@
     return v0
 .end method
 
-.method public qe()Z
+.method public pe()Z
     .locals 1
 
-    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget p0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     const/4 v0, 0x2
 
@@ -167,7 +167,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget v0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget v0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     invoke-virtual {p0, v0}, Lcom/oneplus/android/server/alertslider/sis;->init(I)V
 
@@ -183,7 +183,7 @@
 .method public z(I)V
     .locals 1
 
-    iget v0, p0, Lcom/oneplus/android/server/alertslider/sis;->BX:I
+    iget v0, p0, Lcom/oneplus/android/server/alertslider/sis;->MX:I
 
     if-eq v0, p1, :cond_0
 

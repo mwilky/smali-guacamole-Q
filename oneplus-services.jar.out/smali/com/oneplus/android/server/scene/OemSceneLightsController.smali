@@ -15,19 +15,19 @@
 # static fields
 .field public static final DEBUG:Z
 
-.field private static final Lda:I
-
-.field private static final Mda:I
-
 .field public static final TAG:Ljava/lang/String; = "OemSceneLightsController"
+
+.field private static final Wda:I
+
+.field private static final Xda:I
 
 .field private static sInstance:Lcom/oneplus/android/server/scene/OemSceneLightsController;
 
 
 # instance fields
-.field private Jda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
+.field private Uda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
 
-.field private Kda:I
+.field private Vda:I
 
 .field private mBatteryManagerInternal:Landroid/os/BatteryManagerInternal;
 
@@ -50,7 +50,7 @@
 
     sput-boolean v0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->DEBUG:Z
 
-    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneLightsController$LightsMode;->lka:Lcom/oneplus/android/server/scene/OemSceneLightsController$LightsMode;
+    sget-object v0, Lcom/oneplus/android/server/scene/OemSceneLightsController$LightsMode;->wka:Lcom/oneplus/android/server/scene/OemSceneLightsController$LightsMode;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -60,7 +60,7 @@
 
     shl-int v0, v1, v0
 
-    sput v0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Lda:I
+    sput v0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Wda:I
 
     sget-object v0, Lcom/oneplus/android/server/scene/OemSceneLightsController$LightsMode;->ZEN_MODE:Lcom/oneplus/android/server/scene/OemSceneLightsController$LightsMode;
 
@@ -70,7 +70,7 @@
 
     shl-int v0, v1, v0
 
-    sput v0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Mda:I
+    sput v0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Xda:I
 
     return-void
 .end method
@@ -82,7 +82,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
     new-instance v1, Ljava/lang/Object;
 
@@ -133,7 +133,7 @@
     monitor-enter p1
 
     :try_start_0
-    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iput v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
     monitor-exit p1
 
@@ -152,9 +152,9 @@
 .method private bio(III)Z
     .locals 3
 
-    iget v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iget v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
-    sget v1, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Lda:I
+    sget v1, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Wda:I
 
     and-int/2addr v1, v0
 
@@ -165,7 +165,7 @@
     return v2
 
     :cond_0
-    sget v1, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Mda:I
+    sget v1, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Xda:I
 
     and-int/2addr v0, v1
 
@@ -272,7 +272,7 @@
     return p1
 .end method
 
-.method private qeg(IZ)V
+.method private ivd(IZ)V
     .locals 2
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->mLock:Ljava/lang/Object;
@@ -284,18 +284,18 @@
     if-eqz p2, :cond_0
 
     :try_start_0
-    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
     shl-int p1, v1, p1
 
     or-int/2addr p1, p2
 
-    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
     goto :goto_0
 
     :cond_0
-    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iget p2, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
     shl-int p1, v1, p1
 
@@ -303,7 +303,7 @@
 
     and-int/2addr p1, p2
 
-    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Kda:I
+    iput p1, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Vda:I
 
     :goto_0
     monitor-exit v0
@@ -331,17 +331,17 @@
 .method static synthetic zta(Lcom/oneplus/android/server/scene/OemSceneLightsController;IZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/oneplus/android/server/scene/OemSceneLightsController;->qeg(IZ)V
+    invoke-direct {p0, p1, p2}, Lcom/oneplus/android/server/scene/OemSceneLightsController;->ivd(IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ef()Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
+.method public df()Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Jda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Uda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
 
     if-nez v0, :cond_0
 
@@ -349,10 +349,10 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;-><init>(Lcom/oneplus/android/server/scene/OemSceneLightsController;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Jda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Uda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Jda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneLightsController;->Uda:Lcom/oneplus/android/server/scene/OemSceneLightsController$ZenModeLedController;
 
     return-object p0
 .end method

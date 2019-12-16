@@ -73,7 +73,7 @@
 
 
 # virtual methods
-.method Cf()I
+.method Bf()I
     .locals 0
 
     iget p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;->digest:I
@@ -81,7 +81,7 @@
     return p0
 .end method
 
-.method public Hi()Lorg/bouncycastle/asn1/bvj;
+.method public Gi()Lorg/bouncycastle/asn1/bvj;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;->oid:Lorg/bouncycastle/asn1/bvj;
@@ -250,7 +250,7 @@
     return p0
 .end method
 
-.method public sj()I
+.method public rj()I
     .locals 0
 
     iget p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;->ivSize:I
@@ -258,7 +258,7 @@
     return p0
 .end method
 
-.method tj()Z
+.method sj()Z
     .locals 0
 
     iget-boolean p0, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;->tryWrong:Z

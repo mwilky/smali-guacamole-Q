@@ -1,11 +1,11 @@
-.class Lcom/android/server/am/d$tsu;
+.class Lcom/android/server/am/f$tsu;
 .super Landroid/database/ContentObserver;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/am/d;
+    value = Lcom/android/server/am/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,14 +15,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/android/server/am/d;
+.field final synthetic this$0:Lcom/android/server/am/f;
 
 
 # direct methods
-.method public constructor <init>(Lcom/android/server/am/d;Landroid/content/Context;Landroid/os/Handler;)V
+.method public constructor <init>(Lcom/android/server/am/f;Landroid/content/Context;Landroid/os/Handler;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/d$tsu;->this$0:Lcom/android/server/am/d;
+    iput-object p1, p0, Lcom/android/server/am/f$tsu;->this$0:Lcom/android/server/am/f;
 
     invoke-direct {p0, p3}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
@@ -34,7 +34,7 @@
 .method public onChange(Z)V
     .locals 1
 
-    invoke-static {}, Lcom/android/server/am/d;->access$000()Z
+    invoke-static {}, Lcom/android/server/am/f;->access$000()Z
 
     move-result p1
 
@@ -47,9 +47,9 @@
     invoke-static {p1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object p0, p0, Lcom/android/server/am/d$tsu;->this$0:Lcom/android/server/am/d;
+    iget-object p0, p0, Lcom/android/server/am/f$tsu;->this$0:Lcom/android/server/am/f;
 
-    invoke-static {p0}, Lcom/android/server/am/d;->zta(Lcom/android/server/am/d;)Lcom/android/server/am/d$sis;
+    invoke-static {p0}, Lcom/android/server/am/f;->zta(Lcom/android/server/am/f;)Lcom/android/server/am/f$sis;
 
     move-result-object p0
 

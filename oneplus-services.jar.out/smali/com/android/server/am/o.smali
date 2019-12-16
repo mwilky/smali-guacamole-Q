@@ -2,80 +2,96 @@
 .super Ljava/lang/Object;
 .source ""
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/r;->vdb(Ljava/lang/String;Ljava/lang/String;)V
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
-.end annotation
-
 
 # instance fields
-.field final synthetic Mw:Ljava/lang/String;
+.field public final Sw:Ljava/lang/String;
 
-.field final synthetic this$0:Lcom/android/server/am/r;
+.field public final Tw:Lcom/android/server/am/you;
 
-.field final synthetic val$packageName:Ljava/lang/String;
+.field public final mPid:I
+
+.field public final mUid:I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/r;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(IILjava/lang/String;Lcom/android/server/am/you;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/o;->this$0:Lcom/android/server/am/r;
-
-    iput-object p2, p0, Lcom/android/server/am/o;->val$packageName:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/android/server/am/o;->Mw:Ljava/lang/String;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lcom/android/server/am/o;->mUid:I
+
+    iput p2, p0, Lcom/android/server/am/o;->mPid:I
+
+    iput-object p3, p0, Lcom/android/server/am/o;->Sw:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/android/server/am/o;->Tw:Lcom/android/server/am/you;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;Lcom/android/server/am/you;)V
+    .locals 1
+
+    iget v0, p3, Lcom/android/server/am/you;->mUid:I
+
+    invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/server/am/o;-><init>(IILjava/lang/String;Lcom/android/server/am/you;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    new-instance v0, Ljava/util/HashMap;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const-string v1, "ProcRecord { "
 
-    iget-object v1, p0, Lcom/android/server/am/o;->val$packageName:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "pn"
+    const-string v1, "uid="
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/android/server/am/o;->Mw:Ljava/lang/String;
+    iget v1, p0, Lcom/android/server/am/o;->mUid:I
 
-    const-string v2, "pvn"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, ", pkg="
 
-    invoke-static {}, Lnet/oneplus/odm/OpDeviceManagerInjector;->getInstance()Lnet/oneplus/odm/OpDeviceManagerInjector;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    iget-object v1, p0, Lcom/android/server/am/o;->Tw:Lcom/android/server/am/you;
 
-    iget-object p0, p0, Lcom/android/server/am/o;->this$0:Lcom/android/server/am/r;
+    iget-object v1, v1, Lcom/android/server/am/you;->mPackageName:Ljava/lang/String;
 
-    invoke-static {p0}, Lcom/android/server/am/r;->rtg(Lcom/android/server/am/r;)Landroid/content/Context;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pid="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/android/server/am/o;->mPid:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", procName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/android/server/am/o;->Sw:Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " }"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    const-string v2, "embryo_crash"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, p0, v2, v3, v0}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveOsData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
-
-    return-void
+    return-object p0
 .end method

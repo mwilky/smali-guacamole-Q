@@ -20,7 +20,7 @@
 
     sget-object v1, Lorg/bouncycastle/asn1/dma/gwm;->id_hmacWithSHA512:Lorg/bouncycastle/asn1/bvj;
 
-    sget-object v4, Lorg/bouncycastle/asn1/bio/you;->uKa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v4, Lorg/bouncycastle/asn1/bio/you;->EKa:Lorg/bouncycastle/asn1/bvj;
 
     const-string v2, "HmacSHA512"
 

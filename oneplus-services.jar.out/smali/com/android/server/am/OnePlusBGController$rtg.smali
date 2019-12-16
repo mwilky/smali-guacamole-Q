@@ -31,9 +31,9 @@
 
 .field public static final o:I = 0x101d9
 
-.field public static final p:I = 0x101da
-
 .field public static final qeg:I = 0x101d4
+
+.field public static final u:I = 0x101da
 
 .field public static final vdw:I = 0x101d3
 
@@ -350,7 +350,7 @@
     :sswitch_4
     iget-object p1, p0, Lcom/android/server/am/OnePlusBGController$rtg;->this$0:Lcom/android/server/am/OnePlusBGController;
 
-    invoke-virtual {p1}, Lcom/android/server/am/OnePlusBGController;->Fb()V
+    invoke-virtual {p1}, Lcom/android/server/am/OnePlusBGController;->Eb()V
 
     iget-object p1, p0, Lcom/android/server/am/OnePlusBGController$rtg;->this$0:Lcom/android/server/am/OnePlusBGController;
 

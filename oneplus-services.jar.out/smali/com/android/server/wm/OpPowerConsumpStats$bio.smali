@@ -43,8 +43,6 @@
 
 .field public mobileRadioPowerMah:D
 
-.field oP:Ljava/text/DecimalFormat;
-
 .field public pkgName:Ljava/lang/String;
 
 .field public sensorPowerMah:D
@@ -56,6 +54,8 @@
 .field public totalTime:J
 
 .field public uid:Ljava/lang/Integer;
+
+.field vP:Ljava/text/DecimalFormat;
 
 .field public versionCode:I
 
@@ -128,7 +128,7 @@
 
     invoke-direct {p1, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->oP:Ljava/text/DecimalFormat;
+    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->vP:Ljava/text/DecimalFormat;
 
     return-void
 .end method
@@ -192,16 +192,16 @@
 
     invoke-direct {p1, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->oP:Ljava/text/DecimalFormat;
+    iput-object p1, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->vP:Ljava/text/DecimalFormat;
 
     iput-object p2, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->uid:Ljava/lang/Integer;
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->To()V
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->Ro()V
 
     return-void
 .end method
 
-.method private To()V
+.method private Ro()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->uid:Ljava/lang/Integer;
@@ -246,7 +246,7 @@
     return-void
 .end method
 
-.method private Uo()Z
+.method private So()Z
     .locals 5
 
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->uid:Ljava/lang/Integer;
@@ -283,7 +283,7 @@
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->ssp(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->cno(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -294,7 +294,7 @@
     :cond_2
     iget-object v0, p0, Lcom/android/server/wm/OpPowerConsumpStats$bio;->this$0:Lcom/android/server/wm/OpPowerConsumpStats;
 
-    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->ssp(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/server/wm/OpPowerConsumpStats;->cno(Lcom/android/server/wm/OpPowerConsumpStats;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -427,7 +427,7 @@
     return v1
 .end method
 
-.method private bud(IZ)Ljava/lang/String;
+.method private les(IZ)Ljava/lang/String;
     .locals 7
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1044,7 +1044,7 @@
 .method static synthetic zta(Lcom/android/server/wm/OpPowerConsumpStats$bio;IZ)Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->bud(IZ)Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->les(IZ)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1177,7 +1177,7 @@
 .method static synthetic zta(Lcom/android/server/wm/OpPowerConsumpStats$bio;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->Uo()Z
+    invoke-direct {p0}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->So()Z
 
     move-result p0
 
@@ -1293,7 +1293,7 @@
 
     const/4 v2, -0x1
 
-    invoke-direct {p0, v2, v1}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->bud(IZ)Ljava/lang/String;
+    invoke-direct {p0, v2, v1}, Lcom/android/server/wm/OpPowerConsumpStats$bio;->les(IZ)Ljava/lang/String;
 
     move-result-object p0
 

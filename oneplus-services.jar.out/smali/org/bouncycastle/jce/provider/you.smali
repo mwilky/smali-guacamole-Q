@@ -7,31 +7,31 @@
 
 
 # static fields
-.field private static rBa:Ljava/security/Permission;
+.field private static BBa:Ljava/security/Permission;
 
-.field private static sBa:Ljava/security/Permission;
+.field private static CBa:Ljava/security/Permission;
 
-.field private static tBa:Ljava/security/Permission;
+.field private static DBa:Ljava/security/Permission;
 
-.field private static uBa:Ljava/security/Permission;
+.field private static EBa:Ljava/security/Permission;
 
-.field private static vBa:Ljava/security/Permission;
+.field private static FBa:Ljava/security/Permission;
 
-.field private static wBa:Ljava/security/Permission;
+.field private static GBa:Ljava/security/Permission;
 
 
 # instance fields
-.field private lBa:Ljava/lang/ThreadLocal;
+.field private volatile ABa:Ljava/util/Map;
 
-.field private mBa:Ljava/lang/ThreadLocal;
+.field private vBa:Ljava/lang/ThreadLocal;
 
-.field private volatile nBa:Lyou/zta/you/you/rtg;
+.field private wBa:Ljava/lang/ThreadLocal;
 
-.field private volatile oBa:Ljava/lang/Object;
+.field private volatile xBa:Lyou/zta/you/you/rtg;
 
-.field private volatile pBa:Ljava/util/Set;
+.field private volatile yBa:Ljava/lang/Object;
 
-.field private volatile qBa:Ljava/util/Map;
+.field private volatile zBa:Ljava/util/Set;
 
 
 # direct methods
@@ -46,7 +46,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/you;->rBa:Ljava/security/Permission;
+    sput-object v0, Lorg/bouncycastle/jce/provider/you;->BBa:Ljava/security/Permission;
 
     new-instance v0, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;
 
@@ -54,7 +54,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/you;->sBa:Ljava/security/Permission;
+    sput-object v0, Lorg/bouncycastle/jce/provider/you;->CBa:Ljava/security/Permission;
 
     new-instance v0, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;
 
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/you;->tBa:Ljava/security/Permission;
+    sput-object v0, Lorg/bouncycastle/jce/provider/you;->DBa:Ljava/security/Permission;
 
     new-instance v0, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;
 
@@ -70,7 +70,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/you;->uBa:Ljava/security/Permission;
+    sput-object v0, Lorg/bouncycastle/jce/provider/you;->EBa:Ljava/security/Permission;
 
     new-instance v0, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/you;->vBa:Ljava/security/Permission;
+    sput-object v0, Lorg/bouncycastle/jce/provider/you;->FBa:Ljava/security/Permission;
 
     new-instance v0, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v0, v1, v2}, Lorg/bouncycastle/jcajce/provider/config/ProviderConfigurationPermission;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/you;->wBa:Ljava/security/Permission;
+    sput-object v0, Lorg/bouncycastle/jce/provider/you;->GBa:Ljava/security/Permission;
 
     return-void
 .end method
@@ -100,25 +100,25 @@
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->lBa:Ljava/lang/ThreadLocal;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->vBa:Ljava/lang/ThreadLocal;
 
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->mBa:Ljava/lang/ThreadLocal;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->wBa:Ljava/lang/ThreadLocal;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->pBa:Ljava/util/Set;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->zBa:Ljava/util/Set;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->qBa:Ljava/util/Map;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/you;->ABa:Ljava/util/Map;
 
     return-void
 .end method
@@ -128,7 +128,7 @@
 .method public cjf()Ljava/util/Set;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->pBa:Ljava/util/Set;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->zBa:Ljava/util/Set;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
@@ -140,7 +140,7 @@
 .method public cno(I)Ljavax/crypto/spec/DHParameterSpec;
     .locals 2
 
-    iget-object v0, p0, Lorg/bouncycastle/jce/provider/you;->mBa:Ljava/lang/ThreadLocal;
+    iget-object v0, p0, Lorg/bouncycastle/jce/provider/you;->wBa:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
@@ -148,7 +148,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lorg/bouncycastle/jce/provider/you;->oBa:Ljava/lang/Object;
+    iget-object v0, p0, Lorg/bouncycastle/jce/provider/you;->yBa:Ljava/lang/Object;
 
     :cond_0
     instance-of p0, v0, Ljavax/crypto/spec/DHParameterSpec;
@@ -230,7 +230,7 @@
 .method public gwm()Lyou/zta/you/you/rtg;
     .locals 1
 
-    iget-object v0, p0, Lorg/bouncycastle/jce/provider/you;->lBa:Ljava/lang/ThreadLocal;
+    iget-object v0, p0, Lorg/bouncycastle/jce/provider/you;->vBa:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
@@ -243,7 +243,7 @@
     return-object v0
 
     :cond_0
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->nBa:Lyou/zta/you/you/rtg;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->xBa:Lyou/zta/you/you/rtg;
 
     return-object p0
 .end method
@@ -251,7 +251,7 @@
 .method public lqr()Ljava/util/Map;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->qBa:Ljava/util/Map;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->ABa:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -279,7 +279,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/jce/provider/you;->rBa:Ljava/security/Permission;
+    sget-object p1, Lorg/bouncycastle/jce/provider/you;->BBa:Ljava/security/Permission;
 
     invoke-virtual {v0, p1}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 
@@ -308,7 +308,7 @@
     check-cast p1, Lyou/zta/you/you/rtg;
 
     :goto_1
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->lBa:Ljava/lang/ThreadLocal;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->vBa:Ljava/lang/ThreadLocal;
 
     if-nez p1, :cond_3
 
@@ -333,7 +333,7 @@
 
     if-eqz v0, :cond_5
 
-    sget-object p1, Lorg/bouncycastle/jce/provider/you;->sBa:Ljava/security/Permission;
+    sget-object p1, Lorg/bouncycastle/jce/provider/you;->CBa:Ljava/security/Permission;
 
     invoke-virtual {v0, p1}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 
@@ -353,7 +353,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/you;->nBa:Lyou/zta/you/you/rtg;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/you;->xBa:Lyou/zta/you/you/rtg;
 
     goto/16 :goto_6
 
@@ -361,7 +361,7 @@
     :goto_3
     check-cast p2, Lyou/zta/you/you/rtg;
 
-    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->nBa:Lyou/zta/you/you/rtg;
+    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->xBa:Lyou/zta/you/you/rtg;
 
     goto/16 :goto_6
 
@@ -376,7 +376,7 @@
 
     if-eqz v0, :cond_9
 
-    sget-object p1, Lorg/bouncycastle/jce/provider/you;->tBa:Ljava/security/Permission;
+    sget-object p1, Lorg/bouncycastle/jce/provider/you;->DBa:Ljava/security/Permission;
 
     invoke-virtual {v0, p1}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 
@@ -404,7 +404,7 @@
 
     :cond_b
     :goto_4
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->mBa:Ljava/lang/ThreadLocal;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/you;->wBa:Ljava/lang/ThreadLocal;
 
     if-nez p2, :cond_c
 
@@ -426,7 +426,7 @@
 
     if-eqz v0, :cond_e
 
-    sget-object p1, Lorg/bouncycastle/jce/provider/you;->uBa:Ljava/security/Permission;
+    sget-object p1, Lorg/bouncycastle/jce/provider/you;->EBa:Ljava/security/Permission;
 
     invoke-virtual {v0, p1}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 
@@ -454,7 +454,7 @@
 
     :cond_10
     :goto_5
-    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->oBa:Ljava/lang/Object;
+    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->yBa:Ljava/lang/Object;
 
     goto :goto_6
 
@@ -469,14 +469,14 @@
 
     if-eqz v0, :cond_12
 
-    sget-object p1, Lorg/bouncycastle/jce/provider/you;->vBa:Ljava/security/Permission;
+    sget-object p1, Lorg/bouncycastle/jce/provider/you;->FBa:Ljava/security/Permission;
 
     invoke-virtual {v0, p1}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 
     :cond_12
     check-cast p2, Ljava/util/Set;
 
-    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->pBa:Ljava/util/Set;
+    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->zBa:Ljava/util/Set;
 
     goto :goto_6
 
@@ -491,14 +491,14 @@
 
     if-eqz v0, :cond_14
 
-    sget-object p1, Lorg/bouncycastle/jce/provider/you;->wBa:Ljava/security/Permission;
+    sget-object p1, Lorg/bouncycastle/jce/provider/you;->GBa:Ljava/security/Permission;
 
     invoke-virtual {v0, p1}, Ljava/lang/SecurityManager;->checkPermission(Ljava/security/Permission;)V
 
     :cond_14
     check-cast p2, Ljava/util/Map;
 
-    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->qBa:Ljava/util/Map;
+    iput-object p2, p0, Lorg/bouncycastle/jce/provider/you;->ABa:Ljava/util/Map;
 
     :cond_15
     :goto_6
@@ -508,7 +508,7 @@
 .method public tsu(I)Ljava/security/spec/DSAParameterSpec;
     .locals 2
 
-    sget-object p0, Lorg/bouncycastle/crypto/igw$zta;->yva:Lorg/bouncycastle/crypto/igw$zta;
+    sget-object p0, Lorg/bouncycastle/crypto/igw$zta;->Iva:Lorg/bouncycastle/crypto/igw$zta;
 
     invoke-static {p0, p1}, Lorg/bouncycastle/crypto/igw;->zta(Lorg/bouncycastle/crypto/igw$zta;I)Ljava/lang/Object;
 

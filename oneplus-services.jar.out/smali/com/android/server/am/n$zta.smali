@@ -1,11 +1,11 @@
-.class final Lcom/android/server/am/l$zta;
+.class final Lcom/android/server/am/n$zta;
 .super Ljava/lang/Object;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/am/l;
+    value = Lcom/android/server/am/n;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public jv:D
-
 .field public mX:D
 
 .field public mY:D
+
+.field public rv:D
 
 
 # direct methods
@@ -30,11 +30,11 @@
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/server/am/l$zta;->mX:D
+    iput-wide v0, p0, Lcom/android/server/am/n$zta;->mX:D
 
-    iput-wide v0, p0, Lcom/android/server/am/l$zta;->mY:D
+    iput-wide v0, p0, Lcom/android/server/am/n$zta;->mY:D
 
-    iput-wide v0, p0, Lcom/android/server/am/l$zta;->jv:D
+    iput-wide v0, p0, Lcom/android/server/am/n$zta;->rv:D
 
     return-void
 .end method
@@ -44,11 +44,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lcom/android/server/am/l$zta;->mX:D
+    iput-wide p1, p0, Lcom/android/server/am/n$zta;->mX:D
 
-    iput-wide p3, p0, Lcom/android/server/am/l$zta;->mY:D
+    iput-wide p3, p0, Lcom/android/server/am/n$zta;->mY:D
 
-    iput-wide p5, p0, Lcom/android/server/am/l$zta;->jv:D
+    iput-wide p5, p0, Lcom/android/server/am/n$zta;->rv:D
 
     return-void
 .end method
@@ -66,7 +66,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/l$zta;->mX:D
+    iget-wide v1, p0, Lcom/android/server/am/n$zta;->mX:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -74,7 +74,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/l$zta;->mY:D
+    iget-wide v1, p0, Lcom/android/server/am/n$zta;->mY:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -82,7 +82,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/l$zta;->jv:D
+    iget-wide v1, p0, Lcom/android/server/am/n$zta;->rv:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 

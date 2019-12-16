@@ -135,7 +135,7 @@
 
 
 # virtual methods
-.method public Og()Z
+.method public Ng()Z
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/you/wtn;->id:Lorg/bouncycastle/asn1/ssp;

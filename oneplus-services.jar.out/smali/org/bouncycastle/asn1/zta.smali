@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected final Kna:Z
+.field protected final Una:Z
 
 .field protected final octets:[B
 
@@ -17,7 +17,7 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/vdb;-><init>()V
 
-    iput-boolean p1, p0, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iput-boolean p1, p0, Lorg/bouncycastle/asn1/zta;->Una:Z
 
     iput p2, p0, Lorg/bouncycastle/asn1/zta;->tag:I
 
@@ -353,7 +353,7 @@
 .method public hashCode()I
     .locals 2
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Una:Z
 
     iget v1, p0, Lorg/bouncycastle/asn1/zta;->tag:I
 
@@ -373,12 +373,12 @@
 .method public isConstructed()Z
     .locals 0
 
-    iget-boolean p0, p0, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iget-boolean p0, p0, Lorg/bouncycastle/asn1/zta;->Una:Z
 
     return p0
 .end method
 
-.method mg()I
+.method lg()I
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -411,7 +411,7 @@
     return v0
 .end method
 
-.method public pg()I
+.method public og()I
     .locals 0
 
     iget p0, p0, Lorg/bouncycastle/asn1/zta;->tag:I
@@ -445,7 +445,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/zta;->pg()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/zta;->og()I
 
     move-result v1
 
@@ -500,7 +500,7 @@
         }
     .end annotation
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Una:Z
 
     if-eqz v0, :cond_0
 
@@ -535,9 +535,9 @@
     :cond_0
     check-cast p1, Lorg/bouncycastle/asn1/zta;
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/zta;->Una:Z
 
-    iget-boolean v2, p1, Lorg/bouncycastle/asn1/zta;->Kna:Z
+    iget-boolean v2, p1, Lorg/bouncycastle/asn1/zta;->Una:Z
 
     if-ne v0, v2, :cond_1
 

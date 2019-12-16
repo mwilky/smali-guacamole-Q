@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field Mqa:Lorg/bouncycastle/asn1/x509/ear;
+.field Wqa:Lorg/bouncycastle/asn1/x509/ear;
 
-.field Oqa:Lorg/bouncycastle/asn1/x509/cgv;
+.field Yqa:Lorg/bouncycastle/asn1/x509/cgv;
 
-.field csa:Lorg/bouncycastle/asn1/x509/obl;
+.field msa:Lorg/bouncycastle/asn1/x509/obl;
 
 
 # direct methods
@@ -45,7 +45,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lorg/bouncycastle/asn1/x509/j;->csa:Lorg/bouncycastle/asn1/x509/obl;
+    iput-object v1, p0, Lorg/bouncycastle/asn1/x509/j;->msa:Lorg/bouncycastle/asn1/x509/obl;
 
     move v1, v2
 
@@ -79,7 +79,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lorg/bouncycastle/asn1/x509/j;->Mqa:Lorg/bouncycastle/asn1/x509/ear;
+    iput-object v3, p0, Lorg/bouncycastle/asn1/x509/j;->Wqa:Lorg/bouncycastle/asn1/x509/ear;
 
     goto :goto_1
 
@@ -94,7 +94,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lorg/bouncycastle/asn1/x509/j;->Oqa:Lorg/bouncycastle/asn1/x509/cgv;
+    iput-object v3, p0, Lorg/bouncycastle/asn1/x509/j;->Yqa:Lorg/bouncycastle/asn1/x509/cgv;
 
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -190,11 +190,11 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/oif;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/j;->csa:Lorg/bouncycastle/asn1/x509/obl;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/j;->msa:Lorg/bouncycastle/asn1/x509/obl;
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/x509/j;->Mqa:Lorg/bouncycastle/asn1/x509/ear;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/x509/j;->Wqa:Lorg/bouncycastle/asn1/x509/ear;
 
-    iput-object p3, p0, Lorg/bouncycastle/asn1/x509/j;->Oqa:Lorg/bouncycastle/asn1/x509/cgv;
+    iput-object p3, p0, Lorg/bouncycastle/asn1/x509/j;->Yqa:Lorg/bouncycastle/asn1/x509/cgv;
 
     return-void
 .end method
@@ -245,26 +245,26 @@
 
 
 # virtual methods
-.method public Th()Lorg/bouncycastle/asn1/x509/ear;
+.method public Sh()Lorg/bouncycastle/asn1/x509/ear;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->Mqa:Lorg/bouncycastle/asn1/x509/ear;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->Wqa:Lorg/bouncycastle/asn1/x509/ear;
 
     return-object p0
 .end method
 
-.method public Vh()Lorg/bouncycastle/asn1/x509/cgv;
+.method public Uh()Lorg/bouncycastle/asn1/x509/cgv;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->Oqa:Lorg/bouncycastle/asn1/x509/cgv;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->Yqa:Lorg/bouncycastle/asn1/x509/cgv;
 
     return-object p0
 .end method
 
-.method public qi()Lorg/bouncycastle/asn1/x509/obl;
+.method public pi()Lorg/bouncycastle/asn1/x509/obl;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->csa:Lorg/bouncycastle/asn1/x509/obl;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->msa:Lorg/bouncycastle/asn1/x509/obl;
 
     return-object p0
 .end method
@@ -276,14 +276,14 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/asn1/cno;-><init>()V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/j;->csa:Lorg/bouncycastle/asn1/x509/obl;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/j;->msa:Lorg/bouncycastle/asn1/x509/obl;
 
     if-eqz v1, :cond_0
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_0
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/j;->Mqa:Lorg/bouncycastle/asn1/x509/ear;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/j;->Wqa:Lorg/bouncycastle/asn1/x509/ear;
 
     const/4 v2, 0x0
 
@@ -296,7 +296,7 @@
     invoke-virtual {v0, v3}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     :cond_1
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->Oqa:Lorg/bouncycastle/asn1/x509/cgv;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/j;->Yqa:Lorg/bouncycastle/asn1/x509/cgv;
 
     if-eqz p0, :cond_2
 

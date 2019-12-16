@@ -43,7 +43,7 @@
 
     if-ne v1, v2, :cond_5
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
 
     move-result v0
 
@@ -85,7 +85,7 @@
     return-object v2
 
     :cond_0
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->zg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->yg()Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->xg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/wtn;->wg()Z
 
     move-result v0
 
@@ -192,7 +192,7 @@
 
 
 # virtual methods
-.method mg()I
+.method lg()I
     .locals 1
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/v;->Ps()[B

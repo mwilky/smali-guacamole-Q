@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final gEa:J = 0x55555555L
+.field private static final qEa:J = 0x55555555L
 
-.field private static final hEa:J = 0x5555555555555555L
+.field private static final rEa:J = 0x5555555555555555L
 
-.field private static final iEa:J = -0x5555555555555556L
+.field private static final sEa:J = -0x5555555555555556L
 
 
 # direct methods

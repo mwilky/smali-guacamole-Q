@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static final UBa:I = 0xb
+.field public static final dCa:I = 0xb
 
-.field public static final VBa:I = 0xc
+.field public static final eCa:I = 0xc
 
 
 # instance fields
-.field SBa:I
+.field bCa:I
 
-.field TBa:Ljava/util/Date;
+.field cCa:Ljava/util/Date;
 
 
 # direct methods
@@ -23,11 +23,11 @@
 
     const/16 v0, 0xb
 
-    iput v0, p0, Lorg/bouncycastle/jce/provider/rtg;->SBa:I
+    iput v0, p0, Lorg/bouncycastle/jce/provider/rtg;->bCa:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/bouncycastle/jce/provider/rtg;->TBa:Ljava/util/Date;
+    iput-object v0, p0, Lorg/bouncycastle/jce/provider/rtg;->cCa:Ljava/util/Date;
 
     return-void
 .end method
@@ -37,7 +37,7 @@
 .method public getRevocationDate()Ljava/util/Date;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jce/provider/rtg;->TBa:Ljava/util/Date;
+    iget-object p0, p0, Lorg/bouncycastle/jce/provider/rtg;->cCa:Ljava/util/Date;
 
     return-object p0
 .end method
@@ -45,15 +45,15 @@
 .method public ha(I)V
     .locals 0
 
-    iput p1, p0, Lorg/bouncycastle/jce/provider/rtg;->SBa:I
+    iput p1, p0, Lorg/bouncycastle/jce/provider/rtg;->bCa:I
 
     return-void
 .end method
 
-.method public vj()I
+.method public uj()I
     .locals 0
 
-    iget p0, p0, Lorg/bouncycastle/jce/provider/rtg;->SBa:I
+    iget p0, p0, Lorg/bouncycastle/jce/provider/rtg;->bCa:I
 
     return p0
 .end method
@@ -61,7 +61,7 @@
 .method public you(Ljava/util/Date;)V
     .locals 0
 
-    iput-object p1, p0, Lorg/bouncycastle/jce/provider/rtg;->TBa:Ljava/util/Date;
+    iput-object p1, p0, Lorg/bouncycastle/jce/provider/rtg;->cCa:Ljava/util/Date;
 
     return-void
 .end method

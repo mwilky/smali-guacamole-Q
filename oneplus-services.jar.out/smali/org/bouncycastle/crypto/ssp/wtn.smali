@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static final Iva:I = 0x1
+.field public static final Sva:I = 0x1
 
-.field public static final Jva:I = 0x2
+.field public static final Tva:I = 0x2
 
-.field public static final Kva:I = 0x3
+.field public static final Uva:I = 0x3
 
 
 # instance fields
-.field private Fna:I
+.field private Pna:I
 
-.field private Hva:I
+.field private Rva:I
 
 .field private digest:Lorg/bouncycastle/crypto/qbh;
 
@@ -35,7 +35,7 @@
 
     move-result v0
 
-    iput v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Hva:I
+    iput v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Rva:I
 
     check-cast p1, Lorg/bouncycastle/crypto/oif;
 
@@ -43,7 +43,7 @@
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Fna:I
+    iput p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Pna:I
 
     return-void
 
@@ -77,10 +77,10 @@
     throw p0
 .end method
 
-.method private bud(II)[B
+.method private les(II)[B
     .locals 11
 
-    iget v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Fna:I
+    iget v0, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Pna:I
 
     new-array v0, v0, [B
 
@@ -114,7 +114,7 @@
 
     if-eqz v4, :cond_1
 
-    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Fna:I
+    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Pna:I
 
     array-length p1, p1
 
@@ -161,7 +161,7 @@
 
     if-eqz v5, :cond_3
 
-    iget v5, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Fna:I
+    iget v5, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Pna:I
 
     array-length v4, v4
 
@@ -218,11 +218,11 @@
 
     invoke-static {v4, v2, v5, p1, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Fna:I
+    iget p1, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Pna:I
 
     new-array p1, p1, [B
 
-    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Hva:I
+    iget v4, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Rva:I
 
     add-int/2addr p2, v4
 
@@ -300,7 +300,7 @@
     :goto_6
     array-length v8, v5
 
-    iget v9, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Fna:I
+    iget v9, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Pna:I
 
     div-int/2addr v8, v9
 
@@ -317,7 +317,7 @@
     :cond_7
     add-int/lit8 v7, v6, -0x1
 
-    iget v8, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Hva:I
+    iget v8, p0, Lorg/bouncycastle/crypto/ssp/wtn;->Rva:I
 
     if-ne v6, p2, :cond_8
 
@@ -430,7 +430,7 @@
 
     const/4 v0, 0x3
 
-    invoke-direct {p0, v0, p1}, Lorg/bouncycastle/crypto/ssp/wtn;->bud(II)[B
+    invoke-direct {p0, v0, p1}, Lorg/bouncycastle/crypto/ssp/wtn;->les(II)[B
 
     move-result-object p0
 
@@ -450,7 +450,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p1}, Lorg/bouncycastle/crypto/ssp/wtn;->bud(II)[B
+    invoke-direct {p0, v0, p1}, Lorg/bouncycastle/crypto/ssp/wtn;->les(II)[B
 
     move-result-object p0
 
@@ -463,7 +463,7 @@
     return-object v0
 .end method
 
-.method public gwm(II)Lorg/bouncycastle/crypto/kth;
+.method public ugm(II)Lorg/bouncycastle/crypto/kth;
     .locals 4
 
     div-int/lit8 p1, p1, 0x8
@@ -472,13 +472,13 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, p1}, Lorg/bouncycastle/crypto/ssp/wtn;->bud(II)[B
+    invoke-direct {p0, v0, p1}, Lorg/bouncycastle/crypto/ssp/wtn;->les(II)[B
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, v1, p2}, Lorg/bouncycastle/crypto/ssp/wtn;->bud(II)[B
+    invoke-direct {p0, v1, p2}, Lorg/bouncycastle/crypto/ssp/wtn;->les(II)[B
 
     move-result-object p0
 

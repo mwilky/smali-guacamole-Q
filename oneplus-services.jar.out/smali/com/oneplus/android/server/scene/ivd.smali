@@ -19,59 +19,59 @@
 
 
 # static fields
-.field private static final Aea:I = 0x8
+.field public static final Aea:I = 0x1
 
-.field private static final Bea:I = 0x9
+.field public static final Bea:I = 0x0
 
 .field public static final CHANNEL_PREFIX:Ljava/lang/String; = "com.oneplus.android.server.scene.READ_MODE - "
 
-.field private static final Cea:I = 0xb
+.field public static final Cea:I = 0x1
 
 .field private static final DBG:Z
 
-.field private static final Dea:I = 0xc
+.field private static final Dea:Ljava/lang/String; = "#3b78e7"
 
-.field private static final Eea:I = 0xd
+.field private static final Eea:I = 0x0
 
-.field private static final Fda:Landroid/net/Uri;
+.field private static final Fea:I = 0x1
 
-.field private static final Fea:I = 0x15be
+.field private static final Gea:I = 0x3
 
-.field private static final Gea:I = 0x0
+.field private static final Hea:I = 0x4
 
-.field private static final Hea:I = 0x1
+.field private static final Iea:I = 0x5
 
-.field private static final Iea:I = 0x2
+.field private static final Jea:I = 0x6
 
-.field private static final Jea:I = 0xea60
+.field private static final Kea:I = 0x7
 
-.field private static final Kea:I = 0x1f4
+.field private static final Lea:I = 0x8
 
-.field private static final Lea:Ljava/lang/String; = "2"
-
-.field private static final Mea:Ljava/lang/String; = "persist.sys.gamemodescale.debug"
+.field private static final Mea:I = 0x9
 
 .field public static final NOTIFICATION_ID:I = 0x3ff
 
-.field private static final Nea:Ljava/lang/String; = "persist.sys.oem.gamemode_dirty"
+.field private static final Nea:I = 0xb
 
-.field private static final Oea:Ljava/lang/String; = "persist.sys.brickmode.disablenfc"
+.field private static final Oea:I = 0xc
 
-.field private static final Pea:Ljava/lang/String; = "com.oem.intent.action.DISABLE_GAME_MODE"
+.field private static final Pea:I = 0xd
 
-.field private static final Qea:Ljava/lang/String; = "com.oem.intent.action.SWITCH_TO_ESPORT"
+.field private static final Qda:Landroid/net/Uri;
 
-.field private static final Rea:Ljava/lang/String; = "com.oem.intent.action.SHOW_DIALOG"
+.field private static final Qea:I = 0x15be
 
-.field private static final Sea:Ljava/lang/String; = "scene_modes_game"
+.field private static final Rea:I = 0x0
+
+.field private static final Sea:I = 0x1
 
 .field private static final TAG:Ljava/lang/String; = "OemSceneModeController"
 
 .field public static final TOAST_WINDOW_TIMEOUT:I = 0x7d0
 
-.field private static final Tea:Ljava/lang/String; = "game_mode_battery_saver"
+.field private static final Tea:I = 0x2
 
-.field private static final Uea:Ljava/lang/String; = "0_0"
+.field private static final Uea:I = 0xea60
 
 .field private static final VALUE_OFF:Ljava/lang/String; = "0"
 
@@ -81,29 +81,57 @@
 
 .field private static final VALUE_ON_INT:I = 0x1
 
-.field private static final Vea:Landroid/net/Uri;
+.field private static final Vea:I = 0x1f4
 
-.field private static final Wea:Landroid/net/Uri;
+.field private static final Wea:Ljava/lang/String; = "2"
 
-.field private static final Xea:Landroid/net/Uri;
+.field private static final Xea:Ljava/lang/String; = "persist.sys.gamemodescale.debug"
 
-.field private static final Yea:Landroid/net/Uri;
+.field private static final Yea:Ljava/lang/String; = "persist.sys.oem.gamemode_dirty"
 
-.field private static final Zea:Landroid/net/Uri;
+.field private static final Zea:Ljava/lang/String; = "persist.sys.brickmode.disablenfc"
 
-.field private static _ea:Ljava/lang/String; = null
+.field private static final _ea:Ljava/lang/String; = "com.oem.intent.action.DISABLE_GAME_MODE"
 
-.field private static afa:Ljava/lang/String; = null
+.field private static final afa:Ljava/lang/String; = "com.oem.intent.action.SWITCH_TO_ESPORT"
 
-.field private static bfa:Ljava/lang/String; = null
+.field private static final bfa:Ljava/lang/String; = "com.oem.intent.action.SHOW_DIALOG"
 
-.field private static cfa:Lcom/oneplus/android/server/scene/ivd; = null
+.field private static final cfa:Ljava/lang/String; = "scene_modes_game"
 
-.field public static final dfa:Z
+.field private static final dfa:Ljava/lang/String; = "game_mode_battery_saver"
 
-.field private static final eO:Ljava/lang/String; = "force-off"
+.field private static final efa:Ljava/lang/String; = "0_0"
 
-.field public static efa:Ljava/util/ArrayList; = null
+.field private static final ffa:Landroid/net/Uri;
+
+.field private static final gfa:Landroid/net/Uri;
+
+.field private static final hfa:Landroid/net/Uri;
+
+.field private static final ifa:Landroid/net/Uri;
+
+.field private static final jb:Ljava/lang/String; = "RBS8PPYT2W"
+
+.field private static final jfa:Landroid/net/Uri;
+
+.field private static kfa:Ljava/lang/String; = null
+
+.field private static lfa:Ljava/lang/String; = null
+
+.field private static final mO:Ljava/lang/String; = "force-off"
+
+.field private static mfa:Ljava/lang/String; = null
+
+.field private static final nO:Ljava/lang/String; = "force-on"
+
+.field private static nfa:Lcom/oneplus/android/server/scene/ivd; = null
+
+.field private static final oO:Ljava/lang/String; = "force-on-color"
+
+.field public static final ofa:Z
+
+.field public static pfa:Ljava/util/ArrayList; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -113,107 +141,61 @@
     .end annotation
 .end field
 
-.field private static final fO:Ljava/lang/String; = "force-on"
+.field public static final qfa:Ljava/lang/String; = "com.oem.intent.action.ENABLE_READ_MODE_NOW"
 
-.field public static final ffa:Ljava/lang/String; = "com.oem.intent.action.ENABLE_READ_MODE_NOW"
-
-.field private static final gO:Ljava/lang/String; = "force-on-color"
-
-.field public static final gfa:Ljava/lang/String; = "com.oem.intent.action.GO_READ_MODE_SETTINGS"
-
-.field public static final hfa:I
-
-.field private static final ib:Ljava/lang/String; = "RBS8PPYT2W"
-
-.field private static final ifa:Ljava/lang/String; = "Scene_Mode_Config"
-
-.field private static final jfa:Ljava/lang/String; = "read_use"
-
-.field private static kfa:Ljava/lang/Object; = null
-
-.field public static lfa:Ljava/lang/String; = null
-
-.field private static final nea:Ljava/lang/String; = "SceneModeController"
-
-.field public static final oea:I = 0x0
-
-.field public static final pea:I = 0x1
-
-.field public static final qea:I = 0x0
-
-.field public static final rea:I = 0x1
+.field public static final rfa:Ljava/lang/String; = "com.oem.intent.action.GO_READ_MODE_SETTINGS"
 
 .field public static sNextRequestCode:I = 0x0
 
-.field private static final sea:Ljava/lang/String; = "#3b78e7"
+.field public static final sfa:I
 
-.field private static final tea:I = 0x0
+.field private static final tfa:Ljava/lang/String; = "Scene_Mode_Config"
 
-.field private static final uea:I = 0x1
+.field private static final ufa:Ljava/lang/String; = "read_use"
 
-.field private static final vea:I = 0x3
+.field private static vfa:Ljava/lang/Object; = null
 
-.field private static final wea:I = 0x4
+.field public static wfa:Ljava/lang/String; = null
 
-.field private static final xea:I = 0x5
+.field private static final yea:Ljava/lang/String; = "SceneModeController"
 
-.field private static final yea:I = 0x6
-
-.field private static final zea:I = 0x7
+.field public static final zea:I
 
 
 # instance fields
-.field private Oda:Z
+.field private Eda:Landroid/view/WindowManager;
 
-.field private Pda:Z
+.field private IV:Lcom/oneplus/android/server/scene/ivd$tsu;
 
-.field private Qda:Z
+.field private Ida:Lcom/oneplus/android/server/scene/ivd$you;
 
-.field private Rda:Z
+.field private Zda:Z
 
-.field private Sda:Z
+.field private _da:Z
 
-.field private Tda:Z
+.field private aea:Z
 
-.field private Uda:Z
+.field private bea:Z
 
-.field private Vda:Z
+.field private cea:Z
 
-.field private Wda:Z
+.field private dea:Z
 
-.field private Xda:Z
+.field private eea:Z
 
-.field private Yda:Landroid/os/IBinder;
+.field private fea:Z
 
-.field private Zda:Lcom/oneplus/android/server/scene/ivd$ssp;
+.field private gea:Z
 
-.field private _da:Lcom/oneplus/android/server/scene/ivd$rtg;
+.field private hea:Z
 
-.field private aea:Lcom/oneplus/android/server/scene/ivd$sis;
+.field private iea:Landroid/os/IBinder;
 
-.field private bea:Lcom/oneplus/android/server/scene/ivd$kth;
+.field private jea:Lcom/oneplus/android/server/scene/ivd$ssp;
 
-.field private cea:Lcom/oneplus/android/server/scene/ivd$zta;
+.field private kea:Lcom/oneplus/android/server/scene/ivd$rtg;
 
-.field private dda:Lcom/oneplus/android/server/scene/cgv;
-
-.field private dea:Ljava/lang/Thread;
-
-.field private eea:I
-
-.field private fea:Ljava/lang/String;
-
-.field private gea:Ljava/lang/String;
-
-.field private hea:Ljava/lang/String;
-
-.field private iea:Z
-
-.field private jea:Landroid/view/View;
-
-.field private kea:I
-
-.field private lea:Lcom/oneplus/config/ConfigObserver;
+.field private lea:Lcom/oneplus/android/server/scene/ivd$sis;
 
 .field private mAm:Landroid/app/ActivityManager;
 
@@ -231,13 +213,31 @@
 
 .field private mResolver:Landroid/content/ContentResolver;
 
-.field private mea:Ljava/lang/Runnable;
+.field private mea:Lcom/oneplus/android/server/scene/ivd$kth;
 
-.field private tda:Landroid/view/WindowManager;
+.field private nea:Lcom/oneplus/android/server/scene/ivd$zta;
 
-.field private wV:Lcom/oneplus/android/server/scene/ivd$tsu;
+.field private oda:Lcom/oneplus/android/server/scene/cgv;
 
-.field private xda:Lcom/oneplus/android/server/scene/ivd$you;
+.field private oea:Ljava/lang/Thread;
+
+.field private pea:I
+
+.field private qea:Ljava/lang/String;
+
+.field private rea:Ljava/lang/String;
+
+.field private sea:Ljava/lang/String;
+
+.field private tea:Z
+
+.field private uea:Landroid/view/View;
+
+.field private vea:I
+
+.field private wea:Lcom/oneplus/config/ConfigObserver;
+
+.field private xea:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -254,7 +254,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Vea:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->ffa:Landroid/net/Uri;
 
     const-string v0, "rading_mode_status_auto"
 
@@ -262,7 +262,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Wea:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->gfa:Landroid/net/Uri;
 
     const-string v0, "game_mode_status"
 
@@ -270,7 +270,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Xea:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->hfa:Landroid/net/Uri;
 
     const-string v0, "esport_mode_enabled"
 
@@ -278,7 +278,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Fda:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Qda:Landroid/net/Uri;
 
     const-string v0, "game_mode_battery_saver"
 
@@ -286,7 +286,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Yea:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->ifa:Landroid/net/Uri;
 
     const-string v0, "op_breath_mode_status"
 
@@ -294,15 +294,15 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->Zea:Landroid/net/Uri;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->jfa:Landroid/net/Uri;
 
     const-string v0, "0"
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->_ea:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->kfa:Ljava/lang/String;
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->afa:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->lfa:Ljava/lang/String;
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     const/4 v0, 0x1
 
@@ -318,13 +318,13 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/android/server/scene/ivd;->dfa:Z
+    sput-boolean v0, Lcom/oneplus/android/server/scene/ivd;->ofa:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->efa:Ljava/util/ArrayList;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->pfa:Ljava/util/ArrayList;
 
     const-string v0, "persist.readmode.notification.duration"
 
@@ -336,7 +336,7 @@
 
     mul-int/lit16 v0, v0, 0x3e8
 
-    sput v0, Lcom/oneplus/android/server/scene/ivd;->hfa:I
+    sput v0, Lcom/oneplus/android/server/scene/ivd;->sfa:I
 
     sput v1, Lcom/oneplus/android/server/scene/ivd;->sNextRequestCode:I
 
@@ -344,7 +344,7 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->kfa:Ljava/lang/Object;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->vfa:Ljava/lang/Object;
 
     return-void
 .end method
@@ -358,53 +358,53 @@
 
     iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Oda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Pda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->_da:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Qda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Sda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->cea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Tda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->dea:Z
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Uda:Z
+    iput-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->eea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Vda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Wda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Xda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Z
 
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->Yda:Landroid/os/IBinder;
+    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Landroid/os/IBinder;
 
     const/4 v3, -0x1
 
-    iput v3, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iput v3, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
     const-string v4, ""
 
-    iput-object v4, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iput-object v4, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
-    iput-object v4, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iput-object v4, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     const-string v4, "0_0"
 
-    iput-object v4, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iput-object v4, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->tea:Z
 
-    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->jea:Landroid/view/View;
+    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->uea:Landroid/view/View;
 
-    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->tda:Landroid/view/WindowManager;
+    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->Eda:Landroid/view/WindowManager;
 
-    iput v3, p0, Lcom/oneplus/android/server/scene/ivd;->kea:I
+    iput v3, p0, Lcom/oneplus/android/server/scene/ivd;->vea:I
 
     new-instance v2, Lcom/oneplus/android/server/scene/bud;
 
@@ -416,7 +416,7 @@
 
     invoke-direct {v2, p0}, Lcom/oneplus/android/server/scene/vdw;-><init>(Lcom/oneplus/android/server/scene/ivd;)V
 
-    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->mea:Ljava/lang/Runnable;
+    iput-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->xea:Ljava/lang/Runnable;
 
     new-instance v2, Lcom/oneplus/android/server/scene/qeg;
 
@@ -454,7 +454,7 @@
 
     move-result p1
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/ivd;->tea:Z
 
     new-instance p1, Lcom/oneplus/android/server/scene/ivd$ssp;
 
@@ -464,7 +464,7 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$ssp;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Lcom/oneplus/android/server/scene/ivd$ssp;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->jea:Lcom/oneplus/android/server/scene/ivd$ssp;
 
     new-instance p1, Lcom/oneplus/android/server/scene/ivd$rtg;
 
@@ -474,7 +474,7 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$rtg;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->_da:Lcom/oneplus/android/server/scene/ivd$rtg;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->kea:Lcom/oneplus/android/server/scene/ivd$rtg;
 
     new-instance p1, Lcom/oneplus/android/server/scene/ivd$tsu;
 
@@ -484,7 +484,7 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$tsu;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->wV:Lcom/oneplus/android/server/scene/ivd$tsu;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->IV:Lcom/oneplus/android/server/scene/ivd$tsu;
 
     new-instance p1, Lcom/oneplus/android/server/scene/ivd$you;
 
@@ -494,7 +494,7 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$you;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->xda:Lcom/oneplus/android/server/scene/ivd$you;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->Ida:Lcom/oneplus/android/server/scene/ivd$you;
 
     new-instance p1, Lcom/oneplus/android/server/scene/ivd$kth;
 
@@ -504,7 +504,7 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$kth;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Lcom/oneplus/android/server/scene/ivd$kth;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mea:Lcom/oneplus/android/server/scene/ivd$kth;
 
     new-instance p1, Lcom/oneplus/android/server/scene/ivd$zta;
 
@@ -514,7 +514,7 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$zta;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->cea:Lcom/oneplus/android/server/scene/ivd$zta;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->nea:Lcom/oneplus/android/server/scene/ivd$zta;
 
     new-instance p1, Landroid/content/IntentFilter;
 
@@ -564,41 +564,41 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Vea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->ffa:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Lcom/oneplus/android/server/scene/ivd$ssp;
-
-    invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
-
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
-
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Wea:Landroid/net/Uri;
-
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->_da:Lcom/oneplus/android/server/scene/ivd$rtg;
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->jea:Lcom/oneplus/android/server/scene/ivd$ssp;
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Xea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->gfa:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->wV:Lcom/oneplus/android/server/scene/ivd$tsu;
-
-    invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
-
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
-
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Fda:Landroid/net/Uri;
-
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->xda:Lcom/oneplus/android/server/scene/ivd$you;
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->kea:Lcom/oneplus/android/server/scene/ivd$rtg;
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Zea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->hfa:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Lcom/oneplus/android/server/scene/ivd$kth;
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->IV:Lcom/oneplus/android/server/scene/ivd$tsu;
+
+    invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
+
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Qda:Landroid/net/Uri;
+
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->Ida:Lcom/oneplus/android/server/scene/ivd$you;
+
+    invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
+
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->jfa:Landroid/net/Uri;
+
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->mea:Lcom/oneplus/android/server/scene/ivd$kth;
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
@@ -614,7 +614,7 @@
 
     iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mNotificationManager:Landroid/app/NotificationManager;
 
-    iget-boolean p1, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Z
+    iget-boolean p1, p0, Lcom/oneplus/android/server/scene/ivd;->tea:Z
 
     if-eqz p1, :cond_0
 
@@ -626,13 +626,13 @@
 
     invoke-direct {p1, p0, v1, v2}, Lcom/oneplus/android/server/scene/ivd$sis;-><init>(Lcom/oneplus/android/server/scene/ivd;Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Lcom/oneplus/android/server/scene/ivd$sis;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->lea:Lcom/oneplus/android/server/scene/ivd$sis;
 
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Yea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->ifa:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Lcom/oneplus/android/server/scene/ivd$sis;
+    iget-object v2, p0, Lcom/oneplus/android/server/scene/ivd;->lea:Lcom/oneplus/android/server/scene/ivd$sis;
 
     invoke-virtual {p1, v1, v0, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
@@ -640,7 +640,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     :cond_0
     new-instance p1, Lcom/oneplus/android/server/scene/cgv;
@@ -651,7 +651,7 @@
 
     invoke-direct {p1, v0, v1}, Lcom/oneplus/android/server/scene/cgv;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->dda:Lcom/oneplus/android/server/scene/cgv;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->oda:Lcom/oneplus/android/server/scene/cgv;
 
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
@@ -689,7 +689,7 @@
     return-void
 .end method
 
-.method private Va(Z)V
+.method private Wa(Z)V
     .locals 12
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
@@ -973,7 +973,7 @@
     return-void
 .end method
 
-.method private Wa(Z)V
+.method private Xa(Z)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -989,7 +989,7 @@
     return-void
 .end method
 
-.method private Xa(Z)Z
+.method private Ya(Z)Z
     .locals 3
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
@@ -1036,10 +1036,10 @@
     return p1
 .end method
 
-.method private Ya(Z)Z
+.method private Za(Z)Z
     .locals 2
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ivd;->Va(Z)V
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ivd;->Wa(Z)V
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
 
@@ -1064,7 +1064,7 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->tea:Z
 
     if-eqz v0, :cond_1
 
@@ -1105,7 +1105,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1126,13 +1126,13 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->dea:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->oea:Ljava/lang/Thread;
 
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_1
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     const-string v0, "0_0"
 
@@ -1143,7 +1143,7 @@
     if-nez p1, :cond_2
 
     :cond_1
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->dea:Ljava/lang/Thread;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->oea:Ljava/lang/Thread;
 
     invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
@@ -1154,7 +1154,7 @@
 .method static synthetic bio(Lcom/oneplus/android/server/scene/ivd;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->Vda:Z
+    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Z
 
     return p0
 .end method
@@ -1181,7 +1181,7 @@
 .method static synthetic cno(Lcom/oneplus/android/server/scene/ivd;)Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -1216,11 +1216,19 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Wda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Xda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Z
 
     return-void
+.end method
+
+.method public static ef()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->lfa:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method private es()V
@@ -1267,14 +1275,6 @@
 
     :cond_2
     return-void
-.end method
-
-.method public static ff()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->afa:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method private fs()V
@@ -1335,7 +1335,7 @@
 .method static synthetic gck(Lcom/oneplus/android/server/scene/ivd;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
     return p0
 .end method
@@ -1343,7 +1343,7 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/oneplus/android/server/scene/ivd;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->cfa:Lcom/oneplus/android/server/scene/ivd;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->nfa:Lcom/oneplus/android/server/scene/ivd;
 
     if-nez v0, :cond_0
 
@@ -1351,10 +1351,10 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/scene/ivd;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->cfa:Lcom/oneplus/android/server/scene/ivd;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->nfa:Lcom/oneplus/android/server/scene/ivd;
 
     :cond_0
-    sget-object p0, Lcom/oneplus/android/server/scene/ivd;->cfa:Lcom/oneplus/android/server/scene/ivd;
+    sget-object p0, Lcom/oneplus/android/server/scene/ivd;->nfa:Lcom/oneplus/android/server/scene/ivd;
 
     return-object p0
 .end method
@@ -1403,20 +1403,6 @@
     return p0
 .end method
 
-.method public static ia(Ljava/lang/String;)Z
-    .locals 1
-
-    const-string v0, "0"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
 .method static synthetic igw(Lcom/oneplus/android/server/scene/ivd;)Landroid/content/Context;
     .locals 0
 
@@ -1443,6 +1429,20 @@
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
+
+    return p0
+.end method
+
+.method public static ja(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "0"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
 
     return p0
 .end method
@@ -1504,7 +1504,7 @@
 
     :cond_2
     :goto_0
-    sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->dfa:Z
+    sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->ofa:Z
 
     if-eqz p0, :cond_3
 
@@ -1575,7 +1575,7 @@
 
     :cond_2
     :goto_0
-    sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->dfa:Z
+    sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->ofa:Z
 
     if-eqz p0, :cond_3
 
@@ -1592,7 +1592,7 @@
 .method static synthetic kth(Lcom/oneplus/android/server/scene/ivd;)Lcom/oneplus/android/server/scene/cgv;
     .locals 0
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->dda:Lcom/oneplus/android/server/scene/cgv;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->oda:Lcom/oneplus/android/server/scene/cgv;
 
     return-object p0
 .end method
@@ -1672,7 +1672,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
 
@@ -1686,7 +1686,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1699,7 +1699,7 @@
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->sea:Ljava/lang/String;
 
     const-string v1, "0_0"
 
@@ -1720,7 +1720,7 @@
 
     if-eqz v0, :cond_2
 
-    iput-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Uda:Z
+    iput-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->eea:Z
 
     :cond_2
     :goto_0
@@ -1780,7 +1780,7 @@
 
     if-eq v0, v3, :cond_4
 
-    invoke-direct {p0, v3}, Lcom/oneplus/android/server/scene/ivd;->Ya(Z)Z
+    invoke-direct {p0, v3}, Lcom/oneplus/android/server/scene/ivd;->Za(Z)Z
 
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
 
@@ -1798,7 +1798,7 @@
 
     invoke-virtual {v0, v3, v7, v8}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    iput-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Wda:Z
+    iput-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Z
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
 
@@ -1812,7 +1812,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Wda:Z
+    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1825,7 +1825,7 @@
     :cond_1
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
 
-    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Xda:Z
+    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->hea:Z
 
     invoke-direct {p0, v0, v1}, Lcom/oneplus/android/server/scene/ivd;->sis(ZZ)V
 
@@ -1833,7 +1833,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Vda:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Z
 
     if-eqz v0, :cond_2
 
@@ -1841,7 +1841,7 @@
 
     invoke-direct {p0, v4, v0}, Lcom/oneplus/android/server/scene/ivd;->sis(ZZ)V
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Vda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Z
 
     :cond_2
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
@@ -1872,7 +1872,7 @@
     goto :goto_1
 
     :cond_4
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->tea:Z
 
     if-eqz v0, :cond_7
 
@@ -1888,7 +1888,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iget v1, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1896,7 +1896,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1904,7 +1904,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Uda:Z
+    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->eea:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1915,13 +1915,13 @@
     invoke-static {v6, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_5
-    iget v0, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iget v0, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_6
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     const-string v1, ""
 
@@ -1931,7 +1931,7 @@
 
     if-eqz v0, :cond_6
 
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Uda:Z
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->eea:Z
 
     if-eqz v0, :cond_7
 
@@ -1966,38 +1966,38 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v2, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->tc(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->uc(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/oneplus/android/server/scene/ivd;->ia(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/oneplus/android/server/scene/ivd;->ja(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     :cond_0
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_1
-    invoke-static {v1}, Lcom/oneplus/android/server/scene/ivd;->ia(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/oneplus/android/server/scene/ivd;->ja(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     :goto_0
-    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->afa:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->lfa:Ljava/lang/String;
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->_ea:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->kfa:Ljava/lang/String;
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     const-string v1, "1"
 
@@ -2022,7 +2022,7 @@
     goto :goto_2
 
     :cond_2
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     const-string v6, "2"
 
@@ -2043,11 +2043,11 @@
     invoke-virtual {p0, v4, v5}, Lcom/oneplus/android/server/scene/ivd;->cno(Ljava/lang/String;I)V
 
     :goto_2
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     if-eq v2, v0, :cond_4
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->vc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->wc(Ljava/lang/String;)Ljava/lang/String;
 
     :cond_4
     return-void
@@ -2068,19 +2068,19 @@
 
     move-result-object v2
 
-    sput-object v2, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v2, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    invoke-direct {p0, v1}, Lcom/oneplus/android/server/scene/ivd;->uc(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/oneplus/android/server/scene/ivd;->vc(Ljava/lang/String;)V
 
-    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->afa:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/android/server/scene/ivd;->lfa:Ljava/lang/String;
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->_ea:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->kfa:Ljava/lang/String;
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     const-string v1, "1"
 
@@ -2105,7 +2105,7 @@
     goto :goto_1
 
     :cond_0
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     const-string v6, "2"
 
@@ -2126,11 +2126,11 @@
     invoke-virtual {p0, v4, v5}, Lcom/oneplus/android/server/scene/ivd;->cno(Ljava/lang/String;I)V
 
     :goto_1
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     if-eq v2, v0, :cond_2
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->vc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->wc(Ljava/lang/String;)Ljava/lang/String;
 
     :cond_2
     return-void
@@ -2193,7 +2193,7 @@
     goto/16 :goto_5
 
     :cond_1
-    iput-object v5, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iput-object v5, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
     iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->mAm:Landroid/app/ActivityManager;
 
@@ -2232,7 +2232,7 @@
 
     if-eq p2, v3, :cond_10
 
-    iget-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iget-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2243,7 +2243,7 @@
     goto/16 :goto_4
 
     :cond_3
-    iget-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->Yda:Landroid/os/IBinder;
+    iget-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Landroid/os/IBinder;
 
     if-nez v3, :cond_4
 
@@ -2253,7 +2253,7 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->Yda:Landroid/os/IBinder;
+    iput-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Landroid/os/IBinder;
 
     :cond_4
     const-string v3, "_"
@@ -2375,7 +2375,7 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iget-object v3, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2394,9 +2394,9 @@
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_d
-    iget-object v7, p0, Lcom/oneplus/android/server/scene/ivd;->Yda:Landroid/os/IBinder;
+    iget-object v7, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Landroid/os/IBinder;
 
-    iget-object v9, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iget-object v9, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
     move-object v6, p0
 
@@ -2404,13 +2404,13 @@
 
     invoke-direct/range {v6 .. v11}, Lcom/oneplus/android/server/scene/ivd;->zta(Landroid/os/IBinder;ILjava/lang/String;II)V
 
-    iput p2, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iput p2, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
-    iput-boolean v4, p0, Lcom/oneplus/android/server/scene/ivd;->Uda:Z
+    iput-boolean v4, p0, Lcom/oneplus/android/server/scene/ivd;->eea:Z
 
     goto :goto_6
 
@@ -2442,7 +2442,7 @@
 
     if-eqz p1, :cond_12
 
-    iput-boolean v6, p0, Lcom/oneplus/android/server/scene/ivd;->Uda:Z
+    iput-boolean v6, p0, Lcom/oneplus/android/server/scene/ivd;->eea:Z
 
     :cond_12
     return-void
@@ -2461,11 +2461,11 @@
     return-void
 
     :cond_15
-    iget p1, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iget p1, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
     if-eq p1, v3, :cond_17
 
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2485,7 +2485,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p2, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iget p2, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2493,7 +2493,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2512,11 +2512,11 @@
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_16
-    iget-object v7, p0, Lcom/oneplus/android/server/scene/ivd;->Yda:Landroid/os/IBinder;
+    iget-object v7, p0, Lcom/oneplus/android/server/scene/ivd;->iea:Landroid/os/IBinder;
 
-    iget v8, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iget v8, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
-    iget-object v9, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iget-object v9, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     const/16 v10, 0x64
 
@@ -2526,18 +2526,12 @@
 
     invoke-direct/range {v6 .. v11}, Lcom/oneplus/android/server/scene/ivd;->zta(Landroid/os/IBinder;ILjava/lang/String;II)V
 
-    iput v3, p0, Lcom/oneplus/android/server/scene/ivd;->eea:I
+    iput v3, p0, Lcom/oneplus/android/server/scene/ivd;->pea:I
 
-    iput-object v5, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Ljava/lang/String;
+    iput-object v5, p0, Lcom/oneplus/android/server/scene/ivd;->rea:Ljava/lang/String;
 
     :cond_17
     :goto_6
-    return-void
-.end method
-
-.method private sc(Ljava/lang/String;)V
-    .locals 0
-
     return-void
 .end method
 
@@ -2595,7 +2589,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lcom/oneplus/android/server/scene/ivd;->kea:I
+    iget v0, p0, Lcom/oneplus/android/server/scene/ivd;->vea:I
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2620,7 +2614,7 @@
     :cond_1
     if-eqz p2, :cond_3
 
-    iget p1, p0, Lcom/oneplus/android/server/scene/ivd;->kea:I
+    iget p1, p0, Lcom/oneplus/android/server/scene/ivd;->vea:I
 
     iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->mAm:Landroid/app/ActivityManager;
 
@@ -2642,7 +2636,7 @@
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ivd;->Wda:Z
+    iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Z
 
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2653,9 +2647,9 @@
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
-    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->dda:Lcom/oneplus/android/server/scene/cgv;
+    iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->oda:Lcom/oneplus/android/server/scene/cgv;
 
-    iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ivd;->Wda:Z
+    iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ivd;->gea:Z
 
     invoke-virtual {p1, p2}, Lcom/oneplus/android/server/scene/cgv;->P(Z)V
 
@@ -2664,7 +2658,7 @@
     :cond_3
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;
 
-    iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->mea:Ljava/lang/Runnable;
+    iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->xea:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x1f4
 
@@ -2679,18 +2673,18 @@
 
     move-result p1
 
-    iput p1, p0, Lcom/oneplus/android/server/scene/ivd;->kea:I
+    iput p1, p0, Lcom/oneplus/android/server/scene/ivd;->vea:I
 
     goto :goto_1
 
     :cond_4
     iget-object p1, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;
 
-    iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->mea:Ljava/lang/Runnable;
+    iget-object p2, p0, Lcom/oneplus/android/server/scene/ivd;->xea:Ljava/lang/Runnable;
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->dda:Lcom/oneplus/android/server/scene/cgv;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->oda:Lcom/oneplus/android/server/scene/cgv;
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/scene/cgv;->hide()V
 
@@ -2727,15 +2721,7 @@
 .end method
 
 .method private tc(Ljava/lang/String;)V
-    .locals 2
-
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
-
-    const-string v0, "rading_mode_status_auto"
-
-    const/4 v1, -0x2
-
-    invoke-static {p0, v0, p1, v1}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+    .locals 0
 
     return-void
 .end method
@@ -2773,7 +2759,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
 
-    const-string v0, "reading_mode_status_manual"
+    const-string v0, "rading_mode_status_auto"
 
     const/4 v1, -0x2
 
@@ -2847,7 +2833,182 @@
     return p0
 .end method
 
-.method private vc(Ljava/lang/String;)Ljava/lang/String;
+.method private vc(Ljava/lang/String;)V
+    .locals 2
+
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
+
+    const-string v0, "reading_mode_status_manual"
+
+    const/4 v1, -0x2
+
+    invoke-static {p0, v0, p1, v1}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
+
+    return-void
+.end method
+
+.method private vs()V
+    .locals 3
+
+    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "[scene] Read Manual: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->lfa:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "[scene] Read Auto: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->kfa:Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "[scene] Read Status: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\t Game Status: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "[scene] Proactive monitoring: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Z
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, "\t Passive monitoring: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "[scene] Zen Mode: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Z
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "[scene] -----------"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "[scene] values: \n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "OemSceneModeController"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method private wc(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->mResolver:Landroid/content/ContentResolver;
@@ -2858,11 +3019,11 @@
 
     invoke-static {v0, v1, p1, v2}, Landroid/provider/Settings$System;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->dfa:Z
+    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->ofa:Z
 
     if-eqz v0, :cond_1
 
-    invoke-static {p1}, Lcom/oneplus/android/server/scene/ivd;->ia(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/oneplus/android/server/scene/ivd;->ja(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2908,170 +3069,9 @@
     invoke-virtual {v2, v3, v4, v0, v1}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveOsData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
 
     :cond_1
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ivd;->sc(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ivd;->tc(Ljava/lang/String;)V
 
     return-object p1
-.end method
-
-.method private vs()V
-    .locals 3
-
-    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "[scene] Read Manual: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->afa:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "[scene] Read Auto: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->_ea:Ljava/lang/String;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "[scene] Read Status: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\t Game Status: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "[scene] Proactive monitoring: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Qda:Z
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, "\t Passive monitoring: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "[scene] Zen Mode: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->Oda:Z
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "[scene] -----------"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "[scene] values: \n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "OemSceneModeController"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
 .end method
 
 .method static synthetic wtn(Lcom/oneplus/android/server/scene/ivd;)Landroid/os/Handler;
@@ -3184,7 +3184,7 @@
     goto :goto_0
 
     :cond_3
-    sget-object p1, Lcom/oneplus/android/server/scene/ivd;->kfa:Ljava/lang/Object;
+    sget-object p1, Lcom/oneplus/android/server/scene/ivd;->vfa:Ljava/lang/Object;
 
     monitor-enter p1
     :try_end_0
@@ -3198,7 +3198,7 @@
 
     if-lez v0, :cond_4
 
-    sput-object p0, Lcom/oneplus/android/server/scene/ivd;->efa:Ljava/util/ArrayList;
+    sput-object p0, Lcom/oneplus/android/server/scene/ivd;->pfa:Ljava/util/ArrayList;
 
     :cond_4
     monitor-exit p1
@@ -3289,7 +3289,7 @@
 .method static synthetic you(Lcom/oneplus/android/server/scene/ivd;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ivd;->Va(Z)V
+    invoke-direct {p0, p1}, Lcom/oneplus/android/server/scene/ivd;->Wa(Z)V
 
     return-void
 .end method
@@ -3395,7 +3395,7 @@
 
     iget-object v1, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Ljava/lang/String;
+    iput-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->qea:Ljava/lang/String;
 
     sget-boolean p0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
 
@@ -3599,7 +3599,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/scene/ivd;)Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->Qda:Z
+    iget-boolean p0, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Z
 
     return p0
 .end method
@@ -3617,7 +3617,7 @@
 .method static synthetic zta(Lcom/oneplus/android/server/scene/ivd;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/ivd;->Vda:Z
+    iput-boolean p1, p0, Lcom/oneplus/android/server/scene/ivd;->fea:Z
 
     return p1
 .end method
@@ -3640,9 +3640,9 @@
     :cond_0
     invoke-static {}, Lcom/android/server/wm/wtn;->Rd()V
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/oneplus/android/server/scene/ivd;->ia(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/oneplus/android/server/scene/ivd;->ja(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3650,9 +3650,9 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->afa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->lfa:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/oneplus/android/server/scene/ivd;->ia(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/oneplus/android/server/scene/ivd;->ja(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3660,11 +3660,11 @@
 
     const-string v0, "0"
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->vc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->wc(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->sc(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->tc(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
     const-string v0, "ReadMode"
 
@@ -3681,9 +3681,9 @@
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/scene/ivd;->Ya(Z)Z
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/scene/ivd;->Za(Z)Z
 
-    invoke-direct {p0, v2}, Lcom/oneplus/android/server/scene/ivd;->Va(Z)V
+    invoke-direct {p0, v2}, Lcom/oneplus/android/server/scene/ivd;->Wa(Z)V
 
     iput-boolean v2, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
 
@@ -3692,7 +3692,7 @@
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/android/server/scene/ivd;->cno(Ljava/lang/String;I)V
 
     :cond_2
-    iput-boolean v2, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iput-boolean v2, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
     return-void
 .end method
@@ -3706,7 +3706,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->lea:Lcom/oneplus/config/ConfigObserver;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->wea:Lcom/oneplus/config/ConfigObserver;
 
     const-string v1, "Scene_Mode_Config"
 
@@ -3724,9 +3724,9 @@
 
     invoke-direct {v0, v2, v3, v4, v1}, Lcom/oneplus/config/ConfigObserver;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/oneplus/config/ConfigObserver$ConfigUpdater;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->lea:Lcom/oneplus/config/ConfigObserver;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->wea:Lcom/oneplus/config/ConfigObserver;
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->lea:Lcom/oneplus/config/ConfigObserver;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->wea:Lcom/oneplus/config/ConfigObserver;
 
     invoke-virtual {v0}, Lcom/oneplus/config/ConfigObserver;->register()V
 
@@ -3751,7 +3751,7 @@
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->efa:Ljava/util/ArrayList;
+    sput-object v0, Lcom/oneplus/android/server/scene/ivd;->pfa:Ljava/util/ArrayList;
 
     new-instance v0, Lcom/oneplus/config/ConfigGrabber;
 
@@ -3776,6 +3776,18 @@
     return-void
 .end method
 
+.method public cf()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->oda:Lcom/oneplus/android/server/scene/cgv;
+
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/cgv;->cf()Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method cno(Ljava/lang/String;I)V
     .locals 0
 
@@ -3786,19 +3798,7 @@
     return-void
 .end method
 
-.method public df()Z
-    .locals 0
-
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->dda:Lcom/oneplus/android/server/scene/cgv;
-
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/cgv;->df()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public gf()V
+.method public ff()V
     .locals 3
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
@@ -3813,7 +3813,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Vea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->ffa:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3821,13 +3821,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->Wea:Landroid/net/Uri;
+    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->gfa:Landroid/net/Uri;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Xea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->hfa:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3842,22 +3842,22 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Qda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->sc(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->tc(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->Va(Z)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->Wa(Z)V
 
     return-void
 .end method
 
-.method public hf()V
+.method public gf()V
     .locals 2
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
@@ -3873,7 +3873,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
     iget-object v1, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;
 
@@ -3888,7 +3888,7 @@
     return-void
 .end method
 
-.method public ibl(II)Z
+.method public gwm(II)Z
     .locals 3
 
     const-string v0, "[scene] Not yet supported"
@@ -3907,13 +3907,13 @@
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/oneplus/android/server/scene/ivd;->ia(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/oneplus/android/server/scene/ivd;->ja(Ljava/lang/String;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iget-boolean p2, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
     if-eqz p2, :cond_2
 
@@ -3943,7 +3943,7 @@
     return v2
 .end method
 
-.method public if()V
+.method public hf()V
     .locals 3
 
     sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
@@ -3958,7 +3958,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Vea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->ffa:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3966,13 +3966,13 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->Wea:Landroid/net/Uri;
+    sget-object v2, Lcom/oneplus/android/server/scene/ivd;->gfa:Landroid/net/Uri;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->Xea:Landroid/net/Uri;
+    sget-object v1, Lcom/oneplus/android/server/scene/ivd;->hfa:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -3987,9 +3987,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Qda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->aea:Z
 
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Rda:Z
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->bea:Z
 
     const/4 v0, 0x2
 
@@ -4003,13 +4003,70 @@
 
     invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->Rd()V
 
-    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->bfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/android/server/scene/ivd;->mfa:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->sc(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->tc(Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->mGameModeStatus:Z
 
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->Va(Z)V
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->Wa(Z)V
+
+    return-void
+.end method
+
+.method public if()V
+    .locals 2
+
+    invoke-direct {p0}, Lcom/oneplus/android/server/scene/ivd;->ns()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Z
+
+    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "[ZenMode] handleZenModeChanged, mZenModeStatus:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OemSceneModeController"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    :goto_0
+    const-string v1, "ZenMode"
+
+    invoke-virtual {p0, v1, v0}, Lcom/oneplus/android/server/scene/ivd;->cno(Ljava/lang/String;I)V
+
+    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Zda:Z
+
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->Xa(Z)V
 
     return-void
 .end method
@@ -4046,63 +4103,6 @@
 .method public jf()V
     .locals 2
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/scene/ivd;->ns()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Oda:Z
-
-    sget-boolean v0, Lcom/oneplus/android/server/scene/ivd;->DBG:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "[ZenMode] handleZenModeChanged, mZenModeStatus:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lcom/oneplus/android/server/scene/ivd;->Oda:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "OemSceneModeController"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Oda:Z
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x2
-
-    :goto_0
-    const-string v1, "ZenMode"
-
-    invoke-virtual {p0, v1, v0}, Lcom/oneplus/android/server/scene/ivd;->cno(Ljava/lang/String;I)V
-
-    iget-boolean v0, p0, Lcom/oneplus/android/server/scene/ivd;->Oda:Z
-
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/ivd;->Wa(Z)V
-
-    return-void
-.end method
-
-.method public kf()V
-    .locals 2
-
     iget-object v0, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/oneplus/android/server/scene/irq;
@@ -4114,7 +4114,7 @@
     return-void
 .end method
 
-.method public lf()V
+.method public kf()V
     .locals 1
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;
@@ -4126,7 +4126,7 @@
     return-void
 .end method
 
-.method public mf()V
+.method public lf()V
     .locals 1
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;
@@ -4138,7 +4138,7 @@
     return-void
 .end method
 
-.method public nf()V
+.method public mf()V
     .locals 1
 
     iget-object p0, p0, Lcom/oneplus/android/server/scene/ivd;->mHandler:Landroid/os/Handler;

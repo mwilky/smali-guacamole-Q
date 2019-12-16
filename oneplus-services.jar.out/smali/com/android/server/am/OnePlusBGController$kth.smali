@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field public Al:Lcom/android/server/am/OnePlusBGController$MyDrainType;
+.field public Bl:Lcom/android/server/am/OnePlusBGController$AppBucketRanking;
 
-.field public Bl:Z
-
-.field public Cl:D
+.field public Cl:Lcom/android/server/am/OnePlusBGController$MyDrainType;
 
 .field public Dl:Z
 
-.field public El:Z
+.field public El:D
 
 .field public Fl:Z
 
-.field public mPkg:Ljava/lang/String;
+.field public Gl:Z
 
-.field public zl:Lcom/android/server/am/OnePlusBGController$AppBucketRanking;
+.field public Hl:Z
+
+.field public mPkg:Ljava/lang/String;
 
 
 # direct methods
@@ -38,19 +38,19 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/android/server/am/OnePlusBGController$kth;->zl:Lcom/android/server/am/OnePlusBGController$AppBucketRanking;
+    iput-object p2, p0, Lcom/android/server/am/OnePlusBGController$kth;->Bl:Lcom/android/server/am/OnePlusBGController$AppBucketRanking;
 
-    iput-object p3, p0, Lcom/android/server/am/OnePlusBGController$kth;->Al:Lcom/android/server/am/OnePlusBGController$MyDrainType;
+    iput-object p3, p0, Lcom/android/server/am/OnePlusBGController$kth;->Cl:Lcom/android/server/am/OnePlusBGController$MyDrainType;
 
-    iput-boolean p4, p0, Lcom/android/server/am/OnePlusBGController$kth;->Bl:Z
+    iput-boolean p4, p0, Lcom/android/server/am/OnePlusBGController$kth;->Dl:Z
 
-    iput-wide p5, p0, Lcom/android/server/am/OnePlusBGController$kth;->Cl:D
+    iput-wide p5, p0, Lcom/android/server/am/OnePlusBGController$kth;->El:D
 
-    iput-boolean p7, p0, Lcom/android/server/am/OnePlusBGController$kth;->Dl:Z
+    iput-boolean p7, p0, Lcom/android/server/am/OnePlusBGController$kth;->Fl:Z
 
-    iput-boolean p8, p0, Lcom/android/server/am/OnePlusBGController$kth;->El:Z
+    iput-boolean p8, p0, Lcom/android/server/am/OnePlusBGController$kth;->Gl:Z
 
-    iput-boolean p9, p0, Lcom/android/server/am/OnePlusBGController$kth;->Fl:Z
+    iput-boolean p9, p0, Lcom/android/server/am/OnePlusBGController$kth;->Hl:Z
 
     return-void
 .end method

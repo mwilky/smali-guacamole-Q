@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final Iaa:I = 0x1e
-
-.field private static final Jaa:F = 0.6f
-
 .field private static final TAG:Ljava/lang/String; = "OpMatrixUtils"
+
+.field private static final Taa:I = 0x1e
+
+.field private static final Uaa:F = 0.6f
 
 
 # direct methods

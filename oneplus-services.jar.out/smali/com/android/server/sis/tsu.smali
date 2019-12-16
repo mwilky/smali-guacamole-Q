@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/sis/vdb;->Ao()V
+    value = Lcom/android/server/sis/vdb;->yo()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

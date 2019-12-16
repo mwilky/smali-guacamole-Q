@@ -15,21 +15,21 @@
 
 
 # static fields
-.field public static final SCa:I = 0x1
+.field public static final bDa:I = 0x1
 
-.field public static final TCa:I = 0x2
+.field public static final cDa:I = 0x2
 
-.field public static final UCa:I = 0x3
+.field public static final dDa:I = 0x3
 
 
 # instance fields
-.field private QCa:I
+.field private Jna:I
 
-.field private RCa:[I
+.field private _Ca:I
+
+.field private aDa:[I
 
 .field x:Lyou/zta/sis/zta/ibl;
-
-.field private zna:I
 
 
 # direct methods
@@ -62,13 +62,13 @@
 
     if-nez p4, :cond_0
 
-    iput v2, p0, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iput v2, p0, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
     new-array p3, v1, [I
 
     aput p2, p3, v0
 
-    iput-object p3, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iput-object p3, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     goto :goto_0
 
@@ -79,7 +79,7 @@
 
     const/4 v3, 0x3
 
-    iput v3, p0, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iput v3, p0, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
     new-array v3, v3, [I
 
@@ -89,10 +89,10 @@
 
     aput p4, v3, v2
 
-    iput-object v3, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iput-object v3, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     :goto_0
-    iput p1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iput p1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     new-instance p1, Lyou/zta/sis/zta/ibl;
 
@@ -135,7 +135,7 @@
 
     invoke-direct {p0}, Lyou/zta/sis/zta/cno$zta;-><init>()V
 
-    iput p1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iput p1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     array-length p1, p2
 
@@ -151,9 +151,9 @@
     const/4 p1, 0x3
 
     :goto_0
-    iput p1, p0, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iput p1, p0, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
-    iput-object p2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iput-object p2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     iput-object p3, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
@@ -175,21 +175,21 @@
 
     check-cast p1, Lyou/zta/sis/zta/cno$sis;
 
-    iget v0, p0, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iget v0, p0, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
-    iget v1, p1, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iget v1, p1, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
     if-ne v0, v1, :cond_1
 
-    iget v0, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v0, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget v1, p1, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p1, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     if-ne v0, v1, :cond_0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
-    iget-object p1, p1, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p1, p1, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-static {p0, p1}, Lorg/bouncycastle/util/zta;->bvj([I[I)Z
 
@@ -229,10 +229,10 @@
 
 
 # virtual methods
-.method public Mj()I
+.method public Lj()I
     .locals 1
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     const/4 v0, 0x0
 
@@ -241,10 +241,10 @@
     return p0
 .end method
 
-.method public Nj()I
+.method public Mj()I
     .locals 2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     array-length v0, p0
 
@@ -265,10 +265,10 @@
     return p0
 .end method
 
-.method public Oj()I
+.method public Nj()I
     .locals 2
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     array-length v0, p0
 
@@ -289,18 +289,18 @@
     return p0
 .end method
 
-.method public Qj()Lyou/zta/sis/zta/cno;
+.method public Pj()Lyou/zta/sis/zta/cno;
     .locals 3
 
     new-instance v0, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->Qj()Lyou/zta/sis/zta/ibl;
+    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->Pj()Lyou/zta/sis/zta/ibl;
 
     move-result-object p0
 
@@ -309,7 +309,7 @@
     return-object v0
 .end method
 
-.method public Rj()Ljava/lang/String;
+.method public Qj()Ljava/lang/String;
     .locals 0
 
     const-string p0, "F2m"
@@ -317,19 +317,19 @@
     return-object p0
 .end method
 
-.method public Sj()Z
+.method public Rj()Z
     .locals 0
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->Sj()Z
+    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->Rj()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public Tj()Lyou/zta/sis/zta/cno;
+.method public Sj()Lyou/zta/sis/zta/cno;
     .locals 1
 
     iget-object v0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
@@ -342,7 +342,7 @@
 
     iget-object v0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    invoke-virtual {v0}, Lyou/zta/sis/zta/ibl;->Sj()Z
+    invoke-virtual {v0}, Lyou/zta/sis/zta/ibl;->Rj()Z
 
     move-result v0
 
@@ -351,7 +351,7 @@
     goto :goto_0
 
     :cond_0
-    iget v0, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v0, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -364,42 +364,22 @@
     return-object p0
 .end method
 
-.method public Uj()Lyou/zta/sis/zta/cno;
-    .locals 3
-
-    new-instance v0, Lyou/zta/sis/zta/cno$sis;
-
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
-
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
-
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
-
-    invoke-virtual {p0, v1, v2}, Lyou/zta/sis/zta/ibl;->sis(I[I)Lyou/zta/sis/zta/ibl;
-
-    move-result-object p0
-
-    invoke-direct {v0, v1, v2, p0}, Lyou/zta/sis/zta/cno$sis;-><init>(I[ILyou/zta/sis/zta/ibl;)V
-
-    return-object v0
-.end method
-
-.method public Vj()Z
+.method public Tj()Z
     .locals 0
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->Vj()Z
+    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->Tj()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public Yj()I
+.method public Wj()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iget p0, p0, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
     return p0
 .end method
@@ -409,7 +389,7 @@
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->vk()I
+    invoke-virtual {p0}, Lyou/zta/sis/zta/ibl;->tk()I
 
     move-result p0
 
@@ -437,21 +417,21 @@
     :cond_1
     check-cast p1, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget v3, p1, Lyou/zta/sis/zta/cno$sis;->zna:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->QCa:I
-
-    iget v3, p1, Lyou/zta/sis/zta/cno$sis;->QCa:I
+    iget v3, p1, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     if-ne v1, v3, :cond_2
 
-    iget-object v1, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->_Ca:I
 
-    iget-object v3, p1, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget v3, p1, Lyou/zta/sis/zta/cno$sis;->_Ca:I
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
+
+    iget-object v3, p1, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-static {v1, v3}, Lorg/bouncycastle/util/zta;->bvj([I[I)Z
 
@@ -481,7 +461,7 @@
 .method public getFieldSize()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget p0, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     return p0
 .end method
@@ -489,7 +469,7 @@
 .method public getM()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget p0, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     return p0
 .end method
@@ -503,11 +483,11 @@
 
     move-result v0
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
     xor-int/2addr v0, v1
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->hashCode([I)I
 
@@ -523,9 +503,9 @@
 
     new-instance v0, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
@@ -562,9 +542,9 @@
     :cond_0
     new-instance v0, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
@@ -591,9 +571,9 @@
 
     new-instance v0, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
@@ -631,13 +611,33 @@
 
     new-instance p1, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-direct {p1, v1, p0, v0}, Lyou/zta/sis/zta/cno$sis;-><init>(I[ILyou/zta/sis/zta/ibl;)V
 
     return-object p1
+.end method
+
+.method public square()Lyou/zta/sis/zta/cno;
+    .locals 3
+
+    new-instance v0, Lyou/zta/sis/zta/cno$sis;
+
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
+
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
+
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
+
+    invoke-virtual {p0, v1, v2}, Lyou/zta/sis/zta/ibl;->sis(I[I)Lyou/zta/sis/zta/ibl;
+
+    move-result-object p0
+
+    invoke-direct {v0, v1, v2, p0}, Lyou/zta/sis/zta/cno$sis;-><init>(I[ILyou/zta/sis/zta/ibl;)V
+
+    return-object v0
 .end method
 
 .method public ssp(Lyou/zta/sis/zta/cno;)Lyou/zta/sis/zta/cno;
@@ -689,17 +689,17 @@
 
     iget-object p2, p2, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-virtual {v0, v1, v2}, Lyou/zta/sis/zta/ibl;->rtg(I[I)Lyou/zta/sis/zta/ibl;
 
     move-result-object v1
 
-    iget v2, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v2, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v3, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v3, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-virtual {p1, p2, v2, v3}, Lyou/zta/sis/zta/ibl;->tsu(Lyou/zta/sis/zta/ibl;I[I)Lyou/zta/sis/zta/ibl;
 
@@ -720,17 +720,17 @@
 
     invoke-virtual {v1, p1, p2}, Lyou/zta/sis/zta/ibl;->zta(Lyou/zta/sis/zta/ibl;I)V
 
-    iget p1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget p1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object p2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-virtual {v1, p1, p2}, Lyou/zta/sis/zta/ibl;->tsu(I[I)V
 
     new-instance p1, Lyou/zta/sis/zta/cno$sis;
 
-    iget p2, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget p2, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-direct {p1, p2, p0, v1}, Lyou/zta/sis/zta/cno$sis;-><init>(I[ILyou/zta/sis/zta/ibl;)V
 
@@ -754,17 +754,17 @@
 
     iget-object p3, p3, Lyou/zta/sis/zta/cno$sis;->x:Lyou/zta/sis/zta/ibl;
 
-    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-virtual {v0, p1, v1, v2}, Lyou/zta/sis/zta/ibl;->tsu(Lyou/zta/sis/zta/ibl;I[I)Lyou/zta/sis/zta/ibl;
 
     move-result-object v1
 
-    iget v2, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget v2, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object v3, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object v3, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-virtual {p2, p3, v2, v3}, Lyou/zta/sis/zta/ibl;->tsu(Lyou/zta/sis/zta/ibl;I[I)Lyou/zta/sis/zta/ibl;
 
@@ -788,17 +788,17 @@
 
     invoke-virtual {v1, p2, p1}, Lyou/zta/sis/zta/ibl;->zta(Lyou/zta/sis/zta/ibl;I)V
 
-    iget p1, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget p1, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object p2, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p2, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-virtual {v1, p1, p2}, Lyou/zta/sis/zta/ibl;->tsu(I[I)V
 
     new-instance p1, Lyou/zta/sis/zta/cno$sis;
 
-    iget p2, p0, Lyou/zta/sis/zta/cno$sis;->zna:I
+    iget p2, p0, Lyou/zta/sis/zta/cno$sis;->Jna:I
 
-    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->RCa:[I
+    iget-object p0, p0, Lyou/zta/sis/zta/cno$sis;->aDa:[I
 
     invoke-direct {p1, p2, p0, v1}, Lyou/zta/sis/zta/cno$sis;-><init>(I[ILyou/zta/sis/zta/ibl;)V
 

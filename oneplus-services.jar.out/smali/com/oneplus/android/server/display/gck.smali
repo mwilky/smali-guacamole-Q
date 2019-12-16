@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/android/server/display/dma;->vju(II)V
+    value = Lcom/oneplus/android/server/display/dma;->bud(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

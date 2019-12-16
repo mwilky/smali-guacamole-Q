@@ -16,7 +16,7 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/vdb;-><init>()V
 
-    invoke-static {p1}, Lorg/bouncycastle/util/Strings;->Qa(Ljava/lang/String;)[B
+    invoke-static {p1}, Lorg/bouncycastle/util/Strings;->Ra(Ljava/lang/String;)[B
 
     move-result-object p1
 
@@ -200,7 +200,7 @@
     return p0
 .end method
 
-.method mg()I
+.method lg()I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {

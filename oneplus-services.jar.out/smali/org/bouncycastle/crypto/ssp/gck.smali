@@ -139,7 +139,7 @@
     throw p0
 .end method
 
-.method public gwm(II)Lorg/bouncycastle/crypto/kth;
+.method public ugm(II)Lorg/bouncycastle/crypto/kth;
     .locals 3
 
     div-int/lit8 p1, p1, 0x8

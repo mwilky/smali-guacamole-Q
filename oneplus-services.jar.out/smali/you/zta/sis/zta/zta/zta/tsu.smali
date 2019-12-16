@@ -87,7 +87,7 @@
 
 
 # virtual methods
-.method public Qj()Lyou/zta/sis/zta/cno;
+.method public Pj()Lyou/zta/sis/zta/cno;
     .locals 1
 
     invoke-static {}, Lyou/zta/sis/sis/sis;->create()[I
@@ -105,7 +105,7 @@
     return-object p0
 .end method
 
-.method public Rj()Ljava/lang/String;
+.method public Qj()Ljava/lang/String;
     .locals 0
 
     const-string p0, "SecP192K1Field"
@@ -113,7 +113,7 @@
     return-object p0
 .end method
 
-.method public Sj()Z
+.method public Rj()Z
     .locals 0
 
     iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
@@ -125,7 +125,7 @@
     return p0
 .end method
 
-.method public Tj()Lyou/zta/sis/zta/cno;
+.method public Sj()Lyou/zta/sis/zta/cno;
     .locals 5
 
     iget-object v0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
@@ -260,25 +260,7 @@
     return-object p0
 .end method
 
-.method public Uj()Lyou/zta/sis/zta/cno;
-    .locals 1
-
-    invoke-static {}, Lyou/zta/sis/sis/sis;->create()[I
-
-    move-result-object v0
-
-    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
-
-    invoke-static {p0, v0}, Lyou/zta/sis/zta/zta/zta/sis;->igw([I[I)V
-
-    new-instance p0, Lyou/zta/sis/zta/zta/zta/tsu;
-
-    invoke-direct {p0, v0}, Lyou/zta/sis/zta/zta/zta/tsu;-><init>([I)V
-
-    return-object p0
-.end method
-
-.method public Vj()Z
+.method public Tj()Z
     .locals 2
 
     iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
@@ -453,6 +435,24 @@
     iget-object p1, p1, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
 
     invoke-static {p0, p1, v0}, Lyou/zta/sis/zta/zta/zta/sis;->you([I[I[I)V
+
+    new-instance p0, Lyou/zta/sis/zta/zta/zta/tsu;
+
+    invoke-direct {p0, v0}, Lyou/zta/sis/zta/zta/zta/tsu;-><init>([I)V
+
+    return-object p0
+.end method
+
+.method public square()Lyou/zta/sis/zta/cno;
+    .locals 1
+
+    invoke-static {}, Lyou/zta/sis/sis/sis;->create()[I
+
+    move-result-object v0
+
+    iget-object p0, p0, Lyou/zta/sis/zta/zta/zta/tsu;->x:[I
+
+    invoke-static {p0, v0}, Lyou/zta/sis/zta/zta/zta/sis;->igw([I[I)V
 
     new-instance p0, Lyou/zta/sis/zta/zta/zta/tsu;
 

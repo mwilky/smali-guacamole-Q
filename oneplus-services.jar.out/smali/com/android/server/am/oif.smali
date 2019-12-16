@@ -11,11 +11,11 @@
 
 .field private static final TAG:Ljava/lang/String; = "ExtBatteryStatsService"
 
-.field private static Vh:I = 0xbb8
+.field private static Wh:I = 0xbb8
 
 
 # instance fields
-.field private Uh:J
+.field private Vh:J
 
 .field private mBatteryStatsService:Lcom/android/server/am/BatteryStatsService;
 
@@ -38,7 +38,7 @@
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/android/server/am/oif;->Uh:J
+    iput-wide v0, p0, Lcom/android/server/am/oif;->Vh:J
 
     return-void
 .end method
@@ -213,11 +213,11 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/android/server/am/oif;->Uh:J
+    iget-wide v2, p0, Lcom/android/server/am/oif;->Vh:J
 
     sub-long v2, v0, v2
 
-    sget v4, Lcom/android/server/am/oif;->Vh:I
+    sget v4, Lcom/android/server/am/oif;->Wh:I
 
     int-to-long v4, v4
 
@@ -276,7 +276,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/android/server/am/oif;->Uh:J
+    iput-wide v0, p0, Lcom/android/server/am/oif;->Vh:J
 
     :goto_0
     return-void

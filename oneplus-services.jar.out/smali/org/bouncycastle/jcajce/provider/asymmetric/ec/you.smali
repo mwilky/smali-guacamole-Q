@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method static Ba(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
+.method static Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
     .locals 3
 
     const/4 v0, 0x0
@@ -64,7 +64,7 @@
     move-result-object p0
 
     :cond_1
-    invoke-static {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
+    invoke-static {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->Da(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
 
     move-result-object p0
     :try_end_0
@@ -73,7 +73,7 @@
     goto :goto_0
 
     :catch_0
-    invoke-static {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
+    invoke-static {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->Da(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
 
     move-result-object p0
 
@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->Da(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    invoke-static {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->Ea(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
 
     move-result-object p1
 
@@ -186,7 +186,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/you;->Ba(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
+    invoke-static {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/you;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/ibl/vju;
 
     move-result-object p0
 
@@ -207,7 +207,7 @@
 
     check-cast p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPublicKey;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPublicKey;->pj()Lorg/bouncycastle/crypto/wtn/obl;
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPublicKey;->oj()Lorg/bouncycastle/crypto/wtn/obl;
 
     move-result-object p0
 

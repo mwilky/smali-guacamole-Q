@@ -69,7 +69,7 @@
     const/4 p0, 0x1
 
     :goto_0
-    invoke-static {v1, p0}, Lcom/android/server/engineer/rtg;->qbh(II)Z
+    invoke-static {v1, p0}, Lcom/android/server/engineer/rtg;->oif(II)Z
 
     goto :goto_1
 

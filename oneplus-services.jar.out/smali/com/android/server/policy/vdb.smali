@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic fD:Z
+.field final synthetic nD:Z
 
 .field final synthetic this$1:Lcom/android/server/policy/OpPhoneWindowManager$tsu;
 
@@ -29,7 +29,7 @@
 
     iput-object p1, p0, Lcom/android/server/policy/vdb;->this$1:Lcom/android/server/policy/OpPhoneWindowManager$tsu;
 
-    iput-boolean p2, p0, Lcom/android/server/policy/vdb;->fD:Z
+    iput-boolean p2, p0, Lcom/android/server/policy/vdb;->nD:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -97,7 +97,7 @@
 
     if-nez v3, :cond_1
 
-    iget-boolean p0, p0, Lcom/android/server/policy/vdb;->fD:Z
+    iget-boolean p0, p0, Lcom/android/server/policy/vdb;->nD:Z
 
     if-eqz p0, :cond_1
 

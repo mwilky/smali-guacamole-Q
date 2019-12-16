@@ -24,7 +24,7 @@
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ugm;->Ki()V
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ugm;->Ji()V
 
     goto :goto_1
 

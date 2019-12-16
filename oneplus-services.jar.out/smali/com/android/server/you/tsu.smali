@@ -21,41 +21,41 @@
 
 .field private static final TAG:Ljava/lang/String; = "OpVCAction"
 
-.field public static final YK:Ljava/lang/String; = "verification_code_str"
+.field public static final fL:Ljava/lang/String; = "verification_code_str"
 
-.field public static final ZK:Ljava/lang/String; = "receive_time_mills"
+.field public static final gL:Ljava/lang/String; = "receive_time_mills"
 
-.field private static final _K:J = 0x2bf20L
+.field private static final hL:J = 0x2bf20L
 
-.field private static final aL:J = 0xaL
+.field private static final iL:J = 0xaL
 
-.field private static final bL:I = 0x1
+.field private static final jL:I = 0x1
 
-.field private static final cL:I = 0x2
+.field private static final kL:I = 0x2
 
-.field private static final dL:I = 0x3
+.field private static final lL:I = 0x3
 
-.field private static final eL:I = 0x4
+.field private static final mL:I = 0x4
 
-.field private static final fL:I = 0x5
+.field private static final nL:I = 0x5
 
-.field private static final gL:I = 0x6
+.field private static final oL:I = 0x6
 
 
 # instance fields
-.field private QK:Lcom/android/server/you/you;
+.field private ZK:Lcom/android/server/you/you;
 
-.field private RK:Ljava/lang/String;
+.field private _K:Ljava/lang/String;
 
-.field private SK:Ljava/lang/Long;
+.field private aL:Ljava/lang/Long;
 
-.field private TK:Z
+.field private bL:Z
 
-.field private VK:Z
+.field private cL:Z
 
-.field private WK:Z
+.field private dL:Z
 
-.field private XK:Lcom/android/server/you/wtn$zta;
+.field private eL:Lcom/android/server/you/wtn$zta;
 
 .field private final mContext:Landroid/content/Context;
 
@@ -84,19 +84,19 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/android/server/you/tsu;->TK:Z
+    iput-boolean v0, p0, Lcom/android/server/you/tsu;->bL:Z
 
     iput-boolean v0, p0, Lcom/android/server/you/tsu;->mInputShown:Z
 
-    iput-boolean v0, p0, Lcom/android/server/you/tsu;->VK:Z
+    iput-boolean v0, p0, Lcom/android/server/you/tsu;->cL:Z
 
-    iput-boolean v0, p0, Lcom/android/server/you/tsu;->WK:Z
+    iput-boolean v0, p0, Lcom/android/server/you/tsu;->dL:Z
 
     new-instance v0, Lcom/android/server/you/sis;
 
     invoke-direct {v0, p0}, Lcom/android/server/you/sis;-><init>(Lcom/android/server/you/tsu;)V
 
-    iput-object v0, p0, Lcom/android/server/you/tsu;->XK:Lcom/android/server/you/wtn$zta;
+    iput-object v0, p0, Lcom/android/server/you/tsu;->eL:Lcom/android/server/you/wtn$zta;
 
     sget-boolean v0, Lcom/android/server/you/tsu;->DEBUG:Z
 
@@ -111,9 +111,9 @@
     :cond_0
     iput-object p1, p0, Lcom/android/server/you/tsu;->mContext:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iput-object p2, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
-    iget-object p1, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iget-object p1, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
     invoke-interface {p1, p0}, Lcom/android/server/you/you;->zta(Lcom/android/server/you/you$zta;)V
 
@@ -132,7 +132,7 @@
     return-void
 .end method
 
-.method private Vb(Ljava/lang/String;)Z
+.method private Wb(Ljava/lang/String;)Z
     .locals 0
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -169,17 +169,17 @@
 .method static synthetic cno(Lcom/android/server/you/tsu;)Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/you/tsu;->io()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/you/tsu;->fo()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private io()Ljava/lang/String;
+.method private fo()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/you/tsu;->RK:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/you/tsu;->_K:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -187,13 +187,13 @@
 .method private isAvailable()Z
     .locals 2
 
-    iget-boolean v0, p0, Lcom/android/server/you/tsu;->TK:Z
+    iget-boolean v0, p0, Lcom/android/server/you/tsu;->bL:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iget-object v0, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
     if-eqz v0, :cond_0
 
@@ -203,31 +203,31 @@
 
     iput-boolean v0, p0, Lcom/android/server/you/tsu;->mInputShown:Z
 
-    iget-object v0, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iget-object v0, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
     invoke-interface {v0}, Lcom/android/server/you/you;->obl()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/you/tsu;->VK:Z
+    iput-boolean v0, p0, Lcom/android/server/you/tsu;->cL:Z
 
-    iget-object v0, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iget-object v0, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
     invoke-interface {v0}, Lcom/android/server/you/you;->bvj()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/android/server/you/tsu;->WK:Z
+    iput-boolean v0, p0, Lcom/android/server/you/tsu;->dL:Z
 
     iget-boolean v0, p0, Lcom/android/server/you/tsu;->mInputShown:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/android/server/you/tsu;->VK:Z
+    iget-boolean v0, p0, Lcom/android/server/you/tsu;->cL:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean p0, p0, Lcom/android/server/you/tsu;->WK:Z
+    iget-boolean p0, p0, Lcom/android/server/you/tsu;->dL:Z
 
     if-eqz p0, :cond_0
 
@@ -240,7 +240,7 @@
 .method static synthetic kth(Lcom/android/server/you/tsu;)Lcom/android/server/you/wtn$zta;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/you/tsu;->XK:Lcom/android/server/you/wtn$zta;
+    iget-object p0, p0, Lcom/android/server/you/tsu;->eL:Lcom/android/server/you/wtn$zta;
 
     return-object p0
 .end method
@@ -248,7 +248,7 @@
 .method static synthetic rtg(Lcom/android/server/you/tsu;)Lcom/android/server/you/you;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iget-object p0, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
     return-object p0
 .end method
@@ -324,7 +324,7 @@
 .method static synthetic tsu(Lcom/android/server/you/tsu;)Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/you/tsu;->RK:Ljava/lang/String;
+    iget-object p0, p0, Lcom/android/server/you/tsu;->_K:Ljava/lang/String;
 
     return-object p0
 .end method
@@ -332,7 +332,7 @@
 .method private vb(I)V
     .locals 3
 
-    iget-boolean v0, p0, Lcom/android/server/you/tsu;->TK:Z
+    iget-boolean v0, p0, Lcom/android/server/you/tsu;->bL:Z
 
     if-nez v0, :cond_0
 
@@ -392,7 +392,7 @@
 .method static synthetic you(Lcom/android/server/you/tsu;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/server/you/tsu;->Vb(Ljava/lang/String;)Z
+    invoke-direct {p0, p1}, Lcom/android/server/you/tsu;->Wb(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -418,7 +418,7 @@
 .method static synthetic zta(Lcom/android/server/you/tsu;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/you/tsu;->RK:Ljava/lang/String;
+    iput-object p1, p0, Lcom/android/server/you/tsu;->_K:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -426,7 +426,7 @@
 .method static synthetic zta(Lcom/android/server/you/tsu;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcom/android/server/you/tsu;->TK:Z
+    iput-boolean p1, p0, Lcom/android/server/you/tsu;->bL:Z
 
     return p1
 .end method
@@ -455,7 +455,7 @@
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lcom/android/server/you/tsu;->QK:Lcom/android/server/you/you;
+    iget-object v0, p0, Lcom/android/server/you/tsu;->ZK:Lcom/android/server/you/you;
 
     if-nez v0, :cond_2
 
@@ -494,7 +494,7 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v2}, Lcom/android/server/you/tsu;->Vb(Ljava/lang/String;)Z
+    invoke-direct {p0, v2}, Lcom/android/server/you/tsu;->Wb(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -516,7 +516,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/you/tsu;->RK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/android/server/you/tsu;->_K:Ljava/lang/String;
 
     const-string v0, "receive_time_mills"
 
@@ -528,11 +528,11 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/you/tsu;->SK:Ljava/lang/Long;
+    iput-object p1, p0, Lcom/android/server/you/tsu;->aL:Ljava/lang/Long;
 
     const-wide/32 v2, 0x2bf20
 
-    iget-object p1, p0, Lcom/android/server/you/tsu;->SK:Ljava/lang/Long;
+    iget-object p1, p0, Lcom/android/server/you/tsu;->aL:Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
@@ -566,7 +566,7 @@
     :cond_7
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lcom/android/server/you/tsu;->TK:Z
+    iput-boolean p1, p0, Lcom/android/server/you/tsu;->bL:Z
 
     iget-object v0, p0, Lcom/android/server/you/tsu;->mHandler:Landroid/os/Handler;
 

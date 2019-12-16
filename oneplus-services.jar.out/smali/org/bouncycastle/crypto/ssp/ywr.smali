@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method private static qeg(II)I
+.method private static ivd(II)I
     .locals 4
 
     const/4 v0, 0x4
@@ -172,7 +172,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lorg/bouncycastle/crypto/ssp/ywr;->qeg(II)I
+    invoke-static {v0, v1}, Lorg/bouncycastle/crypto/ssp/ywr;->ivd(II)I
 
     move-result v0
 
@@ -184,7 +184,7 @@
 
     iget-object p0, p0, Lorg/bouncycastle/crypto/ssp/ywr;->param:Lorg/bouncycastle/crypto/wtn/lqr;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/crypto/bvj;->Ri()Ljava/security/SecureRandom;
+    invoke-virtual {p0}, Lorg/bouncycastle/crypto/bvj;->Qi()Ljava/security/SecureRandom;
 
     move-result-object p0
 
@@ -466,7 +466,7 @@
 
     iget-object v1, p0, Lorg/bouncycastle/crypto/ssp/ywr;->param:Lorg/bouncycastle/crypto/wtn/lqr;
 
-    invoke-virtual {v1}, Lorg/bouncycastle/crypto/bvj;->Ri()Ljava/security/SecureRandom;
+    invoke-virtual {v1}, Lorg/bouncycastle/crypto/bvj;->Qi()Ljava/security/SecureRandom;
 
     move-result-object v1
 

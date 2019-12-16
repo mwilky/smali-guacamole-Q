@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 6
 
     invoke-static {}, Lcom/android/server/am/cgv;->access$600()Lcom/android/server/am/cgv;
 
@@ -61,78 +61,81 @@
 
     move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "# mDebugReceiver # onReceive # action="
+    const-string v2, "# mDebugReceiver # onReceive # action="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    invoke-static {v1, v0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
-    const-string v0, "com.OPBF.action.debug"
+    const-string v1, ""
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :try_start_0
+    const-string v3, "com.OPBF.action.debug"
+
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_b
+    if-eqz p1, :cond_c
 
     const-string p1, "code"
 
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
+    move-result-object v1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "# mGeneralReceiver # onReceive # code = "
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v2, p1}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string p1, "dump"
 
-    const-string v2, "# mGeneralReceiver # onReceive # code = "
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
-
-    const-string v0, "dump"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
+    if-eqz p1, :cond_2
 
     iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->gwm(Lcom/android/server/am/cgv;)V
+    invoke-static {p0}, Lcom/android/server/am/cgv;->ibl(Lcom/android/server/am/cgv;)V
 
     goto/16 :goto_2
 
     :cond_2
-    const-string v0, "syncLogProp"
+    const-string p1, "syncLogProp"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_3
+    if-eqz p1, :cond_3
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -152,7 +155,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -172,7 +175,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -192,7 +195,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
     sget-boolean p0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -200,7 +203,7 @@
 
     const-string p0, "persist.sys.opbf.debug_log"
 
-    invoke-static {p0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {p0, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -208,7 +211,7 @@
 
     const-string p0, "persist.sys.opbf.debug_detail"
 
-    invoke-static {p0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {p0, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -219,17 +222,17 @@
     goto/16 :goto_2
 
     :cond_3
-    const-string v0, "setLogProp"
+    const-string p1, "setLogProp"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_4
+    if-eqz p1, :cond_4
 
     const-string p0, "level"
 
-    invoke-virtual {p2, p0, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p2, p0, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
 
@@ -247,44 +250,47 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
+    invoke-static {v2, p1}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
 
-    if-lt p0, v1, :cond_b
+    if-lt p0, v2, :cond_c
 
     const/4 p1, 0x4
 
-    if-gt p0, p1, :cond_b
+    if-gt p0, p1, :cond_c
 
     invoke-static {p0}, Lcom/android/server/am/cgv;->ivd(I)I
+
+    const-string p1, "persist.sys.opbf.debug_loglevel"
 
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p0
-
-    const-string p1, "persist.sys.opbf.debug_loglevel"
 
     invoke-static {p1, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
     :cond_4
-    const-string v0, "dumpCache"
+    const-string p1, "dumpCache"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz v0, :cond_5
+    const-string v4, "uid"
 
-    const-string p1, "uid"
+    if-eqz p1, :cond_5
 
-    invoke-virtual {p2, p1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    :try_start_1
+    invoke-virtual {p2, v4, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    const-string v0, "detail"
+    const-string v2, "detail"
 
-    invoke-virtual {p2, v0, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    invoke-virtual {p2, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p2
 
@@ -292,74 +298,53 @@
 
     invoke-static {p0, p1, p2}, Lcom/android/server/am/cgv;->zta(Lcom/android/server/am/cgv;IZ)V
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_5
-    const-string v0, "dumpTop"
+    const-string p1, "dumpTop"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_6
+    if-eqz p1, :cond_6
 
     iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
 
     invoke-static {p0}, Lcom/android/server/am/cgv;->zta(Lcom/android/server/am/cgv;)V
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_6
-    const-string v0, "dumpIsolatedUids"
+    const-string p1, "dumpIsolatedUids"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_7
+    if-eqz p1, :cond_7
 
     iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
 
     invoke-static {p0}, Lcom/android/server/am/cgv;->you(Lcom/android/server/am/cgv;)V
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_7
-    const-string v0, "addWhiteList"
+    const-string p1, "addWhiteList"
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result p1
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    const-string v3, "pkg"
+    const-string v5, "pkg"
 
-    if-eqz v0, :cond_8
+    if-eqz p1, :cond_8
 
-    invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    :goto_1
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/cgv;->zta(Lcom/android/server/am/cgv;Ljava/lang/Boolean;Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_8
-    const-string v0, "removeWhiteList"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_2
+    invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -369,16 +354,40 @@
 
     move-result-object p2
 
+    :goto_1
+    invoke-static {p0, p2, p1}, Lcom/android/server/am/cgv;->zta(Lcom/android/server/am/cgv;Ljava/lang/Boolean;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_8
+    const-string p1, "removeWhiteList"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    invoke-virtual {p2, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
     goto :goto_1
 
     :cond_9
-    const-string p2, "switchOn"
+    const-string p1, "switchOn"
 
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_a
+    if-eqz p1, :cond_a
 
     iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
 
@@ -387,9 +396,9 @@
     goto :goto_2
 
     :cond_a
-    const-string p2, "switchOff"
+    const-string p1, "switchOff"
 
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -399,7 +408,69 @@
 
     invoke-static {p0}, Lcom/android/server/am/cgv;->tsu(Lcom/android/server/am/cgv;)V
 
+    goto :goto_2
+
     :cond_b
+    const-string p1, "setFlag"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c
+
+    invoke-virtual {p2, v4, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p1
+
+    const-string v2, "flag"
+
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    const/16 v2, 0x10
+
+    invoke-static {p2, v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
+
+    move-result-wide v2
+
+    iget-object p0, p0, Lcom/android/server/am/lqr;->this$0:Lcom/android/server/am/cgv;
+
+    invoke-static {p0, p1, v2, v3}, Lcom/android/server/am/cgv;->zta(Lcom/android/server/am/cgv;IJ)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "mDebugReceiver code:"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " Exception e:"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_c
     :goto_2
     return-void
 .end method

@@ -39,7 +39,7 @@
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    invoke-static {}, Lcom/oneplus/android/server/vdb;->fe()Z
+    invoke-static {}, Lcom/oneplus/android/server/vdb;->ee()Z
 
     move-result p1
 
