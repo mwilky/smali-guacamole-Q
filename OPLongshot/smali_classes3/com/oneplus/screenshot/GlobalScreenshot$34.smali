@@ -87,6 +87,31 @@
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
 
     :cond_1
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsVoiceLongshot:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$100(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/Button;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$34;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$100(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/Button;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/oneplus/screenshot/GlobalScreenshot$34$1;
+
+    invoke-direct {v1, p0}, Lcom/oneplus/screenshot/GlobalScreenshot$34$1;-><init>(Lcom/oneplus/screenshot/GlobalScreenshot$34;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->post(Ljava/lang/Runnable;)Z
+
+    :cond_2
     return-void
 .end method
 

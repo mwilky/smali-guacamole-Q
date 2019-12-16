@@ -33,7 +33,7 @@
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/task/StitchNextTask;->mMatchedSize:I
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_MATCH:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchMatch:I
 
     const/4 v1, 0x4
 
@@ -65,11 +65,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "LEVEL_STITCH_MATCH:"
+    const-string v1, "levelStitchMatch:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_MATCH:I
+    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchMatch:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

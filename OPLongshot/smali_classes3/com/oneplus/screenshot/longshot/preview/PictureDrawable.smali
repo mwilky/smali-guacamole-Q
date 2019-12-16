@@ -6,7 +6,7 @@
 # static fields
 .field private static final MSG_UPDATE_PREVIEW:I = 0xbb8
 
-.field private static TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "Longshot.PictureDrawable"
 
 
 # instance fields
@@ -30,16 +30,6 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "Longshot.PictureDrawable"
-
-    sput-object v0, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->TAG:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 

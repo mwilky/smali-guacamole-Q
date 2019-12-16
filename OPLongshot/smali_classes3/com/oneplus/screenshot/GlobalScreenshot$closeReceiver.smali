@@ -1,4 +1,4 @@
-.class Lcom/oneplus/screenshot/GlobalScreenshot$closeReceiver;
+.class Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;
 .super Landroid/content/BroadcastReceiver;
 .source "GlobalScreenshot.java"
 
@@ -10,7 +10,7 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x2
-    name = "closeReceiver"
+    name = "CloseReceiver"
 .end annotation
 
 
@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$closeReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -32,7 +32,7 @@
 .method synthetic constructor <init>(Lcom/oneplus/screenshot/GlobalScreenshot;Lcom/oneplus/screenshot/GlobalScreenshot$1;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/oneplus/screenshot/GlobalScreenshot$closeReceiver;-><init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;-><init>(Lcom/oneplus/screenshot/GlobalScreenshot;)V
 
     return-void
 .end method
@@ -55,6 +55,14 @@
     if-nez v1, :cond_1
 
     const-string v1, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -87,11 +95,11 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$closeReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
     invoke-static {v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$000(Lcom/oneplus/screenshot/GlobalScreenshot;)V
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$closeReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    iget-object v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
     invoke-static {v2}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$100(Lcom/oneplus/screenshot/GlobalScreenshot;)Landroid/widget/Button;
 
@@ -105,7 +113,7 @@
 
     :cond_1
     :goto_0
-    iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$closeReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
+    iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$CloseReceiver;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
     invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$000(Lcom/oneplus/screenshot/GlobalScreenshot;)V
 

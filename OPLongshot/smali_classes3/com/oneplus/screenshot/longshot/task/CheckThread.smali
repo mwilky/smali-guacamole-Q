@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final CHECK_DELAY:J = 0x0L
+.field private static final CHECK_DELAY:J = 0x32L
 
-.field private static final TAG:Ljava/lang/String; = "Longshot.CheckThread"
+.field public static final TAG:Ljava/lang/String; = "Longshot.CheckThread"
 
 
 # instance fields
@@ -31,7 +31,7 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v1, 0x32
 
     iput-wide v1, p0, Lcom/oneplus/screenshot/longshot/task/CheckThread;->mDelay:J
 
@@ -65,7 +65,7 @@
 
     if-nez v3, :cond_0
 
-    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-eqz v3, :cond_0
 

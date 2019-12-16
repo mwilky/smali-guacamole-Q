@@ -134,7 +134,7 @@
     goto/16 :goto_3
 
     :cond_0
-    sget-object v2, Lcom/oneplus/screenshot/longshot/util/Configs;->LINE_SAMPLES:Ljava/util/List;
+    sget-object v2, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
@@ -354,7 +354,7 @@
     goto/16 :goto_6
 
     :cond_0
-    sget-object v2, Lcom/oneplus/screenshot/longshot/util/Configs;->LINE_SAMPLES:Ljava/util/List;
+    sget-object v2, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/bitmap/Pixels;->mPixels:[I
 
@@ -572,11 +572,11 @@
 
     div-int/2addr v6, v4
 
-    sget-boolean v7, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_TOP_ACTIVITY_DISPLAY_COMPATIBLE:Z
+    sget-boolean v7, Lcom/oneplus/screenshot/longshot/util/Configs;->isTopActivityDisplayCompatible:Z
 
     if-eqz v7, :cond_c
 
-    sget v7, Lcom/oneplus/screenshot/longshot/util/Configs;->TOP_ACTIVITY_DISPLAY_COMPATIBLE_STITCH_MATCH_THRESHOLD:I
+    sget v7, Lcom/oneplus/screenshot/longshot/util/Configs;->topActivityDisplayCompatibleStitchMatchThreshold:I
 
     goto :goto_5
 

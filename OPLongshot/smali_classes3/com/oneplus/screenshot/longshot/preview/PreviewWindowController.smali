@@ -15,8 +15,6 @@
 # static fields
 .field private static final HIDE_NOTCH:I = 0x1
 
-.field private static IS_SUPPORT_CUSTOM_STATUS_BAR:Z = false
-
 .field private static final MSG_BG_SAVE_PREVIEW:I = 0x3e9
 
 .field private static final MSG_OVERSCROLL_TIMEOUT:I = 0xbb9
@@ -35,14 +33,14 @@
 
 .field private static final SHOW_NOTCH:I = 0x0
 
-.field private static TAG:Ljava/lang/String; = null
+.field private static final TAG:Ljava/lang/String; = "Longshot.PreviewWindow"
 
 .field private static final UPDATE_NEXT_CACHE_THRESHOLD:I = 0x1f4
 
+.field private static isSupportCustomStatusBar:Z
+
 
 # instance fields
-.field private STITCH_DEBUG:Z
-
 .field private isBackgroundScrollcomplete:Z
 
 .field private isStart:Z
@@ -135,14 +133,12 @@
 
 .field private mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
+.field private stitchDebug:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
-
-    const-string v0, "Longshot.PreviewWindow"
-
-    sput-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x1
 
@@ -158,7 +154,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->IS_SUPPORT_CUSTOM_STATUS_BAR:Z
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->isSupportCustomStatusBar:Z
 
     return-void
 .end method
@@ -176,7 +172,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->STITCH_DEBUG:Z
+    iput-boolean v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->stitchDebug:Z
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mCurrentState:I
 
@@ -271,23 +267,15 @@
     return p1
 .end method
 
-.method static synthetic access$100()Ljava/lang/String;
+.method static synthetic access$100(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->saveAllPreviewImage()V
-
-    return-void
-.end method
-
-.method static synthetic access$1100(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$CallBack;
+.method static synthetic access$1000(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$CallBack;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mCallback:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$CallBack;
@@ -295,7 +283,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)I
+.method static synthetic access$1100(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)I
     .locals 1
 
     iget v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mMoveDistance:I
@@ -303,7 +291,7 @@
     return v0
 .end method
 
-.method static synthetic access$1212(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;I)I
+.method static synthetic access$1112(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;I)I
     .locals 1
 
     iget v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mMoveDistance:I
@@ -315,7 +303,7 @@
     return v0
 .end method
 
-.method static synthetic access$1300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
+.method static synthetic access$1200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
     .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->isOverScroll()Z
@@ -325,7 +313,7 @@
     return v0
 .end method
 
-.method static synthetic access$1400(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
+.method static synthetic access$1300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mStartScroll:Z
@@ -333,7 +321,7 @@
     return v0
 .end method
 
-.method static synthetic access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/ValueAnimator;
+.method static synthetic access$1400(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/ValueAnimator;
     .locals 1
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->createLongshotAnimation()Landroid/animation/ValueAnimator;
@@ -343,7 +331,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
+.method static synthetic access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mScreenshotAnimation:Landroid/animation/AnimatorSet;
@@ -351,7 +339,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
+.method static synthetic access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mTransitionView:Landroid/widget/ImageView;
@@ -359,7 +347,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/view/ViewGroup;
+.method static synthetic access$1700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/view/ViewGroup;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mSmallScreen:Landroid/view/ViewGroup;
@@ -367,15 +355,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
-    .locals 1
-
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
-
-    return-object v0
-.end method
-
-.method static synthetic access$300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ScrollView;
+.method static synthetic access$200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ScrollView;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mScrollContainer:Landroid/widget/ScrollView;
@@ -383,7 +363,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)I
+.method static synthetic access$300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)I
     .locals 1
 
     iget v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mCurrentState:I
@@ -391,7 +371,7 @@
     return v0
 .end method
 
-.method static synthetic access$402(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;I)I
+.method static synthetic access$302(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;I)I
     .locals 0
 
     iput p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mCurrentState:I
@@ -399,7 +379,7 @@
     return p1
 .end method
 
-.method static synthetic access$500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Ljava/lang/Runnable;
+.method static synthetic access$400(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Ljava/lang/Runnable;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPreviewShowRunnable:Ljava/lang/Runnable;
@@ -407,7 +387,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
+.method static synthetic access$500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mHandler:Landroid/os/Handler;
@@ -415,7 +395,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Ljava/lang/Runnable;
+.method static synthetic access$600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Ljava/lang/Runnable;
     .locals 1
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mScrollStartRunnable:Ljava/lang/Runnable;
@@ -423,7 +403,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
+.method static synthetic access$700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mIsOverscrollTimeout:Z
@@ -431,7 +411,7 @@
     return v0
 .end method
 
-.method static synthetic access$802(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Z)Z
+.method static synthetic access$702(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mIsOverscrollTimeout:Z
@@ -439,10 +419,18 @@
     return p1
 .end method
 
-.method static synthetic access$900(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+.method static synthetic access$800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->savePreviewImage()V
+
+    return-void
+.end method
+
+.method static synthetic access$900(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->saveAllPreviewImage()V
 
     return-void
 .end method
@@ -658,23 +646,23 @@
 .method private getNotifyWindowLayoutParams(Z)Landroid/view/WindowManager$LayoutParams;
     .locals 8
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "getNotifyWindowLayoutParams:"
 
-    const-string v2, "getNotifyWindowLayoutParams:"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Longshot.PreviewWindow"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
@@ -904,9 +892,9 @@
     :goto_1
     move v0, v1
 
-    if-eqz v0, :cond_2
+    const-string v1, "Longshot.PreviewWindow"
 
-    sget-object v1, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    if-eqz v0, :cond_2
 
     const-string v2, "isOverScroll"
 
@@ -917,17 +905,15 @@
     :cond_2
     invoke-virtual {p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->getPreviewLength()I
 
-    move-result v1
-
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
-
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->getHeight()I
-
     move-result v2
 
-    if-lt v1, v2, :cond_3
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
-    sget-object v1, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;->getHeight()I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_3
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -965,7 +951,7 @@
 .method private isShowNotch(Landroid/content/Context;)Z
     .locals 3
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->IS_SUPPORT_CUSTOM_STATUS_BAR:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->isSupportCustomStatusBar:Z
 
     const/4 v1, 0x0
 
@@ -1223,7 +1209,7 @@
 
     move-object/from16 v7, p0
 
-    iget-boolean v2, v7, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->STITCH_DEBUG:Z
+    iget-boolean v2, v7, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->stitchDebug:Z
 
     if-eqz v2, :cond_1
 
@@ -1571,27 +1557,27 @@
 .end method
 
 .method public onBackgroundScrollcomplete()V
-    .locals 3
+    .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, " onBackgroundScrollcomplete mIsPreviewShow:"
 
-    const-string v2, " onBackgroundScrollcomplete mIsPreviewShow:"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mIsPreviewShow:Z
 
-    iget-boolean v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mIsPreviewShow:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Longshot.PreviewWindow"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
@@ -1617,7 +1603,7 @@
 
     iput-boolean v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mIsPreviewShow:Z
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    const-string v0, "Longshot.PreviewWindow"
 
     const-string v1, " onPreviewHide:"
 
@@ -1630,7 +1616,7 @@
 .method public onPreviewShow()V
     .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    const-string v0, "Longshot.PreviewWindow"
 
     const-string v1, " onPreviewShow:"
 
@@ -1664,7 +1650,7 @@
 .method public onProgressHide()V
     .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    const-string v0, "Longshot.PreviewWindow"
 
     const-string v1, " onProgressHide:"
 
@@ -1682,7 +1668,7 @@
 .method public onProgressShow()V
     .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    const-string v0, "Longshot.PreviewWindow"
 
     const-string v1, " onProgressShow:"
 
@@ -1702,7 +1688,7 @@
 .method public onScrollStart()V
     .locals 3
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    const-string v0, "Longshot.PreviewWindow"
 
     const-string v1, " onScrollStart:"
 
@@ -1751,33 +1737,33 @@
     if-ne p1, v2, :cond_4
 
     :cond_0
-    sget-object v2, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v3, " onScrollStop:"
 
-    const-string v4, " onScrollStop:"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, " isDumpPreview:"
 
-    const-string v4, " isDumpPreview:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->isDumpPreview()Z
 
-    move-result v4
+    move-result v3
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v3, "Longshot.PreviewWindow"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x0
 
@@ -1978,7 +1964,7 @@
 .method public setFirstBitmap(Landroid/graphics/Bitmap;)V
     .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    const-string v0, "Longshot.PreviewWindow"
 
     const-string v1, "setFirstBitmap"
 
@@ -2082,71 +2068,71 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    sget-object v1, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "notifyWindow, "
 
-    const-string v3, "notifyWindow, "
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-string v2, ", "
 
-    const-string v3, ", "
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    if-nez v2, :cond_0
 
-    if-nez v3, :cond_0
-
-    move v3, v4
+    move v2, v3
 
     goto :goto_0
 
     :cond_0
-    move v3, v5
+    move v2, v4
 
     :goto_0
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v2, "Longshot.PreviewWindow"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
     if-eqz p1, :cond_2
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
+    iget-object v5, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    if-nez v2, :cond_2
+    if-nez v5, :cond_2
 
-    invoke-direct {p0, v5}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->getNotifyWindowLayoutParams(Z)Landroid/view/WindowManager$LayoutParams;
+    invoke-direct {p0, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->getNotifyWindowLayoutParams(Z)Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mContext:Landroid/content/Context;
+    iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mContext:Landroid/content/Context;
 
     const-string v5, "layout_inflater"
 
-    invoke-virtual {v3, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Landroid/view/LayoutInflater;
+    check-cast v4, Landroid/view/LayoutInflater;
 
     const v5, 0x7f0c0072
 
-    invoke-virtual {v3, v5, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v4, v5, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
@@ -2154,7 +2140,7 @@
 
     iput-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    iput v4, v2, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
@@ -2162,9 +2148,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f0900dd
+    const v3, 0x7f0900dd
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2172,9 +2158,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f0900de
+    const v3, 0x7f0900de
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2184,9 +2170,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f090059
+    const v3, 0x7f090059
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2196,9 +2182,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f0900a7
+    const v3, 0x7f0900a7
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2208,9 +2194,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f0900dc
+    const v3, 0x7f0900dc
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2220,23 +2206,23 @@
 
     new-instance v1, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
-    iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPreview:Landroid/widget/ImageView;
 
-    iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f0900e0
+    const v3, 0x7f0900e0
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2246,9 +2232,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f09008d
+    const v3, 0x7f09008d
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2258,9 +2244,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f090027
+    const v3, 0x7f090027
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2270,9 +2256,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f09012f
+    const v3, 0x7f09012f
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2282,9 +2268,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f090113
+    const v3, 0x7f090113
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2292,9 +2278,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f09009b
+    const v3, 0x7f09009b
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2304,9 +2290,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f090112
+    const v3, 0x7f090112
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2316,9 +2302,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f090106
+    const v3, 0x7f090106
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2328,9 +2314,9 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    const v4, 0x7f0900e9
+    const v3, 0x7f0900e9
 
-    invoke-virtual {v1, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -2340,51 +2326,49 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPreviewContainer:Landroid/view/View;
 
-    const/4 v4, 0x4
+    const/4 v3, 0x4
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mLoadingWindow:Landroid/widget/RelativeLayout;
 
-    const/16 v4, 0x8
+    const/16 v3, 0x8
 
-    invoke-virtual {v1, v4}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mContext:Landroid/content/Context;
 
-    const v4, 0x7f0d0049
+    const v3, 0x7f0d0049
 
-    invoke-virtual {v1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mMessage:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mMessage:Landroid/widget/TextView;
 
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    invoke-virtual {v4, p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->setPreviewWindowController(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+    invoke-virtual {v3, p0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->setPreviewWindowController(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
 
-    iget-boolean v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->STITCH_DEBUG:Z
+    iget-boolean v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->stitchDebug:Z
 
-    if-eqz v4, :cond_1
+    if-eqz v3, :cond_1
 
-    iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
     const/high16 v5, 0x3f000000    # 0.5f
 
-    invoke-virtual {v4, v5}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->setAlpha(F)V
+    invoke-virtual {v3, v5}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->setAlpha(F)V
 
     :cond_1
     goto :goto_1
 
     :cond_2
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
+    iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mWindow:Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;
 
-    if-eqz v2, :cond_3
-
-    sget-object v2, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    if-eqz v3, :cond_3
 
     const-string v3, "notifyWindow hide"
 
@@ -2402,25 +2386,25 @@
 .end method
 
 .method public updateDrawable(Landroid/graphics/Bitmap;I)V
-    .locals 3
+    .locals 2
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, " updateDrawable index:"
 
-    const-string v2, " updateDrawable index:"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "Longshot.PreviewWindow"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->mPictureDrawable:Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 

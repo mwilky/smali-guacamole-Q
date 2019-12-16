@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;
+        Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
     }
 .end annotation
 
@@ -23,7 +23,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;-><init>(Landroid/content/Context;I)V
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     const/4 v1, 0x2
 
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -879,7 +879,7 @@
 .method protected getStep()I
     .locals 2
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     const/4 v1, 0x2
 
@@ -1168,7 +1168,7 @@
 
     array-length v3, v15
 
-    new-array v3, v3, [Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;
+    new-array v3, v3, [Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
 
     const/16 v21, 0x0
 
@@ -1181,13 +1181,13 @@
 
     if-ge v2, v1, :cond_3
 
-    new-instance v1, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;
+    new-instance v1, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
 
     move-object/from16 p1, v4
 
     aget-object v4, v15, v2
 
-    invoke-direct {v1, v0, v2, v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;-><init>(Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;ILcom/oneplus/screenshot/longshot/bitmap/Pixels;)V
+    invoke-direct {v1, v0, v2, v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;-><init>(Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher;ILcom/oneplus/screenshot/longshot/bitmap/Pixels;)V
 
     aput-object v1, v3, v2
 
@@ -1213,13 +1213,13 @@
 
     aget-object v4, v3, v2
 
-    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object v2
 
     aget-object v4, v3, v1
 
-    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object v4
 
@@ -1229,7 +1229,7 @@
 
     aget-object v4, v3, v1
 
-    invoke-virtual {v4, v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->setSimilarity(I)V
+    invoke-virtual {v4, v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->setSimilarity(I)V
 
     const/4 v4, 0x0
 
@@ -1254,7 +1254,7 @@
 
     move-object/from16 v23, v6
 
-    invoke-virtual/range {v18 .. v18}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual/range {v18 .. v18}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object v6
 
@@ -1262,7 +1262,7 @@
 
     move-wide/from16 v24, v9
 
-    invoke-virtual/range {v18 .. v18}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual/range {v18 .. v18}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object v9
 
@@ -1274,7 +1274,7 @@
 
     aget-object v6, v3, v4
 
-    invoke-virtual {v6, v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->setSimilarity(I)V
+    invoke-virtual {v6, v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->setSimilarity(I)V
 
     add-int/lit8 v4, v4, 0x1
 
@@ -1284,7 +1284,7 @@
 
     aget-object v6, v3, v1
 
-    invoke-virtual {v6, v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->setRepeatCount(I)V
+    invoke-virtual {v6, v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->setRepeatCount(I)V
 
     :cond_4
     move/from16 v18, v5
@@ -1300,7 +1300,7 @@
     :cond_5
     aget-object v6, v3, v1
 
-    invoke-virtual {v6, v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->setRepeatCount(I)V
+    invoke-virtual {v6, v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->setRepeatCount(I)V
 
     move/from16 v18, v5
 
@@ -1351,7 +1351,7 @@
     :goto_8
     aget-object v10, v3, v4
 
-    invoke-virtual {v10}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getSimilarity()I
+    invoke-virtual {v10}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getSimilarity()I
 
     move-result v10
 
@@ -1368,13 +1368,13 @@
     :cond_8
     aget-object v9, v3, v4
 
-    invoke-virtual {v9}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getSimilarity()I
+    invoke-virtual {v9}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getSimilarity()I
 
     move-result v9
 
     aget-object v10, v3, v4
 
-    invoke-virtual {v10}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getRepeatCount()I
+    invoke-virtual {v10}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getRepeatCount()I
 
     move-result v10
 
@@ -1392,7 +1392,7 @@
 
     aget-object v18, v3, v4
 
-    invoke-virtual/range {v18 .. v18}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getRepeatCount()I
+    invoke-virtual/range {v18 .. v18}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getRepeatCount()I
 
     move-result v18
 
@@ -1405,7 +1405,7 @@
     :cond_9
     aget-object v10, v3, v4
 
-    invoke-virtual {v10}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getRepeatCount()I
+    invoke-virtual {v10}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getRepeatCount()I
 
     move-result v10
 
@@ -1490,7 +1490,7 @@
 
     if-ge v6, v9, :cond_21
 
-    sget-boolean v9, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v9, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     if-eqz v9, :cond_d
 
@@ -1540,7 +1540,7 @@
 
     aget-object v4, v3, v1
 
-    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getSimilarity()I
+    invoke-virtual {v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getSimilarity()I
 
     move-result v4
 
@@ -1654,7 +1654,7 @@
 
     if-ge v1, v2, :cond_1f
 
-    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     if-eqz v2, :cond_14
 
@@ -1717,15 +1717,15 @@
 
     move-object/from16 v2, v16
 
-    check-cast v2, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;
+    check-cast v2, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
 
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getIndex()I
+    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getIndex()I
 
     move-result v16
 
     move-object/from16 v28, v4
 
-    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object v4
 
@@ -1749,7 +1749,7 @@
 
     const/4 v5, 0x1
 
-    invoke-virtual {v2, v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->setChecked(Z)V
+    invoke-virtual {v2, v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->setChecked(Z)V
 
     goto :goto_11
 
@@ -1799,7 +1799,7 @@
 
     aget-object v5, v3, v2
 
-    invoke-virtual {v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getChecked()Z
+    invoke-virtual {v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getChecked()Z
 
     move-result v5
 
@@ -1807,7 +1807,7 @@
 
     aget-object v5, v3, v2
 
-    invoke-virtual {v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
+    invoke-virtual {v5}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->getPixels()Lcom/oneplus/screenshot/longshot/bitmap/Pixels;
 
     move-result-object v5
 
@@ -1902,11 +1902,11 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;
+    check-cast v3, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;
 
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$stitchLastPattern;->setChecked(Z)V
+    invoke-virtual {v3, v4}, Lcom/oneplus/screenshot/longshot/match/StitchLastMatcher$StitchLastPattern;->setChecked(Z)V
 
     goto :goto_15
 

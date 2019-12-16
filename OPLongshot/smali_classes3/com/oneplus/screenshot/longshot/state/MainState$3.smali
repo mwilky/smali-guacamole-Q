@@ -85,7 +85,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -113,11 +113,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, " STOP_BY_USER:"
+    const-string v2, " stopByUser:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -149,7 +149,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-nez v1, :cond_0
 
@@ -175,7 +175,7 @@
     goto :goto_0
 
     :cond_1
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     const/4 v2, 0x0
 
@@ -212,7 +212,7 @@
     goto :goto_0
 
     :cond_2
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PREVIEW_STOP:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isPreviewStop:Z
 
     if-nez v1, :cond_3
 

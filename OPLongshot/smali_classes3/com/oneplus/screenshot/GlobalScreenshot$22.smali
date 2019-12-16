@@ -17,9 +17,9 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-.field final synthetic val$scale_center_x:F
+.field final synthetic val$scaleCenterX:F
 
-.field final synthetic val$scale_center_y:F
+.field final synthetic val$scaleCenterY:F
 
 .field final synthetic val$startScaleX:F
 
@@ -36,9 +36,9 @@
 
     iput p3, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$startScaleY:F
 
-    iput p4, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scale_center_x:F
+    iput p4, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scaleCenterX:F
 
-    iput p5, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scale_center_y:F
+    iput p5, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scaleCenterY:F
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -112,7 +112,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scale_center_x:F
+    iget v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scaleCenterX:F
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setPivotX(F)V
 
@@ -122,7 +122,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scale_center_y:F
+    iget v2, p0, Lcom/oneplus/screenshot/GlobalScreenshot$22;->val$scaleCenterY:F
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setPivotY(F)V
 

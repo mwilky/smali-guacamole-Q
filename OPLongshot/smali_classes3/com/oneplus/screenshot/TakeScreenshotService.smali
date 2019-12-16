@@ -6,6 +6,8 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "Longshot.TakeScreenshotService"
 
+.field private static final VOICE_SCREENSHOT:I = 0x64
+
 .field private static mScreenshot:Lcom/oneplus/screenshot/GlobalScreenshot;
 
 

@@ -39,11 +39,11 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$35;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->isDropped()Z
+    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->isDropped()Z
 
     move-result v0
 
@@ -53,7 +53,7 @@
 
     if-nez v0, :cond_1
 
-    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-eqz v3, :cond_0
 
@@ -87,11 +87,11 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/GlobalScreenshot$35;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v4}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    invoke-static {v4}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     move-result-object v4
 
-    invoke-virtual {v4, v2}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->setDraggable(Z)V
+    invoke-virtual {v4, v2}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->setDraggable(Z)V
 
     const-string v2, "Longshot.GlobalScreenshot"
 

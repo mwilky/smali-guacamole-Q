@@ -236,7 +236,7 @@
 
     if-ge v1, v2, :cond_0
 
-    sget v2, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->DIV_COLOR:I
+    sget v2, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->divColor:I
 
     aput v2, v0, v1
 

@@ -113,7 +113,7 @@
 .method protected getStateOnSuccess()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     if-eqz v0, :cond_0
 

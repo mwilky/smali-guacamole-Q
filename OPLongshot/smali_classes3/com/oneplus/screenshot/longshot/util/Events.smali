@@ -10,22 +10,12 @@
 
 .field public static final STOPLONGSHOT_REASON_TAKE_LONGSHOT:I = 0x1
 
-.field public static final STOPLONGSHOT_REASON_UNKNOW:I
+.field public static final STOPLONGSHOT_REASON_UNKNOW:I = 0x0
 
-.field public static TAG:Ljava/lang/String;
+.field public static final TAG:Ljava/lang/String; = "Events"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "Events"
-
-    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Events;->TAG:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 

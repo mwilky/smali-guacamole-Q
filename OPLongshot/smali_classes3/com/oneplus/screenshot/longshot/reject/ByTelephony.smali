@@ -3,21 +3,19 @@
 .source "ByTelephony.java"
 
 
-# instance fields
-.field private final TAG:Ljava/lang/String;
+# static fields
+.field private static final TAG:Ljava/lang/String; = "ByTelephony"
 
+
+# instance fields
 .field private mContext:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0, p1}, Lcom/oneplus/screenshot/longshot/reject/Reject;-><init>(Landroid/content/Context;)V
-
-    const-string v0, "ByTelephony"
-
-    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/reject/ByTelephony;->TAG:Ljava/lang/String;
 
     iput-object p1, p0, Lcom/oneplus/screenshot/longshot/reject/ByTelephony;->mContext:Landroid/content/Context;
 

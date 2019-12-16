@@ -23,7 +23,7 @@
 
     const/4 v0, 0x0
 
-    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_ERROR:I
+    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelError:I
 
     const/4 v2, 0x2
 

@@ -19,7 +19,7 @@
 .method private getShotLastState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_STRICT_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsStrictList:Z
 
     if-eqz v0, :cond_0
 
@@ -37,7 +37,7 @@
 .method private getShotNextState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BG_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBGList:Z
 
     if-eqz v0, :cond_0
 
@@ -63,7 +63,7 @@
 .method private getShotOverState()Lcom/oneplus/screenshot/longshot/state/LongshotState;
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BG_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBGList:Z
 
     if-eqz v0, :cond_0
 
@@ -81,11 +81,11 @@
 .method private isList()Z
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PAGE_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsPageList:Z
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SMALL_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsSmallList:Z
 
     if-eqz v0, :cond_0
 
@@ -107,7 +107,7 @@
 .method private isNonList()Z
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_NON_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsNonList:Z
 
     return v0
 .end method
@@ -187,7 +187,7 @@
 
     if-eqz v1, :cond_0
 
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     if-nez v1, :cond_0
 

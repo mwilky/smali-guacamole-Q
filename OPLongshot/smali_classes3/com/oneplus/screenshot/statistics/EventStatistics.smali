@@ -14,9 +14,9 @@
 
 
 # static fields
-.field private static APPBASE:I
-
 .field private static final TAG:Ljava/lang/String;
+
+.field private static appBase:I
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     const/4 v0, 0x0
 
-    sput v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->APPBASE:I
+    sput v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->appBase:I
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 .method static synthetic access$000()I
     .locals 1
 
-    sget v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->APPBASE:I
+    sget v0, Lcom/oneplus/screenshot/statistics/EventStatistics;->appBase:I
 
     return v0
 .end method
@@ -94,7 +94,7 @@
 
     mul-int/lit16 v2, v1, 0x2710
 
-    sput v2, Lcom/oneplus/screenshot/statistics/EventStatistics;->APPBASE:I
+    sput v2, Lcom/oneplus/screenshot/statistics/EventStatistics;->appBase:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0

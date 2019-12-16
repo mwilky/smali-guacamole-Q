@@ -14,10 +14,6 @@
 # static fields
 .field private static final DIR_NAME:Ljava/lang/String; = "Dump"
 
-.field public static DIV_COLOR:I = 0x0
-
-.field public static DIV_HEIGHT:I = 0x0
-
 .field private static final TAG:Ljava/lang/String; = "BitmapDumper"
 
 .field public static final TAG_CURR:Ljava/lang/String; = "Curr"
@@ -27,6 +23,10 @@
 .field public static final TAG_NEXT:Ljava/lang/String; = "Next"
 
 .field public static final TAG_PREV:Ljava/lang/String; = "Prev"
+
+.field public static divColor:I
+
+.field public static divHeight:I
 
 
 # instance fields
@@ -45,11 +45,11 @@
 
     const/4 v0, 0x0
 
-    sput v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->DIV_HEIGHT:I
+    sput v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->divHeight:I
 
     const v0, -0xffff01
 
-    sput v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->DIV_COLOR:I
+    sput v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->divColor:I
 
     return-void
 .end method
@@ -165,7 +165,7 @@
 
     const/4 v0, 0x1
 
-    sput v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->DIV_HEIGHT:I
+    sput v0, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->divHeight:I
 
     :cond_1
     return-void

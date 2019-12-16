@@ -241,7 +241,7 @@
 
     move-result v3
 
-    sget-object v4, Lcom/oneplus/screenshot/longshot/util/Configs;->BGLINE_SAMPLES:Ljava/util/List;
+    sget-object v4, Lcom/oneplus/screenshot/longshot/util/Configs;->bglineSamples:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -299,7 +299,7 @@
     :goto_2
     if-ge v11, v4, :cond_2
 
-    sget-object v12, Lcom/oneplus/screenshot/longshot/util/Configs;->BGLINE_SAMPLES:Ljava/util/List;
+    sget-object v12, Lcom/oneplus/screenshot/longshot/util/Configs;->bglineSamples:Ljava/util/List;
 
     invoke-interface {v12, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -755,7 +755,7 @@
 
     const/16 v20, 0x0
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->BGLINE_SAMPLES:Ljava/util/List;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->bglineSamples:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 

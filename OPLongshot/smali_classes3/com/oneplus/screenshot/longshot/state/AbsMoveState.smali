@@ -72,7 +72,7 @@
 .method private getKeep()I
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_KEEP_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsKeepList:Z
 
     if-eqz v0, :cond_0
 

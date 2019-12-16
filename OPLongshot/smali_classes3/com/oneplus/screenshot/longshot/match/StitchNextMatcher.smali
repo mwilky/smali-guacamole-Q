@@ -27,7 +27,7 @@
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/match/StitchNextMatcher;->mExtendCurr:I
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_NEXT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchNext:I
 
     const/4 v1, 0x2
 
@@ -588,7 +588,7 @@
 .method protected getStep()I
     .locals 2
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_NEXT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchNext:I
 
     const/4 v1, 0x2
 
@@ -891,11 +891,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->dump(Landroid/graphics/Bitmap;Ljava/lang/String;)V
 
     :cond_4
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_TOP_ACTIVITY_DISPLAY_COMPATIBLE:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isTopActivityDisplayCompatible:Z
 
     if-eqz v0, :cond_5
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->TOP_ACTIVITY_DISPLAY_COMPATIBLE_STITCH_MATCH_THRESHOLD:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->topActivityDisplayCompatibleStitchMatchThreshold:I
 
     goto :goto_3
 
@@ -1069,7 +1069,7 @@
 
     const/4 v4, 0x1
 
-    sget-boolean v10, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_IGNORE_FULL_MATCH_LIST:Z
+    sget-boolean v10, Lcom/oneplus/screenshot/longshot/util/Configs;->isIgnoreFullMatchList:Z
 
     if-nez v10, :cond_b
 

@@ -19,7 +19,7 @@
 
 # virtual methods
 .method public enter(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
-    .locals 1
+    .locals 2
 
     invoke-super {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/state/MainState;->enter(Lcom/oneplus/screenshot/longshot/state/LongshotState;Lcom/oneplus/screenshot/longshot/state/LongshotAction$OnStateListener;)V
 
@@ -27,6 +27,17 @@
 
     invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/util/Features;->getValue()Z
 
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Longshot.UnsupportedState"
+
+    const-string v1, "Unsupported"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
     return-void
 .end method
 

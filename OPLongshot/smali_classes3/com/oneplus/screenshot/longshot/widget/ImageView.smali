@@ -484,7 +484,7 @@
 
     add-int/2addr v3, v4
 
-    sget v5, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->DIV_HEIGHT:I
+    sget v5, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->divHeight:I
 
     move v4, v0
 

@@ -473,7 +473,7 @@
 .method private getBottom(I)I
     .locals 2
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LOWER_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsLowerList:Z
 
     if-eqz v0, :cond_0
 
@@ -488,7 +488,7 @@
     return v0
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SMALL_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsSmallList:Z
 
     if-eqz v0, :cond_1
 
@@ -503,7 +503,7 @@
     return v0
 
     :cond_1
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_HIGHER_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsHigherList:Z
 
     if-eqz v0, :cond_2
 
@@ -565,7 +565,7 @@
 .method private getTop(I)I
     .locals 2
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LOWER_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsLowerList:Z
 
     if-eqz v0, :cond_0
 
@@ -580,7 +580,7 @@
     return v0
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SMALL_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsSmallList:Z
 
     if-eqz v0, :cond_1
 
@@ -1446,7 +1446,7 @@
 .method private isUnsupported()Z
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_UNSUPPORTED:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsUnSupported:Z
 
     return v0
 .end method
@@ -1546,7 +1546,7 @@
 
     invoke-direct {p0, v0}, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->disableKeys(Z)V
 
-    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mCurrentState:Lcom/oneplus/screenshot/longshot/state/LongshotState;
 
@@ -1745,7 +1745,7 @@
 .method public getScrollViewTop()I
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BIGTOP_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBigtopList:Z
 
     if-eqz v0, :cond_0
 
@@ -1758,7 +1758,7 @@
     return v0
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LARGETOP_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isLargetopList:Z
 
     if-eqz v0, :cond_1
 
@@ -1771,7 +1771,7 @@
     return v0
 
     :cond_1
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SPECIAL_SCROLL_ACTIVITY:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isSpecialScrollActivity:Z
 
     if-eqz v0, :cond_2
 
@@ -1987,11 +1987,11 @@
 
     if-eqz v0, :cond_1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_FORBID_STITCH_BY_DISTANCE_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isForbidStitchByDistanceList:Z
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_TOP_ACTIVITY_DISPLAY_COMPATIBLE:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isTopActivityDisplayCompatible:Z
 
     if-nez v0, :cond_1
 
@@ -2115,7 +2115,7 @@
 
     if-eq v0, v1, :cond_0
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-eqz v0, :cond_0
 
@@ -2220,7 +2220,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     return-void
 .end method
@@ -2500,7 +2500,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_TOP_ACTIVITY_DISPLAY_COMPATIBLE:Z
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isTopActivityDisplayCompatible:Z
 
     invoke-direct {p0, p4}, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->initNavigationBar(Z)V
 
@@ -2508,7 +2508,9 @@
 
     invoke-direct {v0}, Lcom/oneplus/screenshot/longshot/task/GcThread;-><init>()V
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/task/GcThread;->start()Lcom/oneplus/screenshot/longshot/task/BaseThread;
+    const-string v1, "GcThread"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/task/GcThread;->start(Ljava/lang/String;)Lcom/oneplus/screenshot/longshot/task/BaseThread;
 
     move-result-object v0
 
@@ -2518,7 +2520,9 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/screenshot/longshot/task/CheckThread;-><init>(Lcom/oneplus/screenshot/longshot/state/LongshotContext;)V
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/task/CheckThread;->start()Lcom/oneplus/screenshot/longshot/task/BaseThread;
+    const-string v1, "Longshot.CheckThread"
+
+    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/task/CheckThread;->start(Ljava/lang/String;)Lcom/oneplus/screenshot/longshot/task/BaseThread;
 
     move-result-object v0
 
@@ -2609,11 +2613,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, " Configs.IS_LONGSHOT_RUNNING:"
+    const-string v1, " Configs.isLongshotRunning:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2707,7 +2711,7 @@
 
     invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-nez v1, :cond_0
 
@@ -2876,6 +2880,10 @@
     invoke-virtual {v6, v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewController;->setStatusbar(Landroid/graphics/Bitmap;)V
 
     :cond_7
+    sget-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->isNavigationBarVisibleInPreview:Z
+
+    if-eqz v3, :cond_8
+
     if-eqz v5, :cond_8
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/state/LongshotMode;->mPreviewController:Lcom/oneplus/screenshot/longshot/preview/PreviewController;
@@ -2986,7 +2994,7 @@
     goto :goto_4
 
     :cond_10
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     if-eqz v1, :cond_12
 

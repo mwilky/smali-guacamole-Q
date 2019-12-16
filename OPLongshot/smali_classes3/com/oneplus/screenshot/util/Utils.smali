@@ -608,7 +608,7 @@
 
     invoke-direct {v3, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    sget v4, Lcom/oneplus/screenshot/longshot/util/Configs;->WATERMARK_TIMES:I
+    sget v4, Lcom/oneplus/screenshot/longshot/util/Configs;->sWaterMarkTimes:I
 
     const/4 v5, 0x3
 
@@ -626,7 +626,7 @@
 
     aput-object v9, v6, v8
 
-    sget-object v9, Lcom/oneplus/screenshot/longshot/util/Configs;->IMEI_NUMBER:Ljava/lang/String;
+    sget-object v9, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
 
     const/4 v10, 0x2
 
@@ -1638,7 +1638,7 @@
 
     :cond_1
     :goto_0
-    sget-boolean v5, Lcom/oneplus/screenshot/longshot/util/Configs;->SUPPORT_NEW_EDIT_MODE:Z
+    sget-boolean v5, Lcom/oneplus/screenshot/longshot/util/Configs;->supportNewEditMode:Z
 
     if-eqz v5, :cond_2
 
@@ -1842,7 +1842,7 @@
 
     move-object v10, v0
 
-    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v4, 0x64
 
@@ -1854,7 +1854,7 @@
 
     invoke-virtual {v10}, Ljava/io/OutputStream;->flush()V
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_ENCRYPT_IMAGE:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_8
     .catchall {:try_start_2 .. :try_end_2} :catchall_5
@@ -1880,7 +1880,7 @@
 
     move-object v1, v0
 
-    const-string v0, ".png"
+    const-string v0, ".jpg"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -1902,7 +1902,7 @@
 
     invoke-virtual {v8, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IMEI_NUMBER:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
 
     move-object/from16 v23, v0
 
@@ -2110,7 +2110,7 @@
     goto :goto_3
 
     :cond_4
-    const-string v2, "image/png"
+    const-string v2, "image/jpeg"
 
     invoke-virtual {v12, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 

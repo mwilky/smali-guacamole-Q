@@ -99,25 +99,25 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$33;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->onStart()V
+    invoke-virtual {v0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->onStart()V
 
     iget-object v0, p0, Lcom/oneplus/screenshot/GlobalScreenshot$33;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    invoke-static {v0}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3400(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$33;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3500(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$DragCallback;
+    invoke-static {v1}, Lcom/oneplus/screenshot/GlobalScreenshot;->access$3500(Lcom/oneplus/screenshot/GlobalScreenshot;)Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->registerCallBack(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$DragCallback;)V
+    invoke-virtual {v0, v1}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->registerCallBack(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;)V
 
     :cond_2
     return-void

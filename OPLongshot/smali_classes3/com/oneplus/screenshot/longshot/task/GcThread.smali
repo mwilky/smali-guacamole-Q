@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final GC_DELAY:J = 0x0L
+.field private static final GC_DELAY:J = 0x32L
 
-.field private static final TAG:Ljava/lang/String; = "GcThread"
+.field public static final TAG:Ljava/lang/String; = "GcThread"
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/task/BaseThread;-><init>()V
 
-    const-wide/16 v0, 0x0
+    const-wide/16 v0, 0x32
 
     iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/task/GcThread;->mDelay:J
 

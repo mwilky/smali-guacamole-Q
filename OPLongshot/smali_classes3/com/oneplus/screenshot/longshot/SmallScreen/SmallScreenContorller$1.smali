@@ -1,4 +1,4 @@
-.class Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$1;
+.class Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$1;
 .super Ljava/lang/Object;
 .source "SmallScreenContorller.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->getFadoutAnimation()Landroid/animation/ValueAnimator;
+    value = Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->getFadoutAnimation()Landroid/animation/ValueAnimator;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
 
 # direct methods
-.method constructor <init>(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;)V
+.method constructor <init>(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,13 +47,13 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->access$000()I
+    invoke-static {}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->access$000()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
-    invoke-static {v2}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->access$100(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;)Landroid/view/WindowManager$LayoutParams;
+    invoke-static {v2}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->access$100(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v2
 
@@ -61,7 +61,7 @@
 
     sub-int/2addr v1, v2
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     int-to-float v3, v1
 
@@ -69,15 +69,15 @@
 
     float-to-int v3, v3
 
-    invoke-static {v2}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->access$100(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;)Landroid/view/WindowManager$LayoutParams;
+    invoke-static {v2}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->access$100(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v4
 
     iget v4, v4, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    iget-object v5, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    iget-object v5, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$1;->this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
-    invoke-static {v5}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->access$200(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;)[I
+    invoke-static {v5}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->access$200(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;)[I
 
     move-result-object v5
 
@@ -89,7 +89,7 @@
 
     add-int/2addr v3, v4
 
-    invoke-static {v2, v3, v6}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;->access$300(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;II)V
+    invoke-static {v2, v3, v6}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;->access$300(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;II)V
 
     return-void
 .end method

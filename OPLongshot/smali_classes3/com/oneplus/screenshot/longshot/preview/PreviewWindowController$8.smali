@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
 
     iget-object v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v2}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/ValueAnimator;
+    invoke-static {v2}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1400(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/ValueAnimator;
 
     move-result-object v2
 
@@ -61,7 +61,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$8;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
+    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
 

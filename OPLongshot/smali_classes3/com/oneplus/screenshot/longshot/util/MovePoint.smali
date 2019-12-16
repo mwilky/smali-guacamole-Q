@@ -50,12 +50,6 @@
 
 
 # virtual methods
-.method public MoveTo(II)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public abstract canMove()Z
 .end method
 
@@ -98,6 +92,12 @@
 .end method
 
 .method public abstract move()V
+.end method
+
+.method public moveTo(II)V
+    .locals 0
+
+    return-void
 .end method
 
 .method public reset()V

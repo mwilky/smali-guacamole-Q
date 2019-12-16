@@ -92,7 +92,7 @@
     iput v1, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mStep:I
 
     :goto_0
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_RTL:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isRtl:Z
 
     invoke-static {v0, v1}, Lcom/oneplus/screenshot/longshot/util/Configs;->getSideOffset(ZZ)I
 
@@ -100,7 +100,7 @@
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/match/BaseMatcher;->mRightSideOffset:I
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_RTL:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isRtl:Z
 
     invoke-static {v2, v0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getSideOffset(ZZ)I
 

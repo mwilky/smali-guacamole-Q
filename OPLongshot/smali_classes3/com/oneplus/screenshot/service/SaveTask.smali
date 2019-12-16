@@ -226,7 +226,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    sget v2, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->DIV_HEIGHT:I
+    sget v2, Lcom/oneplus/screenshot/longshot/dump/BitmapDumper;->divHeight:I
 
     iget-object v3, p0, Lcom/oneplus/screenshot/service/SaveTask;->mBitmaps:Ljava/util/List;
 
@@ -235,6 +235,10 @@
     move-result-object v2
 
     move-object v1, v2
+
+    sget-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->isNavigationBarVisibleInLongshot:Z
+
+    if-eqz v2, :cond_0
 
     iget-object v2, p0, Lcom/oneplus/screenshot/service/SaveTask;->mNavibar:Landroid/graphics/Bitmap;
 
@@ -371,7 +375,7 @@
     goto :goto_1
 
     :cond_1
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->SUPPORT_NEW_EDIT_MODE:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->supportNewEditMode:Z
 
     if-eqz v1, :cond_2
 

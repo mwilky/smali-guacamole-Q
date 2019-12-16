@@ -20,19 +20,19 @@
 # instance fields
 .field final synthetic this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
+.field final synthetic val$endScaleCenterX:F
+
+.field final synthetic val$endScaleCenterY:F
+
 .field final synthetic val$endScaleX:F
 
 .field final synthetic val$endScaleY:F
 
-.field final synthetic val$end_scale_center_x:F
+.field final synthetic val$scaleCenterX:F
 
-.field final synthetic val$end_scale_center_y:F
+.field final synthetic val$scaleCenterY:F
 
 .field final synthetic val$scaleInterpolator:Landroid/view/animation/Interpolator;
-
-.field final synthetic val$scale_center_x:F
-
-.field final synthetic val$scale_center_y:F
 
 .field final synthetic val$startScaleX:F
 
@@ -55,13 +55,13 @@
 
     iput p6, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$startScaleY:F
 
-    iput p7, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$end_scale_center_x:F
+    iput p7, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$endScaleCenterX:F
 
-    iput p8, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scale_center_x:F
+    iput p8, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scaleCenterX:F
 
-    iput p9, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$end_scale_center_y:F
+    iput p9, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$endScaleCenterY:F
 
-    iput p10, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scale_center_y:F
+    iput p10, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scaleCenterY:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -121,9 +121,9 @@
 
     sub-float/2addr v2, v3
 
-    iget v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$end_scale_center_x:F
+    iget v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$endScaleCenterX:F
 
-    iget v5, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scale_center_x:F
+    iget v5, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scaleCenterX:F
 
     sub-float v5, v3, v5
 
@@ -139,9 +139,9 @@
 
     sub-float/2addr v3, v5
 
-    iget v5, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$end_scale_center_y:F
+    iget v5, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$endScaleCenterY:F
 
-    iget v6, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scale_center_y:F
+    iget v6, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->val$scaleCenterY:F
 
     sub-float v6, v5, v6
 
@@ -159,7 +159,7 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
+    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
 
     move-result-object v4
 
@@ -167,7 +167,7 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$10;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
+    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
 
     move-result-object v4
 

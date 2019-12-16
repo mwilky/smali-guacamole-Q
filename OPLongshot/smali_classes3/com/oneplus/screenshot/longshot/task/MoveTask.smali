@@ -23,11 +23,11 @@
 
 
 # static fields
-.field private static OVERSCROLL_CHECK_POINT:I = 0x0
+.field private static final M_CHECK_LOCK:Ljava/lang/Object;
 
 .field private static final TAG:Ljava/lang/String; = "Longshot.MoveTask"
 
-.field private static final mCheckLock:Ljava/lang/Object;
+.field private static overscrollCheckPoint:I
 
 
 # instance fields
@@ -72,13 +72,13 @@
 
     const/16 v0, 0xa
 
-    sput v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->OVERSCROLL_CHECK_POINT:I
+    sput v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->overscrollCheckPoint:I
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mCheckLock:Ljava/lang/Object;
+    sput-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->M_CHECK_LOCK:Ljava/lang/Object;
 
     return-void
 .end method
@@ -152,7 +152,7 @@
 .method static synthetic access$000()Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mCheckLock:Ljava/lang/Object;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->M_CHECK_LOCK:Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -614,14 +614,14 @@
     :catch_0
     move-exception v0
 
-    sput-boolean v7, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sput-boolean v7, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     goto :goto_1
 
     :catch_1
     move-exception v0
 
-    sput-boolean v7, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sput-boolean v7, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     :goto_0
     nop
@@ -779,7 +779,7 @@
     goto/16 :goto_5
 
     :cond_1
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SPECIAL_SCROLL_ACTIVITY:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isSpecialScrollActivity:Z
 
     const/high16 v21, 0x42c80000    # 100.0f
 
@@ -920,7 +920,7 @@
     :goto_2
     mul-float v2, v12, v21
 
-    sget v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->OVERSCROLL_CHECK_POINT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->overscrollCheckPoint:I
 
     int-to-float v0, v0
 
@@ -1347,7 +1347,7 @@
 
     invoke-static {}, Lcom/oneplus/screenshot/util/Utils;->setThreadPriority()V
 
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     const/4 v2, 0x0
 
@@ -1705,7 +1705,7 @@
     invoke-interface {v0}, Lcom/oneplus/screenshot/longshot/task/MoveTask$OnMoveListener;->onMoveFinished()V
 
     :cond_2
-    sget-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->mCheckLock:Ljava/lang/Object;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/task/MoveTask;->M_CHECK_LOCK:Ljava/lang/Object;
 
     monitor-enter v0
 

@@ -45,11 +45,13 @@
     :cond_0
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$4;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$900(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$4;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1000(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$900(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)V
+
+    nop
 
     :goto_0
     return-void

@@ -1,11 +1,11 @@
-.class Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;
+.class Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;
 .super Ljava/lang/Object;
 .source "SmallScreenContorller.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    value = Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,22 +23,22 @@
 
 .field startTime:J
 
-.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+.field final synthetic this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;FF)V
+.method public constructor <init>(Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;FF)V
     .locals 3
 
-    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->this$0:Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    iput-object p1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->this$0:Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->startTime:J
+    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->startTime:J
 
-    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->endTime:J
+    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->endTime:J
 
     new-instance v0, Landroid/graphics/Point;
 
@@ -48,13 +48,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
-    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
+    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->startTime:J
+    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->startTime:J
 
     return-void
 .end method
@@ -64,29 +64,29 @@
 .method public isDrop()Z
     .locals 10
 
-    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
+    iget-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
 
     iget v1, v1, Landroid/graphics/Point;->x:I
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
 
     iget v1, v1, Landroid/graphics/Point;->y:I
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
+    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mStartPoint:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->y:I
 
     sub-int/2addr v1, v2
 
-    iget-wide v2, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->endTime:J
+    iget-wide v2, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->endTime:J
 
-    iget-wide v4, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->startTime:J
+    iget-wide v4, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->startTime:J
 
     sub-long v6, v2, v4
 
@@ -137,13 +137,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Point;-><init>(II)V
 
-    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
+    iput-object v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->mEndPoint:Landroid/graphics/Point;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$VelocityTracler;->endTime:J
+    iput-wide v0, p0, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$VelocityTracler;->endTime:J
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class Lcom/oneplus/screenshot/GlobalScreenshot$31;
-.super Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$DragCallback;
+.super Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 .source "GlobalScreenshot.java"
 
 
@@ -24,7 +24,7 @@
 
     iput-object p1, p0, Lcom/oneplus/screenshot/GlobalScreenshot$31;->this$0:Lcom/oneplus/screenshot/GlobalScreenshot;
 
-    invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$DragCallback;-><init>()V
+    invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;-><init>()V
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :goto_0
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_UNSUPPORTED:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsUnSupported:Z
 
     if-nez v0, :cond_1
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_UNSUPPORTED:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsUnSupported:Z
 
     if-nez v0, :cond_0
 

@@ -7,11 +7,11 @@
 
 
 # static fields
+.field private static final M_LOCK:Ljava/lang/Object;
+
 .field private static final NOTIFICATION_ID_REPEAT:I = 0x3e8
 
 .field private static final TAG:Ljava/lang/String;
-
-.field private static final mLock:Ljava/lang/Object;
 
 
 # instance fields
@@ -58,7 +58,7 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/oneplus/screenshot/service/GlobalSave;->mLock:Ljava/lang/Object;
+    sput-object v0, Lcom/oneplus/screenshot/service/GlobalSave;->M_LOCK:Ljava/lang/Object;
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/service/GlobalSave;->mSaveTask:Lcom/oneplus/screenshot/service/SaveTask;
 
-    sget-object v1, Lcom/oneplus/screenshot/service/GlobalSave;->mLock:Ljava/lang/Object;
+    sget-object v1, Lcom/oneplus/screenshot/service/GlobalSave;->M_LOCK:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -217,11 +217,11 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/oneplus/screenshot/longshot/util/Configs;->showNotifyWindow(Landroid/content/Context;ZLjava/lang/String;Ljava/lang/String;)V
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     const/4 v0, 0x0
 
-    sget-object v2, Lcom/oneplus/screenshot/service/GlobalSave;->mLock:Ljava/lang/Object;
+    sget-object v2, Lcom/oneplus/screenshot/service/GlobalSave;->M_LOCK:Ljava/lang/Object;
 
     monitor-enter v2
 

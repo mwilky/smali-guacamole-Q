@@ -453,11 +453,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "s onPreviewComplete Configs.IS_LONGSHOT_RUNNING:"
+    const-string v1, "s onPreviewComplete Configs.isLongshotRunning:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -481,7 +481,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-eqz v0, :cond_0
 
@@ -497,7 +497,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PREVIEW_STOP:Z
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isPreviewStop:Z
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/state/WaittingPreviewState;->mStateContext:Lcom/oneplus/screenshot/longshot/state/LongshotContext;
 

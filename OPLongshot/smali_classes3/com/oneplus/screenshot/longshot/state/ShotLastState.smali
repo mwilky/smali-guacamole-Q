@@ -15,7 +15,7 @@
 
     invoke-direct {p0}, Lcom/oneplus/screenshot/longshot/state/ShotLastState;->checkOffset()V
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_DELAY:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelDelay:I
 
     const/4 v1, 0x2
 
@@ -82,7 +82,7 @@
 
     if-eqz v0, :cond_3
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_SHOT_NEXT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelShotNext:I
 
     if-eq v0, v3, :cond_2
 
@@ -134,7 +134,7 @@
     goto :goto_0
 
     :cond_3
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     if-eq v0, v3, :cond_7
 

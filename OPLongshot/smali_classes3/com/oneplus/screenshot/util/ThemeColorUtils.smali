@@ -4,8 +4,6 @@
 
 
 # static fields
-.field public static QS_ACCENT:I = 0x0
-
 .field private static final TAG:Ljava/lang/String; = "ThemeColorUtils"
 
 .field public static final THEME_ANDROID:I = 0x2
@@ -13,6 +11,8 @@
 .field public static final THEME_BLACK:I = 0x1
 
 .field public static final THEME_WHITE:I
+
+.field public static qsAccent:I
 
 .field private static sAccentColor:I
 
@@ -35,7 +35,7 @@
 
     const/16 v0, 0x64
 
-    sput v0, Lcom/oneplus/screenshot/util/ThemeColorUtils;->QS_ACCENT:I
+    sput v0, Lcom/oneplus/screenshot/util/ThemeColorUtils;->qsAccent:I
 
     return-void
 .end method

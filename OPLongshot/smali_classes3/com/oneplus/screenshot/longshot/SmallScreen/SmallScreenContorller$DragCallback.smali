@@ -1,11 +1,11 @@
-.class public Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller$DragCallback;
+.class public Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller$DragCallback;
 .super Ljava/lang/Object;
 .source "SmallScreenContorller.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oneplus/screenshot/longshot/SmallScreen/SmallScreenContorller;
+    value = Lcom/oneplus/screenshot/longshot/smallscreen/SmallScreenContorller;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

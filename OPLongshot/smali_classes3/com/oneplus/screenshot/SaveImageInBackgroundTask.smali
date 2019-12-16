@@ -18,7 +18,7 @@
 # static fields
 .field private static final SCREENSHOTS_DIR_NAME:Ljava/lang/String;
 
-.field private static final SCREENSHOT_FILE_NAME_TEMPLATE:Ljava/lang/String; = "Screenshot_%s.png"
+.field private static final SCREENSHOT_FILE_NAME_TEMPLATE:Ljava/lang/String; = "Screenshot_%s.jpg"
 
 .field private static final SCREENSHOT_SHARE_SUBJECT_TEMPLATE:Ljava/lang/String; = "Screenshot (%s)"
 
@@ -133,7 +133,7 @@
 
     aput-object v12, v1, v0
 
-    const-string v0, "Screenshot_%s.png"
+    const-string v0, "Screenshot_%s.jpg"
 
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -359,39 +359,39 @@
 
     new-instance v4, Landroid/app/Notification$Builder;
 
-    sget-object v5, Lcom/oneplus/screenshot/GlobalScreenshot;->SCREENSHOTS:Ljava/lang/String;
+    const-string v5, "SCN"
 
     invoke-direct {v4, v8, v5}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v5, 0x7f0d003c
-
-    invoke-virtual {v11, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    move-result-object v4
-
-    const v6, 0x7f0d003a
+    const v6, 0x7f0d003c
 
     invoke-virtual {v11, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-virtual {v4, v10}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    invoke-virtual {v4, v10}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v4
 
-    const v10, 0x7f0801e1
+    const v10, 0x7f0d003a
 
-    invoke-virtual {v4, v10}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+    invoke-virtual {v11, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v4
 
-    const-string v10, "progress"
+    const v6, 0x7f0801e1
 
-    invoke-virtual {v4, v10}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
+    invoke-virtual {v4, v6}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
+
+    move-result-object v4
+
+    const-string v6, "progress"
+
+    invoke-virtual {v4, v6}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
     move-result-object v4
 
@@ -403,9 +403,9 @@
 
     move-result-object v4
 
-    const v10, 0x106001c
+    const v6, 0x106001c
 
-    invoke-virtual {v11, v10}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v11, v6}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v13
 
@@ -417,43 +417,43 @@
 
     new-instance v4, Landroid/app/Notification$Builder;
 
-    sget-object v13, Lcom/oneplus/screenshot/GlobalScreenshot;->SCREENSHOTS:Ljava/lang/String;
+    invoke-direct {v4, v8, v5}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-direct {v4, v8, v13}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    new-instance v13, Ljava/lang/StringBuilder;
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+    const v13, 0x7f0d003b
 
-    const v10, 0x7f0d003b
+    invoke-virtual {v11, v13}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v11, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v13
 
-    move-result-object v10
+    invoke-virtual {v5, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-boolean v13, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mTickerAddSpace:Z
 
-    sget-boolean v10, Lcom/oneplus/screenshot/SaveImageInBackgroundTask;->mTickerAddSpace:Z
+    if-eqz v13, :cond_0
 
-    if-eqz v10, :cond_0
-
-    const-string v10, " "
+    const-string v13, " "
 
     goto :goto_0
 
     :cond_0
-    const-string v10, ""
+    const-string v13, ""
 
     :goto_0
-    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v5
 
-    invoke-virtual {v4, v10}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    invoke-virtual {v4, v5}, Landroid/app/Notification$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
     move-result-object v4
+
+    const v5, 0x7f0d003c
 
     invoke-virtual {v11, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -463,7 +463,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v11, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v11, v10}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -487,9 +487,7 @@
 
     move-result-object v4
 
-    const v5, 0x106001c
-
-    invoke-virtual {v11, v5}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v11, v6}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v5
 
@@ -713,7 +711,7 @@
 
     move-object v12, v0
 
-    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v13, 0x64
 
@@ -727,7 +725,7 @@
 
     invoke-virtual {v12}, Ljava/io/OutputStream;->close()V
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_ENCRYPT_IMAGE:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
 
     move v13, v0
 
@@ -751,7 +749,7 @@
 
     move-object v6, v0
 
-    const-string v0, ".png"
+    const-string v0, ".jpg"
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -765,7 +763,7 @@
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IMEI_NUMBER:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
 
     move-object/from16 v16, v0
 
@@ -919,7 +917,7 @@
 
     const-string v3, "image/png"
 
-    const-string v4, "image/png"
+    const-string v4, "image/jpeg"
 
     const-string v6, "mime_type"
 
@@ -1383,7 +1381,7 @@
 
     iget-object v4, v4, Lcom/oneplus/screenshot/SaveImageInBackgroundData;->imageUri:Landroid/net/Uri;
 
-    const-string v5, "image/png"
+    const-string v5, "image/jpeg"
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 

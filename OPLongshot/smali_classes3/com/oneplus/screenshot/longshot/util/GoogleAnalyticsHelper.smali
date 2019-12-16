@@ -16,7 +16,7 @@
 
 .field private static final SYSTEM_PROPERTY_KEY_IS_BETA_ROM:Ljava/lang/String; = "ro.build.beta"
 
-.field private static TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String;
 
 .field private static mIsOnlineConfigEnabled:Z
 

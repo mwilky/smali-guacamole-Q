@@ -53,7 +53,7 @@
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ScrollView;
+    invoke-static {v1}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ScrollView;
 
     move-result-object v1
 
@@ -94,7 +94,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1400(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
 
     move-result v3
 
@@ -108,7 +108,7 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
+    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$100(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Lcom/oneplus/screenshot/longshot/preview/PictureDrawable;
 
     move-result-object v4
 
@@ -122,7 +122,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$300(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ScrollView;
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$200(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ScrollView;
 
     move-result-object v3
 
@@ -132,7 +132,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
 
     move-result v3
 
@@ -140,19 +140,17 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$802(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Z)Z
+    invoke-static {v3, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$702(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Z)Z
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
 
     move-result-object v3
 
     invoke-virtual {v3, v5}, Landroid/os/Handler;->removeMessages(I)V
 
-    invoke-static {}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$100()Ljava/lang/String;
-
-    move-result-object v3
+    const-string v3, "Longshot.PreviewWindow"
 
     const-string v4, "remove overscroll timeout checker"
 
@@ -163,7 +161,7 @@
     :cond_2
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Z
 
     move-result v3
 
@@ -173,11 +171,11 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v3, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$802(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Z)Z
+    invoke-static {v3, v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$702(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;Z)Z
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
 
     move-result-object v3
 
@@ -185,7 +183,7 @@
 
     iget-object v3, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
 
     move-result-object v3
 
@@ -195,7 +193,7 @@
 
     iget-object v4, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$6;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
+    invoke-static {v4}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$500(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/os/Handler;
 
     move-result-object v4
 

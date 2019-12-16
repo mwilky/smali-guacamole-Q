@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static TAG:Ljava/lang/String;
+.field private static final TAG:Ljava/lang/String; = "PreviewWindow:"
 
 
 # instance fields
@@ -12,16 +12,6 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "PreviewWindow:"
-
-    sput-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->TAG:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
@@ -51,31 +41,31 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->TAG:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, " dispatchTouchEvent:"
 
-    const-string v2, " dispatchTouchEvent:"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, " mPreviewWindowController:"
 
-    const-string v2, " mPreviewWindowController:"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->mPreviewWindowController:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    iget-object v2, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->mPreviewWindowController:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "PreviewWindow:"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
@@ -97,7 +87,7 @@
 
     if-eqz v1, :cond_0
 
-    sput-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sput-boolean v2, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     iget-object v1, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindow;->mPreviewWindowController:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 

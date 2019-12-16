@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$9;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1800(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/view/ViewGroup;
+    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
 
     iget-object v0, p0, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController$9;->this$0:Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;
 
-    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1700(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;->access$1600(Lcom/oneplus/screenshot/longshot/preview/PreviewWindowController;)Landroid/widget/ImageView;
 
     move-result-object v0
 

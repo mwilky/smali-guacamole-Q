@@ -37,7 +37,7 @@
 
     iput v0, p0, Lcom/oneplus/screenshot/longshot/match/StitchOverMatcher;->mOffsetCurr:I
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     const/4 v1, 0x2
 
@@ -101,7 +101,7 @@
 .method protected getStep()I
     .locals 2
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     const/4 v1, 0x2
 

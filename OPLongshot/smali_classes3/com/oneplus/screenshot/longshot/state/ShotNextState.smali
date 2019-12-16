@@ -57,7 +57,7 @@
 
     iput-object v0, p0, Lcom/oneplus/screenshot/longshot/state/ShotNextState;->mCaptureSuccess:Ljava/lang/Runnable;
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_SHOT_NEXT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelShotNext:I
 
     const/4 v1, 0x2
 

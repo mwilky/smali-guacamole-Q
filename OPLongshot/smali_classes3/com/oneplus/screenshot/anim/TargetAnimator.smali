@@ -20,9 +20,11 @@
 .end annotation
 
 
-# instance fields
-.field private final TAG:Ljava/lang/String;
+# static fields
+.field private static final TAG:Ljava/lang/String; = "TargetAnimator"
 
+
+# instance fields
 .field protected mLoader:Lcom/oneplus/screenshot/anim/TargetAnimator$ViewLoader;
 
 .field private mSetAnimators:Ljava/util/Map;
@@ -64,10 +66,6 @@
     .locals 1
 
     invoke-direct {p0}, Landroid/animation/ValueAnimator;-><init>()V
-
-    const-string v0, "TargetAnimator"
-
-    iput-object v0, p0, Lcom/oneplus/screenshot/anim/TargetAnimator;->TAG:Ljava/lang/String;
 
     const/4 v0, 0x0
 

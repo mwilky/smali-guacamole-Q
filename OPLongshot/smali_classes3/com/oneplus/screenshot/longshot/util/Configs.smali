@@ -22,16 +22,6 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field public static BGLINE_SAMPLES:Ljava/util/List; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field public static final enum BG_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum BIGTOP_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
@@ -96,52 +86,6 @@
 
 .field public static final enum IGNORE_FULL_MATCH_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field public static IMEI_NUMBER:Ljava/lang/String; = null
-
-.field public static IS_ADD_WATERMARK:Z = false
-
-.field public static IS_BG_LIST:Z = false
-
-.field public static IS_BIGTOP_LIST:Z = false
-
-.field public static IS_ENCRYPT_IMAGE:Z = false
-
-.field public static IS_FORBID_STITCH_BY_DISTANCE_LIST:Z = false
-
-.field public static IS_HIGHER_LIST:Z = false
-
-.field public static IS_IGNORE_FULL_MATCH_LIST:Z = false
-
-.field public static IS_KEEP_LIST:Z = false
-
-.field public static IS_LARGETOP_LIST:Z = false
-
-.field public static IS_LIMIT_LIST:Z = false
-
-.field public static IS_LONGSHOT_RUNNING:Z = false
-
-.field public static IS_LOWER_LIST:Z = false
-
-.field public static IS_NON_LIST:Z = false
-
-.field public static IS_PAGE_LIST:Z = false
-
-.field public static IS_PREVIEW_STOP:Z = false
-
-.field public static IS_RTL:Z = false
-
-.field public static IS_SMALL_LIST:Z = false
-
-.field public static IS_SPECIAL_SCROLL_ACTIVITY:Z = false
-
-.field public static IS_STRICT_LIST:Z = false
-
-.field private static IS_SUPPORT_CUSTOM_STATUS_BAR:Z = false
-
-.field public static IS_TOP_ACTIVITY_DISPLAY_COMPATIBLE:Z = false
-
-.field public static IS_UNSUPPORTED:Z = false
-
 .field public static final enum KEEP_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum LARGETOP_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
@@ -202,31 +146,11 @@
 
 .field public static final LEVEL_5:I = 0x5
 
-.field public static LEVEL_DELAY:I = 0x0
-
-.field public static LEVEL_ERROR:I = 0x0
-
-.field public static LEVEL_LEFT_SIDE_OFFSET:I = 0x0
-
-.field public static LEVEL_RIGHT_SIDE_OFFSET:I = 0x0
-
-.field public static LEVEL_SHOT_NEXT:I = 0x0
-
-.field public static LEVEL_STITCH_LAST:I = 0x0
-
-.field public static LEVEL_STITCH_MATCH:I = 0x0
-
-.field public static LEVEL_STITCH_NEXT:I = 0x0
-
-.field public static LIMIT_LEFT:I = 0x0
-
 .field public static final enum LIMIT_LEFT_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum LIMIT_LINE_LEFT:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum LIMIT_LINE_RIGHT:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-.field public static LIMIT_RIGHT:I = 0x0
 
 .field public static final enum LIMIT_RIGHT_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -264,17 +188,6 @@
 
 .field public static final enum LINES_UNDO:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field public static LINE_SAMPLES:Ljava/util/List; = null
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/util/List<",
-            "Ljava/lang/Integer;",
-            ">;>;"
-        }
-    .end annotation
-.end field
-
 .field public static final enum LINE_SAMPLE_BGLIST:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum LINE_SAMPLE_LIST:Lcom/oneplus/screenshot/longshot/util/Configs;
@@ -289,8 +202,6 @@
 
 .field public static final enum MAX_PAGES:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field public static MAX_SITICH_PAGES:I = 0x0
-
 .field public static final enum MOVE_DELAY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum MOVE_DISTANCE:Lcom/oneplus/screenshot/longshot/util/Configs;
@@ -302,8 +213,6 @@
 .field public static final enum MOVE_KEEP_SHORT:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum NON_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-.field public static NOT_IGNORE_FAIL:Z = false
 
 .field public static final enum NOT_IGNORE_FAIL_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -415,23 +324,13 @@
 
 .field public static final enum PIXEL_ERROR_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field public static PREVIEW_WINDOW_LAYER:I = 0x0
-
 .field public static final enum RIGHT_SIDE_OFFSET_LEVEL_1:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum RIGHT_SIDE_OFFSET_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field private static RLEASE_TYPE_CLOSE_BETA:I = 0x0
-
-.field private static RLEASE_TYPE_MP:I = 0x0
-
-.field private static RLEASE_TYPE_OPEN_BETA:I = 0x0
-
 .field public static final enum SMALL_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
 
 .field public static final enum SPECIAL_SCROLL_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-.field public static START_SCROLL_DELAY:I = 0x0
 
 .field public static final enum START_SCROLL_DELAY_0:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -477,23 +376,80 @@
 
 .field public static final enum STITCH_NEXT_MATCH_LEVEL_2:Lcom/oneplus/screenshot/longshot/util/Configs;
 
-.field public static STOP_BY_USER:Z = false
-
 .field public static final enum STRICT_LIST_ACTIVITY:Lcom/oneplus/screenshot/longshot/util/Configs;
-
-.field public static SUPPORT_NEW_EDIT_MODE:Z = false
 
 .field private static final TAG:Ljava/lang/String; = "Longshot.Configs"
 
-.field public static TOP_ACTIVITY_DISPLAY_COMPATIBLE_PIXEL_MATCH_THRESHOLD:I
-
-.field public static TOP_ACTIVITY_DISPLAY_COMPATIBLE_STITCH_MATCH_THRESHOLD:I
-
-.field public static WATERMARK_TIMES:I
-
 .field public static final enum WIDTH_SAMPLE_LIST:Lcom/oneplus/screenshot/longshot/util/Configs;
 
+.field public static bglineSamples:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static gaInstance:Lcom/oneplus/screenshot/longshot/util/GoogleAnalyticsHelper;
+
+.field public static isAddWatermark:Z
+
+.field public static isEncryptImage:Z
+
+.field public static isForbidStitchByDistanceList:Z
+
+.field public static isIgnoreFullMatchList:Z
+
+.field public static isLargetopList:Z
+
+.field public static isLongshotRunning:Z
+
+.field public static isNavigationBarVisibleInLongshot:Z
+
+.field public static isNavigationBarVisibleInPreview:Z
+
+.field public static isPreviewStop:Z
+
+.field public static isRtl:Z
+
+.field public static isSpecialScrollActivity:Z
+
+.field private static isSupportCustomStatusBar:Z
+
+.field public static isTopActivityDisplayCompatible:Z
+
+.field public static levelDelay:I
+
+.field public static levelError:I
+
+.field public static levelLeftSideOffset:I
+
+.field public static levelRightSideOffset:I
+
+.field public static levelShotNext:I
+
+.field public static levelStitchLast:I
+
+.field public static levelStitchMatch:I
+
+.field public static levelStitchNext:I
+
+.field public static limitLeft:I
+
+.field public static limitRight:I
+
+.field public static lineSamples:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 .field public static mHeaderOffset:I
 
@@ -506,6 +462,56 @@
 .field public static mTopFocusWindow:Ljava/lang/String;
 
 .field private static mView:Landroid/view/View;
+
+.field public static maxSitichPages:I
+
+.field public static notIgnoreFail:Z
+
+.field public static previewWindowLayer:I
+
+.field private static releaseTypeCloseBeta:I
+
+.field private static releaseTypeMp:I
+
+.field private static releaseTypeOpenBeta:I
+
+.field public static sImeiNumber:Ljava/lang/String;
+
+.field public static sIsBGList:Z
+
+.field public static sIsBigtopList:Z
+
+.field public static sIsHigherList:Z
+
+.field public static sIsKeepList:Z
+
+.field public static sIsLimitList:Z
+
+.field public static sIsLowerList:Z
+
+.field public static sIsNonList:Z
+
+.field public static sIsPageList:Z
+
+.field public static sIsSmallList:Z
+
+.field public static sIsStrictList:Z
+
+.field public static sIsUnSupported:Z
+
+.field public static sIsVoiceLongshot:Z
+
+.field public static sWaterMarkTimes:I
+
+.field public static startScrollDelay:I
+
+.field public static stopByUser:Z
+
+.field public static supportNewEditMode:Z
+
+.field public static topActivityDisplayCompatiblePixelMatchThreshold:I
+
+.field public static topActivityDisplayCompatibleStitchMatchThreshold:I
 
 
 # instance fields
@@ -3628,85 +3634,87 @@
 
     sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->$VALUES:[Lcom/oneplus/screenshot/longshot/util/Configs;
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_UNSUPPORTED:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsUnSupported:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_STRICT_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsStrictList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SMALL_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsSmallList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_HIGHER_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsHigherList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LOWER_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsLowerList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LIMIT_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsLimitList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PAGE_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsPageList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_KEEP_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsKeepList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_NON_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsNonList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BG_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBGList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BIGTOP_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBigtopList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LARGETOP_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLargetopList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_FORBID_STITCH_BY_DISTANCE_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isForbidStitchByDistanceList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_IGNORE_FULL_MATCH_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isIgnoreFullMatchList:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_RTL:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isRtl:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->NOT_IGNORE_FAIL:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->notIgnoreFail:Z
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_ERROR:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelError:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_NEXT:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchNext:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_SHOT_NEXT:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelShotNext:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_MATCH:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchMatch:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_DELAY:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelDelay:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_RIGHT_SIDE_OFFSET:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelRightSideOffset:I
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_LEFT_SIDE_OFFSET:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->levelLeftSideOffset:I
 
     const/4 v0, -0x1
 
-    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LIMIT_LEFT:I
+    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->limitLeft:I
 
-    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LIMIT_RIGHT:I
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LINE_SAMPLES:Ljava/util/List;
+    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->limitRight:I
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->BGLINE_SAMPLES:Ljava/util/List;
+    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    new-instance v0, Ljava/util/ArrayList;
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->bglineSamples:Ljava/util/List;
+
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
+
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mNoFooter:Z
 
     sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mHeaderOffset:I
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PREVIEW_STOP:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isPreviewStop:Z
 
     const v0, 0x3d090
 
-    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->PREVIEW_WINDOW_LAYER:I
+    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->previewWindowLayer:I
+
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsVoiceLongshot:Z
 
     const/4 v0, 0x0
 
@@ -3716,19 +3724,19 @@
 
     const-string v0, ""
 
-    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IMEI_NUMBER:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_MP:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeMp:I
 
-    sput v4, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_OPEN_BETA:I
+    sput v4, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeOpenBeta:I
 
-    sput v5, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_CLOSE_BETA:I
+    sput v5, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeCloseBeta:I
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_ADD_WATERMARK:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isAddWatermark:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_ENCRYPT_IMAGE:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
 
-    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->WATERMARK_TIMES:I
+    sput v3, Lcom/oneplus/screenshot/longshot/util/Configs;->sWaterMarkTimes:I
 
     new-array v0, v3, [I
 
@@ -3740,13 +3748,13 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SUPPORT_CUSTOM_STATUS_BAR:Z
+    sput-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isSupportCustomStatusBar:Z
 
     const/16 v0, 0x1f4
 
-    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->START_SCROLL_DELAY:I
+    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->startScrollDelay:I
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SPECIAL_SCROLL_ACTIVITY:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isSpecialScrollActivity:Z
 
     sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->MAX_PAGES:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -3754,11 +3762,15 @@
 
     move-result v0
 
-    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->MAX_SITICH_PAGES:I
+    sput v0, Lcom/oneplus/screenshot/longshot/util/Configs;->maxSitichPages:I
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->SUPPORT_NEW_EDIT_MODE:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->supportNewEditMode:Z
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_TOP_ACTIVITY_DISPLAY_COMPATIBLE:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isTopActivityDisplayCompatible:Z
+
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isNavigationBarVisibleInLongshot:Z
+
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isNavigationBarVisibleInPreview:Z
 
     return-void
 .end method
@@ -3801,7 +3813,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LONGSHOT_RUNNING:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isLongshotRunning:Z
 
     if-eqz v0, :cond_0
 
@@ -3927,6 +3939,8 @@
 
     move-result v1
 
+    nop
+
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3997,6 +4011,8 @@
     invoke-virtual {v2}, Lcom/oneplus/screenshot/longshot/util/Configs;->getValue()I
 
     move-result v1
+
+    nop
 
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4526,7 +4542,7 @@
     return v0
 
     :cond_0
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LIMIT_LEFT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->limitLeft:I
 
     return v0
 .end method
@@ -4553,7 +4569,7 @@
     return v0
 
     :cond_0
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LIMIT_RIGHT:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->limitRight:I
 
     return v0
 .end method
@@ -4872,7 +4888,7 @@
 
     if-eqz v2, :cond_0
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_CLOSE_BETA:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeCloseBeta:I
 
     goto :goto_0
 
@@ -4881,7 +4897,7 @@
 
     if-eqz v2, :cond_1
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_OPEN_BETA:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeOpenBeta:I
 
     goto :goto_0
 
@@ -4890,7 +4906,7 @@
 
     if-nez v2, :cond_2
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_MP:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeMp:I
 
     :cond_2
     :goto_0
@@ -5009,6 +5025,8 @@
 
     move-result v0
 
+    nop
+
     :goto_1
     return v0
 .end method
@@ -5016,7 +5034,7 @@
 .method public static getStartScrollDelay()I
     .locals 1
 
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LARGETOP_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isLargetopList:Z
 
     if-eqz v0, :cond_0
 
@@ -5029,7 +5047,7 @@
     return v0
 
     :cond_0
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BIGTOP_LIST:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBigtopList:Z
 
     if-eqz v0, :cond_1
 
@@ -5042,7 +5060,7 @@
     return v0
 
     :cond_1
-    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SPECIAL_SCROLL_ACTIVITY:Z
+    sget-boolean v0, Lcom/oneplus/screenshot/longshot/util/Configs;->isSpecialScrollActivity:Z
 
     if-eqz v0, :cond_2
 
@@ -5220,7 +5238,7 @@
 
     move-result v0
 
-    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->RLEASE_TYPE_CLOSE_BETA:I
+    sget v1, Lcom/oneplus/screenshot/longshot/util/Configs;->releaseTypeCloseBeta:I
 
     if-ne v0, v1, :cond_0
 
@@ -5535,7 +5553,7 @@
 
     sput-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
-    sput-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->STOP_BY_USER:Z
+    sput-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->stopByUser:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5543,7 +5561,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_UNSUPPORTED:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsUnSupported:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5555,7 +5573,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_STRICT_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsStrictList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5567,7 +5585,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SMALL_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsSmallList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5579,7 +5597,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LOWER_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsLowerList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5591,7 +5609,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_HIGHER_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsHigherList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5603,7 +5621,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PAGE_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsPageList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5615,7 +5633,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_KEEP_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsKeepList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5627,7 +5645,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_NON_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsNonList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5639,7 +5657,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BG_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBGList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5651,7 +5669,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_BIGTOP_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sIsBigtopList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5663,7 +5681,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_LARGETOP_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isLargetopList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5675,7 +5693,7 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_FORBID_STITCH_BY_DISTANCE_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isForbidStitchByDistanceList:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5687,13 +5705,13 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_IGNORE_FULL_MATCH_LIST:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isIgnoreFullMatchList:Z
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLayoutRtl(Landroid/content/Context;)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_RTL:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isRtl:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5705,99 +5723,99 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->NOT_IGNORE_FAIL:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->notIgnoreFail:Z
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelError()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_ERROR:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelError:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelStitchNext()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_NEXT:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchNext:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelShotNext()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_SHOT_NEXT:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelShotNext:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelStitchLast()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelStitchMatch()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_MATCH:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchMatch:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelDelay()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_DELAY:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelDelay:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelSkipEdge()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_RIGHT_SIDE_OFFSET:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelRightSideOffset:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLevelSkipEdge()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_LEFT_SIDE_OFFSET:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->levelLeftSideOffset:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLimitLeft()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LIMIT_LEFT:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->limitLeft:I
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getLimitRight()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->LIMIT_RIGHT:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->limitRight:I
 
     invoke-static {p0}, Lcom/oneplus/screenshot/util/Utils;->getIMEI(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    sput-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IMEI_NUMBER:Ljava/lang/String;
+    sput-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sImeiNumber:Ljava/lang/String;
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldEncrytImage()Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_ENCRYPT_IMAGE:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isEncryptImage:Z
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getWaterMarkShowTimes(Landroid/content/Context;)I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->WATERMARK_TIMES:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->sWaterMarkTimes:I
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/Configs;->shouldAddWatermark(Landroid/content/Context;)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_ADD_WATERMARK:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isAddWatermark:Z
 
-    sput-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_PREVIEW_STOP:Z
+    sput-boolean v3, Lcom/oneplus/screenshot/longshot/util/Configs;->isPreviewStop:Z
 
     invoke-static {}, Lcom/oneplus/screenshot/longshot/util/Configs;->getStartScrollDelay()I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->START_SCROLL_DELAY:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->startScrollDelay:I
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5809,19 +5827,19 @@
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SPECIAL_SCROLL_ACTIVITY:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->isSpecialScrollActivity:Z
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/Configs;->getMaxStitchPage(Landroid/content/Context;)I
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->MAX_SITICH_PAGES:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->maxSitichPages:I
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/Configs;->supportNewEditMode(Landroid/content/Context;)Z
 
     move-result v1
 
-    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->SUPPORT_NEW_EDIT_MODE:Z
+    sput-boolean v1, Lcom/oneplus/screenshot/longshot/util/Configs;->supportNewEditMode:Z
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5829,7 +5847,7 @@
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->TOP_ACTIVITY_DISPLAY_COMPATIBLE_PIXEL_MATCH_THRESHOLD:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->topActivityDisplayCompatiblePixelMatchThreshold:I
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->mTopActivity:Landroid/content/ComponentName;
 
@@ -5837,7 +5855,7 @@
 
     move-result v1
 
-    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->TOP_ACTIVITY_DISPLAY_COMPATIBLE_STITCH_MATCH_THRESHOLD:I
+    sput v1, Lcom/oneplus/screenshot/longshot/util/Configs;->topActivityDisplayCompatibleStitchMatchThreshold:I
 
     invoke-static {p0}, Lcom/oneplus/screenshot/longshot/util/Configs;->loadLineParams(Landroid/content/Context;)V
 
@@ -5922,7 +5940,7 @@
     goto :goto_1
 
     :cond_0
-    sget-object v8, Lcom/oneplus/screenshot/longshot/util/Configs;->LINE_SAMPLES:Ljava/util/List;
+    sget-object v8, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
     invoke-interface {v8, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -5943,7 +5961,7 @@
 
     aget-object v4, v1, v3
 
-    sget-object v5, Lcom/oneplus/screenshot/longshot/util/Configs;->BGLINE_SAMPLES:Ljava/util/List;
+    sget-object v5, Lcom/oneplus/screenshot/longshot/util/Configs;->bglineSamples:Ljava/util/List;
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
@@ -6055,7 +6073,7 @@
 .method public static reachMaxPages(I)Z
     .locals 2
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->MAX_SITICH_PAGES:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->maxSitichPages:I
 
     sget-object v1, Lcom/oneplus/screenshot/longshot/util/Configs;->MAX_PAGES:Lcom/oneplus/screenshot/longshot/util/Configs;
 
@@ -6074,7 +6092,7 @@
     goto :goto_0
 
     :cond_0
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->MAX_SITICH_PAGES:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->maxSitichPages:I
 
     :goto_0
     if-lt p0, v0, :cond_1
@@ -6093,11 +6111,11 @@
 .method public static recycle()V
     .locals 1
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->BGLINE_SAMPLES:Ljava/util/List;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->bglineSamples:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LINE_SAMPLES:Ljava/util/List;
+    sget-object v0, Lcom/oneplus/screenshot/longshot/util/Configs;->lineSamples:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -6245,7 +6263,7 @@
 
     check-cast v4, Landroid/view/LayoutInflater;
 
-    sget-boolean v5, Lcom/oneplus/screenshot/longshot/util/Configs;->IS_SUPPORT_CUSTOM_STATUS_BAR:Z
+    sget-boolean v5, Lcom/oneplus/screenshot/longshot/util/Configs;->isSupportCustomStatusBar:Z
 
     if-eqz v5, :cond_1
 

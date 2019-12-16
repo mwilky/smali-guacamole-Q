@@ -13,7 +13,7 @@
 
     invoke-direct {p0, p1, p2}, Lcom/oneplus/screenshot/longshot/state/ShotNextState;-><init>(Lcom/oneplus/screenshot/longshot/state/LongshotContext;Lcom/oneplus/screenshot/longshot/util/MovePoint;)V
 
-    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->LEVEL_STITCH_LAST:I
+    sget v0, Lcom/oneplus/screenshot/longshot/util/Configs;->levelStitchLast:I
 
     const/4 v1, 0x2
 
