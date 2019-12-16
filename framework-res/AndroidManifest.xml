@@ -1115,7 +1115,6 @@
     <permission android:name="android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON" android:protectionLevel="privileged|signature"/>
     <permission android:name="android.permission.ACCESS_SHARED_LIBRARIES" android:protectionLevel="installer|signature"/>
     <permission android:name="android.permission.MONITOR_INPUT" android:protectionLevel="signature"/>
-    <permission android:name="opos.permission.OPOS_COMPONENT_SAFE" android:protectionLevel="normal"/>
     <application android:allowClearUserData="false" android:backupAgent="com.android.server.backup.SystemBackupAgent" android:defaultToDeviceProtectedStorage="true" android:directBootAware="true" android:extractNativeLibs="true" android:hasCode="false" android:icon="@drawable/ic_launcher_android" android:killAfterRestore="false" android:label="@string/android_system_label" android:persistent="true" android:process="system" android:supportsRtl="true" android:theme="@style/Theme.DeviceDefault.Light.DarkActionBar">
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:documentLaunchMode="never" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" android:name="com.android.internal.app.ChooserActivity" android:process=":ui" android:relinquishTaskIdentity="true" android:theme="@style/Theme.DeviceDefault.Resolver" android:visibleToInstantApps="true">
             <intent-filter>
