@@ -351,7 +351,7 @@
 
     fill-array-data v5, :array_2
 
-    const-string v6, "right"
+    const-string/jumbo v6, "right"
 
     invoke-static {v6, v5}, Landroid/animation/PropertyValuesHolder;->ofInt(Ljava/lang/String;[I)Landroid/animation/PropertyValuesHolder;
 
@@ -555,8 +555,6 @@
     iput-object v0, p0, Landroid/animation/LayoutTransition;->mDisappearingAnim:Landroid/animation/Animator;
 
     return-void
-
-    nop
 
     :array_0
     .array-data 4

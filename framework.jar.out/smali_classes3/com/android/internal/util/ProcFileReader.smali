@@ -492,7 +492,7 @@
     :cond_0
     new-instance v2, Ljava/lang/NumberFormatException;
 
-    const-string v3, "parsed value larger than integer"
+    const-string/jumbo v3, "parsed value larger than integer"
 
     invoke-direct {v2, v3}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
 

@@ -2429,7 +2429,7 @@
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "results was null"
+    const-string/jumbo v1, "results was null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -2511,7 +2511,7 @@
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "results was null"
+    const-string/jumbo v1, "results was null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

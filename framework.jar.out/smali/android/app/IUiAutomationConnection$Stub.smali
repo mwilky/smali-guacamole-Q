@@ -141,7 +141,7 @@
     return-object v0
 
     :pswitch_3
-    const-string v0, "revokeRuntimePermission"
+    const-string/jumbo v0, "revokeRuntimePermission"
 
     return-object v0
 
@@ -204,8 +204,6 @@
     const-string v0, "connect"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

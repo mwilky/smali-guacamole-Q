@@ -172,6 +172,8 @@
 
 .field public static final CONTENT_URI:Landroid/net/Uri;
 
+.field public static final DAILY_BATT_PROTO:Ljava/lang/String; = "daily_batt_proto"
+
 .field public static final DATA_ROAMING:Ljava/lang/String; = "data_roaming"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation

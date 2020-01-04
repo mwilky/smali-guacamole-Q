@@ -92,6 +92,8 @@
 
 .field private static final ONEPLUS_WALLET_NAME:Ljava/lang/String; = "com.coloros.wallet"
 
+.field private static final ONEPLUS_WALLET_NAME_FINSHELL:Ljava/lang/String; = "com.finshell.wallet"
+
 .field public static final PARSE_CHATTY:I = -0x80000000
 
 .field public static final PARSE_COLLECT_CERTIFICATES:I = 0x20
@@ -7628,7 +7630,7 @@
     :cond_2
     const/4 v6, 0x0
 
-    const-string v6, "revisionCode"
+    const-string/jumbo v6, "revisionCode"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -11349,7 +11351,7 @@
 
     const/16 v28, 0x1
 
-    const-string v1, "restrict-update"
+    const-string/jumbo v1, "restrict-update"
 
     invoke-virtual {v13, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -17126,16 +17128,6 @@
     iput v12, v1, Landroid/content/pm/PackageItemInfo;->icon:I
 
     :cond_a
-    iget-object v12, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
-
-    const-string v14, "com.coloros.wallet"
-
-    invoke-virtual {v14, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_b
-
     new-array v12, v10, [I
 
     const/16 v14, 0xdb
@@ -17146,35 +17138,56 @@
 
     move-result v12
 
-    if-eqz v12, :cond_b
+    if-eqz v12, :cond_c
 
+    iget-object v12, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    const-string v14, "com.coloros.wallet"
+
+    invoke-virtual {v14, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_b
+
+    iget-object v12, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
+
+    const-string v14, "com.finshell.wallet"
+
+    invoke-virtual {v14, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v12
+
+    if-eqz v12, :cond_c
+
+    :cond_b
     const v12, 0x50600b9
 
     iput v12, v1, Landroid/content/pm/PackageItemInfo;->icon:I
 
-    :cond_b
+    :cond_c
     move/from16 v12, p10
 
     invoke-virtual {v4, v12, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v14
 
-    if-eqz v14, :cond_c
+    if-eqz v14, :cond_d
 
     iput v14, v1, Landroid/content/pm/PackageItemInfo;->logo:I
 
-    :cond_c
+    :cond_d
     move/from16 v10, p11
 
     invoke-virtual {v4, v10, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-eqz v2, :cond_e
 
     iput v2, v1, Landroid/content/pm/PackageItemInfo;->banner:I
 
-    :cond_d
+    :cond_e
     move/from16 v5, p7
 
     move/from16 v16, v2
@@ -17183,13 +17196,13 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_e
+    if-eqz v2, :cond_f
 
     iget v3, v2, Landroid/util/TypedValue;->resourceId:I
 
     iput v3, v1, Landroid/content/pm/PackageItemInfo;->labelRes:I
 
-    if-nez v3, :cond_e
+    if-nez v3, :cond_f
 
     invoke-virtual {v2}, Landroid/util/TypedValue;->coerceToString()Ljava/lang/CharSequence;
 
@@ -17197,7 +17210,7 @@
 
     iput-object v3, v1, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    :cond_e
+    :cond_f
     move-object/from16 v17, v2
 
     const/4 v3, 0x1
@@ -17212,7 +17225,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_12
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -17220,7 +17233,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_f
+    if-nez v2, :cond_10
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -17228,9 +17241,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_12
 
-    :cond_f
+    :cond_10
     const/4 v2, 0x1
 
     new-array v3, v2, [I
@@ -17245,7 +17258,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_10
+    if-eqz v2, :cond_11
 
     const v2, 0x50d00a0
 
@@ -17253,12 +17266,12 @@
 
     goto :goto_3
 
-    :cond_10
+    :cond_11
     const v2, 0x50d009f
 
     iput v2, v1, Landroid/content/pm/PackageItemInfo;->labelRes:I
 
-    :cond_11
+    :cond_12
     :goto_3
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 

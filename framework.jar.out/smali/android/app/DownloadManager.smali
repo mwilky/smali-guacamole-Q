@@ -33,6 +33,10 @@
 
 .field public static final COLUMN_DESCRIPTION:Ljava/lang/String; = "description"
 
+.field public static final COLUMN_DESTINATION:Ljava/lang/String; = "destination"
+
+.field public static final COLUMN_FILE_NAME_HINT:Ljava/lang/String; = "hint"
+
 .field public static final COLUMN_ID:Ljava/lang/String; = "_id"
 
 .field public static final COLUMN_LAST_MODIFIED_TIMESTAMP:Ljava/lang/String; = "last_modified_timestamp"
@@ -130,7 +134,7 @@
 
     const-string v0, "_id"
 
-    const-string v1, "_data AS local_filename"
+    const-string v1, "local_filename"
 
     const-string v2, "mediaprovider_uri"
 
@@ -146,19 +150,19 @@
 
     const-string v8, "hint"
 
-    const-string v9, "mimetype AS media_type"
+    const-string v9, "media_type"
 
-    const-string/jumbo v10, "total_bytes AS total_size"
+    const-string/jumbo v10, "total_size"
 
-    const-string v11, "lastmod AS last_modified_timestamp"
+    const-string v11, "last_modified_timestamp"
 
-    const-string v12, "current_bytes AS bytes_so_far"
+    const-string v12, "bytes_so_far"
 
     const-string v13, "allow_write"
 
-    const-string v14, "\'placeholder\' AS local_uri"
+    const-string v14, "local_uri"
 
-    const-string v15, "\'placeholder\' AS reason"
+    const-string v15, "reason"
 
     filled-new-array/range {v0 .. v15}, [Ljava/lang/String;
 

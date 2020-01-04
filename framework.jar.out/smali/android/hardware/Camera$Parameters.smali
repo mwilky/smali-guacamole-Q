@@ -580,7 +580,7 @@
     return-object v0
 
     :cond_5
-    const-string v0, "rgb565"
+    const-string/jumbo v0, "rgb565"
 
     return-object v0
 .end method
@@ -707,7 +707,7 @@
     return v0
 
     :cond_4
-    const-string v1, "rgb565"
+    const-string/jumbo v1, "rgb565"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

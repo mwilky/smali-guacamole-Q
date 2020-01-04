@@ -42,11 +42,17 @@
 
 .field public static final GEOGRAPHICAL_SCOPE:Ljava/lang/String; = "geo_scope"
 
+.field public static final GEOMETRIES:Ljava/lang/String; = "geometries"
+
 .field public static final LAC:Ljava/lang/String; = "lac"
 
 .field public static final LANGUAGE_CODE:Ljava/lang/String; = "language"
 
+.field public static final MAXIMUM_WAIT_TIME:Ljava/lang/String; = "maximum_wait_time"
+
 .field public static final MESSAGE_BODY:Ljava/lang/String; = "body"
+
+.field public static final MESSAGE_BROADCASTED:Ljava/lang/String; = "message_broadcasted"
 
 .field public static final MESSAGE_FORMAT:Ljava/lang/String; = "format"
 
@@ -58,9 +64,15 @@
 
 .field public static final QUERY_COLUMNS:[Ljava/lang/String;
 
+.field public static final QUERY_COLUMNS_FWK:[Ljava/lang/String;
+
+.field public static final RECEIVED_TIME:Ljava/lang/String; = "received_time"
+
 .field public static final SERIAL_NUMBER:Ljava/lang/String; = "serial_number"
 
 .field public static final SERVICE_CATEGORY:Ljava/lang/String; = "service_category"
+
+.field public static final SUB_ID:Ljava/lang/String; = "sub_id"
 
 .field public static final V1_MESSAGE_CODE:Ljava/lang/String; = "message_code"
 
@@ -69,7 +81,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 21
+    .locals 23
 
     const-string v0, "content://cellbroadcasts"
 
@@ -124,6 +136,56 @@
     move-result-object v0
 
     sput-object v0, Landroid/provider/Telephony$CellBroadcasts;->QUERY_COLUMNS:[Ljava/lang/String;
+
+    const-string v1, "_id"
+
+    const-string v2, "geo_scope"
+
+    const-string/jumbo v3, "plmn"
+
+    const-string/jumbo v4, "lac"
+
+    const-string v5, "cid"
+
+    const-string/jumbo v6, "serial_number"
+
+    const-string/jumbo v7, "service_category"
+
+    const-string/jumbo v8, "language"
+
+    const-string v9, "body"
+
+    const-string v10, "format"
+
+    const-string/jumbo v11, "priority"
+
+    const-string v12, "etws_warning_type"
+
+    const-string v13, "cmas_message_class"
+
+    const-string v14, "cmas_category"
+
+    const-string v15, "cmas_response_type"
+
+    const-string v16, "cmas_severity"
+
+    const-string v17, "cmas_urgency"
+
+    const-string v18, "cmas_certainty"
+
+    const-string/jumbo v19, "received_time"
+
+    const-string/jumbo v20, "message_broadcasted"
+
+    const-string v21, "geometries"
+
+    const-string/jumbo v22, "maximum_wait_time"
+
+    filled-new-array/range {v1 .. v22}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/provider/Telephony$CellBroadcasts;->QUERY_COLUMNS_FWK:[Ljava/lang/String;
 
     return-void
 .end method

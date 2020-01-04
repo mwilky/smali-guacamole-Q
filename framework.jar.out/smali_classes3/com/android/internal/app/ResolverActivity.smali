@@ -2043,24 +2043,26 @@
 
     move-result-object v4
 
-    iget-boolean v5, p0, Lcom/android/internal/app/ResolverActivity;->mUseLayoutForBrowsables:Z
+    const v5, 0x10201eb
 
-    const v6, 0x10201eb
+    if-eqz v4, :cond_1
 
-    if-eqz v5, :cond_1
+    iget-boolean v6, p0, Lcom/android/internal/app/ResolverActivity;->mUseLayoutForBrowsables:Z
 
-    iget-boolean v5, v4, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
+    if-eqz v6, :cond_1
 
-    if-nez v5, :cond_1
+    iget-boolean v6, v4, Landroid/content/pm/ResolveInfo;->handleAllWebDataURI:Z
 
-    if-ne v0, v6, :cond_1
+    if-nez v6, :cond_1
+
+    if-ne v0, v5, :cond_1
 
     invoke-direct {p0, v4}, Lcom/android/internal/app/ResolverActivity;->showSettingsForSelected(Landroid/content/pm/ResolveInfo;)V
 
     goto :goto_2
 
     :cond_1
-    if-ne v0, v6, :cond_2
+    if-ne v0, v5, :cond_2
 
     goto :goto_1
 

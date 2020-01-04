@@ -1427,7 +1427,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "parsePduFromEfRecord: conversion from pdu to SmsMessage failed"
+    const-string/jumbo v10, "parsePduFromEfRecord: conversion from pdu to SmsMessage failed"
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1453,8 +1453,6 @@
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/cdma/SmsMessage;->parseSms()V
 
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -493,14 +493,14 @@
     iget-object v3, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
 
     #disallowed odex opcode
-    #invoke-super-quick {v2, v0, v3}, vtable@55119
+    #invoke-super-quick {v2, v0, v3}, vtable@55206
     nop
 
-    #disallowed odex opcode
-    #sget-object-volatile p22, Landroid/R$styleable;->HorizontalScrollView:[I
-    nop
+    const/4 p7, 0x1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    nop
 
     return-void
 
@@ -613,10 +613,10 @@
     iget-object v3, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
 
     #disallowed odex opcode
-    #invoke-super-quick {v2, v0, v3}, vtable@55119
+    #invoke-super-quick {v2, v0, v3}, vtable@55206
     nop
 
-    sub-int p12, p6, v3
+    div-long p12, p6, v3
 
     if-nez v3, :cond_1
 

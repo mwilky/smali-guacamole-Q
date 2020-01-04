@@ -172,7 +172,7 @@
     return-object v3
 
     :cond_2
-    const-string v4, "ro.error.receiver.default"
+    const-string/jumbo v4, "ro.error.receiver.default"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 

@@ -18,6 +18,8 @@
 
 .field public static final LOCALES:J = 0x20b00000004L
 
+.field public static final LOCALE_LIST:J = 0x10900000014L
+
 .field public static final MCC:J = 0x10d00000002L
 
 .field public static final MNC:J = 0x10d00000003L

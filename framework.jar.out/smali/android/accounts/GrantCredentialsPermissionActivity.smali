@@ -240,7 +240,7 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    const-string v1, "retry"
+    const-string/jumbo v1, "retry"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 

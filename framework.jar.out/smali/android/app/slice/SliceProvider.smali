@@ -500,6 +500,24 @@
     throw v1
 .end method
 
+.method private validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/app/slice/SliceProvider;->validateIncomingUri(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
@@ -537,11 +555,17 @@
 
     if-eqz v0, :cond_0
 
+    nop
+
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/Uri;
+
+    invoke-direct {p0, v0}, Landroid/app/slice/SliceProvider;->validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v0
 
     invoke-static {v0}, Landroid/app/slice/SliceProvider;->getUriWithoutUserId(Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -615,6 +639,10 @@
 
     move-result-object v3
 
+    invoke-direct {p0, v3}, Landroid/app/slice/SliceProvider;->validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v3
+
     invoke-virtual {p3, v1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -681,6 +709,10 @@
 
     move-result-object v1
 
+    invoke-direct {p0, v1}, Landroid/app/slice/SliceProvider;->validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v1
+
     new-instance v3, Landroid/os/Bundle;
 
     invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
@@ -702,11 +734,17 @@
 
     if-eqz v0, :cond_7
 
+    nop
+
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/Uri;
+
+    invoke-direct {p0, v0}, Landroid/app/slice/SliceProvider;->validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v0
 
     invoke-static {v0}, Landroid/app/slice/SliceProvider;->getUriWithoutUserId(Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -720,7 +758,7 @@
 
     invoke-direct {p0, v0}, Landroid/app/slice/SliceProvider;->handlePinSlice(Landroid/net/Uri;)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_6
     new-instance v2, Ljava/lang/SecurityException;
@@ -738,11 +776,17 @@
 
     if-eqz v0, :cond_9
 
+    nop
+
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/Uri;
+
+    invoke-direct {p0, v0}, Landroid/app/slice/SliceProvider;->validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v0
 
     invoke-static {v0}, Landroid/app/slice/SliceProvider;->getUriWithoutUserId(Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -774,11 +818,17 @@
 
     if-eqz v0, :cond_a
 
+    nop
+
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/Uri;
+
+    invoke-direct {p0, v0}, Landroid/app/slice/SliceProvider;->validateIncomingUriOrNull(Landroid/net/Uri;)Landroid/net/Uri;
+
+    move-result-object v0
 
     invoke-static {v0}, Landroid/app/slice/SliceProvider;->getUriWithoutUserId(Landroid/net/Uri;)Landroid/net/Uri;
 
@@ -823,7 +873,7 @@
 
     iget-object v1, p0, Landroid/app/slice/SliceProvider;->mAutoGrantPermissions:[Ljava/lang/String;
 
-    const-string v2, "result"
+    const-string/jumbo v2, "result"
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 

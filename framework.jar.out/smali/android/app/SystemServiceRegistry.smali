@@ -798,7 +798,7 @@
 
     invoke-direct {v1}, Landroid/app/SystemServiceRegistry$72;-><init>()V
 
-    const-string v2, "restrictions"
+    const-string/jumbo v2, "restrictions"
 
     invoke-static {v2, v0, v1}, Landroid/app/SystemServiceRegistry;->registerService(Ljava/lang/String;Ljava/lang/Class;Landroid/app/SystemServiceRegistry$ServiceFetcher;)V
 

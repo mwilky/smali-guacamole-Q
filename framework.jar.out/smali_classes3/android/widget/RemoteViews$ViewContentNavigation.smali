@@ -101,10 +101,10 @@
     move-result-object v1
 
     #disallowed odex opcode
-    #invoke-super-quick {v1, v0}, vtable@55119
+    #invoke-super-quick {v1, v0}, vtable@55206
     nop
 
-    or-int p22, v0, v0
+    add-double p22, v0, v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

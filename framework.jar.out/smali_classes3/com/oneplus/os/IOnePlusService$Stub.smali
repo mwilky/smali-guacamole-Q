@@ -38,6 +38,8 @@
 
 .field static final TRANSACTION_getBgPowerHungryList:I = 0xa
 
+.field static final TRANSACTION_getGameShakeConfig:I = 0x10
+
 .field static final TRANSACTION_isInConfigList:I = 0xe
 
 .field static final TRANSACTION_isInSpecialTesting:I = 0xf
@@ -124,82 +126,90 @@
     return-object v0
 
     :pswitch_0
-    const-string v0, "isInSpecialTesting"
+    const-string v0, "getGameShakeConfig"
 
     return-object v0
 
     :pswitch_1
-    const-string v0, "isInConfigList"
+    const-string v0, "isInSpecialTesting"
 
     return-object v0
 
     :pswitch_2
-    const-string v0, "notifySurfaceFlingerUpdate"
+    const-string v0, "isInConfigList"
 
     return-object v0
 
     :pswitch_3
-    const-string/jumbo v0, "reportJank"
+    const-string v0, "notifySurfaceFlingerUpdate"
 
     return-object v0
 
     :pswitch_4
-    const-string/jumbo v0, "stopBgPowerHungryApp"
+    const-string/jumbo v0, "reportJank"
 
     return-object v0
 
     :pswitch_5
-    const-string v0, "getBgPowerHungryList"
+    const-string/jumbo v0, "stopBgPowerHungryApp"
 
     return-object v0
 
     :pswitch_6
-    const-string/jumbo v0, "setAppControlState"
+    const-string v0, "getBgPowerHungryList"
 
     return-object v0
 
     :pswitch_7
-    const-string v0, "getAppControlState"
+    const-string/jumbo v0, "setAppControlState"
 
     return-object v0
 
     :pswitch_8
-    const-string/jumbo v0, "setAppControlMode"
+    const-string v0, "getAppControlState"
 
     return-object v0
 
     :pswitch_9
-    const-string v0, "getAppControlMode"
+    const-string/jumbo v0, "setAppControlMode"
 
     return-object v0
 
     :pswitch_a
-    const-string v0, "getAllAppControlModes"
+    const-string v0, "getAppControlMode"
 
     return-object v0
 
     :pswitch_b
-    const-string/jumbo v0, "processDisableThemeCategory"
+    const-string v0, "getAllAppControlModes"
 
     return-object v0
 
     :pswitch_c
-    const-string/jumbo v0, "processEnableThemeCategory"
+    const-string/jumbo v0, "processDisableThemeCategory"
 
     return-object v0
 
     :pswitch_d
-    const-string v0, "disableTheme"
+    const-string/jumbo v0, "processEnableThemeCategory"
 
     return-object v0
 
     :pswitch_e
+    const-string v0, "disableTheme"
+
+    return-object v0
+
+    :pswitch_f
     const-string v0, "enableTheme"
 
     return-object v0
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_f
         :pswitch_e
         :pswitch_d
         :pswitch_c
@@ -284,6 +294,23 @@
     :pswitch_0
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lcom/oneplus/os/IOnePlusService$Stub;->getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v2
+
+    :pswitch_1
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
     invoke-virtual {p0}, Lcom/oneplus/os/IOnePlusService$Stub;->isInSpecialTesting()Z
 
     move-result v1
@@ -294,7 +321,7 @@
 
     return v2
 
-    :pswitch_1
+    :pswitch_2
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -315,14 +342,14 @@
 
     return v2
 
-    :pswitch_2
+    :pswitch_3
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/os/IOnePlusService$Stub;->notifySurfaceFlingerUpdate()V
 
     return v2
 
-    :pswitch_3
+    :pswitch_4
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -347,7 +374,7 @@
 
     return v2
 
-    :pswitch_4
+    :pswitch_5
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -364,7 +391,7 @@
 
     return v2
 
-    :pswitch_5
+    :pswitch_6
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/oneplus/os/IOnePlusService$Stub;->getBgPowerHungryList()Ljava/util/List;
@@ -377,7 +404,7 @@
 
     return v2
 
-    :pswitch_6
+    :pswitch_7
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -398,7 +425,7 @@
 
     return v2
 
-    :pswitch_7
+    :pswitch_8
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -415,7 +442,7 @@
 
     return v2
 
-    :pswitch_8
+    :pswitch_9
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -440,7 +467,7 @@
 
     return v2
 
-    :pswitch_9
+    :pswitch_a
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -461,7 +488,7 @@
 
     return v2
 
-    :pswitch_a
+    :pswitch_b
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -478,7 +505,7 @@
 
     return v2
 
-    :pswitch_b
+    :pswitch_c
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -495,7 +522,7 @@
 
     return v2
 
-    :pswitch_c
+    :pswitch_d
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -512,7 +539,7 @@
 
     return v2
 
-    :pswitch_d
+    :pswitch_e
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -525,7 +552,7 @@
 
     return v2
 
-    :pswitch_e
+    :pswitch_f
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -547,6 +574,7 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_f
         :pswitch_e
         :pswitch_d
         :pswitch_c

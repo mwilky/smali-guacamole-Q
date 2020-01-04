@@ -148,7 +148,7 @@
 
     move-object/from16 v3, p2
 
-    const-string v0, "result must not be null"
+    const-string/jumbo v0, "result must not be null"
 
     invoke-static {v2, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

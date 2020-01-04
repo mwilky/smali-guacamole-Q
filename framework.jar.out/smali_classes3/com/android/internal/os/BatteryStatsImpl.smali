@@ -3855,8 +3855,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/internal/os/BatteryStatsImpl;-><init>(Lcom/android/internal/os/BatteryStatsImpl$Clocks;Ljava/io/File;Landroid/os/Handler;Lcom/android/internal/os/BatteryStatsImpl$PlatformIdleStateCallback;Lcom/android/internal/os/BatteryStatsImpl$RailEnergyDataCallback;Lcom/android/internal/os/BatteryStatsImpl$UserInfoProvider;)V
 
-    invoke-static {p0}, Landroid/os/OpBatteryStatsInjector;->initInstance(Lcom/android/internal/os/BatteryStatsImpl;)V
-
     return-void
 .end method
 
@@ -26843,6 +26841,22 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
+    :try_start_0
+    invoke-static {}, Landroid/os/OpBatteryStatsInjector;->reportDailyProto()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v4
+
+    const-string v5, "BatteryStatsImpl"
+
+    const-string v6, "Error reportDailyProto "
+
+    invoke-static {v5, v6, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     iget-object v4, p0, Lcom/android/internal/os/BatteryStatsImpl;->mDailyItems:Ljava/util/ArrayList;
 
@@ -26867,7 +26881,7 @@
 
     invoke-direct {v4}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    :try_start_0
+    :try_start_1
     new-instance v5, Lcom/android/internal/util/FastXmlSerializer;
 
     invoke-direct {v5}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
@@ -26897,14 +26911,14 @@
     invoke-direct {v9, p0, v4, v6, v7}, Lcom/android/internal/os/BatteryStatsImpl$3;-><init>(Lcom/android/internal/os/BatteryStatsImpl;Ljava/io/ByteArrayOutputStream;J)V
 
     invoke-virtual {v8, v9}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
     nop
 
     goto :goto_1
 
-    :catch_0
+    :catch_1
     move-exception v5
 
     :cond_4

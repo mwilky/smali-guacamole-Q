@@ -9526,7 +9526,7 @@
     move v1, v0
 
     :goto_0
-    const-string v3, "ro.bionic.ld.warning"
+    const-string/jumbo v3, "ro.bionic.ld.warning"
 
     invoke-static {v3, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 

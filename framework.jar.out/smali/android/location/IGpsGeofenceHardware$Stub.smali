@@ -122,7 +122,7 @@
     return-object v0
 
     :cond_0
-    const-string v0, "resumeHardwareGeofence"
+    const-string/jumbo v0, "resumeHardwareGeofence"
 
     return-object v0
 

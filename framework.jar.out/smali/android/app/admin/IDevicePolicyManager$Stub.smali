@@ -869,7 +869,7 @@
     return-object v0
 
     :pswitch_2b
-    const-string v0, "retrieveNetworkLogs"
+    const-string/jumbo v0, "retrieveNetworkLogs"
 
     return-object v0
 
@@ -934,12 +934,12 @@
     return-object v0
 
     :pswitch_38
-    const-string v0, "retrievePreRebootSecurityLogs"
+    const-string/jumbo v0, "retrievePreRebootSecurityLogs"
 
     return-object v0
 
     :pswitch_39
-    const-string v0, "retrieveSecurityLogs"
+    const-string/jumbo v0, "retrieveSecurityLogs"
 
     return-object v0
 
@@ -2052,8 +2052,6 @@
     const-string/jumbo v0, "setPasswordQuality"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

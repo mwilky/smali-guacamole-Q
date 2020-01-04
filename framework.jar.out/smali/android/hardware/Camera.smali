@@ -1100,7 +1100,7 @@
 
     move-result-object v1
 
-    const-string v2, "ro.board.platform"
+    const-string/jumbo v2, "ro.board.platform"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 

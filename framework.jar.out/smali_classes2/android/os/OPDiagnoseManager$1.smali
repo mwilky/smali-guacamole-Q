@@ -1,0 +1,113 @@
+.class Landroid/os/OPDiagnoseManager$1;
+.super Landroid/content/BroadcastReceiver;
+.source "OPDiagnoseManager.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/os/OPDiagnoseManager;->registerClientReceiver()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Landroid/os/OPDiagnoseManager;
+
+
+# direct methods
+.method constructor <init>(Landroid/os/OPDiagnoseManager;)V
+    .locals 0
+
+    iput-object p1, p0, Landroid/os/OPDiagnoseManager$1;->this$0:Landroid/os/OPDiagnoseManager;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 6
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Received action: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OPDiagnoseManager"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v1, "android.os.OPDIAGNOSE_GET_INFO"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-wide/16 v1, 0x0
+
+    const-string/jumbo v3, "timeStamp"
+
+    invoke-virtual {p2, v3, v1, v2}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "verifyCode"
+
+    invoke-virtual {p2, v2}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-static {v1, v2}, Landroid/os/OPDiagnoseManager;->verify(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eqz v3, :cond_0
+
+    invoke-static {}, Landroid/os/OPDiagnoseManager;->access$000()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v5, v3, v4}, Landroid/os/OPDiagnoseManager$1;->setResult(ILjava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string v3, "***************"
+
+    invoke-virtual {p0, v5, v3, v4}, Landroid/os/OPDiagnoseManager$1;->setResult(ILjava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method

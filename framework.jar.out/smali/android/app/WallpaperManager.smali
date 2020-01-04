@@ -139,7 +139,7 @@
 
     const/4 v0, 0x0
 
-    const-string v1, "ro.config.wallpaper_component"
+    const-string/jumbo v1, "ro.config.wallpaper_component"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -359,7 +359,7 @@
     return-object v0
 
     :cond_0
-    const-string v0, "ro.config.wallpaper"
+    const-string/jumbo v0, "ro.config.wallpaper"
 
     const v1, 0x108027b
 

@@ -47,6 +47,8 @@
 
 .field public static final enum ONEPLUS_OIMC_MANAGER:Lcom/oneplus/android/context/IOneplusContext$EType;
 
+.field public static final enum ONEPLUS_OPDIAGNOSEUTILS:Lcom/oneplus/android/context/IOneplusContext$EType;
+
 .field public static final enum ONEPLUS_OPPARALLELAPP:Lcom/oneplus/android/context/IOneplusContext$EType;
 
 .field public static final enum ONEPLUS_OPSERVICE:Lcom/oneplus/android/context/IOneplusContext$EType;
@@ -66,6 +68,8 @@
 .field public static final enum ONEPLUS_SCREENMODE_MANAGER:Lcom/oneplus/android/context/IOneplusContext$EType;
 
 .field public static final enum ONEPLUS_SCREEN_COMPAT_VIEW:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+.field public static final enum ONEPLUS_VIEW_ROOT_IMPL:Lcom/oneplus/android/context/IOneplusContext$EType;
 
 .field public static final enum ONEPLUS_WALLPAPER_HELPER:Lcom/oneplus/android/context/IOneplusContext$EType;
 
@@ -306,7 +310,27 @@
 
     sput-object v0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_EMBRYO_APP:Lcom/oneplus/android/context/IOneplusContext$EType;
 
-    const/16 v0, 0x17
+    new-instance v0, Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    const-string v14, "ONEPLUS_OPDIAGNOSEUTILS"
+
+    const/16 v15, 0x17
+
+    invoke-direct {v0, v14, v15}, Lcom/oneplus/android/context/IOneplusContext$EType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_OPDIAGNOSEUTILS:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    new-instance v0, Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    const-string v14, "ONEPLUS_VIEW_ROOT_IMPL"
+
+    const/16 v15, 0x18
+
+    invoke-direct {v0, v14, v15}, Lcom/oneplus/android/context/IOneplusContext$EType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_VIEW_ROOT_IMPL:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    const/16 v0, 0x19
 
     new-array v0, v0, [Lcom/oneplus/android/context/IOneplusContext$EType;
 
@@ -419,6 +443,18 @@
     sget-object v1, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_EMBRYO_APP:Lcom/oneplus/android/context/IOneplusContext$EType;
 
     const/16 v2, 0x16
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_OPDIAGNOSEUTILS:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    const/16 v2, 0x17
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_VIEW_ROOT_IMPL:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    const/16 v2, 0x18
 
     aput-object v1, v0, v2
 

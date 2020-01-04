@@ -1104,7 +1104,7 @@
     return-object v0
 
     :pswitch_7a
-    const-string v0, "resumeAppSwitches"
+    const-string/jumbo v0, "resumeAppSwitches"
 
     return-object v0
 
@@ -1264,7 +1264,7 @@
     return-object v0
 
     :pswitch_9a
-    const-string v0, "revokeUriPermission"
+    const-string/jumbo v0, "revokeUriPermission"
 
     return-object v0
 

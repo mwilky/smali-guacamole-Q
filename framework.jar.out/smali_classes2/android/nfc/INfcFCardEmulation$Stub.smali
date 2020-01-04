@@ -117,7 +117,7 @@
     return-object v0
 
     :pswitch_1
-    const-string v0, "getNfcFServices"
+    const-string/jumbo v0, "getNfcFServices"
 
     return-object v0
 
@@ -137,7 +137,7 @@
     return-object v0
 
     :pswitch_5
-    const-string v0, "getNfcid2ForService"
+    const-string/jumbo v0, "getNfcid2ForService"
 
     return-object v0
 

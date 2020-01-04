@@ -464,7 +464,7 @@
 
     move-result-object v1
 
-    const-string v2, "ro.board.platform"
+    const-string/jumbo v2, "ro.board.platform"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -704,7 +704,7 @@
 
     move-result-object v1
 
-    const-string v2, "ro.board.platform"
+    const-string/jumbo v2, "ro.board.platform"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1379,7 +1379,7 @@
 
     const-string v4, "msmnile"
 
-    const-string v5, "ro.board.platform"
+    const-string/jumbo v5, "ro.board.platform"
 
     invoke-static {v5}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1892,7 +1892,7 @@
 
     const-string v3, "msmnile"
 
-    const-string v4, "ro.board.platform"
+    const-string/jumbo v4, "ro.board.platform"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 

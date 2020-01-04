@@ -13,7 +13,7 @@
 
     const-string v0, "left"
 
-    const-string v1, "right"
+    const-string/jumbo v1, "right"
 
     filled-new-array {v0, v1}, [Ljava/lang/String;
 

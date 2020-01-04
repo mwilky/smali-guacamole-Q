@@ -435,7 +435,7 @@
     goto :goto_1
 
     :sswitch_e
-    const-string v0, "ripple"
+    const-string/jumbo v0, "ripple"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -661,8 +661,6 @@
     invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
     return-object v0
-
-    nop
 
     :sswitch_data_0
     .sparse-switch

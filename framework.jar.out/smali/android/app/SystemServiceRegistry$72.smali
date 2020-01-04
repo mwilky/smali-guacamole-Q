@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    const-string v0, "restrictions"
+    const-string/jumbo v0, "restrictions"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getServiceOrThrow(Ljava/lang/String;)Landroid/os/IBinder;
 

@@ -111,7 +111,7 @@
     return-object v0
 
     :pswitch_1
-    const-string v0, "resumeMonitoringGeofence"
+    const-string/jumbo v0, "resumeMonitoringGeofence"
 
     return-object v0
 
@@ -134,8 +134,6 @@
     const-string v0, "isSupported"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

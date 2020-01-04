@@ -480,7 +480,7 @@
     return-object v0
 
     :pswitch_c
-    const-string v0, "resumeAppSwitches"
+    const-string/jumbo v0, "resumeAppSwitches"
 
     return-object v0
 
@@ -1233,6 +1233,8 @@
     const-string/jumbo v0, "startActivity"
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

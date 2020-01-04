@@ -847,7 +847,7 @@
 
     const-string/jumbo v11, "sdm845"
 
-    const-string v12, "ro.board.platform"
+    const-string/jumbo v12, "ro.board.platform"
 
     invoke-static {v12}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1101,7 +1101,7 @@
 
     const-string/jumbo v12, "sdm845"
 
-    const-string v13, "ro.board.platform"
+    const-string/jumbo v13, "ro.board.platform"
 
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1148,7 +1148,7 @@
 
     const-string v12, "msmnile"
 
-    const-string v13, "ro.board.platform"
+    const-string/jumbo v13, "ro.board.platform"
 
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1191,7 +1191,7 @@
     :cond_e
     const-string v12, "msmnile"
 
-    const-string v13, "ro.board.platform"
+    const-string/jumbo v13, "ro.board.platform"
 
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1205,7 +1205,7 @@
 
     const-string/jumbo v12, "sdm845"
 
-    const-string v13, "ro.board.platform"
+    const-string/jumbo v13, "ro.board.platform"
 
     invoke-static {v13}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1364,7 +1364,7 @@
 
     const-string v10, "msmnile"
 
-    const-string v14, "ro.board.platform"
+    const-string/jumbo v14, "ro.board.platform"
 
     invoke-static {v14}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1401,7 +1401,7 @@
 
     const-string v10, "msmnile"
 
-    const-string v14, "ro.board.platform"
+    const-string/jumbo v14, "ro.board.platform"
 
     invoke-static {v14}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 

@@ -126,7 +126,7 @@
     return-object v0
 
     :pswitch_2
-    const-string v0, "revokeSlicePermission"
+    const-string/jumbo v0, "revokeSlicePermission"
 
     return-object v0
 
@@ -169,8 +169,6 @@
     const-string v0, "pinSlice"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

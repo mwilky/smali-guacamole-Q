@@ -763,6 +763,8 @@
 
 .field public static final MANAGED_PROFILE_CONTACT_REMOTE_SEARCH:Ljava/lang/String; = "managed_profile_contact_remote_search"
 
+.field public static final MANAGED_PROVISIONING_DPC_DOWNLOADED:Ljava/lang/String; = "managed_provisioning_dpc_downloaded"
+
 .field public static final MANUAL_RINGER_TOGGLE_COUNT:Ljava/lang/String; = "manual_ringer_toggle_count"
 
 .field private static final MANUAL_RINGER_TOGGLE_COUNT_VALIDATOR:Landroid/provider/SettingsValidators$Validator;

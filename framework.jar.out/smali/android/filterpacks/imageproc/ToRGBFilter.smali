@@ -66,7 +66,7 @@
 
     new-instance v0, Landroid/filterfw/core/NativeProgram;
 
-    const-string v1, "rgba_to_rgb"
+    const-string/jumbo v1, "rgba_to_rgb"
 
     invoke-direct {v0, v2, v1}, Landroid/filterfw/core/NativeProgram;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

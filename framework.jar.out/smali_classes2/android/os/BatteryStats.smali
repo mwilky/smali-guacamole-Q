@@ -1867,143 +1867,6 @@
     return-void
 .end method
 
-.method private dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
-    .locals 17
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, p3
-
-    move-object/from16 v2, p5
-
-    if-nez p4, :cond_0
-
-    return-void
-
-    :cond_0
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v6, 0x0
-
-    move-object/from16 v3, p4
-
-    move-object/from16 v8, p6
-
-    invoke-virtual/range {v3 .. v8}, Landroid/os/BatteryStats$LevelStepTracker;->computeTimeEstimate(JJ[I)J
-
-    move-result-wide v9
-
-    const-wide/16 v11, 0x0
-
-    cmp-long v3, v9, v11
-
-    const-string v13, " steps)"
-
-    const-string v14, " (from "
-
-    const/4 v15, 0x0
-
-    if-ltz v3, :cond_1
-
-    invoke-virtual/range {p1 .. p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v3, " total time: "
-
-    invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->setLength(I)V
-
-    invoke-static {v2, v9, v10}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
-
-    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    aget v3, p6, v15
-
-    invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(I)V
-
-    invoke-virtual {v0, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_1
-    const/4 v3, 0x0
-
-    move v8, v3
-
-    :goto_0
-    sget-object v3, Landroid/os/BatteryStats;->STEP_LEVEL_MODES_OF_INTEREST:[I
-
-    array-length v4, v3
-
-    if-ge v8, v4, :cond_3
-
-    aget v3, v3, v8
-
-    int-to-long v4, v3
-
-    sget-object v3, Landroid/os/BatteryStats;->STEP_LEVEL_MODE_VALUES:[I
-
-    aget v3, v3, v8
-
-    int-to-long v6, v3
-
-    move-object/from16 v3, p4
-
-    move/from16 v16, v8
-
-    move-object/from16 v8, p6
-
-    invoke-virtual/range {v3 .. v8}, Landroid/os/BatteryStats$LevelStepTracker;->computeTimeEstimate(JJ[I)J
-
-    move-result-wide v3
-
-    cmp-long v5, v3, v11
-
-    if-lez v5, :cond_2
-
-    invoke-virtual/range {p1 .. p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v5, " "
-
-    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    sget-object v5, Landroid/os/BatteryStats;->STEP_LEVEL_MODE_LABELS:[Ljava/lang/String;
-
-    aget-object v5, v5, v16
-
-    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    const-string v5, " time: "
-
-    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->setLength(I)V
-
-    invoke-static {v2, v3, v4}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
-
-    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
-
-    aget v5, p6, v15
-
-    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(I)V
-
-    invoke-virtual {v0, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
-
-    :cond_2
-    add-int/lit8 v8, v16, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-.end method
-
 .method private dumpDailyPackageChanges(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
@@ -2087,7 +1950,7 @@
     return-void
 .end method
 
-.method private static dumpDurationSteps(Landroid/util/proto/ProtoOutputStream;JLandroid/os/BatteryStats$LevelStepTracker;)V
+.method protected static dumpDurationSteps(Landroid/util/proto/ProtoOutputStream;JLandroid/os/BatteryStats$LevelStepTracker;)V
     .locals 21
 
     move-object/from16 v0, p0
@@ -2280,7 +2143,7 @@
     return-void
 .end method
 
-.method private static dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
+.method protected static dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
     .locals 28
 
     move-object/from16 v0, p0
@@ -16153,16 +16016,163 @@
     return-void
 .end method
 
+.method protected dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    .locals 17
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, p3
+
+    move-object/from16 v2, p5
+
+    if-nez p4, :cond_0
+
+    return-void
+
+    :cond_0
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    move-object/from16 v3, p4
+
+    move-object/from16 v8, p6
+
+    invoke-virtual/range {v3 .. v8}, Landroid/os/BatteryStats$LevelStepTracker;->computeTimeEstimate(JJ[I)J
+
+    move-result-wide v9
+
+    const-wide/16 v11, 0x0
+
+    cmp-long v3, v9, v11
+
+    const-string v13, " steps)"
+
+    const-string v14, " (from "
+
+    const/4 v15, 0x0
+
+    if-ltz v3, :cond_1
+
+    invoke-virtual/range {p1 .. p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v3, " total time: "
+
+    invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->setLength(I)V
+
+    invoke-static {v2, v9, v10}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    aget v3, p6, v15
+
+    invoke-virtual {v0, v3}, Ljava/io/PrintWriter;->print(I)V
+
+    invoke-virtual {v0, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_1
+    const/4 v3, 0x0
+
+    move v8, v3
+
+    :goto_0
+    sget-object v3, Landroid/os/BatteryStats;->STEP_LEVEL_MODES_OF_INTEREST:[I
+
+    array-length v4, v3
+
+    if-ge v8, v4, :cond_3
+
+    aget v3, v3, v8
+
+    int-to-long v4, v3
+
+    sget-object v3, Landroid/os/BatteryStats;->STEP_LEVEL_MODE_VALUES:[I
+
+    aget v3, v3, v8
+
+    int-to-long v6, v3
+
+    move-object/from16 v3, p4
+
+    move/from16 v16, v8
+
+    move-object/from16 v8, p6
+
+    invoke-virtual/range {v3 .. v8}, Landroid/os/BatteryStats$LevelStepTracker;->computeTimeEstimate(JJ[I)J
+
+    move-result-wide v3
+
+    cmp-long v5, v3, v11
+
+    if-lez v5, :cond_2
+
+    invoke-virtual/range {p1 .. p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v5, " "
+
+    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    sget-object v5, Landroid/os/BatteryStats;->STEP_LEVEL_MODE_LABELS:[Ljava/lang/String;
+
+    aget-object v5, v5, v16
+
+    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v5, " time: "
+
+    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->setLength(I)V
+
+    invoke-static {v2, v3, v4}, Landroid/os/BatteryStats;->formatTimeMs(Ljava/lang/StringBuilder;J)V
+
+    invoke-virtual {v0, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v14}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    aget v5, p6, v15
+
+    invoke-virtual {v0, v5}, Ljava/io/PrintWriter;->print(I)V
+
+    invoke-virtual {v0, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    :cond_2
+    add-int/lit8 v8, v16, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    return-void
+.end method
+
 .method public dumpLocked(Landroid/content/Context;Ljava/io/PrintWriter;IIJ)V
-    .locals 28
+    .locals 27
 
     move-object/from16 v14, p0
 
     move-object/from16 v15, p2
 
+    move/from16 v13, p3
+
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->prepareForDumpLocked()V
 
-    and-int/lit8 v0, p3, 0xe
+    nop
+
+    invoke-static {}, Landroid/os/OpBatteryStatsInjector;->getFlag()I
+
+    move-result v0
+
+    or-int/lit8 v0, v0, 0xe
+
+    and-int/2addr v0, v13
 
     if-eqz v0, :cond_0
 
@@ -16176,7 +16186,7 @@
     :goto_0
     move/from16 v16, v0
 
-    and-int/lit8 v0, p3, 0x8
+    and-int/lit8 v0, v13, 0x8
 
     const-wide/16 v8, 0x0
 
@@ -16189,13 +16199,13 @@
 
     move-result v0
 
-    int-to-long v10, v0
+    int-to-long v6, v0
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getHistoryUsedSize()I
 
     move-result v0
 
-    int-to-long v6, v0
+    int-to-long v4, v0
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->startIteratingHistoryLocked()Z
 
@@ -16210,9 +16220,9 @@
 
     const-wide/16 v0, 0x64
 
-    mul-long/2addr v0, v6
+    mul-long/2addr v0, v4
 
-    div-long/2addr v0, v10
+    div-long/2addr v0, v6
 
     invoke-virtual {v15, v0, v1}, Ljava/io/PrintWriter;->print(J)V
 
@@ -16220,13 +16230,13 @@
 
     invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-direct {v14, v15, v6, v7}, Landroid/os/BatteryStats;->printSizeValue(Ljava/io/PrintWriter;J)V
+    invoke-direct {v14, v15, v4, v5}, Landroid/os/BatteryStats;->printSizeValue(Ljava/io/PrintWriter;J)V
 
     const-string v0, " used of "
 
     invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    invoke-direct {v14, v15, v10, v11}, Landroid/os/BatteryStats;->printSizeValue(Ljava/io/PrintWriter;J)V
+    invoke-direct {v14, v15, v6, v7}, Landroid/os/BatteryStats;->printSizeValue(Ljava/io/PrintWriter;J)V
 
     const-string v0, ", "
 
@@ -16264,9 +16274,11 @@
 
     move/from16 v3, p3
 
+    move-wide/from16 v17, v4
+
     move-wide/from16 v4, p5
 
-    move-wide/from16 v17, v6
+    move-wide/from16 v19, v6
 
     move v6, v0
 
@@ -16289,7 +16301,9 @@
     :catchall_1
     move-exception v0
 
-    move-wide/from16 v17, v6
+    move-wide/from16 v17, v4
+
+    move-wide/from16 v19, v6
 
     :goto_1
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->finishIteratingHistoryLocked()V
@@ -16297,7 +16311,9 @@
     throw v0
 
     :cond_2
-    move-wide/from16 v17, v6
+    move-wide/from16 v17, v4
+
+    move-wide/from16 v19, v6
 
     :goto_2
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->startIteratingOldHistoryLocked()Z
@@ -16336,17 +16352,17 @@
 
     move-wide v2, v4
 
-    move-wide/from16 v19, v2
+    move-wide/from16 v21, v2
 
     goto :goto_4
 
     :cond_3
-    move-wide/from16 v19, v2
+    move-wide/from16 v21, v2
 
     :goto_4
     const/4 v6, 0x0
 
-    and-int/lit8 v2, p3, 0x20
+    and-int/lit8 v2, v13, 0x20
 
     if-eqz v2, :cond_4
 
@@ -16362,11 +16378,11 @@
 
     move-object v3, v0
 
-    move-wide/from16 v4, v19
+    move-wide/from16 v4, v21
 
     invoke-virtual/range {v1 .. v7}, Landroid/os/BatteryStats$HistoryPrinter;->printNextItem(Ljava/io/PrintWriter;Landroid/os/BatteryStats$HistoryItem;JZZ)V
 
-    move-wide/from16 v2, v19
+    move-wide/from16 v2, v21
 
     goto :goto_3
 
@@ -16388,16 +16404,27 @@
 
     :cond_6
     :goto_6
-    if-eqz v16, :cond_7
+    const/4 v0, 0x0
 
-    and-int/lit8 v0, p3, 0x6
+    invoke-static {v15, v13, v0}, Landroid/os/OpBatteryStatsInjector;->dumpLatestDailyInfo(Ljava/io/PrintWriter;ILandroid/util/proto/ProtoOutputStream;)Z
 
-    if-nez v0, :cond_7
+    move-result v0
+
+    if-eqz v0, :cond_7
 
     return-void
 
     :cond_7
-    if-nez v16, :cond_c
+    if-eqz v16, :cond_8
+
+    and-int/lit8 v0, v13, 0x6
+
+    if-nez v0, :cond_8
+
+    return-void
+
+    :cond_8
+    if-nez v16, :cond_e
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getUidStats()Landroid/util/SparseArray;
 
@@ -16416,7 +16443,7 @@
     const/4 v5, 0x0
 
     :goto_7
-    if-ge v5, v1, :cond_b
+    if-ge v5, v1, :cond_d
 
     invoke-virtual {v0, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -16428,104 +16455,136 @@
 
     move-result-object v7
 
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_c
 
     const/4 v10, 0x0
 
     :goto_8
     invoke-virtual {v7}, Landroid/util/SparseArray;->size()I
 
-    move-result v11
+    move-result v12
 
-    if-ge v10, v11, :cond_a
+    if-ge v10, v12, :cond_b
 
     invoke-virtual {v7, v10}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v12
 
-    check-cast v11, Landroid/os/BatteryStats$Uid$Pid;
+    check-cast v12, Landroid/os/BatteryStats$Uid$Pid;
 
-    if-nez v2, :cond_8
+    if-nez v2, :cond_9
 
-    const-string v13, "Per-PID Stats:"
+    const-string v8, "Per-PID Stats:"
 
-    invoke-virtual {v15, v13}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {v15, v8}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
-    :cond_8
-    iget-wide v8, v11, Landroid/os/BatteryStats$Uid$Pid;->mWakeSumMs:J
+    :cond_9
+    iget-wide v8, v12, Landroid/os/BatteryStats$Uid$Pid;->mWakeSumMs:J
 
-    iget v13, v11, Landroid/os/BatteryStats$Uid$Pid;->mWakeNesting:I
+    iget v11, v12, Landroid/os/BatteryStats$Uid$Pid;->mWakeNesting:I
 
-    if-lez v13, :cond_9
+    if-lez v11, :cond_a
 
-    iget-wide v12, v11, Landroid/os/BatteryStats$Uid$Pid;->mWakeStartMs:J
+    move-object v11, v0
 
-    sub-long v12, v3, v12
+    move/from16 v21, v1
+
+    iget-wide v0, v12, Landroid/os/BatteryStats$Uid$Pid;->mWakeStartMs:J
+
+    sub-long v0, v3, v0
 
     goto :goto_9
 
-    :cond_9
-    const-wide/16 v12, 0x0
+    :cond_a
+    move-object v11, v0
+
+    move/from16 v21, v1
+
+    const-wide/16 v0, 0x0
 
     :goto_9
-    add-long/2addr v8, v12
+    add-long/2addr v8, v0
 
-    const-string v12, "  PID "
+    const-string v0, "  PID "
 
-    invoke-virtual {v15, v12}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {v7, v10}, Landroid/util/SparseArray;->keyAt(I)I
 
-    move-result v12
+    move-result v0
 
-    invoke-virtual {v15, v12}, Ljava/io/PrintWriter;->print(I)V
+    invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->print(I)V
 
-    const-string v12, " wake time: "
+    const-string v0, " wake time: "
 
-    invoke-virtual {v15, v12}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+    invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-static {v8, v9, v15}, Landroid/util/TimeUtils;->formatDuration(JLjava/io/PrintWriter;)V
 
-    const-string v12, ""
+    const-string v0, ""
 
-    invoke-virtual {v15, v12}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+    invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     add-int/lit8 v10, v10, 0x1
+
+    move-object v0, v11
+
+    move/from16 v1, v21
 
     const-wide/16 v8, 0x0
 
     goto :goto_8
 
-    :cond_a
+    :cond_b
+    move-object v11, v0
+
+    move/from16 v21, v1
+
+    goto :goto_a
+
+    :cond_c
+    move-object v11, v0
+
+    move/from16 v21, v1
+
+    :goto_a
     add-int/lit8 v5, v5, 0x1
+
+    move-object v0, v11
+
+    move/from16 v1, v21
 
     const-wide/16 v8, 0x0
 
     goto :goto_7
 
-    :cond_b
-    if-eqz v2, :cond_c
+    :cond_d
+    move-object v11, v0
+
+    move/from16 v21, v1
+
+    if-eqz v2, :cond_e
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :cond_c
-    if-eqz v16, :cond_e
-
-    and-int/lit8 v0, p3, 0x2
-
-    if-eqz v0, :cond_d
-
-    goto :goto_a
-
-    :cond_d
-    const/4 v12, 0x0
-
-    goto/16 :goto_c
-
     :cond_e
-    :goto_a
+    if-eqz v16, :cond_10
+
+    and-int/lit8 v0, v13, 0x2
+
+    if-eqz v0, :cond_f
+
+    goto :goto_b
+
+    :cond_f
+    const/4 v11, 0x0
+
+    goto/16 :goto_d
+
+    :cond_10
+    :goto_b
     nop
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getDischargeLevelStepTracker()Landroid/os/BatteryStats$LevelStepTracker;
@@ -16544,7 +16603,7 @@
 
     const-wide/16 v8, 0x3e8
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_13
 
     nop
 
@@ -16562,7 +16621,7 @@
 
     cmp-long v2, v10, v0
 
-    if-ltz v2, :cond_f
+    if-ltz v2, :cond_11
 
     const-string v0, "  Estimated discharge time remaining: "
 
@@ -16574,7 +16633,7 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :cond_f
+    :cond_11
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getDischargeLevelStepTracker()Landroid/os/BatteryStats$LevelStepTracker;
 
     move-result-object v0
@@ -16583,12 +16642,12 @@
 
     move v12, v1
 
-    :goto_b
+    :goto_c
     sget-object v1, Landroid/os/BatteryStats;->STEP_LEVEL_MODES_OF_INTEREST:[I
 
     array-length v2, v1
 
-    if-ge v12, v2, :cond_10
+    if-ge v12, v2, :cond_12
 
     sget-object v2, Landroid/os/BatteryStats;->STEP_LEVEL_MODE_LABELS:[Ljava/lang/String;
 
@@ -16626,12 +16685,12 @@
 
     add-int/lit8 v12, v12, 0x1
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_10
+    :cond_12
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :cond_11
+    :cond_13
     nop
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getChargeLevelStepTracker()Landroid/os/BatteryStats$LevelStepTracker;
@@ -16640,13 +16699,13 @@
 
     const-string v1, "Charge step durations:"
 
-    const/4 v12, 0x0
+    const/4 v11, 0x0
 
-    invoke-static {v15, v7, v1, v0, v12}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
+    invoke-static {v15, v7, v1, v0, v11}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_15
 
     nop
 
@@ -16664,7 +16723,7 @@
 
     cmp-long v2, v0, v2
 
-    if-ltz v2, :cond_12
+    if-ltz v2, :cond_14
 
     const-string v2, "  Estimated charge time remaining: "
 
@@ -16676,28 +16735,28 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :cond_12
-    invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
-
-    :cond_13
-    :goto_c
-    if-eqz v16, :cond_15
-
-    and-int/lit8 v0, p3, 0x4
-
-    if-eqz v0, :cond_14
-
-    goto :goto_d
-
     :cond_14
-    move v1, v12
-
-    const/16 v17, 0x1
-
-    goto/16 :goto_16
+    invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
     :cond_15
     :goto_d
+    if-eqz v16, :cond_17
+
+    and-int/lit8 v0, v13, 0x4
+
+    if-eqz v0, :cond_16
+
+    goto :goto_e
+
+    :cond_16
+    move v3, v11
+
+    const/16 v17, 0x1
+
+    goto/16 :goto_17
+
+    :cond_17
+    :goto_e
     const-string v0, "Daily stats:"
 
     invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
@@ -16712,9 +16771,9 @@
 
     move-result-wide v0
 
-    const-string/jumbo v13, "yyyy-MM-dd-HH-mm-ss"
+    const-string/jumbo v12, "yyyy-MM-dd-HH-mm-ss"
 
-    invoke-static {v13, v0, v1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+    invoke-static {v12, v0, v1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -16734,7 +16793,7 @@
 
     move-result-wide v0
 
-    invoke-static {v13, v0, v1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+    invoke-static {v12, v0, v1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -16754,7 +16813,7 @@
 
     move-result-wide v0
 
-    invoke-static {v13, v0, v1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+    invoke-static {v12, v0, v1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -16772,80 +16831,80 @@
 
     const/4 v0, 0x1
 
-    new-array v11, v0, [I
+    new-array v10, v0, [I
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getDailyDischargeLevelStepTracker()Landroid/os/BatteryStats$LevelStepTracker;
 
-    move-result-object v10
+    move-result-object v9
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getDailyChargeLevelStepTracker()Landroid/os/BatteryStats$LevelStepTracker;
 
-    move-result-object v9
+    move-result-object v8
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getDailyPackageChanges()Ljava/util/ArrayList;
 
-    move-result-object v8
-
-    iget v1, v10, Landroid/os/BatteryStats$LevelStepTracker;->mNumStepDurations:I
-
-    const-string v7, "    "
-
-    if-gtz v1, :cond_17
+    move-result-object v7
 
     iget v1, v9, Landroid/os/BatteryStats$LevelStepTracker;->mNumStepDurations:I
 
-    if-gtz v1, :cond_17
+    const-string v5, "    "
 
-    if-eqz v8, :cond_16
+    if-gtz v1, :cond_19
 
-    goto :goto_e
+    iget v1, v8, Landroid/os/BatteryStats$LevelStepTracker;->mNumStepDurations:I
 
-    :cond_16
-    move/from16 v17, v0
+    if-gtz v1, :cond_19
 
-    move-object v0, v7
-
-    move-object v3, v8
-
-    move-object v4, v9
-
-    move-object v1, v10
-
-    move-object v2, v11
-
-    move v5, v12
-
-    move-object/from16 v27, v13
-
-    goto/16 :goto_10
-
-    :cond_17
-    :goto_e
-    and-int/lit8 v1, p3, 0x4
-
-    if-nez v1, :cond_19
-
-    if-nez v16, :cond_18
-
-    move/from16 v17, v0
-
-    move-object v0, v7
-
-    move-object v3, v8
-
-    move-object v4, v9
-
-    move-object v1, v10
-
-    move-object v2, v11
-
-    move v5, v12
-
-    move-object/from16 v27, v13
+    if-eqz v7, :cond_18
 
     goto :goto_f
 
     :cond_18
+    move/from16 v17, v0
+
+    move-object v0, v5
+
+    move-object v13, v7
+
+    move-object v3, v8
+
+    move-object v4, v9
+
+    move-object v1, v10
+
+    move v2, v11
+
+    move-object v5, v12
+
+    goto/16 :goto_11
+
+    :cond_19
+    :goto_f
+    and-int/lit8 v1, v13, 0x4
+
+    if-nez v1, :cond_1b
+
+    if-nez v16, :cond_1a
+
+    move/from16 v17, v0
+
+    move-object v0, v5
+
+    move-object v14, v7
+
+    move-object v3, v8
+
+    move-object v4, v9
+
+    move-object v1, v10
+
+    move v2, v11
+
+    move-object v5, v12
+
+    goto :goto_10
+
+    :cond_1a
     const-string v1, "  Current daily steps:"
 
     invoke-virtual {v15, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
@@ -16858,13 +16917,15 @@
 
     move-object/from16 v2, p2
 
-    move-object v5, v10
+    move-object v0, v5
 
-    move-object v0, v7
+    move-object v5, v9
 
-    move-object v7, v11
+    move-object v14, v7
 
-    invoke-direct/range {v1 .. v7}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    move-object v7, v10
+
+    invoke-virtual/range {v1 .. v7}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
     const-string v1, "    "
 
@@ -16884,28 +16945,32 @@
 
     move-object v10, v2
 
-    move-object v2, v11
+    move v2, v11
 
-    move-object v11, v4
+    move-object v11, v3
 
-    move v5, v12
-
-    move-object v12, v6
-
-    move-object/from16 v27, v13
+    move-object v5, v12
 
     const/16 v17, 0x1
 
-    move-object v13, v2
+    move-object v12, v6
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    move-object v13, v1
 
-    goto :goto_10
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    :cond_19
+    move-object v13, v14
+
+    move-object/from16 v14, p0
+
+    goto :goto_11
+
+    :cond_1b
     move/from16 v17, v0
 
-    move-object v0, v7
+    move-object v0, v5
+
+    move-object v14, v7
 
     move-object v3, v8
 
@@ -16913,20 +16978,18 @@
 
     move-object v1, v10
 
-    move-object v2, v11
+    move v2, v11
 
-    move v5, v12
+    move-object v5, v12
 
-    move-object/from16 v27, v13
-
-    :goto_f
+    :goto_10
     const-string v7, "  Current daily discharge step durations:"
 
-    invoke-static {v15, v0, v7, v1, v5}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
+    invoke-static {v15, v0, v7, v4, v2}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
 
     move-result v7
 
-    if-eqz v7, :cond_1a
+    if-eqz v7, :cond_1c
 
     const-string v9, "      "
 
@@ -16936,22 +16999,22 @@
 
     move-object/from16 v8, p2
 
-    move-object v11, v1
+    move-object v11, v4
 
     move-object v12, v6
 
-    move-object v13, v2
+    move-object v13, v1
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    :cond_1a
+    :cond_1c
     const-string v7, "  Current daily charge step durations:"
 
-    invoke-static {v15, v0, v7, v4, v5}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
+    invoke-static {v15, v0, v7, v3, v2}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
 
     move-result v7
 
-    if-eqz v7, :cond_1b
+    if-eqz v7, :cond_1d
 
     const-string v9, "      "
 
@@ -16961,47 +17024,49 @@
 
     move-object/from16 v8, p2
 
-    move-object v11, v4
+    move-object v11, v3
 
     move-object v12, v6
 
-    move-object v13, v2
+    move-object v13, v1
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    :cond_1b
-    invoke-direct {v14, v15, v0, v3}, Landroid/os/BatteryStats;->dumpDailyPackageChanges(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/util/ArrayList;)V
+    :cond_1d
+    move-object v13, v14
 
-    :goto_10
-    const/4 v7, 0x0
+    move-object/from16 v14, p0
+
+    invoke-direct {v14, v15, v0, v13}, Landroid/os/BatteryStats;->dumpDailyPackageChanges(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/util/ArrayList;)V
 
     :goto_11
+    const/4 v7, 0x0
+
+    :goto_12
     invoke-virtual {v14, v7}, Landroid/os/BatteryStats;->getDailyItemLocked(I)Landroid/os/BatteryStats$DailyItem;
 
     move-result-object v8
 
-    move-object v13, v8
+    move-object v12, v8
 
-    if-eqz v8, :cond_21
+    if-eqz v8, :cond_23
 
     add-int/lit8 v18, v7, 0x1
 
     and-int/lit8 v7, p3, 0x4
 
-    if-eqz v7, :cond_1c
+    if-eqz v7, :cond_1e
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :cond_1c
+    :cond_1e
     const-string v7, "  Daily from "
 
     invoke-virtual {v15, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-wide v7, v13, Landroid/os/BatteryStats$DailyItem;->mStartTime:J
+    iget-wide v7, v12, Landroid/os/BatteryStats$DailyItem;->mStartTime:J
 
-    move-object/from16 v12, v27
-
-    invoke-static {v12, v7, v8}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+    invoke-static {v5, v7, v8}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v7
 
@@ -17015,9 +17080,9 @@
 
     invoke-virtual {v15, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-wide v7, v13, Landroid/os/BatteryStats$DailyItem;->mEndTime:J
+    iget-wide v7, v12, Landroid/os/BatteryStats$DailyItem;->mEndTime:J
 
-    invoke-static {v12, v7, v8}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
+    invoke-static {v5, v7, v8}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;J)Ljava/lang/CharSequence;
 
     move-result-object v7
 
@@ -17033,18 +17098,18 @@
 
     and-int/lit8 v7, p3, 0x4
 
-    if-nez v7, :cond_1e
+    if-nez v7, :cond_20
 
-    if-nez v16, :cond_1d
+    if-nez v16, :cond_1f
 
-    move-object/from16 v19, v12
+    move-object v2, v12
 
-    move-object v5, v13
+    move-object/from16 v19, v13
 
-    goto :goto_12
+    goto :goto_13
 
-    :cond_1d
-    iget-object v11, v13, Landroid/os/BatteryStats$DailyItem;->mDischargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
+    :cond_1f
+    iget-object v11, v12, Landroid/os/BatteryStats$DailyItem;->mDischargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
 
     const-string v9, "    "
 
@@ -17054,37 +17119,37 @@
 
     move-object/from16 v8, p2
 
-    move-object/from16 v19, v12
+    move-object v2, v12
 
     move-object v12, v6
 
-    move-object v5, v13
+    move-object/from16 v19, v13
 
-    move-object v13, v2
+    move-object v13, v1
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    iget-object v11, v5, Landroid/os/BatteryStats$DailyItem;->mChargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
+    iget-object v11, v2, Landroid/os/BatteryStats$DailyItem;->mChargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
 
     const-string v9, "    "
 
     const-string v10, "Charge"
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    move-object/from16 v21, v1
+    move-object/from16 v21, v3
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    goto :goto_15
+    goto :goto_16
 
-    :cond_1e
-    move-object/from16 v19, v12
+    :cond_20
+    move-object v2, v12
 
-    move-object v5, v13
+    move-object/from16 v19, v13
 
-    :goto_12
-    iget-object v7, v5, Landroid/os/BatteryStats$DailyItem;->mDischargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
+    :goto_13
+    iget-object v7, v2, Landroid/os/BatteryStats$DailyItem;->mDischargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
 
     const-string v13, "      "
 
@@ -17096,9 +17161,9 @@
 
     move-result v7
 
-    if-eqz v7, :cond_1f
+    if-eqz v7, :cond_21
 
-    iget-object v11, v5, Landroid/os/BatteryStats$DailyItem;->mDischargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
+    iget-object v11, v2, Landroid/os/BatteryStats$DailyItem;->mDischargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
 
     const-string v9, "        "
 
@@ -17110,35 +17175,35 @@
 
     move-object v12, v6
 
-    move-object/from16 v21, v1
+    move-object/from16 v21, v3
 
-    move-object v1, v13
+    move-object v3, v13
 
-    move-object v13, v2
+    move-object v13, v1
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    goto :goto_13
+    goto :goto_14
 
-    :cond_1f
-    move-object/from16 v21, v1
+    :cond_21
+    move-object/from16 v21, v3
 
-    move-object v1, v13
+    move-object v3, v13
 
-    :goto_13
-    iget-object v7, v5, Landroid/os/BatteryStats$DailyItem;->mChargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
+    :goto_14
+    iget-object v7, v2, Landroid/os/BatteryStats$DailyItem;->mChargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
 
     const-string v8, "    Charge step durations:"
 
     const/4 v13, 0x0
 
-    invoke-static {v15, v1, v8, v7, v13}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
+    invoke-static {v15, v3, v8, v7, v13}, Landroid/os/BatteryStats;->dumpDurationSteps(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Z)Z
 
-    move-result v1
+    move-result v3
 
-    if-eqz v1, :cond_20
+    if-eqz v3, :cond_22
 
-    iget-object v11, v5, Landroid/os/BatteryStats$DailyItem;->mChargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
+    iget-object v11, v2, Landroid/os/BatteryStats$DailyItem;->mChargeSteps:Landroid/os/BatteryStats$LevelStepTracker;
 
     const-string v9, "        "
 
@@ -17150,50 +17215,52 @@
 
     move-object v12, v6
 
-    move v1, v13
+    move v3, v13
 
-    move-object v13, v2
+    move-object v13, v1
 
-    invoke-direct/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
+    invoke-virtual/range {v7 .. v13}, Landroid/os/BatteryStats;->dumpDailyLevelStepSummary(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/String;Landroid/os/BatteryStats$LevelStepTracker;Ljava/lang/StringBuilder;[I)V
 
-    goto :goto_14
+    goto :goto_15
 
-    :cond_20
-    move v1, v13
+    :cond_22
+    move v3, v13
 
-    :goto_14
-    iget-object v7, v5, Landroid/os/BatteryStats$DailyItem;->mPackageChanges:Ljava/util/ArrayList;
+    :goto_15
+    iget-object v7, v2, Landroid/os/BatteryStats$DailyItem;->mPackageChanges:Ljava/util/ArrayList;
 
     invoke-direct {v14, v15, v0, v7}, Landroid/os/BatteryStats;->dumpDailyPackageChanges(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    :goto_15
-    move v5, v1
+    :goto_16
+    move v2, v3
 
     move/from16 v7, v18
 
-    move-object/from16 v27, v19
+    move-object/from16 v13, v19
 
-    move-object/from16 v1, v21
+    move-object/from16 v3, v21
 
-    goto/16 :goto_11
+    goto/16 :goto_12
 
-    :cond_21
-    move-object/from16 v21, v1
+    :cond_23
+    move-object/from16 v21, v3
 
-    move v1, v5
+    move-object/from16 v19, v13
 
-    move-object v5, v13
+    move v3, v2
+
+    move-object v2, v12
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :goto_16
-    if-eqz v16, :cond_22
+    :goto_17
+    if-eqz v16, :cond_24
 
     and-int/lit8 v0, p3, 0x2
 
-    if-eqz v0, :cond_24
+    if-eqz v0, :cond_26
 
-    :cond_22
+    :cond_24
     const-string v0, "Statistics since last charge:"
 
     invoke-virtual {v15, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
@@ -17202,25 +17269,25 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "  System starts: "
+    const-string v1, "  System starts: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getStartCount()I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, ", currently on battery: "
+    const-string v1, ", currently on battery: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual/range {p0 .. p0}, Landroid/os/BatteryStats;->getIsOnBattery()Z
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -17232,16 +17299,16 @@
 
     and-int/lit8 v0, p3, 0x40
 
-    if-eqz v0, :cond_23
+    if-eqz v0, :cond_25
 
     move/from16 v7, v17
 
-    goto :goto_17
+    goto :goto_18
 
-    :cond_23
-    move v7, v1
+    :cond_25
+    move v7, v3
 
-    :goto_17
+    :goto_18
     const-string v4, ""
 
     move-object/from16 v1, p0
@@ -17256,7 +17323,7 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    :cond_24
+    :cond_26
     return-void
 .end method
 
@@ -26831,6 +26898,17 @@
     return-void
 
     :cond_0
+    const/4 v1, 0x0
+
+    invoke-static {v1, p4, v0}, Landroid/os/OpBatteryStatsInjector;->dumpLatestDailyInfo(Ljava/io/PrintWriter;ILandroid/util/proto/ProtoOutputStream;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    return-void
+
+    :cond_1
     const-wide v1, 0x10b00000001L
 
     invoke-virtual {v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->start(J)J
@@ -26869,7 +26947,7 @@
 
     and-int/lit8 v3, p4, 0x4
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_3
 
     new-instance v3, Lcom/android/internal/os/BatteryStatsHelper;
 
@@ -26877,13 +26955,13 @@
 
     const/4 v5, 0x0
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_2
 
     const/4 v4, 0x1
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     move v4, v5
 
     :goto_0
@@ -26899,7 +26977,7 @@
 
     invoke-direct {p0, v0, v3}, Landroid/os/BatteryStats;->dumpProtoSystemLocked(Landroid/util/proto/ProtoOutputStream;Lcom/android/internal/os/BatteryStatsHelper;)V
 
-    :cond_2
+    :cond_3
     invoke-virtual {v0, v1, v2}, Landroid/util/proto/ProtoOutputStream;->end(J)V
 
     invoke-virtual {v0}, Landroid/util/proto/ProtoOutputStream;->flush()V

@@ -1081,8 +1081,6 @@
 
 .field public static final OPEN_APP_OPEN_BY_DEFAULT_SETTINGS:Ljava/lang/String; = "android.permission.OPEN_APP_OPEN_BY_DEFAULT_SETTINGS"
 
-.field public static final OPOS_COMPONENT_SAFE:Ljava/lang/String; = "opos.permission.OPOS_COMPONENT_SAFE"
-
 .field public static final OVERRIDE_WIFI_CONFIG:Ljava/lang/String; = "android.permission.OVERRIDE_WIFI_CONFIG"
     .annotation runtime Landroid/annotation/SystemApi;
     .end annotation

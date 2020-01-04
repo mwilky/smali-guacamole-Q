@@ -1,9 +1,6 @@
 .class Landroid/view/ViewRootImplInjector$1;
-.super Ljava/lang/Object;
+.super Landroid/util/Singleton;
 .source "ViewRootImplInjector.java"
-
-# interfaces
-.implements Landroid/view/ViewRootImplInjector$LongshotRunnable;
 
 
 # annotations
@@ -16,69 +13,68 @@
     name = null
 .end annotation
 
-
-# instance fields
-.field mView:Landroid/view/View;
-
-.field final synthetic this$0:Landroid/view/ViewRootImplInjector;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/util/Singleton<",
+        "Lcom/oneplus/os/IOnePlusService;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/view/ViewRootImplInjector;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Landroid/view/ViewRootImplInjector$1;->this$0:Landroid/view/ViewRootImplInjector;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method protected create()Lcom/oneplus/os/IOnePlusService;
+    .locals 4
 
-    iget-object v0, p0, Landroid/view/ViewRootImplInjector$1;->mView:Landroid/view/View;
+    const/4 v0, 0x0
 
-    instance-of v1, v0, Landroid/view/ViewGroup;
+    const-string v1, "opservice"
 
-    if-eqz v1, :cond_0
+    invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-    new-instance v1, Lcom/oneplus/longshot/LongshotUtil;
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-string v2, "ViewRootImplInjector"
+
+    if-nez v1, :cond_0
+
+    const-string v3, "can\'t get service binder: ViewRootImplInjector"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v0
+
+    :cond_0
+    invoke-static {v1}, Lcom/oneplus/os/IOnePlusService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/os/IOnePlusService;
 
     move-result-object v0
 
-    iget-object v2, p0, Landroid/view/ViewRootImplInjector$1;->mView:Landroid/view/View;
+    if-nez v0, :cond_1
 
-    check-cast v2, Landroid/view/ViewGroup;
+    const-string v3, "can\'t get service interface: ViewRootImplInjector"
 
-    invoke-direct {v1, v0, v2}, Lcom/oneplus/longshot/LongshotUtil;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    sput-object v1, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
-
-    sget-object v0, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
-
-    invoke-virtual {v0}, Lcom/oneplus/longshot/LongshotUtil;->longshotStart()V
-
-    iget-object v0, p0, Landroid/view/ViewRootImplInjector$1;->mView:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLongshotUtil(Lcom/oneplus/longshot/LongshotUtil;)V
-
-    :cond_0
-    return-void
+    :cond_1
+    return-object v0
 .end method
 
-.method public setView(Landroid/view/View;)V
-    .locals 0
+.method protected bridge synthetic create()Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Landroid/view/ViewRootImplInjector$1;->mView:Landroid/view/View;
+    invoke-virtual {p0}, Landroid/view/ViewRootImplInjector$1;->create()Lcom/oneplus/os/IOnePlusService;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

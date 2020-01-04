@@ -1431,7 +1431,7 @@
     :cond_1
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "results is null or has length < 1"
+    const-string/jumbo v2, "results is null or has length < 1"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 

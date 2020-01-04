@@ -90,7 +90,7 @@
 
     invoke-static {v0, p4}, Landroid/hardware/camera2/params/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 
-    const-string v0, "rightEyePosition"
+    const-string/jumbo v0, "rightEyePosition"
 
     invoke-static {v0, p5}, Landroid/hardware/camera2/params/Face;->checkNull(Ljava/lang/String;Ljava/lang/Object;)V
 

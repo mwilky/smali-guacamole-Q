@@ -126,12 +126,12 @@
     return-object v0
 
     :cond_2
-    const-string v0, "restoreStarting"
+    const-string/jumbo v0, "restoreStarting"
 
     return-object v0
 
     :cond_3
-    const-string v0, "restoreSetsAvailable"
+    const-string/jumbo v0, "restoreSetsAvailable"
 
     return-object v0
 .end method

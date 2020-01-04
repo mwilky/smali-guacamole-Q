@@ -183,7 +183,7 @@
     return-object v0
 
     :pswitch_9
-    const-string v0, "revokeChallenge"
+    const-string/jumbo v0, "revokeChallenge"
 
     return-object v0
 
@@ -246,8 +246,6 @@
     const-string v0, "authenticate"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

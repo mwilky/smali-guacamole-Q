@@ -499,7 +499,7 @@
 
     if-ne v5, v4, :cond_0
 
-    const-string v4, "restrictionType cannot be omitted"
+    const-string/jumbo v4, "restrictionType cannot be omitted"
 
     invoke-static {v12, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -720,8 +720,6 @@
     :goto_2
     return-object v4
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_5
@@ -749,7 +747,7 @@
 
     move-result-object v0
 
-    const-string v1, "restriction"
+    const-string/jumbo v1, "restriction"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

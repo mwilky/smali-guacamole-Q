@@ -1029,16 +1029,6 @@
     throw v0
 .end method
 
-.method public setFtmWifiAdbEnabled(Z)V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
 .method public setHotspotRate(I)Z
     .locals 1
 

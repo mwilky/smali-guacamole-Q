@@ -37,28 +37,41 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
-
-    sget-object v0, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
-
-    invoke-virtual {v0}, Lcom/oneplus/longshot/LongshotUtil;->longshotStop()V
+    .locals 3
 
     iget-object v0, p0, Landroid/view/ViewRootImplInjector$2;->mView:Landroid/view/View;
 
-    const/4 v1, 0x0
+    instance-of v1, v0, Landroid/view/ViewGroup;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Lcom/oneplus/longshot/LongshotUtil;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v2, p0, Landroid/view/ViewRootImplInjector$2;->mView:Landroid/view/View;
+
+    check-cast v2, Landroid/view/ViewGroup;
+
+    invoke-direct {v1, v0, v2}, Lcom/oneplus/longshot/LongshotUtil;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
+
+    sput-object v1, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
+
+    sget-object v0, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
+
+    invoke-virtual {v0}, Lcom/oneplus/longshot/LongshotUtil;->longshotStart()V
+
+    iget-object v0, p0, Landroid/view/ViewRootImplInjector$2;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_0
+
+    sget-object v1, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLongshotUtil(Lcom/oneplus/longshot/LongshotUtil;)V
 
     :cond_0
-    sput-object v1, Landroid/view/ViewRootImplInjector;->mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
-
-    :cond_1
     return-void
 .end method
 

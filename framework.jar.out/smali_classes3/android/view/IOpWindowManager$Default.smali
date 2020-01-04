@@ -93,6 +93,19 @@
     return v0
 .end method
 
+.method public isPackageInPassedList(Ljava/lang/String;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public needToAddNameForToast(Ljava/lang/String;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Throws;

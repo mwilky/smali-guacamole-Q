@@ -66,7 +66,9 @@
 
 .field public static final MESSAGE_ID_CMAS_FIRST_IDENTIFIER:I = 0x1112
 
-.field public static final MESSAGE_ID_CMAS_LAST_IDENTIFIER:I = 0x112f
+.field public static final MESSAGE_ID_CMAS_GEO_FENCING_TRIGGER:I = 0x1130
+
+.field public static final MESSAGE_ID_CMAS_LAST_IDENTIFIER:I = 0x1130
 
 .field public static final MESSAGE_ID_ETWS_EARTHQUAKE_AND_TSUNAMI_WARNING:I = 0x1102
 

@@ -63,6 +63,9 @@
 .method public abstract screenshot(I)Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;
 .end method
 
+.method public abstract screenshot(III)Landroid/view/SurfaceControl$ScreenshotGraphicBuffer;
+.end method
+
 .method public abstract setDisplayAccessUIDs(Landroid/util/SparseArray;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {

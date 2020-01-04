@@ -1617,64 +1617,83 @@
     iput-boolean v0, v1, Landroid/view/Choreographer;->mIsShoudDoAnimation:Z
 
     :cond_8
-    iget-boolean v0, v1, Landroid/view/Choreographer;->mIsShoudDoAnimation:Z
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_9
+    iget-boolean v4, v1, Landroid/view/Choreographer;->mIsShoudDoAnimation:Z
 
-    iget-object v0, v1, Landroid/view/Choreographer;->mFrameInfo:Landroid/graphics/FrameInfo;
+    if-nez v4, :cond_9
 
-    invoke-virtual {v0}, Landroid/graphics/FrameInfo;->markAnimationsStart()V
+    iget-object v4, v1, Landroid/view/Choreographer;->mAT:Landroid/app/ActivityThread;
+
+    invoke-virtual {v4}, Landroid/app/ActivityThread;->getProcessName()Ljava/lang/String;
+
+    move-result-object v4
+
+    move-object v0, v4
+
+    const-string v4, "net.oneplus.launcher"
+
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_9
+
+    iput-boolean v10, v1, Landroid/view/Choreographer;->mIsShoudDoAnimation:Z
+
+    :cond_9
+    iget-boolean v4, v1, Landroid/view/Choreographer;->mIsShoudDoAnimation:Z
+
+    if-eqz v4, :cond_a
+
+    iget-object v4, v1, Landroid/view/Choreographer;->mFrameInfo:Landroid/graphics/FrameInfo;
+
+    invoke-virtual {v4}, Landroid/graphics/FrameInfo;->markAnimationsStart()V
 
     invoke-virtual {v1, v10, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
 
     goto :goto_1
 
-    :cond_9
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+    :cond_a
+    sget-boolean v4, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
-    if-eqz v0, :cond_a
+    if-eqz v4, :cond_b
 
-    const-string v0, "Choreographer"
+    const-string v4, "Choreographer"
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "skip doframe for "
+    const-string/jumbo v8, "skip doframe for "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v5, v1, Landroid/view/Choreographer;->mAT:Landroid/app/ActivityThread;
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Landroid/app/ActivityThread;->getProcessName()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_a
+    :cond_b
     :goto_1
-    const/4 v0, 0x2
+    const/4 v4, 0x2
 
-    invoke-virtual {v1, v0, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
+    invoke-virtual {v1, v4, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
 
-    iget-object v0, v1, Landroid/view/Choreographer;->mFrameInfo:Landroid/graphics/FrameInfo;
+    iget-object v4, v1, Landroid/view/Choreographer;->mFrameInfo:Landroid/graphics/FrameInfo;
 
-    invoke-virtual {v0}, Landroid/graphics/FrameInfo;->markPerformTraversalsStart()V
+    invoke-virtual {v4}, Landroid/graphics/FrameInfo;->markPerformTraversalsStart()V
 
-    const/4 v0, 0x3
+    const/4 v4, 0x3
 
-    invoke-virtual {v1, v0, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
+    invoke-virtual {v1, v4, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
 
-    const/4 v0, 0x4
+    const/4 v4, 0x4
 
-    invoke-virtual {v1, v0, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
+    invoke-virtual {v1, v4, v14, v15}, Landroid/view/Choreographer;->doCallbacks(IJ)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
@@ -1686,11 +1705,11 @@
 
     iget-object v0, v1, Landroid/view/Choreographer;->mJankManagerHelper:Landroid/view/JankManagerHelper;
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     invoke-virtual {v0, v6, v7}, Landroid/view/JankManagerHelper;->reportJankOrCountData(J)V
 
-    :cond_b
+    :cond_c
     return-void
 
     :catchall_1

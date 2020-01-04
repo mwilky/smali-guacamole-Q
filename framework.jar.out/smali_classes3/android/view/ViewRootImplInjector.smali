@@ -58,6 +58,20 @@
 
 .field private static final OEM_SYSTEMUI_PACKAGE_NAME:Ljava/lang/String; = "com.android.systemui"
 
+.field private static final ONEPLUS_SERVICE_CREATOR:Landroid/util/Singleton;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/Singleton<",
+            "Lcom/oneplus/os/IOnePlusService;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final OPSERVICE:Ljava/lang/String; = "opservice"
+
+.field public static final PORTRAIT_NON_DETECT_SCALE:F
+
 .field private static final RIGHT_SIDE:I = 0x1
 
 .field private static final SIDE_GESTURE_EDGE_HORIZONTAL_SCALE:F
@@ -74,6 +88,8 @@
 
 .field public static mLongshotUtil:Lcom/oneplus/longshot/LongshotUtil;
 
+.field private static mOnePlusService:Lcom/oneplus/os/IOnePlusService;
+
 .field private static sHWWhiteList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -83,6 +99,8 @@
         }
     .end annotation
 .end field
+
+.field private static sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
 
 
 # instance fields
@@ -105,6 +123,8 @@
 .field mContext:Landroid/content/Context;
 
 .field private mEdgeSwipeStartThreshold:I
+
+.field private mGameShakeConfig:Ljava/lang/String;
 
 .field private mGestureButtonActive:Z
 
@@ -247,19 +267,21 @@
 
     if-eqz v0, :cond_2
 
+    move v0, v1
+
     goto :goto_2
 
     :cond_2
-    move v1, v2
+    move v0, v2
 
     :goto_2
-    sput-boolean v1, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
+    sput-boolean v0, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
 
     const/16 v0, 0xc8
 
-    const-string/jumbo v1, "persist.gesture_button.long_click_timeout"
+    const-string/jumbo v3, "persist.gesture_button.long_click_timeout"
 
-    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v3, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -267,9 +289,9 @@
 
     const/16 v0, 0x32
 
-    const-string/jumbo v1, "persist.gesture_button.long_click_move"
+    const-string/jumbo v3, "persist.gesture_button.long_click_move"
 
-    invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+    invoke-static {v3, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -277,13 +299,47 @@
 
     const/16 v0, 0x64
 
-    const-string/jumbo v1, "persist.sys.gesture_button.horizontal_dis"
+    const-string/jumbo v3, "persist.sys.gesture_button.horizontal_dis"
+
+    invoke-static {v3, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    sput v0, Landroid/view/ViewRootImplInjector;->GESTURE_KEY_HORIZONTAL_DISTANCE_THRESHOLD:I
+
+    nop
+
+    new-array v0, v1, [I
+
+    aput v2, v0, v2
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x3
+
+    goto :goto_3
+
+    :cond_3
+    move v0, v2
+
+    :goto_3
+    const-string/jumbo v1, "persist.portrait_non.detect.scale"
 
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    sput v0, Landroid/view/ViewRootImplInjector;->GESTURE_KEY_HORIZONTAL_DISTANCE_THRESHOLD:I
+    int-to-float v0, v0
+
+    const v1, 0x3dcccccd    # 0.1f
+
+    mul-float/2addr v0, v1
+
+    sput v0, Landroid/view/ViewRootImplInjector;->PORTRAIT_NON_DETECT_SCALE:F
 
     const/16 v0, 0x50
 
@@ -336,6 +392,12 @@
     mul-float/2addr v0, v1
 
     sput v0, Landroid/view/ViewRootImplInjector;->SIDE_GESTURE_EDGE_HORIZONTAL_SCALE:F
+
+    new-instance v0, Landroid/view/ViewRootImplInjector$1;
+
+    invoke-direct {v0}, Landroid/view/ViewRootImplInjector$1;-><init>()V
+
+    sput-object v0, Landroid/view/ViewRootImplInjector;->ONEPLUS_SERVICE_CREATOR:Landroid/util/Singleton;
 
     const-string/jumbo v0, "persist.oneplus.debug.gbtlog"
 
@@ -443,15 +505,15 @@
 
     iput v0, p0, Landroid/view/ViewRootImplInjector;->mSideGestureKeyAnimThreshold:I
 
-    new-instance v0, Landroid/view/ViewRootImplInjector$1;
-
-    invoke-direct {v0, p0}, Landroid/view/ViewRootImplInjector$1;-><init>(Landroid/view/ViewRootImplInjector;)V
-
-    iput-object v0, p0, Landroid/view/ViewRootImplInjector;->mLongshotStartRunnable:Landroid/view/ViewRootImplInjector$LongshotRunnable;
-
     new-instance v0, Landroid/view/ViewRootImplInjector$2;
 
     invoke-direct {v0, p0}, Landroid/view/ViewRootImplInjector$2;-><init>(Landroid/view/ViewRootImplInjector;)V
+
+    iput-object v0, p0, Landroid/view/ViewRootImplInjector;->mLongshotStartRunnable:Landroid/view/ViewRootImplInjector$LongshotRunnable;
+
+    new-instance v0, Landroid/view/ViewRootImplInjector$3;
+
+    invoke-direct {v0, p0}, Landroid/view/ViewRootImplInjector$3;-><init>(Landroid/view/ViewRootImplInjector;)V
 
     iput-object v0, p0, Landroid/view/ViewRootImplInjector;->mLongshotStopRunnable:Landroid/view/ViewRootImplInjector$LongshotRunnable;
 
@@ -491,9 +553,18 @@
 
     iput v1, p0, Landroid/view/ViewRootImplInjector;->mScreenWidth:I
 
+    invoke-static {}, Landroid/view/ViewRootImplInjector;->initInstance()V
+
+    sget-object v1, Landroid/view/ViewRootImplInjector;->sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Landroid/view/IOpViewRootImpl;->init()V
+
+    :cond_0
     sget-boolean v1, Landroid/view/ViewRootImplInjector;->IS_GESTURE_BUTTON_ENABLED:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     iget v1, p0, Landroid/view/ViewRootImplInjector;->mScreenWidth:I
 
@@ -523,7 +594,7 @@
 
     sget-boolean v1, Landroid/view/OpScreenCompatViewInjector;->sIsDisplayCompatApp:Z
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget v1, p0, Landroid/view/ViewRootImplInjector;->mGestureKeyDistanceThreshold:I
 
@@ -537,7 +608,7 @@
 
     iput v1, p0, Landroid/view/ViewRootImplInjector;->mGestureKeyDistanceThreshold:I
 
-    :cond_0
+    :cond_1
     iget-object v1, p1, Landroid/view/ViewRootImpl;->mBasePackageName:Ljava/lang/String;
 
     const-string v2, "net.oneplus.launcher"
@@ -566,7 +637,7 @@
 
     sget-boolean v1, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -588,8 +659,46 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     return-void
+.end method
+
+.method private static getDefaultOnePlusService()Lcom/oneplus/os/IOnePlusService;
+    .locals 1
+
+    sget-object v0, Landroid/view/ViewRootImplInjector;->ONEPLUS_SERVICE_CREATOR:Landroid/util/Singleton;
+
+    invoke-virtual {v0}, Landroid/util/Singleton;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oneplus/os/IOnePlusService;
+
+    return-object v0
+.end method
+
+.method public static getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    :try_start_0
+    invoke-static {}, Landroid/view/ViewRootImplInjector;->getOnePlusService()Lcom/oneplus/os/IOnePlusService;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0}, Lcom/oneplus/os/IOnePlusService;->getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x0
+
+    return-object v1
 .end method
 
 .method private static getNightMode(Landroid/content/Context;)I
@@ -610,6 +719,27 @@
     return v0
 .end method
 
+.method private static getOnePlusService()Lcom/oneplus/os/IOnePlusService;
+    .locals 1
+
+    sget-object v0, Landroid/view/ViewRootImplInjector;->mOnePlusService:Lcom/oneplus/os/IOnePlusService;
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    invoke-static {}, Landroid/view/ViewRootImplInjector;->getDefaultOnePlusService()Lcom/oneplus/os/IOnePlusService;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/view/ViewRootImplInjector;->mOnePlusService:Lcom/oneplus/os/IOnePlusService;
+
+    sget-object v0, Landroid/view/ViewRootImplInjector;->mOnePlusService:Lcom/oneplus/os/IOnePlusService;
+
+    return-object v0
+.end method
+
 .method private static initForceHWListForCurApplication()V
     .locals 2
 
@@ -628,6 +758,27 @@
     const-string v1, "com.tencent.mm"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private static initInstance()V
+    .locals 1
+
+    sget-object v0, Landroid/view/ViewRootImplInjector;->sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_VIEW_ROOT_IMPL:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    invoke-static {v0}, Lcom/oneplus/android/context/OneplusContext;->queryInterface(Lcom/oneplus/android/context/IOneplusContext$EType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/IOpViewRootImpl;
+
+    sput-object v0, Landroid/view/ViewRootImplInjector;->sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
 
     :cond_0
     return-void
@@ -1161,6 +1312,16 @@
 
 .method public checkKeyguardAndConfig(Ljava/lang/String;)V
     .locals 4
+
+    iget-object v0, p0, Landroid/view/ViewRootImplInjector;->mViewRootImpl:Landroid/view/ViewRootImpl;
+
+    iget-object v0, v0, Landroid/view/ViewRootImpl;->mBasePackageName:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/view/ViewRootImplInjector;->getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/view/ViewRootImplInjector;->mGameShakeConfig:Ljava/lang/String;
 
     sget-boolean v0, Landroid/view/ViewRootImplInjector;->IS_GESTURE_BUTTON_ENABLED:Z
 
@@ -1761,6 +1922,33 @@
     const/4 v1, 0x2
 
     return v1
+.end method
+
+.method public processGameShakeMotionEvent(Landroid/view/MotionEvent;Z)Landroid/view/MotionEvent;
+    .locals 2
+
+    iget-object v0, p0, Landroid/view/ViewRootImplInjector;->mGameShakeConfig:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/view/ViewRootImplInjector;->initInstance()V
+
+    sget-object v0, Landroid/view/ViewRootImplInjector;->sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Landroid/view/ViewRootImplInjector;->mGameShakeConfig:Ljava/lang/String;
+
+    invoke-interface {v0, p1, p2, v1}, Landroid/view/IOpViewRootImpl;->processGameShakeMotionEvent(Landroid/view/MotionEvent;ZLjava/lang/String;)Landroid/view/MotionEvent;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public processGestureEvent(Landroid/view/MotionEvent;)Z
@@ -2941,43 +3129,39 @@
 
     if-eqz v3, :cond_3d
 
-    const-wide v11, 0x3fd3333333333333L    # 0.3
-
     if-nez v9, :cond_32
 
     iget v3, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
 
-    float-to-double v13, v3
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mScreenHeight:I
 
-    iget v3, v1, Landroid/view/ViewRootImplInjector;->mScreenHeight:I
+    int-to-float v7, v7
 
-    move v15, v5
+    sget v11, Landroid/view/ViewRootImplInjector;->PORTRAIT_NON_DETECT_SCALE:F
 
-    int-to-double v4, v3
+    mul-float/2addr v7, v11
 
-    mul-double/2addr v4, v11
-
-    cmpl-double v3, v13, v4
+    cmpl-float v3, v3, v7
 
     if-ltz v3, :cond_31
 
     iget v3, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mEdgeSwipeStartThreshold:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mEdgeSwipeStartThreshold:I
 
-    int-to-float v5, v4
+    int-to-float v11, v7
 
-    cmpg-float v5, v3, v5
+    cmpg-float v11, v3, v11
 
-    if-lez v5, :cond_2f
+    if-lez v11, :cond_2f
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mScreenWidth:I
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mScreenWidth:I
 
-    sub-int/2addr v5, v4
+    sub-int/2addr v11, v7
 
-    int-to-float v4, v5
+    int-to-float v7, v11
 
-    cmpl-float v3, v3, v4
+    cmpl-float v3, v3, v7
 
     if-ltz v3, :cond_31
 
@@ -2986,11 +3170,11 @@
 
     iget v3, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mEdgeSwipeStartThreshold:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mEdgeSwipeStartThreshold:I
 
-    int-to-float v4, v4
+    int-to-float v7, v7
 
-    cmpg-float v3, v3, v4
+    cmpg-float v3, v3, v7
 
     if-gtz v3, :cond_30
 
@@ -2999,7 +3183,7 @@
     goto :goto_e
 
     :cond_30
-    const/4 v3, 0x1
+    move v3, v4
 
     :goto_e
     iput v3, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
@@ -3007,21 +3191,19 @@
     goto :goto_10
 
     :cond_31
-    const/4 v3, 0x1
+    invoke-virtual {v1, v4}, Landroid/view/ViewRootImplInjector;->getHomeGestureRegion(Z)Landroid/graphics/Region;
 
-    invoke-virtual {v1, v3}, Landroid/view/ViewRootImplInjector;->getHomeGestureRegion(Z)Landroid/graphics/Region;
+    move-result-object v3
 
-    move-result-object v4
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
-    iget v3, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
+    float-to-int v7, v7
 
-    float-to-int v3, v3
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
+    float-to-int v11, v11
 
-    float-to-int v5, v5
-
-    invoke-virtual {v4, v3, v5}, Landroid/graphics/Region;->contains(II)Z
+    invoke-virtual {v3, v7, v11}, Landroid/graphics/Region;->contains(II)Z
 
     move-result v3
 
@@ -3034,95 +3216,93 @@
     goto :goto_10
 
     :cond_32
-    move v15, v5
-
     iget v3, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
     float-to-int v3, v3
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
 
-    float-to-int v4, v4
+    float-to-int v7, v7
 
-    invoke-virtual {v1, v3, v4, v6}, Landroid/view/ViewRootImplInjector;->adjuestEdgeThreshold(III)I
+    invoke-virtual {v1, v3, v7, v6}, Landroid/view/ViewRootImplInjector;->adjuestEdgeThreshold(III)I
 
     move-result v3
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
 
-    float-to-double v4, v4
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mScreenWidth:I
 
-    iget v13, v1, Landroid/view/ViewRootImplInjector;->mScreenWidth:I
+    int-to-float v11, v11
 
-    int-to-double v13, v13
+    sget v12, Landroid/view/ViewRootImplInjector;->PORTRAIT_NON_DETECT_SCALE:F
 
-    mul-double/2addr v13, v11
+    mul-float/2addr v11, v12
 
-    cmpl-double v4, v4, v13
+    cmpl-float v7, v7, v11
 
-    if-ltz v4, :cond_35
+    if-ltz v7, :cond_35
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
-    int-to-float v5, v3
+    int-to-float v11, v3
 
-    cmpg-float v5, v4, v5
+    cmpg-float v11, v7, v11
 
-    if-lez v5, :cond_33
+    if-lez v11, :cond_33
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mScreenHeight:I
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mScreenHeight:I
 
-    sub-int/2addr v5, v3
+    sub-int/2addr v11, v3
 
-    int-to-float v5, v5
+    int-to-float v11, v11
 
-    cmpl-float v4, v4, v5
+    cmpl-float v7, v7, v11
 
-    if-ltz v4, :cond_35
+    if-ltz v7, :cond_35
 
     :cond_33
     const/4 v2, 0x1
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
-    int-to-float v5, v3
+    int-to-float v11, v3
 
-    cmpg-float v4, v4, v5
+    cmpg-float v7, v7, v11
 
-    if-gtz v4, :cond_34
+    if-gtz v7, :cond_34
 
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
     goto :goto_f
 
     :cond_34
-    const/4 v4, 0x1
+    move v7, v4
 
     :goto_f
-    iput v4, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
+    iput v7, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
 
     goto :goto_10
 
     :cond_35
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
-    invoke-virtual {v1, v4}, Landroid/view/ViewRootImplInjector;->getHomeGestureRegion(Z)Landroid/graphics/Region;
+    invoke-virtual {v1, v7}, Landroid/view/ViewRootImplInjector;->getHomeGestureRegion(Z)Landroid/graphics/Region;
 
-    move-result-object v5
+    move-result-object v11
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
-    float-to-int v4, v4
+    float-to-int v7, v7
 
-    iget v11, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
+    iget v12, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
 
-    float-to-int v11, v11
+    float-to-int v12, v12
 
-    invoke-virtual {v5, v4, v11}, Landroid/graphics/Region;->contains(II)Z
+    invoke-virtual {v11, v7, v12}, Landroid/graphics/Region;->contains(II)Z
 
-    move-result v4
+    move-result v7
 
-    if-eqz v4, :cond_36
+    if-eqz v7, :cond_36
 
     const/4 v2, 0x1
 
@@ -3150,132 +3330,132 @@
     iget v3, v3, Landroid/view/View;->mSystemUiVisibility:I
 
     :goto_11
-    sget-boolean v4, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
+    sget-boolean v7, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
 
-    if-eqz v4, :cond_39
+    if-eqz v7, :cond_39
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "[GESTURE_BUTTON] swipe from "
+    const-string v11, "[GESTURE_BUTTON] swipe from "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v5, " on "
+    const-string v11, " on "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     if-nez v3, :cond_38
 
-    const-string v5, ""
+    const-string v11, ""
 
     goto :goto_12
 
     :cond_38
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, " mSysUiVis=0x"
+    const-string v12, " mSysUiVis=0x"
 
-    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
+    move-result-object v12
+
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
     move-result-object v11
 
-    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
     :goto_12
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v7
 
-    invoke-static {v8, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_39
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
 
-    if-eq v4, v10, :cond_3a
+    if-eq v7, v10, :cond_3a
 
-    iget-object v4, v1, Landroid/view/ViewRootImplInjector;->mSystemGestureExclusionRegion:Landroid/graphics/Region;
+    iget-object v7, v1, Landroid/view/ViewRootImplInjector;->mSystemGestureExclusionRegion:Landroid/graphics/Region;
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
-
-    float-to-int v5, v5
-
-    iget v11, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mRawX:F
 
     float-to-int v11, v11
 
-    invoke-virtual {v4, v5, v11}, Landroid/graphics/Region;->contains(II)Z
+    iget v12, v1, Landroid/view/ViewRootImplInjector;->mRawY:F
 
-    move-result v4
+    float-to-int v12, v12
 
-    if-eqz v4, :cond_3a
+    invoke-virtual {v7, v11, v12}, Landroid/graphics/Region;->contains(II)Z
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move-result v7
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v7, :cond_3a
 
-    const-string v5, "[GESTURE_BUTTON] skip swipe from "
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
+    const-string v11, "[GESTURE_BUTTON] skip swipe from "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v5, " mSystemGestureExclusionRegion="
+    iget v11, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v5, v1, Landroid/view/ViewRootImplInjector;->mSystemGestureExclusionRegion:Landroid/graphics/Region;
+    const-string v11, " mSystemGestureExclusionRegion="
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v11, v1, Landroid/view/ViewRootImplInjector;->mSystemGestureExclusionRegion:Landroid/graphics/Region;
 
-    move-result-object v4
+    invoke-virtual {v7, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v8, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v2, 0x0
 
     :cond_3a
-    iget-object v4, v1, Landroid/view/ViewRootImplInjector;->mViewRootImpl:Landroid/view/ViewRootImpl;
+    iget-object v7, v1, Landroid/view/ViewRootImplInjector;->mViewRootImpl:Landroid/view/ViewRootImpl;
 
-    iget-object v4, v4, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
+    iget-object v7, v7, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    iget v4, v4, Landroid/view/WindowManager$LayoutParams;->type:I
+    iget v7, v7, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    const/16 v5, 0x7db
+    const/16 v11, 0x7db
 
-    if-ne v4, v5, :cond_3b
+    if-ne v7, v11, :cond_3b
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mSwipeSide:I
 
-    if-eq v4, v10, :cond_3b
+    if-eq v7, v10, :cond_3b
 
     goto :goto_13
 
     :cond_3b
-    iget-boolean v4, v1, Landroid/view/ViewRootImplInjector;->mIsKeyguard:Z
+    iget-boolean v7, v1, Landroid/view/ViewRootImplInjector;->mIsKeyguard:Z
 
-    if-eqz v4, :cond_3c
+    if-eqz v7, :cond_3c
 
     const/4 v2, 0x0
 
@@ -3284,8 +3464,6 @@
     goto :goto_18
 
     :cond_3d
-    move v15, v5
-
     const/4 v3, 0x0
 
     if-eqz v9, :cond_3e
@@ -3304,72 +3482,68 @@
     :goto_14
     if-eqz v6, :cond_41
 
-    const/4 v4, 0x1
-
     if-ne v6, v4, :cond_3f
 
     goto :goto_16
 
     :cond_3f
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonHeight:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonHeight:I
 
-    iput v4, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
+    iput v7, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
 
-    int-to-float v4, v4
+    int-to-float v7, v7
 
-    cmpg-float v4, v3, v4
+    cmpg-float v7, v3, v7
 
-    if-gez v4, :cond_40
+    if-gez v7, :cond_40
 
-    const/4 v4, 0x1
+    move v7, v4
 
     goto :goto_15
 
     :cond_40
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
     :goto_15
-    move v2, v4
+    move v2, v7
 
     goto :goto_18
 
     :cond_41
     :goto_16
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mScreenHeight:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mScreenHeight:I
 
-    iget v5, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonHeight:I
+    iget v10, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonHeight:I
 
-    sub-int/2addr v4, v5
+    sub-int/2addr v7, v10
 
-    iput v4, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
+    iput v7, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
 
-    iget v4, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
+    iget v7, v1, Landroid/view/ViewRootImplInjector;->mGestureButtonZone:I
 
-    int-to-float v4, v4
+    int-to-float v7, v7
 
-    cmpl-float v4, v3, v4
+    cmpl-float v7, v3, v7
 
-    if-lez v4, :cond_42
+    if-lez v7, :cond_42
 
-    const/4 v4, 0x1
+    move v7, v4
 
     goto :goto_17
 
     :cond_42
-    const/4 v4, 0x0
+    const/4 v7, 0x0
 
     :goto_17
-    move v2, v4
+    move v2, v7
 
     :cond_43
     :goto_18
     if-eqz v2, :cond_46
 
-    const/4 v3, 0x1
-
-    iput-boolean v3, v1, Landroid/view/ViewRootImplInjector;->mCheckForGestureButton:Z
+    iput-boolean v4, v1, Landroid/view/ViewRootImplInjector;->mCheckForGestureButton:Z
 
     sget-boolean v3, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
 
@@ -3384,19 +3558,19 @@
 
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    move-result-object v4
+    move-result-object v7
 
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     iget-object v3, v1, Landroid/view/ViewRootImplInjector;->mViewRootImpl:Landroid/view/ViewRootImpl;
 
     iget-object v3, v3, Landroid/view/ViewRootImpl;->mHandler:Landroid/view/ViewRootImpl$ViewRootHandler;
 
-    iget-object v4, v1, Landroid/view/ViewRootImplInjector;->mViewRootImpl:Landroid/view/ViewRootImpl;
+    iget-object v7, v1, Landroid/view/ViewRootImplInjector;->mViewRootImpl:Landroid/view/ViewRootImpl;
 
-    iget-object v4, v4, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
+    iget-object v7, v7, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
 
-    invoke-static {v3, v0, v4}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
+    invoke-static {v3, v0, v7}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
@@ -3408,11 +3582,11 @@
 
     iget-object v3, v3, Landroid/view/ViewRootImpl;->mHandler:Landroid/view/ViewRootImpl$ViewRootHandler;
 
-    sget v4, Landroid/view/ViewRootImplInjector;->GESTURE_MOTION_QUEUE_DELAY:I
+    sget v7, Landroid/view/ViewRootImplInjector;->GESTURE_MOTION_QUEUE_DELAY:I
 
-    int-to-long v4, v4
+    int-to-long v10, v7
 
-    invoke-virtual {v3, v0, v4, v5}, Landroid/view/ViewRootImpl$ViewRootHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v3, v0, v10, v11}, Landroid/view/ViewRootImpl$ViewRootHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     sget-boolean v3, Landroid/view/ViewRootImplInjector;->DEBUG_GESTURE_BUTTON:Z
 
@@ -3423,9 +3597,7 @@
     invoke-static {v8, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_45
-    const/4 v3, 0x1
-
-    return v3
+    return v4
 
     :cond_46
     :goto_19
@@ -3435,191 +3607,217 @@
 .end method
 
 .method public processPointerEvent(Landroid/view/MotionEvent;Landroid/content/Context;Landroid/view/View;Ljava/lang/String;)Z
-    .locals 9
+    .locals 10
 
+    const/4 v0, 0x0
+
+    sget-object v1, Landroid/view/ViewRootImplInjector;->MULTI_TOUCH_GAME_LIST:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    const-string v3, "ViewRootImplInjector"
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    if-eqz p4, :cond_0
+
+    invoke-virtual {p4, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/4 v0, 0x1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "found multi-touch game: "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_0
+    goto :goto_0
+
+    :cond_1
+    :goto_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    move-result v0
-
-    const-string v1, "ViewRootImplInjector"
+    move-result v1
 
     const/4 v2, 0x1
 
-    const/4 v3, 0x0
-
     const/4 v4, 0x3
 
-    if-ne v0, v4, :cond_1
+    const/4 v5, 0x0
+
+    if-ne v1, v4, :cond_3
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    move-result v0
+    move-result v1
 
-    const/4 v5, 0x5
+    const/4 v6, 0x5
 
-    if-ne v0, v5, :cond_1
+    if-ne v1, v6, :cond_3
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDownTime()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    sub-long/2addr v5, v7
+    sub-long/2addr v6, v8
 
-    const-wide/16 v7, 0x1f4
+    const-wide/16 v8, 0x1f4
 
-    cmp-long v0, v5, v7
+    cmp-long v1, v6, v8
 
-    if-gez v0, :cond_1
+    if-gez v1, :cond_3
 
     nop
 
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v5, "oem_acc_sensor_three_finger"
+    const-string v6, "oem_acc_sensor_three_finger"
 
-    invoke-static {v0, v5, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v1, v6, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_2
 
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v3
-
-    :goto_0
-    iput-boolean v0, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Gesture Screenshot Enabled = "
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v5, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v0
-
-    if-eq v0, v4, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v0
-
-    const/4 v5, 0x6
-
-    if-ne v0, v5, :cond_3
-
-    :cond_2
-    iput-boolean v3, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
-
-    :cond_3
-    const/4 v0, 0x0
-
-    sget-object v5, Landroid/view/ViewRootImplInjector;->MULTI_TOUCH_GAME_LIST:Ljava/util/List;
-
-    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_1
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_5
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/String;
-
-    if-eqz p4, :cond_4
-
-    invoke-virtual {p4, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    const/4 v0, 0x1
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "found multi-touch game: "
-
-    invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v1, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move v1, v2
 
     goto :goto_2
 
+    :cond_2
+    move v1, v5
+
+    :goto_2
+    iput-boolean v1, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Gesture Screenshot Enabled = "
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v6, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v0, :cond_3
+
+    iget-object v1, p0, Landroid/view/ViewRootImplInjector;->mGameShakeConfig:Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    invoke-static {}, Landroid/view/ViewRootImplInjector;->initInstance()V
+
+    sget-object v1, Landroid/view/ViewRootImplInjector;->sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v6
+
+    sget-object v7, Landroid/view/ViewRootImplInjector;->sOpViewRootImpl:Landroid/view/IOpViewRootImpl;
+
+    iget-object v8, p0, Landroid/view/ViewRootImplInjector;->mGameShakeConfig:Ljava/lang/String;
+
+    invoke-interface {v7, v6, v5, v8}, Landroid/view/IOpViewRootImpl;->addMotionEventToAlgoArr(IZLjava/lang/String;)V
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v1
+
+    if-eq v1, v2, :cond_4
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v1
+
+    if-eq v1, v4, :cond_4
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v1
+
+    const/4 v6, 0x6
+
+    if-ne v1, v6, :cond_5
+
     :cond_4
-    goto :goto_1
+    iput-boolean v5, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
 
     :cond_5
-    :goto_2
-    iget-boolean v5, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
+    iget-boolean v1, p0, Landroid/view/ViewRootImplInjector;->mIsGestureScreenshotEnabled:Z
 
-    if-eqz v5, :cond_6
+    if-eqz v1, :cond_6
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    move-result v5
+    move-result v1
 
-    if-lt v5, v4, :cond_6
+    if-lt v1, v4, :cond_6
 
     if-nez v0, :cond_6
 
-    move-object v3, p1
+    move-object v1, p1
 
-    invoke-virtual {v3, v4}, Landroid/view/MotionEvent;->setAction(I)V
+    invoke-virtual {v1, v4}, Landroid/view/MotionEvent;->setAction(I)V
 
-    invoke-virtual {p3, v3}, Landroid/view/View;->dispatchPointerEvent(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p3, v1}, Landroid/view/View;->dispatchPointerEvent(Landroid/view/MotionEvent;)Z
 
     const-string v4, "Gesture Screenshot triggered, ignore event"
 
-    invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
     :cond_6
-    return v3
+    return v5
 .end method

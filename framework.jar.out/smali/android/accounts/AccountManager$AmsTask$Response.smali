@@ -119,7 +119,7 @@
     goto :goto_0
 
     :cond_1
-    const-string v1, "retry"
+    const-string/jumbo v1, "retry"
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 

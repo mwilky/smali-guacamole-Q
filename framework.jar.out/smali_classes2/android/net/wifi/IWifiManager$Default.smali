@@ -1245,17 +1245,6 @@
     return v0
 .end method
 
-.method public setFtmWifiAdbEnabled(Z)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    return-void
-.end method
-
 .method public setHotspotRate(I)Z
     .locals 1
     .annotation system Ldalvik/annotation/Throws;

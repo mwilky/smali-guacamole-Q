@@ -8711,7 +8711,7 @@
         }
     .end annotation
 
-    const-string v0, "retrieveNetworkLogs"
+    const-string/jumbo v0, "retrieveNetworkLogs"
 
     invoke-direct {p0, v0}, Landroid/app/admin/DevicePolicyManager;->throwIfParentInstance(Ljava/lang/String;)V
 
@@ -8755,7 +8755,7 @@
         }
     .end annotation
 
-    const-string v0, "retrievePreRebootSecurityLogs"
+    const-string/jumbo v0, "retrievePreRebootSecurityLogs"
 
     invoke-direct {p0, v0}, Landroid/app/admin/DevicePolicyManager;->throwIfParentInstance(Ljava/lang/String;)V
 
@@ -8804,7 +8804,7 @@
         }
     .end annotation
 
-    const-string v0, "retrieveSecurityLogs"
+    const-string/jumbo v0, "retrieveSecurityLogs"
 
     invoke-direct {p0, v0}, Landroid/app/admin/DevicePolicyManager;->throwIfParentInstance(Ljava/lang/String;)V
 

@@ -57,6 +57,14 @@
     .end annotation
 .end method
 
+.method public abstract isPackageInPassedList(Ljava/lang/String;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract needToAddNameForToast(Ljava/lang/String;)Z
     .annotation system Ldalvik/annotation/Throws;
         value = {

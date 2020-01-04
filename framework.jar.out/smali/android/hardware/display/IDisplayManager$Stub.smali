@@ -237,7 +237,7 @@
     return-object v0
 
     :pswitch_11
-    const-string v0, "resumeWifiDisplay"
+    const-string/jumbo v0, "resumeWifiDisplay"
 
     return-object v0
 
@@ -295,8 +295,6 @@
     const-string v0, "getDisplayInfo"
 
     return-object v0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

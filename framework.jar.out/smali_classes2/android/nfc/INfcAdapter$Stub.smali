@@ -288,32 +288,32 @@
     return-object v0
 
     :pswitch_1a
-    const-string v0, "getNfcAdapterVendorInterface"
+    const-string/jumbo v0, "getNfcAdapterVendorInterface"
 
     return-object v0
 
     :pswitch_1b
-    const-string v0, "getNfcDtaInterface"
+    const-string/jumbo v0, "getNfcDtaInterface"
 
     return-object v0
 
     :pswitch_1c
-    const-string v0, "getNfcAdapterExtrasInterface"
+    const-string/jumbo v0, "getNfcAdapterExtrasInterface"
 
     return-object v0
 
     :pswitch_1d
-    const-string v0, "getNfcFCardEmulationInterface"
+    const-string/jumbo v0, "getNfcFCardEmulationInterface"
 
     return-object v0
 
     :pswitch_1e
-    const-string v0, "getNfcCardEmulationInterface"
+    const-string/jumbo v0, "getNfcCardEmulationInterface"
 
     return-object v0
 
     :pswitch_1f
-    const-string v0, "getNfcTagInterface"
+    const-string/jumbo v0, "getNfcTagInterface"
 
     return-object v0
 

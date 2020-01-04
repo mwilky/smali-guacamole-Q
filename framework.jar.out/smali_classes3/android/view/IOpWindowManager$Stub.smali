@@ -34,6 +34,8 @@
 
 .field static final TRANSACTION_isKeyguardDone:I = 0x5
 
+.field static final TRANSACTION_isPackageInPassedList:I = 0x6
+
 .field static final TRANSACTION_needToAddNameForToast:I = 0x1
 
 
@@ -97,54 +99,53 @@
 .method public static getDefaultTransactionName(I)Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
+    packed-switch p0, :pswitch_data_0
 
     const/4 v0, 0x0
 
     return-object v0
 
-    :cond_0
+    :pswitch_0
+    const-string v0, "isPackageInPassedList"
+
+    return-object v0
+
+    :pswitch_1
     const-string v0, "isKeyguardDone"
 
     return-object v0
 
-    :cond_1
+    :pswitch_2
     const-string v0, "exitQuickReply"
 
     return-object v0
 
-    :cond_2
+    :pswitch_3
     const-string v0, "getQuickReplyList"
 
     return-object v0
 
-    :cond_3
+    :pswitch_4
     const-string v0, "addAppLockerPassedPackage"
 
     return-object v0
 
-    :cond_4
+    :pswitch_5
     const-string v0, "needToAddNameForToast"
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public static setDefaultImpl(Landroid/view/IOpWindowManager;)Z
@@ -196,29 +197,13 @@
 
     const-string v0, "android.view.IOpWindowManager"
 
-    const/4 v1, 0x1
+    const v1, 0x5f4e5446
 
-    if-eq p1, v1, :cond_5
+    const/4 v2, 0x1
 
-    const/4 v2, 0x2
+    if-eq p1, v1, :cond_0
 
-    if-eq p1, v2, :cond_4
-
-    const/4 v2, 0x3
-
-    if-eq p1, v2, :cond_3
-
-    const/4 v2, 0x4
-
-    if-eq p1, v2, :cond_2
-
-    const/4 v2, 0x5
-
-    if-eq p1, v2, :cond_1
-
-    const v2, 0x5f4e5446
-
-    if-eq p1, v2, :cond_0
+    packed-switch p1, :pswitch_data_0
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
@@ -226,71 +211,14 @@
 
     return v1
 
-    :cond_0
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return v1
-
-    :cond_1
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/view/IOpWindowManager$Stub;->isKeyguardDone()Z
-
-    move-result v2
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return v1
-
-    :cond_2
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/view/IOpWindowManager$Stub;->exitQuickReply()V
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v1
-
-    :cond_3
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    invoke-virtual {p0, v2}, Landroid/view/IOpWindowManager$Stub;->getQuickReplyList(I)Ljava/util/List;
-
-    move-result-object v3
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
-
-    return v1
-
-    :cond_4
+    :pswitch_0
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {p0, v2}, Landroid/view/IOpWindowManager$Stub;->addAppLockerPassedPackage(Ljava/lang/String;)V
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v1
-
-    :cond_5
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Landroid/view/IOpWindowManager$Stub;->needToAddNameForToast(Ljava/lang/String;)Z
+    invoke-virtual {p0, v1}, Landroid/view/IOpWindowManager$Stub;->isPackageInPassedList(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -298,5 +226,89 @@
 
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    return v1
+    return v2
+
+    :pswitch_1
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Landroid/view/IOpWindowManager$Stub;->isKeyguardDone()Z
+
+    move-result v1
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v2
+
+    :pswitch_2
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Landroid/view/IOpWindowManager$Stub;->exitQuickReply()V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v2
+
+    :pswitch_3
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Landroid/view/IOpWindowManager$Stub;->getQuickReplyList(I)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    return v2
+
+    :pswitch_4
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/view/IOpWindowManager$Stub;->addAppLockerPassedPackage(Ljava/lang/String;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v2
+
+    :pswitch_5
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/view/IOpWindowManager$Stub;->needToAddNameForToast(Ljava/lang/String;)Z
+
+    move-result v3
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v2
+
+    :cond_0
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v2
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,182 +3,200 @@
 .source "OPDiagnoseManager.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/os/OPDiagnoseManager$RefreshTask;
+    }
+.end annotation
+
+
 # static fields
-.field public static ISSUE_ANSWER_FAIL_NET:I
+.field private static final ACTION_OPDIAGNOSE_GET_IMEI:Ljava/lang/String; = "android.os.OPDIAGNOSE_GET_INFO"
 
-.field public static ISSUE_APK_INSTALL_FAIL:I
+.field private static final DEBUG:Z
 
-.field public static ISSUE_AUDIOTRACK_CREATE_FAIL:I
+.field public static ISSUE_ANSWER_FAIL_NET:I = 0x0
 
-.field public static ISSUE_AUDIO_ADSP_FAIL:I
+.field public static ISSUE_APK_INSTALL_FAIL:I = 0x0
 
-.field public static ISSUE_AUDIO_STREAM_MISUSE:I
+.field public static ISSUE_AUDIOTRACK_CREATE_FAIL:I = 0x0
 
-.field public static ISSUE_AUDIO_STREAM_MISUSE2:I
+.field public static ISSUE_AUDIO_ADSP_FAIL:I = 0x0
 
-.field public static ISSUE_AUDIO_STREAM_MISUSE3:I
+.field public static ISSUE_AUDIO_STREAM_MISUSE:I = 0x0
 
-.field public static ISSUE_AUDIO_STREAM_MISUSE4:I
+.field public static ISSUE_AUDIO_STREAM_MISUSE2:I = 0x0
 
-.field public static ISSUE_BATTER_ERROR:I
+.field public static ISSUE_AUDIO_STREAM_MISUSE3:I = 0x0
 
-.field public static ISSUE_BLOCK_SYSTEM_SERVER:I
+.field public static ISSUE_AUDIO_STREAM_MISUSE4:I = 0x0
 
-.field public static ISSUE_BT_PAIR_FAILED:I
+.field public static ISSUE_BATTER_ERROR:I = 0x0
 
-.field public static ISSUE_CANNOT_USE_4G_NETWORK:I
+.field public static ISSUE_BLOCK_SYSTEM_SERVER:I = 0x0
 
-.field public static ISSUE_CANNOT_USE_4G_SIM:I
+.field public static ISSUE_BT_PAIR_FAILED:I = 0x0
 
-.field public static ISSUE_CHARGER_INSERT:I
+.field public static ISSUE_CANNOT_USE_4G_NETWORK:I = 0x0
 
-.field public static ISSUE_CHARGER_REMOVE:I
+.field public static ISSUE_CANNOT_USE_4G_SIM:I = 0x0
 
-.field public static ISSUE_CHARGE_ABNORMAL_STOP:I
+.field public static ISSUE_CHARGER_INSERT:I = 0x0
 
-.field public static ISSUE_CHARGE_CURRENT_LOW:I
+.field public static ISSUE_CHARGER_REMOVE:I = 0x0
 
-.field public static ISSUE_CHARGE_CYCLE:I
+.field public static ISSUE_CHARGE_ABNORMAL_STOP:I = 0x0
 
-.field public static ISSUE_CHARGE_STOP:I
+.field public static ISSUE_CHARGE_CURRENT_LOW:I = 0x0
 
-.field public static ISSUE_CRASH_APP:I
+.field public static ISSUE_CHARGE_CYCLE:I = 0x0
 
-.field public static ISSUE_CRASH_MODEM:I
+.field public static ISSUE_CHARGE_STOP:I = 0x0
 
-.field public static ISSUE_CRASH_SYSTEM_SERVER:I
+.field public static ISSUE_CRASH_APP:I = 0x0
 
-.field public static ISSUE_CURRENT_STANDBY:I
+.field public static ISSUE_CRASH_MODEM:I = 0x0
 
-.field public static ISSUE_DASH_CHARGE_ERROR:I
+.field public static ISSUE_CRASH_SYSTEM_SERVER:I = 0x0
 
-.field public static ISSUE_DASH_FAIL:I
+.field public static ISSUE_CURRENT_STANDBY:I = 0x0
 
-.field public static ISSUE_DISPLAY_ELECTROSTATIC_DETECTION:I
+.field public static ISSUE_DASH_CHARGE_ERROR:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MO:I
+.field public static ISSUE_DASH_FAIL:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_CSFB:I
+.field public static ISSUE_DISPLAY_ELECTROSTATIC_DETECTION:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_DISCONNECT:I
+.field public static ISSUE_DROP_CALL_MO:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_NW_REJECT:I
+.field public static ISSUE_DROP_CALL_MT_CSFB:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_PAGING:I
+.field public static ISSUE_DROP_CALL_MT_DISCONNECT:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_RACH:I
+.field public static ISSUE_DROP_CALL_MT_NW_REJECT:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_RLF:I
+.field public static ISSUE_DROP_CALL_MT_PAGING:I = 0x0
 
-.field public static ISSUE_DROP_CALL_MT_RRC:I
+.field public static ISSUE_DROP_CALL_MT_RACH:I = 0x0
 
-.field public static ISSUE_DROP_CALL_WEAK_SIGNAL:I
+.field public static ISSUE_DROP_CALL_MT_RLF:I = 0x0
 
-.field public static ISSUE_FAKE_BS:I
+.field public static ISSUE_DROP_CALL_MT_RRC:I = 0x0
 
-.field public static ISSUE_FP_DIE:I
+.field public static ISSUE_DROP_CALL_WEAK_SIGNAL:I = 0x0
 
-.field public static ISSUE_FP_HW_ERROR:I
+.field public static ISSUE_FAKE_BS:I = 0x0
 
-.field public static ISSUE_FP_RESET_BYHM:I
+.field public static ISSUE_FP_DIE:I = 0x0
 
-.field public static ISSUE_GPS_LOCATION_FAILED:I
+.field public static ISSUE_FP_HW_ERROR:I = 0x0
 
-.field public static ISSUE_GPS_SIGNAL_LOW:I
+.field public static ISSUE_FP_RESET_BYHM:I = 0x0
 
-.field public static ISSUE_HEAT_CAMERA:I
+.field public static ISSUE_GPS_LOCATION_FAILED:I = 0x0
 
-.field public static ISSUE_HEAT_CAMERA_WHEN_CHARGE:I
+.field public static ISSUE_GPS_SIGNAL_LOW:I = 0x0
 
-.field public static ISSUE_HEAT_CPU_LOAD:I
+.field public static ISSUE_HEAT_CAMERA:I = 0x0
 
-.field public static ISSUE_HEAT_PLAY_WHEN_CHARGE:I
+.field public static ISSUE_HEAT_CAMERA_WHEN_CHARGE:I = 0x0
 
-.field public static ISSUE_HEAT_PLAY_WHEN_DASH:I
+.field public static ISSUE_HEAT_CPU_LOAD:I = 0x0
 
-.field public static ISSUE_HEAT_UNKNOWN_REASON:I
+.field public static ISSUE_HEAT_PLAY_WHEN_CHARGE:I = 0x0
 
-.field public static ISSUE_KERNEL_PANIC:I
+.field public static ISSUE_HEAT_PLAY_WHEN_DASH:I = 0x0
 
-.field public static ISSUE_LAG:I
+.field public static ISSUE_HEAT_UNKNOWN_REASON:I = 0x0
 
-.field public static ISSUE_LAG_SOUND:I
+.field public static ISSUE_KERNEL_PANIC:I = 0x0
 
-.field public static ISSUE_LOSE_SIMCARD:I
+.field public static ISSUE_LAG:I = 0x0
 
-.field public static ISSUE_NETWORK_DATA_DISCONNECT:I
+.field public static ISSUE_LAG_SOUND:I = 0x0
 
-.field public static ISSUE_NETWORK_DISCONNECT:I
+.field public static ISSUE_LOSE_SIMCARD:I = 0x0
 
-.field public static ISSUE_NFC_ESE_LOCKED:I
+.field public static ISSUE_NETWORK_DATA_DISCONNECT:I = 0x0
 
-.field public static ISSUE_NFC_POWER_CONSUMPTION:I
+.field public static ISSUE_NETWORK_DISCONNECT:I = 0x0
 
-.field public static ISSUE_NO_DATA_APN:I
+.field public static ISSUE_NFC_ESE_LOCKED:I = 0x0
 
-.field public static ISSUE_NO_SERVICE_DENIED:I
+.field public static ISSUE_NFC_POWER_CONSUMPTION:I = 0x0
 
-.field public static ISSUE_NO_SERVICE_ERR_LOGIN_FAILED:I
+.field public static ISSUE_NO_DATA_APN:I = 0x0
 
-.field public static ISSUE_NO_SIGNAL:I
+.field public static ISSUE_NO_SERVICE_DENIED:I = 0x0
 
-.field public static ISSUE_OTA_FAIL:I
+.field public static ISSUE_NO_SERVICE_ERR_LOGIN_FAILED:I = 0x0
 
-.field public static ISSUE_POWER_ALARM_WAKEUP:I
+.field public static ISSUE_NO_SIGNAL:I = 0x0
 
-.field public static ISSUE_POWER_DOWNLOAD:I
+.field public static ISSUE_OTA_FAIL:I = 0x0
 
-.field public static ISSUE_POWER_HW_SUBSYSTEM:I
+.field public static ISSUE_POWER_ALARM_WAKEUP:I = 0x0
 
-.field public static ISSUE_POWER_MODEM_WAKEUP:I
+.field public static ISSUE_POWER_DOWNLOAD:I = 0x0
 
-.field public static ISSUE_POWER_MUSIC:I
+.field public static ISSUE_POWER_HW_SUBSYSTEM:I = 0x0
 
-.field public static ISSUE_POWER_NETWORK_WAKEUP:I
+.field public static ISSUE_POWER_MODEM_WAKEUP:I = 0x0
 
-.field public static ISSUE_POWER_NO_SIGNAL:I
+.field public static ISSUE_POWER_MUSIC:I = 0x0
 
-.field public static ISSUE_POWER_OTHER:I
+.field public static ISSUE_POWER_NETWORK_WAKEUP:I = 0x0
 
-.field public static ISSUE_POWER_TELECOM_SHORT_MESSAGE:I
+.field public static ISSUE_POWER_NO_SIGNAL:I = 0x0
 
-.field public static ISSUE_POWER_WIFI_WAKEUP:I
+.field public static ISSUE_POWER_OTHER:I = 0x0
 
-.field public static ISSUE_POWRE_NO_SIGNAL_INTERSECTION:I
+.field public static ISSUE_POWER_TELECOM_SHORT_MESSAGE:I = 0x0
 
-.field public static ISSUE_RECORD_AUDIO:I
+.field public static ISSUE_POWER_WIFI_WAKEUP:I = 0x0
 
-.field public static ISSUE_RECORD_INPUT_BE_OPENED:I
+.field public static ISSUE_POWRE_NO_SIGNAL_INTERSECTION:I = 0x0
 
-.field public static ISSUE_RECORD_VIDEO:I
+.field public static ISSUE_RECORD_AUDIO:I = 0x0
 
-.field public static ISSUE_REGISTER_SOUND:I
+.field public static ISSUE_RECORD_INPUT_BE_OPENED:I = 0x0
 
-.field public static ISSUE_RESTART_UNKNOWN_REASON:I
+.field public static ISSUE_RECORD_VIDEO:I = 0x0
 
-.field public static ISSUE_ROOT:I
+.field public static ISSUE_REGISTER_SOUND:I = 0x0
 
-.field public static ISSUE_RTC:I
+.field public static ISSUE_RESTART_UNKNOWN_REASON:I = 0x0
 
-.field public static ISSUE_RTC_UPLOAD:I
+.field public static ISSUE_ROOT:I = 0x0
 
-.field public static ISSUE_SUBSYSTEM_ERROR:I
+.field public static ISSUE_RTC:I = 0x0
 
-.field public static ISSUE_TOTAL_RESTART:I
+.field public static ISSUE_RTC_UPLOAD:I = 0x0
 
-.field public static ISSUE_WIFI_CONN_FAIL:I
+.field public static ISSUE_SUBSYSTEM_ERROR:I = 0x0
 
-.field public static ISSUE_WIFI_DISCONNECT:I
+.field public static ISSUE_TOTAL_RESTART:I = 0x0
 
-.field public static ISSUE_WIFI_OPEN_CLOSE_FAIL:I
+.field public static ISSUE_WIFI_CONN_FAIL:I = 0x0
 
-.field public static ISSUE_WIFI_OPEN_FAIL:I
+.field public static ISSUE_WIFI_DISCONNECT:I = 0x0
 
-.field public static ISSUE_WIFI_SUSPEND_FAILED:I
+.field public static ISSUE_WIFI_OPEN_CLOSE_FAIL:I = 0x0
 
-.field public static ISSUE_WIFI_SYMBOL_ERROR:I
+.field public static ISSUE_WIFI_OPEN_FAIL:I = 0x0
 
-.field public static ISSUS_ONLY_FAKE_BS:I
+.field public static ISSUE_WIFI_SUSPEND_FAILED:I = 0x0
+
+.field public static ISSUE_WIFI_SYMBOL_ERROR:I = 0x0
+
+.field public static ISSUS_ONLY_FAKE_BS:I = 0x0
+
+.field private static final TAG:Ljava/lang/String; = "OPDiagnoseManager"
+
+.field private static mImei:Ljava/lang/String;
+
+.field private static mTelephonyManager:Landroid/telephony/TelephonyManager;
 
 .field private static final sLock:Ljava/lang/Object;
 
@@ -189,6 +207,10 @@
         }
     .end annotation
 .end field
+
+.field private static sOnePlusDiagnoseUtils:Landroid/os/IOnePlusDiagnoseUtils;
+
+.field private static timer:Ljava/util/Timer;
 
 
 # instance fields
@@ -204,10 +226,16 @@
 
 .field private final mNativeInstance:J
 
+.field private mReceiver:Landroid/content/BroadcastReceiver;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
+
+    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
+
+    sput-boolean v0, Landroid/os/OPDiagnoseManager;->DEBUG:Z
 
     const/4 v0, 0x1
 
@@ -571,11 +599,15 @@
 
     sput-boolean v0, Landroid/os/OPDiagnoseManager;->sNativeClassInited:Z
 
+    const-string v0, "***************"
+
+    sput-object v0, Landroid/os/OPDiagnoseManager;->mImei:Ljava/lang/String;
+
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;)V
-    .locals 2
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -586,11 +618,11 @@
     :try_start_0
     sget-boolean v1, Landroid/os/OPDiagnoseManager;->sNativeClassInited:Z
 
+    const/4 v2, 0x1
+
     if-nez v1, :cond_0
 
-    const/4 v1, 0x1
-
-    sput-boolean v1, Landroid/os/OPDiagnoseManager;->sNativeClassInited:Z
+    sput-boolean v2, Landroid/os/OPDiagnoseManager;->sNativeClassInited:Z
 
     invoke-static {}, Landroid/os/OPDiagnoseManager;->nativeClassInit()V
 
@@ -613,6 +645,166 @@
 
     iput-wide v0, p0, Landroid/os/OPDiagnoseManager;->mNativeInstance:J
 
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/pm/PackageManager;->getNameForUid(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    sget-boolean v3, Landroid/os/OPDiagnoseManager;->DEBUG:Z
+
+    if-eqz v3, :cond_3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "check reason = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v4, Landroid/os/OPDiagnoseManager;->mImei:Ljava/lang/String;
+
+    const/4 v5, 0x0
+
+    if-nez v4, :cond_1
+
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v4, v5
+
+    :goto_0
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, "/"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v4, Landroid/os/OPDiagnoseManager;->mImei:Ljava/lang/String;
+
+    const-string v6, "***************"
+
+    invoke-virtual {v6, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, "/"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v4, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    if-nez v4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v5
+
+    :goto_1
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "OPDiagnoseManager"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "uid = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, ", pkgName = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "OPDiagnoseManager"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    const-string v2, "android.uid.system"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    sget-object v2, Landroid/os/OPDiagnoseManager;->mImei:Ljava/lang/String;
+
+    const-string v3, "***************"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    sget-object v2, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    if-nez v2, :cond_6
+
+    :cond_4
+    sget-boolean v2, Landroid/os/OPDiagnoseManager;->DEBUG:Z
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "OPDiagnoseManager"
+
+    const-string/jumbo v3, "start"
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    sget-object v2, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    if-nez v2, :cond_6
+
+    new-instance v2, Ljava/util/Timer;
+
+    invoke-direct {v2}, Ljava/util/Timer;-><init>()V
+
+    sput-object v2, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    sget-object v3, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    new-instance v4, Landroid/os/OPDiagnoseManager$RefreshTask;
+
+    invoke-direct {v4, p0}, Landroid/os/OPDiagnoseManager$RefreshTask;-><init>(Landroid/os/OPDiagnoseManager;)V
+
+    const-wide/16 v5, 0x0
+
+    const-wide/16 v7, 0x2710
+
+    invoke-virtual/range {v3 .. v8}, Ljava/util/Timer;->scheduleAtFixedRate(Ljava/util/TimerTask;JJ)V
+
+    :cond_6
     return-void
 
     :catchall_0
@@ -624,6 +816,106 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v1
+.end method
+
+.method static synthetic access$000()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Landroid/os/OPDiagnoseManager;->mImei:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$002(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    sput-object p0, Landroid/os/OPDiagnoseManager;->mImei:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Landroid/os/OPDiagnoseManager;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Landroid/os/OPDiagnoseManager;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic access$200()Ljava/util/Timer;
+    .locals 1
+
+    sget-object v0, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    return-object v0
+.end method
+
+.method static synthetic access$202(Ljava/util/Timer;)Ljava/util/Timer;
+    .locals 0
+
+    sput-object p0, Landroid/os/OPDiagnoseManager;->timer:Ljava/util/Timer;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300()Z
+    .locals 1
+
+    sget-boolean v0, Landroid/os/OPDiagnoseManager;->DEBUG:Z
+
+    return v0
+.end method
+
+.method static synthetic access$400(Landroid/os/OPDiagnoseManager;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/os/OPDiagnoseManager;->registerClientReceiver()V
+
+    return-void
+.end method
+
+.method private static getTelephonyManager(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
+    .locals 1
+
+    sget-object v0, Landroid/os/OPDiagnoseManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, "phone"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/TelephonyManager;
+
+    sput-object v0, Landroid/os/OPDiagnoseManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    :cond_0
+    sget-object v0, Landroid/os/OPDiagnoseManager;->mTelephonyManager:Landroid/telephony/TelephonyManager;
+
+    return-object v0
+.end method
+
+.method private static initInstance()V
+    .locals 1
+
+    sget-object v0, Landroid/os/OPDiagnoseManager;->sOnePlusDiagnoseUtils:Landroid/os/IOnePlusDiagnoseUtils;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lcom/oneplus/android/context/IOneplusContext$EType;->ONEPLUS_OPDIAGNOSEUTILS:Lcom/oneplus/android/context/IOneplusContext$EType;
+
+    invoke-static {v0}, Lcom/oneplus/android/context/OneplusContext;->queryInterface(Lcom/oneplus/android/context/IOneplusContext$EType;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/IOnePlusDiagnoseUtils;
+
+    sput-object v0, Landroid/os/OPDiagnoseManager;->sOnePlusDiagnoseUtils:Landroid/os/IOnePlusDiagnoseUtils;
+
+    :cond_0
+    return-void
 .end method
 
 .method private static native nativeAddIssueCount(JII)I
@@ -650,6 +942,85 @@
 .method private static native nativeWriteDiagData(JILjava/lang/String;)I
 .end method
 
+.method private registerClientReceiver()V
+    .locals 3
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.os.OPDIAGNOSE_GET_INFO"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    new-instance v1, Landroid/os/OPDiagnoseManager$1;
+
+    invoke-direct {v1, p0}, Landroid/os/OPDiagnoseManager$1;-><init>(Landroid/os/OPDiagnoseManager;)V
+
+    iput-object v1, p0, Landroid/os/OPDiagnoseManager;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    sget-boolean v1, Landroid/os/OPDiagnoseManager;->DEBUG:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "OPDiagnoseManager"
+
+    const-string/jumbo v2, "register receiver"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v1, p0, Landroid/os/OPDiagnoseManager;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Landroid/os/OPDiagnoseManager;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    return-void
+.end method
+
+.method private unRegisterClientReceiver()V
+    .locals 2
+
+    iget-object v0, p0, Landroid/os/OPDiagnoseManager;->mContext:Landroid/content/Context;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Landroid/os/OPDiagnoseManager;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/os/OPDiagnoseManager;->mReceiver:Landroid/content/BroadcastReceiver;
+
+    return-void
+.end method
+
+.method public static verify(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-static {}, Landroid/os/OPDiagnoseManager;->initInstance()V
+
+    sget-object v0, Landroid/os/OPDiagnoseManager;->sOnePlusDiagnoseUtils:Landroid/os/IOnePlusDiagnoseUtils;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p0, p1}, Landroid/os/IOnePlusDiagnoseUtils;->verify(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 
 # virtual methods
 .method public addIssueCount(II)Z
@@ -672,6 +1043,154 @@
 
     :goto_0
     return v0
+.end method
+
+.method public getImei1(Landroid/content/Context;)Ljava/lang/String;
+    .locals 6
+
+    const-string v0, "OPDiagnoseManager"
+
+    invoke-static {p1}, Landroid/os/OPDiagnoseManager;->getTelephonyManager(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const-string v3, "***************"
+
+    :try_start_0
+    invoke-virtual {v1, v2}, Landroid/telephony/TelephonyManager;->getImei(I)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v3, v0
+
+    :goto_0
+    goto :goto_1
+
+    :catch_0
+    move-exception v4
+
+    invoke-virtual {v4}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v4
+
+    invoke-virtual {v4}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :goto_1
+    return-object v3
+.end method
+
+.method public getImeiAll(Landroid/content/Context;)Ljava/lang/String;
+    .locals 7
+
+    const-string v0, "OPDiagnoseManager"
+
+    invoke-static {p1}, Landroid/os/OPDiagnoseManager;->getTelephonyManager(Landroid/content/Context;)Landroid/telephony/TelephonyManager;
+
+    move-result-object v1
+
+    const-string v2, "***************"
+
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimCount()I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    :goto_0
+    if-ge v4, v3, :cond_1
+
+    :try_start_0
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v4}, Landroid/telephony/TelephonyManager;->getImei(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object v2, v5
+
+    add-int/lit8 v5, v4, 0x1
+
+    if-ge v5, v3, :cond_0
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ","
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v2, v5
+
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v4
+
+    invoke-virtual {v4}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v4
+
+    invoke-virtual {v4}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    nop
+
+    :cond_1
+    nop
+
+    :goto_1
+    return-object v2
 .end method
 
 .method public readDiagData(I)Z

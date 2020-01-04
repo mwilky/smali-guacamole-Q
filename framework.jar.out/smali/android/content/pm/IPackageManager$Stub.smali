@@ -719,7 +719,7 @@
     return-object v0
 
     :pswitch_29
-    const-string v0, "revokeDefaultPermissionsFromLuiApps"
+    const-string/jumbo v0, "revokeDefaultPermissionsFromLuiApps"
 
     return-object v0
 
@@ -729,7 +729,7 @@
     return-object v0
 
     :pswitch_2b
-    const-string v0, "revokeDefaultPermissionsFromDisabledTelephonyDataServices"
+    const-string/jumbo v0, "revokeDefaultPermissionsFromDisabledTelephonyDataServices"
 
     return-object v0
 
@@ -1444,7 +1444,7 @@
     return-object v0
 
     :pswitch_ba
-    const-string v0, "revokeRuntimePermission"
+    const-string/jumbo v0, "revokeRuntimePermission"
 
     return-object v0
 
@@ -1562,6 +1562,8 @@
     const-string v0, "checkPackageStartable"
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

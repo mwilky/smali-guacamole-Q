@@ -4132,19 +4132,17 @@
 
     const-string v6, "readFromProto error building locale with: language-"
 
-    const-string v7, "Configuration"
-
-    const-string v8, ""
+    const-string v7, ""
 
     invoke-virtual/range {p1 .. p3}, Landroid/util/proto/ProtoInputStream;->start(J)J
 
-    move-result-wide v9
+    move-result-wide v8
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-object v11, v0
+    move-object v10, v0
 
     :goto_0
     :try_start_0
@@ -4154,9 +4152,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_7
 
-    const/4 v12, -0x1
+    const/4 v11, -0x1
 
-    if-eq v0, v12, :cond_5
+    if-eq v0, v11, :cond_5
 
     :try_start_1
     invoke-virtual/range {p1 .. p1}, Landroid/util/proto/ProtoInputStream;->getFieldNumber()I
@@ -4165,264 +4163,302 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_6
 
+    const-string v12, "Configuration"
+
     packed-switch v0, :pswitch_data_0
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
     :pswitch_0
+    const-wide v13, 0x10900000014L
+
     :try_start_2
-    iget-object v0, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+    invoke-virtual {v2, v13, v14}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
 
-    const-wide v12, 0x10b00000013L
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v12, v13}, Landroid/app/WindowConfiguration;->readFromProto(Landroid/util/proto/ProtoInputStream;J)V
+    invoke-static {v0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
-    move-object v12, v8
+    move-result-object v0
 
-    move-wide/from16 v21, v9
+    invoke-virtual {v1, v0}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move-object v11, v7
+
+    move-wide/from16 v21, v8
+
+    goto/16 :goto_8
+
+    :catch_0
+    move-exception v0
+
+    :try_start_3
+    const-string v11, "error parsing locale list in configuration."
+
+    invoke-static {v12, v11, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move-object v11, v7
+
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
     :pswitch_1
-    const-wide v12, 0x10d00000012L
+    iget-object v0, v1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    const-wide v11, 0x10b00000013L
+
+    invoke-virtual {v0, v2, v11, v12}, Landroid/app/WindowConfiguration;->readFromProto(Landroid/util/proto/ProtoInputStream;J)V
+
+    move-object v11, v7
+
+    move-wide/from16 v21, v8
+
+    goto/16 :goto_8
+
+    :pswitch_2
+    const-wide v11, 0x10d00000012L
+
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->densityDpi:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_2
-    const-wide v12, 0x10d00000011L
+    :pswitch_3
+    const-wide v11, 0x10d00000011L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_3
-    const-wide v12, 0x10d00000010L
+    :pswitch_4
+    const-wide v11, 0x10d00000010L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->screenHeightDp:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_4
-    const-wide v12, 0x10d0000000fL
+    :pswitch_5
+    const-wide v11, 0x10d0000000fL
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_5
-    const-wide v12, 0x10d0000000eL
+    :pswitch_6
+    const-wide v11, 0x10d0000000eL
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->uiMode:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_6
-    const-wide v12, 0x10d0000000dL
+    :pswitch_7
+    const-wide v11, 0x10d0000000dL
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->orientation:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_7
-    const-wide v12, 0x10d0000000cL
+    :pswitch_8
+    const-wide v11, 0x10d0000000cL
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->navigationHidden:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_8
-    const-wide v12, 0x10d0000000bL
+    :pswitch_9
+    const-wide v11, 0x10d0000000bL
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->navigation:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_9
-    const-wide v12, 0x10d0000000aL
+    :pswitch_a
+    const-wide v11, 0x10d0000000aL
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->hardKeyboardHidden:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_a
-    const-wide v12, 0x10d00000009L
+    :pswitch_b
+    const-wide v11, 0x10d00000009L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->keyboardHidden:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_b
-    const-wide v12, 0x10d00000008L
+    :pswitch_c
+    const-wide v11, 0x10d00000008L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->keyboard:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_c
-    const-wide v12, 0x10d00000007L
+    :pswitch_d
+    const-wide v11, 0x10d00000007L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->touchscreen:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_d
-    const-wide v12, 0x10d00000006L
+    :pswitch_e
+    const-wide v11, 0x10d00000006L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->colorMode:I
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
-    :pswitch_e
-    const-wide v12, 0x10d00000005L
+    :pswitch_f
+    const-wide v11, 0x10d00000005L
 
-    invoke-virtual {v2, v12, v13}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v11, v12}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->screenLayout:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto/16 :goto_8
 
     :catchall_0
     move-exception v0
 
-    move-wide v3, v9
+    move-wide v3, v8
 
     goto/16 :goto_9
 
-    :pswitch_f
+    :pswitch_10
     const-wide v13, 0x20b00000004L
 
-    :try_start_3
+    :try_start_4
     invoke-virtual {v2, v13, v14}, Landroid/util/proto/ProtoInputStream;->start(J)J
 
     move-result-wide v13
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_6
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_6
 
-    move-object v0, v8
+    move-object v0, v7
 
-    move-object v15, v8
+    move-object v15, v7
 
-    move-object/from16 v16, v8
+    move-object/from16 v16, v7
 
-    move-object/from16 v17, v8
+    move-object/from16 v17, v7
 
     move-object/from16 v18, v15
 
@@ -4433,55 +4469,55 @@
     move-object v15, v0
 
     :goto_1
-    :try_start_4
+    :try_start_5
     invoke-virtual/range {p1 .. p1}, Landroid/util/proto/ProtoInputStream;->nextField()I
 
     move-result v0
-    :try_end_4
-    .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_4 .. :try_end_4} :catch_6
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
+    :try_end_5
+    .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_5 .. :try_end_5} :catch_7
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    if-eq v0, v12, :cond_4
+    if-eq v0, v11, :cond_4
 
-    :try_start_5
+    :try_start_6
     invoke-virtual/range {p1 .. p1}, Landroid/util/proto/ProtoInputStream;->getFieldNumber()I
 
     move-result v0
-    :try_end_5
-    .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_5 .. :try_end_5} :catch_1
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    :try_end_6
+    .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_6 .. :try_end_6} :catch_2
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    const/4 v12, 0x1
+    const/4 v11, 0x1
 
-    if-eq v0, v12, :cond_3
+    if-eq v0, v11, :cond_3
 
-    const/4 v12, 0x2
+    const/4 v11, 0x2
 
-    if-eq v0, v12, :cond_2
+    if-eq v0, v11, :cond_2
 
-    const/4 v12, 0x3
+    const/4 v11, 0x3
 
-    if-eq v0, v12, :cond_1
+    if-eq v0, v11, :cond_1
 
-    const/4 v12, 0x4
+    const/4 v11, 0x4
 
-    if-eq v0, v12, :cond_0
+    if-eq v0, v11, :cond_0
 
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
     goto :goto_2
 
     :cond_0
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10900000004L
+    const-wide v7, 0x10900000004L
 
-    :try_start_6
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
+    :try_start_7
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4490,13 +4526,13 @@
     goto :goto_2
 
     :cond_1
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10900000003L
+    const-wide v7, 0x10900000003L
 
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4505,13 +4541,13 @@
     goto :goto_2
 
     :cond_2
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10900000002L
+    const-wide v7, 0x10900000002L
 
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -4520,93 +4556,93 @@
     goto :goto_2
 
     :cond_3
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10900000001L
+    const-wide v7, 0x10900000001L
 
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readString(J)Ljava/lang/String;
 
     move-result-object v0
-    :try_end_6
-    .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_6 .. :try_end_6} :catch_0
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+    :try_end_7
+    .catch Landroid/util/proto/WireTypeMismatchException; {:try_start_7 .. :try_end_7} :catch_1
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     move-object v15, v0
 
     :goto_2
-    move-object v8, v12
+    move-object v7, v11
 
-    move-wide/from16 v9, v21
+    move-wide/from16 v8, v21
 
-    const/4 v12, -0x1
+    const/4 v11, -0x1
 
     goto :goto_1
 
     :catchall_1
     move-exception v0
 
-    move-object v12, v0
+    move-object v11, v0
 
-    move-object/from16 v8, v18
+    move-object/from16 v7, v18
 
-    move-object/from16 v9, v19
+    move-object/from16 v8, v19
 
-    move-object/from16 v10, v20
-
-    goto/16 :goto_6
-
-    :catch_0
-    move-exception v0
-
-    move-object/from16 v8, v18
-
-    move-object/from16 v9, v19
-
-    move-object/from16 v10, v20
-
-    goto/16 :goto_5
-
-    :catchall_2
-    move-exception v0
-
-    move-wide/from16 v21, v9
-
-    move-object v12, v0
-
-    move-object/from16 v8, v18
-
-    move-object/from16 v9, v19
-
-    move-object/from16 v10, v20
+    move-object/from16 v9, v20
 
     goto/16 :goto_6
 
     :catch_1
     move-exception v0
 
-    move-wide/from16 v21, v9
+    move-object/from16 v7, v18
 
-    move-object/from16 v8, v18
+    move-object/from16 v8, v19
 
-    move-object/from16 v9, v19
+    move-object/from16 v9, v20
 
-    move-object/from16 v10, v20
+    goto/16 :goto_5
+
+    :catchall_2
+    move-exception v0
+
+    move-wide/from16 v21, v8
+
+    move-object v11, v0
+
+    move-object/from16 v7, v18
+
+    move-object/from16 v8, v19
+
+    move-object/from16 v9, v20
+
+    goto/16 :goto_6
+
+    :catch_2
+    move-exception v0
+
+    move-wide/from16 v21, v8
+
+    move-object/from16 v7, v18
+
+    move-object/from16 v8, v19
+
+    move-object/from16 v9, v20
 
     goto/16 :goto_5
 
     :cond_4
-    move-object v12, v8
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
-
-    :try_start_7
-    invoke-virtual {v2, v13, v14}, Landroid/util/proto/ProtoInputStream;->end(J)V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_5
+    move-wide/from16 v21, v8
 
     :try_start_8
+    invoke-virtual {v2, v13, v14}, Landroid/util/proto/ProtoInputStream;->end(J)V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_5
+
+    :try_start_9
     new-instance v0, Ljava/util/Locale$Builder;
 
     invoke-direct {v0}, Ljava/util/Locale$Builder;-><init>()V
@@ -4614,34 +4650,34 @@
     invoke-virtual {v0, v15}, Ljava/util/Locale$Builder;->setLanguage(Ljava/lang/String;)Ljava/util/Locale$Builder;
 
     move-result-object v0
-    :try_end_8
-    .catch Ljava/util/IllformedLocaleException; {:try_start_8 .. :try_end_8} :catch_5
-    .catchall {:try_start_8 .. :try_end_8} :catchall_5
-
-    move-object/from16 v8, v18
-
-    :try_start_9
-    invoke-virtual {v0, v8}, Ljava/util/Locale$Builder;->setRegion(Ljava/lang/String;)Ljava/util/Locale$Builder;
-
-    move-result-object v0
     :try_end_9
-    .catch Ljava/util/IllformedLocaleException; {:try_start_9 .. :try_end_9} :catch_4
+    .catch Ljava/util/IllformedLocaleException; {:try_start_9 .. :try_end_9} :catch_6
     .catchall {:try_start_9 .. :try_end_9} :catchall_5
 
-    move-object/from16 v9, v19
+    move-object/from16 v7, v18
 
     :try_start_a
-    invoke-virtual {v0, v9}, Ljava/util/Locale$Builder;->setVariant(Ljava/lang/String;)Ljava/util/Locale$Builder;
+    invoke-virtual {v0, v7}, Ljava/util/Locale$Builder;->setRegion(Ljava/lang/String;)Ljava/util/Locale$Builder;
 
     move-result-object v0
     :try_end_a
-    .catch Ljava/util/IllformedLocaleException; {:try_start_a .. :try_end_a} :catch_3
+    .catch Ljava/util/IllformedLocaleException; {:try_start_a .. :try_end_a} :catch_5
     .catchall {:try_start_a .. :try_end_a} :catchall_5
 
-    move-object/from16 v10, v20
+    move-object/from16 v8, v19
 
     :try_start_b
-    invoke-virtual {v0, v10}, Ljava/util/Locale$Builder;->setScript(Ljava/lang/String;)Ljava/util/Locale$Builder;
+    invoke-virtual {v0, v8}, Ljava/util/Locale$Builder;->setVariant(Ljava/lang/String;)Ljava/util/Locale$Builder;
+
+    move-result-object v0
+    :try_end_b
+    .catch Ljava/util/IllformedLocaleException; {:try_start_b .. :try_end_b} :catch_4
+    .catchall {:try_start_b .. :try_end_b} :catchall_5
+
+    move-object/from16 v9, v20
+
+    :try_start_c
+    invoke-virtual {v0, v9}, Ljava/util/Locale$Builder;->setScript(Ljava/lang/String;)Ljava/util/Locale$Builder;
 
     move-result-object v0
 
@@ -4649,49 +4685,49 @@
 
     move-result-object v0
 
-    invoke-interface {v11, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_b
-    .catch Ljava/util/IllformedLocaleException; {:try_start_b .. :try_end_b} :catch_2
-    .catchall {:try_start_b .. :try_end_b} :catchall_5
+    invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_c
+    .catch Ljava/util/IllformedLocaleException; {:try_start_c .. :try_end_c} :catch_3
+    .catchall {:try_start_c .. :try_end_c} :catchall_5
 
     nop
 
     goto :goto_4
 
-    :catch_2
-    move-exception v0
-
-    goto :goto_3
-
     :catch_3
     move-exception v0
-
-    move-object/from16 v10, v20
 
     goto :goto_3
 
     :catch_4
     move-exception v0
 
-    move-object/from16 v9, v19
-
-    move-object/from16 v10, v20
+    move-object/from16 v9, v20
 
     goto :goto_3
 
     :catch_5
     move-exception v0
 
-    move-object/from16 v8, v18
+    move-object/from16 v8, v19
 
-    move-object/from16 v9, v19
+    move-object/from16 v9, v20
 
-    move-object/from16 v10, v20
+    goto :goto_3
+
+    :catch_6
+    move-exception v0
+
+    move-object/from16 v7, v18
+
+    move-object/from16 v8, v19
+
+    move-object/from16 v9, v20
 
     :goto_3
     move-object/from16 v16, v0
 
-    :try_start_c
+    :try_start_d
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4702,23 +4738,23 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_5
+    invoke-static {v12, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_5
 
     nop
 
@@ -4728,49 +4764,49 @@
     :catchall_3
     move-exception v0
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    move-object/from16 v8, v18
+    move-object/from16 v7, v18
 
-    move-object/from16 v9, v19
+    move-object/from16 v8, v19
 
-    move-object/from16 v10, v20
+    move-object/from16 v9, v20
 
-    move-object v12, v0
+    move-object v11, v0
 
     goto :goto_6
 
-    :catch_6
+    :catch_7
     move-exception v0
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    move-object/from16 v8, v18
+    move-object/from16 v7, v18
 
-    move-object/from16 v9, v19
+    move-object/from16 v8, v19
 
-    move-object/from16 v10, v20
+    move-object/from16 v9, v20
 
     :goto_5
     nop
 
-    :try_start_d
+    :try_start_e
     throw v0
-    :try_end_d
-    .catchall {:try_start_d .. :try_end_d} :catchall_4
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_4
 
     :catchall_4
     move-exception v0
 
-    move-object v12, v0
+    move-object v11, v0
 
     :goto_6
-    :try_start_e
-    invoke-virtual {v2, v13, v14}, Landroid/util/proto/ProtoInputStream;->end(J)V
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_5
-
     :try_start_f
+    invoke-virtual {v2, v13, v14}, Landroid/util/proto/ProtoInputStream;->end(J)V
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_5
+
+    :try_start_10
     new-instance v0, Ljava/util/Locale$Builder;
 
     invoke-direct {v0}, Ljava/util/Locale$Builder;-><init>()V
@@ -4779,15 +4815,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Ljava/util/Locale$Builder;->setRegion(Ljava/lang/String;)Ljava/util/Locale$Builder;
+    invoke-virtual {v0, v7}, Ljava/util/Locale$Builder;->setRegion(Ljava/lang/String;)Ljava/util/Locale$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v9}, Ljava/util/Locale$Builder;->setVariant(Ljava/lang/String;)Ljava/util/Locale$Builder;
+    invoke-virtual {v0, v8}, Ljava/util/Locale$Builder;->setVariant(Ljava/lang/String;)Ljava/util/Locale$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v10}, Ljava/util/Locale$Builder;->setScript(Ljava/lang/String;)Ljava/util/Locale$Builder;
+    invoke-virtual {v0, v9}, Ljava/util/Locale$Builder;->setScript(Ljava/lang/String;)Ljava/util/Locale$Builder;
 
     move-result-object v0
 
@@ -4795,21 +4831,21 @@
 
     move-result-object v0
 
-    invoke-interface {v11, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_f
-    .catch Ljava/util/IllformedLocaleException; {:try_start_f .. :try_end_f} :catch_7
-    .catchall {:try_start_f .. :try_end_f} :catchall_5
+    invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_10
+    .catch Ljava/util/IllformedLocaleException; {:try_start_10 .. :try_end_10} :catch_8
+    .catchall {:try_start_10 .. :try_end_10} :catchall_5
 
     nop
 
     goto :goto_7
 
-    :catch_7
+    :catch_8
     move-exception v0
 
     move-object/from16 v16, v0
 
-    :try_start_10
+    :try_start_11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4820,35 +4856,35 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v7, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v12, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_7
     nop
 
-    throw v12
+    throw v11
 
-    :pswitch_10
-    move-object v12, v8
+    :pswitch_11
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10d00000003L
+    const-wide v7, 0x10d00000003L
 
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
@@ -4856,14 +4892,14 @@
 
     goto :goto_8
 
-    :pswitch_11
-    move-object v12, v8
+    :pswitch_12
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10d00000002L
+    const-wide v7, 0x10d00000002L
 
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readInt(J)I
 
     move-result v0
 
@@ -4871,20 +4907,20 @@
 
     goto :goto_8
 
-    :pswitch_12
-    move-object v12, v8
+    :pswitch_13
+    move-object v11, v7
 
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    const-wide v8, 0x10200000001L
+    const-wide v7, 0x10200000001L
 
-    invoke-virtual {v2, v8, v9}, Landroid/util/proto/ProtoInputStream;->readFloat(J)F
+    invoke-virtual {v2, v7, v8}, Landroid/util/proto/ProtoInputStream;->readFloat(J)F
 
     move-result v0
 
     iput v0, v1, Landroid/content/res/Configuration;->fontScale:F
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_5
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_5
 
     goto :goto_8
 
@@ -4896,23 +4932,23 @@
     goto :goto_9
 
     :goto_8
-    move-object v8, v12
+    move-object v7, v11
 
-    move-wide/from16 v9, v21
+    move-wide/from16 v8, v21
 
     goto/16 :goto_0
 
     :catchall_6
     move-exception v0
 
-    move-wide v3, v9
+    move-wide v3, v8
 
     goto :goto_9
 
     :cond_5
-    move-wide/from16 v21, v9
+    move-wide/from16 v21, v8
 
-    invoke-interface {v11}, Ljava/util/List;->size()I
+    invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v0
 
@@ -4920,13 +4956,13 @@
 
     new-instance v0, Landroid/os/LocaleList;
 
-    invoke-interface {v11}, Ljava/util/List;->size()I
+    invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v3
 
     new-array v3, v3, [Ljava/util/Locale;
 
-    invoke-interface {v11, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v10, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v3
 
@@ -4948,10 +4984,10 @@
     :catchall_7
     move-exception v0
 
-    move-wide v3, v9
+    move-wide v3, v8
 
     :goto_9
-    invoke-interface {v11}, Ljava/util/List;->size()I
+    invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v5
 
@@ -4959,13 +4995,13 @@
 
     new-instance v5, Landroid/os/LocaleList;
 
-    invoke-interface {v11}, Ljava/util/List;->size()I
+    invoke-interface {v10}, Ljava/util/List;->size()I
 
     move-result v6
 
     new-array v6, v6, [Ljava/util/Locale;
 
-    invoke-interface {v11, v6}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-interface {v10, v6}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v6
 
@@ -4984,6 +5020,7 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_13
         :pswitch_12
         :pswitch_11
         :pswitch_10
@@ -7019,9 +7056,13 @@
 
     if-eqz v2, :cond_0
 
-    const-wide v3, 0x20b00000004L
+    const-wide v3, 0x10900000014L
 
-    invoke-virtual {v2, p1, v3, v4}, Landroid/os/LocaleList;->writeToProto(Landroid/util/proto/ProtoOutputStream;J)V
+    invoke-virtual {v2}, Landroid/os/LocaleList;->toLanguageTags()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v3, v4, v2}, Landroid/util/proto/ProtoOutputStream;->write(JLjava/lang/String;)V
 
     :cond_0
     const-wide v2, 0x10d00000005L

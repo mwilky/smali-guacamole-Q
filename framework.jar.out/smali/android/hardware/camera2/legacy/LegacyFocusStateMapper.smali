@@ -181,7 +181,7 @@
 .method public mapResultTriggers(Landroid/hardware/camera2/impl/CameraMetadataNative;)V
     .locals 3
 
-    const-string v0, "result must not be null"
+    const-string/jumbo v0, "result must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

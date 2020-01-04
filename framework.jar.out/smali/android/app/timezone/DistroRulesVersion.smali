@@ -50,7 +50,7 @@
 
     iput-object v0, p0, Landroid/app/timezone/DistroRulesVersion;->mRulesVersion:Ljava/lang/String;
 
-    const-string v0, "revision"
+    const-string/jumbo v0, "revision"
 
     invoke-static {v0, p2}, Landroid/app/timezone/Utils;->validateVersion(Ljava/lang/String;I)I
 

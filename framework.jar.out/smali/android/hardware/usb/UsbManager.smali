@@ -151,7 +151,7 @@
 
     move-result-object v1
 
-    const-string v2, "rndis"
+    const-string/jumbo v2, "rndis"
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -407,7 +407,7 @@
 
     if-eqz v1, :cond_2
 
-    const-string v1, "rndis"
+    const-string/jumbo v1, "rndis"
 
     invoke-virtual {v0, v1}, Ljava/util/StringJoiner;->add(Ljava/lang/CharSequence;)Ljava/util/StringJoiner;
 

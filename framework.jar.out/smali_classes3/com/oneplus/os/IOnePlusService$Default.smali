@@ -128,6 +128,19 @@
     return-object v0
 .end method
 
+.method public getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public isInConfigList(ILjava/lang/String;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
