@@ -100,13 +100,11 @@
 
     move-result-object v1
 
-    #disallowed odex opcode
-    #invoke-super-quick {v1, v0}, vtable@55206
-    nop
-
-    add-double p22, v0, v0
+    invoke-polymorphic {v1, v0}, Ljava/lang/invoke/MethodHandle;->invoke([Ljava/lang/Object;)Ljava/lang/Object;, (Landroid/view/View;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    nop
 
     return-void
 

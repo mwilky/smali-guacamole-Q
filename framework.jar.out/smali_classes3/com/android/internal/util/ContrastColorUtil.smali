@@ -1154,7 +1154,18 @@
 
 .method public static resolvePrimaryColor(Landroid/content/Context;IZ)I
     .locals 2
+    
+    sget v0, Landroid/app/Notification$Builder;->mUnlockNotificationColors:I
+    
+    if-eqz v0, :cond_stock
+    
+    invoke-static {p0}, Lcom/android/internal/util/ContrastColorUtil;->isDarkTheme(Landroid/content/Context;)Z
+    
+    move-result v0
+    
+    if-nez v0, :cond_0
 
+    :cond_stock
     invoke-static {p1, p2}, Lcom/android/internal/util/ContrastColorUtil;->shouldUseDark(IZ)Z
 
     move-result v0
@@ -1181,7 +1192,18 @@
 
 .method public static resolveSecondaryColor(Landroid/content/Context;IZ)I
     .locals 2
+    
+    sget v0, Landroid/app/Notification$Builder;->mUnlockNotificationColors:I
+    
+    if-eqz v0, :cond_stock
+    
+    invoke-static {p0}, Lcom/android/internal/util/ContrastColorUtil;->isDarkTheme(Landroid/content/Context;)Z
+    
+    move-result v0
+    
+    if-nez v0, :cond_0
 
+    :cond_stock
     invoke-static {p1, p2}, Lcom/android/internal/util/ContrastColorUtil;->shouldUseDark(IZ)Z
 
     move-result v0
@@ -1716,4 +1738,68 @@
 
     :cond_5
     return v0
+.end method
+
+.method public static isDarkTheme(Landroid/content/Context;)Z
+    .registers 7
+    .param p0, "Context"    # Landroid/content/Context;
+
+    .line 47
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    .line 48
+    .local v0, "ContentResolver":Landroid/content/ContentResolver;
+    const-string v1, "oem_black_mode"
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 49
+    .local v1, "theme":I
+    const-string v3, "oem_special_theme"
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v3, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v3
+
+    .line 50
+    .local v3, "specialTheme":I
+    const/4 v5, 0x1
+
+    if-ne v3, v5, :cond_16
+
+    .line 51
+    return v5
+
+    .line 53
+    :cond_16
+    if-ne v1, v5, :cond_19
+
+    .line 54
+    return v5
+
+    .line 56
+    :cond_19
+    if-nez v1, :cond_1c
+
+    .line 57
+    return v4
+
+    .line 59
+    :cond_1c
+    if-ne v1, v2, :cond_1f
+
+    .line 60
+    return v5
+
+    .line 62
+    :cond_1f
+    return v4
 .end method

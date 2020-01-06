@@ -492,11 +492,7 @@
 
     iget-object v3, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
 
-    #disallowed odex opcode
-    #invoke-super-quick {v2, v0, v3}, vtable@55206
-    nop
-
-    const/4 p7, 0x1
+    invoke-polymorphic {v2, v0, v3}, Ljava/lang/invoke/MethodHandle;->invoke([Ljava/lang/Object;)Ljava/lang/Object;, (Landroid/view/View;Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -612,11 +608,9 @@
 
     iget-object v3, p0, Landroid/widget/RemoteViews$ReflectionAction;->value:Ljava/lang/Object;
 
-    #disallowed odex opcode
-    #invoke-super-quick {v2, v0, v3}, vtable@55206
-    nop
+    invoke-polymorphic {v2, v0, v3}, Ljava/lang/invoke/MethodHandle;->invoke([Ljava/lang/Object;)Ljava/lang/Object;, (Landroid/view/View;Ljava/lang/Object;)Ljava/lang/Runnable;
 
-    div-long p12, p6, v3
+    move-result-object v3
 
     if-nez v3, :cond_1
 
