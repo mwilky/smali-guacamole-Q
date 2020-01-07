@@ -19377,9 +19377,14 @@
     iput-boolean p1, p0, Lcom/android/server/am/ActiveServices;->mScreenOn:Z
 
     iget-boolean v0, p0, Lcom/android/server/am/ActiveServices;->mScreenOn:Z
+    
+    sget-boolean v1, Lcom/android/server/SystemServer;->mDisableHouston:Z
+    
+    if-nez v1, :cond_disable
 
     invoke-static {v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->updateScreenState(Z)V
 
+    :cond_disable
     if-eqz p1, :cond_8
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
