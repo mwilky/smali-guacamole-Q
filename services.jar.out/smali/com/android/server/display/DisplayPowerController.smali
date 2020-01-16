@@ -22,6 +22,8 @@
 
 
 # static fields
+.field private mScreenOffAnimation:I
+
 .field static final synthetic $assertionsDisabled:Z = false
 
 .field private static final COLOR_FADE_OFF_ANIMATION_DURATION_MILLIS:I = 0x0
@@ -449,13 +451,13 @@
 
     new-instance v3, Lcom/android/server/display/DisplayPowerController$BrightnessReason;
 
-    invoke-direct {v3, v15, v2}, Lcom/android/server/display/DisplayPowerController$BrightnessReason;-><init>(Lcom/android/server/display/DisplayPowerController;Lcom/android/server/display/DisplayPowerController$1;)V
+    invoke-direct {v3, v15, v2}, Lcom/android/server/display/DisplayPowerController$BrightnessReason;-><init>(Lcom/android/server/display/DisplayPowerController;Lcom/android/server/display/DisplayPowerController$ScreenOffAnims;)V
 
     iput-object v3, v15, Lcom/android/server/display/DisplayPowerController;->mBrightnessReason:Lcom/android/server/display/DisplayPowerController$BrightnessReason;
 
     new-instance v3, Lcom/android/server/display/DisplayPowerController$BrightnessReason;
 
-    invoke-direct {v3, v15, v2}, Lcom/android/server/display/DisplayPowerController$BrightnessReason;-><init>(Lcom/android/server/display/DisplayPowerController;Lcom/android/server/display/DisplayPowerController$1;)V
+    invoke-direct {v3, v15, v2}, Lcom/android/server/display/DisplayPowerController$BrightnessReason;-><init>(Lcom/android/server/display/DisplayPowerController;Lcom/android/server/display/DisplayPowerController$ScreenOffAnims;)V
 
     iput-object v3, v15, Lcom/android/server/display/DisplayPowerController;->mBrightnessReasonTemp:Lcom/android/server/display/DisplayPowerController$BrightnessReason;
 
@@ -1535,6 +1537,30 @@
     return-void
 .end method
 
+.method static synthetic getPowerState(Lcom/android/server/display/DisplayPowerController;)Lcom/android/server/display/DisplayPowerState;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/display/DisplayPowerController;->mPowerState:Lcom/android/server/display/DisplayPowerState;
+
+    return-object p0
+.end method
+
+.method static synthetic putScreenOffAnims(Lcom/android/server/display/DisplayPowerController;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffAnimation:I
+
+    return p1
+.end method
+
+.method static synthetic getScreenOffAnims(Lcom/android/server/display/DisplayPowerController;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffAnimation:I
+
+    return p0
+.end method
+
 .method static synthetic access$100(Lcom/android/server/display/DisplayPowerController;)V
     .locals 0
 
@@ -2114,7 +2140,7 @@
 .end method
 
 .method private animateScreenStateChange(IZ)V
-    .locals 6
+    .locals 7
 
     iget-boolean v0, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeEnabled:Z
 
@@ -2177,18 +2203,10 @@
 
     iget-object v4, p0, Lcom/android/server/display/DisplayPowerController;->mContext:Landroid/content/Context;
 
-    iget-boolean v5, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeFadesConfig:Z
+    invoke-direct {p0, v2}, Lcom/android/server/display/DisplayPowerController;->getScreenAnimationModeForDisplayState(I)I
 
-    if-eqz v5, :cond_3
-
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    move v5, v1
-
-    :goto_0
+    move-result v5
+    
     invoke-virtual {v0, v4, v5}, Lcom/android/server/display/DisplayPowerState;->prepareColorFade(Landroid/content/Context;I)Z
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeOffAnimator:Landroid/animation/ObjectAnimator;
@@ -2484,17 +2502,11 @@
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController;->mContext:Landroid/content/Context;
 
-    iget-boolean v4, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeFadesConfig:Z
+    invoke-direct {p0, v3}, Lcom/android/server/display/DisplayPowerController;->getScreenAnimationModeForDisplayState(I)I
 
-    if-eqz v4, :cond_1a
-
-    goto :goto_2
-
-    :cond_1a
-    move v2, v3
-
-    :goto_2
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/display/DisplayPowerState;->prepareColorFade(Landroid/content/Context;I)Z
+    move-result v6
+    
+    invoke-virtual {v0, v1, v6}, Lcom/android/server/display/DisplayPowerState;->prepareColorFade(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -2542,7 +2554,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/android/server/display/DisplayPowerController$ScreenOffUnblocker;-><init>(Lcom/android/server/display/DisplayPowerController;Lcom/android/server/display/DisplayPowerController$1;)V
+    invoke-direct {v0, p0, v1}, Lcom/android/server/display/DisplayPowerController$ScreenOffUnblocker;-><init>(Lcom/android/server/display/DisplayPowerController;Lcom/android/server/display/DisplayPowerController$ScreenOffAnims;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mPendingScreenOffUnblocker:Lcom/android/server/display/DisplayPowerController$ScreenOffUnblocker;
 
@@ -4091,26 +4103,44 @@
 .method private initialize()V
     .locals 6
 
+    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/android/server/display/DisplayPowerController$ScreenOffAnims;
+
+    iget-object v2, p0, Lcom/android/server/display/DisplayPowerController;->mHandler:Lcom/android/server/display/DisplayPowerController$DisplayControllerHandler;
+
+    invoke-direct {v1, p0, v2, v0}, Lcom/android/server/display/DisplayPowerController$ScreenOffAnims;-><init>(Lcom/android/server/display/DisplayPowerController;Landroid/os/Handler;Landroid/content/ContentResolver;)V
+
+    const-string/jumbo v2, "tweaks_screen_off_animation"
+
+    invoke-static {v2}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v3, v5, v1, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    invoke-static {v0, v2, v5}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffAnimation:I
+
     new-instance v0, Lcom/android/server/display/DisplayPowerState;
 
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerController;->mBlanker:Lcom/android/server/display/DisplayBlanker;
-
-    iget-boolean v2, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeEnabled:Z
-
+    
+    iget v2, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffAnimation:I
+    
     const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    new-instance v2, Lcom/android/server/display/ColorFade;
-
-    invoke-direct {v2, v3}, Lcom/android/server/display/ColorFade;-><init>(I)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
+    
     invoke-direct {v0, v1, v2}, Lcom/android/server/display/DisplayPowerState;-><init>(Lcom/android/server/display/DisplayBlanker;Lcom/android/server/display/ColorFade;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mPowerState:Lcom/android/server/display/DisplayPowerState;
@@ -4161,11 +4191,7 @@
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeOffAnimator:Landroid/animation/ObjectAnimator;
 
-    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeOffAnimator:Landroid/animation/ObjectAnimator;
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {p0}, Lcom/android/server/display/DisplayPowerController;->updateScreenOffAnimationDuration()V
 
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeOffAnimator:Landroid/animation/ObjectAnimator;
 
@@ -9548,6 +9574,67 @@
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/display/DisplayPowerController;->sendUpdatePowerState()V
+
+    return-void
+.end method
+
+.method private getScreenAnimationModeForDisplayState(I)I
+    .locals 3
+
+    iget v0, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffAnimation:I
+
+    const/4 v1, 0x2
+
+    if-eqz v0, :cond_4
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_2
+
+    if-eq v0, v1, :cond_0
+
+    return v1
+
+    :cond_0
+    if-ne p1, v2, :cond_1
+
+    const/4 p1, 0x3
+
+    return p1
+
+    :cond_1
+    return v1
+
+    :cond_2
+    if-ne p1, v2, :cond_3
+
+    return v2
+
+    :cond_3
+    return v1
+
+    :cond_4
+    return v1
+.end method
+
+.method public updateScreenOffAnimationDuration()V
+    .locals 3
+
+    iget v0, p0, Lcom/android/server/display/DisplayPowerController;->mScreenOffAnimation:I
+    
+    if-eqz v0, :cond_stock
+    
+    const-wide/16 v1, 0x190
+    
+    goto :goto_skip
+    
+    :cond_stock
+    const-wide/16 v1, 0x0
+    
+    :goto_skip    
+    iget-object v0, p0, Lcom/android/server/display/DisplayPowerController;->mColorFadeOffAnimator:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     return-void
 .end method
