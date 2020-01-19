@@ -578,7 +578,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/android/server/display/ScreenStateAnimator;->dump(Ljava/io/PrintWriter;)V
+    invoke-interface {v0, p1}, Lcom/android/server/display/ScreenStateAnimator;->dump(Ljava/io/PrintWriter;)V
 
     :cond_0
     return-void
