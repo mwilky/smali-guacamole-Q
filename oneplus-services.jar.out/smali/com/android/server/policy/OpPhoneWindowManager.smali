@@ -6328,11 +6328,7 @@
     goto :goto_3    
 
     :pswitch_lastapp
-    iget-object v5, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    iget v6, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mCurrentUserId:I
-
-    invoke-direct {p0, v5, v6}, Lcom/android/server/policy/OpPhoneWindowManager;->switchToLastApp(Landroid/content/Context;I)Z
+    invoke-direct {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->toggleLastApp()V
 
     goto :goto_3
 
@@ -7350,4 +7346,521 @@
     .line 610
     :goto_4f
     return-void
+.end method
+
+.method private toggleLastApp()V
+    .registers 15
+
+    const/4 v13, 0x2
+
+    new-instance v5, Landroid/content/Intent;
+
+    const-string v11, "android.intent.action.MAIN"
+
+    invoke-direct {v5, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v11, "activity"
+
+    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager;
+
+    const-string v1, "com.android.launcher"
+
+    const-string v11, "android.intent.category.HOME"
+
+    invoke-virtual {v5, v11}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v11, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v11}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v11
+
+    const/4 v12, 0x0
+
+    invoke-virtual {v11, v5, v12}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
+
+    move-result-object v9
+
+    iget-object v11, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    if-eqz v11, :cond_38
+
+    iget-object v11, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v11, v11, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    const-string v12, "android"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_38
+
+    iget-object v11, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+
+    iget-object v1, v11, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+
+    :cond_38
+    const/4 v11, 0x5
+
+    invoke-virtual {v0, v11, v13}, Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
+
+    move-result-object v10
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v3, 0x1
+
+    :goto_40
+    invoke-interface {v10}, Ljava/util/List;->size()I
+
+    move-result v11
+
+    if-ge v3, v11, :cond_73
+
+    if-nez v7, :cond_73
+
+    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget-object v11, v11, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    invoke-virtual {v11}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_70
+
+    const-string v11, "com.android.systemui"
+
+    invoke-virtual {v8, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_70
+
+    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v6, v4, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    iget-object v7, v4, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    :cond_70
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_40
+
+    :cond_73
+    if-lez v6, :cond_79
+
+    invoke-virtual {v0, v6, v13}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    :cond_78
+    :goto_78
+    return-void
+
+    :cond_79
+    if-eqz v7, :cond_78
+
+    const/high16 v11, 0x100000
+
+    invoke-virtual {v7, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    :try_start_80
+    sget-object v11, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
+
+    iget-object v12, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v12, v7, v11}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+    :try_end_87
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_80 .. :try_end_87} :catch_88
+
+    goto :goto_78
+
+    :catch_88
+    move-exception v2
+
+    const-string v11, "Recent"
+
+    const-string v12, "Unable to launch recent task"
+
+    invoke-static {v11, v12, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_78
+.end method
+
+.method private setUpPrevAppSwitch()V
+    .locals 12
+
+    const/4 v11, 0x0
+
+    iget-object v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    const-string v10, "activity"
+
+    invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/app/ActivityManager;
+
+    const/16 v9, 0x14
+
+    invoke-virtual {v7, v9, v11}, Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
+
+    move-result-object v8
+
+    const/4 v1, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x1
+
+    :goto_0
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v9
+
+    if-lt v2, v9, :cond_3
+
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v10, 0xb
+
+    if-lt v9, v10, :cond_1
+
+    move-object v0, v7
+
+    if-gtz v3, :cond_0
+
+    move v1, v4
+
+    :cond_0
+    invoke-virtual {v0, v1, v11}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    :goto_1
+    return-void
+
+    :cond_1
+    move-object v6, v8
+
+    if-gtz v3, :cond_2
+
+    move v3, v5
+
+    :cond_2
+    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    const/4 v10, 0x2
+
+    invoke-virtual {v7, v9, v10}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    if-le v9, v1, :cond_4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v10, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    invoke-interface {v8, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    if-ge v10, v9, :cond_4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    const-string v10, "android.intent.category.HOME"
+
+    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v1, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    move v3, v2
+
+    :cond_4
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    if-le v9, v4, :cond_5
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    const-string v10, "android.intent.category.HOME"
+
+    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_5
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v4, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    move v5, v2
+
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+.end method
+
+.method private setUpNextAppSwitch()V
+    .locals 12
+
+    const/4 v11, 0x0
+
+    iget-object v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
+
+    const-string v10, "activity"
+
+    invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Landroid/app/ActivityManager;
+
+    const/16 v9, 0x14
+
+    invoke-virtual {v7, v9, v11}, Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
+
+    move-result-object v8
+
+    const v1, 0x7fffffff
+
+    const/4 v3, 0x0
+
+    const v4, 0x7fffffff
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x1
+
+    :goto_0
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v9
+
+    if-lt v2, v9, :cond_3
+
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v10, 0xb
+
+    if-lt v9, v10, :cond_1
+
+    move-object v0, v7
+
+    if-gtz v3, :cond_0
+
+    move v1, v4
+
+    :cond_0
+    invoke-virtual {v0, v1, v11}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    :goto_1
+    return-void
+
+    :cond_1
+    move-object v6, v8
+
+    if-gtz v3, :cond_2
+
+    move v3, v5
+
+    :cond_2
+    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    const/4 v10, 0x2
+
+    invoke-virtual {v7, v9, v10}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    if-ge v9, v1, :cond_4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v10, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    invoke-interface {v8, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    if-le v10, v9, :cond_4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    const-string v10, "android.intent.category.HOME"
+
+    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v1, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    move v3, v2
+
+    :cond_4
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    if-ge v9, v4, :cond_5
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
+
+    const-string v10, "android.intent.category.HOME"
+
+    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_5
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    iget v4, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
+
+    move v5, v2
+
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 .end method
