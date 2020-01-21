@@ -7203,6 +7203,8 @@
     .param p2, "LongPress"    # Z
 
     .line 592
+    invoke-virtual {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->setCustomApp()V
+    
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_2f
@@ -7427,61 +7429,109 @@
 .end method
 
 .method public setCustomApp()V
-	.locals 2
-	
-	iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
+    .registers 4
+
+    .line 593
+    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-	const-string/jumbo v1, "tweaks_custom_home_double_app"
+    .line 594
+    .local v0, "contentResolver":Landroid/content/ContentResolver;
+    const-string v1, "rice_type"
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v2, 0x0
 
-    move-result-object v1
-    
-    sput-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressHomeCustomApp:Ljava/lang/String;
-    
-    const-string/jumbo v1, "tweaks_custom_home_long_app"
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v1
-    
-    sput-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressHomeCustomApp:Ljava/lang/String;
-    
-    const-string/jumbo v1, "tweaks_custom_back_double_app"
+    .line 595
+    .local v1, "riceType":I
+    const/4 v2, 0x1
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    if-ne v1, v2, :cond_41
 
-    move-result-object v1
-    
-    sput-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressBackCustomApp:Ljava/lang/String;
-    
-    const-string/jumbo v1, "tweaks_custom_back_long_app"
+    .line 596
+    const-string v2, "tweaks_custom_home_double_app"
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
-    
-    sput-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressBackCustomApp:Ljava/lang/String;
-    
-    const-string/jumbo v1, "tweaks_custom_recent_double_app"
+    move-result-object v2
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressHomeCustomApp:Ljava/lang/String;
 
-    move-result-object v1
-    
-    sput-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressRecentCustomApp:Ljava/lang/String;
-    
-    const-string/jumbo v1, "tweaks_custom_recent_long_app"
+    .line 597
+    const-string v2, "tweaks_custom_home_long_app"
 
-    invoke-static {v0, v1}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
-    
-    sput-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressRecentCustomApp:Ljava/lang/String;
+    move-result-object v2
 
-   return-void   
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressHomeCustomApp:Ljava/lang/String;
+
+    .line 598
+    const-string v2, "tweaks_custom_back_double_app"
+
+    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressBackCustomApp:Ljava/lang/String;
+
+    .line 599
+    const-string v2, "tweaks_custom_back_long_app"
+
+    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressBackCustomApp:Ljava/lang/String;
+
+    .line 600
+    const-string v2, "tweaks_custom_recent_double_app"
+
+    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressRecentCustomApp:Ljava/lang/String;
+
+    .line 601
+    const-string v2, "tweaks_custom_recent_long_app"
+
+    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressRecentCustomApp:Ljava/lang/String;
+
+    goto :goto_4f
+
+    .line 603
+    :cond_41
+    const-string v2, ""
+
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressHomeCustomApp:Ljava/lang/String;
+
+    .line 604
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressHomeCustomApp:Ljava/lang/String;
+
+    .line 605
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressBackCustomApp:Ljava/lang/String;
+
+    .line 606
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressBackCustomApp:Ljava/lang/String;
+
+    .line 607
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressRecentCustomApp:Ljava/lang/String;
+
+    .line 608
+    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressRecentCustomApp:Ljava/lang/String;
+
+    .line 610
+    :goto_4f
+    return-void
 .end method
