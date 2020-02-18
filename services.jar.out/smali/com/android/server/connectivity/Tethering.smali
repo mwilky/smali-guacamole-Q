@@ -3949,15 +3949,6 @@
 
     if-ne v2, v12, :cond_6
 
-    const v12, 0x50d008a
-
-    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v12
-
-    goto :goto_1
-
-    :cond_6
     const v12, 0x50d008d
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -3966,8 +3957,17 @@
 
     goto :goto_1
 
+    :cond_6
+    const v12, 0x50d0090
+
+    invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v12
+
+    goto :goto_1
+
     :cond_7
-    const v12, 0x10406f8
+    const v12, 0x10406f9
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -3980,7 +3980,7 @@
 
     if-nez v7, :cond_8
 
-    const v7, 0x50d008b
+    const v7, 0x50d008e
 
     invoke-virtual {v11, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -3991,7 +3991,7 @@
     :cond_8
     if-ne v7, v0, :cond_9
 
-    const v7, 0x50d008c
+    const v7, 0x50d008f
 
     invoke-virtual {v11, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -4018,7 +4018,7 @@
     goto :goto_2
 
     :cond_9
-    const v7, 0x50d0089
+    const v7, 0x50d008c
 
     invoke-virtual {v11, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -4045,7 +4045,7 @@
     goto :goto_2
 
     :cond_a
-    const v7, 0x10406f7
+    const v7, 0x10406f8
 
     invoke-virtual {v11, v7}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

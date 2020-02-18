@@ -85,7 +85,7 @@
     return p1
 .end method
 
-.method static synthetic access$300(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+.method static synthetic access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mAccessTimes:Landroid/util/LongSparseLongArray;
@@ -93,7 +93,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+.method static synthetic access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mRejectTimes:Landroid/util/LongSparseLongArray;
@@ -101,7 +101,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+.method static synthetic access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mDurations:Landroid/util/LongSparseLongArray;
@@ -109,7 +109,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+.method static synthetic access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mProxyUids:Landroid/util/LongSparseLongArray;
@@ -117,7 +117,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
+.method static synthetic access$800(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$Op;->mProxyPackageNames:Landroid/util/LongSparseArray;

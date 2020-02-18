@@ -174,6 +174,8 @@
 
 .field static final TRANSACTION_networkSetProtectDeny:I = 0x4a
 
+.field static final TRANSACTION_opExecuteIPtableCmd:I = 0x67
+
 .field static final TRANSACTION_registerUnsolicitedEventListener:I = 0x5a
 
 .field static final TRANSACTION_resetPortForwardRules:I = 0x61
@@ -360,6 +362,23 @@
     :pswitch_0
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v15, v0, v1}, Landroid/net/INetd$Stub;->opExecuteIPtableCmd(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v10
+
+    :pswitch_1
+    invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -378,7 +397,7 @@
 
     return v10
 
-    :pswitch_1
+    :pswitch_2
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -399,7 +418,7 @@
 
     return v10
 
-    :pswitch_2
+    :pswitch_3
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -444,7 +463,7 @@
 
     return v10
 
-    :pswitch_3
+    :pswitch_4
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->setOPSlaDisable()Z
@@ -457,7 +476,7 @@
 
     return v10
 
-    :pswitch_4
+    :pswitch_5
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->setOPSlaEnable()Z
@@ -470,7 +489,7 @@
 
     return v10
 
-    :pswitch_5
+    :pswitch_6
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->resetPortForwardRules()V
@@ -479,7 +498,7 @@
 
     return v10
 
-    :pswitch_6
+    :pswitch_7
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -509,7 +528,7 @@
 
     return v10
 
-    :pswitch_7
+    :pswitch_8
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -522,7 +541,7 @@
 
     return v10
 
-    :pswitch_8
+    :pswitch_9
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->getOemNetd()Landroid/os/IBinder;
@@ -535,7 +554,7 @@
 
     return v10
 
-    :pswitch_9
+    :pswitch_a
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->trafficSwapActiveStatsMap()V
@@ -544,7 +563,7 @@
 
     return v10
 
-    :pswitch_a
+    :pswitch_b
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -557,7 +576,7 @@
 
     return v10
 
-    :pswitch_b
+    :pswitch_c
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -574,7 +593,7 @@
 
     return v10
 
-    :pswitch_c
+    :pswitch_d
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
@@ -591,7 +610,7 @@
 
     return v10
 
-    :pswitch_d
+    :pswitch_e
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -608,7 +627,7 @@
 
     return v10
 
-    :pswitch_e
+    :pswitch_f
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -625,7 +644,7 @@
 
     return v10
 
-    :pswitch_f
+    :pswitch_10
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -642,7 +661,7 @@
 
     return v10
 
-    :pswitch_10
+    :pswitch_11
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -659,7 +678,7 @@
 
     return v10
 
-    :pswitch_11
+    :pswitch_12
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -681,7 +700,7 @@
 
     return v10
 
-    :pswitch_12
+    :pswitch_13
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -694,7 +713,7 @@
 
     return v10
 
-    :pswitch_13
+    :pswitch_14
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -716,7 +735,7 @@
 
     return v10
 
-    :pswitch_14
+    :pswitch_15
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -745,7 +764,7 @@
 
     return v10
 
-    :pswitch_15
+    :pswitch_16
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -772,7 +791,7 @@
     :goto_1
     return v10
 
-    :pswitch_16
+    :pswitch_17
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->interfaceGetList()[Ljava/lang/String;
@@ -785,7 +804,7 @@
 
     return v10
 
-    :pswitch_17
+    :pswitch_18
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -807,7 +826,7 @@
 
     return v10
 
-    :pswitch_18
+    :pswitch_19
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -828,7 +847,7 @@
 
     return v10
 
-    :pswitch_19
+    :pswitch_1a
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -845,7 +864,7 @@
 
     return v10
 
-    :pswitch_1a
+    :pswitch_1b
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -858,7 +877,7 @@
 
     return v10
 
-    :pswitch_1b
+    :pswitch_1c
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -875,7 +894,7 @@
 
     return v10
 
-    :pswitch_1c
+    :pswitch_1d
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -888,7 +907,7 @@
 
     return v10
 
-    :pswitch_1d
+    :pswitch_1e
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -901,7 +920,7 @@
 
     return v10
 
-    :pswitch_1e
+    :pswitch_1f
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -918,7 +937,7 @@
 
     return v10
 
-    :pswitch_1f
+    :pswitch_20
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createIntArray()[I
@@ -931,7 +950,7 @@
 
     return v10
 
-    :pswitch_20
+    :pswitch_21
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -948,7 +967,7 @@
 
     return v10
 
-    :pswitch_21
+    :pswitch_22
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -965,7 +984,7 @@
 
     return v10
 
-    :pswitch_22
+    :pswitch_23
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->networkClearDefault()V
@@ -974,7 +993,7 @@
 
     return v10
 
-    :pswitch_23
+    :pswitch_24
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -987,7 +1006,7 @@
 
     return v10
 
-    :pswitch_24
+    :pswitch_25
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->networkGetDefault()I
@@ -1000,7 +1019,7 @@
 
     return v10
 
-    :pswitch_25
+    :pswitch_26
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1041,7 +1060,7 @@
 
     return v10
 
-    :pswitch_26
+    :pswitch_27
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1082,7 +1101,7 @@
 
     return v10
 
-    :pswitch_27
+    :pswitch_28
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1107,7 +1126,7 @@
 
     return v10
 
-    :pswitch_28
+    :pswitch_29
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1132,7 +1151,7 @@
 
     return v10
 
-    :pswitch_29
+    :pswitch_2a
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->tetherDnsList()[Ljava/lang/String;
@@ -1145,7 +1164,7 @@
 
     return v10
 
-    :pswitch_2a
+    :pswitch_2b
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1162,7 +1181,7 @@
 
     return v10
 
-    :pswitch_2b
+    :pswitch_2c
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->tetherInterfaceList()[Ljava/lang/String;
@@ -1175,7 +1194,7 @@
 
     return v10
 
-    :pswitch_2c
+    :pswitch_2d
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1188,7 +1207,7 @@
 
     return v10
 
-    :pswitch_2d
+    :pswitch_2e
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1201,7 +1220,7 @@
 
     return v10
 
-    :pswitch_2e
+    :pswitch_2f
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->tetherIsEnabled()Z
@@ -1214,7 +1233,7 @@
 
     return v10
 
-    :pswitch_2f
+    :pswitch_30
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->tetherStop()V
@@ -1223,7 +1242,7 @@
 
     return v10
 
-    :pswitch_30
+    :pswitch_31
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
@@ -1236,7 +1255,7 @@
 
     return v10
 
-    :pswitch_31
+    :pswitch_32
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1249,7 +1268,7 @@
 
     return v10
 
-    :pswitch_32
+    :pswitch_33
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1262,7 +1281,7 @@
 
     return v10
 
-    :pswitch_33
+    :pswitch_34
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1275,7 +1294,7 @@
 
     return v10
 
-    :pswitch_34
+    :pswitch_35
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1288,7 +1307,7 @@
 
     return v10
 
-    :pswitch_35
+    :pswitch_36
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
@@ -1301,7 +1320,7 @@
 
     return v10
 
-    :pswitch_36
+    :pswitch_37
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1314,7 +1333,7 @@
 
     return v10
 
-    :pswitch_37
+    :pswitch_38
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1331,7 +1350,7 @@
 
     return v10
 
-    :pswitch_38
+    :pswitch_39
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1344,7 +1363,7 @@
 
     return v10
 
-    :pswitch_39
+    :pswitch_3a
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1361,7 +1380,7 @@
 
     return v10
 
-    :pswitch_3a
+    :pswitch_3b
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1378,7 +1397,7 @@
 
     return v10
 
-    :pswitch_3b
+    :pswitch_3c
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1395,7 +1414,7 @@
 
     return v10
 
-    :pswitch_3c
+    :pswitch_3d
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1408,7 +1427,7 @@
 
     return v10
 
-    :pswitch_3d
+    :pswitch_3e
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1421,7 +1440,7 @@
 
     return v10
 
-    :pswitch_3e
+    :pswitch_3f
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->ipfwdGetRequesterList()[Ljava/lang/String;
@@ -1434,7 +1453,7 @@
 
     return v10
 
-    :pswitch_3f
+    :pswitch_40
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p0 .. p0}, Landroid/net/INetd$Stub;->ipfwdEnabled()Z
@@ -1447,7 +1466,7 @@
 
     return v10
 
-    :pswitch_40
+    :pswitch_41
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1460,7 +1479,7 @@
 
     return v10
 
-    :pswitch_41
+    :pswitch_42
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -1481,7 +1500,7 @@
 
     return v10
 
-    :pswitch_42
+    :pswitch_43
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1493,27 +1512,6 @@
     move-result v1
 
     invoke-virtual {v15, v0, v1}, Landroid/net/INetd$Stub;->strictUidCleartextPenalty(II)V
-
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v10
-
-    :pswitch_43
-    invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v15, v0, v1, v2}, Landroid/net/INetd$Stub;->idletimerRemoveInterface(Ljava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1534,7 +1532,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v15, v0, v1, v2}, Landroid/net/INetd$Stub;->idletimerAddInterface(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v15, v0, v1, v2}, Landroid/net/INetd$Stub;->idletimerRemoveInterface(Ljava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1551,7 +1549,11 @@
 
     move-result v1
 
-    invoke-virtual {v15, v0, v1}, Landroid/net/INetd$Stub;->setIPv6AddrGenMode(Ljava/lang/String;I)V
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v15, v0, v1, v2}, Landroid/net/INetd$Stub;->idletimerAddInterface(Ljava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1564,19 +1566,11 @@
 
     move-result-object v0
 
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v1
-
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v3
-
-    invoke-virtual {v15, v0, v1, v2, v3}, Landroid/net/INetd$Stub;->wakeupDelInterface(Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual {v15, v0, v1}, Landroid/net/INetd$Stub;->setIPv6AddrGenMode(Ljava/lang/String;I)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1601,7 +1595,7 @@
 
     move-result v3
 
-    invoke-virtual {v15, v0, v1, v2, v3}, Landroid/net/INetd$Stub;->wakeupAddInterface(Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual {v15, v0, v1, v2, v3}, Landroid/net/INetd$Stub;->wakeupDelInterface(Ljava/lang/String;Ljava/lang/String;II)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1614,7 +1608,19 @@
 
     move-result-object v0
 
-    invoke-virtual {v15, v0}, Landroid/net/INetd$Stub;->ipSecRemoveTunnelInterface(Ljava/lang/String;)V
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    invoke-virtual {v15, v0, v1, v2, v3}, Landroid/net/INetd$Stub;->wakeupAddInterface(Ljava/lang/String;Ljava/lang/String;II)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1625,43 +1631,9 @@
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v0
 
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v16
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v17
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v18
-
-    move-object/from16 v0, p0
-
-    move-object v1, v7
-
-    move-object v2, v8
-
-    move-object v3, v9
-
-    move/from16 v4, v16
-
-    move/from16 v5, v17
-
-    move/from16 v6, v18
-
-    invoke-virtual/range {v0 .. v6}, Landroid/net/INetd$Stub;->ipSecUpdateTunnelInterface(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+    invoke-virtual {v15, v0}, Landroid/net/INetd$Stub;->ipSecRemoveTunnelInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1708,13 +1680,60 @@
 
     move/from16 v6, v18
 
-    invoke-virtual/range {v0 .. v6}, Landroid/net/INetd$Stub;->ipSecAddTunnelInterface(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+    invoke-virtual/range {v0 .. v6}, Landroid/net/INetd$Stub;->ipSecUpdateTunnelInterface(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v10
 
     :pswitch_4b
+    invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v16
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v17
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v18
+
+    move-object/from16 v0, p0
+
+    move-object v1, v7
+
+    move-object v2, v8
+
+    move-object v3, v9
+
+    move/from16 v4, v16
+
+    move/from16 v5, v17
+
+    move/from16 v6, v18
+
+    invoke-virtual/range {v0 .. v6}, Landroid/net/INetd$Stub;->ipSecAddTunnelInterface(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v10
+
+    :pswitch_4c
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1756,71 +1775,6 @@
     move/from16 v6, v18
 
     invoke-virtual/range {v0 .. v6}, Landroid/net/INetd$Stub;->ipSecDeleteSecurityPolicy(IIIIII)V
-
-    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v10
-
-    :pswitch_4c
-    invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v16
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v17
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v18
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v19
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v20
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v21
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v22
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v23
-
-    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result v24
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, v16
-
-    move/from16 v2, v17
-
-    move/from16 v3, v18
-
-    move-object/from16 v4, v19
-
-    move-object/from16 v5, v20
-
-    move/from16 v6, v21
-
-    move/from16 v7, v22
-
-    move/from16 v8, v23
-
-    move/from16 v9, v24
-
-    invoke-virtual/range {v0 .. v9}, Landroid/net/INetd$Stub;->ipSecUpdateSecurityPolicy(IIILjava/lang/String;Ljava/lang/String;IIII)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -1885,13 +1839,78 @@
 
     move/from16 v9, v24
 
-    invoke-virtual/range {v0 .. v9}, Landroid/net/INetd$Stub;->ipSecAddSecurityPolicy(IIILjava/lang/String;Ljava/lang/String;IIII)V
+    invoke-virtual/range {v0 .. v9}, Landroid/net/INetd$Stub;->ipSecUpdateSecurityPolicy(IIILjava/lang/String;Ljava/lang/String;IIII)V
 
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
     return v10
 
     :pswitch_4e
+    invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v16
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v17
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v18
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v20
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v21
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v22
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v23
+
+    invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v24
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, v16
+
+    move/from16 v2, v17
+
+    move/from16 v3, v18
+
+    move-object/from16 v4, v19
+
+    move-object/from16 v5, v20
+
+    move/from16 v6, v21
+
+    move/from16 v7, v22
+
+    move/from16 v8, v23
+
+    move/from16 v9, v24
+
+    invoke-virtual/range {v0 .. v9}, Landroid/net/INetd$Stub;->ipSecAddSecurityPolicy(IIILjava/lang/String;Ljava/lang/String;IIII)V
+
+    invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v10
+
+    :pswitch_4f
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1920,7 +1939,7 @@
 
     return v10
 
-    :pswitch_4f
+    :pswitch_50
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -1987,7 +2006,7 @@
 
     return v10
 
-    :pswitch_50
+    :pswitch_51
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -2040,7 +2059,7 @@
 
     return v10
 
-    :pswitch_51
+    :pswitch_52
     invoke-virtual {v13, v11}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -2183,7 +2202,7 @@
 
     return v6
 
-    :pswitch_52
+    :pswitch_53
     move v6, v10
 
     move-object/from16 v33, v11
@@ -2224,7 +2243,7 @@
 
     return v6
 
-    :pswitch_53
+    :pswitch_54
     move v6, v10
 
     move-object v8, v11
@@ -2267,7 +2286,7 @@
 
     return v6
 
-    :pswitch_54
+    :pswitch_55
     move v6, v10
 
     move-object v8, v11
@@ -2318,7 +2337,7 @@
 
     return v6
 
-    :pswitch_55
+    :pswitch_56
     move v6, v10
 
     move-object v8, v11
@@ -2357,7 +2376,7 @@
 
     return v6
 
-    :pswitch_56
+    :pswitch_57
     move v6, v10
 
     move-object v8, v11
@@ -2388,7 +2407,7 @@
 
     return v6
 
-    :pswitch_57
+    :pswitch_58
     move v6, v10
 
     move-object v8, v11
@@ -2419,7 +2438,7 @@
 
     return v6
 
-    :pswitch_58
+    :pswitch_59
     move v6, v10
 
     move-object v8, v11
@@ -2442,7 +2461,7 @@
 
     return v6
 
-    :pswitch_59
+    :pswitch_5a
     move v6, v10
 
     move-object v8, v11
@@ -2465,7 +2484,7 @@
 
     return v6
 
-    :pswitch_5a
+    :pswitch_5b
     move v6, v10
 
     move-object v8, v11
@@ -2496,7 +2515,7 @@
 
     return v6
 
-    :pswitch_5b
+    :pswitch_5c
     move v6, v10
 
     move-object v8, v11
@@ -2532,7 +2551,7 @@
 
     return v6
 
-    :pswitch_5c
+    :pswitch_5d
     move v6, v10
 
     move-object v8, v11
@@ -2563,7 +2582,7 @@
 
     return v6
 
-    :pswitch_5d
+    :pswitch_5e
     move v6, v10
 
     move-object v8, v11
@@ -2594,7 +2613,7 @@
 
     return v6
 
-    :pswitch_5e
+    :pswitch_5f
     move v6, v10
 
     move-object v8, v11
@@ -2621,7 +2640,7 @@
 
     return v6
 
-    :pswitch_5f
+    :pswitch_60
     move v6, v10
 
     move-object v8, v11
@@ -2648,7 +2667,7 @@
 
     return v6
 
-    :pswitch_60
+    :pswitch_61
     move v6, v10
 
     move-object v8, v11
@@ -2671,7 +2690,7 @@
 
     return v6
 
-    :pswitch_61
+    :pswitch_62
     move v6, v10
 
     move-object v8, v11
@@ -2703,7 +2722,7 @@
 
     return v6
 
-    :pswitch_62
+    :pswitch_63
     move v6, v10
 
     move-object v8, v11
@@ -2730,7 +2749,7 @@
 
     return v6
 
-    :pswitch_63
+    :pswitch_64
     move v6, v10
 
     move-object v8, v11
@@ -2762,7 +2781,7 @@
 
     return v6
 
-    :pswitch_64
+    :pswitch_65
     move v6, v10
 
     move-object v8, v11
@@ -2802,7 +2821,7 @@
 
     return v6
 
-    :pswitch_65
+    :pswitch_66
     move v6, v10
 
     move-object v8, v11
@@ -2861,6 +2880,7 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_66
         :pswitch_65
         :pswitch_64
         :pswitch_63

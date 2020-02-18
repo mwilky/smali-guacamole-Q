@@ -15,7 +15,13 @@
 
 
 # virtual methods
+.method public abstract alsMotionFlush()V
+.end method
+
 .method public abstract animateHBMBrightness(IZ)V
+.end method
+
+.method public abstract getStageEnable()I
 .end method
 
 .method public abstract updateBrightness()V

@@ -1175,7 +1175,7 @@
 
     if-eqz v3, :cond_0
 
-    const-string v3, "isSpecialGameplaying=0"
+    const-string/jumbo v3, "isSpecialGameplaying=0"
 
     invoke-static {v3}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
@@ -2498,7 +2498,7 @@
 
     if-eqz v1, :cond_1
 
-    const-string v1, "isSpecialGameplaying=1"
+    const-string/jumbo v1, "isSpecialGameplaying=1"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 

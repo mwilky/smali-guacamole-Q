@@ -54,7 +54,7 @@
 
     move-object v3, p3
 
-    invoke-static/range {v0 .. v5}, Lcom/android/server/appop/AppOpsService;->access$1400(Lcom/android/server/appop/AppOpsService;IILjava/lang/String;ZZ)I
+    invoke-static/range {v0 .. v5}, Lcom/android/server/appop/AppOpsService;->access$1500(Lcom/android/server/appop/AppOpsService;IILjava/lang/String;ZZ)I
 
     move-result v0
 
@@ -66,7 +66,7 @@
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$AppOpsManagerInternalImpl;->this$0:Lcom/android/server/appop/AppOpsService;
 
-    invoke-static {v0, p1, p2}, Lcom/android/server/appop/AppOpsService;->access$1300(Lcom/android/server/appop/AppOpsService;II)V
+    invoke-static {v0, p1, p2}, Lcom/android/server/appop/AppOpsService;->access$1400(Lcom/android/server/appop/AppOpsService;II)V
 
     return-void
 .end method

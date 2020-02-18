@@ -3271,7 +3271,7 @@
 
     move-result v4
 
-    const-string v5, "isSingleSessionActive"
+    const-string/jumbo v5, "isSingleSessionActive"
 
     invoke-static {v3, v4, v2, p1, v5}, Lcom/android/server/tv/TvInputManagerService;->access$4100(Lcom/android/server/tv/TvInputManagerService;IIILjava/lang/String;)I
 

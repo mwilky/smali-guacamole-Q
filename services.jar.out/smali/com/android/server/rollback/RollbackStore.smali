@@ -786,7 +786,7 @@
 
     move-result-object v2
 
-    const-string v0, "isStaged"
+    const-string/jumbo v0, "isStaged"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
 
@@ -851,7 +851,7 @@
 
     move-result v1
 
-    const-string v2, "isStaged"
+    const-string/jumbo v2, "isStaged"
 
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 

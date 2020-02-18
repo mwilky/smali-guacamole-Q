@@ -15,8 +15,6 @@
 
 
 # instance fields
-.field private final DISABLE_NOTIF_SOUND:Landroid/net/Uri;
-
 .field private final DRIVING_MODE_STATE:Ljava/lang/String;
 
 .field private final DRIVING_MODE_STATE_URI:Landroid/net/Uri;
@@ -55,14 +53,6 @@
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     nop
-    
-    const-string/jumbo p1, "tweaks_disable_notif_sound_screenon"
-
-    invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DISABLE_NOTIF_SOUND:Landroid/net/Uri;
 
     const-string/jumbo p1, "notification_badging"
 
@@ -191,10 +181,6 @@
     const/4 v2, -0x1
 
     const/4 v3, 0x0
-    
-    invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
-    
-    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DISABLE_NOTIF_SOUND:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
@@ -254,6 +240,18 @@
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->ESPORT_MODE_ENABLED:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
+
+    iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
+    invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/oneplus/worklife/OPWLBInjector;->getInstance(Landroid/content/Context;)Lcom/oneplus/worklife/OPWLBInjector;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/oneplus/worklife/OPWLBInjector;->registerChanges()V
 
     const/4 v1, 0x0
 
@@ -375,22 +373,6 @@
     invoke-virtual {v4}, Lcom/android/server/notification/PreferencesHelper;->updateBadgingEnabled()V
 
     :cond_6
-    if-eqz p1, :cond_mw
-
-    iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->DISABLE_NOTIF_SOUND:Landroid/net/Uri;
-
-    invoke-virtual {v4, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_mw2
-
-    :cond_mw
-    iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
-
-    invoke-virtual {v4}, Lcom/android/server/notification/NotificationManagerService;->setDisableNotificationSoundScreenOn()V
-
-    :cond_mw2
     if-eqz p1, :cond_7
 
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$SettingsObserver;->NOTIFICATION_BUBBLES_URI:Landroid/net/Uri;

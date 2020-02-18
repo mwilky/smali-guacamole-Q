@@ -6637,23 +6637,88 @@
 
     move-result-object v2
 
+    const/4 v12, 0x1
+
+    const/4 v11, 0x0
+
     if-eqz v2, :cond_2
 
-    const/4 v2, 0x1
+    move v2, v12
 
     goto :goto_1
 
     :cond_2
-    const/4 v2, 0x0
+    move v2, v11
 
     :goto_1
-    if-eqz p4, :cond_3
+    new-array v4, v12, [I
+
+    const/16 v5, 0xf5
+
+    aput v5, v4, v11
+
+    invoke-static {v4}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual/range {p6 .. p6}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-virtual/range {p6 .. p6}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/oneplus/android/server/heytapbusiness/OpHeytapBusinessManagerServiceInjector;->shouldRunWeChatPayBusiness(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-static {v4}, Lcom/oneplus/android/server/heytapbusiness/OpHeytapBusinessManagerServiceInjector;->runWeChatPayBusiness(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    sget-boolean v6, Lcom/android/server/wm/ActivityTaskManagerDebugConfig;->DEBUG_STACK:Z
+
+    if-eqz v6, :cond_3
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "startActivityMayWait, intent="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "ActivityTaskManager"
+
+    invoke-static {v7, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    if-eqz p4, :cond_4
 
     move/from16 v16, p4
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
@@ -6667,13 +6732,13 @@
 
     move/from16 v10, p5
 
-    if-eq v10, v4, :cond_4
+    if-eq v10, v4, :cond_5
 
     move v5, v10
 
     goto :goto_3
 
-    :cond_4
+    :cond_5
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
@@ -6681,7 +6746,7 @@
     :goto_3
     move v9, v5
 
-    if-ltz p2, :cond_5
+    if-ltz p2, :cond_6
 
     const/4 v4, -0x1
 
@@ -6691,8 +6756,8 @@
 
     goto :goto_4
 
-    :cond_5
-    if-nez v1, :cond_6
+    :cond_6
+    if-nez v1, :cond_7
 
     move/from16 v4, v16
 
@@ -6704,7 +6769,7 @@
 
     goto :goto_4
 
-    :cond_6
+    :cond_7
     move v5, v4
 
     move v7, v4
@@ -6724,7 +6789,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz v2, :cond_8
+    if-eqz v2, :cond_9
 
     invoke-virtual {v6}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -6736,15 +6801,15 @@
 
     move-result v5
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_8
 
     invoke-virtual {v6}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v5
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
-    :cond_7
+    :cond_8
     invoke-virtual {v6}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v5
@@ -6755,7 +6820,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_8
+    if-nez v5, :cond_9
 
     invoke-virtual {v6}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -6767,7 +6832,7 @@
 
     move-result v5
 
-    if-nez v5, :cond_8
+    if-nez v5, :cond_9
 
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -6783,13 +6848,13 @@
 
     move-result v5
 
-    if-eqz v5, :cond_8
+    if-eqz v5, :cond_9
 
     invoke-virtual {v6, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const/4 v2, 0x0
 
-    :cond_8
+    :cond_9
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
     const/4 v11, 0x0
@@ -6846,7 +6911,7 @@
 
     move-result-object v11
 
-    if-nez v11, :cond_c
+    if-nez v11, :cond_d
 
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
@@ -6854,13 +6919,13 @@
 
     move-result-object v12
 
-    if-eqz v12, :cond_b
+    if-eqz v12, :cond_c
 
     invoke-virtual {v12}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
     move-result v5
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_c
 
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -6883,7 +6948,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    if-eqz v6, :cond_9
+    if-eqz v6, :cond_a
 
     :try_start_1
     iget v7, v6, Landroid/content/pm/UserInfo;->id:I
@@ -6892,7 +6957,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_a
 
     invoke-virtual {v10, v3}, Landroid/os/UserManager;->isUserUnlockingOrUnlocked(I)Z
 
@@ -6900,7 +6965,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-nez v7, :cond_9
+    if-nez v7, :cond_a
 
     move v7, v0
 
@@ -6919,7 +6984,7 @@
 
     goto :goto_6
 
-    :cond_9
+    :cond_a
     const/4 v7, 0x0
 
     :goto_5
@@ -6929,7 +6994,7 @@
 
     nop
 
-    if-eqz v19, :cond_a
+    if-eqz v19, :cond_b
 
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
 
@@ -6969,7 +7034,7 @@
 
     goto :goto_7
 
-    :cond_a
+    :cond_b
     move-object/from16 v31, v4
 
     move-object/from16 v21, v10
@@ -6996,7 +7061,7 @@
 
     throw v0
 
-    :cond_b
+    :cond_c
     move-object/from16 v31, v4
 
     move/from16 v4, v30
@@ -7005,7 +7070,7 @@
 
     goto :goto_7
 
-    :cond_c
+    :cond_d
     move-object/from16 v31, v4
 
     move/from16 v4, v30
@@ -7044,7 +7109,7 @@
 
     move-object v7, v5
 
-    if-eqz v13, :cond_d
+    if-eqz v13, :cond_e
 
     :try_start_3
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -7059,7 +7124,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    if-eqz v5, :cond_d
+    if-eqz v5, :cond_e
 
     move v5, v0
 
@@ -7092,7 +7157,7 @@
 
     goto/16 :goto_19
 
-    :cond_d
+    :cond_e
     const/4 v5, 0x0
 
     :goto_8
@@ -7103,7 +7168,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_16
 
-    if-eqz v5, :cond_e
+    if-eqz v5, :cond_f
 
     :try_start_5
     const-string v5, "ActivityTaskManager"
@@ -7193,7 +7258,7 @@
 
     goto/16 :goto_19
 
-    :cond_e
+    :cond_f
     move/from16 p6, v2
 
     :goto_9
@@ -7208,7 +7273,7 @@
 
     const/4 v2, 0x2
 
-    if-eqz v9, :cond_18
+    if-eqz v9, :cond_19
 
     :try_start_8
     iget-object v0, v9, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -7217,13 +7282,13 @@
 
     and-int/2addr v0, v2
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
     iget-object v0, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-boolean v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mHasHeavyWeightFeature:Z
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
     iget-object v0, v9, Landroid/content/pm/ActivityInfo;->processName:Ljava/lang/String;
 
@@ -7235,13 +7300,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_18
 
     iget-object v0, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
     iget-object v0, v0, Lcom/android/server/wm/ActivityTaskManagerService;->mHeavyWeightProcess:Lcom/android/server/wm/WindowProcessController;
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_17
 
     iget-object v5, v0, Lcom/android/server/wm/WindowProcessController;->mInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -7253,7 +7318,7 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_e
 
-    if-ne v5, v2, :cond_10
+    if-ne v5, v2, :cond_11
 
     :try_start_9
     iget-object v2, v0, Lcom/android/server/wm/WindowProcessController;->mName:Ljava/lang/String;
@@ -7266,11 +7331,11 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    if-nez v2, :cond_f
+    if-nez v2, :cond_10
 
     goto :goto_a
 
-    :cond_f
+    :cond_10
     move-object/from16 v35, v7
 
     move-object/from16 v28, v8
@@ -7279,11 +7344,11 @@
 
     goto/16 :goto_e
 
-    :cond_10
+    :cond_11
     :goto_a
     move/from16 v2, v30
 
-    if-eqz v1, :cond_12
+    if-eqz v1, :cond_13
 
     :try_start_a
     iget-object v5, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -7294,7 +7359,7 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_6
 
-    if-eqz v5, :cond_11
+    if-eqz v5, :cond_12
 
     move/from16 v17, v2
 
@@ -7311,7 +7376,7 @@
 
     goto/16 :goto_b
 
-    :cond_11
+    :cond_12
     move/from16 v17, v2
 
     :try_start_c
@@ -7430,7 +7495,7 @@
 
     goto/16 :goto_19
 
-    :cond_12
+    :cond_13
     move/from16 v17, v2
 
     move-object/from16 v34, v7
@@ -7494,7 +7559,7 @@
 
     move-object v10, v5
 
-    if-ltz p12, :cond_13
+    if-ltz p12, :cond_14
 
     :try_start_10
     const-string v5, "has_result"
@@ -7536,7 +7601,7 @@
 
     goto/16 :goto_19
 
-    :cond_13
+    :cond_14
     :goto_c
     :try_start_11
     const-string v5, "intent"
@@ -7643,7 +7708,7 @@
 
     move-object v11, v0
 
-    if-eqz v11, :cond_14
+    if-eqz v11, :cond_15
 
     iget-object v0, v11, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
     :try_end_15
@@ -7651,13 +7716,13 @@
 
     goto :goto_d
 
-    :cond_14
+    :cond_15
     const/4 v0, 0x0
 
     :goto_d
     move-object v9, v0
 
-    if-eqz v9, :cond_15
+    if-eqz v9, :cond_16
 
     :try_start_16
     iget-object v0, v15, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -7715,7 +7780,7 @@
 
     goto/16 :goto_19
 
-    :cond_15
+    :cond_16
     move-object/from16 v30, v6
 
     move-object/from16 v36, v9
@@ -7893,7 +7958,7 @@
 
     goto/16 :goto_19
 
-    :cond_16
+    :cond_17
     move-object/from16 v23, v0
 
     move-object/from16 v35, v7
@@ -7904,7 +7969,7 @@
 
     goto :goto_e
 
-    :cond_17
+    :cond_18
     move-object/from16 v35, v7
 
     move-object/from16 v28, v8
@@ -7944,7 +8009,7 @@
 
     goto/16 :goto_19
 
-    :cond_18
+    :cond_19
     move-object/from16 v35, v7
 
     move-object/from16 v28, v8
@@ -8049,7 +8114,7 @@
     :try_end_18
     .catchall {:try_start_18 .. :try_end_18} :catchall_13
 
-    if-eqz v3, :cond_1a
+    if-eqz v3, :cond_1b
 
     move-object/from16 v3, p0
 
@@ -8072,7 +8137,7 @@
     :try_end_19
     .catchall {:try_start_19 .. :try_end_19} :catchall_10
 
-    if-eqz v5, :cond_19
+    if-eqz v5, :cond_1a
 
     :try_start_1a
     const-string v5, "ActivityTaskManager"
@@ -8090,7 +8155,7 @@
 
     goto/16 :goto_17
 
-    :cond_19
+    :cond_1a
     :goto_10
     :try_start_1b
     iget-object v5, v3, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -8115,7 +8180,7 @@
 
     goto/16 :goto_16
 
-    :cond_1a
+    :cond_1b
     move-object/from16 v3, p0
 
     move-object/from16 v7, p16
@@ -8137,7 +8202,7 @@
 
     move-object/from16 v5, p15
 
-    if-eqz v5, :cond_23
+    if-eqz v5, :cond_24
 
     :try_start_1d
     iput v1, v5, Landroid/app/WaitResult;->result:I
@@ -8148,7 +8213,7 @@
 
     move-object v6, v8
 
-    if-eqz v1, :cond_20
+    if-eqz v1, :cond_21
 
     const-wide/16 v8, 0x0
 
@@ -8156,13 +8221,13 @@
 
     const/4 v10, 0x2
 
-    if-eq v1, v10, :cond_1c
+    if-eq v1, v10, :cond_1d
 
-    if-eq v1, v12, :cond_1b
+    if-eq v1, v12, :cond_1c
 
     goto/16 :goto_15
 
-    :cond_1b
+    :cond_1c
     const/4 v0, 0x0
 
     iput-boolean v0, v5, Landroid/app/WaitResult;->timeout:Z
@@ -8175,18 +8240,18 @@
 
     goto :goto_15
 
-    :cond_1c
+    :cond_1d
     nop
 
     invoke-virtual {v6}, Lcom/android/server/wm/ActivityRecord;->attachedToProcess()Z
 
     move-result v10
 
-    if-eqz v10, :cond_1d
+    if-eqz v10, :cond_1e
 
     goto :goto_12
 
-    :cond_1d
+    :cond_1e
     move v12, v0
 
     :goto_12
@@ -8194,7 +8259,7 @@
 
     iget-boolean v0, v6, Lcom/android/server/wm/ActivityRecord;->nowVisible:Z
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     sget-object v0, Lcom/android/server/wm/ActivityStack$ActivityState;->RESUMED:Lcom/android/server/wm/ActivityStack$ActivityState;
 
@@ -8202,7 +8267,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_1f
 
     const/4 v0, 0x0
 
@@ -8216,7 +8281,7 @@
 
     goto :goto_15
 
-    :cond_1e
+    :cond_1f
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
@@ -8229,7 +8294,7 @@
     :try_end_1d
     .catchall {:try_start_1d .. :try_end_1d} :catchall_11
 
-    :cond_1f
+    :cond_20
     :try_start_1e
     iget-object v0, v3, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -8249,15 +8314,15 @@
     :try_start_1f
     iget-boolean v0, v5, Landroid/app/WaitResult;->timeout:Z
 
-    if-nez v0, :cond_23
+    if-nez v0, :cond_24
 
     iget-object v0, v5, Landroid/app/WaitResult;->who:Landroid/content/ComponentName;
 
-    if-eqz v0, :cond_1f
+    if-eqz v0, :cond_20
 
     goto :goto_15
 
-    :cond_20
+    :cond_21
     const/4 v10, 0x2
 
     iget-object v0, v3, Lcom/android/server/wm/ActivityStarter;->mSupervisor:Lcom/android/server/wm/ActivityStackSupervisor;
@@ -8268,7 +8333,7 @@
     :try_end_1f
     .catchall {:try_start_1f .. :try_end_1f} :catchall_11
 
-    :cond_21
+    :cond_22
     :try_start_20
     iget-object v0, v3, Lcom/android/server/wm/ActivityStarter;->mService:Lcom/android/server/wm/ActivityTaskManagerService;
 
@@ -8288,24 +8353,24 @@
     :try_start_21
     iget v0, v5, Landroid/app/WaitResult;->result:I
 
-    if-eq v0, v10, :cond_22
+    if-eq v0, v10, :cond_23
 
     iget-boolean v0, v5, Landroid/app/WaitResult;->timeout:Z
 
-    if-nez v0, :cond_22
+    if-nez v0, :cond_23
 
     iget-object v0, v5, Landroid/app/WaitResult;->who:Landroid/content/ComponentName;
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_22
 
-    :cond_22
+    :cond_23
     iget v0, v5, Landroid/app/WaitResult;->result:I
 
-    if-ne v0, v10, :cond_23
+    if-ne v0, v10, :cond_24
 
     const/4 v1, 0x2
 
-    :cond_23
+    :cond_24
     :goto_15
     monitor-exit v28
     :try_end_21

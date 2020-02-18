@@ -5743,6 +5743,8 @@
 
     iput v11, v10, Lcom/android/server/am/ProcessRecord;->completedAdjSeq:I
 
+    invoke-static {v10, v1}, Lcom/android/server/am/OomAdjusterInjector;->setTunedAdj(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ProcessRecord;)V
+
     iget v11, v10, Lcom/android/server/am/ProcessRecord;->curAdj:I
 
     move/from16 v12, v24

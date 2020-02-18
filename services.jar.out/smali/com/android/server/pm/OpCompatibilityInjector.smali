@@ -142,6 +142,40 @@
     return-object v0
 .end method
 
+.method public static getCompatConfigString(ILjava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    sget-boolean v0, Lcom/android/server/pm/OpCompatibilityInjector;->mInited:Z
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    return-object v0
+
+    :cond_0
+    sget-boolean v0, Lcom/android/server/pm/OpCompatibilityInjector;->DEBUG:Z
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lcom/android/server/pm/OpCompatibilityInjector;->TAG:Ljava/lang/String;
+
+    const-string v1, "call OpCompatibilityInjector.dumpToString type"
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    invoke-static {}, Lcom/android/server/pm/OpCompatibilityInjector;->makeSureInstanceInitialized()V
+
+    sget-object v0, Lcom/android/server/pm/OpCompatibilityInjector;->sOpCompatibilityHelper:Lcom/android/server/pm/IOpCompatibilityHelper;
+
+    invoke-interface {v0, p0, p1}, Lcom/android/server/pm/IOpCompatibilityHelper;->getCompatConfigString(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static initCompatOnlineConfig()V
     .locals 2
 

@@ -243,7 +243,7 @@
     sub-int/2addr v0, v1
 
     :goto_0
-    if-ltz v0, :cond_4
+    if-ltz v0, :cond_2
 
     iget-object v2, p0, Lcom/android/server/wm/WindowProcessController;->mActivities:Ljava/util/ArrayList;
 
@@ -266,36 +266,21 @@
 
     move-result-object v3
 
-    if-nez v3, :cond_1
+    if-eqz v3, :cond_1
 
-    goto :goto_1
-
-    :cond_1
     iget-boolean v4, v3, Lcom/android/server/wm/ActivityRecord;->visible:Z
 
-    if-nez v4, :cond_3
+    if-eqz v4, :cond_1
 
-    sget-object v4, Lcom/android/server/wm/ActivityStack$ActivityState;->INITIALIZING:Lcom/android/server/wm/ActivityStack$ActivityState;
+    return v1
 
-    invoke-virtual {v3, v4}, Lcom/android/server/wm/ActivityRecord;->isState(Lcom/android/server/wm/ActivityStack$ActivityState;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    goto :goto_2
-
-    :cond_2
+    :cond_1
     :goto_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    :cond_3
-    :goto_2
-    return v1
-
-    :cond_4
+    :cond_2
     const/4 v0, 0x0
 
     return v0

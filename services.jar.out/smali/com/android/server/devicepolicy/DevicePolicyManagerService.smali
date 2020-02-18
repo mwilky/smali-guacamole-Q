@@ -15273,7 +15273,7 @@
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    const v2, 0x10407b7
+    const v2, 0x10407b8
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -27917,7 +27917,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
     nop
@@ -27933,16 +27933,26 @@
 
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    invoke-static {v7, p4, v3, v6, p3}, Landroid/content/PermissionChecker;->checkPermission(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
+    invoke-static {v7, p4, v3, v6, p3}, Landroid/content/PermissionChecker;->checkPermissionForPreflight(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;)I
 
     move-result v3
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    nop
+    if-eqz v3, :cond_2
+
+    const/4 v3, -0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x0
 
     :goto_0
+    nop
+
+    :goto_1
     :try_start_3
     invoke-virtual {v0, p4, p3, v1}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
 
@@ -27954,7 +27964,7 @@
 
     const/4 v10, 0x4
 
-    if-eq v7, v10, :cond_2
+    if-eq v7, v10, :cond_3
 
     nop
 
@@ -27967,15 +27977,15 @@
 
     return v9
 
-    :cond_2
-    if-nez v3, :cond_3
-
-    goto :goto_1
-
     :cond_3
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
     const/4 v8, 0x2
 
-    :goto_1
+    :goto_2
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mInjector:Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;
 
     invoke-virtual {v7, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$Injector;->binderRestoreCallingIdentity(J)V
@@ -36096,7 +36106,7 @@
     :try_start_3
     iget-object v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    const v1, 0x10407ba
+    const v1, 0x10407bb
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

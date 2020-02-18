@@ -5308,10 +5308,6 @@
     iget v4, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
     iget-object v5, p0, Lcom/android/server/am/ProcessRecord;->createReason:Ljava/lang/String;
-    
-    sget-boolean v1, Lcom/android/server/SystemServer;->mDisableHouston:Z
-    
-    if-nez v1, :cond_5
 
     invoke-static {v2, v3, v4, v5}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->addProcess(Landroid/content/pm/ApplicationInfo;Ljava/lang/String;ILjava/lang/String;)V
 
@@ -6962,10 +6958,6 @@
     iget v0, p0, Lcom/android/server/am/ProcessRecord;->pid:I
 
     iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->deathReason:Ljava/lang/String;
-    
-    sget-boolean v2, Lcom/android/server/SystemServer;->mDisableHouston:Z
-    
-    if-nez v2, :cond_0
 
     invoke-static {v0, v1}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->removeProcess(ILjava/lang/String;)V
 

@@ -13,6 +13,9 @@
 .method public abstract dumpToString()Ljava/lang/String;
 .end method
 
+.method public abstract getCompatConfigString(ILjava/lang/String;)Ljava/lang/String;
+.end method
+
 .method public abstract initCompatOnlineConfig()V
 .end method
 

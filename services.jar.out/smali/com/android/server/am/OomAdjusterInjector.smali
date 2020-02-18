@@ -34,9 +34,31 @@
 
 .field public static sEnableOptAdj:Z
 
+.field public static sEnableTuneFgService:Z
+
 .field private static sEndIndex:I
 
+.field private static sFgServiceBlackList:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static sOomAdjusterInjector:Lcom/android/server/am/OomAdjusterInjector;
+
+.field private static sPersistBlackList:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static sRecentTasks:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -49,6 +71,8 @@
 .end field
 
 .field private static sStartIndex:I
+
+.field private static sTunedAdj:I
 
 
 # instance fields
@@ -100,6 +124,30 @@
     move-result v3
 
     sput-boolean v3, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
+
+    const-string/jumbo v3, "persist.sys.enableopt.fgservice"
+
+    invoke-static {v3, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v3
+
+    sput-boolean v3, Lcom/android/server/am/OomAdjusterInjector;->sEnableTuneFgService:Z
+
+    const/16 v3, 0x325
+
+    sput v3, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    sput-object v3, Lcom/android/server/am/OomAdjusterInjector;->sFgServiceBlackList:Ljava/util/ArrayList;
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    sput-object v3, Lcom/android/server/am/OomAdjusterInjector;->sPersistBlackList:Ljava/util/ArrayList;
 
     sget-boolean v3, Landroid/os/Build;->DEBUG_ONEPLUS:Z
 
@@ -309,11 +357,11 @@
 .end method
 
 .method public static resolveConfig(Lorg/json/JSONArray;)V
-    .locals 7
-
-    const-string v0, "OomAdjusterInjector"
+    .locals 11
 
     if-nez p0, :cond_0
+
+    const-string v0, "OomAdjusterInjector"
 
     const-string v1, "[OnlineConfig] OomAdjusterInjector jsonArray is null"
 
@@ -322,225 +370,466 @@
     return-void
 
     :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
     :try_start_0
-    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
+    const-class v0, Lcom/android/server/am/OomAdjusterInjector;
 
-    move-result v2
-
-    if-ge v1, v2, :cond_5
-
-    invoke-virtual {p0, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    const-string/jumbo v3, "name"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "enable_opt_adj"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
+    monitor-enter v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string/jumbo v5, "value"
+    const/4 v1, 0x0
 
-    if-eqz v4, :cond_1
+    move v2, v1
 
+    :goto_0
     :try_start_1
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lorg/json/JSONArray;->length()I
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v3
 
-    const-string v6, "before enablePolicy : "
+    if-ge v2, v3, :cond_a
 
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v6, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v2, v5}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v4
-
-    sput-boolean v4, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "enablePolicy : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-boolean v5, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_1
-    const-string/jumbo v4, "opt_adj_num_recent"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v2, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v4
-
-    sput v4, Lcom/android/server/am/OomAdjusterInjector;->mNumRecentTasks:I
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "NUM_OPT_ADJ_RECENT_TASKS : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget v5, Lcom/android/server/am/OomAdjusterInjector;->mNumRecentTasks:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_2
-    const-string/jumbo v4, "opt_adj_num_high"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v2, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v4
-
-    sput v4, Lcom/android/server/am/OomAdjusterInjector;->mNumHighUsed:I
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "NUM_OPT_ADJ_HIGH_USED : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget v5, Lcom/android/server/am/OomAdjusterInjector;->mNumHighUsed:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_1
-
-    :cond_3
-    const-string/jumbo v4, "opt_adj_start_adj"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v2, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v4
-
-    sput v4, Lcom/android/server/am/OomAdjusterInjector;->mStartOptAdj:I
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "StartOptAdj : "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget v5, Lcom/android/server/am/OomAdjusterInjector;->mStartOptAdj:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_4
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto/16 :goto_0
-
-    :cond_5
-    const-string v1, "[OnlineConfig] OomAdjusterInjector updated complete"
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "[OnlineConfig] resolve error message:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v4, "name"
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "enable_opt_adj"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "before enablePolicy : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v7, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v5
+
+    sput-boolean v5, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "enablePolicy : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v7, Lcom/android/server/am/OomAdjusterInjector;->sEnableOptAdj:Z
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_3
+
+    :cond_1
+    const-string/jumbo v5, "opt_adj_num_recent"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v5
+
+    sput v5, Lcom/android/server/am/OomAdjusterInjector;->mNumRecentTasks:I
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "NUM_OPT_ADJ_RECENT_TASKS : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v7, Lcom/android/server/am/OomAdjusterInjector;->mNumRecentTasks:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_3
+
+    :cond_2
+    const-string/jumbo v5, "opt_adj_num_high"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v5
+
+    sput v5, Lcom/android/server/am/OomAdjusterInjector;->mNumHighUsed:I
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "NUM_OPT_ADJ_HIGH_USED : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v7, Lcom/android/server/am/OomAdjusterInjector;->mNumHighUsed:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_3
+
+    :cond_3
+    const-string/jumbo v5, "opt_adj_start_adj"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v5
+
+    sput v5, Lcom/android/server/am/OomAdjusterInjector;->mStartOptAdj:I
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "StartOptAdj : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v7, Lcom/android/server/am/OomAdjusterInjector;->mStartOptAdj:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_3
+
+    :cond_4
+    const-string/jumbo v5, "opt_adj_tuned_fg_adj"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v5
+
+    sput v5, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "TunedFgServiceAdj : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v7, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_3
+
+    :cond_5
+    const-string/jumbo v5, "opt_adj_fgs_black"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_7
+
+    sget-object v5, Lcom/android/server/am/OomAdjusterInjector;->sFgServiceBlackList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v5
+
+    move v6, v1
+
+    :goto_1
+    invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
+
+    move-result v7
+
+    if-ge v6, v7, :cond_6
+
+    invoke-virtual {v5, v6}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "OomAdjusterInjector"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, " is added to fg service opt list"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v8, Lcom/android/server/am/OomAdjusterInjector;->sFgServiceBlackList:Ljava/util/ArrayList;
+
+    invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    nop
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    goto :goto_3
+
+    :cond_7
+    const-string/jumbo v5, "opt_adj_tune_fgservice"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v5
+
+    sput-boolean v5, Lcom/android/server/am/OomAdjusterInjector;->sEnableTuneFgService:Z
+
+    const-string v5, "OomAdjusterInjector"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "EnableTuneFgService : "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-boolean v7, Lcom/android/server/am/OomAdjusterInjector;->sEnableTuneFgService:Z
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
+
+    :cond_8
+    const-string/jumbo v5, "opt_adj_persist_black"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    sget-object v5, Lcom/android/server/am/OomAdjusterInjector;->sPersistBlackList:Ljava/util/ArrayList;
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
+
+    const-string/jumbo v5, "value"
+
+    invoke-virtual {v3, v5}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v5
+
+    move v6, v1
+
+    :goto_2
+    invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
+
+    move-result v7
+
+    if-ge v6, v7, :cond_9
+
+    invoke-virtual {v5, v6}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "OomAdjusterInjector"
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v10, " is added to persist opt list"
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v8, v9}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v8, Lcom/android/server/am/OomAdjusterInjector;->sPersistBlackList:Ljava/util/ArrayList;
+
+    invoke-virtual {v8, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    nop
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_9
+    :goto_3
+    add-int/lit8 v2, v2, 0x1
+
+    goto/16 :goto_0
+
+    :cond_a
+    const-string v1, "OomAdjusterInjector"
+
+    const-string v2, "[OnlineConfig] OomAdjusterInjector updated complete"
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v0
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "[OnlineConfig] resolve error message:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v2, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "OomAdjusterInjector"
+
+    invoke-static {v2, v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_4
     return-void
 .end method
 
@@ -1256,6 +1545,241 @@
 
     :cond_4
     :goto_1
+    return-void
+.end method
+
+.method public static setTunedAdj(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/ProcessRecord;)V
+    .locals 4
+
+    sget-boolean v0, Lcom/android/server/am/OomAdjusterInjector;->sEnableTuneFgService:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    const-class v0, Lcom/android/server/am/OomAdjusterInjector;
+
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz p1, :cond_4
+
+    :try_start_1
+    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    iget-object v2, p1, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
+
+    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->hasForegroundServices()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget-object v1, Lcom/android/server/am/OomAdjusterInjector;->sFgServiceBlackList:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string/jumbo v1, "started-services"
+
+    iput-object v1, p0, Lcom/android/server/am/ProcessRecord;->adjType:Ljava/lang/String;
+
+    sget v1, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
+
+    invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->setCurrentSchedulingGroup(I)V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lcom/android/server/am/ProcessRecord;->serviceHighRam:Z
+
+    iput-boolean v2, p0, Lcom/android/server/am/ProcessRecord;->serviceb:Z
+
+    invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->setCurProcState(I)V
+
+    invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->setCurRawProcState(I)V
+
+    sget-boolean v1, Lcom/android/server/am/OomAdjusterInjector;->sDebugOptAdj:Z
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "OomAdjusterInjector"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " is set to adj "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " due to in fgs opt list"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v1, Lcom/android/server/am/OomAdjusterInjector;->sPersistBlackList:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    sget v2, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
+
+    if-ge v1, v2, :cond_4
+
+    iget-boolean v1, p0, Lcom/android/server/am/ProcessRecord;->hasShownUi:Z
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {p0}, Lcom/android/server/am/ProcessRecord;->getWindowProcessController()Lcom/android/server/wm/WindowProcessController;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/server/wm/WindowProcessController;->isPreviousProcess()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    const/16 v2, 0x2bc
+
+    if-ge v1, v2, :cond_2
+
+    invoke-virtual {p0, v2}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v1, 0x384
+
+    invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    goto :goto_0
+
+    :cond_3
+    sget v1, Lcom/android/server/am/OomAdjusterInjector;->sTunedAdj:I
+
+    invoke-virtual {p0, v1}, Lcom/android/server/am/ProcessRecord;->modifyRawOomAdj(I)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    :goto_0
+    sget-boolean v1, Lcom/android/server/am/OomAdjusterInjector;->sDebugOptAdj:Z
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "OomAdjusterInjector"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " is set to adj "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/android/server/am/ProcessRecord;->curAdj:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " due to in persist opt list"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    :goto_1
+    monitor-exit v0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_2
     return-void
 .end method
 

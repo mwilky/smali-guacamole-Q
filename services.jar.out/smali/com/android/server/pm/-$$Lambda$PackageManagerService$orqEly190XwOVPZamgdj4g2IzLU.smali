@@ -1,4 +1,4 @@
-.class public final synthetic Lcom/android/server/pm/-$$Lambda$PackageManagerService$jnotawFD1AlXlGEGCjX25xsyMtg;
+.class public final synthetic Lcom/android/server/pm/-$$Lambda$PackageManagerService$orqEly190XwOVPZamgdj4g2IzLU;
 .super Ljava/lang/Object;
 .source "lambda"
 
@@ -16,7 +16,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/android/server/pm/-$$Lambda$PackageManagerService$jnotawFD1AlXlGEGCjX25xsyMtg;->f$0:Lcom/android/server/pm/PackageManagerService;
+    iput-object p1, p0, Lcom/android/server/pm/-$$Lambda$PackageManagerService$orqEly190XwOVPZamgdj4g2IzLU;->f$0:Lcom/android/server/pm/PackageManagerService;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final onInitialized(I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/android/server/pm/-$$Lambda$PackageManagerService$jnotawFD1AlXlGEGCjX25xsyMtg;->f$0:Lcom/android/server/pm/PackageManagerService;
+    iget-object v0, p0, Lcom/android/server/pm/-$$Lambda$PackageManagerService$orqEly190XwOVPZamgdj4g2IzLU;->f$0:Lcom/android/server/pm/PackageManagerService;
 
-    invoke-virtual {v0, p1}, Lcom/android/server/pm/PackageManagerService;->lambda$systemReady$28$PackageManagerService(I)V
+    invoke-virtual {v0, p1}, Lcom/android/server/pm/PackageManagerService;->lambda$systemReady$29$PackageManagerService(I)V
 
     return-void
 .end method

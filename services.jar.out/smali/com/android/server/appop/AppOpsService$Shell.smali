@@ -92,7 +92,7 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Ljava/lang/String;Ljava/io/PrintWriter;)I
+.method static synthetic access$1100(Ljava/lang/String;Ljava/io/PrintWriter;)I
     .locals 1
 
     invoke-static {p0, p1}, Lcom/android/server/appop/AppOpsService$Shell;->strOpToOp(Ljava/lang/String;Ljava/io/PrintWriter;)I
@@ -727,7 +727,7 @@
     :cond_10
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService$Shell;->packageName:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/android/server/appop/AppOpsService;->access$900(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/android/server/appop/AppOpsService;->access$1000(Ljava/lang/String;)I
 
     move-result v0
 

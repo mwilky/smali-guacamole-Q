@@ -857,6 +857,12 @@
 
     iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
 
+    and-int/lit8 v0, v0, -0x5
+
+    iput v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
+
+    iget v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I
+
     or-int/2addr v0, v1
 
     iput v0, v13, Landroid/content/pm/PackageInstaller$SessionParams;->installFlags:I

@@ -1024,6 +1024,16 @@
     const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    iget-object v0, v11, Lcom/android/server/am/AppErrors;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/server/am/ColdStartInjector;->getInstance(Landroid/content/Context;)Lcom/android/server/am/ColdStartInjector;
+
+    move-result-object v0
+
+    iget-object v2, v12, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Lcom/android/server/am/ColdStartInjector;->setCrashKillProc(Ljava/lang/String;)V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 

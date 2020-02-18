@@ -216,7 +216,7 @@
 
     move-result v2
 
-    const-string v3, "isStatic"
+    const-string/jumbo v3, "isStatic"
 
     invoke-static {p0, v3, v2}, Lcom/android/internal/util/XmlUtils;->writeBooleanAttribute(Lorg/xmlpull/v1/XmlSerializer;Ljava/lang/String;Z)V
 
@@ -433,7 +433,7 @@
 
     move-result v18
 
-    const-string v2, "isStatic"
+    const-string/jumbo v2, "isStatic"
 
     invoke-static {v0, v2}, Lcom/android/internal/util/XmlUtils;->readBooleanAttribute(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 

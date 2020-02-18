@@ -30,6 +30,8 @@
 
 .field private static final NO_VERSION:I = -0x1
 
+.field private static final OPS_RESTRICTED_ON_SUSPEND:[I
+
 .field private static final PROCESS_STATE_TO_UID_STATE:[I
 
 .field static final TAG:Ljava/lang/String; = "AppOps"
@@ -190,6 +192,14 @@
 
     sput-object v0, Lcom/android/server/appop/AppOpsService;->PROCESS_STATE_TO_UID_STATE:[I
 
+    const/4 v0, 0x3
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lcom/android/server/appop/AppOpsService;->OPS_RESTRICTED_ON_SUSPEND:[I
+
     return-void
 
     :array_0
@@ -216,6 +226,13 @@
         0x2bc
         0x2bc
         0x2bc
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x1c
+        0x1b
+        0x1a
     .end array-data
 .end method
 
@@ -338,7 +355,17 @@
     return-void
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/appop/AppOpsService;)Landroid/util/ArrayMap;
+.method static synthetic access$1000(Ljava/lang/String;)I
+    .locals 1
+
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService;->resolveUid(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/appop/AppOpsService;)Landroid/util/ArrayMap;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/appop/AppOpsService;->mOpUserRestrictions:Landroid/util/ArrayMap;
@@ -346,7 +373,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/appop/AppOpsService;II)V
+.method static synthetic access$1300(Lcom/android/server/appop/AppOpsService;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/appop/AppOpsService;->notifyWatchersOfChange(II)V
@@ -354,7 +381,7 @@
     return-void
 .end method
 
-.method static synthetic access$1300(Lcom/android/server/appop/AppOpsService;II)V
+.method static synthetic access$1400(Lcom/android/server/appop/AppOpsService;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/android/server/appop/AppOpsService;->setAllPkgModesToDefault(II)V
@@ -362,7 +389,7 @@
     return-void
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/appop/AppOpsService;IILjava/lang/String;ZZ)I
+.method static synthetic access$1500(Lcom/android/server/appop/AppOpsService;IILjava/lang/String;ZZ)I
     .locals 1
 
     invoke-direct/range {p0 .. p5}, Lcom/android/server/appop/AppOpsService;->checkOperationUnchecked(IILjava/lang/String;ZZ)I
@@ -372,22 +399,20 @@
     return v0
 .end method
 
-.method static synthetic access$200(Lcom/android/server/appop/AppOpsService;Landroid/util/ArraySet;IILjava/lang/String;)V
+.method static synthetic access$200()[I
+    .locals 1
+
+    sget-object v0, Lcom/android/server/appop/AppOpsService;->OPS_RESTRICTED_ON_SUSPEND:[I
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcom/android/server/appop/AppOpsService;Landroid/util/ArraySet;IILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/appop/AppOpsService;->notifyOpChanged(Landroid/util/ArraySet;IILjava/lang/String;)V
 
     return-void
-.end method
-
-.method static synthetic access$900(Ljava/lang/String;)I
-    .locals 1
-
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService;->resolveUid(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
 .end method
 
 .method private static addCallbacks(Ljava/util/HashMap;IILjava/lang/String;Landroid/util/ArraySet;)Ljava/util/HashMap;
@@ -703,27 +728,36 @@
 .method private checkOperationUnchecked(IILjava/lang/String;ZZ)I
     .locals 8
 
+    invoke-direct {p0, p1, p3, p2}, Lcom/android/server/appop/AppOpsService;->isOpRestrictedDueToSuspend(ILjava/lang/String;I)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
     monitor-enter p0
 
-    if-eqz p5, :cond_0
+    if-eqz p5, :cond_1
 
     :try_start_0
     invoke-virtual {p0, p2, p3}, Lcom/android/server/appop/AppOpsService;->checkPackage(ILjava/lang/String;)I
 
-    :cond_0
+    :cond_1
     invoke-direct {p0, p2, p1, p3}, Lcom/android/server/appop/AppOpsService;->isOpRestrictedLocked(IILjava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
+    if-eqz v0, :cond_2
 
     monitor-exit p0
 
-    return v0
+    return v1
 
-    :cond_1
+    :cond_2
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToSwitch(I)I
 
     move-result v0
@@ -736,11 +770,11 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object v1, v0, Lcom/android/server/appop/AppOpsService$UidState;->opModes:Landroid/util/SparseIntArray;
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-object v1, v0, Lcom/android/server/appop/AppOpsService$UidState;->opModes:Landroid/util/SparseIntArray;
 
@@ -748,7 +782,7 @@
 
     move-result v1
 
-    if-ltz v1, :cond_3
+    if-ltz v1, :cond_4
 
     iget-object v1, v0, Lcom/android/server/appop/AppOpsService$UidState;->opModes:Landroid/util/SparseIntArray;
 
@@ -756,13 +790,13 @@
 
     move-result v1
 
-    if-eqz p4, :cond_2
+    if-eqz p4, :cond_3
 
     move v2, v1
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     invoke-virtual {v0, p1, v1}, Lcom/android/server/appop/AppOpsService$UidState;->evalMode(II)I
 
     move-result v2
@@ -772,7 +806,7 @@
 
     return v2
 
-    :cond_3
+    :cond_4
     const/4 v5, 0x0
 
     const/4 v7, 0x0
@@ -791,7 +825,7 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
     invoke-static {p1}, Landroid/app/AppOpsManager;->opToDefaultMode(I)I
 
@@ -801,8 +835,8 @@
 
     return v2
 
-    :cond_4
-    if-eqz p4, :cond_5
+    :cond_5
+    if-eqz p4, :cond_6
 
     invoke-static {v1}, Lcom/android/server/appop/AppOpsService$Op;->access$100(Lcom/android/server/appop/AppOpsService$Op;)I
 
@@ -810,7 +844,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     invoke-virtual {v1}, Lcom/android/server/appop/AppOpsService$Op;->evalMode()I
 
     move-result v2
@@ -1673,23 +1707,23 @@
 
     move-result v7
 
-    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$300(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v8
 
-    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v9
 
-    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v10
 
-    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v11
 
-    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
+    invoke-static/range {p2 .. p2}, Lcom/android/server/appop/AppOpsService$Op;->access$800(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
 
     move-result-object v12
 
@@ -2111,7 +2145,7 @@
 
     move-result v7
 
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$300(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
@@ -2119,7 +2153,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$300(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
@@ -2135,13 +2169,13 @@
     move-object v8, v2
 
     :goto_0
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
@@ -2157,13 +2191,13 @@
     move-object v9, v2
 
     :goto_1
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
@@ -2179,13 +2213,13 @@
     move-object v10, v2
 
     :goto_2
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
     if-eqz v1, :cond_4
 
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v1
 
@@ -2201,13 +2235,13 @@
     move-object v11, v2
 
     :goto_3
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$800(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
 
     move-result-object v1
 
     if-eqz v1, :cond_5
 
-    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
+    invoke-static {p0}, Lcom/android/server/appop/AppOpsService$Op;->access$800(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
 
     move-result-object v1
 
@@ -2680,6 +2714,41 @@
     return-object v0
 .end method
 
+.method private isOpRestrictedDueToSuspend(ILjava/lang/String;I)Z
+    .locals 2
+
+    sget-object v0, Lcom/android/server/appop/AppOpsService;->OPS_RESTRICTED_ON_SUSPEND:[I
+
+    invoke-static {v0, p1}, Lcom/android/internal/util/ArrayUtils;->contains([II)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    const-class v0, Landroid/content/pm/PackageManagerInternal;
+
+    invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/pm/PackageManagerInternal;
+
+    invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, p2, v1}, Landroid/content/pm/PackageManagerInternal;->isPackageSuspended(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    return v1
+.end method
+
 .method private isOpRestrictedLocked(IILjava/lang/String;)Z
     .locals 8
 
@@ -3001,23 +3070,23 @@
 
     move-result v14
 
-    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$300(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v15
 
-    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v16
 
-    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v17
 
-    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v18
 
-    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
+    invoke-static {v5}, Lcom/android/server/appop/AppOpsService$Op;->access$800(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
 
     move-result-object v19
 
@@ -4547,7 +4616,7 @@
 
     iget v6, v1, Lcom/android/server/appop/AppOpsService$Shell;->op:I
 
-    const/16 v7, 0x5a
+    const/16 v7, 0x5b
 
     if-ge v6, v7, :cond_23
 
@@ -6601,7 +6670,7 @@
 
     if-ltz p1, :cond_0
 
-    const/16 v0, 0x5a
+    const/16 v0, 0x5b
 
     if-ge p1, v0, :cond_0
 
@@ -6941,7 +7010,7 @@
     :cond_3
     aget-object v0, v11, v5
 
-    invoke-static {v0, v10}, Lcom/android/server/appop/AppOpsService$Shell;->access$1000(Ljava/lang/String;Ljava/io/PrintWriter;)I
+    invoke-static {v0, v10}, Lcom/android/server/appop/AppOpsService$Shell;->access$1100(Ljava/lang/String;Ljava/io/PrintWriter;)I
 
     move-result v0
 
@@ -10730,23 +10799,23 @@
 
     move-result v19
 
-    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$300(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v20
 
-    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$400(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v21
 
-    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$500(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v22
 
-    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$600(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
+    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseLongArray;
 
     move-result-object v23
 
-    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$700(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
+    invoke-static/range {p1 .. p1}, Lcom/android/server/appop/AppOpsService$Op;->access$800(Lcom/android/server/appop/AppOpsService$Op;)Landroid/util/LongSparseArray;
 
     move-result-object v24
 
@@ -14455,7 +14524,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    const/16 v1, 0x5a
+    const/16 v1, 0x5b
 
     const/4 v2, 0x0
 
@@ -15129,7 +15198,7 @@
     goto :goto_0
 
     :cond_0
-    const/16 v0, 0x59
+    const/16 v0, 0x5a
 
     new-instance v2, Ljava/lang/StringBuilder;
 

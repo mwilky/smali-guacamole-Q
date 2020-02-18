@@ -28,6 +28,16 @@
 
 .field installerPackageName:Ljava/lang/String;
 
+.field libraryConsumers:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroid/content/pm/PackageParser$Package;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field name:Ljava/lang/String;
 
 .field newUsers:[I

@@ -753,7 +753,7 @@
 
     const-string v1, "android:sms_financial_transactions"
 
-    invoke-static {v0, v1}, Landroid/content/PermissionChecker;->checkCallingOrSelfPermission(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/content/PermissionChecker;->checkCallingOrSelfPermissionForDataDelivery(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 

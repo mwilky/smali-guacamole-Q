@@ -1315,7 +1315,7 @@
 .end method
 
 .method packageStateChanged(Ljava/lang/String;I)V
-    .locals 12
+    .locals 11
 
     iget-object v0, p0, Lcom/android/server/webkit/WebViewUpdater;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
@@ -1330,7 +1330,7 @@
     move v3, v2
 
     :goto_0
-    if-ge v3, v1, :cond_7
+    if-ge v3, v1, :cond_6
 
     aget-object v4, v0, v3
 
@@ -1340,7 +1340,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_6
+    if-eqz v6, :cond_5
 
     const/4 v0, 0x0
 
@@ -1363,7 +1363,7 @@
 
     iget-object v8, p0, Lcom/android/server/webkit/WebViewUpdater;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
-    if-eqz v8, :cond_1
+    if-eqz v8, :cond_0
 
     iget-object v8, p0, Lcom/android/server/webkit/WebViewUpdater;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
@@ -1371,58 +1371,7 @@
 
     move-object v3, v8
 
-    if-nez p2, :cond_0
-
-    iget-object v8, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-    :try_end_0
-    .catch Lcom/android/server/webkit/WebViewUpdater$WebViewPackageMissingException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v8, :cond_0
-
-    :try_start_1
-    monitor-exit v7
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-void
-
     :cond_0
-    :try_start_2
-    iget-object v8, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
-
-    invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_1
-
-    iget-wide v8, v6, Landroid/content/pm/PackageInfo;->lastUpdateTime:J
-
-    iget-object v10, p0, Lcom/android/server/webkit/WebViewUpdater;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
-
-    iget-wide v10, v10, Landroid/content/pm/PackageInfo;->lastUpdateTime:J
-    :try_end_2
-    .catch Lcom/android/server/webkit/WebViewUpdater$WebViewPackageMissingException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    cmp-long v8, v8, v10
-
-    if-nez v8, :cond_1
-
-    :try_start_3
-    monitor-exit v7
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    return-void
-
-    :cond_1
-    :try_start_4
     iget-object v8, v4, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
     iget-object v9, v6, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -1431,7 +1380,7 @@
 
     move-result v8
 
-    if-nez v8, :cond_2
+    if-nez v8, :cond_1
 
     iget-object v8, v4, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
 
@@ -1439,16 +1388,16 @@
 
     move-result v8
 
-    if-nez v8, :cond_2
+    if-nez v8, :cond_1
 
     iget-object v8, p0, Lcom/android/server/webkit/WebViewUpdater;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
-    if-nez v8, :cond_3
+    if-nez v8, :cond_2
 
-    :cond_2
+    :cond_1
     const/4 v2, 0x1
 
-    :cond_3
+    :cond_2
     move v0, v2
 
     iget-object v2, v4, Landroid/webkit/WebViewProviderInfo;->packageName:Ljava/lang/String;
@@ -1459,14 +1408,14 @@
 
     move v1, v2
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     invoke-direct {p0, v6}, Lcom/android/server/webkit/WebViewUpdater;->onWebViewProviderChanged(Landroid/content/pm/PackageInfo;)V
-    :try_end_4
-    .catch Lcom/android/server/webkit/WebViewUpdater$WebViewPackageMissingException; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    :try_end_0
+    .catch Lcom/android/server/webkit/WebViewUpdater$WebViewPackageMissingException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_4
+    :cond_3
     goto :goto_1
 
     :catchall_0
@@ -1479,7 +1428,7 @@
 
     const/4 v8, 0x0
 
-    :try_start_5
+    :try_start_1
     iput-object v8, p0, Lcom/android/server/webkit/WebViewUpdater;->mCurrentWebViewPackage:Landroid/content/pm/PackageInfo;
 
     sget-object v8, Lcom/android/server/webkit/WebViewUpdater;->TAG:Ljava/lang/String;
@@ -1502,36 +1451,36 @@
 
     :goto_1
     monitor-exit v7
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_4
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_4
 
     iget-object v2, p0, Lcom/android/server/webkit/WebViewUpdater;->mSystemInterface:Lcom/android/server/webkit/SystemInterface;
 
     invoke-interface {v2, v3}, Lcom/android/server/webkit/SystemInterface;->killPackageDependents(Ljava/lang/String;)V
 
-    :cond_5
+    :cond_4
     return-void
 
     :goto_2
-    :try_start_6
+    :try_start_2
     monitor-exit v7
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     throw v2
 
-    :cond_6
+    :cond_5
     add-int/lit8 v3, v3, 0x1
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    :cond_7
+    :cond_6
     return-void
 .end method
 

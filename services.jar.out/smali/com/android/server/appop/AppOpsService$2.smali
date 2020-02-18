@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 8
+    .locals 11
 
     const-string v0, "android.intent.extra.changed_uid_list"
 
@@ -46,69 +46,86 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/android/server/appop/AppOpsService$2;->this$0:Lcom/android/server/appop/AppOpsService;
+    invoke-static {}, Lcom/android/server/appop/AppOpsService;->access$200()[I
 
-    monitor-enter v2
+    move-result-object v2
+
+    array-length v3, v2
+
+    const/4 v4, 0x0
+
+    :goto_0
+    if-ge v4, v3, :cond_2
+
+    aget v5, v2, v4
+
+    iget-object v6, p0, Lcom/android/server/appop/AppOpsService$2;->this$0:Lcom/android/server/appop/AppOpsService;
+
+    monitor-enter v6
 
     :try_start_0
-    iget-object v3, p0, Lcom/android/server/appop/AppOpsService$2;->this$0:Lcom/android/server/appop/AppOpsService;
+    iget-object v7, p0, Lcom/android/server/appop/AppOpsService$2;->this$0:Lcom/android/server/appop/AppOpsService;
 
-    iget-object v3, v3, Lcom/android/server/appop/AppOpsService;->mOpModeWatchers:Landroid/util/SparseArray;
+    iget-object v7, v7, Lcom/android/server/appop/AppOpsService;->mOpModeWatchers:Landroid/util/SparseArray;
 
-    const/16 v4, 0x1c
+    invoke-virtual {v7, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v3, v4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    move-result-object v7
 
-    move-result-object v3
+    check-cast v7, Landroid/util/ArraySet;
 
-    check-cast v3, Landroid/util/ArraySet;
+    if-nez v7, :cond_0
 
-    if-nez v3, :cond_0
+    monitor-exit v6
 
-    monitor-exit v2
-
-    return-void
+    goto :goto_2
 
     :cond_0
-    new-instance v5, Landroid/util/ArraySet;
+    new-instance v8, Landroid/util/ArraySet;
 
-    invoke-direct {v5, v3}, Landroid/util/ArraySet;-><init>(Landroid/util/ArraySet;)V
+    invoke-direct {v8, v7}, Landroid/util/ArraySet;-><init>(Landroid/util/ArraySet;)V
 
-    move-object v3, v5
+    move-object v7, v8
 
-    monitor-exit v2
+    monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v2, 0x0
+    const/4 v6, 0x0
 
-    :goto_0
-    array-length v5, v0
+    :goto_1
+    array-length v8, v0
 
-    if-ge v2, v5, :cond_1
+    if-ge v6, v8, :cond_1
 
-    aget v5, v0, v2
+    aget v8, v0, v6
 
-    aget-object v6, v1, v2
+    aget-object v9, v1, v6
 
-    iget-object v7, p0, Lcom/android/server/appop/AppOpsService$2;->this$0:Lcom/android/server/appop/AppOpsService;
+    iget-object v10, p0, Lcom/android/server/appop/AppOpsService$2;->this$0:Lcom/android/server/appop/AppOpsService;
 
-    invoke-static {v7, v3, v4, v5, v6}, Lcom/android/server/appop/AppOpsService;->access$200(Lcom/android/server/appop/AppOpsService;Landroid/util/ArraySet;IILjava/lang/String;)V
+    invoke-static {v10, v7, v5, v8, v9}, Lcom/android/server/appop/AppOpsService;->access$300(Lcom/android/server/appop/AppOpsService;Landroid/util/ArraySet;IILjava/lang/String;)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_2
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    :cond_1
-    return-void
-
     :catchall_0
-    move-exception v3
+    move-exception v2
 
     :try_start_1
-    monitor-exit v2
+    monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw v3
+    throw v2
+
+    :cond_2
+    return-void
 .end method

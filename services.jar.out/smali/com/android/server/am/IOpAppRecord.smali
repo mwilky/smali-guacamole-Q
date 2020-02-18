@@ -32,6 +32,9 @@
 .method public abstract notePauseGps(Ljava/lang/String;Ljava/lang/String;Z)V
 .end method
 
+.method public abstract noteProcessStateChanged(IILjava/lang/String;Ljava/lang/String;Z)V
+.end method
+
 .method public abstract noteResetAudio()V
 .end method
 

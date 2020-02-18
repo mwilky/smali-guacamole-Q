@@ -31,6 +31,8 @@
 
 .field private static final GAMMA_SPACE_MAX:I = 0x3ff
 
+.field private static final INVALID_RAMP_RATE:I = -0x1
+
 .field private static final R:F = 0.5f
 
 .field private static final TAG:Ljava/lang/String; = "RampAnimator"
@@ -49,6 +51,8 @@
 
 .field private mDelayMs:I
 
+.field private mDelta:I
+
 .field public mEnableDelay:Z
 
 .field private mExitHBMMode:Z
@@ -58,6 +62,8 @@
 .field private mLastFrameTimeNanos:J
 
 .field private mListener:Lcom/android/server/display/RampAnimator$Listener;
+
+.field private mMaxBrightness:I
 
 .field private final mObject:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
@@ -79,6 +85,8 @@
 .field private mRate:I
 
 .field private mRateBackup:I
+
+.field private mStageEnable:I
 
 .field private mTargetValue:I
 
@@ -104,6 +112,10 @@
 
     const/4 v0, 0x0
 
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mDelta:I
+
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mMaxBrightness:I
+
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mEnableDelay:Z
 
     const/16 v1, 0xbb8
@@ -115,6 +127,8 @@
     iput-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
     iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
+
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mStageEnable:I
 
     new-instance v0, Lcom/android/server/display/RampAnimator$1;
 
@@ -151,12 +165,20 @@
     return-wide v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
-    .locals 1
+.method static synthetic access$1000(Lcom/android/server/display/RampAnimator;)J
+    .locals 2
 
-    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
+    iget-wide v0, p0, Lcom/android/server/display/RampAnimator;->mTimeStamp:J
 
-    return-object v0
+    return-wide v0
+.end method
+
+.method static synthetic access$1002(Lcom/android/server/display/RampAnimator;J)J
+    .locals 0
+
+    iput-wide p1, p0, Lcom/android/server/display/RampAnimator;->mTimeStamp:J
+
+    return-wide p1
 .end method
 
 .method static synthetic access$102(Lcom/android/server/display/RampAnimator;J)J
@@ -167,7 +189,41 @@
     return-wide p1
 .end method
 
-.method static synthetic access$1100(Lcom/android/server/display/RampAnimator;)Landroid/util/IntProperty;
+.method static synthetic access$1100(Lcom/android/server/display/RampAnimator;)Z
+    .locals 1
+
+    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->useScreenShotAlgo()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic access$1200(Lcom/android/server/display/RampAnimator;)I
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
+
+    return v0
+.end method
+
+.method static synthetic access$1202(Lcom/android/server/display/RampAnimator;I)I
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
+
+    return p1
+.end method
+
+.method static synthetic access$1300(Lcom/android/server/display/RampAnimator;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method static synthetic access$1400(Lcom/android/server/display/RampAnimator;)Landroid/util/IntProperty;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
@@ -175,7 +231,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1200(Lcom/android/server/display/RampAnimator;)V
+.method static synthetic access$1500(Lcom/android/server/display/RampAnimator;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
@@ -183,7 +239,7 @@
     return-void
 .end method
 
-.method static synthetic access$1302(Lcom/android/server/display/RampAnimator;Z)Z
+.method static synthetic access$1602(Lcom/android/server/display/RampAnimator;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
@@ -191,7 +247,7 @@
     return p1
 .end method
 
-.method static synthetic access$1400(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
+.method static synthetic access$1700(Lcom/android/server/display/RampAnimator;)Lcom/android/server/display/RampAnimator$Listener;
     .locals 1
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
@@ -199,7 +255,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1500(Lcom/android/server/display/RampAnimator;)Z
+.method static synthetic access$1800(Lcom/android/server/display/RampAnimator;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
@@ -207,7 +263,7 @@
     return v0
 .end method
 
-.method static synthetic access$1502(Lcom/android/server/display/RampAnimator;Z)Z
+.method static synthetic access$1802(Lcom/android/server/display/RampAnimator;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
@@ -274,41 +330,23 @@
 .method static synthetic access$600(Lcom/android/server/display/RampAnimator;)I
     .locals 1
 
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mStageEnable:I
 
     return v0
 .end method
 
-.method static synthetic access$602(Lcom/android/server/display/RampAnimator;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
-
-    return p1
-.end method
-
-.method static synthetic access$700(Lcom/android/server/display/RampAnimator;)J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/android/server/display/RampAnimator;->mTimeStamp:J
-
-    return-wide v0
-.end method
-
-.method static synthetic access$702(Lcom/android/server/display/RampAnimator;J)J
-    .locals 0
-
-    iput-wide p1, p0, Lcom/android/server/display/RampAnimator;->mTimeStamp:J
-
-    return-wide p1
-.end method
-
-.method static synthetic access$800(Lcom/android/server/display/RampAnimator;)Z
+.method static synthetic access$700(Lcom/android/server/display/RampAnimator;)I
     .locals 1
 
-    invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->useScreenShotAlgo()Z
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mMaxBrightness:I
 
-    move-result v0
+    return v0
+.end method
+
+.method static synthetic access$800(Lcom/android/server/display/RampAnimator;)I
+    .locals 1
+
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mDelta:I
 
     return v0
 .end method
@@ -316,7 +354,7 @@
 .method static synthetic access$900(Lcom/android/server/display/RampAnimator;)I
     .locals 1
 
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
     return v0
 .end method
@@ -324,7 +362,7 @@
 .method static synthetic access$902(Lcom/android/server/display/RampAnimator;I)I
     .locals 0
 
-    iput p1, p0, Lcom/android/server/display/RampAnimator;->mDelayMs:I
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
     return p1
 .end method
@@ -594,115 +632,159 @@
 .method public animateTo(II)Z
     .locals 5
 
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x3ff
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v2, 0x1
+    const-string v1, "animateTo(): target = "
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-le v0, v1, :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-lt p1, v1, :cond_1
+    const-string v1, ", rate = "
 
-    :cond_0
-    iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_1
-    move v0, v2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RampAnimator"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, -0x1
+
+    const/4 v1, 0x0
+
+    if-ne p2, v0, :cond_0
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    invoke-direct {p0, v2, p1}, Lcom/android/server/display/RampAnimator;->calculateRampRate(II)I
+
+    move-result p2
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    sub-int v2, p1, v2
+
+    iput v2, p0, Lcom/android/server/display/RampAnimator;->mDelta:I
 
     goto :goto_0
 
-    :cond_2
-    move v0, v3
+    :cond_0
+    iput v1, p0, Lcom/android/server/display/RampAnimator;->mDelta:I
 
     :goto_0
-    iput-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+    const/16 v3, 0x3ff
 
-    const/4 v1, -0x1
+    const/4 v4, 0x1
 
-    if-le p1, v0, :cond_3
+    if-le v2, v3, :cond_1
 
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+    if-lt p1, v3, :cond_2
 
-    iput v0, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+    :cond_1
+    iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    iput v1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+    if-eqz v2, :cond_3
 
-    :cond_3
-    iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
-
-    if-nez v0, :cond_b
-
-    if-gtz p2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
-
-    if-eqz v0, :cond_6
-
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRate:I
-
-    if-gt p2, v0, :cond_6
-
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
-
-    if-gt p1, v0, :cond_5
-
-    iget v4, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
-
-    if-le v0, v4, :cond_6
-
-    :cond_5
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
-
-    iget v4, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
-
-    if-gt v0, v4, :cond_8
-
-    if-gt v4, p1, :cond_8
-
-    :cond_6
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
-
-    if-ne v0, v1, :cond_7
-
-    iput p2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+    :cond_2
+    move v2, v4
 
     goto :goto_1
 
+    :cond_3
+    move v2, v1
+
+    :goto_1
+    iput-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    if-le p1, v2, :cond_4
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    iput v2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    :cond_4
+    iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
+
+    if-nez v2, :cond_c
+
+    if-gtz p2, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
+
+    if-eqz v2, :cond_7
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    if-gt p2, v2, :cond_7
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    if-gt p1, v2, :cond_6
+
+    iget v3, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
+
+    if-le v2, v3, :cond_7
+
+    :cond_6
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
+
+    iget v3, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    if-gt v2, v3, :cond_9
+
+    if-gt v3, p1, :cond_9
+
     :cond_7
-    iput p2, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+
+    if-ne v2, v0, :cond_8
+
+    iput p2, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    goto :goto_2
 
     :cond_8
-    :goto_1
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
-
-    if-eq v0, p1, :cond_9
-
-    move v3, v2
+    iput p2, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
     :cond_9
-    move v0, v3
+    :goto_2
+    iget v0, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
+
+    if-eq v0, p1, :cond_a
+
+    move v1, v4
+
+    :cond_a
+    move v0, v1
 
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
     iget-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-nez v1, :cond_a
+    if-nez v1, :cond_b
 
     iget v1, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
 
-    if-eq p1, v1, :cond_a
+    if-eq p1, v1, :cond_b
 
-    iput-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
+    iput-boolean v4, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     int-to-float v1, v1
 
@@ -716,31 +798,31 @@
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->postAnimationCallback()V
 
-    :cond_a
+    :cond_b
     return v0
 
-    :cond_b
-    :goto_2
-    iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
-
-    if-nez v0, :cond_d
-
-    iget v0, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
-
-    if-eq p1, v0, :cond_c
-
-    goto :goto_3
-
     :cond_c
-    return v3
+    :goto_3
+    iget-boolean v2, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
+
+    if-nez v2, :cond_e
+
+    iget v2, p0, Lcom/android/server/display/RampAnimator;->mCurrentValue:I
+
+    if-eq p1, v2, :cond_d
+
+    goto :goto_4
 
     :cond_d
-    :goto_3
-    iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
+    return v1
 
-    iput v3, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+    :cond_e
+    :goto_4
+    iput-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mFirstTime:Z
 
-    iput v1, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
+    iput v1, p0, Lcom/android/server/display/RampAnimator;->mRate:I
+
+    iput v0, p0, Lcom/android/server/display/RampAnimator;->mRateBackup:I
 
     iput p1, p0, Lcom/android/server/display/RampAnimator;->mTargetValue:I
 
@@ -748,39 +830,39 @@
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mProperty:Landroid/util/IntProperty;
 
-    iget-object v1, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/android/server/display/RampAnimator;->mObject:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, p1}, Landroid/util/IntProperty;->setValue(Ljava/lang/Object;I)V
+    invoke-virtual {v0, v2, p1}, Landroid/util/IntProperty;->setValue(Ljava/lang/Object;I)V
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
-    if-eqz v0, :cond_e
+    if-eqz v0, :cond_f
 
-    iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
+    iput-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mAnimating:Z
 
     invoke-direct {p0}, Lcom/android/server/display/RampAnimator;->cancelAnimationCallback()V
 
-    :cond_e
+    :cond_f
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     invoke-interface {v0}, Lcom/android/server/display/RampAnimator$Listener;->onAnimationEnd()V
 
     iget-boolean v0, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v0, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
 
-    const/16 v1, 0x7d0
+    const/16 v2, 0x7d0
 
-    invoke-interface {v0, v2, v1}, Lcom/android/server/display/RampAnimator$Listener;->setDimmingSpeed(II)V
+    invoke-interface {v0, v4, v2}, Lcom/android/server/display/RampAnimator$Listener;->setDimmingSpeed(II)V
 
-    iput-boolean v3, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
+    iput-boolean v1, p0, Lcom/android/server/display/RampAnimator;->mExitHBMMode:Z
 
-    :cond_f
-    return v2
+    :cond_10
+    return v4
 .end method
 
 .method public dump(Ljava/io/PrintWriter;)V
@@ -905,6 +987,58 @@
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/display/RampAnimator;->mListener:Lcom/android/server/display/RampAnimator$Listener;
+
+    return-void
+.end method
+
+.method public setMax(I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "setMax:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RampAnimator"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mMaxBrightness:I
+
+    return-void
+.end method
+
+.method public setStageEnable(I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v1, "setStageEnable:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RampAnimator"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput p1, p0, Lcom/android/server/display/RampAnimator;->mStageEnable:I
 
     return-void
 .end method

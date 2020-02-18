@@ -6167,7 +6167,7 @@
 .end method
 
 .method private restorePermissionState(Landroid/content/pm/PackageParser$Package;ZLjava/lang/String;Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;)V
-    .locals 35
+    .locals 37
 
     move-object/from16 v7, p0
 
@@ -6317,16 +6317,16 @@
 
     const/16 v16, 0x0
 
-    move/from16 v34, v4
+    move/from16 v36, v4
 
     move-object v4, v3
 
     move/from16 v3, v16
 
-    move/from16 v16, v34
+    move/from16 v16, v36
 
     :goto_1
-    if-ge v3, v6, :cond_69
+    if-ge v3, v6, :cond_6a
 
     :try_start_2
     iget-object v0, v8, Landroid/content/pm/PackageParser$Package;->requestedPermissions:Ljava/util/ArrayList;
@@ -6339,7 +6339,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1a
 
-    move/from16 v18, v5
+    move/from16 v19, v5
 
     :try_start_3
     iget-object v5, v7, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
@@ -6348,7 +6348,7 @@
 
     move-result-object v5
 
-    move/from16 v19, v6
+    move/from16 v20, v6
 
     iget-object v6, v8, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -6368,20 +6368,20 @@
     :goto_2
     const/4 v11, 0x0
 
-    sget-boolean v20, Lcom/android/server/pm/PackageManagerService;->DEBUG_INSTALL:Z
+    sget-boolean v21, Lcom/android/server/pm/PackageManagerService;->DEBUG_INSTALL:Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_19
 
-    if-eqz v20, :cond_5
+    if-eqz v21, :cond_5
 
-    move-object/from16 v20, v11
+    move-object/from16 v21, v11
 
     :try_start_4
     const-string v11, "PackageManager"
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    move-object/from16 v21, v4
+    move-object/from16 v22, v4
 
     :try_start_5
     new-instance v4, Ljava/lang/StringBuilder;
@@ -6427,19 +6427,19 @@
 
     move-object v11, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
     move/from16 v4, v16
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
     move-object v14, v7
 
     move-object v12, v10
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
     move/from16 v10, p2
 
@@ -6448,7 +6448,7 @@
     :catchall_2
     move-exception v0
 
-    move-object/from16 v21, v4
+    move-object/from16 v22, v4
 
     move-object/from16 v1, p4
 
@@ -6456,31 +6456,31 @@
 
     move-object v11, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
     move/from16 v4, v16
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
     move-object v14, v7
 
     move-object v12, v10
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
     move/from16 v10, p2
 
     goto/16 :goto_2f
 
     :cond_5
-    move-object/from16 v21, v4
+    move-object/from16 v22, v4
 
-    move-object/from16 v20, v11
+    move-object/from16 v21, v11
 
     :goto_3
-    if-eqz v5, :cond_66
+    if-eqz v5, :cond_67
 
     :try_start_6
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->getSourcePackageSetting()Lcom/android/server/pm/PackageSettingBase;
@@ -6489,13 +6489,13 @@
 
     if-nez v4, :cond_6
 
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -6536,7 +6536,7 @@
     goto :goto_4
 
     :cond_7
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
     goto/16 :goto_7
 
@@ -6578,12 +6578,12 @@
 
     invoke-static {v4, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
     goto/16 :goto_7
 
     :cond_9
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
     goto/16 :goto_7
 
@@ -6609,11 +6609,11 @@
 
     invoke-virtual {v11}, Landroid/permission/PermissionManager$SplitPermissionInfo;->getSplitPermission()Ljava/lang/String;
 
-    move-result-object v22
+    move-result-object v23
 
-    move-object/from16 v23, v22
+    move-object/from16 v24, v23
 
-    move/from16 v22, v4
+    move/from16 v23, v4
 
     invoke-virtual {v11}, Landroid/permission/PermissionManager$SplitPermissionInfo;->getNewPermissions()Ljava/util/List;
 
@@ -6625,27 +6625,27 @@
 
     if-eqz v4, :cond_d
 
-    move-object/from16 v4, v23
+    move-object/from16 v4, v24
 
     invoke-virtual {v15, v4}, Lcom/android/server/pm/permission/PermissionsState;->hasInstallPermission(Ljava/lang/String;)Z
 
-    move-result v23
+    move-result v24
 
-    if-eqz v23, :cond_c
+    if-eqz v24, :cond_c
 
-    move-object/from16 v20, v4
+    move-object/from16 v21, v4
 
     invoke-virtual {v1, v0}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    sget-boolean v23, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
+    sget-boolean v24, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
 
-    if-eqz v23, :cond_b
+    if-eqz v24, :cond_b
 
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
     const-string v1, "PackageManager"
 
-    move-object/from16 v24, v4
+    move-object/from16 v25, v4
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -6653,7 +6653,7 @@
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object/from16 v25, v11
+    move-object/from16 v26, v11
 
     const-string v11, " is newly added for "
 
@@ -6674,51 +6674,51 @@
     goto :goto_7
 
     :cond_b
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
-    move-object/from16 v24, v4
+    move-object/from16 v25, v4
 
-    move-object/from16 v25, v11
+    move-object/from16 v26, v11
 
     goto :goto_7
 
     :cond_c
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
-    move-object/from16 v24, v4
+    move-object/from16 v25, v4
 
-    move-object/from16 v25, v11
+    move-object/from16 v26, v11
 
     goto :goto_6
 
     :cond_d
-    move-object/from16 v25, v11
+    move-object/from16 v26, v11
 
-    move-object/from16 v24, v23
+    move-object/from16 v25, v24
 
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
     :goto_6
     add-int/lit8 v9, v9, 0x1
 
-    move/from16 v4, v22
+    move/from16 v4, v23
 
-    move-object/from16 v1, v23
+    move-object/from16 v1, v24
 
     goto :goto_5
 
     :cond_e
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
-    move/from16 v22, v4
+    move/from16 v23, v4
 
     goto :goto_7
 
     :cond_f
-    move-object/from16 v23, v1
+    move-object/from16 v24, v1
 
     :goto_7
-    move-object/from16 v1, v20
+    move-object/from16 v1, v21
 
     :try_start_8
     iget-object v4, v8, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -6774,11 +6774,11 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -6789,11 +6789,11 @@
     goto/16 :goto_29
 
     :cond_10
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -6852,11 +6852,11 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -6867,11 +6867,11 @@
     goto/16 :goto_29
 
     :cond_12
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -6893,18 +6893,18 @@
 
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->isAppOp()Z
 
-    move-result v20
+    move-result v21
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_17
 
-    if-eqz v20, :cond_14
+    if-eqz v21, :cond_14
 
-    move/from16 v20, v9
+    move/from16 v21, v9
 
     :try_start_d
     iget-object v9, v7, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
 
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     iget-object v11, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -6915,9 +6915,9 @@
     goto :goto_8
 
     :cond_14
-    move/from16 v20, v9
+    move/from16 v21, v9
 
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     :goto_8
     :try_start_e
@@ -6929,7 +6929,7 @@
 
     const/4 v11, 0x2
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
     goto :goto_a
 
@@ -6962,7 +6962,7 @@
     :cond_16
     const/4 v11, 0x3
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
     goto :goto_a
 
@@ -6970,7 +6970,7 @@
     :goto_9
     const/4 v11, 0x4
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
     goto :goto_a
 
@@ -6989,7 +6989,7 @@
 
     move-result v9
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
     const/4 v11, 0x1
 
@@ -7024,21 +7024,21 @@
 
     const/4 v11, 0x2
 
-    move/from16 v20, v9
+    move/from16 v21, v9
 
     goto :goto_a
 
     :cond_1a
-    move/from16 v20, v9
+    move/from16 v21, v9
 
-    move/from16 v11, v22
+    move/from16 v11, v23
 
     goto :goto_a
 
     :cond_1b
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move/from16 v11, v22
+    move/from16 v11, v23
 
     :goto_a
     :try_start_12
@@ -7150,7 +7150,7 @@
     goto :goto_b
 
     :cond_1c
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     goto :goto_c
 
@@ -7162,7 +7162,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     const-string v11, "granting permission "
 
@@ -7191,20 +7191,20 @@
     goto :goto_d
 
     :cond_1e
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     goto :goto_c
 
     :cond_1f
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     goto :goto_c
 
     :cond_20
-    move/from16 v22, v11
+    move/from16 v23, v11
 
     :goto_c
-    move/from16 v11, v22
+    move/from16 v11, v23
 
     :goto_d
     :try_start_14
@@ -7221,7 +7221,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-object/from16 v22, v0
+    move-object/from16 v23, v0
 
     const-string v0, "Considering granting permission "
 
@@ -7248,65 +7248,88 @@
     goto :goto_e
 
     :cond_21
-    move-object/from16 v22, v0
+    move-object/from16 v23, v0
 
     :goto_e
     const/4 v9, 0x1
 
-    if-eq v11, v9, :cond_61
+    if-eq v11, v9, :cond_62
 
     :try_start_16
     invoke-virtual {v12}, Lcom/android/server/pm/PackageSetting;->isSystem()Z
 
-    move-result v9
+    move-result v18
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_13
 
-    if-nez v9, :cond_22
+    if-nez v18, :cond_23
 
     :try_start_17
+    new-array v0, v9, [I
+
+    const/16 v9, 0x15
+
+    const/16 v17, 0x0
+
+    aput v9, v0, v17
+
+    invoke-static {v0}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_22
+
+    iget-object v0, v8, Landroid/content/pm/PackageParser$Package;->codePath:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/android/server/pm/OpReserveAppInjector;->isReserveApp(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_23
+
+    :cond_22
     invoke-virtual {v12}, Lcom/android/server/pm/PackageSetting;->areInstallPermissionsFixed()Z
 
-    move-result v9
+    move-result v0
 
-    if-eqz v9, :cond_22
+    if-eqz v0, :cond_23
 
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->isRuntime()Z
 
-    move-result v9
+    move-result v0
 
-    if-nez v9, :cond_22
+    if-nez v0, :cond_23
 
-    if-nez v20, :cond_22
+    if-nez v21, :cond_23
 
     invoke-virtual {v15, v4}, Lcom/android/server/pm/permission/PermissionsState;->hasInstallPermission(Ljava/lang/String;)Z
 
-    move-result v9
+    move-result v0
 
-    if-nez v9, :cond_22
+    if-nez v0, :cond_23
 
     invoke-direct {v7, v4, v8}, Lcom/android/server/pm/permission/PermissionManagerService;->isNewPlatformPermissionForPackage(Ljava/lang/String;Landroid/content/pm/PackageParser$Package;)Z
 
-    move-result v9
+    move-result v0
 
-    if-nez v9, :cond_22
+    if-nez v0, :cond_23
 
     const/4 v11, 0x1
 
-    :cond_22
-    const/4 v9, 0x2
+    :cond_23
+    const/4 v0, 0x2
 
-    if-eq v11, v9, :cond_5d
+    if-eq v11, v0, :cond_5e
 
-    const/4 v9, 0x3
+    const/4 v0, 0x3
 
-    if-eq v11, v9, :cond_40
+    if-eq v11, v0, :cond_41
 
-    const/4 v9, 0x4
+    const/4 v0, 0x4
 
-    if-eq v11, v9, :cond_26
+    if-eq v11, v0, :cond_27
 
-    if-eqz v10, :cond_24
+    if-eqz v10, :cond_25
 
     iget-object v0, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -7314,14 +7337,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_23
+    if-eqz v0, :cond_24
 
     goto :goto_f
 
-    :cond_23
-    move-object/from16 v25, v12
+    :cond_24
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -7331,11 +7354,11 @@
 
     goto/16 :goto_29
 
-    :cond_24
+    :cond_25
     :goto_f
     sget-boolean v0, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
 
-    if-eqz v0, :cond_25
+    if-eqz v0, :cond_26
 
     const-string v0, "PackageManager"
 
@@ -7369,22 +7392,9 @@
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_1
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
-
-    move-object v9, v15
-
-    const/4 v7, 0x0
-
-    move-object v12, v10
-
-    goto/16 :goto_29
-
-    :cond_25
-    move-object/from16 v25, v12
-
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -7395,65 +7405,80 @@
     goto/16 :goto_29
 
     :cond_26
+    move-object/from16 v28, v12
+
+    move-object/from16 v32, v14
+
+    move-object v9, v15
+
+    const/4 v7, 0x0
+
+    move-object v12, v10
+
+    goto/16 :goto_29
+
+    :cond_27
     nop
 
     :try_start_18
     invoke-virtual {v15, v4}, Lcom/android/server/pm/permission/PermissionsState;->getInstallPermissionState(Ljava/lang/String;)Lcom/android/server/pm/permission/PermissionsState$PermissionState;
 
-    move-result-object v9
+    move-result-object v0
     :try_end_18
     .catchall {:try_start_18 .. :try_end_18} :catchall_7
 
-    if-eqz v9, :cond_27
+    if-eqz v0, :cond_28
 
     :try_start_19
-    invoke-virtual {v9}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->getFlags()I
+    invoke-virtual {v0}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->getFlags()I
 
-    move-result v25
+    move-result v9
     :try_end_19
     .catchall {:try_start_19 .. :try_end_19} :catchall_1
 
     goto :goto_10
 
-    :cond_27
-    const/16 v25, 0x0
+    :cond_28
+    const/4 v9, 0x0
 
     :goto_10
-    if-nez v1, :cond_28
+    if-nez v1, :cond_29
 
-    move-object v0, v5
+    move-object v3, v5
 
     goto :goto_11
 
-    :cond_28
+    :cond_29
     :try_start_1a
-    iget-object v0, v7, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
+    iget-object v3, v7, Lcom/android/server/pm/permission/PermissionManagerService;->mSettings:Lcom/android/server/pm/permission/PermissionSettings;
 
-    invoke-virtual {v0, v1}, Lcom/android/server/pm/permission/PermissionSettings;->getPermissionLocked(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
+    invoke-virtual {v3, v1}, Lcom/android/server/pm/permission/PermissionSettings;->getPermissionLocked(Ljava/lang/String;)Lcom/android/server/pm/permission/BasePermission;
 
-    move-result-object v0
+    move-result-object v3
 
     :goto_11
-    invoke-virtual {v15, v0}, Lcom/android/server/pm/permission/PermissionsState;->revokeInstallPermission(Lcom/android/server/pm/permission/BasePermission;)I
+    move-object/from16 v27, v1
 
-    move-result v3
+    invoke-virtual {v15, v3}, Lcom/android/server/pm/permission/PermissionsState;->revokeInstallPermission(Lcom/android/server/pm/permission/BasePermission;)I
+
+    move-result v1
     :try_end_1a
     .catchall {:try_start_1a .. :try_end_1a} :catchall_7
 
-    move-object/from16 v26, v1
+    move/from16 v28, v9
 
-    const/4 v1, -0x1
+    const/4 v9, -0x1
 
-    if-eq v3, v1, :cond_29
+    if-eq v1, v9, :cond_2a
 
-    const v3, 0xbbff
+    const v1, 0xbbff
 
-    move/from16 v27, v11
+    move/from16 v29, v11
 
     const/4 v11, 0x0
 
     :try_start_1b
-    invoke-virtual {v15, v0, v1, v3, v11}, Lcom/android/server/pm/permission/PermissionsState;->updatePermissionFlags(Lcom/android/server/pm/permission/BasePermission;III)Z
+    invoke-virtual {v15, v3, v9, v1, v11}, Lcom/android/server/pm/permission/PermissionsState;->updatePermissionFlags(Lcom/android/server/pm/permission/BasePermission;III)Z
     :try_end_1b
     .catchall {:try_start_1b .. :try_end_1b} :catchall_1
 
@@ -7463,8 +7488,8 @@
 
     goto :goto_12
 
-    :cond_29
-    move/from16 v27, v11
+    :cond_2a
+    move/from16 v29, v11
 
     :goto_12
     :try_start_1c
@@ -7474,46 +7499,46 @@
 
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->isSoftRestricted()Z
 
-    move-result v3
+    move-result v9
 
     array-length v11, v14
     :try_end_1c
     .catchall {:try_start_1c .. :try_end_1c} :catchall_7
 
-    move-object/from16 v28, v0
+    move-object/from16 v30, v3
 
-    move-object/from16 v10, v21
+    move-object/from16 v10, v22
 
-    const/4 v0, 0x0
+    const/4 v3, 0x0
 
-    move/from16 v34, v25
+    move/from16 v36, v28
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move/from16 v12, v34
+    move/from16 v12, v36
 
     :goto_13
-    if-ge v0, v11, :cond_3f
+    if-ge v3, v11, :cond_40
 
     :try_start_1d
-    aget v21, v14, v0
+    aget v22, v14, v3
 
-    move/from16 v29, v21
+    move/from16 v31, v22
 
-    move/from16 v30, v11
+    move/from16 v32, v11
 
     iget-object v11, v7, Lcom/android/server/pm/permission/PermissionManagerService;->mPermissionPolicyInternal:Lcom/android/server/policy/PermissionPolicyInternal;
     :try_end_1d
     .catchall {:try_start_1d .. :try_end_1d} :catchall_6
 
-    if-eqz v11, :cond_2a
+    if-eqz v11, :cond_2b
 
     :try_start_1e
     iget-object v11, v7, Lcom/android/server/pm/permission/PermissionManagerService;->mPermissionPolicyInternal:Lcom/android/server/policy/PermissionPolicyInternal;
 
-    move-object/from16 v31, v4
+    move-object/from16 v33, v4
 
-    move/from16 v4, v29
+    move/from16 v4, v31
 
     invoke-virtual {v11, v4}, Lcom/android/server/policy/PermissionPolicyInternal;->isInitialized(I)Z
 
@@ -7521,7 +7546,7 @@
     :try_end_1e
     .catchall {:try_start_1e .. :try_end_1e} :catchall_3
 
-    if-eqz v11, :cond_2b
+    if-eqz v11, :cond_2c
 
     const/4 v11, 0x1
 
@@ -7538,32 +7563,32 @@
 
     move-object v3, v10
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
     move/from16 v4, v16
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     move/from16 v10, p2
 
     move-object v14, v7
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
     goto/16 :goto_2f
 
-    :cond_2a
-    move-object/from16 v31, v4
-
-    move/from16 v4, v29
-
     :cond_2b
+    move-object/from16 v33, v4
+
+    move/from16 v4, v31
+
+    :cond_2c
     const/4 v11, 0x0
 
     :goto_14
-    const/16 v21, 0x0
+    const/16 v22, 0x0
 
     :try_start_1f
     iget-object v7, v5, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
@@ -7576,17 +7601,17 @@
 
     and-int/lit16 v7, v7, 0x3800
 
-    if-eqz v7, :cond_2c
+    if-eqz v7, :cond_2d
 
     const/4 v7, 0x1
 
     goto :goto_15
 
-    :cond_2c
+    :cond_2d
     const/4 v7, 0x0
 
     :goto_15
-    move-object/from16 v29, v14
+    move-object/from16 v31, v14
 
     :try_start_20
     iget-object v14, v5, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
@@ -7597,247 +7622,247 @@
 
     and-int/lit16 v14, v14, 0x4000
 
-    if-eqz v14, :cond_2d
+    if-eqz v14, :cond_2e
 
     const/4 v14, 0x1
 
     goto :goto_16
 
-    :cond_2d
+    :cond_2e
     const/4 v14, 0x0
 
     :goto_16
-    if-eqz v6, :cond_36
+    if-eqz v6, :cond_37
 
-    if-eqz v11, :cond_31
+    if-eqz v11, :cond_32
 
-    if-eqz v1, :cond_31
+    if-eqz v1, :cond_32
 
-    if-nez v7, :cond_30
+    if-nez v7, :cond_31
 
-    if-eqz v9, :cond_2e
+    if-eqz v0, :cond_2f
 
-    invoke-virtual {v9}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->isGranted()Z
+    invoke-virtual {v0}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->isGranted()Z
 
-    move-result v32
+    move-result v34
 
-    if-eqz v32, :cond_2e
+    if-eqz v34, :cond_2f
 
-    move-object/from16 v32, v9
+    move-object/from16 v34, v0
 
     invoke-virtual {v13, v5, v4}, Lcom/android/server/pm/permission/PermissionsState;->revokeRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
 
-    move-result v9
+    move-result v0
     :try_end_20
     .catchall {:try_start_20 .. :try_end_20} :catchall_5
 
-    move-object/from16 v33, v15
+    move-object/from16 v35, v15
 
     const/4 v15, -0x1
 
-    if-eq v9, v15, :cond_2f
+    if-eq v0, v15, :cond_30
 
-    const/4 v9, 0x1
+    const/4 v0, 0x1
 
-    move/from16 v21, v9
+    move/from16 v22, v0
 
     goto :goto_17
 
-    :cond_2e
-    move-object/from16 v32, v9
-
-    move-object/from16 v33, v15
-
     :cond_2f
+    move-object/from16 v34, v0
+
+    move-object/from16 v35, v15
+
+    :cond_30
     :goto_17
-    if-nez v14, :cond_32
+    if-nez v14, :cond_33
 
     or-int/lit16 v12, v12, 0x4000
 
-    const/16 v21, 0x1
-
-    goto :goto_18
-
-    :cond_30
-    move-object/from16 v32, v9
-
-    move-object/from16 v33, v15
+    const/16 v22, 0x1
 
     goto :goto_18
 
     :cond_31
-    move-object/from16 v32, v9
+    move-object/from16 v34, v0
 
-    move-object/from16 v33, v15
+    move-object/from16 v35, v15
 
-    if-eqz v11, :cond_32
-
-    if-eqz v3, :cond_32
-
-    if-nez v7, :cond_32
-
-    if-nez v14, :cond_32
-
-    or-int/lit16 v12, v12, 0x4000
-
-    const/16 v21, 0x1
+    goto :goto_18
 
     :cond_32
-    :goto_18
-    and-int/lit8 v9, v12, 0x40
+    move-object/from16 v34, v0
+
+    move-object/from16 v35, v15
+
+    if-eqz v11, :cond_33
 
     if-eqz v9, :cond_33
 
-    and-int/lit8 v12, v12, -0x41
+    if-nez v7, :cond_33
 
-    const/16 v21, 0x1
-
-    :cond_33
-    and-int/lit8 v9, v12, 0x8
-
-    if-eqz v9, :cond_34
-
-    and-int/lit8 v12, v12, -0x9
-
-    const/16 v21, 0x1
-
-    goto :goto_19
-
-    :cond_34
-    if-eqz v11, :cond_35
-
-    if-eqz v1, :cond_35
-
-    if-eqz v7, :cond_39
-
-    :cond_35
-    :try_start_21
-    invoke-virtual {v13, v5, v4}, Lcom/android/server/pm/permission/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
-
-    move-result v9
-
-    const/4 v15, -0x1
-
-    if-eq v9, v15, :cond_39
-
-    const/16 v21, 0x1
-
-    goto :goto_19
-
-    :cond_36
-    move-object/from16 v32, v9
-
-    move-object/from16 v33, v15
-
-    iget-object v9, v5, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
-
-    invoke-virtual {v13, v9, v4}, Lcom/android/server/pm/permission/PermissionsState;->hasRuntimePermission(Ljava/lang/String;I)Z
-
-    move-result v9
-
-    if-nez v9, :cond_37
-
-    invoke-virtual {v13, v5, v4}, Lcom/android/server/pm/permission/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
-
-    move-result v9
-
-    const/4 v15, -0x1
-
-    if-eq v9, v15, :cond_37
-
-    or-int/lit8 v12, v12, 0x40
-
-    const/16 v21, 0x1
-
-    :cond_37
-    if-eqz v11, :cond_39
-
-    if-nez v1, :cond_38
-
-    if-eqz v3, :cond_39
-
-    :cond_38
-    if-nez v7, :cond_39
-
-    if-nez v14, :cond_39
+    if-nez v14, :cond_33
 
     or-int/lit16 v12, v12, 0x4000
 
-    const/16 v21, 0x1
+    const/16 v22, 0x1
+
+    :cond_33
+    :goto_18
+    and-int/lit8 v0, v12, 0x40
+
+    if-eqz v0, :cond_34
+
+    and-int/lit8 v12, v12, -0x41
+
+    const/16 v22, 0x1
+
+    :cond_34
+    and-int/lit8 v0, v12, 0x8
+
+    if-eqz v0, :cond_35
+
+    and-int/lit8 v12, v12, -0x9
+
+    const/16 v22, 0x1
+
+    goto :goto_19
+
+    :cond_35
+    if-eqz v11, :cond_36
+
+    if-eqz v1, :cond_36
+
+    if-eqz v7, :cond_3a
+
+    :cond_36
+    :try_start_21
+    invoke-virtual {v13, v5, v4}, Lcom/android/server/pm/permission/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
+
+    move-result v0
+
+    const/4 v15, -0x1
+
+    if-eq v0, v15, :cond_3a
+
+    const/16 v22, 0x1
+
+    goto :goto_19
+
+    :cond_37
+    move-object/from16 v34, v0
+
+    move-object/from16 v35, v15
+
+    iget-object v0, v5, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
+
+    invoke-virtual {v13, v0, v4}, Lcom/android/server/pm/permission/PermissionsState;->hasRuntimePermission(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_38
+
+    invoke-virtual {v13, v5, v4}, Lcom/android/server/pm/permission/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
+
+    move-result v0
+
+    const/4 v15, -0x1
+
+    if-eq v0, v15, :cond_38
+
+    or-int/lit8 v12, v12, 0x40
+
+    const/16 v22, 0x1
+
+    :cond_38
+    if-eqz v11, :cond_3a
+
+    if-nez v1, :cond_39
+
+    if-eqz v9, :cond_3a
 
     :cond_39
-    :goto_19
-    if-eqz v11, :cond_3d
+    if-nez v7, :cond_3a
 
-    if-nez v1, :cond_3a
+    if-nez v14, :cond_3a
 
-    if-eqz v3, :cond_3b
+    or-int/lit16 v12, v12, 0x4000
+
+    const/16 v22, 0x1
 
     :cond_3a
-    if-eqz v7, :cond_3d
+    :goto_19
+    if-eqz v11, :cond_3e
+
+    if-nez v1, :cond_3b
+
+    if-eqz v9, :cond_3c
 
     :cond_3b
-    if-eqz v14, :cond_3d
+    if-eqz v7, :cond_3e
 
-    and-int/lit16 v9, v12, -0x4001
+    :cond_3c
+    if-eqz v14, :cond_3e
 
-    if-nez v6, :cond_3c
+    and-int/lit16 v0, v12, -0x4001
 
-    or-int/lit8 v9, v9, 0x40
+    if-nez v6, :cond_3d
 
-    move v12, v9
+    or-int/lit8 v0, v0, 0x40
+
+    move v12, v0
 
     goto :goto_1a
 
-    :cond_3c
-    move v12, v9
+    :cond_3d
+    move v12, v0
 
     :goto_1a
-    const/16 v21, 0x1
+    const/16 v22, 0x1
 
-    :cond_3d
-    if-eqz v21, :cond_3e
+    :cond_3e
+    if-eqz v22, :cond_3f
 
     invoke-static {v10, v4}, Lcom/android/internal/util/ArrayUtils;->appendInt([II)[I
 
-    move-result-object v9
+    move-result-object v0
 
-    move-object v10, v9
+    move-object v10, v0
 
-    :cond_3e
-    const-string v9, "RESTORE UPGRADE"
+    :cond_3f
+    const-string v0, "RESTORE UPGRADE"
 
-    move-object/from16 v15, v22
+    move-object/from16 v15, v23
 
-    invoke-static {v8, v15, v12, v9}, Lcom/android/server/pm/PermissionPmInjector;->mayClearFlagsForLegacyApp(Landroid/content/pm/PackageParser$Package;Ljava/lang/String;ILjava/lang/String;)I
+    invoke-static {v8, v15, v12, v0}, Lcom/android/server/pm/PermissionPmInjector;->mayClearFlagsForLegacyApp(Landroid/content/pm/PackageParser$Package;Ljava/lang/String;ILjava/lang/String;)I
 
-    move-result v9
+    move-result v0
 
-    move v12, v9
+    move v12, v0
 
-    const v9, 0xfbff
+    const v0, 0xfbff
 
-    invoke-virtual {v13, v5, v4, v9, v12}, Lcom/android/server/pm/permission/PermissionsState;->updatePermissionFlags(Lcom/android/server/pm/permission/BasePermission;III)Z
+    invoke-virtual {v13, v5, v4, v0, v12}, Lcom/android/server/pm/permission/PermissionsState;->updatePermissionFlags(Lcom/android/server/pm/permission/BasePermission;III)Z
     :try_end_21
     .catchall {:try_start_21 .. :try_end_21} :catchall_4
 
     nop
 
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     move-object/from16 v7, p0
 
-    move-object/from16 v22, v15
+    move-object/from16 v23, v15
 
-    move-object/from16 v14, v29
+    move-object/from16 v14, v31
 
-    move/from16 v11, v30
+    move/from16 v11, v32
 
-    move-object/from16 v4, v31
+    move-object/from16 v4, v33
 
-    move-object/from16 v9, v32
+    move-object/from16 v0, v34
 
-    move-object/from16 v15, v33
+    move-object/from16 v15, v35
 
     goto/16 :goto_13
 
@@ -7856,13 +7881,13 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v30, v29
+    move-object/from16 v32, v31
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     move/from16 v10, p2
 
@@ -7885,11 +7910,11 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v30, v29
+    move-object/from16 v32, v31
 
     move/from16 v10, p2
 
@@ -7906,15 +7931,15 @@
 
     move-object v3, v10
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     move-object/from16 v14, p0
 
@@ -7922,24 +7947,24 @@
 
     goto/16 :goto_2f
 
-    :cond_3f
-    move-object/from16 v31, v4
+    :cond_40
+    move-object/from16 v34, v0
 
-    move-object/from16 v32, v9
+    move-object/from16 v33, v4
 
-    move-object/from16 v29, v14
+    move-object/from16 v31, v14
 
-    move-object/from16 v33, v15
+    move-object/from16 v35, v15
 
-    move-object/from16 v15, v22
+    move-object/from16 v15, v23
 
     move-object/from16 v12, p3
 
     move-object v4, v10
 
-    move-object/from16 v30, v29
+    move-object/from16 v32, v31
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     const/4 v7, 0x0
 
@@ -7956,15 +7981,15 @@
 
     move-object v11, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
     move-object/from16 v14, p0
 
@@ -7972,20 +7997,20 @@
 
     goto/16 :goto_2f
 
-    :cond_40
-    move-object/from16 v26, v1
+    :cond_41
+    move-object/from16 v27, v1
 
-    move-object/from16 v31, v4
+    move-object/from16 v33, v4
 
-    move/from16 v27, v11
+    move/from16 v29, v11
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v29, v14
+    move-object/from16 v31, v14
 
-    move-object/from16 v33, v15
+    move-object/from16 v35, v15
 
-    move-object/from16 v15, v22
+    move-object/from16 v15, v23
 
     :try_start_22
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->isHardRestricted()Z
@@ -7998,19 +8023,19 @@
     :try_end_22
     .catchall {:try_start_22 .. :try_end_22} :catchall_f
 
-    move-object/from16 v7, v29
+    move-object/from16 v7, v31
 
     :try_start_23
     array-length v3, v7
     :try_end_23
     .catchall {:try_start_23 .. :try_end_23} :catchall_e
 
-    move-object/from16 v9, v21
+    move-object/from16 v9, v22
 
     const/4 v4, 0x0
 
     :goto_1b
-    if-ge v4, v3, :cond_5c
+    if-ge v4, v3, :cond_5d
 
     :try_start_24
     aget v10, v7, v4
@@ -8021,7 +8046,7 @@
     :try_end_24
     .catchall {:try_start_24 .. :try_end_24} :catchall_d
 
-    if-eqz v11, :cond_41
+    if-eqz v11, :cond_42
 
     :try_start_25
     iget-object v11, v12, Lcom/android/server/pm/permission/PermissionManagerService;->mPermissionPolicyInternal:Lcom/android/server/policy/PermissionPolicyInternal;
@@ -8032,7 +8057,7 @@
     :try_end_25
     .catchall {:try_start_25 .. :try_end_25} :catchall_8
 
-    if-eqz v11, :cond_41
+    if-eqz v11, :cond_42
 
     const/4 v11, 0x1
 
@@ -8047,7 +8072,7 @@
 
     move-object/from16 v17, v2
 
-    move-object/from16 v30, v7
+    move-object/from16 v32, v7
 
     move-object v3, v9
 
@@ -8055,41 +8080,41 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     move-object/from16 v12, p3
 
     goto/16 :goto_2f
 
-    :cond_41
+    :cond_42
     const/4 v11, 0x0
 
     :goto_1c
     nop
 
-    move/from16 v22, v3
+    move/from16 v23, v3
 
-    move-object/from16 v3, v31
+    move-object/from16 v3, v33
 
-    move-object/from16 v14, v33
+    move-object/from16 v14, v35
 
     :try_start_26
     invoke-virtual {v14, v3, v10}, Lcom/android/server/pm/permission/PermissionsState;->getRuntimePermissionState(Ljava/lang/String;I)Lcom/android/server/pm/permission/PermissionsState$PermissionState;
 
-    move-result-object v21
+    move-result-object v22
     :try_end_26
     .catchall {:try_start_26 .. :try_end_26} :catchall_c
 
-    if-eqz v21, :cond_42
+    if-eqz v22, :cond_43
 
     :try_start_27
-    invoke-virtual/range {v21 .. v21}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->getFlags()I
+    invoke-virtual/range {v22 .. v22}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->getFlags()I
 
-    move-result v28
+    move-result v30
     :try_end_27
     .catchall {:try_start_27 .. :try_end_27} :catchall_9
 
@@ -8104,7 +8129,7 @@
 
     move-object/from16 v17, v2
 
-    move-object/from16 v30, v7
+    move-object/from16 v32, v7
 
     move-object v3, v9
 
@@ -8112,9 +8137,9 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     move-object v14, v12
 
@@ -8122,15 +8147,15 @@
 
     goto/16 :goto_2f
 
-    :cond_42
-    const/16 v28, 0x0
+    :cond_43
+    const/16 v30, 0x0
 
     :goto_1d
-    move/from16 v29, v28
+    move/from16 v31, v30
 
-    const/16 v28, 0x0
+    const/16 v30, 0x0
 
-    move-object/from16 v30, v7
+    move-object/from16 v32, v7
 
     :try_start_28
     iget-object v7, v5, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
@@ -8141,13 +8166,13 @@
 
     and-int/lit16 v7, v7, 0x3800
 
-    if-eqz v7, :cond_43
+    if-eqz v7, :cond_44
 
     const/4 v7, 0x1
 
     goto :goto_1e
 
-    :cond_43
+    :cond_44
     const/4 v7, 0x0
 
     :goto_1e
@@ -8159,33 +8184,33 @@
 
     and-int/lit16 v12, v12, 0x4000
 
-    if-eqz v12, :cond_44
+    if-eqz v12, :cond_45
 
     const/4 v12, 0x1
 
     goto :goto_1f
 
-    :cond_44
+    :cond_45
     const/4 v12, 0x0
 
     :goto_1f
-    if-eqz v6, :cond_51
+    if-eqz v6, :cond_52
 
-    if-eqz v11, :cond_49
+    if-eqz v11, :cond_4a
 
-    if-eqz v0, :cond_49
+    if-eqz v0, :cond_4a
 
-    if-nez v7, :cond_48
+    if-nez v7, :cond_49
 
-    if-eqz v21, :cond_45
+    if-eqz v22, :cond_46
 
-    invoke-virtual/range {v21 .. v21}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->isGranted()Z
+    invoke-virtual/range {v22 .. v22}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->isGranted()Z
 
-    move-result v31
+    move-result v33
 
-    if-eqz v31, :cond_45
+    if-eqz v33, :cond_46
 
-    move-object/from16 v31, v3
+    move-object/from16 v33, v3
 
     invoke-virtual {v13, v5, v10}, Lcom/android/server/pm/permission/PermissionsState;->revokeRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
 
@@ -8193,157 +8218,157 @@
     :try_end_28
     .catchall {:try_start_28 .. :try_end_28} :catchall_b
 
-    move-object/from16 v33, v14
+    move-object/from16 v35, v14
 
     const/4 v14, -0x1
 
-    if-eq v3, v14, :cond_46
+    if-eq v3, v14, :cond_47
 
     const/4 v3, 0x1
 
-    move/from16 v28, v3
+    move/from16 v30, v3
 
     goto :goto_20
 
-    :cond_45
-    move-object/from16 v31, v3
-
-    move-object/from16 v33, v14
-
     :cond_46
-    :goto_20
-    if-nez v12, :cond_47
+    move-object/from16 v33, v3
 
-    move/from16 v3, v29
+    move-object/from16 v35, v14
+
+    :cond_47
+    :goto_20
+    if-nez v12, :cond_48
+
+    move/from16 v3, v31
 
     or-int/lit16 v3, v3, 0x4000
 
-    const/16 v28, 0x1
-
-    goto :goto_21
-
-    :cond_47
-    move/from16 v3, v29
+    const/16 v30, 0x1
 
     goto :goto_21
 
     :cond_48
-    move-object/from16 v31, v3
-
-    move-object/from16 v33, v14
-
-    move/from16 v3, v29
+    move/from16 v3, v31
 
     goto :goto_21
 
     :cond_49
-    move-object/from16 v31, v3
+    move-object/from16 v33, v3
 
-    move-object/from16 v33, v14
+    move-object/from16 v35, v14
 
-    move/from16 v3, v29
+    move/from16 v3, v31
 
-    if-eqz v11, :cond_4a
+    goto :goto_21
 
-    if-eqz v1, :cond_4a
+    :cond_4a
+    move-object/from16 v33, v3
 
-    if-nez v7, :cond_4a
+    move-object/from16 v35, v14
 
-    if-nez v12, :cond_4a
+    move/from16 v3, v31
+
+    if-eqz v11, :cond_4b
+
+    if-eqz v1, :cond_4b
+
+    if-nez v7, :cond_4b
+
+    if-nez v12, :cond_4b
 
     or-int/lit16 v3, v3, 0x4000
 
-    const/16 v28, 0x1
+    const/16 v30, 0x1
 
-    :cond_4a
+    :cond_4b
     :goto_21
     and-int/lit8 v14, v3, 0x40
 
-    if-eqz v14, :cond_4b
+    if-eqz v14, :cond_4c
 
     and-int/lit8 v3, v3, -0x41
 
-    const/16 v28, 0x1
+    const/16 v30, 0x1
 
-    :cond_4b
+    :cond_4c
     and-int/lit8 v14, v3, 0x8
 
-    if-eqz v14, :cond_4c
+    if-eqz v14, :cond_4d
 
     and-int/lit8 v3, v3, -0x9
 
-    const/16 v28, 0x1
+    const/16 v30, 0x1
 
-    move/from16 v29, v4
+    move/from16 v31, v4
 
     goto/16 :goto_25
 
-    :cond_4c
-    if-eqz v11, :cond_4e
+    :cond_4d
+    if-eqz v11, :cond_4f
 
-    if-eqz v0, :cond_4e
+    if-eqz v0, :cond_4f
 
-    if-eqz v7, :cond_4d
+    if-eqz v7, :cond_4e
 
     goto :goto_22
 
-    :cond_4d
-    move/from16 v29, v3
+    :cond_4e
+    move/from16 v31, v3
 
     goto :goto_23
 
-    :cond_4e
+    :cond_4f
     :goto_22
-    if-eqz v21, :cond_4f
+    if-eqz v22, :cond_50
 
     :try_start_29
-    invoke-virtual/range {v21 .. v21}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->isGranted()Z
+    invoke-virtual/range {v22 .. v22}, Lcom/android/server/pm/permission/PermissionsState$PermissionState;->isGranted()Z
 
     move-result v14
 
-    if-eqz v14, :cond_4f
+    if-eqz v14, :cond_50
 
     invoke-virtual {v13, v5, v10}, Lcom/android/server/pm/permission/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
 
     move-result v14
 
-    move/from16 v29, v3
+    move/from16 v31, v3
 
     const/4 v3, -0x1
 
-    if-ne v14, v3, :cond_50
+    if-ne v14, v3, :cond_51
 
-    const/16 v28, 0x1
+    const/16 v30, 0x1
 
-    move/from16 v3, v29
+    move/from16 v3, v31
 
-    move/from16 v29, v4
+    move/from16 v31, v4
 
     goto :goto_25
-
-    :cond_4f
-    move/from16 v29, v3
 
     :cond_50
-    :goto_23
-    move/from16 v3, v29
+    move/from16 v31, v3
 
-    move/from16 v29, v4
+    :cond_51
+    :goto_23
+    move/from16 v3, v31
+
+    move/from16 v31, v4
 
     goto :goto_25
 
-    :cond_51
-    move-object/from16 v31, v3
+    :cond_52
+    move-object/from16 v33, v3
 
-    move-object/from16 v33, v14
+    move-object/from16 v35, v14
 
-    move/from16 v3, v29
+    move/from16 v3, v31
 
-    if-nez v21, :cond_52
+    if-nez v22, :cond_53
 
     const-string v14, "android"
 
-    move/from16 v29, v4
+    move/from16 v31, v4
 
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->getSourcePackageName()Ljava/lang/String;
 
@@ -8353,24 +8378,24 @@
 
     move-result v4
 
-    if-eqz v4, :cond_53
+    if-eqz v4, :cond_54
 
     invoke-virtual {v5}, Lcom/android/server/pm/permission/BasePermission;->isRemoved()Z
 
     move-result v4
 
-    if-nez v4, :cond_53
+    if-nez v4, :cond_54
 
     or-int/lit8 v3, v3, 0x48
 
-    const/16 v28, 0x1
+    const/16 v30, 0x1
 
     goto :goto_24
 
-    :cond_52
-    move/from16 v29, v4
-
     :cond_53
+    move/from16 v31, v4
+
+    :cond_54
     :goto_24
     iget-object v4, v5, Lcom/android/server/pm/permission/BasePermission;->name:Ljava/lang/String;
 
@@ -8378,7 +8403,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_54
+    if-nez v4, :cond_55
 
     invoke-virtual {v13, v5, v10}, Lcom/android/server/pm/permission/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
 
@@ -8386,53 +8411,53 @@
 
     const/4 v14, -0x1
 
-    if-eq v4, v14, :cond_54
+    if-eq v4, v14, :cond_55
 
     const/4 v4, 0x1
 
-    move/from16 v28, v4
-
-    :cond_54
-    if-eqz v11, :cond_56
-
-    if-nez v0, :cond_55
-
-    if-eqz v1, :cond_56
+    move/from16 v30, v4
 
     :cond_55
-    if-nez v7, :cond_56
+    if-eqz v11, :cond_57
 
-    if-nez v12, :cond_56
+    if-nez v0, :cond_56
+
+    if-eqz v1, :cond_57
+
+    :cond_56
+    if-nez v7, :cond_57
+
+    if-nez v12, :cond_57
 
     or-int/lit16 v3, v3, 0x4000
 
-    const/16 v28, 0x1
-
-    :cond_56
-    :goto_25
-    if-eqz v11, :cond_5a
-
-    if-nez v0, :cond_57
-
-    if-eqz v1, :cond_58
+    const/16 v30, 0x1
 
     :cond_57
-    if-eqz v7, :cond_5a
+    :goto_25
+    if-eqz v11, :cond_5b
+
+    if-nez v0, :cond_58
+
+    if-eqz v1, :cond_59
 
     :cond_58
-    if-eqz v12, :cond_5a
+    if-eqz v7, :cond_5b
+
+    :cond_59
+    if-eqz v12, :cond_5b
 
     and-int/lit16 v3, v3, -0x4001
 
-    if-nez v6, :cond_59
+    if-nez v6, :cond_5a
 
     or-int/lit8 v3, v3, 0x40
 
-    :cond_59
-    const/16 v28, 0x1
-
     :cond_5a
-    if-eqz v28, :cond_5b
+    const/16 v30, 0x1
+
+    :cond_5b
+    if-eqz v30, :cond_5c
 
     invoke-static {v9, v10}, Lcom/android/internal/util/ArrayUtils;->appendInt([II)[I
 
@@ -8440,7 +8465,7 @@
 
     move-object v9, v4
 
-    :cond_5b
+    :cond_5c
     const-string v4, "RESTORE RUNTIME"
 
     invoke-static {v8, v15, v3, v4}, Lcom/android/server/pm/PermissionPmInjector;->mayClearFlagsForLegacyApp(Landroid/content/pm/PackageParser$Package;Ljava/lang/String;ILjava/lang/String;)I
@@ -8457,11 +8482,11 @@
 
     nop
 
-    add-int/lit8 v4, v29, 0x1
+    add-int/lit8 v4, v31, 0x1
 
-    move/from16 v3, v22
+    move/from16 v3, v23
 
-    move-object/from16 v7, v30
+    move-object/from16 v7, v32
 
     goto/16 :goto_1b
 
@@ -8482,11 +8507,11 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     goto/16 :goto_2f
 
@@ -8507,9 +8532,9 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     move-object/from16 v14, p0
 
@@ -8518,7 +8543,7 @@
     :catchall_c
     move-exception v0
 
-    move-object/from16 v30, v7
+    move-object/from16 v32, v7
 
     move/from16 v10, p2
 
@@ -8534,9 +8559,9 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     move-object/from16 v14, p0
 
@@ -8545,7 +8570,7 @@
     :catchall_d
     move-exception v0
 
-    move-object/from16 v30, v7
+    move-object/from16 v32, v7
 
     move-object/from16 v14, p0
 
@@ -8561,22 +8586,22 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     goto/16 :goto_2f
 
-    :cond_5c
-    move-object/from16 v30, v7
+    :cond_5d
+    move-object/from16 v32, v7
 
     move-object/from16 v12, p3
 
     move-object v4, v9
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     const/4 v7, 0x0
 
@@ -8585,7 +8610,7 @@
     :catchall_e
     move-exception v0
 
-    move-object/from16 v30, v7
+    move-object/from16 v32, v7
 
     move-object/from16 v14, p0
 
@@ -8599,20 +8624,20 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     goto/16 :goto_2f
 
     :catchall_f
     move-exception v0
 
-    move-object/from16 v30, v29
+    move-object/from16 v32, v31
 
     move-object/from16 v14, p0
 
@@ -8626,30 +8651,30 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     goto/16 :goto_2f
 
-    :cond_5d
-    move-object/from16 v26, v1
+    :cond_5e
+    move-object/from16 v27, v1
 
-    move-object/from16 v31, v4
+    move-object/from16 v33, v4
 
-    move/from16 v27, v11
+    move/from16 v29, v11
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
-    move-object/from16 v33, v15
+    move-object/from16 v35, v15
 
-    move-object/from16 v15, v22
+    move-object/from16 v15, v23
 
     :try_start_2a
     invoke-static {}, Lcom/android/server/pm/UserManagerService;->getInstance()Lcom/android/server/pm/UserManagerService;
@@ -8664,28 +8689,28 @@
     :try_end_2a
     .catchall {:try_start_2a .. :try_end_2a} :catchall_12
 
-    move-object/from16 v4, v21
+    move-object/from16 v4, v22
 
     const/4 v3, 0x0
 
     :goto_26
-    if-ge v3, v1, :cond_5f
+    if-ge v3, v1, :cond_60
 
     :try_start_2b
     aget v7, v0, v3
     :try_end_2b
     .catchall {:try_start_2b .. :try_end_2b} :catchall_10
 
-    move-object/from16 v10, v31
+    move-object/from16 v10, v33
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     :try_start_2c
     invoke-virtual {v9, v10, v7}, Lcom/android/server/pm/permission/PermissionsState;->getRuntimePermissionState(Ljava/lang/String;I)Lcom/android/server/pm/permission/PermissionsState$PermissionState;
 
     move-result-object v11
 
-    if-eqz v11, :cond_5e
+    if-eqz v11, :cond_5f
 
     invoke-virtual {v9, v5, v7}, Lcom/android/server/pm/permission/PermissionsState;->revokeRuntimePermission(Lcom/android/server/pm/permission/BasePermission;I)I
 
@@ -8701,19 +8726,19 @@
 
     move-object v4, v11
 
-    :cond_5e
+    :cond_5f
     add-int/lit8 v3, v3, 0x1
 
-    move-object/from16 v33, v9
+    move-object/from16 v35, v9
 
-    move-object/from16 v31, v10
+    move-object/from16 v33, v10
 
     goto :goto_26
 
     :catchall_10
     move-exception v0
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     move-object/from16 v14, p0
 
@@ -8729,16 +8754,16 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
-    :cond_5f
-    move-object/from16 v10, v31
+    :cond_60
+    move-object/from16 v10, v33
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     invoke-virtual {v13, v5}, Lcom/android/server/pm/permission/PermissionsState;->grantInstallPermission(Lcom/android/server/pm/permission/BasePermission;)I
 
@@ -8748,7 +8773,7 @@
 
     const/4 v1, -0x1
 
-    if-eq v0, v1, :cond_60
+    if-eq v0, v1, :cond_61
 
     const/4 v0, 0x1
 
@@ -8760,7 +8785,7 @@
 
     goto/16 :goto_2a
 
-    :cond_60
+    :cond_61
     move-object/from16 v12, p3
 
     const/4 v7, 0x0
@@ -8784,16 +8809,16 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
     :catchall_12
     move-exception v0
 
-    move-object/from16 v9, v33
+    move-object/from16 v9, v35
 
     move-object/from16 v14, p0
 
@@ -8807,18 +8832,18 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
     :catchall_13
     move-exception v0
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -8834,26 +8859,26 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
     move-object/from16 v12, p3
 
     goto/16 :goto_27
 
-    :cond_61
-    move-object/from16 v26, v1
+    :cond_62
+    move-object/from16 v27, v1
 
     move-object v10, v4
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
-    move-object/from16 v15, v22
+    move-object/from16 v15, v23
 
     :try_start_2d
     invoke-virtual {v13, v5}, Lcom/android/server/pm/permission/PermissionsState;->revokeInstallPermission(Lcom/android/server/pm/permission/BasePermission;)I
@@ -8864,7 +8889,7 @@
 
     const/4 v1, -0x1
 
-    if-eq v0, v1, :cond_62
+    if-eq v0, v1, :cond_63
 
     const v0, 0xfbff
 
@@ -8938,7 +8963,7 @@
 
     move/from16 v16, v4
 
-    move-object/from16 v4, v21
+    move-object/from16 v4, v22
 
     goto/16 :goto_2a
 
@@ -8955,11 +8980,11 @@
 
     move-object/from16 v17, v2
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
@@ -8978,15 +9003,15 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
-    :cond_62
+    :cond_63
     const/4 v7, 0x0
 
     :try_start_30
@@ -8994,17 +9019,17 @@
 
     move-result v0
 
-    if-eqz v0, :cond_65
+    if-eqz v0, :cond_66
 
     sget-boolean v0, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
     :try_end_30
     .catchall {:try_start_30 .. :try_end_30} :catchall_16
 
-    if-eqz v0, :cond_64
+    if-eqz v0, :cond_65
 
     move-object/from16 v12, p3
 
-    if-eqz v12, :cond_63
+    if-eqz v12, :cond_64
 
     :try_start_31
     iget-object v0, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -9013,9 +9038,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_68
+    if-eqz v0, :cond_69
 
-    :cond_63
+    :cond_64
     const-string v0, "PackageManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -9072,12 +9097,12 @@
 
     goto/16 :goto_29
 
-    :cond_64
+    :cond_65
     move-object/from16 v12, p3
 
     goto/16 :goto_29
 
-    :cond_65
+    :cond_66
     move-object/from16 v12, p3
 
     goto/16 :goto_29
@@ -9097,20 +9122,20 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
     :catchall_17
     move-exception v0
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -9126,23 +9151,23 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     :goto_27
     goto/16 :goto_2f
 
-    :cond_66
-    move-object/from16 v23, v1
+    :cond_67
+    move-object/from16 v24, v1
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -9153,7 +9178,7 @@
     move-object v12, v10
 
     :goto_28
-    if-eqz v12, :cond_67
+    if-eqz v12, :cond_68
 
     iget-object v0, v8, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -9161,12 +9186,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_68
+    if-eqz v0, :cond_69
 
-    :cond_67
+    :cond_68
     sget-boolean v0, Lcom/android/server/pm/PackageManagerService;->DEBUG_PERMISSIONS:Z
 
-    if-eqz v0, :cond_68
+    if-eqz v0, :cond_69
 
     const-string v0, "PackageManager"
 
@@ -9196,12 +9221,12 @@
     :try_end_31
     .catchall {:try_start_31 .. :try_end_31} :catchall_18
 
-    :cond_68
+    :cond_69
     :goto_29
-    move-object/from16 v4, v21
+    move-object/from16 v4, v22
 
     :goto_2a
-    add-int/lit8 v3, v24, 0x1
+    add-int/lit8 v3, v25, 0x1
 
     move-object/from16 v11, p4
 
@@ -9211,15 +9236,15 @@
 
     move-object v10, v12
 
-    move/from16 v5, v18
+    move/from16 v5, v19
 
-    move/from16 v6, v19
+    move/from16 v6, v20
 
-    move-object/from16 v1, v23
+    move-object/from16 v1, v24
 
-    move-object/from16 v12, v25
+    move-object/from16 v12, v28
 
-    move-object/from16 v14, v30
+    move-object/from16 v14, v32
 
     move-object/from16 v7, p0
 
@@ -9240,22 +9265,22 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
     :catchall_19
     move-exception v0
 
-    move-object/from16 v21, v4
+    move-object/from16 v22, v4
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -9271,22 +9296,22 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
     :catchall_1a
     move-exception v0
 
-    move-object/from16 v21, v4
+    move-object/from16 v22, v4
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -9304,26 +9329,26 @@
 
     move/from16 v4, v16
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
-    :cond_69
-    move-object/from16 v23, v1
+    :cond_6a
+    move-object/from16 v24, v1
 
-    move/from16 v24, v3
+    move/from16 v25, v3
 
-    move-object/from16 v21, v4
+    move-object/from16 v22, v4
 
-    move/from16 v18, v5
+    move/from16 v19, v5
 
-    move/from16 v19, v6
+    move/from16 v20, v6
 
-    move-object/from16 v25, v12
+    move-object/from16 v28, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v9, v15
 
@@ -9331,35 +9356,35 @@
 
     move-object v12, v10
 
-    if-nez v16, :cond_6a
+    if-nez v16, :cond_6b
 
     move/from16 v10, p2
 
-    if-eqz v10, :cond_6b
+    if-eqz v10, :cond_6c
 
     goto :goto_2b
 
-    :cond_6a
+    :cond_6b
     move/from16 v10, p2
 
     :goto_2b
     :try_start_32
-    invoke-virtual/range {v25 .. v25}, Lcom/android/server/pm/PackageSetting;->areInstallPermissionsFixed()Z
+    invoke-virtual/range {v28 .. v28}, Lcom/android/server/pm/PackageSetting;->areInstallPermissionsFixed()Z
 
     move-result v0
     :try_end_32
     .catchall {:try_start_32 .. :try_end_32} :catchall_20
 
-    if-nez v0, :cond_6b
+    if-nez v0, :cond_6c
 
     :try_start_33
-    invoke-virtual/range {v25 .. v25}, Lcom/android/server/pm/PackageSetting;->isSystem()Z
+    invoke-virtual/range {v28 .. v28}, Lcom/android/server/pm/PackageSetting;->isSystem()Z
 
     move-result v0
     :try_end_33
     .catchall {:try_start_33 .. :try_end_33} :catchall_1b
 
-    if-eqz v0, :cond_6c
+    if-eqz v0, :cond_6d
 
     goto :goto_2c
 
@@ -9374,27 +9399,27 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     goto/16 :goto_2f
 
-    :cond_6b
+    :cond_6c
     :goto_2c
     :try_start_34
-    invoke-virtual/range {v25 .. v25}, Lcom/android/server/pm/PackageSetting;->isUpdatedSystem()Z
+    invoke-virtual/range {v28 .. v28}, Lcom/android/server/pm/PackageSetting;->isUpdatedSystem()Z
 
     move-result v0
     :try_end_34
     .catchall {:try_start_34 .. :try_end_34} :catchall_20
 
-    if-eqz v0, :cond_6d
+    if-eqz v0, :cond_6e
 
-    :cond_6c
-    move-object/from16 v11, v25
+    :cond_6d
+    move-object/from16 v11, v28
 
     const/4 v0, 0x1
 
@@ -9416,19 +9441,19 @@
 
     move/from16 v4, v16
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
     goto/16 :goto_2f
 
-    :cond_6d
-    move-object/from16 v11, v25
+    :cond_6e
+    move-object/from16 v11, v28
 
     :goto_2d
     move-object/from16 v14, p0
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
     :try_start_36
     invoke-direct {v14, v13, v8, v3}, Lcom/android/server/pm/permission/PermissionManagerService;->revokePermissionsNoLongerImplicitLocked(Lcom/android/server/pm/permission/PermissionsState;Landroid/content/pm/PackageParser$Package;[I)[I
@@ -9437,9 +9462,9 @@
     :try_end_36
     .catchall {:try_start_36 .. :try_end_36} :catchall_1f
 
-    move/from16 v0, v19
+    move/from16 v0, v20
 
-    move-object/from16 v15, v23
+    move-object/from16 v15, v24
 
     move-object/from16 v1, p0
 
@@ -9451,7 +9476,7 @@
 
     move-object/from16 v4, p1
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
     move-object v5, v15
 
@@ -9477,17 +9502,17 @@
 
     move-object/from16 v1, p4
 
-    if-eqz v1, :cond_6e
+    if-eqz v1, :cond_6f
 
     invoke-virtual {v1, v3, v7}, Lcom/android/server/pm/permission/PermissionManagerServiceInternal$PermissionCallback;->onPermissionUpdated([IZ)V
 
-    :cond_6e
+    :cond_6f
     array-length v0, v3
 
     const/4 v2, 0x0
 
     :goto_2e
-    if-ge v2, v0, :cond_6f
+    if-ge v2, v0, :cond_70
 
     aget v4, v3, v2
 
@@ -9499,7 +9524,7 @@
 
     goto :goto_2e
 
-    :cond_6f
+    :cond_70
     return-void
 
     :catchall_1d
@@ -9529,7 +9554,7 @@
 
     move-object/from16 v17, v2
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
     move/from16 v4, v16
 
@@ -9544,11 +9569,11 @@
 
     move-object/from16 v17, v2
 
-    move/from16 v7, v18
+    move/from16 v7, v19
 
-    move-object/from16 v3, v21
+    move-object/from16 v3, v22
 
-    move-object/from16 v11, v25
+    move-object/from16 v11, v28
 
     move/from16 v4, v16
 
@@ -9563,7 +9588,7 @@
 
     move-object v11, v12
 
-    move-object/from16 v30, v14
+    move-object/from16 v32, v14
 
     move-object v14, v7
 

@@ -115,7 +115,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/appop/AppOpsService$ClientRestrictionState;->this$0:Lcom/android/server/appop/AppOpsService;
 
-    invoke-static {v1}, Lcom/android/server/appop/AppOpsService;->access$1100(Lcom/android/server/appop/AppOpsService;)Landroid/util/ArrayMap;
+    invoke-static {v1}, Lcom/android/server/appop/AppOpsService;->access$1200(Lcom/android/server/appop/AppOpsService;)Landroid/util/ArrayMap;
 
     move-result-object v1
 
@@ -244,7 +244,7 @@
 
     add-int/lit16 v2, p1, -0x3e8
 
-    add-int/lit8 v2, v2, 0x5a
+    add-int/lit8 v2, v2, 0x5b
 
     add-int/lit8 p1, v2, -0x1
 
@@ -318,7 +318,7 @@
 
     const/4 v1, -0x2
 
-    invoke-static {v0, p1, v1}, Lcom/android/server/appop/AppOpsService;->access$1200(Lcom/android/server/appop/AppOpsService;II)V
+    invoke-static {v0, p1, v1}, Lcom/android/server/appop/AppOpsService;->access$1300(Lcom/android/server/appop/AppOpsService;II)V
 
     return-void
 .end method
@@ -468,7 +468,7 @@
 
     if-eqz p2, :cond_3
 
-    const/16 v6, 0x63
+    const/16 v6, 0x64
 
     new-array v5, v6, [Z
 

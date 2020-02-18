@@ -120,6 +120,8 @@
 
 .field private static final IS_SUPPORT_COLOR_ADS:Z
 
+.field private static final IS_SUPPORT_URL_INSTANT_APP:Z
+
 .field private static final JAVA_DUMP_MINIMUM_SIZE:I = 0x64
 
 .field static final KILL_APPLICATION_MSG:I = 0x16
@@ -932,9 +934,21 @@
 
     const/4 v1, 0x1
 
+    new-array v2, v1, [I
+
+    const/16 v3, 0xeb
+
+    aput v3, v2, v0
+
+    invoke-static {v2}, Landroid/util/OpFeatures;->isSupport([I)Z
+
+    move-result v2
+
+    sput-boolean v2, Lcom/android/server/am/ActivityManagerService;->IS_SUPPORT_COLOR_ADS:Z
+
     new-array v1, v1, [I
 
-    const/16 v2, 0xeb
+    const/16 v2, 0xec
 
     aput v2, v1, v0
 
@@ -942,7 +956,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/server/am/ActivityManagerService;->IS_SUPPORT_COLOR_ADS:Z
+    sput-boolean v0, Lcom/android/server/am/ActivityManagerService;->IS_SUPPORT_URL_INSTANT_APP:Z
 
     new-instance v0, Ljava/lang/ThreadLocal;
 
@@ -1993,14 +2007,9 @@
     invoke-static {v0}, Lcom/android/internal/os/ExtProcessCpuTrackerInjector;->initInstance(Lcom/android/internal/os/ProcessCpuTracker;)V
 
     iget-object v0, v7, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
-    
-    sget-boolean v4, Lcom/android/server/SystemServer;->mDisableHouston:Z
-    
-    if-nez v4, :cond_disable
 
     invoke-static {v7, v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->initialize(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
 
-    :cond_disable
     invoke-static {}, Lcom/android/server/am/ActivityManagerServiceInjector;->addRestartWhitelist()V
 
     new-instance v0, Lcom/android/server/am/ActivityManagerService$7;
@@ -30693,6 +30702,14 @@
 
     if-nez v8, :cond_4
 
+    iget-object v8, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v8}, Lcom/android/server/am/ColdStartInjector;->getInstance(Landroid/content/Context;)Lcom/android/server/am/ColdStartInjector;
+
+    move-result-object v8
+
+    invoke-virtual {v8, p1}, Lcom/android/server/am/ColdStartInjector;->addDiedRecord(Lcom/android/server/am/ProcessRecord;)V
+
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -47602,6 +47619,12 @@
     invoke-virtual {v7, v8, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     :try_start_3
+    const-string v7, "ActivityManager"
+
+    const-string v8, "About to commit checkpoint"
+
+    invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-static {}, Lcom/android/internal/content/PackageHelper;->getStorageManager()Landroid/os/storage/IStorageManager;
 
     move-result-object v7
@@ -47834,6 +47857,10 @@
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/oneplus/android/server/am/connor/ConnorInjector;->initInstance(Landroid/content/Context;)V
+
+    iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/android/server/am/ColdStartInjector;->init(Landroid/content/Context;)V
 
     return-void
 
@@ -49322,6 +49349,19 @@
     return v1
 
     :cond_0
+    sget-boolean v0, Lcom/android/server/am/ActivityManagerService;->IS_SUPPORT_URL_INSTANT_APP:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p2}, Lcom/android/server/OPInstantAppInjector;->getAppStartModeLocked(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/ProcessList;->getUidRecordLocked(I)Lcom/android/server/am/UidRecord;
@@ -49330,7 +49370,7 @@
 
     sget-boolean v2, Lcom/android/server/am/ActivityManagerDebugConfig;->DEBUG_BACKGROUND_CHECK:Z
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -49364,13 +49404,13 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     iget-boolean v3, v0, Lcom/android/server/am/UidRecord;->idle:Z
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     move v3, v1
 
     :goto_0
@@ -49384,25 +49424,25 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
-    if-eqz v0, :cond_4
+    :cond_3
+    if-eqz v0, :cond_5
 
-    if-nez p5, :cond_4
+    if-nez p5, :cond_5
 
-    if-nez p7, :cond_4
+    if-nez p7, :cond_5
 
     iget-boolean v2, v0, Lcom/android/server/am/UidRecord;->idle:Z
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     return v1
 
-    :cond_4
+    :cond_5
     :goto_1
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
     invoke-virtual {p0}, Lcom/android/server/am/ActivityManagerService;->getPackageManagerInternalLocked()Landroid/content/pm/PackageManagerInternal;
 
@@ -49418,23 +49458,23 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     iget-boolean v2, v0, Lcom/android/server/am/UidRecord;->ephemeral:Z
 
     :goto_2
-    if-eqz v2, :cond_6
+    if-eqz v2, :cond_7
 
     const/4 v1, 0x3
 
     return v1
 
-    :cond_6
-    if-eqz p6, :cond_7
+    :cond_7
+    if-eqz p6, :cond_8
 
     return v1
 
-    :cond_7
-    if-eqz p5, :cond_8
+    :cond_8
+    if-eqz p5, :cond_9
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ActivityManagerService;->appRestrictedInBackgroundLocked(ILjava/lang/String;I)I
 
@@ -49442,7 +49482,7 @@
 
     goto :goto_3
 
-    :cond_8
+    :cond_9
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ActivityManagerService;->appServicesRestrictedInBackgroundLocked(ILjava/lang/String;I)I
 
     move-result v3
@@ -49454,7 +49494,7 @@
 
     const/4 v5, 0x1
 
-    if-eqz v4, :cond_9
+    if-eqz v4, :cond_a
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -49506,10 +49546,10 @@
 
     invoke-static {v6, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_9
-    if-ne v3, v5, :cond_a
+    :cond_a
+    if-ne v3, v5, :cond_b
 
-    if-ltz p4, :cond_a
+    if-ltz p4, :cond_b
 
     iget-object v4, p0, Lcom/android/server/am/ActivityManagerService;->mPidsSelfLocked:Lcom/android/server/am/ActivityManagerService$PidMap;
 
@@ -49526,7 +49566,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_b
 
     invoke-virtual {v5}, Lcom/android/server/am/ProcessRecord;->getCurProcState()I
 
@@ -49536,7 +49576,7 @@
 
     move-result v4
 
-    if-nez v4, :cond_a
+    if-nez v4, :cond_b
 
     return v1
 
@@ -49550,7 +49590,7 @@
 
     throw v1
 
-    :cond_a
+    :cond_b
     return v3
 .end method
 
@@ -57414,7 +57454,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "isSingleton("
+    const-string/jumbo v2, "isSingleton("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -75380,16 +75420,9 @@
     iget-object v4, v3, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
 
     invoke-static {v1, v4}, Lcom/android/server/am/EmbryoManagerInjector;->initiate(Landroid/content/Context;Landroid/os/Handler;)V
-    
-    sget-boolean v4, Lcom/android/server/SystemServer;->mDisableHouston:Z
-    
-    if-nez v4, :cond_disable
 
     invoke-static {}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->systemReady()V
-    
-    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->logHouston()V
 
-    :cond_disable
     invoke-direct/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService;->changedDefaultTime()V
 
     return-void
@@ -82009,19 +82042,5 @@
     move/from16 v12, v20
 
     :goto_1f
-    return-void
-.end method
-
-.method public static logHouston()V
-    .registers 2
-
-    .line 8
-    const-string v0, "mwilky"
-
-    const-string v1, "houston enabled"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 9
     return-void
 .end method

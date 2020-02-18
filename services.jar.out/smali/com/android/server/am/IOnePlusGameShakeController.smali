@@ -4,5 +4,16 @@
 
 
 # virtual methods
+.method public abstract getGameMultiTouchList()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getGameShakeConfig(Ljava/lang/String;)Ljava/lang/String;
 .end method

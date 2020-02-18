@@ -228,7 +228,13 @@
     if-eqz v3, :cond_3
 
     :cond_1
-    if-eqz p5, :cond_2
+    if-nez p5, :cond_3
+
+    invoke-static {}, Lcom/oneplus/android/server/zenmode/ZenModeInjector;->isZenModeOn()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
 
     goto :goto_1
 

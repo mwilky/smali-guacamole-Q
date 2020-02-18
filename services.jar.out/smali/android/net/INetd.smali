@@ -690,6 +690,14 @@
     .end annotation
 .end method
 
+.method public abstract opExecuteIPtableCmd(Ljava/lang/String;Ljava/lang/String;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract registerUnsolicitedEventListener(Landroid/net/INetdUnsolicitedEventListener;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
