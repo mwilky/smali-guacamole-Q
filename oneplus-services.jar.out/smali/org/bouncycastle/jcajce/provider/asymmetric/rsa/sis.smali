@@ -17,11 +17,11 @@
 
 
 # instance fields
-.field private Qla:Lorg/bouncycastle/crypto/zta;
-
-.field private Rla:Lorg/bouncycastle/asn1/x509/zta;
-
 .field private digest:Lorg/bouncycastle/crypto/qbh;
+
+.field private tma:Lorg/bouncycastle/crypto/zta;
+
+.field private uma:Lorg/bouncycastle/asn1/x509/zta;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->digest:Lorg/bouncycastle/crypto/qbh;
 
-    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Qla:Lorg/bouncycastle/crypto/zta;
+    iput-object p3, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->tma:Lorg/bouncycastle/crypto/zta;
 
     new-instance p2, Lorg/bouncycastle/asn1/x509/zta;
 
@@ -40,7 +40,7 @@
 
     invoke-direct {p2, p1, p3}, Lorg/bouncycastle/asn1/x509/zta;-><init>(Lorg/bouncycastle/asn1/bvj;Lorg/bouncycastle/asn1/ssp;)V
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Rla:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->uma:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
@@ -52,16 +52,16 @@
 
     iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->digest:Lorg/bouncycastle/crypto/qbh;
 
-    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Qla:Lorg/bouncycastle/crypto/zta;
+    iput-object p2, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->tma:Lorg/bouncycastle/crypto/zta;
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Rla:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->uma:Lorg/bouncycastle/asn1/x509/zta;
 
     return-void
 .end method
 
-.method private kth(Ljava/lang/Object;)Ljava/lang/String;
+.method private igw(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
     if-nez p1, :cond_0
@@ -90,7 +90,7 @@
         }
     .end annotation
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Rla:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->uma:Lorg/bouncycastle/asn1/x509/zta;
 
     if-nez p0, :cond_0
 
@@ -150,7 +150,7 @@
 
     invoke-interface {v0}, Lorg/bouncycastle/crypto/qbh;->reset()V
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Qla:Lorg/bouncycastle/crypto/zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->tma:Lorg/bouncycastle/crypto/zta;
 
     const/4 v0, 0x1
 
@@ -169,7 +169,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->kth(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->igw(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -210,7 +210,7 @@
 
     invoke-interface {v0}, Lorg/bouncycastle/crypto/qbh;->reset()V
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Qla:Lorg/bouncycastle/crypto/zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->tma:Lorg/bouncycastle/crypto/zta;
 
     const/4 v0, 0x0
 
@@ -229,7 +229,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->kth(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->igw(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -299,7 +299,7 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Qla:Lorg/bouncycastle/crypto/zta;
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->tma:Lorg/bouncycastle/crypto/zta;
 
     array-length v1, v0
 
@@ -388,7 +388,7 @@
     invoke-interface {v1, v0, v2}, Lorg/bouncycastle/crypto/qbh;->doFinal([BI)I
 
     :try_start_0
-    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->Qla:Lorg/bouncycastle/crypto/zta;
+    iget-object v1, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/rsa/sis;->tma:Lorg/bouncycastle/crypto/zta;
 
     array-length v3, p1
 

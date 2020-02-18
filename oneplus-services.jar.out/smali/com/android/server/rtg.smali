@@ -117,7 +117,7 @@
     return-void
 .end method
 
-.method private Va(Ljava/lang/String;)V
+.method private Za(Ljava/lang/String;)V
     .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -279,7 +279,43 @@
     return-object v0
 .end method
 
-.method private bl()V
+.method private bio(ILjava/lang/String;)Landroid/content/IntentSender;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "com.oneplus.exservice.INTENT_PACKAGE_INSTALL_COMMIT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "pkgName"
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object p0, p0, Lcom/android/server/rtg;->mContext:Landroid/content/Context;
+
+    const/high16 p2, 0x8000000
+
+    invoke-static {p0, p1, v0, p2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic cno(Lcom/android/server/rtg;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/server/rtg;->il()V
+
+    return-void
+.end method
+
+.method private gl()V
     .locals 4
 
     sget-boolean v0, Lcom/android/server/rtg;->Vb:Z
@@ -341,7 +377,7 @@
     return-void
 .end method
 
-.method private cl()V
+.method private hl()V
     .locals 4
 
     sget-boolean v0, Lcom/android/server/rtg;->Vb:Z
@@ -427,15 +463,7 @@
     return-void
 .end method
 
-.method static synthetic cno(Lcom/android/server/rtg;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/android/server/rtg;->dl()V
-
-    return-void
-.end method
-
-.method private dl()V
+.method private il()V
     .locals 6
 
     const-string p0, "installAPKs: wait internalSD ready for totally "
@@ -660,34 +688,6 @@
     throw v1
 .end method
 
-.method private kth(ILjava/lang/String;)Landroid/content/IntentSender;
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "com.oneplus.exservice.INTENT_PACKAGE_INSTALL_COMMIT"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "pkgName"
-
-    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object p0, p0, Lcom/android/server/rtg;->mContext:Landroid/content/Context;
-
-    const/high16 p2, 0x8000000
-
-    invoke-static {p0, p1, v0, p2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method static synthetic rtg(Lcom/android/server/rtg;)I
     .locals 0
 
@@ -711,7 +711,7 @@
 .method static synthetic ssp(Lcom/android/server/rtg;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/rtg;->cl()V
+    invoke-direct {p0}, Lcom/android/server/rtg;->hl()V
 
     return-void
 .end method
@@ -748,7 +748,7 @@
         }
     .end annotation
 
-    invoke-direct {p0, p1}, Lcom/android/server/rtg;->Va(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/server/rtg;->Za(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -899,7 +899,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/rtg;->bl()V
+    invoke-direct {p0}, Lcom/android/server/rtg;->gl()V
 
     iget v2, p0, Lcom/android/server/rtg;->Tb:I
 
@@ -990,7 +990,7 @@
 
     iget-object p1, p0, Lcom/android/server/rtg;->mSession:Landroid/content/pm/PackageInstaller$Session;
 
-    invoke-direct {p0, v2, v1}, Lcom/android/server/rtg;->kth(ILjava/lang/String;)Landroid/content/IntentSender;
+    invoke-direct {p0, v2, v1}, Lcom/android/server/rtg;->bio(ILjava/lang/String;)Landroid/content/IntentSender;
 
     move-result-object v0
 

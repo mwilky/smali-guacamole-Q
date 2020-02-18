@@ -1,759 +1,419 @@
-.class public Lcom/android/server/am/i;
-.super Ljava/lang/Object;
+.class Lcom/android/server/am/i;
+.super Landroid/content/BroadcastReceiver;
 .source ""
 
-# interfaces
-.implements Lcom/android/server/am/IOpAppBootManager;
 
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/am/OnePlusMemoryTracker;
+.end annotation
 
-# static fields
-.field private static final DEBUG:Z
-
-.field private static final TAG:Ljava/lang/String; = "OpAppBootManager"
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
-.field private mv:Lcom/android/server/am/ugm;
+.field final synthetic this$0:Lcom/android/server/am/OnePlusMemoryTracker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-boolean v0, Landroid/os/Build;->DEBUG_ONEPLUS:Z
-
-    sput-boolean v0, Lcom/android/server/am/i;->DEBUG:Z
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    return-void
-.end method
-
-.method private an()Z
+.method constructor <init>(Lcom/android/server/am/OnePlusMemoryTracker;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    iput-object p1, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
 
-    if-eqz p0, :cond_0
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
-.method private ssp(Landroid/content/pm/ApplicationInfo;)Z
-    .locals 0
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
-
-    const-string p1, "com.baidu.input_yijia"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const-string p1, "com.oppo.market"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const-string p1, "com.nearme.atlas"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    :cond_0
-    const/4 p0, -0x1
-
-    const-string p1, "ro.product.first_api_level"
-
-    invoke-static {p1, p0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result p0
-
-    const/16 p1, 0x1c
-
-    if-le p0, p1, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public addDependencyPackageFlag(Ljava/lang/String;I)V
-    .locals 1
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 4
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->addDependencyPackageFlag(Ljava/lang/String;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public canActivityGo(Landroid/content/pm/ActivityInfo;Ljava/lang/String;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->canActivityGo(Landroid/content/pm/ActivityInfo;Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canInstrumentationGo(Landroid/content/ComponentName;II)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ugm;->canInstrumentationGo(Landroid/content/ComponentName;II)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canJobSchedulerServiceGo(Lcom/android/server/job/controllers/JobStatus;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->canJobSchedulerServiceGo(Lcom/android/server/job/controllers/JobStatus;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canKillProcessService(Ljava/lang/String;Ljava/lang/String;Z)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ugm;->canKillProcessService(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public canNotificationListenerServiceGo(Landroid/content/ComponentName;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->canNotificationListenerServiceGo(Landroid/content/ComponentName;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canProcGo(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->canProcGo(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canProviderGo(Lcom/android/server/am/ContentProviderRecord;Lcom/android/server/am/ProcessRecord;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->canProviderGo(Lcom/android/server/am/ContentProviderRecord;Lcom/android/server/am/ProcessRecord;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canReceiverGo(Landroid/content/pm/ApplicationInfo;Lcom/android/server/am/BroadcastRecord;Ljava/lang/String;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ugm;->canReceiverGo(Landroid/content/pm/ApplicationInfo;Lcom/android/server/am/BroadcastRecord;Ljava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public canScheduleServiceRestart(Lcom/android/server/am/ProcessRecord;)Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->canScheduleServiceRestart(Lcom/android/server/am/ProcessRecord;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public canServiceGo(Lcom/android/server/am/ProcessRecord;Landroid/content/Intent;Lcom/android/server/am/ServiceRecord;ILjava/lang/String;)Z
-    .locals 7
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object v6, p5
-
-    invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/ugm;->canServiceGo(Lcom/android/server/am/ProcessRecord;Landroid/content/Intent;Lcom/android/server/am/ServiceRecord;ILjava/lang/String;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public checkAppInfo(ILandroid/content/pm/ApplicationInfo;)Landroid/content/pm/ApplicationInfo;
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/high16 v0, 0x3c0000
-
-    if-ne p1, v0, :cond_0
-
-    invoke-direct {p0, p2}, Lcom/android/server/am/i;->ssp(Landroid/content/pm/ApplicationInfo;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    iget p0, p2, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    and-int/lit8 p0, p0, -0x5
-
-    iput p0, p2, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    :cond_0
-    return-object p2
-.end method
-
-.method public getScreenState()Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0}, Lcom/android/server/am/ugm;->getScreenState()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public handleAppKilledLocked(Lcom/android/server/am/ProcessRecord;)V
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->handleAppKilledLocked(Lcom/android/server/am/ProcessRecord;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public initEnv(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->initEnv(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public initPackages(Lcom/android/server/pm/PackageManagerService;Landroid/util/ArrayMap;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/android/server/pm/PackageManagerService;",
-            "Landroid/util/ArrayMap<",
-            "Ljava/lang/String;",
-            "Landroid/content/pm/PackageParser$Package;",
-            ">;)V"
-        }
-    .end annotation
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p1}, Lcom/android/server/am/ugm;->zta(Lcom/android/server/pm/PackageManagerService;)Lcom/android/server/am/ugm;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    const-string v0, "com.opmt.action.test"
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/ugm;->zta(Landroid/util/ArrayMap;)V
+    move-result p1
 
-    :cond_0
-    return-void
-.end method
+    if-eqz p1, :cond_8
 
-.method public isBlackJobClass(Ljava/lang/String;)Z
-    .locals 1
+    const-string p1, "code"
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    const-string p2, "on"
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->isBlackJobClass(Ljava/lang/String;)Z
+    move-result p2
 
-    move-result p0
+    const/4 v0, 0x1
 
-    return p0
+    if-eqz p2, :cond_0
 
-    :cond_0
-    const/4 p0, 0x0
+    sput-boolean v0, Lcom/android/server/am/OnePlusMemoryTracker;->IN_USING:Z
 
-    return p0
-.end method
-
-.method public isDebug()Z
-    .locals 1
-
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
-
-    invoke-virtual {p0}, Lcom/android/server/am/ugm;->isDebug()Z
-
-    move-result p0
-
-    return p0
+    goto/16 :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    const-string p2, "off"
 
-    return p0
-.end method
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public isNotAppUserSetted(Ljava/lang/String;)Z
-    .locals 0
+    move-result p2
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    const/4 v1, 0x0
 
-    move-result p0
+    if-eqz p2, :cond_1
 
-    if-eqz p0, :cond_0
+    sput-boolean v1, Lcom/android/server/am/OnePlusMemoryTracker;->IN_USING:Z
 
-    invoke-static {p1}, Lcom/android/server/am/ugm;->isNotAppUserSetted(Ljava/lang/String;)Z
+    goto/16 :goto_1
 
-    move-result p0
+    :cond_1
+    const-string p2, "debug_on"
 
-    return p0
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_0
-    const/4 p0, 0x1
+    move-result p2
 
-    return p0
-.end method
+    if-eqz p2, :cond_2
 
-.method public myLog(Ljava/lang/String;)V
-    .locals 0
+    invoke-static {v0}, Lcom/android/server/am/OnePlusMemoryTracker;->access$802(Z)Z
 
-    invoke-static {p1}, Lcom/android/server/am/ugm;->myLog(Ljava/lang/String;)V
+    goto/16 :goto_1
 
-    return-void
-.end method
+    :cond_2
+    const-string p2, "debug_off"
 
-.method public setCurrentIME(Landroid/content/Intent;)V
-    .locals 1
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    move-result p2
 
-    move-result v0
+    if-eqz p2, :cond_3
 
-    if-eqz v0, :cond_0
+    invoke-static {v1}, Lcom/android/server/am/OnePlusMemoryTracker;->access$802(Z)Z
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    goto/16 :goto_1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->setCurrentIME(Landroid/content/Intent;)V
+    :cond_3
+    const-string p2, "dump"
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public setCurrentWallpaperPackage(Landroid/content/ComponentName;)V
-    .locals 1
+    move-result p2
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    const-string v1, "OPMT"
 
-    move-result v0
+    if-eqz p2, :cond_4
 
-    if-eqz v0, :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->setCurrentWallpaperPackage(Landroid/content/ComponentName;)V
+    const-string p2, "# dump # IN_USING = "
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public skipBroadcast(Landroid/content/Intent;Ljava/lang/String;IILcom/android/server/am/ProcessRecord;)Z
-    .locals 7
+    sget-boolean p2, Lcom/android/server/am/OnePlusMemoryTracker;->IN_USING:Z
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    iget-object v1, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-object v2, p1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    move-object v3, p2
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move v4, p3
+    const-string p2, "# dump # MDM = "
 
-    move v5, p4
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v6, p5
+    invoke-static {}, Lcom/android/server/am/OnePlusMemoryTracker;->access$1600()Z
 
-    invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/ugm;->skipBroadcast(Landroid/content/Intent;Ljava/lang/String;IILcom/android/server/am/ProcessRecord;)Z
+    move-result p2
 
-    move-result p0
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return p0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_0
-    const/4 p0, 0x0
+    move-result-object p1
 
-    return p0
-.end method
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-.method public trackProcess(ZLcom/android/server/am/ProcessRecord;Ljava/lang/String;)V
-    .locals 1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string p2, "# dump # DROPBOX = "
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-static {}, Lcom/android/server/am/OnePlusMemoryTracker;->access$1800()Z
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ugm;->trackProcess(ZLcom/android/server/am/ProcessRecord;Ljava/lang/String;)V
+    move-result p2
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-.method public updateAccesibilityServiceFlag(Landroid/content/Intent;Landroid/content/ComponentName;I)V
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    move-result-object p1
 
-    move-result v0
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v0, :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/ugm;->updateAccesibilityServiceFlag(Landroid/content/Intent;Landroid/content/ComponentName;I)V
+    const-string p2, "# dump # timeout = "
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public updateAppStopInfo(Ljava/lang/String;)V
-    .locals 1
+    iget-object p2, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-static {p2}, Lcom/android/server/am/OnePlusMemoryTracker;->access$1000(Lcom/android/server/am/OnePlusMemoryTracker;)J
 
-    move-result v0
+    move-result-wide v2
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->updateAppStopInfo(Ljava/lang/String;)V
+    move-result-object p1
 
-    :cond_0
-    return-void
-.end method
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-.method public updateAppStopInfo(Ljava/lang/String;I)V
-    .locals 1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string p2, "# dump # interval = "
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    iget-object p2, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->updateAppStopInfo(Ljava/lang/String;I)V
+    invoke-static {p2}, Lcom/android/server/am/OnePlusMemoryTracker;->access$2100(Lcom/android/server/am/OnePlusMemoryTracker;)J
 
-    :cond_0
-    return-void
-.end method
+    move-result-wide v2
 
-.method public updatePowerFlag(Ljava/lang/String;I)V
-    .locals 1
+    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->updatePowerFlag(Ljava/lang/String;I)V
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_0
-    return-void
-.end method
+    const-string p2, "# dump # line numer = "
 
-.method public updateWidgetPackage(Ljava/lang/String;Z)V
-    .locals 1
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-static {}, Lcom/android/server/am/OnePlusMemoryTracker;->access$500()I
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/ugm;->updateWidgetPackage(Ljava/lang/String;Z)V
+    move-result-object p1
 
-    :cond_0
-    return-void
-.end method
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-.method public updateWidgetPackages(Ljava/util/HashSet;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/HashSet<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/i;->an()Z
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string p2, "# dump # dropbox size = "
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/android/server/am/i;->mv:Lcom/android/server/am/ugm;
+    invoke-static {}, Lcom/android/server/am/OnePlusMemoryTracker;->access$600()I
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/ugm;->updateWidgetPackages(Ljava/util/HashSet;)V
+    move-result p2
 
-    :cond_0
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p2, "# dump # command = "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
+
+    const/16 p2, 0x400
+
+    invoke-static {p0, p2}, Lcom/android/server/am/OnePlusMemoryTracker;->access$700(Lcom/android/server/am/OnePlusMemoryTracker;I)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_1
+
+    :cond_4
+    const-string p2, "mem"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide p1
+
+    iget-object p0, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
+
+    invoke-static {p0, v0}, Lcom/android/server/am/OnePlusMemoryTracker;->access$400(Lcom/android/server/am/OnePlusMemoryTracker;Z)Ljava/lang/String;
+
+    const-string p0, "============================="
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "dump meminfo took: "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, p1
+
+    const-wide/16 p1, 0x3e8
+
+    div-long/2addr v2, p1
+
+    invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p1, "s"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_5
+    const-string p2, "@timeout"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p2
+
+    const/16 v0, 0x9
+
+    if-eqz p2, :cond_6
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
+
+    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    invoke-static {p0, p1, p2}, Lcom/android/server/am/OnePlusMemoryTracker;->access$1002(Lcom/android/server/am/OnePlusMemoryTracker;J)J
+
+    goto :goto_1
+
+    :cond_6
+    const-string p2, "@interval"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_7
+
+    const/16 p2, 0xa
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
+
+    invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide p1
+
+    invoke-static {p0, p1, p2}, Lcom/android/server/am/OnePlusMemoryTracker;->access$2102(Lcom/android/server/am/OnePlusMemoryTracker;J)J
+
+    goto :goto_1
+
+    :cond_7
+    const-string p2, "@command"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_8
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lcom/android/server/am/i;->this$0:Lcom/android/server/am/OnePlusMemoryTracker;
+
+    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/android/server/am/OnePlusMemoryTracker;->access$2502(Lcom/android/server/am/OnePlusMemoryTracker;I)I
+
+    :cond_8
+    :goto_1
     return-void
 .end method

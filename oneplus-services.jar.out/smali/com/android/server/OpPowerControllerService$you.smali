@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/server/OpPowerControllerService;Lcom/android/server/vdw;)V
+.method synthetic constructor <init>(Lcom/android/server/OpPowerControllerService;Lcom/android/server/qeg;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OpPowerControllerService$you;-><init>(Lcom/android/server/OpPowerControllerService;)V
@@ -47,7 +47,7 @@
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$you;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p0, p1}, Lcom/android/server/OpPowerControllerService;->access$3000(Lcom/android/server/OpPowerControllerService;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;Lorg/json/JSONArray;)V
 
     return-void
 .end method

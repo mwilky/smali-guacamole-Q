@@ -1,11 +1,14 @@
 .class Lcom/android/server/c;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/app/AlarmManager$OnAlarmListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/OpPowerControllerService;->init()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/OpPowerControllerService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,194 +22,231 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/OpPowerControllerService;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/android/server/OpPowerControllerService;)V
     .locals 0
 
     iput-object p1, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(ZLandroid/net/Uri;)V
-    .locals 4
+.method public onAlarm()V
+    .locals 6
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$000()Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v0
 
-    const-string v0, "onChange: "
+    monitor-enter v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    iget-object v1, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {}, Ljava/time/LocalDateTime;->now()Ljava/time/LocalDateTime;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object p1
-
-    const-string v0, "OpPowerControllerService"
-
-    invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p1, "doze_mode_policy"
-
-    invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Lcom/android/server/OpPowerControllerService;->getSleepState(Ljava/time/LocalDateTime;)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$502(I)I
 
-    iget-object p2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+    const-string v1, "OpPowerControllerService"
 
-    invoke-static {p2}, Lcom/android/server/OpPowerControllerService;->access$1400(Lcom/android/server/OpPowerControllerService;)Landroid/content/ContentResolver;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v1, 0x0
+    const-string v3, "Alarm triggered, mSleepState: "
 
-    invoke-static {p2, p1, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$500()I
 
-    const/4 p2, 0x1
+    move-result v3
 
-    if-ne p1, p2, :cond_0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_0
-    move p2, v1
+    move-result-object v2
 
-    :goto_0
-    invoke-static {p2}, Lcom/android/server/OpPowerControllerService;->access$1302(Z)Z
+    invoke-static {v1, v2}, Lcom/android/server/you$zta;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_1
+    new-instance v1, Landroid/content/Intent;
 
-    :cond_1
-    const-string p1, "optimal_power_save_mode_enabled"
+    const-string v2, "net.oneplus.powercontroller.intent.SLEEP_CHANGED"
 
-    invoke-static {p1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    const-string v2, "state"
 
-    invoke-virtual {v1, p2}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$500()I
 
-    move-result p2
+    move-result v3
 
-    if-eqz p2, :cond_2
-
-    iget-object p2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {p2}, Lcom/android/server/OpPowerControllerService;->access$1400(Lcom/android/server/OpPowerControllerService;)Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const/4 v2, -0x1
-
-    invoke-static {v1, p1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result p1
-
-    invoke-static {p2, p1}, Lcom/android/server/OpPowerControllerService;->access$702(Lcom/android/server/OpPowerControllerService;I)I
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iget-object p2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {p2}, Lcom/android/server/OpPowerControllerService;->access$700(Lcom/android/server/OpPowerControllerService;)I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string v1, "oc"
-
-    invoke-virtual {p1, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {p2}, Lcom/android/server/OpPowerControllerService;->access$1000(Lcom/android/server/OpPowerControllerService;)Lnet/oneplus/odm/OpDeviceManagerInjector;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {p2}, Lcom/android/server/OpPowerControllerService;->access$1000(Lcom/android/server/OpPowerControllerService;)Lnet/oneplus/odm/OpDeviceManagerInjector;
-
-    move-result-object p2
-
-    iget-object v1, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
-
-    move-result-object v1
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    iget-object v2, v2, Lcom/android/server/OpPowerControllerService;->mMdmExtraData:Ljava/util/HashMap;
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
 
-    const-string v3, "usersleep"
+    move-result-object v2
 
-    invoke-virtual {p2, v1, v3, p1, v2}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveOsData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
+    sget-object v3, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$500()I
+
+    move-result v2
+
+    const/16 v3, 0x15be
+
+    if-ne v2, v3, :cond_0
+
+    const-string v2, "sl"
+
+    const-string v4, "1"
+
+    invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$700(Lcom/android/server/OpPowerControllerService;)I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$800(Lcom/android/server/OpPowerControllerService;)I
+
+    move-result v2
+
+    const/4 v4, 0x5
+
+    if-ne v2, v4, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$900(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$cno;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$500()I
+
+    move-result v2
+
+    const/16 v3, 0x1e6c
+
+    if-ne v2, v3, :cond_1
+
+    const-string v2, "sl"
+
+    const-string v4, "0"
+
+    invoke-virtual {v1, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$700(Lcom/android/server/OpPowerControllerService;)I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$200(Lcom/android/server/OpPowerControllerService;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v2}, Lcom/android/server/OpPowerControllerService;->access$900(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$cno;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    new-instance v2, Ljava/util/HashMap;
+
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+
+    const-string v3, "appid"
+
+    const-string v4, "NYNCG4I0TI"
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v3, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$1000(Lcom/android/server/OpPowerControllerService;)Lnet/oneplus/odm/OpDeviceManagerInjector;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v3, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$1000(Lcom/android/server/OpPowerControllerService;)Lnet/oneplus/odm/OpDeviceManagerInjector;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v4}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
+
+    move-result-object v4
+
+    const-string v5, "usersleep"
+
+    invoke-virtual {v3, v4, v5, v1, v2}, Lnet/oneplus/odm/OpDeviceManagerInjector;->preserveOsData(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;)V
 
     :cond_2
-    :goto_1
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p2, "MSG_UPDATE_POLICY: mAggressive = "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1300()Z
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p2, ", mOPSMEnabled = "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     iget-object p0, p0, Lcom/android/server/c;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$700(Lcom/android/server/OpPowerControllerService;)I
+    invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->scheduleNextAlarmIfNeededLocked()V
 
-    move-result p2
+    monitor-exit v0
 
-    invoke-virtual {p0, p2}, Lcom/android/server/OpPowerControllerService;->convertOPSMEnabledToString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method

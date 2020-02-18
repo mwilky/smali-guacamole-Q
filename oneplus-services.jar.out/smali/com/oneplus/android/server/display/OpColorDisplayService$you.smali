@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {v0, p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$502(Lcom/oneplus/android/server/display/OpColorDisplayService;I)I
+    invoke-static {v0, p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$602(Lcom/oneplus/android/server/display/OpColorDisplayService;I)I
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public re()V
+.method public ve()V
     .locals 1
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$you;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;

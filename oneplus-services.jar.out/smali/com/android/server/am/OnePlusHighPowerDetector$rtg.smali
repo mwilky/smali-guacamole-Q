@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field private Vq:J
-
-.field private Wq:Z
-
 .field final synthetic this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
+
+.field private tr:J
+
+.field private ur:Z
 
 
 # direct methods
@@ -30,37 +30,37 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Vq:J
+    iput-wide p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->tr:J
 
-    iput-boolean p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Wq:Z
+    iput-boolean p4, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->ur:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Tb()Z
+.method public Wb()Z
     .locals 0
 
-    iget-boolean p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Wq:Z
+    iget-boolean p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->ur:Z
 
     return p0
 .end method
 
-.method public Ub()J
+.method public Xb()J
     .locals 2
 
-    iget-wide v0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Vq:J
+    iget-wide v0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->tr:J
 
     return-wide v0
 .end method
 
-.method public Vb()V
+.method public Yb()V
     .locals 1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Wq:Z
+    iput-boolean v0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->ur:Z
 
     return-void
 .end method
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Vq:J
+    iget-wide v1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->tr:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Wq:Z
+    iget-boolean p0, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->ur:Z
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -102,7 +102,7 @@
 .method public wtn(J)V
     .locals 0
 
-    iput-wide p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->Vq:J
+    iput-wide p1, p0, Lcom/android/server/am/OnePlusHighPowerDetector$rtg;->tr:J
 
     return-void
 .end method

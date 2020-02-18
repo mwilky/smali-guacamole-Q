@@ -59,11 +59,11 @@
 
     iget-object p0, p0, Lcom/android/server/am/AppRecordManagerService$UidObserver;->this$0:Lcom/android/server/am/AppRecordManagerService;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/you;
+    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/tsu;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->Ba()V
+    invoke-virtual {p0}, Lcom/android/server/am/tsu;->Da()V
 
     return-void
 .end method
@@ -113,13 +113,13 @@
 
     iget-object p2, p0, Lcom/android/server/am/AppRecordManagerService$UidObserver;->this$0:Lcom/android/server/am/AppRecordManagerService;
 
-    invoke-static {p2, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/you;
+    invoke-static {p2, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/tsu;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/android/server/am/you;->Ca()V
+    invoke-virtual {p2}, Lcom/android/server/am/tsu;->Ea()V
 
-    iget-boolean p2, p2, Lcom/android/server/am/you;->mIsolated:Z
+    iget-boolean p2, p2, Lcom/android/server/am/tsu;->mIsolated:Z
 
     if-eqz p2, :cond_0
 
@@ -196,11 +196,11 @@
 
     iget-object p0, p0, Lcom/android/server/am/AppRecordManagerService$UidObserver;->this$0:Lcom/android/server/am/AppRecordManagerService;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/you;
+    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/tsu;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/android/server/am/you;->Da()V
+    invoke-virtual {p0}, Lcom/android/server/am/tsu;->Fa()V
 
     return-void
 .end method
@@ -245,11 +245,11 @@
 
     iget-object p0, p0, Lcom/android/server/am/AppRecordManagerService$UidObserver;->this$0:Lcom/android/server/am/AppRecordManagerService;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/you;
+    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$000(Lcom/android/server/am/AppRecordManagerService;I)Lcom/android/server/am/tsu;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/am/you;->zta(IJ)V
+    invoke-virtual {p0, p2, p3, p4}, Lcom/android/server/am/tsu;->zta(IJ)V
 
     return-void
 .end method

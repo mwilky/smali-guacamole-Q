@@ -43,6 +43,24 @@
 
     move-result-object p2
 
+    invoke-static {p2}, Lcom/android/server/display/OpAutoBrightnessHelper;->getInstance(Landroid/content/Context;)Lcom/android/server/display/OpAutoBrightnessHelper;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Lcom/android/server/display/OpAutoBrightnessHelper;->setFontPackageName(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$500()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, p0, Lcom/oneplus/android/server/display/cno;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
+
+    invoke-static {p2}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$200(Lcom/oneplus/android/server/display/OpColorDisplayService;)Landroid/content/Context;
+
+    move-result-object p2
+
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p2

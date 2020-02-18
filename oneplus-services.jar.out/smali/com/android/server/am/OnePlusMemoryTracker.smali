@@ -179,9 +179,9 @@
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mRecentFrontUids:Ljava/util/HashMap;
 
-    new-instance p1, Lcom/android/server/am/e;
+    new-instance p1, Lcom/android/server/am/i;
 
-    invoke-direct {p1, p0}, Lcom/android/server/am/e;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;)V
+    invoke-direct {p1, p0}, Lcom/android/server/am/i;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;)V
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mTestReceiver:Landroid/content/BroadcastReceiver;
 
@@ -834,7 +834,7 @@
 
     move/from16 v29, v5
 
-    iget-object v5, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Gi:Ljava/lang/String;
+    iget-object v5, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Yi:Ljava/lang/String;
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -854,7 +854,7 @@
 
     move-result-object v19
 
-    iget-object v0, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Gi:Ljava/lang/String;
+    iget-object v0, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Yi:Ljava/lang/String;
 
     iget v5, v15, Lcom/android/server/am/OnePlusMemoryTracker$zta;->mPid:I
 
@@ -1554,7 +1554,7 @@
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Gi:Ljava/lang/String;
+    iget-object v0, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Yi:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1622,7 +1622,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iget-object p1, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Gi:Ljava/lang/String;
+    iget-object p1, p1, Lcom/android/server/am/OnePlusMemoryTracker$zta;->Yi:Ljava/lang/String;
 
     const-string v1, "pn"
 
@@ -1662,9 +1662,9 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/android/server/am/d;
+    new-instance v0, Lcom/android/server/am/h;
 
-    invoke-direct {v0}, Lcom/android/server/am/d;-><init>()V
+    invoke-direct {v0}, Lcom/android/server/am/h;-><init>()V
 
     invoke-static {p0, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -1901,11 +1901,11 @@
 .method private writeLogToDropbox(Lcom/android/server/am/OnePlusMemoryTracker$zta;)V
     .locals 2
 
-    new-instance v0, Lcom/android/server/am/c;
+    new-instance v0, Lcom/android/server/am/g;
 
     const-string v1, "MemoryTracker dump: memory_tracker"
 
-    invoke-direct {v0, p0, v1, p1}, Lcom/android/server/am/c;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;Ljava/lang/String;Lcom/android/server/am/OnePlusMemoryTracker$zta;)V
+    invoke-direct {v0, p0, v1, p1}, Lcom/android/server/am/g;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;Ljava/lang/String;Lcom/android/server/am/OnePlusMemoryTracker$zta;)V
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
@@ -2067,7 +2067,7 @@
     return-void
 
     :cond_4
-    invoke-virtual {v1}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->bc()Z
+    invoke-virtual {v1}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->fc()Z
 
     move-result v0
 
@@ -2142,7 +2142,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p3}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->cc()V
+    invoke-virtual {p3}, Lcom/android/server/am/OnePlusMemoryTracker$rtg;->hc()V
 
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mRecentFrontUids:Ljava/util/HashMap;
@@ -2182,7 +2182,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lcom/android/server/am/OnePlusMemoryTracker$sis;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;Lcom/android/server/am/c;)V
+    invoke-direct {p1, p0, v0}, Lcom/android/server/am/OnePlusMemoryTracker$sis;-><init>(Lcom/android/server/am/OnePlusMemoryTracker;Lcom/android/server/am/g;)V
 
     iput-object p1, p0, Lcom/android/server/am/OnePlusMemoryTracker;->mConfigUpdater:Lcom/android/server/am/OnePlusMemoryTracker$sis;
 

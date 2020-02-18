@@ -6,7 +6,7 @@
 # static fields
 .field public static final INSTANCE:Lorg/bouncycastle/asn1/z;
 
-.field private static final soa:[B
+.field private static final Woa:[B
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     new-array v0, v0, [B
 
-    sput-object v0, Lorg/bouncycastle/asn1/z;->soa:[B
+    sput-object v0, Lorg/bouncycastle/asn1/z;->Woa:[B
 
     return-void
 .end method
@@ -46,7 +46,7 @@
     return p0
 .end method
 
-.method lg()I
+.method qg()I
     .locals 0
 
     const/4 p0, 0x2
@@ -62,7 +62,7 @@
         }
     .end annotation
 
-    sget-object p0, Lorg/bouncycastle/asn1/z;->soa:[B
+    sget-object p0, Lorg/bouncycastle/asn1/z;->Woa:[B
 
     const/4 v0, 0x5
 

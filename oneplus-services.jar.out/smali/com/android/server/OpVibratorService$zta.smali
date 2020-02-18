@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/server/OpVibratorService;Lcom/android/server/i;)V
+.method synthetic constructor <init>(Lcom/android/server/OpVibratorService;Lcom/android/server/j;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/OpVibratorService$zta;-><init>(Lcom/android/server/OpVibratorService;)V

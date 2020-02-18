@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method protected final na(Ljava/lang/String;)Ljava/security/AlgorithmParameters;
+.method protected final ra(Ljava/lang/String;)Ljava/security/AlgorithmParameters;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

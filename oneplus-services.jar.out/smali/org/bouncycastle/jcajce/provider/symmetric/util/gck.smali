@@ -12,28 +12,6 @@
 
 
 # static fields
-.field public static final GNa:I = 0x0
-
-.field public static final HNa:I = 0xa
-
-.field public static final INa:I = 0xb
-
-.field public static final JNa:I = 0xc
-
-.field public static final KNa:I = 0xd
-
-.field public static final LNa:I = 0x0
-
-.field public static final MNa:I = 0x1
-
-.field public static final NNa:I = 0x2
-
-.field public static final ONa:I = 0x3
-
-.field public static final PNa:I = 0x4
-
-.field public static final QNa:I = 0x5
-
 .field public static final SHA1:I = 0x1
 
 .field public static final SHA224:I = 0x7
@@ -43,3 +21,25 @@
 .field public static final SHA384:I = 0x8
 
 .field public static final SHA512:I = 0x9
+
+.field public static final iOa:I = 0x0
+
+.field public static final jOa:I = 0xa
+
+.field public static final kOa:I = 0xb
+
+.field public static final lOa:I = 0xc
+
+.field public static final mOa:I = 0xd
+
+.field public static final nOa:I = 0x0
+
+.field public static final oOa:I = 0x1
+
+.field public static final pOa:I = 0x2
+
+.field public static final qOa:I = 0x3
+
+.field public static final rOa:I = 0x4
+
+.field public static final sOa:I = 0x5

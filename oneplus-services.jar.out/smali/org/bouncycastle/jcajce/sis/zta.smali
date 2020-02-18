@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private final Lna:[B
+.field private final noa:[B
 
-.field private final Mna:I
+.field private final ooa:I
 
 
 # direct methods
@@ -25,39 +25,19 @@
 
     invoke-direct {p0, p1}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    iput p2, p0, Lorg/bouncycastle/jcajce/sis/zta;->Mna:I
+    iput p2, p0, Lorg/bouncycastle/jcajce/sis/zta;->ooa:I
 
     invoke-static {p3}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/zta;->Lna:[B
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/zta;->noa:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public eg()[B
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/zta;->Lna:[B
-
-    invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public fg()I
-    .locals 0
-
-    iget p0, p0, Lorg/bouncycastle/jcajce/sis/zta;->Mna:I
-
-    return p0
-.end method
-
 .method public getNonce()[B
     .locals 0
 
@@ -66,4 +46,24 @@
     move-result-object p0
 
     return-object p0
+.end method
+
+.method public jg()[B
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/zta;->noa:[B
+
+    invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public kg()I
+    .locals 0
+
+    iget p0, p0, Lorg/bouncycastle/jcajce/sis/zta;->ooa:I
+
+    return p0
 .end method

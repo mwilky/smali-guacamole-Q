@@ -132,34 +132,6 @@
     return p1
 .end method
 
-.method private fl()V
-    .locals 2
-
-    new-instance v0, Landroid/content/IntentFilter;
-
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
-
-    const v1, 0x7fffffff
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
-
-    const-string v1, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v1, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
-
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/android/server/ugm;->mContext:Landroid/content/Context;
-
-    iget-object p0, p0, Lcom/android/server/ugm;->mGeneralReceiver:Landroid/content/BroadcastReceiver;
-
-    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    return-void
-.end method
-
 .method private init()V
     .locals 4
 
@@ -195,13 +167,41 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    invoke-direct {p0}, Lcom/android/server/ugm;->fl()V
+    invoke-direct {p0}, Lcom/android/server/ugm;->kl()V
 
     invoke-static {}, Lcom/android/server/OnePlusUtil$zta;->getInstance()Lcom/android/server/OnePlusUtil$zta;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/android/server/OnePlusUtil$zta;->zta(Lcom/android/server/OnePlusUtil$zta$you;)V
+
+    return-void
+.end method
+
+.method private kl()V
+    .locals 2
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const v1, 0x7fffffff
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->setPriority(I)V
+
+    const-string v1, "android.os.action.LIGHT_DEVICE_IDLE_MODE_CHANGED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/android/server/ugm;->mContext:Landroid/content/Context;
+
+    iget-object p0, p0, Lcom/android/server/ugm;->mGeneralReceiver:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
 .end method

@@ -117,7 +117,7 @@
     return-object v0
 .end method
 
-.method private il()V
+.method private nl()V
     .locals 3
 
     iget-object v0, p0, Lcom/android/server/OnePlusUtil$zta;->Wc:Ljava/util/ArrayList;
@@ -341,7 +341,7 @@
     iput p4, p0, Lcom/android/server/OnePlusUtil$zta;->mPid:I
 
     :cond_0
-    invoke-direct {p0}, Lcom/android/server/OnePlusUtil$zta;->il()V
+    invoke-direct {p0}, Lcom/android/server/OnePlusUtil$zta;->nl()V
 
     monitor-exit v0
     :try_end_0

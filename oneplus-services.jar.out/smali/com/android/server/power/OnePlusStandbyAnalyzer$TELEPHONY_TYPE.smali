@@ -25,17 +25,17 @@
 # static fields
 .field private static final synthetic $VALUES:[Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-.field public static final enum aka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+.field public static final enum Dka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-.field public static final enum bka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+.field public static final enum Eka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-.field public static final enum cka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+.field public static final enum Fka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-.field public static final enum dka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+.field public static final enum Gka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-.field public static final enum eka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+.field public static final enum Hka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-.field public static final enum fka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+.field public static final enum Ika:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
 
 # instance fields
@@ -56,7 +56,7 @@
 
     invoke-direct {v0, v3, v1, v2}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->aka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Dka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, v4, v2, v3}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->bka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Eka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
@@ -76,7 +76,7 @@
 
     invoke-direct {v0, v5, v3, v4}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->cka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Fka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v0, v6, v4, v5}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->dka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Gka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v0, v7, v5, v6}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->eka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Hka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     new-instance v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
@@ -106,31 +106,31 @@
 
     invoke-direct {v0, v8, v6, v7}, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->fka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sput-object v0, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Ika:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     new-array v0, v7, [Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
-    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->aka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object v7, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Dka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     aput-object v7, v0, v1
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->bka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Eka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->cka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Fka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->dka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Gka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->eka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Hka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->fka:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
+    sget-object v1, Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;->Ika:Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;
 
     aput-object v1, v0, v6
 
@@ -218,7 +218,7 @@
 .method static zta(Lcom/android/server/power/OnePlusStandbyAnalyzer$TELEPHONY_TYPE;Z)Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lcom/android/server/power/kth;->LE:[I
+    sget-object v0, Lcom/android/server/power/kth;->mF:[I
 
     invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 

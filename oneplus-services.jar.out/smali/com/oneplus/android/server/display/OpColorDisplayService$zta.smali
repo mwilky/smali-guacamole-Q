@@ -57,7 +57,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$500(Lcom/oneplus/android/server/display/OpColorDisplayService;)I
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$600(Lcom/oneplus/android/server/display/OpColorDisplayService;)I
 
     move-result p0
 
@@ -72,7 +72,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->re()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ve()V
 
     goto/16 :goto_2
 
@@ -94,7 +94,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Fe()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Je()V
 
     goto/16 :goto_2
 
@@ -105,20 +105,20 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ee()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ie()V
 
     goto/16 :goto_2
 
     :pswitch_5
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1600(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/tsu;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1700(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/tsu;
 
     move-result-object p1
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1700(Lcom/oneplus/android/server/display/OpColorDisplayService;)F
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1800(Lcom/oneplus/android/server/display/OpColorDisplayService;)F
 
     move-result p0
 
@@ -129,7 +129,7 @@
     :pswitch_6
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1600(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/tsu;
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1700(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/tsu;
 
     move-result-object p0
 
@@ -140,14 +140,14 @@
     :pswitch_7
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1500(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1600(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
 
     goto/16 :goto_2
 
     :pswitch_8
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1400(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1500(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
 
     move-result p1
 
@@ -155,7 +155,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -166,7 +166,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -185,7 +185,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1400(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1500(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
 
     move-result p0
 
@@ -200,7 +200,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Be()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Fe()V
 
     goto/16 :goto_2
 
@@ -211,14 +211,14 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ye()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ce()V
 
     goto/16 :goto_2
 
     :pswitch_b
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -230,14 +230,14 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->ze()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->De()V
 
     goto/16 :goto_2
 
     :pswitch_c
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -253,7 +253,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->xe()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Be()V
 
     goto/16 :goto_2
 
@@ -282,35 +282,35 @@
     :pswitch_f
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1300(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1400(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
 
     goto/16 :goto_2
 
     :pswitch_10
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1200(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1300(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
 
     goto/16 :goto_2
 
     :pswitch_11
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1100(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1200(Lcom/oneplus/android/server/display/OpColorDisplayService;)V
 
     goto/16 :goto_2
 
     :pswitch_12
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0, v3}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1000(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)V
+    invoke-static {p0, v3}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1100(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)V
 
     goto/16 :goto_2
 
     :pswitch_13
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0, v0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1000(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)V
+    invoke-static {p0, v0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1100(Lcom/oneplus/android/server/display/OpColorDisplayService;Z)V
 
     goto/16 :goto_2
 
@@ -324,7 +324,7 @@
     :pswitch_15
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)I
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$1000(Lcom/oneplus/android/server/display/OpColorDisplayService;)I
 
     move-result p1
 
@@ -335,7 +335,7 @@
     :pswitch_16
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -351,14 +351,14 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ce()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ge()V
 
     goto :goto_2
 
     :pswitch_17
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -370,14 +370,14 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ae()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/display/bvj;->Ee()V
 
     goto :goto_2
 
     :pswitch_18
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$700(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
 
     move-result p1
 
@@ -385,7 +385,7 @@
 
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -396,7 +396,7 @@
     :cond_1
     iget-object p1, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
+    invoke-static {p1}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$900(Lcom/oneplus/android/server/display/OpColorDisplayService;)Lcom/oneplus/android/server/display/OpColorModeManager;
 
     move-result-object p1
 
@@ -415,7 +415,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$700(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$800(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
 
     move-result p0
 
@@ -432,7 +432,7 @@
 
     iget-object p0, p0, Lcom/oneplus/android/server/display/OpColorDisplayService$zta;->this$0:Lcom/oneplus/android/server/display/OpColorDisplayService;
 
-    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$600(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
+    invoke-static {p0}, Lcom/oneplus/android/server/display/OpColorDisplayService;->access$700(Lcom/oneplus/android/server/display/OpColorDisplayService;)Z
 
     move-result p0
 

@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static Sk()[I
+.method public static Xk()[I
     .locals 1
 
     const/16 v0, 0xe

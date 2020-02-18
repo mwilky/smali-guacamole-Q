@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final wza:I = -0x1f000000
+.field private static final Zza:I = -0x1f000000
 
-.field private static final xza:J = -0x1f00000000000000L
+.field private static final _za:J = -0x1f00000000000000L
 
 
 # direct methods
@@ -18,7 +18,7 @@
     return-void
 .end method
 
-.method public static Wi()[B
+.method public static aj()[B
     .locals 3
 
     const/16 v0, 0x10
@@ -30,54 +30,6 @@
     const/16 v2, -0x80
 
     aput-byte v2, v0, v1
-
-    return-object v0
-.end method
-
-.method public static Xi()[I
-    .locals 3
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    const/high16 v2, -0x80000000
-
-    aput v2, v0, v1
-
-    return-object v0
-.end method
-
-.method public static Yi()[J
-    .locals 4
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [J
-
-    const/4 v1, 0x0
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    aput-wide v2, v0, v1
-
-    return-object v0
-.end method
-
-.method public static Zi()[J
-    .locals 4
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [J
-
-    const/4 v1, 0x0
-
-    const-wide/high16 v2, 0x4000000000000000L    # 2.0
-
-    aput-wide v2, v0, v1
 
     return-object v0
 .end method
@@ -180,6 +132,38 @@
     return-void
 .end method
 
+.method public static bj()[I
+    .locals 3
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    const/high16 v2, -0x80000000
+
+    aput v2, v0, v1
+
+    return-object v0
+.end method
+
+.method public static cj()[J
+    .locals 4
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [J
+
+    const/4 v1, 0x0
+
+    const-wide/high16 v2, -0x8000000000000000L
+
+    aput-wide v2, v0, v1
+
+    return-object v0
+.end method
+
 .method public static cno([J[J)V
     .locals 13
 
@@ -226,6 +210,22 @@
     aput-wide v0, p1, v3
 
     return-void
+.end method
+
+.method public static dj()[J
+    .locals 4
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [J
+
+    const/4 v1, 0x0
+
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+
+    aput-wide v2, v0, v1
+
+    return-object v0
 .end method
 
 .method public static igw([J[J)V

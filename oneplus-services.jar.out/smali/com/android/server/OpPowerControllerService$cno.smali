@@ -88,6 +88,15 @@
     goto/16 :goto_7
 
     :pswitch_0
+    invoke-static {}, Lcom/android/server/am/j;->getInstance()Lcom/android/server/am/j;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/server/am/j;->ic()V
+
+    goto/16 :goto_7
+
+    :pswitch_1
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
     invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$600(Lcom/android/server/OpPowerControllerService;)Landroid/content/Context;
@@ -108,7 +117,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_1
+    :pswitch_2
     :try_start_0
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -205,7 +214,7 @@
 
     goto/16 :goto_3
 
-    :pswitch_2
+    :pswitch_3
     new-instance p1, Lcom/android/server/OpPowerControllerService$bio;
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
@@ -216,7 +225,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_3
+    :pswitch_4
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
     move-result p0
@@ -233,10 +242,10 @@
 
     goto/16 :goto_7
 
-    :pswitch_4
+    :pswitch_5
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4200(Lcom/android/server/OpPowerControllerService;)Landroid/app/Notification;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4300(Lcom/android/server/OpPowerControllerService;)Landroid/app/Notification;
 
     move-result-object p1
 
@@ -244,7 +253,7 @@
 
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$4300(Lcom/android/server/OpPowerControllerService;)Landroid/app/NotificationManager;
+    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$4400(Lcom/android/server/OpPowerControllerService;)Landroid/app/NotificationManager;
 
     move-result-object p0
 
@@ -258,16 +267,16 @@
 
     goto/16 :goto_7
 
-    :pswitch_5
+    :pswitch_6
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4100(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3900(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager$OnAlarmListener;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager$OnAlarmListener;
 
     move-result-object v0
 
@@ -275,7 +284,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -293,7 +302,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$4100(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
 
     move-result-object v1
 
@@ -301,13 +310,13 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0, p1}, Lcom/android/server/OpPowerControllerService;->access$4100(Lcom/android/server/OpPowerControllerService;Ljava/time/LocalDateTime;)J
+    invoke-static {v0, p1}, Lcom/android/server/OpPowerControllerService;->access$4200(Lcom/android/server/OpPowerControllerService;Ljava/time/LocalDateTime;)J
 
     move-result-wide v3
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3900(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager$OnAlarmListener;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager$OnAlarmListener;
 
     move-result-object v6
 
@@ -332,7 +341,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_6
+    :pswitch_7
     new-instance p1, Lcom/oneplus/config/ConfigGrabber;
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
@@ -351,14 +360,14 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/android/server/OpPowerControllerService;->access$3000(Lcom/android/server/OpPowerControllerService;Lorg/json/JSONArray;)V
+    invoke-static {p0, p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;Lorg/json/JSONArray;)V
 
     goto/16 :goto_7
 
-    :pswitch_7
+    :pswitch_8
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3200(Lcom/android/server/OpPowerControllerService;)Z
 
     move-result p1
 
@@ -367,7 +376,7 @@
     goto/16 :goto_7
 
     :cond_4
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3900()Z
 
     move-result p1
 
@@ -375,7 +384,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -386,7 +395,7 @@
     :try_start_1
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object v0
 
@@ -455,10 +464,10 @@
 
     throw p0
 
-    :pswitch_8
+    :pswitch_9
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3200(Lcom/android/server/OpPowerControllerService;)Z
 
     move-result p1
 
@@ -469,7 +478,7 @@
     :cond_6
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -477,7 +486,7 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2500()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2600()I
 
     move-result v0
 
@@ -485,7 +494,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object p1
 
@@ -493,13 +502,13 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v5
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -509,7 +518,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -519,7 +528,7 @@
 
     const/4 v8, 0x2
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v9
 
@@ -532,7 +541,7 @@
     move v0, p1
 
     :goto_0
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v1
 
@@ -540,7 +549,7 @@
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v1
 
@@ -552,7 +561,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v0
 
@@ -573,7 +582,7 @@
     move v1, p1
 
     :goto_1
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v3
 
@@ -581,7 +590,7 @@
 
     iget-object v3, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v3
 
@@ -593,7 +602,7 @@
 
     iget-object v3, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v3
 
@@ -607,7 +616,7 @@
 
     iget-object v1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v1
 
@@ -625,7 +634,7 @@
     :cond_a
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object p1
 
@@ -663,7 +672,7 @@
 
     new-array v0, v4, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3600()D
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()D
 
     move-result-wide v3
 
@@ -689,7 +698,7 @@
 
     invoke-static {v0, p1}, Lcom/android/server/you$zta;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3600()D
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()D
 
     move-result-wide v3
 
@@ -706,7 +715,7 @@
     :cond_b
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -714,7 +723,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object p1
 
@@ -728,7 +737,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v0
 
@@ -742,7 +751,7 @@
 
     iget-object v3, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object v3
 
@@ -750,7 +759,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -761,14 +770,14 @@
 
     invoke-virtual {p1}, Lcom/android/server/OpPowerControllerService;->scheduleNextAlarmIfNeededLocked()V
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result p1
 
     if-eqz p1, :cond_e
 
     :goto_2
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result p1
 
@@ -790,7 +799,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v0
 
@@ -824,7 +833,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v0
 
@@ -840,7 +849,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3500(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$ssp;
 
     move-result-object v0
 
@@ -882,10 +891,10 @@
     invoke-static {v0, p1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_e
-    :pswitch_9
+    :pswitch_a
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3200(Lcom/android/server/OpPowerControllerService;)Z
 
     move-result p1
 
@@ -894,7 +903,7 @@
     goto/16 :goto_7
 
     :cond_f
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3900()Z
 
     move-result p1
 
@@ -902,7 +911,7 @@
 
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p1
 
@@ -913,7 +922,7 @@
     :try_start_4
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
+    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$3400(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$rtg;
 
     move-result-object p0
 
@@ -932,7 +941,7 @@
 
     throw p0
 
-    :pswitch_a
+    :pswitch_b
     :try_start_5
     iget-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1042,7 +1051,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_b
+    :pswitch_c
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
     move-result p1
@@ -1138,7 +1147,7 @@
 
     goto/16 :goto_7
 
-    :pswitch_c
+    :pswitch_d
     const-string p1, "persist.sys.op_power_first_boot"
 
     const-string v0, "0"
@@ -1356,7 +1365,7 @@
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3100(Lcom/android/server/OpPowerControllerService;)Z
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3200(Lcom/android/server/OpPowerControllerService;)Z
 
     move-result v0
 
@@ -1373,7 +1382,7 @@
     :cond_17
     iget-object p0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$3200(Lcom/android/server/OpPowerControllerService;)Landroid/telephony/SubscriptionManager;
+    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Landroid/telephony/SubscriptionManager;
 
     move-result-object p0
 
@@ -1410,13 +1419,13 @@
     :cond_18
     iget-object p1, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
+    invoke-static {p1}, Lcom/android/server/OpPowerControllerService;->access$4100(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/android/server/OpPowerControllerService$cno;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3900(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager$OnAlarmListener;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$4000(Lcom/android/server/OpPowerControllerService;)Landroid/app/AlarmManager$OnAlarmListener;
 
     move-result-object v0
 
@@ -1437,15 +1446,14 @@
     :goto_7
     return-void
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_d
         :pswitch_c
         :pswitch_b
+        :pswitch_9
         :pswitch_a
         :pswitch_8
-        :pswitch_9
         :pswitch_7
         :pswitch_6
         :pswitch_5

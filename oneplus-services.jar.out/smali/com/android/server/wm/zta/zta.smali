@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method private al()V
+.method private fl()V
     .locals 6
 
     iget-object v0, p0, Lcom/android/server/wm/zta/zta;->ub:Landroid/graphics/Rect;
@@ -397,7 +397,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0}, Lcom/android/server/wm/zta/zta;->al()V
+    invoke-direct {p0}, Lcom/android/server/wm/zta/zta;->fl()V
 
     return-void
 .end method

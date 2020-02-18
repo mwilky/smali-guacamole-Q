@@ -1350,7 +1350,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->yf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v2
 
@@ -1364,7 +1364,7 @@
 
     sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->yf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
     move-result-object v1
 
@@ -2863,7 +2863,7 @@
     :cond_1
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mSceneModeController:Lcom/oneplus/android/server/scene/ivd;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->kf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->pf()V
 
     goto :goto_0
 
@@ -2872,7 +2872,7 @@
 
     if-eqz p0, :cond_4
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->mf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->rf()V
 
     goto :goto_0
 
@@ -2971,7 +2971,7 @@
 
     iget-object p0, p0, Lcom/android/server/OnePlusExService;->mSceneModeController:Lcom/oneplus/android/server/scene/ivd;
 
-    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->lf()V
+    invoke-virtual {p0}, Lcom/oneplus/android/server/scene/ivd;->qf()V
 
     goto :goto_0
 

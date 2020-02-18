@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/android/server/vdb;->Wq()V
+    value = Lcom/oneplus/android/server/vdb;->jr()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -56,7 +56,7 @@
 
     move-result-object v1
 
-    const v2, 0x50d009a
+    const v2, 0x50d009d
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -88,7 +88,7 @@
 
     move-result-object p0
 
-    const v2, 0x50d009a
+    const v2, 0x50d009d
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

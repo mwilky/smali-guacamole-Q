@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic EZ:[[I
+.field final synthetic eaa:[[I
 
-.field final synthetic FZ:[[I
+.field final synthetic faa:[[I
 
 .field final synthetic this$0:Lcom/oneplus/android/server/display/dma;
 
@@ -33,9 +33,9 @@
 
     iput-object p1, p0, Lcom/oneplus/android/server/display/wtn;->this$0:Lcom/oneplus/android/server/display/dma;
 
-    iput-object p2, p0, Lcom/oneplus/android/server/display/wtn;->EZ:[[I
+    iput-object p2, p0, Lcom/oneplus/android/server/display/wtn;->eaa:[[I
 
-    iput-object p3, p0, Lcom/oneplus/android/server/display/wtn;->FZ:[[I
+    iput-object p3, p0, Lcom/oneplus/android/server/display/wtn;->faa:[[I
 
     iput-object p4, p0, Lcom/oneplus/android/server/display/wtn;->zta:[[I
 
@@ -79,11 +79,11 @@
     :goto_1
     if-ge v3, v2, :cond_0
 
-    iget-object v4, p0, Lcom/oneplus/android/server/display/wtn;->EZ:[[I
+    iget-object v4, p0, Lcom/oneplus/android/server/display/wtn;->eaa:[[I
 
     aget-object v4, v4, v1
 
-    iget-object v5, p0, Lcom/oneplus/android/server/display/wtn;->FZ:[[I
+    iget-object v5, p0, Lcom/oneplus/android/server/display/wtn;->faa:[[I
 
     aget-object v5, v5, v1
 
@@ -123,7 +123,7 @@
     :cond_1
     iget-object p1, p0, Lcom/oneplus/android/server/display/wtn;->this$0:Lcom/oneplus/android/server/display/dma;
 
-    iget-object v1, p0, Lcom/oneplus/android/server/display/wtn;->EZ:[[I
+    iget-object v1, p0, Lcom/oneplus/android/server/display/wtn;->eaa:[[I
 
     invoke-static {p1}, Lcom/oneplus/android/server/display/dma;->zta(Lcom/oneplus/android/server/display/dma;)[[I
 
@@ -141,7 +141,7 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/oneplus/android/server/display/wtn;->EZ:[[I
+    iget-object v1, p0, Lcom/oneplus/android/server/display/wtn;->eaa:[[I
 
     iget-object v4, p0, Lcom/oneplus/android/server/display/wtn;->this$0:Lcom/oneplus/android/server/display/dma;
 
@@ -183,7 +183,7 @@
 
     aget-object v4, v4, p1
 
-    iget-object v5, p0, Lcom/oneplus/android/server/display/wtn;->EZ:[[I
+    iget-object v5, p0, Lcom/oneplus/android/server/display/wtn;->eaa:[[I
 
     aget-object v5, v5, p1
 

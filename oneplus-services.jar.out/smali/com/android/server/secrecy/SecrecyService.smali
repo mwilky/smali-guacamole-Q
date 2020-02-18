@@ -94,12 +94,12 @@
 
     invoke-virtual {p1}, Lcom/android/server/ServiceThread;->start()V
 
-    invoke-direct {p0}, Lcom/android/server/secrecy/SecrecyService;->Fl()V
+    invoke-direct {p0}, Lcom/android/server/secrecy/SecrecyService;->Kl()V
 
     return-void
 .end method
 
-.method private Fl()V
+.method private Kl()V
     .locals 2
 
     new-instance v0, Lcom/android/server/secrecy/you/you;
@@ -211,7 +211,7 @@
 
     iget-object p3, p0, Lcom/android/server/secrecy/SecrecyService;->mPolicyManager:Lcom/android/server/secrecy/zta/sis;
 
-    invoke-virtual {p3}, Lcom/android/server/secrecy/zta/sis;->pd()Lcom/android/server/secrecy/zta/zta;
+    invoke-virtual {p3}, Lcom/android/server/secrecy/zta/sis;->ud()Lcom/android/server/secrecy/zta/zta;
 
     move-result-object p3
 
@@ -224,7 +224,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/secrecy/SecrecyService;->mPolicyManager:Lcom/android/server/secrecy/zta/sis;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/secrecy/zta/sis;->W(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/android/server/secrecy/zta/sis;->Y(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -276,7 +276,7 @@
 
     iget-object p0, p0, Lcom/android/server/secrecy/SecrecyService;->mPolicyManager:Lcom/android/server/secrecy/zta/sis;
 
-    invoke-virtual {p0}, Lcom/android/server/secrecy/zta/sis;->pd()Lcom/android/server/secrecy/zta/zta;
+    invoke-virtual {p0}, Lcom/android/server/secrecy/zta/sis;->ud()Lcom/android/server/secrecy/zta/zta;
 
     move-result-object p0
 
@@ -293,7 +293,7 @@
 
     iget-object p0, p0, Lcom/android/server/secrecy/SecrecyService;->mPolicyManager:Lcom/android/server/secrecy/zta/sis;
 
-    invoke-virtual {p0}, Lcom/android/server/secrecy/zta/sis;->pd()Lcom/android/server/secrecy/zta/zta;
+    invoke-virtual {p0}, Lcom/android/server/secrecy/zta/sis;->ud()Lcom/android/server/secrecy/zta/zta;
 
     move-result-object p0
 

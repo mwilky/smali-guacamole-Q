@@ -35,7 +35,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lyou/zta/sis/zta/ywr;->sk()Lyou/zta/sis/zta/kth;
+    invoke-virtual {p1}, Lyou/zta/sis/zta/ywr;->xk()Lyou/zta/sis/zta/kth;
 
     move-result-object v1
 

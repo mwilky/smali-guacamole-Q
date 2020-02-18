@@ -228,34 +228,34 @@
     return-object v0
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
-    .locals 1
-
-    new-instance v0, Lorg/bouncycastle/asn1/C;
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl;->string:[B
-
-    invoke-direct {v0, p0}, Lorg/bouncycastle/asn1/C;-><init>([B)V
-
-    return-object v0
-.end method
-
-.method ng()Lorg/bouncycastle/asn1/vdb;
-    .locals 1
-
-    new-instance v0, Lorg/bouncycastle/asn1/C;
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl;->string:[B
-
-    invoke-direct {v0, p0}, Lorg/bouncycastle/asn1/C;-><init>([B)V
-
-    return-object v0
-.end method
-
 .method public parser()Lorg/bouncycastle/asn1/gwm;
     .locals 0
 
     return-object p0
+.end method
+
+.method rg()Lorg/bouncycastle/asn1/vdb;
+    .locals 1
+
+    new-instance v0, Lorg/bouncycastle/asn1/C;
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl;->string:[B
+
+    invoke-direct {v0, p0}, Lorg/bouncycastle/asn1/C;-><init>([B)V
+
+    return-object v0
+.end method
+
+.method sg()Lorg/bouncycastle/asn1/vdb;
+    .locals 1
+
+    new-instance v0, Lorg/bouncycastle/asn1/C;
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl;->string:[B
+
+    invoke-direct {v0, p0}, Lorg/bouncycastle/asn1/C;-><init>([B)V
+
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;

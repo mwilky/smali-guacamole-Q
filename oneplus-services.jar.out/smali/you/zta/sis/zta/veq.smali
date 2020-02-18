@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final uCa:Ljava/lang/String; = "bc_wtnaf"
+.field static final XCa:Ljava/lang/String; = "bc_wtnaf"
 
 
 # direct methods
@@ -49,7 +49,7 @@
 
     check-cast v0, Lyou/zta/sis/zta/cgv;
 
-    invoke-virtual {v0}, Lyou/zta/sis/zta/cgv;->Dk()[Lyou/zta/sis/zta/wtn$zta;
+    invoke-virtual {v0}, Lyou/zta/sis/zta/cgv;->Ik()[Lyou/zta/sis/zta/wtn$zta;
 
     move-result-object v0
 
@@ -159,12 +159,12 @@
 
     if-nez p3, :cond_0
 
-    sget-object p0, Lyou/zta/sis/zta/obl;->zDa:[Lyou/zta/sis/zta/vju;
+    sget-object p0, Lyou/zta/sis/zta/obl;->bEa:[Lyou/zta/sis/zta/vju;
 
     goto :goto_0
 
     :cond_0
-    sget-object p0, Lyou/zta/sis/zta/obl;->BDa:[Lyou/zta/sis/zta/vju;
+    sget-object p0, Lyou/zta/sis/zta/obl;->dEa:[Lyou/zta/sis/zta/vju;
 
     :goto_0
     move-object v5, p0
@@ -235,7 +235,7 @@
 
     move-result v8
 
-    invoke-virtual {v0}, Lyou/zta/sis/zta/rtg$zta;->Jj()[Ljava/math/BigInteger;
+    invoke-virtual {v0}, Lyou/zta/sis/zta/rtg$zta;->Oj()[Ljava/math/BigInteger;
 
     move-result-object v4
 

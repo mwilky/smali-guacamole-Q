@@ -1,14 +1,11 @@
 .class Lcom/android/server/am/d;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source ""
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/am/OnePlusMemoryTracker;->sortMemItems(Ljava/util/List;)V
+    value = Lcom/android/server/am/OnePlusHighPowerDetector;->gn()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,67 +13,90 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator<",
-        "Lcom/android/server/am/OnePlusMemoryTracker$you;",
-        ">;"
-    }
-.end annotation
+
+# instance fields
+.field final synthetic this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/android/server/am/OnePlusHighPowerDetector;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/android/server/am/d;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    check-cast p1, Lcom/android/server/am/OnePlusMemoryTracker$you;
+    const-string p1, "type"
 
-    check-cast p2, Lcom/android/server/am/OnePlusMemoryTracker$you;
+    const/4 v0, -0x1
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/d;->zta(Lcom/android/server/am/OnePlusMemoryTracker$you;Lcom/android/server/am/OnePlusMemoryTracker$you;)I
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result p0
+    move-result p1
 
-    return p0
-.end method
+    new-instance p2, Ljava/lang/StringBuilder;
 
-.method public zta(Lcom/android/server/am/OnePlusMemoryTracker$you;Lcom/android/server/am/OnePlusMemoryTracker$you;)I
-    .locals 2
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide p0, p1, Lcom/android/server/am/OnePlusMemoryTracker$you;->pss:J
+    const-string v0, "[BgDetect] Notification Type:"
 
-    iget-wide v0, p2, Lcom/android/server/am/OnePlusMemoryTracker$you;->pss:J
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    cmp-long p2, p0, v0
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-gez p2, :cond_0
+    const-string v0, " is canceled by user"
 
-    const/4 p0, 0x1
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "OHPD"
+
+    invoke-static {v0, p2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    cmp-long p0, p0, v0
+    iget-object p0, p0, Lcom/android/server/am/d;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    if-lez p0, :cond_1
+    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->js:Ljava/lang/String;
 
-    const/4 p0, -0x1
-
-    return p0
+    goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    iget-object p0, p0, Lcom/android/server/am/d;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
 
-    return p0
+    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->es:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p0, p0, Lcom/android/server/am/d;->this$0:Lcom/android/server/am/OnePlusHighPowerDetector;
+
+    iput-object p2, p0, Lcom/android/server/am/OnePlusHighPowerDetector;->gs:Ljava/lang/String;
+
+    :goto_0
+    return-void
 .end method

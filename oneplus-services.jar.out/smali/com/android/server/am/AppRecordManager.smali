@@ -14,29 +14,29 @@
 # static fields
 .field public static final IN_USING:Z
 
+.field public static final Ih:I = -0x3e8
+
+.field public static final Jh:I = 0x0
+
+.field public static final Kh:I = 0x1
+
+.field public static final Lh:I = 0x2
+
+.field public static final Mh:I = 0x4
+
+.field public static final Nh:I = 0x8
+
+.field public static final Oh:I = 0x10
+
+.field public static final Ph:I = 0x20
+
+.field public static final Qh:I = 0x40
+
+.field public static final Rh:I = 0x80
+
 .field public static final STATE_ACTIVE:I = 0x1
 
 .field public static final STATE_IDLE:I = 0x2
-
-.field public static final qh:I = -0x3e8
-
-.field public static final rh:I = 0x0
-
-.field public static final sh:I = 0x1
-
-.field public static final th:I = 0x2
-
-.field public static final uh:I = 0x4
-
-.field public static final vh:I = 0x8
-
-.field public static final wh:I = 0x10
-
-.field public static final xh:I = 0x20
-
-.field public static final yh:I = 0x40
-
-.field public static final zh:I = 0x80
 
 
 # direct methods
@@ -434,7 +434,7 @@
     return p0
 .end method
 
-.method public static you(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/bvj;)V
+.method public static you(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/gwm;)V
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
@@ -444,16 +444,16 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/am/tsu;->getInstance()Lcom/android/server/am/tsu;
+    invoke-static {}, Lcom/android/server/am/ssp;->getInstance()Lcom/android/server/am/ssp;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/tsu;->you(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/bvj;)V
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/ssp;->you(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/gwm;)V
 
     return-void
 .end method
 
-.method public static zta(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/bvj;)V
+.method public static zta(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/gwm;)V
     .locals 1
 
     sget-boolean v0, Lcom/android/server/am/AppRecordManager;->IN_USING:Z
@@ -463,11 +463,11 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lcom/android/server/am/tsu;->getInstance()Lcom/android/server/am/tsu;
+    invoke-static {}, Lcom/android/server/am/ssp;->getInstance()Lcom/android/server/am/ssp;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/tsu;->zta(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/bvj;)V
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/am/ssp;->zta(Lcom/android/server/am/AppRecordManager$ListenerType;Lcom/android/server/am/gwm;)V
 
     return-void
 .end method

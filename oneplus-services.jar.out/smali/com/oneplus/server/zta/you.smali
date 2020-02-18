@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oneplus/server/zta/sis;->Fs()V
+    value = Lcom/oneplus/server/zta/sis;->Ps()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

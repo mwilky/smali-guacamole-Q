@@ -6,11 +6,11 @@
 # static fields
 .field public static final FALSE:Lorg/bouncycastle/asn1/tsu;
 
+.field private static final Qoa:[B
+
+.field private static final Roa:[B
+
 .field public static final TRUE:Lorg/bouncycastle/asn1/tsu;
-
-.field private static final moa:[B
-
-.field private static final noa:[B
 
 
 # instance fields
@@ -31,13 +31,13 @@
 
     aput-byte v3, v1, v2
 
-    sput-object v1, Lorg/bouncycastle/asn1/tsu;->moa:[B
+    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Qoa:[B
 
     new-array v1, v0, [B
 
     aput-byte v2, v1, v2
 
-    sput-object v1, Lorg/bouncycastle/asn1/tsu;->noa:[B
+    sput-object v1, Lorg/bouncycastle/asn1/tsu;->Roa:[B
 
     new-instance v1, Lorg/bouncycastle/asn1/tsu;
 
@@ -61,12 +61,12 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->moa:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Qoa:[B
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->noa:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Roa:[B
 
     :goto_0
     iput-object p1, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
@@ -91,7 +91,7 @@
 
     if-nez v1, :cond_0
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->noa:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Roa:[B
 
     :goto_0
     iput-object p1, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
@@ -107,7 +107,7 @@
 
     if-ne v0, v1, :cond_1
 
-    sget-object p1, Lorg/bouncycastle/asn1/tsu;->moa:[B
+    sget-object p1, Lorg/bouncycastle/asn1/tsu;->Qoa:[B
 
     goto :goto_0
 
@@ -383,29 +383,12 @@
     return p0
 .end method
 
-.method lg()I
+.method qg()I
     .locals 0
 
     const/4 p0, 0x3
 
     return p0
-.end method
-
-.method public qg()Z
-    .locals 1
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
-
-    const/4 v0, 0x0
-
-    aget-byte p0, p0, v0
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x1
-
-    :cond_0
-    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -428,6 +411,23 @@
 
     :goto_0
     return-object p0
+.end method
+
+.method public vg()Z
+    .locals 1
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/tsu;->value:[B
+
+    const/4 v0, 0x0
+
+    aget-byte p0, p0, v0
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
 .end method
 
 .method zta(Lorg/bouncycastle/asn1/ugm;)V

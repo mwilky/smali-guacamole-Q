@@ -59,7 +59,7 @@
 
 
 # virtual methods
-.method public declared-synchronized Ag()Ljava/util/Enumeration;
+.method public declared-synchronized Fg()Ljava/util/Enumeration;
     .locals 2
 
     monitor-enter p0
@@ -69,7 +69,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->Fg()Ljava/util/Enumeration;
 
     move-result-object v0
     :try_end_0
@@ -132,7 +132,7 @@
     throw p1
 .end method
 
-.method lg()I
+.method qg()I
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -161,18 +161,18 @@
     return v0
 
     :cond_0
-    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->ng()Lorg/bouncycastle/asn1/vdb;
+    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->sg()Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/vdb;->lg()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/vdb;->qg()I
 
     move-result p0
 
     return p0
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
+.method rg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/fa;->encoded:[B
@@ -182,14 +182,14 @@
     invoke-direct {p0}, Lorg/bouncycastle/asn1/fa;->parse()V
 
     :cond_0
-    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->mg()Lorg/bouncycastle/asn1/vdb;
+    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->rg()Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method sg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/fa;->encoded:[B
@@ -199,7 +199,7 @@
     invoke-direct {p0}, Lorg/bouncycastle/asn1/fa;->parse()V
 
     :cond_0
-    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->ng()Lorg/bouncycastle/asn1/vdb;
+    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->sg()Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 
@@ -256,7 +256,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->ng()Lorg/bouncycastle/asn1/vdb;
+    invoke-super {p0}, Lorg/bouncycastle/asn1/obl;->sg()Lorg/bouncycastle/asn1/vdb;
 
     move-result-object p0
 

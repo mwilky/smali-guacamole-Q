@@ -283,7 +283,7 @@
     return p0
 .end method
 
-.method lg()I
+.method qg()I
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/asn1/sis;->data:[B
@@ -327,7 +327,7 @@
 
     new-array v1, v1, [B
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->pg()I
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/sis;->ug()I
 
     move-result p0
 

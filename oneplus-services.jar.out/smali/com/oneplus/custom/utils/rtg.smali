@@ -8,21 +8,21 @@
 
 .field private static final PARAM_CUST_FLAG:I = 0x4
 
-.field private static final Rfa:Ljava/lang/String; = "/sys/module/param_read_write/parameters/cust_flag"
-
-.field private static final Sfa:Ljava/lang/String; = "/sys/module/param_read_write/parameters/backcover_color"
-
 .field private static final TAG:Ljava/lang/String; = "ParamReader"
 
-.field private static final Tfa:Ljava/lang/String; = "com.oem.os.IParamService$Stub"
+.field private static final sga:Ljava/lang/String; = "/sys/module/param_read_write/parameters/cust_flag"
 
-.field private static final Ufa:Ljava/lang/String; = "com.oneplus.os.IParamService$Stub"
+.field private static final tga:Ljava/lang/String; = "/sys/module/param_read_write/parameters/backcover_color"
 
-.field private static final Vfa:I = 0x18
+.field private static final uga:Ljava/lang/String; = "com.oem.os.IParamService$Stub"
 
-.field private static final Wfa:I = 0x1a
+.field private static final vga:Ljava/lang/String; = "com.oneplus.os.IParamService$Stub"
 
-.field private static Xfa:Ljava/util/ArrayList;
+.field private static final wga:I = 0x18
+
+.field private static final xga:I = 0x1a
+
+.field private static yga:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -32,7 +32,7 @@
     .end annotation
 .end field
 
-.field private static Yfa:Z
+.field private static zga:Z
 
 
 # direct methods
@@ -43,11 +43,11 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
+    sput-object v0, Lcom/oneplus/custom/utils/rtg;->yga:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/oneplus/custom/utils/rtg;->Yfa:Z
+    sput-boolean v0, Lcom/oneplus/custom/utils/rtg;->zga:Z
 
     return-void
 .end method
@@ -58,6 +58,293 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static Bf()[B
+    .locals 6
+
+    const-string v0, "ParamReader"
+
+    new-instance v1, Ljava/util/concurrent/CountDownLatch;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    new-instance v3, Lcom/oneplus/custom/utils/tsu;
+
+    invoke-direct {v3, v1}, Lcom/oneplus/custom/utils/tsu;-><init>(Ljava/util/concurrent/CountDownLatch;)V
+
+    invoke-static {}, Lcom/oneplus/custom/utils/rtg;->getOneplusParamService()Lsis/you/you/sis/zta/zta;
+
+    move-result-object v4
+
+    if-nez v4, :cond_0
+
+    const-string v1, "Can\'t get OneplusParamService"
+
+    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v2
+
+    :cond_0
+    const/16 v5, 0x1a
+
+    invoke-interface {v4, v5, v3}, Lsis/you/you/sis/zta/zta;->zta(ILsis/you/you/sis/zta/zta$sis;)V
+
+    const-wide/16 v3, 0x64
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v1, v3, v4, v5}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+
+    sget-object v1, Lcom/oneplus/custom/utils/rtg;->yga:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    new-array v1, v1, [B
+
+    const/4 v3, 0x0
+
+    :goto_0
+    sget-object v4, Lcom/oneplus/custom/utils/rtg;->yga:Ljava/util/ArrayList;
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_2
+
+    sget-object v4, Lcom/oneplus/custom/utils/rtg;->yga:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Byte;
+
+    invoke-virtual {v4}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v4, Lcom/oneplus/custom/utils/rtg;->yga:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Byte;
+
+    invoke-virtual {v4}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v4
+
+    aput-byte v4, v1, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "get WP key result = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcom/oneplus/custom/utils/zta;->v(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v1
+
+    :catch_0
+    move-exception v1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "getParamBuf throws exception: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v2
+.end method
+
+.method public static Cf()I
+    .locals 9
+
+    const-string v0, "ParamReader"
+
+    const-string v1, "android.os.ServiceManager"
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v3, "getService"
+
+    const/4 v4, 0x1
+
+    new-array v5, v4, [Ljava/lang/Class;
+
+    const-class v6, Ljava/lang/String;
+
+    aput-object v6, v5, v2
+
+    invoke-virtual {v1, v3, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    const-string v5, "ParamService"
+
+    aput-object v5, v3, v2
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v1, v5, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v3, "com.oneplus.os.IParamService$Stub"
+
+    :try_start_1
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v3
+
+    const-string v6, "asInterface"
+
+    new-array v7, v4, [Ljava/lang/Class;
+
+    const-class v8, Landroid/os/IBinder;
+
+    aput-object v8, v7, v2
+
+    invoke-virtual {v3, v6, v7}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v3
+
+    new-array v6, v4, [Ljava/lang/Object;
+
+    aput-object v1, v6, v2
+
+    invoke-virtual {v3, v5, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    const-string v5, "getParamIntSYNC"
+
+    new-array v6, v4, [Ljava/lang/Class;
+
+    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v7, v6, v2
+
+    invoke-virtual {v3, v5, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/16 v5, 0x18
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v2
+
+    invoke-virtual {v3, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "getSwTypeVal result = "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->v(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "getSwTypeVal throws exception: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return v2
 .end method
 
 .method public static getBackCoverColorVal()Ljava/lang/String;
@@ -896,7 +1183,7 @@
 .method static synthetic ssp(Ljava/util/ArrayList;)Ljava/util/ArrayList;
     .locals 0
 
-    sput-object p0, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
+    sput-object p0, Lcom/oneplus/custom/utils/rtg;->yga:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -904,294 +1191,7 @@
 .method static synthetic vju(Z)Z
     .locals 0
 
-    sput-boolean p0, Lcom/oneplus/custom/utils/rtg;->Yfa:Z
+    sput-boolean p0, Lcom/oneplus/custom/utils/rtg;->zga:Z
 
     return p0
-.end method
-
-.method public static wf()[B
-    .locals 6
-
-    const-string v0, "ParamReader"
-
-    new-instance v1, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    new-instance v3, Lcom/oneplus/custom/utils/tsu;
-
-    invoke-direct {v3, v1}, Lcom/oneplus/custom/utils/tsu;-><init>(Ljava/util/concurrent/CountDownLatch;)V
-
-    invoke-static {}, Lcom/oneplus/custom/utils/rtg;->getOneplusParamService()Lsis/you/you/sis/zta/zta;
-
-    move-result-object v4
-
-    if-nez v4, :cond_0
-
-    const-string v1, "Can\'t get OneplusParamService"
-
-    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
-
-    :cond_0
-    const/16 v5, 0x1a
-
-    invoke-interface {v4, v5, v3}, Lsis/you/you/sis/zta/zta;->zta(ILsis/you/you/sis/zta/zta$sis;)V
-
-    const-wide/16 v3, 0x64
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v1, v3, v4, v5}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    sget-object v1, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    new-array v1, v1, [B
-
-    const/4 v3, 0x0
-
-    :goto_0
-    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_2
-
-    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Byte;
-
-    invoke-virtual {v4}, Ljava/lang/Byte;->byteValue()B
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v4, Lcom/oneplus/custom/utils/rtg;->Xfa:Ljava/util/ArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Byte;
-
-    invoke-virtual {v4}, Ljava/lang/Byte;->byteValue()B
-
-    move-result v4
-
-    aput-byte v4, v1, v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "get WP key result = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Lcom/oneplus/custom/utils/zta;->v(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v1
-
-    :catch_0
-    move-exception v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "getParamBuf throws exception: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
-.end method
-
-.method public static xf()I
-    .locals 9
-
-    const-string v0, "ParamReader"
-
-    const-string v1, "android.os.ServiceManager"
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v3, "getService"
-
-    const/4 v4, 0x1
-
-    new-array v5, v4, [Ljava/lang/Class;
-
-    const-class v6, Ljava/lang/String;
-
-    aput-object v6, v5, v2
-
-    invoke-virtual {v1, v3, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    const-string v5, "ParamService"
-
-    aput-object v5, v3, v2
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1, v5, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    const-string v3, "com.oneplus.os.IParamService$Stub"
-
-    :try_start_1
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v3
-
-    const-string v6, "asInterface"
-
-    new-array v7, v4, [Ljava/lang/Class;
-
-    const-class v8, Landroid/os/IBinder;
-
-    aput-object v8, v7, v2
-
-    invoke-virtual {v3, v6, v7}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v3
-
-    new-array v6, v4, [Ljava/lang/Object;
-
-    aput-object v1, v6, v2
-
-    invoke-virtual {v3, v5, v6}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    const-string v5, "getParamIntSYNC"
-
-    new-array v6, v4, [Ljava/lang/Class;
-
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v7, v6, v2
-
-    invoke-virtual {v3, v5, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v3
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/16 v5, 0x18
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v2
-
-    invoke-virtual {v3, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "getSwTypeVal result = "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->v(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "getSwTypeVal throws exception: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/oneplus/custom/utils/zta;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return v2
 .end method

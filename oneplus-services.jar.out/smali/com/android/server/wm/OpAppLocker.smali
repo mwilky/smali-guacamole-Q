@@ -1576,17 +1576,17 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->autoAcquireOrRelease(Z)Z
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/android/server/am/les;->screenStateChangedEvent(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/server/am/ivd;->screenStateChangedEvent(Z)V
 
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V

@@ -24,12 +24,12 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager$sis;->Yb(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager$sis;->hc(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private Yb(Ljava/lang/String;)V
+.method private hc(Ljava/lang/String;)V
     .locals 5
 
     const-string v0, ","
@@ -113,7 +113,7 @@
 
 
 # virtual methods
-.method public Sd()[I
+.method public Xd()[I
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager$sis;->mParam:[I

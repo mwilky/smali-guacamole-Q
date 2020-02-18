@@ -4,43 +4,43 @@
 
 
 # static fields
-.field protected static final JBa:Lorg/bouncycastle/jce/provider/igw;
+.field protected static final ACa:Ljava/lang/String;
 
-.field protected static final KBa:Ljava/lang/String;
+.field protected static final BCa:I = 0x5
 
-.field protected static final LBa:Ljava/lang/String;
+.field protected static final CCa:I = 0x6
 
-.field protected static final MBa:Ljava/lang/String;
+.field protected static final DCa:[Ljava/lang/String;
 
-.field protected static final NBa:Ljava/lang/String;
+.field protected static final lCa:Lorg/bouncycastle/jce/provider/igw;
 
-.field protected static final OBa:Ljava/lang/String;
+.field protected static final mCa:Ljava/lang/String;
 
-.field protected static final PBa:Ljava/lang/String;
+.field protected static final nCa:Ljava/lang/String;
 
-.field protected static final QBa:Ljava/lang/String;
+.field protected static final oCa:Ljava/lang/String;
 
-.field protected static final RBa:Ljava/lang/String;
+.field protected static final pCa:Ljava/lang/String;
 
-.field protected static final SBa:Ljava/lang/String;
+.field protected static final qCa:Ljava/lang/String;
 
-.field protected static final TBa:Ljava/lang/String;
+.field protected static final rCa:Ljava/lang/String;
 
-.field protected static final UBa:Ljava/lang/String;
+.field protected static final sCa:Ljava/lang/String;
 
-.field protected static final VBa:Ljava/lang/String;
+.field protected static final tCa:Ljava/lang/String;
 
-.field protected static final WBa:Ljava/lang/String;
+.field protected static final uCa:Ljava/lang/String;
 
-.field protected static final XBa:Ljava/lang/String; = "2.5.29.32.0"
+.field protected static final vCa:Ljava/lang/String;
 
-.field protected static final YBa:Ljava/lang/String;
+.field protected static final wCa:Ljava/lang/String;
 
-.field protected static final ZBa:I = 0x5
+.field protected static final xCa:Ljava/lang/String;
 
-.field protected static final _Ba:I = 0x6
+.field protected static final yCa:Ljava/lang/String;
 
-.field protected static final aCa:[Ljava/lang/String;
+.field protected static final zCa:Ljava/lang/String; = "2.5.29.32.0"
 
 
 # direct methods
@@ -51,15 +51,15 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/jce/provider/igw;-><init>()V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->JBa:Lorg/bouncycastle/jce/provider/igw;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->lCa:Lorg/bouncycastle/jce/provider/igw;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->xqa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->_qa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->KBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->mCa:Ljava/lang/String;
 
     sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->basicConstraints:Lorg/bouncycastle/asn1/bvj;
 
@@ -67,31 +67,31 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->LBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->nCa:Ljava/lang/String;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->yqa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->MBa:Ljava/lang/String;
-
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->qqa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->ara:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->NBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->oCa:Ljava/lang/String;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->vqa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Tqa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->OBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->pCa:Ljava/lang/String;
+
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Yqa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->qCa:Ljava/lang/String;
 
     sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->keyUsage:Lorg/bouncycastle/asn1/bvj;
 
@@ -99,71 +99,71 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->PBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->rCa:Ljava/lang/String;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Dqa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->QBa:Ljava/lang/String;
-
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Ama:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->fra:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->RBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->sCa:Ljava/lang/String;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->xma:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->SBa:Ljava/lang/String;
-
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Aqa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->cna:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->TBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->tCa:Ljava/lang/String;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Cqa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->UBa:Ljava/lang/String;
-
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->wqa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->_ma:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->VBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->uCa:Ljava/lang/String;
 
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->zqa:Lorg/bouncycastle/asn1/bvj;
-
-    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->WBa:Ljava/lang/String;
-
-    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->sqa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->cra:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->YBa:Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->vCa:Ljava/lang/String;
+
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->era:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->wCa:Ljava/lang/String;
+
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Zqa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->xCa:Ljava/lang/String;
+
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->bra:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->yCa:Ljava/lang/String;
+
+    sget-object v0, Lorg/bouncycastle/asn1/x509/gwm;->Vqa:Lorg/bouncycastle/asn1/bvj;
+
+    invoke-virtual {v0}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->ACa:Ljava/lang/String;
 
     const-string v1, "unspecified"
 
@@ -191,7 +191,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->aCa:[Ljava/lang/String;
+    sput-object v0, Lorg/bouncycastle/jce/provider/tsu;->DCa:[Ljava/lang/String;
 
     return-void
 .end method
@@ -202,18 +202,6 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method private static bio(Ljava/lang/Object;)Ljava/math/BigInteger;
-    .locals 0
-
-    check-cast p0, Ljava/security/cert/X509Certificate;
-
-    invoke-virtual {p0}, Ljava/security/cert/X509Certificate;->getSerialNumber()Ljava/math/BigInteger;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method protected static cno(Ljava/util/Set;)Z
@@ -385,7 +373,7 @@
     return p0
 
     :cond_0
-    sget-object v0, Lorg/bouncycastle/jce/provider/oif;->SBa:Ljava/lang/String;
+    sget-object v0, Lorg/bouncycastle/jce/provider/oif;->uCa:Ljava/lang/String;
 
     invoke-interface {p0, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -410,6 +398,18 @@
     move-result p0
 
     return p0
+.end method
+
+.method private static wtn(Ljava/lang/Object;)Ljava/math/BigInteger;
+    .locals 0
+
+    check-cast p0, Ljava/security/cert/X509Certificate;
+
+    invoke-virtual {p0}, Ljava/security/cert/X509Certificate;->getSerialNumber()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method protected static final you(Lorg/bouncycastle/asn1/obl;)Ljava/util/Set;
@@ -437,7 +437,7 @@
 
     invoke-direct {v2, v1}, Lorg/bouncycastle/asn1/ugm;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Fg()Ljava/util/Enumeration;
 
     move-result-object p0
 
@@ -765,7 +765,7 @@
 
     invoke-direct {v0}, Ljava/security/cert/X509CertSelector;-><init>()V
 
-    invoke-static {p0}, Lorg/bouncycastle/jce/provider/qbh;->ssp(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
+    invoke-static {p0}, Lorg/bouncycastle/jce/provider/qbh;->kth(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
 
     move-result-object v1
 
@@ -959,7 +959,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
     :try_start_1
-    sget-object v1, Lorg/bouncycastle/jce/provider/tsu;->WBa:Ljava/lang/String;
+    sget-object v1, Lorg/bouncycastle/jce/provider/tsu;->yCa:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Ljava/security/cert/X509Certificate;->getExtensionValue(Ljava/lang/String;)[B
 
@@ -1142,7 +1142,7 @@
 
     const-string v0, "Date of cert gen extension could not be read."
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/wtn;->Sf()I
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/wtn;->Xf()I
 
     move-result v1
 
@@ -1176,7 +1176,7 @@
 
     check-cast v1, Ljava/security/cert/X509Certificate;
 
-    sget-object v2, Lorg/bouncycastle/asn1/ssp/zta;->eJa:Lorg/bouncycastle/asn1/bvj;
+    sget-object v2, Lorg/bouncycastle/asn1/ssp/zta;->HJa:Lorg/bouncycastle/asn1/bvj;
 
     invoke-virtual {v2}, Lorg/bouncycastle/asn1/bvj;->getId()Ljava/lang/String;
 
@@ -1286,7 +1286,7 @@
     if-eqz p0, :cond_3
 
     :try_start_0
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/bio;->Eh()[Lorg/bouncycastle/asn1/x509/oif;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/bio;->Jh()[Lorg/bouncycastle/asn1/x509/oif;
 
     move-result-object p0
     :try_end_0
@@ -1307,7 +1307,7 @@
 
     aget-object v3, p0, v2
 
-    invoke-virtual {v3}, Lorg/bouncycastle/asn1/x509/oif;->Kh()Lorg/bouncycastle/asn1/x509/bvj;
+    invoke-virtual {v3}, Lorg/bouncycastle/asn1/x509/oif;->Ph()Lorg/bouncycastle/asn1/x509/bvj;
 
     move-result-object v3
 
@@ -1497,7 +1497,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
     :try_start_1
-    sget-object v1, Lorg/bouncycastle/jce/provider/tsu;->YBa:Ljava/lang/String;
+    sget-object v1, Lorg/bouncycastle/jce/provider/tsu;->ACa:Ljava/lang/String;
 
     invoke-static {p1, v1}, Lorg/bouncycastle/jce/provider/tsu;->zta(Ljava/security/cert/X509Extension;Ljava/lang/String;)Lorg/bouncycastle/asn1/vdb;
 
@@ -1511,7 +1511,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lorg/bouncycastle/asn1/ywr;->zg()Ljava/math/BigInteger;
+    invoke-virtual {v1}, Lorg/bouncycastle/asn1/ywr;->Eg()Ljava/math/BigInteger;
 
     move-result-object v1
     :try_end_1
@@ -1524,7 +1524,7 @@
 
     :goto_0
     :try_start_2
-    sget-object v3, Lorg/bouncycastle/jce/provider/tsu;->RBa:Ljava/lang/String;
+    sget-object v3, Lorg/bouncycastle/jce/provider/tsu;->tCa:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Ljava/security/cert/X509CRL;->getExtensionValue(Ljava/lang/String;)[B
 
@@ -1566,7 +1566,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lorg/bouncycastle/jce/provider/tsu;->JBa:Lorg/bouncycastle/jce/provider/igw;
+    sget-object v0, Lorg/bouncycastle/jce/provider/tsu;->lCa:Lorg/bouncycastle/jce/provider/igw;
 
     invoke-virtual {v0, p1, p0, p2, p3}, Lorg/bouncycastle/jce/provider/igw;->zta(Lorg/bouncycastle/jcajce/tsu;Ljava/util/Date;Ljava/util/List;Ljava/util/List;)Ljava/util/Set;
 
@@ -1658,7 +1658,7 @@
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    invoke-static {p1}, Lorg/bouncycastle/jce/provider/qbh;->ssp(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
+    invoke-static {p1}, Lorg/bouncycastle/jce/provider/qbh;->kth(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
 
     move-result-object v2
 
@@ -1704,13 +1704,13 @@
     move-result-object p2
 
     :cond_1
-    sget-object v0, Lorg/bouncycastle/jce/provider/tsu;->JBa:Lorg/bouncycastle/jce/provider/igw;
+    sget-object v0, Lorg/bouncycastle/jce/provider/tsu;->lCa:Lorg/bouncycastle/jce/provider/igw;
 
     invoke-virtual {p3}, Lorg/bouncycastle/jcajce/wtn;->getCertStores()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {p3}, Lorg/bouncycastle/jcajce/wtn;->kj()Ljava/util/List;
+    invoke-virtual {p3}, Lorg/bouncycastle/jcajce/wtn;->pj()Ljava/util/List;
 
     move-result-object p3
 
@@ -1947,7 +1947,7 @@
 
     check-cast v3, Ljava/util/Set;
 
-    iput-object v3, v1, Lorg/bouncycastle/jce/provider/ywr;->iCa:Ljava/util/Set;
+    iput-object v3, v1, Lorg/bouncycastle/jce/provider/ywr;->LCa:Ljava/util/Set;
 
     goto :goto_0
 
@@ -1991,7 +1991,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    sget-object v3, Lorg/bouncycastle/jce/provider/tsu;->KBa:Ljava/lang/String;
+    sget-object v3, Lorg/bouncycastle/jce/provider/tsu;->mCa:Ljava/lang/String;
 
     invoke-static {p4, v3}, Lorg/bouncycastle/jce/provider/tsu;->zta(Ljava/security/cert/X509Extension;Ljava/lang/String;)Lorg/bouncycastle/asn1/vdb;
 
@@ -2003,7 +2003,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    invoke-virtual {v3}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {v3}, Lorg/bouncycastle/asn1/obl;->Fg()Ljava/util/Enumeration;
 
     move-result-object v3
 
@@ -2025,7 +2025,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {v5}, Lorg/bouncycastle/asn1/x509/irq;->ji()Lorg/bouncycastle/asn1/bvj;
+    invoke-virtual {v5}, Lorg/bouncycastle/asn1/x509/irq;->pi()Lorg/bouncycastle/asn1/bvj;
 
     move-result-object v6
 
@@ -2088,7 +2088,7 @@
 
     move-result-object p4
 
-    sget-object v0, Lorg/bouncycastle/jce/provider/tsu;->KBa:Ljava/lang/String;
+    sget-object v0, Lorg/bouncycastle/jce/provider/tsu;->mCa:Ljava/lang/String;
 
     invoke-interface {p4, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -2199,7 +2199,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p2}, Lorg/bouncycastle/jce/provider/tsu;->bio(Ljava/lang/Object;)Ljava/math/BigInteger;
+    invoke-static {p2}, Lorg/bouncycastle/jce/provider/tsu;->wtn(Ljava/lang/Object;)Ljava/math/BigInteger;
 
     move-result-object v0
 
@@ -2234,7 +2234,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p2}, Lorg/bouncycastle/jce/provider/qbh;->ssp(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
+    invoke-static {p2}, Lorg/bouncycastle/jce/provider/qbh;->kth(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
 
     move-result-object p2
 
@@ -2247,7 +2247,7 @@
     return-void
 
     :cond_2
-    invoke-static {p2}, Lorg/bouncycastle/jce/provider/qbh;->ssp(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
+    invoke-static {p2}, Lorg/bouncycastle/jce/provider/qbh;->kth(Ljava/lang/Object;)Lorg/bouncycastle/asn1/bvj/tsu;
 
     move-result-object v0
 
@@ -2264,7 +2264,7 @@
     return-void
 
     :cond_3
-    invoke-static {p2}, Lorg/bouncycastle/jce/provider/tsu;->bio(Ljava/lang/Object;)Ljava/math/BigInteger;
+    invoke-static {p2}, Lorg/bouncycastle/jce/provider/tsu;->wtn(Ljava/lang/Object;)Ljava/math/BigInteger;
 
     move-result-object p2
 
@@ -2526,13 +2526,13 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/oif;->Jh()Lorg/bouncycastle/asn1/x509/obl;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/oif;->Oh()Lorg/bouncycastle/asn1/x509/obl;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/oif;->Jh()Lorg/bouncycastle/asn1/x509/obl;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/oif;->Oh()Lorg/bouncycastle/asn1/x509/obl;
 
     move-result-object p0
 
@@ -2600,7 +2600,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/oif;->Kh()Lorg/bouncycastle/asn1/x509/bvj;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/oif;->Ph()Lorg/bouncycastle/asn1/x509/bvj;
 
     move-result-object p0
 

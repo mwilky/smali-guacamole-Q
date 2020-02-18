@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private Rya:I
+.field private Yta:[B
 
 .field private counter:I
 
-.field private uta:[B
+.field private tza:I
 
 
 # direct methods
@@ -31,25 +31,17 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/bvj;->uta:[B
+    iput-object p1, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Yta:[B
 
     iput p2, p0, Lorg/bouncycastle/crypto/wtn/bvj;->counter:I
 
-    iput p3, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Rya:I
+    iput p3, p0, Lorg/bouncycastle/crypto/wtn/bvj;->tza:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public ej()I
-    .locals 0
-
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->counter:I
-
-    return p0
-.end method
-
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -73,9 +65,9 @@
     return v1
 
     :cond_1
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->uta:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Yta:[B
 
-    iget-object p1, p1, Lorg/bouncycastle/crypto/wtn/bvj;->uta:[B
+    iget-object p1, p1, Lorg/bouncycastle/crypto/wtn/bvj;->Yta:[B
 
     invoke-static {p0, p1}, Lorg/bouncycastle/util/zta;->sis([B[B)Z
 
@@ -84,18 +76,10 @@
     return p0
 .end method
 
-.method public fj()I
-    .locals 0
-
-    iget p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Rya:I
-
-    return p0
-.end method
-
 .method public getSeed()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->uta:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Yta:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -109,13 +93,29 @@
 
     iget v0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->counter:I
 
-    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->uta:[B
+    iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->Yta:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->hashCode([B)I
 
     move-result p0
 
     xor-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public jj()I
+    .locals 0
+
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->counter:I
+
+    return p0
+.end method
+
+.method public kj()I
+    .locals 0
+
+    iget p0, p0, Lorg/bouncycastle/crypto/wtn/bvj;->tza:I
 
     return p0
 .end method

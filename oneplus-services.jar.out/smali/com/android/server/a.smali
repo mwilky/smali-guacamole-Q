@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onAlarm()V
-    .locals 2
+    .locals 4
 
     invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$000()Ljava/lang/Object;
 
@@ -46,23 +46,23 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/a;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$300(Lcom/android/server/OpPowerControllerService;)Z
+    const-wide/16 v2, 0x0
 
-    move-result v1
-
-    if-nez v1, :cond_0
+    invoke-static {v1, v2, v3}, Lcom/android/server/OpPowerControllerService;->access$102(Lcom/android/server/OpPowerControllerService;J)J
 
     iget-object v1, p0, Lcom/android/server/a;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$400(Lcom/android/server/OpPowerControllerService;)Z
+    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$200(Lcom/android/server/OpPowerControllerService;)Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
 
     iget-object p0, p0, Lcom/android/server/a;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->applyEarlyRestriction()V
+    invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->restrictNetwork()V
 
     :cond_0
     monitor-exit v0

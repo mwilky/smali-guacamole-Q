@@ -1166,7 +1166,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, p1}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->da(Ljava/lang/String;)Z
+    invoke-virtual {v1, p1}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->fa(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1511,7 +1511,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager;->currentSPI:Lcom/android/server/wm/OnePlusPerfManager$rtg;
 
-    invoke-virtual {p0}, Lcom/android/server/wm/OnePlusPerfManager$rtg;->Td()V
+    invoke-virtual {p0}, Lcom/android/server/wm/OnePlusPerfManager$rtg;->Yd()V
 
     monitor-exit v0
 
@@ -1580,7 +1580,7 @@
 
     iget-object v1, v1, Lcom/android/server/wm/OnePlusPerfManager$rtg;->Af:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->da(Ljava/lang/String;)Z
+    invoke-virtual {v2, v1}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->fa(Ljava/lang/String;)Z
 
     const-string v1, "OPPerf"
 
@@ -1604,7 +1604,7 @@
 
     iget-object p0, p0, Lcom/android/server/wm/OnePlusPerfManager;->currentSPI:Lcom/android/server/wm/OnePlusPerfManager$rtg;
 
-    invoke-virtual {p0}, Lcom/android/server/wm/OnePlusPerfManager$rtg;->Td()V
+    invoke-virtual {p0}, Lcom/android/server/wm/OnePlusPerfManager$rtg;->Yd()V
 
     monitor-exit v0
 
@@ -1804,7 +1804,7 @@
     :try_start_2
     iget-object p2, p0, Lcom/android/server/wm/OnePlusPerfManager;->mPerfBoost:Landroid/util/BoostFramework;
 
-    invoke-virtual {v1}, Lcom/android/server/wm/OnePlusPerfManager$sis;->Sd()[I
+    invoke-virtual {v1}, Lcom/android/server/wm/OnePlusPerfManager$sis;->Xd()[I
 
     move-result-object v1
 
@@ -1962,7 +1962,7 @@
     :try_start_6
     iget-object p2, p1, Lcom/android/server/wm/OnePlusPerfManager$rtg;->Af:Ljava/lang/String;
 
-    invoke-virtual {v1, p2}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->ea(Ljava/lang/String;)Z
+    invoke-virtual {v1, p2}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->ga(Ljava/lang/String;)Z
 
     move-result p2
 
@@ -4704,7 +4704,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1, p1}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->ea(Ljava/lang/String;)Z
+    invoke-virtual {v1, p1}, Lcom/android/server/wm/OnePlusPerfManager$ssp;->ga(Ljava/lang/String;)Z
 
     move-result v1
 

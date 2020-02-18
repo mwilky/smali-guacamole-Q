@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/policy/kth;->Dc()V
+    value = Lcom/android/server/policy/kth;->Ic()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -4,27 +4,27 @@
 
 
 # static fields
-.field static final HU:[I
+.field static final iV:[I
 
-.field static final IU:[I
+.field static final jV:[I
 
-.field static final JU:[I
+.field static final kV:[I
 
-.field static final KU:[I
+.field static final lV:[I
 
-.field static final LU:[I
+.field static final mV:[I
 
-.field static final MU:[I
+.field static final nV:[I
 
-.field static final NU:[I
+.field static final oV:[I
 
-.field static final PU:[I
+.field static final pV:[I
 
-.field static final QU:[I
+.field static final qV:[I
 
-.field static final RU:[I
+.field static final rV:[I
 
-.field static final SU:[I
+.field static final sV:[I
 
 
 # direct methods
@@ -37,7 +37,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/oneplus/android/server/you;->HU:[I
+    sput-object v0, Lcom/oneplus/android/server/you;->iV:[I
 
     const/4 v0, 0x5
 
@@ -45,7 +45,7 @@
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/oneplus/android/server/you;->IU:[I
+    sput-object v0, Lcom/oneplus/android/server/you;->jV:[I
 
     const/16 v0, 0xbd
 
@@ -53,7 +53,7 @@
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/oneplus/android/server/you;->JU:[I
+    sput-object v0, Lcom/oneplus/android/server/you;->kV:[I
 
     const/4 v0, 0x1
 
@@ -65,7 +65,7 @@
 
     aput v3, v1, v2
 
-    sput-object v1, Lcom/oneplus/android/server/you;->KU:[I
+    sput-object v1, Lcom/oneplus/android/server/you;->lV:[I
 
     const/16 v1, 0x30
 
@@ -73,7 +73,7 @@
 
     fill-array-data v1, :array_3
 
-    sput-object v1, Lcom/oneplus/android/server/you;->LU:[I
+    sput-object v1, Lcom/oneplus/android/server/you;->mV:[I
 
     const/16 v1, 0x14
 
@@ -81,7 +81,7 @@
 
     fill-array-data v1, :array_4
 
-    sput-object v1, Lcom/oneplus/android/server/you;->MU:[I
+    sput-object v1, Lcom/oneplus/android/server/you;->nV:[I
 
     const/16 v1, 0x9a
 
@@ -89,7 +89,7 @@
 
     fill-array-data v1, :array_5
 
-    sput-object v1, Lcom/oneplus/android/server/you;->NU:[I
+    sput-object v1, Lcom/oneplus/android/server/you;->oV:[I
 
     const/4 v1, 0x3
 
@@ -97,7 +97,7 @@
 
     fill-array-data v1, :array_6
 
-    sput-object v1, Lcom/oneplus/android/server/you;->PU:[I
+    sput-object v1, Lcom/oneplus/android/server/you;->pV:[I
 
     new-array v0, v0, [I
 
@@ -105,7 +105,7 @@
 
     aput v1, v0, v2
 
-    sput-object v0, Lcom/oneplus/android/server/you;->QU:[I
+    sput-object v0, Lcom/oneplus/android/server/you;->qV:[I
 
     const/16 v0, 0xb
 
@@ -113,7 +113,7 @@
 
     fill-array-data v0, :array_7
 
-    sput-object v0, Lcom/oneplus/android/server/you;->RU:[I
+    sput-object v0, Lcom/oneplus/android/server/you;->rV:[I
 
     const/4 v0, 0x4
 
@@ -121,7 +121,7 @@
 
     fill-array-data v0, :array_8
 
-    sput-object v0, Lcom/oneplus/android/server/you;->SU:[I
+    sput-object v0, Lcom/oneplus/android/server/you;->sV:[I
 
     return-void
 
@@ -864,7 +864,7 @@
     move v2, v1
 
     :goto_0
-    sget-object v3, Lcom/oneplus/android/server/you;->MU:[I
+    sget-object v3, Lcom/oneplus/android/server/you;->kV:[I
 
     array-length v4, v3
 
@@ -878,7 +878,7 @@
 
     move-result-object v2
 
-    const-string v3, "CM-"
+    const-string v3, "AMAZON FIRE"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -890,7 +890,7 @@
 
     move-result-object v2
 
-    const-string v3, "H.EAR"
+    const-string v3, "BOSE "
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -902,7 +902,7 @@
 
     move-result-object v2
 
-    const-string v3, "HY SPEAKER"
+    const-string v3, "CODE "
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -914,7 +914,7 @@
 
     move-result-object v2
 
-    const-string v3, "MHC-"
+    const-string v3, "CYBERJACK"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -926,7 +926,7 @@
 
     move-result-object v2
 
-    const-string v3, "RB-"
+    const-string v3, "LG "
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -938,7 +938,7 @@
 
     move-result-object v2
 
-    const-string v3, "SC-"
+    const-string v3, "LETV"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -950,7 +950,91 @@
 
     move-result-object v2
 
-    const-string v3, "SONY"
+    const-string v3, "JBL"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "ISHOWER"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "MOTO "
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "O2SOOL"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "ONKYO"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "PEBBLE"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "SOUNDTOUCH"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "VIZIO "
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -976,7 +1060,7 @@
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_3
     :goto_2
@@ -987,327 +1071,225 @@
     return v0
 .end method
 
-.method private static dma(ILjava/lang/String;)Z
+.method private static cjf(ILjava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    sget-object v2, Lcom/oneplus/android/server/you;->sV:[I
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_3
+
+    aget v3, v2, v1
+
+    if-ne p0, v3, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "BMW"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "CAR "
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "HONDA"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "SUZUKI"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    aget v2, v2, v1
+
+    if-ge p0, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return v0
+.end method
+
+.method public static cno(ILjava/lang/String;)Z
     .locals 5
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    move v2, v1
-
     :goto_0
-    sget-object v3, Lcom/oneplus/android/server/you;->IU:[I
-
-    array-length v4, v3
-
-    if-ge v1, v4, :cond_3
-
-    aget v4, v3, v1
-
-    if-ne p0, v4, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "PARROT ZIK"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    aget v3, v3, v1
-
-    if-ge p0, v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_2
-    move v0, v2
-
-    :goto_3
-    return v0
-.end method
-
-.method private static gwm(ILjava/lang/String;)Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    sget-object v2, Lcom/oneplus/android/server/you;->PU:[I
+    sget-object v2, Lcom/oneplus/android/server/you;->iV:[I
 
     array-length v3, v2
 
-    if-ge v1, v3, :cond_3
+    const/4 v4, 0x1
 
-    aget v3, v2, v1
+    if-ge v1, v3, :cond_1
 
-    if-ne p0, v3, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "CRETA"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "ELANTRA"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "HYUNDAI"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "I20"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "KIA "
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "SPORTAGE"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "TUCSON"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
     aget v2, v2, v1
 
-    if-ge p0, v2, :cond_2
+    if-ne p0, v2, :cond_0
 
-    goto :goto_1
+    return v4
 
-    :cond_2
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_3
-    :goto_1
-    return v0
-.end method
-
-.method private static ibl(ILjava/lang/String;)Z
-    .locals 4
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    sget-object v2, Lcom/oneplus/android/server/you;->NU:[I
-
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_3
-
-    aget v3, v2, v1
-
-    if-ne p0, v3, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "CARPLAY"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "CRETA"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "ELANTRA"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "I20"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "KIA "
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "SPORTAGE"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "TUCSON"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "VERN"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_1
-
     :cond_1
-    aget v2, v2, v1
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->oif(ILjava/lang/String;)Z
 
-    if-ge p0, v2, :cond_2
+    move-result v1
 
-    goto :goto_1
+    if-eqz v1, :cond_2
+
+    return v4
 
     :cond_2
-    add-int/lit8 v1, v1, 0x1
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->bvj(ILjava/lang/String;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v4
 
     :cond_3
-    :goto_1
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->ibl(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    return v4
+
+    :cond_4
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->gwm(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    return v4
+
+    :cond_5
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->ugm(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    return v4
+
+    :cond_6
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->vdb(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    return v4
+
+    :cond_7
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->zgw(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    return v4
+
+    :cond_8
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->obl(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    return v4
+
+    :cond_9
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->oxb(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    return v4
+
+    :cond_a
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->cjf(ILjava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_b
+
+    return v4
+
+    :cond_b
+    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->ear(ILjava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_c
+
+    return v4
+
+    :cond_c
     return v0
 .end method
 
-.method private static obl(ILjava/lang/String;)Z
+.method private static ear(ILjava/lang/String;)Z
     .locals 2
 
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -2092,7 +2074,7 @@
     return v0
 .end method
 
-.method private static oif(ILjava/lang/String;)Z
+.method private static gwm(ILjava/lang/String;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -2102,7 +2084,7 @@
     move v2, v1
 
     :goto_0
-    sget-object v3, Lcom/oneplus/android/server/you;->LU:[I
+    sget-object v3, Lcom/oneplus/android/server/you;->mV:[I
 
     array-length v4, v3
 
@@ -2249,7 +2231,7 @@
     return v0
 .end method
 
-.method private static qbh(ILjava/lang/String;)Z
+.method private static ibl(ILjava/lang/String;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -2259,7 +2241,7 @@
     move v2, v1
 
     :goto_0
-    sget-object v3, Lcom/oneplus/android/server/you;->KU:[I
+    sget-object v3, Lcom/oneplus/android/server/you;->lV:[I
 
     array-length v4, v3
 
@@ -2309,137 +2291,7 @@
     return v0
 .end method
 
-.method public static ssp(ILjava/lang/String;)Z
-    .locals 5
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    sget-object v2, Lcom/oneplus/android/server/you;->HU:[I
-
-    array-length v3, v2
-
-    const/4 v4, 0x1
-
-    if-ge v1, v3, :cond_1
-
-    aget v2, v2, v1
-
-    if-ne p0, v2, :cond_0
-
-    return v4
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->dma(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v4
-
-    :cond_2
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->ywr(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v4
-
-    :cond_3
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->qbh(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return v4
-
-    :cond_4
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->oif(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    return v4
-
-    :cond_5
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->bvj(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return v4
-
-    :cond_6
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->ibl(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    return v4
-
-    :cond_7
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->gwm(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    return v4
-
-    :cond_8
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->ugm(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    return v4
-
-    :cond_9
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->vdb(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    return v4
-
-    :cond_a
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->zgw(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    return v4
-
-    :cond_b
-    invoke-static {p0, p1}, Lcom/oneplus/android/server/you;->obl(ILjava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_c
-
-    return v4
-
-    :cond_c
-    return v0
-.end method
-
-.method private static ugm(ILjava/lang/String;)Z
+.method private static obl(ILjava/lang/String;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -2449,7 +2301,7 @@
     move v2, v1
 
     :goto_0
-    sget-object v3, Lcom/oneplus/android/server/you;->QU:[I
+    sget-object v3, Lcom/oneplus/android/server/you;->qV:[I
 
     array-length v4, v3
 
@@ -2548,7 +2400,67 @@
     return v0
 .end method
 
-.method private static vdb(ILjava/lang/String;)Z
+.method private static oif(ILjava/lang/String;)Z
+    .locals 5
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    move v2, v1
+
+    :goto_0
+    sget-object v3, Lcom/oneplus/android/server/you;->jV:[I
+
+    array-length v4, v3
+
+    if-ge v1, v4, :cond_3
+
+    aget v4, v3, v1
+
+    if-ne p0, v4, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "PARROT ZIK"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    const/4 v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    aget v3, v3, v1
+
+    if-ge p0, v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_2
+    move v0, v2
+
+    :goto_3
+    return v0
+.end method
+
+.method private static oxb(ILjava/lang/String;)Z
     .locals 4
 
     const/4 v0, 0x0
@@ -2556,7 +2468,7 @@
     move v1, v0
 
     :goto_0
-    sget-object v2, Lcom/oneplus/android/server/you;->RU:[I
+    sget-object v2, Lcom/oneplus/android/server/you;->rV:[I
 
     array-length v3, v2
 
@@ -2732,7 +2644,7 @@
     return v0
 .end method
 
-.method private static ywr(ILjava/lang/String;)Z
+.method private static ugm(ILjava/lang/String;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -2742,7 +2654,7 @@
     move v2, v1
 
     :goto_0
-    sget-object v3, Lcom/oneplus/android/server/you;->JU:[I
+    sget-object v3, Lcom/oneplus/android/server/you;->nV:[I
 
     array-length v4, v3
 
@@ -2756,7 +2668,7 @@
 
     move-result-object v2
 
-    const-string v3, "AMAZON FIRE"
+    const-string v3, "CM-"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2768,7 +2680,7 @@
 
     move-result-object v2
 
-    const-string v3, "BOSE "
+    const-string v3, "H.EAR"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2780,7 +2692,7 @@
 
     move-result-object v2
 
-    const-string v3, "CODE "
+    const-string v3, "HY SPEAKER"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2792,7 +2704,7 @@
 
     move-result-object v2
 
-    const-string v3, "CYBERJACK"
+    const-string v3, "MHC-"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2804,7 +2716,7 @@
 
     move-result-object v2
 
-    const-string v3, "LG "
+    const-string v3, "RB-"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2816,7 +2728,7 @@
 
     move-result-object v2
 
-    const-string v3, "LETV"
+    const-string v3, "SC-"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2828,91 +2740,7 @@
 
     move-result-object v2
 
-    const-string v3, "JBL"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "ISHOWER"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "MOTO "
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "O2SOOL"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "ONKYO"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "PEBBLE"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "SOUNDTOUCH"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "VIZIO "
+    const-string v3, "SONY"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2938,7 +2766,7 @@
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_3
     :goto_2
@@ -2949,7 +2777,7 @@
     return v0
 .end method
 
-.method private static zgw(ILjava/lang/String;)Z
+.method private static vdb(ILjava/lang/String;)Z
     .locals 4
 
     const/4 v0, 0x0
@@ -2957,7 +2785,7 @@
     move v1, v0
 
     :goto_0
-    sget-object v2, Lcom/oneplus/android/server/you;->SU:[I
+    sget-object v2, Lcom/oneplus/android/server/you;->oV:[I
 
     array-length v3, v2
 
@@ -2971,7 +2799,7 @@
 
     move-result-object v2
 
-    const-string v3, "BMW"
+    const-string v3, "CARPLAY"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2983,7 +2811,7 @@
 
     move-result-object v2
 
-    const-string v3, "CAR "
+    const-string v3, "CRETA"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -2995,7 +2823,7 @@
 
     move-result-object v2
 
-    const-string v3, "HONDA"
+    const-string v3, "ELANTRA"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -3007,7 +2835,179 @@
 
     move-result-object v2
 
-    const-string v3, "SUZUKI"
+    const-string v3, "I20"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "KIA "
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "SPORTAGE"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "TUCSON"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "VERN"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    aget v2, v2, v1
+
+    if-ge p0, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return v0
+.end method
+
+.method private static zgw(ILjava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    sget-object v2, Lcom/oneplus/android/server/you;->pV:[I
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_3
+
+    aget v3, v2, v1
+
+    if-ne p0, v3, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "CRETA"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "ELANTRA"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "HYUNDAI"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "I20"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "KIA "
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "SPORTAGE"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "TUCSON"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

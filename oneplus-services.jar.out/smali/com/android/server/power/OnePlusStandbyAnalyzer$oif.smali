@@ -73,7 +73,7 @@
 
 
 # virtual methods
-.method public Jc()Ljava/lang/String;
+.method public Oc()Ljava/lang/String;
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -125,7 +125,7 @@
     return-object p0
 .end method
 
-.method public O(Ljava/lang/String;)Ljava/lang/String;
+.method public Q(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     iput-object p1, p0, Lcom/android/server/power/OnePlusStandbyAnalyzer$oif;->mPkg:Ljava/lang/String;

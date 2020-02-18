@@ -4,17 +4,17 @@
 
 
 # static fields
-.field private static RK:Ljava/lang/String; = "/sys/devices/download_info/upgrade_download_time1"
-
-.field private static SK:Ljava/lang/String; = "/sys/devices/download_info/intranet"
-
 .field private static final TAG:Ljava/lang/String; = "SecrecyService.Utils"
 
-.field private static TK:Ljava/lang/String; = "[1-9][0-9]{3}/[0-9]{2}/[0-9]{2}"
+.field private static sL:Ljava/lang/String; = "/sys/devices/download_info/upgrade_download_time1"
 
-.field private static VK:Ljava/lang/String; = "[0-9]{2}:[0-9]{2}:[0-9]{2}"
+.field private static tL:Ljava/lang/String; = "/sys/devices/download_info/intranet"
 
-.field private static final WK:I = 0x1
+.field private static uL:Ljava/lang/String; = "[1-9][0-9]{3}/[0-9]{2}/[0-9]{2}"
+
+.field private static vL:Ljava/lang/String; = "[0-9]{2}:[0-9]{2}:[0-9]{2}"
+
+.field private static final wL:I = 0x1
 
 
 # direct methods
@@ -32,30 +32,30 @@
     return-void
 .end method
 
-.method public static Bd()Z
+.method public static Gd()Z
     .locals 1
 
-    invoke-static {}, Lcom/android/server/secrecy/zta/zta/sis;->Bd()Z
+    invoke-static {}, Lcom/android/server/secrecy/zta/zta/sis;->Gd()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static Cd()Ljava/lang/String;
+.method public static Hd()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcom/android/server/secrecy/zta/zta/sis;->Ad()Ljava/lang/String;
+    invoke-static {}, Lcom/android/server/secrecy/zta/zta/sis;->Fd()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static Z(Ljava/lang/String;)Ljava/lang/String;
+.method public static ba(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->TK:Ljava/lang/String;
+    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->uL:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -102,10 +102,10 @@
     return-object v0
 .end method
 
-.method public static aa(Ljava/lang/String;)Ljava/lang/String;
+.method public static ca(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->VK:Ljava/lang/String;
+    sget-object v0, Lcom/android/server/secrecy/zta/zta/tsu;->vL:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
@@ -152,7 +152,7 @@
     return-object v0
 .end method
 
-.method public static ba(Ljava/lang/String;)Ljava/lang/String;
+.method public static da(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
     const-string v0, "readStringFromFile io close exception :"
@@ -356,38 +356,7 @@
     throw p0
 .end method
 
-.method private static do()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "none"
-
-    return-object v0
-.end method
-
-.method private static eo()Z
-    .locals 2
-
-    sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
-
-    const-string v1, "qcom"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static gck(Ljava/lang/String;Ljava/lang/String;)J
+.method public static dma(Ljava/lang/String;Ljava/lang/String;)J
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -460,4 +429,35 @@
 
     :goto_0
     return-wide v0
+.end method
+
+.method private static ro()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "none"
+
+    return-object v0
+.end method
+
+.method private static so()Z
+    .locals 2
+
+    sget-object v0, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
+
+    const-string v1, "qcom"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

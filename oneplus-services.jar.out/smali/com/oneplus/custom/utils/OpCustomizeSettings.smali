@@ -14,11 +14,11 @@
 
 
 # static fields
-.field private static final Nfa:Ljava/lang/String;
-
-.field private static Ofa:Lcom/oneplus/custom/utils/OpCustomizeSettings; = null
-
 .field protected static final TAG:Ljava/lang/String; = "OpCustomizeSettings"
+
+.field private static final oga:Ljava/lang/String;
+
+.field private static pga:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Nfa:Ljava/lang/String;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->oga:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,10 +44,24 @@
     return-void
 .end method
 
+.method public static Af()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+    .locals 1
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->zf()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method private static getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
     .locals 2
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Ofa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->pga:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     if-nez v0, :cond_4
 
@@ -59,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Nfa:Ljava/lang/String;
+    sget-object v1, Lcom/oneplus/custom/utils/OpCustomizeSettings;->oga:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,7 +85,7 @@
 
     invoke-static {v1, v0}, Lcom/oneplus/custom/utils/zta;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Nfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->oga:Ljava/lang/String;
 
     const-string v1, "16859"
 
@@ -81,7 +95,7 @@
 
     if-nez v0, :cond_3
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Nfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->oga:Ljava/lang/String;
 
     const-string v1, "17801"
 
@@ -94,7 +108,7 @@
     goto :goto_1
 
     :cond_0
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Nfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->oga:Ljava/lang/String;
 
     const-string v1, "15801"
 
@@ -104,7 +118,7 @@
 
     if-nez v0, :cond_2
 
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Nfa:Ljava/lang/String;
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->oga:Ljava/lang/String;
 
     const-string v1, "15811"
 
@@ -138,38 +152,10 @@
     invoke-direct {v0}, Lcom/oneplus/custom/utils/you;-><init>()V
 
     :goto_2
-    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Ofa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
+    sput-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->pga:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     :cond_4
-    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->Ofa:Lcom/oneplus/custom/utils/OpCustomizeSettings;
-
-    return-object v0
-.end method
-
-.method public static pf()J
-    .locals 2
-
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->rf()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static qf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
-    .locals 1
-
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->sf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
-
-    move-result-object v0
+    sget-object v0, Lcom/oneplus/custom/utils/OpCustomizeSettings;->pga:Lcom/oneplus/custom/utils/OpCustomizeSettings;
 
     return-object v0
 .end method
@@ -188,7 +174,35 @@
     return-object p0
 .end method
 
-.method public static tf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
+.method public static uf()J
+    .locals 2
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->wf()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public static vf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    .locals 1
+
+    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->xf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static yf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
     .locals 1
 
     invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
@@ -196,20 +210,6 @@
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getCustomization()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static vf()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
-    .locals 1
-
-    invoke-static {}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->getInstance()Lcom/oneplus/custom/utils/OpCustomizeSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oneplus/custom/utils/OpCustomizeSettings;->uf()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
 
     move-result-object v0
 
@@ -226,22 +226,6 @@
     return-object p0
 .end method
 
-.method protected rf()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method protected sf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
-    .locals 0
-
-    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->NONE:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
-
-    return-object p0
-.end method
-
 .method protected tsu(Landroid/content/Context;)[B
     .locals 0
 
@@ -250,7 +234,23 @@
     return-object p0
 .end method
 
-.method protected uf()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
+.method protected wf()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method protected xf()Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+    .locals 0
+
+    sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;->NONE:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_BACK_COVER_TYPE;
+
+    return-object p0
+.end method
+
+.method protected zf()Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;
     .locals 0
 
     sget-object p0, Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;->DEFAULT:Lcom/oneplus/custom/utils/OpCustomizeSettings$SW_TYPE;

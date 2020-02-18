@@ -259,7 +259,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Gg()Z
 
     move-result p1
 
@@ -293,7 +293,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Gg()Z
 
     move-result v0
 
@@ -369,7 +369,7 @@
 
 
 # virtual methods
-.method public Ag()Ljava/util/Enumeration;
+.method public Fg()Ljava/util/Enumeration;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/obl;->seq:Ljava/util/Vector;
@@ -398,7 +398,7 @@
 .method public hashCode()I
     .locals 3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Fg()Ljava/util/Enumeration;
 
     move-result-object v0
 
@@ -461,7 +461,17 @@
     return-object v0
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
+.method public parser()Lorg/bouncycastle/asn1/oxb;
+    .locals 1
+
+    new-instance v0, Lorg/bouncycastle/asn1/zgw;
+
+    invoke-direct {v0, p0, p0}, Lorg/bouncycastle/asn1/zgw;-><init>(Lorg/bouncycastle/asn1/obl;Lorg/bouncycastle/asn1/obl;)V
+
+    return-object v0
+.end method
+
+.method rg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/G;
@@ -475,7 +485,7 @@
     return-object v0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method sg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/X;
@@ -485,16 +495,6 @@
     iget-object p0, p0, Lorg/bouncycastle/asn1/obl;->seq:Ljava/util/Vector;
 
     iput-object p0, v0, Lorg/bouncycastle/asn1/obl;->seq:Ljava/util/Vector;
-
-    return-object v0
-.end method
-
-.method public parser()Lorg/bouncycastle/asn1/oxb;
-    .locals 1
-
-    new-instance v0, Lorg/bouncycastle/asn1/zgw;
-
-    invoke-direct {v0, p0, p0}, Lorg/bouncycastle/asn1/zgw;-><init>(Lorg/bouncycastle/asn1/obl;Lorg/bouncycastle/asn1/obl;)V
 
     return-object v0
 .end method
@@ -590,11 +590,11 @@
     return v1
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/obl;->Fg()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/obl;->Fg()Ljava/util/Enumeration;
 
     move-result-object p1
 

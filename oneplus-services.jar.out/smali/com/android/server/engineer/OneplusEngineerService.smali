@@ -153,12 +153,12 @@
 
     iput-object p1, p0, Lcom/android/server/engineer/OneplusEngineerService;->dh:Lcom/android/server/engineer/you;
 
-    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Dl()V
+    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Il()V
 
     return-void
 .end method
 
-.method private Al()V
+.method private Fl()V
     .locals 0
 
     const/16 p0, 0x65
@@ -169,12 +169,12 @@
 
     invoke-static {p0}, Lcom/android/server/engineer/qbh;->o(I)I
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->yc()I
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Dc()I
 
     return-void
 .end method
 
-.method private Bl()Ljava/lang/String;
+.method private Gl()Ljava/lang/String;
     .locals 0
 
     const p0, 0xf4279
@@ -190,12 +190,12 @@
     return-object p0
 .end method
 
-.method private Cl()Ljava/lang/String;
+.method private Hl()Ljava/lang/String;
     .locals 0
 
     const-string p0, "/mnt/vendor/persist/engineermode/oem_serial_no"
 
-    invoke-static {p0}, Lcom/android/server/engineer/qbh;->E(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/android/server/engineer/qbh;->G(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -209,7 +209,7 @@
     return-object p0
 .end method
 
-.method private final Dl()V
+.method private final Il()V
     .locals 3
 
     new-instance p0, Ljava/io/File;
@@ -270,7 +270,7 @@
     return-void
 .end method
 
-.method private El()V
+.method private Jl()V
     .locals 4
 
     const-string p0, "OneplusEngineerService"
@@ -596,7 +596,7 @@
 .method static synthetic ssp(Lcom/android/server/engineer/OneplusEngineerService;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->El()V
+    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Jl()V
 
     return-void
 .end method
@@ -681,7 +681,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/engineer/qbh;->z(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/android/server/engineer/qbh;->B(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -766,7 +766,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/engineer/qbh;->z(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/android/server/engineer/qbh;->B(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -952,7 +952,7 @@
 .method la()Z
     .locals 4
 
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result v0
 
@@ -971,7 +971,7 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result v2
 
@@ -1028,7 +1028,7 @@
 
     invoke-virtual {v0, v2}, Landroid/app/NotificationManager;->cancel(I)V
 
-    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Al()V
+    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Fl()V
 
     return v1
 
@@ -1043,7 +1043,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/engineer/you;->H(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/engineer/you;->J(Ljava/lang/String;)Z
 
     move-result p0
 
@@ -1077,7 +1077,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/android/server/engineer/bvj;->Cc()V
+    invoke-virtual {p1}, Lcom/android/server/engineer/bvj;->Hc()V
 
     :cond_0
     new-instance p1, Landroid/content/IntentFilter;
@@ -1102,13 +1102,13 @@
 
     invoke-virtual {v0, v1, p1, v3, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result p1
 
@@ -1218,7 +1218,7 @@
 
     :cond_3
     :goto_0
-    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Bl()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Gl()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1272,7 +1272,7 @@
 
     :cond_4
     :goto_1
-    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Cl()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/engineer/OneplusEngineerService;->Hl()Ljava/lang/String;
 
     move-result-object p0
 
@@ -1431,7 +1431,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/engineer/you;->I(Ljava/lang/String;)Z
+    invoke-virtual {p0, p1}, Lcom/android/server/engineer/you;->K(Ljava/lang/String;)Z
 
     move-result p0
 

@@ -35,7 +35,7 @@
     return-object p0
 .end method
 
-.method public hj()[B
+.method public mj()[B
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/crypto/wtn/oxb;->shared:[B

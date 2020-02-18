@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final lCa:Lorg/bouncycastle/jce/provider/bvj;
+.field static final OCa:Lorg/bouncycastle/jce/provider/bvj;
 
 
 # instance fields
-.field private kCa:I
+.field private NCa:I
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {v0, v1}, Lorg/bouncycastle/jce/provider/bvj;-><init>(I)V
 
-    sput-object v0, Lorg/bouncycastle/jce/provider/bvj;->lCa:Lorg/bouncycastle/jce/provider/bvj;
+    sput-object v0, Lorg/bouncycastle/jce/provider/bvj;->OCa:Lorg/bouncycastle/jce/provider/bvj;
 
     return-void
 .end method
@@ -41,7 +41,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iput p1, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
     return-void
 .end method
@@ -55,53 +55,21 @@
 
     move-result p1
 
-    iput p1, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iput p1, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method Lh()I
-    .locals 0
-
-    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
-
-    return p0
-.end method
-
-.method sis(Lorg/bouncycastle/jce/provider/bvj;)Lorg/bouncycastle/jce/provider/bvj;
-    .locals 2
-
-    new-instance v0, Lorg/bouncycastle/jce/provider/bvj;
-
-    invoke-direct {v0}, Lorg/bouncycastle/jce/provider/bvj;-><init>()V
-
-    new-instance v1, Lorg/bouncycastle/jce/provider/bvj;
-
-    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
-
-    invoke-virtual {p1}, Lorg/bouncycastle/jce/provider/bvj;->Lh()I
-
-    move-result p1
-
-    and-int/2addr p0, p1
-
-    invoke-direct {v1, p0}, Lorg/bouncycastle/jce/provider/bvj;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lorg/bouncycastle/jce/provider/bvj;->zta(Lorg/bouncycastle/jce/provider/bvj;)V
-
-    return-object v0
-.end method
-
-.method xj()Z
+.method Cj()Z
     .locals 1
 
-    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
-    sget-object v0, Lorg/bouncycastle/jce/provider/bvj;->lCa:Lorg/bouncycastle/jce/provider/bvj;
+    sget-object v0, Lorg/bouncycastle/jce/provider/bvj;->OCa:Lorg/bouncycastle/jce/provider/bvj;
 
-    iget v0, v0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iget v0, v0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
     if-ne p0, v0, :cond_0
 
@@ -116,16 +84,48 @@
     return p0
 .end method
 
-.method you(Lorg/bouncycastle/jce/provider/bvj;)Z
-    .locals 1
+.method Qh()I
+    .locals 0
 
-    iget v0, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
-    invoke-virtual {p1}, Lorg/bouncycastle/jce/provider/bvj;->Lh()I
+    return p0
+.end method
+
+.method sis(Lorg/bouncycastle/jce/provider/bvj;)Lorg/bouncycastle/jce/provider/bvj;
+    .locals 2
+
+    new-instance v0, Lorg/bouncycastle/jce/provider/bvj;
+
+    invoke-direct {v0}, Lorg/bouncycastle/jce/provider/bvj;-><init>()V
+
+    new-instance v1, Lorg/bouncycastle/jce/provider/bvj;
+
+    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
+
+    invoke-virtual {p1}, Lorg/bouncycastle/jce/provider/bvj;->Qh()I
 
     move-result p1
 
-    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    and-int/2addr p0, p1
+
+    invoke-direct {v1, p0}, Lorg/bouncycastle/jce/provider/bvj;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lorg/bouncycastle/jce/provider/bvj;->zta(Lorg/bouncycastle/jce/provider/bvj;)V
+
+    return-object v0
+.end method
+
+.method you(Lorg/bouncycastle/jce/provider/bvj;)Z
+    .locals 1
+
+    iget v0, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
+
+    invoke-virtual {p1}, Lorg/bouncycastle/jce/provider/bvj;->Qh()I
+
+    move-result p1
+
+    iget p0, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
     xor-int/2addr p0, p1
 
@@ -147,15 +147,15 @@
 .method zta(Lorg/bouncycastle/jce/provider/bvj;)V
     .locals 1
 
-    iget v0, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iget v0, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
-    invoke-virtual {p1}, Lorg/bouncycastle/jce/provider/bvj;->Lh()I
+    invoke-virtual {p1}, Lorg/bouncycastle/jce/provider/bvj;->Qh()I
 
     move-result p1
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lorg/bouncycastle/jce/provider/bvj;->kCa:I
+    iput p1, p0, Lorg/bouncycastle/jce/provider/bvj;->NCa:I
 
     return-void
 .end method

@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field Joa:Lorg/bouncycastle/asn1/x509/zta;
+.field lpa:Lorg/bouncycastle/asn1/x509/zta;
 
-.field Tpa:Lorg/bouncycastle/asn1/x509/ssp;
+.field vqa:Lorg/bouncycastle/asn1/x509/ssp;
 
-.field Upa:Lorg/bouncycastle/asn1/n;
+.field wqa:Lorg/bouncycastle/asn1/n;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/rtg;->Tpa:Lorg/bouncycastle/asn1/x509/ssp;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/rtg;->vqa:Lorg/bouncycastle/asn1/x509/ssp;
 
     const/4 v0, 0x1
 
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/rtg;->Joa:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object v0, p0, Lorg/bouncycastle/asn1/x509/rtg;->lpa:Lorg/bouncycastle/asn1/x509/zta;
 
     const/4 v0, 0x2
 
@@ -59,7 +59,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/rtg;->Upa:Lorg/bouncycastle/asn1/n;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/rtg;->wqa:Lorg/bouncycastle/asn1/n;
 
     return-void
 
@@ -94,11 +94,11 @@
 
     invoke-direct {p0}, Lorg/bouncycastle/asn1/oif;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/rtg;->Tpa:Lorg/bouncycastle/asn1/x509/ssp;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/x509/rtg;->vqa:Lorg/bouncycastle/asn1/x509/ssp;
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/x509/rtg;->Joa:Lorg/bouncycastle/asn1/x509/zta;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/x509/rtg;->lpa:Lorg/bouncycastle/asn1/x509/zta;
 
-    iput-object p3, p0, Lorg/bouncycastle/asn1/x509/rtg;->Upa:Lorg/bouncycastle/asn1/n;
+    iput-object p3, p0, Lorg/bouncycastle/asn1/x509/rtg;->wqa:Lorg/bouncycastle/asn1/n;
 
     return-void
 .end method
@@ -135,10 +135,26 @@
 
 
 # virtual methods
-.method public Ig()Lorg/bouncycastle/asn1/x509/zta;
+.method public Dh()Lorg/bouncycastle/asn1/x509/ssp;
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->Joa:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->vqa:Lorg/bouncycastle/asn1/x509/ssp;
+
+    return-object p0
+.end method
+
+.method public Eh()Lorg/bouncycastle/asn1/n;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->wqa:Lorg/bouncycastle/asn1/n;
+
+    return-object p0
+.end method
+
+.method public Ng()Lorg/bouncycastle/asn1/x509/zta;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->lpa:Lorg/bouncycastle/asn1/x509/zta;
 
     return-object p0
 .end method
@@ -150,37 +166,21 @@
 
     invoke-direct {v0}, Lorg/bouncycastle/asn1/cno;-><init>()V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/rtg;->Tpa:Lorg/bouncycastle/asn1/x509/ssp;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/rtg;->vqa:Lorg/bouncycastle/asn1/x509/ssp;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/rtg;->Joa:Lorg/bouncycastle/asn1/x509/zta;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/x509/rtg;->lpa:Lorg/bouncycastle/asn1/x509/zta;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->Upa:Lorg/bouncycastle/asn1/n;
+    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->wqa:Lorg/bouncycastle/asn1/n;
 
     invoke-virtual {v0, p0}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
     new-instance p0, Lorg/bouncycastle/asn1/G;
 
     invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/G;-><init>(Lorg/bouncycastle/asn1/cno;)V
-
-    return-object p0
-.end method
-
-.method public yh()Lorg/bouncycastle/asn1/x509/ssp;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->Tpa:Lorg/bouncycastle/asn1/x509/ssp;
-
-    return-object p0
-.end method
-
-.method public zh()Lorg/bouncycastle/asn1/n;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/x509/rtg;->Upa:Lorg/bouncycastle/asn1/n;
 
     return-object p0
 .end method

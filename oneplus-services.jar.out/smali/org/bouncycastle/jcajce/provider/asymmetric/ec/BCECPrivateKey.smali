@@ -164,11 +164,11 @@
 
     move-result-object p5
 
-    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->zi()Ljava/math/BigInteger;
+    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->Ei()Ljava/math/BigInteger;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->yi()Ljava/math/BigInteger;
+    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->Di()Ljava/math/BigInteger;
 
     move-result-object p1
 
@@ -243,11 +243,11 @@
 
     move-result-object p5
 
-    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->zi()Ljava/math/BigInteger;
+    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->Ei()Ljava/math/BigInteger;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->yi()Ljava/math/BigInteger;
+    invoke-virtual {p1}, Lorg/bouncycastle/crypto/wtn/ibl;->Di()Ljava/math/BigInteger;
 
     move-result-object p1
 
@@ -653,7 +653,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/c;->dh()Lorg/bouncycastle/asn1/n;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/x509/c;->ih()Lorg/bouncycastle/asn1/n;
 
     move-result-object p0
     :try_end_0
@@ -697,11 +697,11 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->pj()Lyou/zta/you/you/rtg;
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->uj()Lyou/zta/you/you/rtg;
 
     move-result-object p0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->pj()Lyou/zta/you/you/rtg;
+    invoke-virtual {p1}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->uj()Lyou/zta/you/you/rtg;
 
     move-result-object p1
 
@@ -893,7 +893,7 @@
 
     move-result v0
 
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->pj()Lyou/zta/you/you/rtg;
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->uj()Lyou/zta/you/you/rtg;
 
     move-result-object p0
 
@@ -906,7 +906,33 @@
     return p0
 .end method
 
-.method pj()Lyou/zta/you/you/rtg;
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->d:Ljava/math/BigInteger;
+
+    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->uj()Lyou/zta/you/you/rtg;
+
+    move-result-object p0
+
+    const-string v1, "EC"
+
+    invoke-static {v1, v0, p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->zta(Ljava/lang/String;Ljava/math/BigInteger;Lyou/zta/you/you/rtg;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public tsu()Ljava/math/BigInteger;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->d:Ljava/math/BigInteger;
+
+    return-object p0
+.end method
+
+.method uj()Lyou/zta/you/you/rtg;
     .locals 1
 
     iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->ecSpec:Ljava/security/spec/ECParameterSpec;
@@ -927,32 +953,6 @@
     invoke-interface {p0}, Lorg/bouncycastle/jcajce/provider/config/sis;->gwm()Lyou/zta/you/you/rtg;
 
     move-result-object p0
-
-    return-object p0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->d:Ljava/math/BigInteger;
-
-    invoke-virtual {p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->pj()Lyou/zta/you/you/rtg;
-
-    move-result-object p0
-
-    const-string v1, "EC"
-
-    invoke-static {v1, v0, p0}, Lorg/bouncycastle/jcajce/provider/asymmetric/util/bio;->zta(Ljava/lang/String;Ljava/math/BigInteger;Lyou/zta/you/you/rtg;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public tsu()Ljava/math/BigInteger;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/provider/asymmetric/ec/BCECPrivateKey;->d:Ljava/math/BigInteger;
 
     return-object p0
 .end method

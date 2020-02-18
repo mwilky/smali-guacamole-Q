@@ -30,7 +30,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result p1
 
@@ -50,7 +50,7 @@
 
     iput-object p1, p0, Lcom/android/server/OpPowerControllerService$ssp;->df:[[D
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result p1
 
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method private Wa(Ljava/lang/String;)Z
+.method private _a(Ljava/lang/String;)Z
     .locals 1
 
     :try_start_0
@@ -103,7 +103,7 @@
     return p0
 .end method
 
-.method private rl()V
+.method private wl()V
     .locals 6
 
     const/4 v0, 0x0
@@ -111,7 +111,7 @@
     move v1, v0
 
     :goto_0
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v2
 
@@ -350,7 +350,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result p0
 
@@ -602,7 +602,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result v5
 
@@ -689,7 +689,7 @@
 
     move-result-wide v10
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result v5
 
@@ -728,7 +728,7 @@
 
     move-result-wide v10
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2900()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3000()I
 
     move-result v12
 
@@ -738,7 +738,7 @@
 
     if-ltz v10, :cond_10
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result v10
 
@@ -785,7 +785,7 @@
     goto :goto_6
 
     :cond_b
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result v10
 
@@ -886,7 +886,7 @@
     goto :goto_8
 
     :cond_f
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result v12
 
@@ -911,7 +911,7 @@
     goto/16 :goto_5
 
     :cond_10
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3700()Z
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$3800()Z
 
     move-result v1
 
@@ -1031,7 +1031,7 @@
 
     if-ltz p1, :cond_4
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v2
 
@@ -1102,7 +1102,7 @@
 
     if-ltz p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v0
 
@@ -1168,7 +1168,7 @@
 
     if-ltz p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v1
 
@@ -1203,7 +1203,7 @@
 
     if-ltz p1, :cond_4
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v2
 
@@ -1288,7 +1288,7 @@
 
     if-ltz p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2300()I
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$2400()I
 
     move-result v0
 

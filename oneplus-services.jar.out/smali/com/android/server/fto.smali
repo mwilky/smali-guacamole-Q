@@ -187,7 +187,7 @@
     return-object v0
 .end method
 
-.method private kl()V
+.method private pl()V
     .locals 5
 
     iget-object v0, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
@@ -259,7 +259,7 @@
     return-void
 .end method
 
-.method private ll()Z
+.method private ql()Z
     .locals 3
 
     const/4 v0, 0x0
@@ -294,32 +294,6 @@
     invoke-virtual {p0}, Landroid/provider/Settings$SettingNotFoundException;->printStackTrace()V
 
     return v0
-.end method
-
-.method private ml()Z
-    .locals 2
-
-    iget-object p0, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "op_video_enhancer"
-
-    const/4 v1, -0x2
-
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "1"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method private resolveAdditionalConfig(Ljava/lang/String;)V
@@ -581,6 +555,32 @@
     throw p1
 .end method
 
+.method private rl()Z
+    .locals 2
+
+    iget-object p0, p0, Lcom/android/server/fto;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "op_video_enhancer"
+
+    const/4 v1, -0x2
+
+    invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "1"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method static synthetic rtg(Lcom/android/server/fto;)Z
     .locals 0
 
@@ -608,7 +608,7 @@
 .method static synthetic tsu(Lcom/android/server/fto;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ml()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->rl()Z
 
     move-result p0
 
@@ -618,7 +618,7 @@
 .method static synthetic you(Lcom/android/server/fto;)Z
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ll()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ql()Z
 
     move-result p0
 
@@ -675,7 +675,7 @@
     monitor-enter p2
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/fto;->ll()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ql()Z
 
     move-result p3
 
@@ -714,7 +714,7 @@
 
     if-eqz p4, :cond_2
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ml()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->rl()Z
 
     move-result p4
 
@@ -766,7 +766,7 @@
     monitor-enter p1
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/fto;->ll()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->ql()Z
 
     move-result v0
 
@@ -812,7 +812,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-direct {p0}, Lcom/android/server/fto;->ml()Z
+    invoke-direct {p0}, Lcom/android/server/fto;->rl()Z
 
     move-result v0
 
@@ -925,7 +925,7 @@
     invoke-virtual {p1, v0, v3, v1, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     :cond_5
-    invoke-direct {p0}, Lcom/android/server/fto;->kl()V
+    invoke-direct {p0}, Lcom/android/server/fto;->pl()V
 
     return-void
 

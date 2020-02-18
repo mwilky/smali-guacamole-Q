@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private Doa:Z
+.field private fpa:Z
 
 .field private set:Ljava/util/Vector;
 
@@ -37,7 +37,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     :goto_0
     invoke-virtual {p1}, Lorg/bouncycastle/asn1/cno;->size()I
@@ -98,7 +98,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
 
@@ -120,7 +120,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     :goto_0
     array-length v1, p1
@@ -368,7 +368,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Gg()Z
 
     move-result p1
 
@@ -396,7 +396,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Bg()Z
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/lqr;->Gg()Z
 
     move-result v0
 
@@ -509,7 +509,7 @@
 
 
 # virtual methods
-.method public Ag()Ljava/util/Enumeration;
+.method public Fg()Ljava/util/Enumeration;
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
@@ -538,7 +538,7 @@
 .method public hashCode()I
     .locals 3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ear;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ear;->Fg()Ljava/util/Enumeration;
 
     move-result-object v0
 
@@ -601,10 +601,20 @@
     return-object v0
 .end method
 
-.method mg()Lorg/bouncycastle/asn1/vdb;
+.method public parser()Lorg/bouncycastle/asn1/ire;
+    .locals 1
+
+    new-instance v0, Lorg/bouncycastle/asn1/cjf;
+
+    invoke-direct {v0, p0, p0}, Lorg/bouncycastle/asn1/cjf;-><init>(Lorg/bouncycastle/asn1/ear;Lorg/bouncycastle/asn1/ear;)V
+
+    return-object v0
+.end method
+
+.method rg()Lorg/bouncycastle/asn1/vdb;
     .locals 3
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     if-eqz v0, :cond_0
 
@@ -658,7 +668,7 @@
     return-object p0
 .end method
 
-.method ng()Lorg/bouncycastle/asn1/vdb;
+.method sg()Lorg/bouncycastle/asn1/vdb;
     .locals 1
 
     new-instance v0, Lorg/bouncycastle/asn1/Y;
@@ -668,16 +678,6 @@
     iget-object p0, p0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
 
     iput-object p0, v0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
-
-    return-object v0
-.end method
-
-.method public parser()Lorg/bouncycastle/asn1/ire;
-    .locals 1
-
-    new-instance v0, Lorg/bouncycastle/asn1/cjf;
-
-    invoke-direct {v0, p0, p0}, Lorg/bouncycastle/asn1/cjf;-><init>(Lorg/bouncycastle/asn1/ear;Lorg/bouncycastle/asn1/ear;)V
 
     return-object v0
 .end method
@@ -697,13 +697,13 @@
 .method protected sort()V
     .locals 9
 
-    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iget-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->Doa:Z
+    iput-boolean v0, p0, Lorg/bouncycastle/asn1/ear;->fpa:Z
 
     iget-object v1, p0, Lorg/bouncycastle/asn1/ear;->set:Ljava/util/Vector;
 
@@ -893,11 +893,11 @@
     return v1
 
     :cond_1
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ear;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ear;->Fg()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lorg/bouncycastle/asn1/ear;->Ag()Ljava/util/Enumeration;
+    invoke-virtual {p1}, Lorg/bouncycastle/asn1/ear;->Fg()Ljava/util/Enumeration;
 
     move-result-object p1
 

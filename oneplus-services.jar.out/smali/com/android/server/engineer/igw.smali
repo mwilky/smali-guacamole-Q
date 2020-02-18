@@ -37,7 +37,7 @@
 .method public run()V
     .locals 6
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p0
 

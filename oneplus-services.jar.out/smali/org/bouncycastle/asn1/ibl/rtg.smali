@@ -12,6 +12,30 @@
     return-void
 .end method
 
+.method public static Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+    .locals 1
+
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ibl/lqr;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p0}, Lorg/bouncycastle/asn1/ywr/irq;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+
+    move-result-object v0
+
+    :cond_0
+    if-nez v0, :cond_1
+
+    invoke-static {p0}, Lorg/bouncycastle/asn1/bio/zta;->Ca(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
+
+    move-result-object v0
+
+    :cond_1
+    return-object v0
+.end method
+
 .method public static dma(Lorg/bouncycastle/asn1/bvj;)Ljava/lang/String;
     .locals 1
 
@@ -109,30 +133,6 @@
     return-object v0
 .end method
 
-.method public static ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
-    .locals 1
-
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ibl/lqr;->ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-static {p0}, Lorg/bouncycastle/asn1/ywr/irq;->ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
-
-    move-result-object v0
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    invoke-static {p0}, Lorg/bouncycastle/asn1/bio/zta;->ya(Ljava/lang/String;)Lorg/bouncycastle/asn1/bvj;
-
-    move-result-object v0
-
-    :cond_1
-    return-object v0
-.end method
-
 .method private static you(Lorg/bouncycastle/crypto/wtn/ibl;)Lorg/bouncycastle/asn1/ibl/vju;
     .locals 7
 
@@ -153,11 +153,11 @@
 
     move-result-object v2
 
-    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->zi()Ljava/math/BigInteger;
+    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->Ei()Ljava/math/BigInteger;
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->yi()Ljava/math/BigInteger;
+    invoke-virtual {p0}, Lorg/bouncycastle/crypto/wtn/ibl;->Di()Ljava/math/BigInteger;
 
     move-result-object v4
 

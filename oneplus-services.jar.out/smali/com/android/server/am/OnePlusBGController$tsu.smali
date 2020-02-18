@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/android/server/am/OnePlusBGController;Lcom/android/server/am/oxb;)V
+.method synthetic constructor <init>(Lcom/android/server/am/OnePlusBGController;Lcom/android/server/am/hmo;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/android/server/am/OnePlusBGController$tsu;-><init>(Lcom/android/server/am/OnePlusBGController;)V

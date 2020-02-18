@@ -1,90 +1,204 @@
-.class Lcom/android/server/am/veq;
-.super Landroid/content/BroadcastReceiver;
+.class synthetic Lcom/android/server/am/veq;
+.super Ljava/lang/Object;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/am/cgv;
+    value = Lcom/android/server/am/OnePlusBGController;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1008
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/android/server/am/cgv;
+# static fields
+.field static final synthetic Ml:[I
+
+.field static final synthetic Nl:[I
+
+.field static final synthetic Ol:[I
+
+.field static final synthetic Pl:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/cgv;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lcom/android/server/am/veq;->this$0:Lcom/android/server/am/cgv;
+    invoke-static {}, Lcom/android/server/am/OnePlusBGController$SnapshotType;->values()[Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    array-length v0, v0
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+    sput-object v0, Lcom/android/server/am/veq;->Pl:[I
 
-    invoke-static {}, Lcom/android/server/am/cgv;->access$600()Lcom/android/server/am/cgv;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    :try_start_0
+    sget-object v1, Lcom/android/server/am/veq;->Pl:[I
 
-    if-nez p0, :cond_0
+    sget-object v2, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Rha:Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
-    return-void
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    :cond_0
-    const/4 p0, 0x4
+    move-result v2
 
-    const-string p1, "event mPowerSaveWhitelistReceiver onReceive"
+    aput v0, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {p0, p1}, Lcom/android/server/am/cgv;->sis(ILjava/lang/String;)V
+    :catch_0
+    const/4 v1, 0x2
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    :try_start_1
+    sget-object v2, Lcom/android/server/am/veq;->Pl:[I
 
-    move-result-object p0
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Sha:Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
-    const-string p1, "android.os.action.POWER_SAVE_WHITELIST_CHANGED"
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v3
 
-    move-result p1
+    aput v1, v2, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-eqz p1, :cond_1
+    :catch_1
+    const/4 v2, 0x3
 
-    invoke-static {}, Lcom/android/server/am/cgv;->access$600()Lcom/android/server/am/cgv;
+    :try_start_2
+    sget-object v3, Lcom/android/server/am/veq;->Pl:[I
 
-    move-result-object p0
+    sget-object v4, Lcom/android/server/am/OnePlusBGController$SnapshotType;->Uha:Lcom/android/server/am/OnePlusBGController$SnapshotType;
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->dma(Lcom/android/server/am/cgv;)V
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
-    goto :goto_0
+    move-result v4
 
-    :cond_1
-    const-string p1, "smart_power_control_changed"
+    aput v2, v3, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {p1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :catch_2
+    invoke-static {}, Lcom/android/server/am/OnePlusBGController$CleanType;->values()[Lcom/android/server/am/OnePlusBGController$CleanType;
 
-    move-result p0
+    move-result-object v3
 
-    if-eqz p0, :cond_2
+    array-length v3, v3
 
-    invoke-static {}, Lcom/android/server/am/cgv;->access$600()Lcom/android/server/am/cgv;
+    new-array v3, v3, [I
 
-    move-result-object p0
+    sput-object v3, Lcom/android/server/am/veq;->Ol:[I
 
-    invoke-static {p0}, Lcom/android/server/am/cgv;->ywr(Lcom/android/server/am/cgv;)V
+    :try_start_3
+    sget-object v3, Lcom/android/server/am/veq;->Ol:[I
 
-    :cond_2
-    :goto_0
+    sget-object v4, Lcom/android/server/am/OnePlusBGController$CleanType;->Jha:Lcom/android/server/am/OnePlusBGController$CleanType;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v0, v3, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v3, Lcom/android/server/am/veq;->Ol:[I
+
+    sget-object v4, Lcom/android/server/am/OnePlusBGController$CleanType;->Kha:Lcom/android/server/am/OnePlusBGController$CleanType;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v1, v3, v4
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v3, Lcom/android/server/am/veq;->Ol:[I
+
+    sget-object v4, Lcom/android/server/am/OnePlusBGController$CleanType;->Lha:Lcom/android/server/am/OnePlusBGController$CleanType;
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v4
+
+    aput v2, v3, v4
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    invoke-static {}, Lcom/android/server/am/OnePlusBGController$ProcType;->values()[Lcom/android/server/am/OnePlusBGController$ProcType;
+
+    move-result-object v2
+
+    array-length v2, v2
+
+    new-array v2, v2, [I
+
+    sput-object v2, Lcom/android/server/am/veq;->Nl:[I
+
+    :try_start_6
+    sget-object v2, Lcom/android/server/am/veq;->Nl:[I
+
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$ProcType;->Pha:Lcom/android/server/am/OnePlusBGController$ProcType;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    aput v0, v2, v3
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    invoke-static {}, Lcom/android/server/am/OnePlusBGController$NetType;->values()[Lcom/android/server/am/OnePlusBGController$NetType;
+
+    move-result-object v2
+
+    array-length v2, v2
+
+    new-array v2, v2, [I
+
+    sput-object v2, Lcom/android/server/am/veq;->Ml:[I
+
+    :try_start_7
+    sget-object v2, Lcom/android/server/am/veq;->Ml:[I
+
+    sget-object v3, Lcom/android/server/am/OnePlusBGController$NetType;->PUBLIC:Lcom/android/server/am/OnePlusBGController$NetType;
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    aput v0, v2, v3
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    sget-object v0, Lcom/android/server/am/veq;->Ml:[I
+
+    sget-object v2, Lcom/android/server/am/OnePlusBGController$NetType;->Oha:Lcom/android/server/am/OnePlusBGController$NetType;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aput v1, v0, v2
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
     return-void
 .end method

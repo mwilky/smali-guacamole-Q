@@ -1,14 +1,11 @@
 .class Lcom/android/server/f;
-.super Ljava/lang/Object;
+.super Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;
 .source ""
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/OpPowerControllerService$rtg;->Q()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/OpPowerControllerService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,75 +15,216 @@
 
 
 # instance fields
-.field final synthetic Xe:Ljava/io/ByteArrayOutputStream;
-
-.field final synthetic this$1:Lcom/android/server/OpPowerControllerService$rtg;
+.field final synthetic this$0:Lcom/android/server/OpPowerControllerService;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/OpPowerControllerService$rtg;Ljava/io/ByteArrayOutputStream;)V
+.method constructor <init>(Lcom/android/server/OpPowerControllerService;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/f;->this$1:Lcom/android/server/OpPowerControllerService$rtg;
+    iput-object p1, p0, Lcom/android/server/f;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    iput-object p2, p0, Lcom/android/server/f;->Xe:Ljava/io/ByteArrayOutputStream;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/telephony/SubscriptionManager$OnSubscriptionsChangedListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onSubscriptionsChanged()V
+    .locals 6
 
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
 
-    :try_start_0
-    iget-object v1, p0, Lcom/android/server/f;->this$1:Lcom/android/server/OpPowerControllerService$rtg;
+    move-result v0
 
-    iget-object v1, v1, Lcom/android/server/OpPowerControllerService$rtg;->mFile:Landroid/util/AtomicFile;
+    const-string v1, "OpPowerControllerService"
 
-    invoke-virtual {v1}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
+    if-eqz v0, :cond_0
+
+    const-string v0, "subscription changed"
+
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/f;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$3300(Lcom/android/server/OpPowerControllerService;)Landroid/telephony/SubscriptionManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/android/server/f;->Xe:Ljava/io/ByteArrayOutputStream;
+    invoke-virtual {v0}, Landroid/telephony/SubscriptionManager;->getAllSubscriptionInfoList()Ljava/util/List;
 
-    invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->writeTo(Ljava/io/OutputStream;)V
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$4500()Z
 
-    invoke-static {v0}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
+    move-result v2
 
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lcom/android/server/f;->this$1:Lcom/android/server/OpPowerControllerService$rtg;
+    if-eqz v2, :cond_2
 
-    iget-object v1, v1, Lcom/android/server/OpPowerControllerService$rtg;->mFile:Landroid/util/AtomicFile;
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    invoke-virtual {v1, v0}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/telephony/SubscriptionInfo;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "SubscriptionId = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Landroid/telephony/SubscriptionInfo;->getSubscriptionId()I
+
+    move-result v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object p0, p0, Lcom/android/server/f;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {p0, v2}, Lcom/android/server/OpPowerControllerService;->setMccMncValue(Landroid/telephony/SubscriptionInfo;)V
+
+    :cond_1
+    invoke-static {v3}, Lcom/android/server/OpPowerControllerService;->access$4502(Z)Z
 
     goto :goto_0
 
-    :catch_0
-    move-exception v1
+    :cond_2
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$4600()I
 
-    const-string v2, "OpPowerControllerService"
+    move-result v2
 
-    const-string v3, "Error writing idle items"
+    if-gtz v2, :cond_3
 
-    invoke-static {v2, v3, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
-    iget-object p0, p0, Lcom/android/server/f;->this$1:Lcom/android/server/OpPowerControllerService$rtg;
+    move-result v2
 
-    iget-object p0, p0, Lcom/android/server/OpPowerControllerService$rtg;->mFile:Landroid/util/AtomicFile;
+    if-nez v2, :cond_3
 
-    invoke-virtual {p0, v0}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
+    iget-object v2, p0, Lcom/android/server/f;->this$0:Lcom/android/server/OpPowerControllerService;
 
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {v2, v4}, Lcom/android/server/OpPowerControllerService;->setMccMncValue(Landroid/telephony/SubscriptionInfo;)V
+
+    iget-object p0, p0, Lcom/android/server/f;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {p0}, Lcom/android/server/OpPowerControllerService;->access$900(Lcom/android/server/OpPowerControllerService;)Lcom/android/server/OpPowerControllerService$cno;
+
+    move-result-object p0
+
+    const/4 v2, 0x2
+
+    invoke-virtual {p0, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_3
     :goto_0
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$1500()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "First subInfo: "
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const-string v0, "null"
+
+    goto :goto_1
+
+    :cond_4
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/telephony/SubscriptionInfo;
+
+    invoke-virtual {v0}, Landroid/telephony/SubscriptionInfo;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "mFirstMcc = "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$4600()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mFirstMnc = "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$4700()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
     return-void
 .end method

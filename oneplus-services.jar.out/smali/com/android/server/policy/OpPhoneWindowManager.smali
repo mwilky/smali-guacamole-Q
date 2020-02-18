@@ -13,30 +13,12 @@
         Lcom/android/server/policy/OpPhoneWindowManager$you;,
         Lcom/android/server/policy/OpPhoneWindowManager$sis;,
         Lcom/android/server/policy/OpPhoneWindowManager$tsu;,
-        Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;,
-        Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;,
-        Lcom/android/server/policy/OpPhoneWindowManager$KillApp;
+        Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
     }
 .end annotation
 
 
 # static fields
-.field public static mDoublePressHomeCustomApp:Ljava/lang/String;
-
-.field public static mLongPressHomeCustomApp:Ljava/lang/String;
-
-.field public static mDoublePressBackCustomApp:Ljava/lang/String;
-
-.field public static mLongPressBackCustomApp:Ljava/lang/String;
-
-.field public static mDoublePressRecentCustomApp:Ljava/lang/String;
-
-.field public static mLongPressRecentCustomApp:Ljava/lang/String;
-
-.field mKillProcess:Ljava/lang/Runnable;
-
-.field mKHandler:Landroid/os/Handler;
-
 .field private static final ACTION_DISABLE_LIDCONTROLSSLEEP:Ljava/lang/String; = "oem.intent.action.DISABLE_LIDCONTROLSSLEEP"
 
 .field private static final ACTION_ENABLE_LIDCONTROLSSLEEP:Ljava/lang/String; = "oem.intent.action.ENABLE_LIDCONTROLSSLEEP"
@@ -115,6 +97,10 @@
 .field private static final LOCK_TO_APP_GESTURE_TOLERENCE:I = 0xc8
 
 .field static final MSG_CONTROL_MISSTOUCH:I = 0x1
+
+.field private static final MSG_OP_PW_BASE:I = 0x3e8
+
+.field private static final MSG_POWER_LONG_PRESS_HARDWARE_SHUTDOWN:I = 0x3e9
 
 .field static final MSG_RECORD_POWER_KEY:I = 0x2
 
@@ -231,6 +217,8 @@
 .field private mHomeKeyDoubleTapPending:Z
 
 .field private mHomeKeyPressed:Z
+
+.field private mHwShutdownTimeout:I
 
 .field mIsSideEnabled:Z
 
@@ -547,18 +535,6 @@
     invoke-direct {v0, p0}, Lcom/android/server/policy/ugm;-><init>(Lcom/android/server/policy/OpPhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mAppSwitchDoubleTapTimeoutRunnable:Ljava/lang/Runnable;
-    
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    iput-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mKHandler:Landroid/os/Handler;
-
-    new-instance v0, Lcom/android/server/policy/OpPhoneWindowManager$KillApp;
-
-    invoke-direct {v0, p0}, Lcom/android/server/policy/OpPhoneWindowManager$KillApp;-><init>(Lcom/android/server/policy/OpPhoneWindowManager;)V
-
-    iput-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mKillProcess:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -651,12 +627,12 @@
     return-object p0
 .end method
 
-.method static synthetic access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+.method static synthetic access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mThreePointersGestures:Lcom/android/server/policy/vju;
+    invoke-direct {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->urgentSync()V
 
-    return-object p0
+    return-void
 .end method
 
 .method static synthetic access$200(Lcom/android/server/policy/OpPhoneWindowManager;I)V
@@ -667,7 +643,15 @@
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+.method static synthetic access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mThreePointersGestures:Lcom/android/server/policy/vju;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2100(Lcom/android/server/policy/OpPhoneWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mThreePointerGestureRegisterd:Z
@@ -675,7 +659,7 @@
     return p0
 .end method
 
-.method static synthetic access$2002(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
+.method static synthetic access$2102(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mThreePointerGestureRegisterd:Z
@@ -683,7 +667,7 @@
     return p1
 .end method
 
-.method static synthetic access$2100(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+.method static synthetic access$2200(Lcom/android/server/policy/OpPhoneWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHomeKeyDoubleTapPending:Z
@@ -691,7 +675,7 @@
     return p0
 .end method
 
-.method static synthetic access$2102(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
+.method static synthetic access$2202(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHomeKeyDoubleTapPending:Z
@@ -699,7 +683,7 @@
     return p1
 .end method
 
-.method static synthetic access$2200(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+.method static synthetic access$2300(Lcom/android/server/policy/OpPhoneWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mBackKeyDoubleTapPending:Z
@@ -707,7 +691,7 @@
     return p0
 .end method
 
-.method static synthetic access$2202(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
+.method static synthetic access$2302(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mBackKeyDoubleTapPending:Z
@@ -715,7 +699,7 @@
     return p1
 .end method
 
-.method static synthetic access$2300(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+.method static synthetic access$2400(Lcom/android/server/policy/OpPhoneWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mAppSwitchKeyDoubleTapPending:Z
@@ -723,7 +707,7 @@
     return p0
 .end method
 
-.method static synthetic access$2302(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
+.method static synthetic access$2402(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mAppSwitchKeyDoubleTapPending:Z
@@ -731,7 +715,7 @@
     return p1
 .end method
 
-.method static synthetic access$2400(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+.method static synthetic access$2500(Lcom/android/server/policy/OpPhoneWindowManager;)Z
     .locals 0
 
     iget-boolean p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mAppSwitchKeyConsumed:Z
@@ -856,6 +840,18 @@
     const-string p0, ""
 
     return-object p0
+.end method
+
+.method private cancelHwShutdownAction()V
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHandler:Lcom/android/server/policy/OpPhoneWindowManager$sis;
+
+    const/16 v0, 0x3e9
+
+    invoke-virtual {p0, v0}, Landroid/os/Handler;->removeMessages(I)V
+
+    return-void
 .end method
 
 .method private collapsePanels()V
@@ -1441,6 +1437,32 @@
     return v1
 .end method
 
+.method private interceptHwShutdown()V
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHandler:Lcom/android/server/policy/OpPhoneWindowManager$sis;
+
+    const/16 v1, 0x3e9
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/Message;->setAsynchronous(Z)V
+
+    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHandler:Lcom/android/server/policy/OpPhoneWindowManager$sis;
+
+    iget p0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHwShutdownTimeout:I
+
+    int-to-long v2, p0
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    return-void
+.end method
+
 .method private isRecentKeyVisible()Z
     .locals 2
 
@@ -1588,6 +1610,20 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnHomeBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnHomeBehavior:I
+
+    const/16 v2, 0xc
+
+    const/4 v3, 0x0
+
+    if-ltz v1, :cond_0
+
+    if-le v1, v2, :cond_1
+
+    :cond_0
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnHomeBehavior:I
+
+    :cond_1
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1608,6 +1644,16 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnHomeBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnHomeBehavior:I
+
+    if-ltz v1, :cond_2
+
+    if-le v1, v2, :cond_3
+
+    :cond_2
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnHomeBehavior:I
+
+    :cond_3
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1628,6 +1674,16 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnMenuBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnMenuBehavior:I
+
+    if-ltz v1, :cond_4
+
+    if-le v1, v2, :cond_5
+
+    :cond_4
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnMenuBehavior:I
+
+    :cond_5
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1648,6 +1704,16 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnMenuBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnMenuBehavior:I
+
+    if-ltz v1, :cond_6
+
+    if-le v1, v2, :cond_7
+
+    :cond_6
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnMenuBehavior:I
+
+    :cond_7
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1668,6 +1734,16 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnBackBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnBackBehavior:I
+
+    if-ltz v1, :cond_8
+
+    if-le v1, v2, :cond_9
+
+    :cond_8
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnBackBehavior:I
+
+    :cond_9
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1688,6 +1764,16 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnBackBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnBackBehavior:I
+
+    if-ltz v1, :cond_a
+
+    if-le v1, v2, :cond_b
+
+    :cond_a
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnBackBehavior:I
+
+    :cond_b
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1708,6 +1794,16 @@
 
     iput v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnAppSwitchBehavior:I
 
+    iget v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnAppSwitchBehavior:I
+
+    if-ltz v1, :cond_c
+
+    if-le v1, v2, :cond_d
+
+    :cond_c
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnAppSwitchBehavior:I
+
+    :cond_d
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1728,6 +1824,16 @@
 
     iput v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnAppSwitchBehavior:I
 
+    iget v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnAppSwitchBehavior:I
+
+    if-ltz v0, :cond_e
+
+    if-le v0, v2, :cond_f
+
+    :cond_e
+    iput v3, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnAppSwitchBehavior:I
+
+    :cond_f
     return-void
 .end method
 
@@ -2769,6 +2875,55 @@
     return-void
 .end method
 
+.method private urgentSync()V
+    .locals 3
+
+    const-string p0, "OpPhoneWindowManager"
+
+    :try_start_0
+    const-string v0, "urgentSync start"
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Ljava/io/FileWriter;
+
+    const-string v1, "/proc/sysrq-trigger"
+
+    invoke-direct {v0, v1}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
+
+    const/16 v1, 0x79
+
+    invoke-virtual {v0, v1}, Ljava/io/FileWriter;->write(I)V
+
+    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "urgentSync "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+.end method
+
 
 # virtual methods
 .method cancelPendingPowerKeyAction()V
@@ -2804,17 +2959,17 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->autoAcquireOrRelease(Z)Z
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/les;->screenStateChangedEvent(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/ivd;->screenStateChangedEvent(Z)V
 
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V
@@ -2846,17 +3001,17 @@
 
     invoke-virtual {p0, p1}, Lcom/android/server/wm/OnePlusPerfManager;->autoAcquireOrRelease(Z)Z
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/les;->screenStateChangedEvent(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/ivd;->screenStateChangedEvent(Z)V
 
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/OpBGFrozenInjector;->screenStateChangedEvent(Z)V
@@ -3387,15 +3542,23 @@
 
     if-eqz p1, :cond_6
 
-    iget-object p0, p0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;
+    iget-object p1, p0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;
 
-    new-instance p1, Lcom/oneplus/core/gamevibrate/GameVibrateManager;
+    new-instance p2, Lcom/oneplus/core/gamevibrate/GameVibrateManager;
 
-    invoke-direct {p1}, Lcom/oneplus/core/gamevibrate/GameVibrateManager;-><init>()V
+    invoke-direct {p2}, Lcom/oneplus/core/gamevibrate/GameVibrateManager;-><init>()V
 
-    invoke-interface {p0, p1, v1}, Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;->registerPointerEventListener(Landroid/view/WindowManagerPolicyConstants$PointerEventListener;I)V
+    invoke-interface {p1, p2, v1}, Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;->registerPointerEventListener(Landroid/view/WindowManagerPolicyConstants$PointerEventListener;I)V
 
     :cond_6
+    iget p1, p0, Lcom/android/server/policy/PhoneWindowManager;->mVeryLongPressTimeout:I
+
+    div-int/lit8 p2, p1, 0x6
+
+    sub-int/2addr p1, p2
+
+    iput p1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mHwShutdownTimeout:I
+
     return-void
 .end method
 
@@ -3660,7 +3823,7 @@
 
     if-eqz v3, :cond_11
 
-    sget-object v3, Lcom/android/server/policy/wtn;->lD:[I
+    sget-object v3, Lcom/android/server/policy/wtn;->OD:[I
 
     sget-object v21, Lcom/android/server/policy/OpPhoneWindowManager;->mKeyLockMode:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -4061,10 +4224,8 @@
     iput-boolean v3, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mHomeKeyConsumed:Z
 
     iget v2, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnHomeBehavior:I
-    
-    const v3, 0x0
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     iget v1, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnHomeBehavior:I
 
@@ -4122,10 +4283,8 @@
     invoke-virtual {v0, v3, v3, v2}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedback(IZLjava/lang/String;)Z
 
     iget v2, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnHomeBehavior:I
-    
-    const v3, 0x1
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     iget v1, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnHomeBehavior:I
 
@@ -4239,10 +4398,8 @@
     const-wide/16 v12, -0x1
 
     const/16 v2, 0xc
-    
-    const v3, 0x0
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     return-wide v12
 
@@ -4328,10 +4485,8 @@
     iput-boolean v3, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mBackKeyConsumed:Z
 
     iget v2, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnBackBehavior:I
-    
-    const v3, 0x0
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     iget v1, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnBackBehavior:I
 
@@ -4372,10 +4527,8 @@
     invoke-virtual {v0, v3, v3, v2}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedback(IZLjava/lang/String;)Z
 
     iget v2, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnBackBehavior:I
-    
-    const v3, 0x1
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     iget v1, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnBackBehavior:I
 
@@ -4460,7 +4613,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v0, v3, v4, v4}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v3, v4}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     return-wide v1
 
@@ -4537,10 +4690,8 @@
     iput-boolean v3, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mAppSwitchKeyConsumed:Z
 
     iget v2, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnAppSwitchBehavior:I
-    
-    const v3, 0x0
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     iget v1, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mDoubleTapOnAppSwitchBehavior:I
 
@@ -4581,10 +4732,8 @@
     invoke-virtual {v0, v3, v3, v2}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedback(IZLjava/lang/String;)Z
 
     iget v2, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnAppSwitchBehavior:I
-    
-    const v3, 0x1
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v2, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     iget v1, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressOnAppSwitchBehavior:I
 
@@ -4711,7 +4860,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v3, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;Z)V
+    invoke-virtual {v0, v1, v3}, Lcom/android/server/policy/OpPhoneWindowManager;->performKeyAction(ILandroid/view/KeyEvent;)V
 
     :goto_1e
     monitor-exit v2
@@ -5021,7 +5170,8 @@
 
     invoke-virtual {v15, v6, v7, v8}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    :goto_9
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/policy/OpPhoneWindowManager;->interceptHwShutdown()V
+
     move/from16 v18, v4
 
     move v15, v5
@@ -5042,6 +5192,12 @@
     iget-object v7, v0, Lcom/android/server/policy/OpPhoneWindowManager;->mBgHandler:Landroid/os/Handler;
 
     invoke-virtual {v7, v6}, Landroid/os/Handler;->removeMessages(I)V
+
+    move/from16 v18, v4
+
+    move v15, v5
+
+    const/4 v7, 0x0
 
     goto :goto_9
 
@@ -5065,6 +5221,9 @@
     const-wide/16 v4, 0x0
 
     invoke-virtual {v8, v6, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+
+    :goto_9
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/policy/OpPhoneWindowManager;->cancelHwShutdownAction()V
 
     goto :goto_a
 
@@ -5091,7 +5250,7 @@
 
     if-eqz v4, :cond_1d
 
-    sget-object v4, Lcom/android/server/policy/wtn;->lD:[I
+    sget-object v4, Lcom/android/server/policy/wtn;->OD:[I
 
     sget-object v5, Lcom/android/server/policy/OpPhoneWindowManager;->mKeyLockMode:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -6193,8 +6352,8 @@
     return-void
 .end method
 
-.method protected performKeyAction(ILandroid/view/KeyEvent;Z)V
-    .locals 7
+.method protected performKeyAction(ILandroid/view/KeyEvent;)V
+    .locals 6
 
     invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->keyguardOn()Z
 
@@ -6305,32 +6464,6 @@
 
     :cond_3
     packed-switch p1, :pswitch_data_0
-    
-    :pswitch_kill
-    invoke-virtual {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->killApp()V
-
-    goto :goto_3
-    
-    :pswitch_customapp
-    invoke-virtual {p2}, Landroid/view/KeyEvent;->getKeyCode()I
-
-    move-result v0
-    
-    invoke-virtual {p0, v0, p3}, Lcom/android/server/policy/OpPhoneWindowManager;->customApp(IZ)V
-
-    goto :goto_3
-    
-    :pswitch_screenshot
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0, v0}, Lcom/android/server/policy/OpPhoneWindowManager;->takeOPScreenshot(II)V
-
-    goto :goto_3    
-
-    :pswitch_lastapp
-    invoke-direct {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->toggleLastApp()V
-
-    goto :goto_3
 
     :pswitch_0
     goto/16 :goto_3
@@ -6473,10 +6606,6 @@
         :pswitch_0
         :pswitch_2
         :pswitch_1
-        :pswitch_kill
-        :pswitch_screenshot
-        :pswitch_customapp
-        :pswitch_lastapp
     .end packed-switch
 .end method
 
@@ -6543,7 +6672,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/policy/kth;->Dc()V
+    invoke-virtual {p0}, Lcom/android/server/policy/kth;->Ic()V
 
     :cond_0
     return-void
@@ -6810,7 +6939,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->tha:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
+    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;->Wha:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
     goto :goto_0
 
@@ -6988,879 +7117,4 @@
     :cond_4
     :goto_2
     return-void
-.end method
-
-.method public killApp()V
-    .locals 3
-
-    invoke-virtual {p0}, Lcom/android/server/policy/PhoneWindowManager;->keyguardOn()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v2, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mKHandler:Landroid/os/Handler;
-
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mKillProcess:Ljava/lang/Runnable;
-
-    invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public customApp(IZ)V
-    .registers 5
-    .param p1, "KeyCode"    # I
-    .param p2, "LongPress"    # Z
-
-    .line 592
-    invoke-virtual {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->setCustomApp()V
-    
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_2f
-
-    .line 593
-    if-eqz p2, :cond_1a
-
-    .line 594
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressBackCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 595
-    .local v0, "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_18
-
-    .line 596
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 598
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_18
-    goto/16 :goto_9f
-
-    .line 599
-    :cond_1a
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressBackCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 600
-    .restart local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_2d
-
-    .line 601
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 603
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_2d
-    goto/16 :goto_9f
-
-    .line 604
-    :cond_2f
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_5c
-
-    .line 605
-    if-eqz p2, :cond_48
-
-    .line 606
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressHomeCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 607
-    .restart local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_47
-
-    .line 608
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 610
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_47
-    goto :goto_9f
-
-    .line 611
-    :cond_48
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressHomeCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 612
-    .restart local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_5b
-
-    .line 613
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 615
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_5b
-    goto :goto_9f
-
-    .line 617
-    :cond_5c
-    const/16 v0, 0xbb
-
-    if-ne p1, v0, :cond_8a
-
-    .line 618
-    if-eqz p2, :cond_76
-
-    .line 619
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressRecentCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 620
-    .restart local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_75
-
-    .line 621
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 623
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_75
-    goto :goto_9f
-
-    .line 624
-    :cond_76
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressRecentCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 625
-    .restart local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_89
-
-    .line 626
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 628
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_89
-    goto :goto_9f
-
-    .line 630
-    :cond_8a
-    if-eqz p2, :cond_9f
-
-    .line 631
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressFingerprintCustomApp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getLaunchIntentForPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    .line 632
-    .restart local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    if-eqz v0, :cond_9f
-
-    .line 633
-    iget-object v1, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 637
-    .end local v0    # "launchIntentForPackage":Landroid/content/Intent;
-    :cond_9f
-    :goto_9f
-    return-void
-.end method
-
-.method public setCustomApp()V
-    .registers 4
-
-    .line 593
-    iget-object v0, p0, Lcom/android/server/policy/OpPhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    .line 594
-    .local v0, "contentResolver":Landroid/content/ContentResolver;
-    const-string v1, "rice_type"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
-
-    .line 595
-    .local v1, "riceType":I
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_41
-
-    .line 596
-    const-string v2, "tweaks_custom_home_double_app"
-
-    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressHomeCustomApp:Ljava/lang/String;
-
-    .line 597
-    const-string v2, "tweaks_custom_home_long_app"
-
-    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressHomeCustomApp:Ljava/lang/String;
-
-    .line 598
-    const-string v2, "tweaks_custom_back_double_app"
-
-    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressBackCustomApp:Ljava/lang/String;
-
-    .line 599
-    const-string v2, "tweaks_custom_back_long_app"
-
-    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressBackCustomApp:Ljava/lang/String;
-
-    .line 600
-    const-string v2, "tweaks_custom_recent_double_app"
-
-    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressRecentCustomApp:Ljava/lang/String;
-
-    .line 601
-    const-string v2, "tweaks_custom_recent_long_app"
-
-    invoke-static {v0, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressRecentCustomApp:Ljava/lang/String;
-
-    goto :goto_4f
-
-    .line 603
-    :cond_41
-    const-string v2, ""
-
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressHomeCustomApp:Ljava/lang/String;
-
-    .line 604
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressHomeCustomApp:Ljava/lang/String;
-
-    .line 605
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressBackCustomApp:Ljava/lang/String;
-
-    .line 606
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressBackCustomApp:Ljava/lang/String;
-
-    .line 607
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mDoublePressRecentCustomApp:Ljava/lang/String;
-
-    .line 608
-    sput-object v2, Lcom/android/server/policy/OpPhoneWindowManager;->mLongPressRecentCustomApp:Ljava/lang/String;
-
-    .line 610
-    :goto_4f
-    return-void
-.end method
-
-.method private toggleLastApp()V
-    .registers 15
-
-    const/4 v13, 0x2
-
-    new-instance v5, Landroid/content/Intent;
-
-    const-string v11, "android.intent.action.MAIN"
-
-    invoke-direct {v5, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v11, "activity"
-
-    iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v11}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/ActivityManager;
-
-    const-string v1, "com.android.launcher"
-
-    const-string v11, "android.intent.category.HOME"
-
-    invoke-virtual {v5, v11}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v11, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v11}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v11
-
-    const/4 v12, 0x0
-
-    invoke-virtual {v11, v5, v12}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
-
-    move-result-object v9
-
-    iget-object v11, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    if-eqz v11, :cond_38
-
-    iget-object v11, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v11, v11, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    const-string v12, "android"
-
-    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_38
-
-    iget-object v11, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
-
-    iget-object v1, v11, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
-
-    :cond_38
-    const/4 v11, 0x5
-
-    invoke-virtual {v0, v11, v13}, Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
-
-    move-result-object v10
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v3, 0x1
-
-    :goto_40
-    invoke-interface {v10}, Ljava/util/List;->size()I
-
-    move-result v11
-
-    if-ge v3, v11, :cond_73
-
-    if-nez v7, :cond_73
-
-    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget-object v11, v11, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    invoke-virtual {v11}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_70
-
-    const-string v11, "com.android.systemui"
-
-    invoke-virtual {v8, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_70
-
-    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v6, v4, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    iget-object v7, v4, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    :cond_70
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_40
-
-    :cond_73
-    if-lez v6, :cond_79
-
-    invoke-virtual {v0, v6, v13}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
-
-    :cond_78
-    :goto_78
-    return-void
-
-    :cond_79
-    if-eqz v7, :cond_78
-
-    const/high16 v11, 0x100000
-
-    invoke-virtual {v7, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    :try_start_80
-    sget-object v11, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;
-
-    iget-object v12, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v12, v7, v11}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
-    :try_end_87
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_80 .. :try_end_87} :catch_88
-
-    goto :goto_78
-
-    :catch_88
-    move-exception v2
-
-    const-string v11, "Recent"
-
-    const-string v12, "Unable to launch recent task"
-
-    invoke-static {v11, v12, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_78
-.end method
-
-.method private setUpPrevAppSwitch()V
-    .locals 12
-
-    const/4 v11, 0x0
-
-    iget-object v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    const-string v10, "activity"
-
-    invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/app/ActivityManager;
-
-    const/16 v9, 0x14
-
-    invoke-virtual {v7, v9, v11}, Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
-
-    move-result-object v8
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x1
-
-    :goto_0
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v9
-
-    if-lt v2, v9, :cond_3
-
-    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v10, 0xb
-
-    if-lt v9, v10, :cond_1
-
-    move-object v0, v7
-
-    if-gtz v3, :cond_0
-
-    move v1, v4
-
-    :cond_0
-    invoke-virtual {v0, v1, v11}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
-
-    :goto_1
-    return-void
-
-    :cond_1
-    move-object v6, v8
-
-    if-gtz v3, :cond_2
-
-    move v3, v5
-
-    :cond_2
-    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    const/4 v10, 0x2
-
-    invoke-virtual {v7, v9, v10}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    if-le v9, v1, :cond_4
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v10, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    invoke-interface {v8, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    if-ge v10, v9, :cond_4
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    const-string v10, "android.intent.category.HOME"
-
-    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v1, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    move v3, v2
-
-    :cond_4
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    if-le v9, v4, :cond_5
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    const-string v10, "android.intent.category.HOME"
-
-    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_5
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v4, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    move v5, v2
-
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-.end method
-
-.method private setUpNextAppSwitch()V
-    .locals 12
-
-    const/4 v11, 0x0
-
-    iget-object v9, p0, Lcom/android/server/policy/PhoneWindowManager;->mContext:Landroid/content/Context;
-
-    const-string v10, "activity"
-
-    invoke-virtual {v9, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/app/ActivityManager;
-
-    const/16 v9, 0x14
-
-    invoke-virtual {v7, v9, v11}, Landroid/app/ActivityManager;->getRecentTasks(II)Ljava/util/List;
-
-    move-result-object v8
-
-    const v1, 0x7fffffff
-
-    const/4 v3, 0x0
-
-    const v4, 0x7fffffff
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x1
-
-    :goto_0
-    invoke-interface {v8}, Ljava/util/List;->size()I
-
-    move-result v9
-
-    if-lt v2, v9, :cond_3
-
-    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v10, 0xb
-
-    if-lt v9, v10, :cond_1
-
-    move-object v0, v7
-
-    if-gtz v3, :cond_0
-
-    move v1, v4
-
-    :cond_0
-    invoke-virtual {v0, v1, v11}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
-
-    :goto_1
-    return-void
-
-    :cond_1
-    move-object v6, v8
-
-    if-gtz v3, :cond_2
-
-    move v3, v5
-
-    :cond_2
-    invoke-interface {v6, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    const/4 v10, 0x2
-
-    invoke-virtual {v7, v9, v10}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    if-ge v9, v1, :cond_4
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v10, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    invoke-interface {v8, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    if-le v10, v9, :cond_4
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    const-string v10, "android.intent.category.HOME"
-
-    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v1, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    move v3, v2
-
-    :cond_4
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    if-ge v9, v4, :cond_5
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget-object v9, v9, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
-
-    const-string v10, "android.intent.category.HOME"
-
-    invoke-virtual {v9, v10}, Landroid/content/Intent;->hasCategory(Ljava/lang/String;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_5
-
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Landroid/app/ActivityManager$RecentTaskInfo;
-
-    iget v4, v9, Landroid/app/ActivityManager$RecentTaskInfo;->id:I
-
-    move v5, v2
-
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
 .end method

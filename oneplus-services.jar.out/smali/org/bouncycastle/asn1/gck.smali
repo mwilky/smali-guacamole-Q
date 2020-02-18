@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field protected Qna:Ljava/io/OutputStream;
+.field protected soa:Ljava/io/OutputStream;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/gck;->Qna:Ljava/io/OutputStream;
+    iput-object p1, p0, Lorg/bouncycastle/asn1/gck;->soa:Ljava/io/OutputStream;
 
     return-void
 .end method

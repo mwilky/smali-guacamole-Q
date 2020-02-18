@@ -111,7 +111,7 @@
 .method static synthetic cno(Lcom/android/server/irq;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/irq;->pl()V
+    invoke-direct {p0}, Lcom/android/server/irq;->ul()V
 
     return-void
 .end method
@@ -124,7 +124,23 @@
     return p0
 .end method
 
-.method private nl()I
+.method static synthetic rtg(Lcom/android/server/irq;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/irq;->Je:Z
+
+    return p0
+.end method
+
+.method static synthetic sis(Lcom/android/server/irq;)I
+    .locals 0
+
+    iget p0, p0, Lcom/android/server/irq;->mDefLowBatteryWarningLevel:I
+
+    return p0
+.end method
+
+.method private sl()I
     .locals 6
 
     const-string p0, "getFastChargeType io close exception :"
@@ -363,7 +379,15 @@
     throw v1
 .end method
 
-.method private ol()Z
+.method static synthetic ssp(Lcom/android/server/irq;)Ljava/lang/Object;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/server/irq;->mLock:Ljava/lang/Object;
+
+    return-object p0
+.end method
+
+.method private tl()Z
     .locals 6
 
     const-string p0, "Failure in reading charger type"
@@ -427,7 +451,15 @@
     return v2
 .end method
 
-.method private pl()V
+.method static synthetic tsu(Lcom/android/server/irq;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/irq;->Ke:Z
+
+    return p0
+.end method
+
+.method private ul()V
     .locals 4
 
     sget-object p0, Lcom/android/server/irq;->mContext:Landroid/content/Context;
@@ -501,14 +533,14 @@
     return-void
 .end method
 
-.method private ql()V
+.method private vl()V
     .locals 2
 
     iget-boolean v0, p0, Lcom/android/server/irq;->Le:Z
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/irq;->ol()Z
+    invoke-direct {p0}, Lcom/android/server/irq;->tl()Z
 
     move-result v0
 
@@ -546,38 +578,6 @@
 
     :cond_1
     return-void
-.end method
-
-.method static synthetic rtg(Lcom/android/server/irq;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/irq;->Je:Z
-
-    return p0
-.end method
-
-.method static synthetic sis(Lcom/android/server/irq;)I
-    .locals 0
-
-    iget p0, p0, Lcom/android/server/irq;->mDefLowBatteryWarningLevel:I
-
-    return p0
-.end method
-
-.method static synthetic ssp(Lcom/android/server/irq;)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lcom/android/server/irq;->mLock:Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method static synthetic tsu(Lcom/android/server/irq;)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcom/android/server/irq;->Ke:Z
-
-    return p0
 .end method
 
 .method static synthetic you(Lcom/android/server/irq;)I
@@ -623,7 +623,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/irq;->nl()I
+    invoke-direct {p0}, Lcom/android/server/irq;->sl()I
 
     move-result v0
 
@@ -844,7 +844,7 @@
 
     invoke-virtual {p2, v2, v0, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    invoke-direct {p0}, Lcom/android/server/irq;->pl()V
+    invoke-direct {p0}, Lcom/android/server/irq;->ul()V
 
     monitor-exit p1
 
@@ -915,7 +915,7 @@
 
     iput p1, p0, Lcom/android/server/irq;->mBatteryStatus:I
 
-    invoke-direct {p0}, Lcom/android/server/irq;->ql()V
+    invoke-direct {p0}, Lcom/android/server/irq;->vl()V
 
     return-void
 .end method

@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public HFa:I
-
-.field public IFa:I
-
-.field public JFa:I
-
 .field public flags:I
+
+.field public jGa:I
+
+.field public kGa:I
+
+.field public lGa:I
 
 
 # direct methods
@@ -204,27 +204,27 @@
     return v1
 
     :cond_3
-    iget v2, p0, Lsis/zta/zta/zta/irq;->HFa:I
+    iget v2, p0, Lsis/zta/zta/zta/irq;->jGa:I
 
-    iget v3, p1, Lsis/zta/zta/zta/irq;->HFa:I
+    iget v3, p1, Lsis/zta/zta/zta/irq;->jGa:I
 
     if-eq v2, v3, :cond_4
 
     return v1
 
     :cond_4
-    iget v2, p0, Lsis/zta/zta/zta/irq;->IFa:I
+    iget v2, p0, Lsis/zta/zta/zta/irq;->kGa:I
 
-    iget v3, p1, Lsis/zta/zta/zta/irq;->IFa:I
+    iget v3, p1, Lsis/zta/zta/zta/irq;->kGa:I
 
     if-eq v2, v3, :cond_5
 
     return v1
 
     :cond_5
-    iget p0, p0, Lsis/zta/zta/zta/irq;->JFa:I
+    iget p0, p0, Lsis/zta/zta/zta/irq;->lGa:I
 
-    iget p1, p1, Lsis/zta/zta/zta/irq;->JFa:I
+    iget p1, p1, Lsis/zta/zta/zta/irq;->lGa:I
 
     if-eq p0, p1, :cond_6
 
@@ -259,7 +259,7 @@
 
     aput-object v1, v0, v2
 
-    iget v1, p0, Lsis/zta/zta/zta/irq;->HFa:I
+    iget v1, p0, Lsis/zta/zta/zta/irq;->jGa:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -277,7 +277,7 @@
 
     aput-object v1, v0, v2
 
-    iget v1, p0, Lsis/zta/zta/zta/irq;->IFa:I
+    iget v1, p0, Lsis/zta/zta/zta/irq;->kGa:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -295,7 +295,7 @@
 
     aput-object v1, v0, v2
 
-    iget p0, p0, Lsis/zta/zta/zta/irq;->JFa:I
+    iget p0, p0, Lsis/zta/zta/zta/irq;->lGa:I
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -341,7 +341,7 @@
 
     move-result p1
 
-    iput p1, p0, Lsis/zta/zta/zta/irq;->HFa:I
+    iput p1, p0, Lsis/zta/zta/zta/irq;->jGa:I
 
     const-wide/16 v0, 0x8
 
@@ -351,7 +351,7 @@
 
     move-result p1
 
-    iput p1, p0, Lsis/zta/zta/zta/irq;->IFa:I
+    iput p1, p0, Lsis/zta/zta/zta/irq;->kGa:I
 
     const-wide/16 v0, 0xc
 
@@ -361,7 +361,7 @@
 
     move-result p1
 
-    iput p1, p0, Lsis/zta/zta/zta/irq;->JFa:I
+    iput p1, p0, Lsis/zta/zta/zta/irq;->lGa:I
 
     return-void
 .end method
@@ -409,7 +409,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lsis/zta/zta/zta/irq;->HFa:I
+    iget v1, p0, Lsis/zta/zta/zta/irq;->jGa:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -417,7 +417,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lsis/zta/zta/zta/irq;->IFa:I
+    iget v1, p0, Lsis/zta/zta/zta/irq;->kGa:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -425,7 +425,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lsis/zta/zta/zta/irq;->JFa:I
+    iget p0, p0, Lsis/zta/zta/zta/irq;->lGa:I
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -455,7 +455,7 @@
 
     add-long/2addr v0, p2
 
-    iget v2, p0, Lsis/zta/zta/zta/irq;->HFa:I
+    iget v2, p0, Lsis/zta/zta/zta/irq;->jGa:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/HwBlob;->putInt32(JI)V
 
@@ -463,7 +463,7 @@
 
     add-long/2addr v0, p2
 
-    iget v2, p0, Lsis/zta/zta/zta/irq;->IFa:I
+    iget v2, p0, Lsis/zta/zta/zta/irq;->kGa:I
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/HwBlob;->putInt32(JI)V
 
@@ -471,7 +471,7 @@
 
     add-long/2addr p2, v0
 
-    iget p0, p0, Lsis/zta/zta/zta/irq;->JFa:I
+    iget p0, p0, Lsis/zta/zta/zta/irq;->lGa:I
 
     invoke-virtual {p1, p2, p3, p0}, Landroid/os/HwBlob;->putInt32(JI)V
 

@@ -525,17 +525,17 @@
     invoke-virtual {p0, p1}, Lcom/android/server/zta/you;->setRestrictBackground(Z)V
 
     :cond_5
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object p0
 
     if-eqz p0, :cond_6
 
-    invoke-static {}, Lcom/android/server/am/les;->getInstance()Lcom/android/server/am/les;
+    invoke-static {}, Lcom/android/server/am/ivd;->getInstance()Lcom/android/server/am/ivd;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/les;->cgv(Z)V
+    invoke-virtual {p0, p1}, Lcom/android/server/am/ivd;->cgv(Z)V
 
     :cond_6
     return-void
@@ -997,7 +997,7 @@
 
     if-eqz p2, :cond_4
 
-    invoke-static {}, Lcom/android/server/wm/wtn;->Qd()Lcom/android/server/wm/wtn$zta;
+    invoke-static {}, Lcom/android/server/wm/wtn;->Vd()Lcom/android/server/wm/wtn$zta;
 
     move-result-object p1
 

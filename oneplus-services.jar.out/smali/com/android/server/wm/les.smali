@@ -12,35 +12,35 @@
 
 
 # static fields
+.field private static final NU:Z
+
+.field private static final PU:I = 0x1
+
+.field private static final QU:I = 0x2
+
 .field private static final TAG:Ljava/lang/String; = "OpScreenDecor"
-
-.field private static final mU:Z
-
-.field private static final nU:I = 0x1
-
-.field private static final oU:I = 0x2
 
 
 # instance fields
-.field private cU:Z
+.field private DU:Z
 
-.field private dU:Z
+.field private EU:Z
 
-.field private eU:Landroid/view/View;
+.field private FU:Landroid/view/View;
 
-.field private fU:Landroid/widget/ImageView;
+.field private GU:Landroid/widget/ImageView;
 
-.field private gU:Landroid/graphics/Bitmap;
+.field private HU:Landroid/graphics/Bitmap;
 
-.field private hU:Landroid/graphics/Bitmap;
+.field private IU:Landroid/graphics/Bitmap;
 
-.field private iU:Landroid/graphics/Bitmap;
+.field private JU:Landroid/graphics/Bitmap;
 
-.field private jU:Landroid/graphics/Bitmap;
+.field private KU:Landroid/graphics/Bitmap;
 
-.field public kU:Z
+.field public LU:Z
 
-.field public lU:I
+.field public MU:I
 
 .field private mContext:Landroid/content/Context;
 
@@ -63,7 +63,7 @@
 
     move-result v0
 
-    sput-boolean v0, Lcom/android/server/wm/les;->mU:Z
+    sput-boolean v0, Lcom/android/server/wm/les;->NU:Z
 
     return-void
 .end method
@@ -79,15 +79,15 @@
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/android/server/wm/les;->cU:Z
+    iput-boolean v1, p0, Lcom/android/server/wm/les;->DU:Z
 
-    iput-boolean v0, p0, Lcom/android/server/wm/les;->dU:Z
+    iput-boolean v0, p0, Lcom/android/server/wm/les;->EU:Z
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/android/server/wm/les;->fU:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/android/server/wm/les;->GU:Landroid/widget/ImageView;
 
-    iput-boolean v0, p0, Lcom/android/server/wm/les;->kU:Z
+    iput-boolean v0, p0, Lcom/android/server/wm/les;->LU:Z
 
     iput-object p1, p0, Lcom/android/server/wm/les;->mContext:Landroid/content/Context;
 
@@ -151,7 +151,7 @@
     return p0
 .end method
 
-.method private Vp()Landroid/graphics/Bitmap;
+.method private hq()Landroid/graphics/Bitmap;
     .locals 8
 
     iget-object v0, p0, Lcom/android/server/wm/les;->mContext:Landroid/content/Context;
@@ -166,7 +166,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/android/server/wm/les;->lU:I
+    iput v0, p0, Lcom/android/server/wm/les;->MU:I
 
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
@@ -202,7 +202,7 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/android/server/wm/les;->lU:I
+    iget v2, p0, Lcom/android/server/wm/les;->MU:I
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -238,7 +238,7 @@
 
     move-result v5
 
-    iget v6, p0, Lcom/android/server/wm/les;->lU:I
+    iget v6, p0, Lcom/android/server/wm/les;->MU:I
 
     const/4 v7, 0x0
 
@@ -246,7 +246,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    iget p0, p0, Lcom/android/server/wm/les;->lU:I
+    iget p0, p0, Lcom/android/server/wm/les;->MU:I
 
     int-to-float p0, p0
 
@@ -259,12 +259,12 @@
     return-object v1
 .end method
 
-.method private Wp()V
+.method private iq()V
     .locals 3
 
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->kU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->LU:Z
 
-    iget-boolean v1, p0, Lcom/android/server/wm/les;->dU:Z
+    iget-boolean v1, p0, Lcom/android/server/wm/les;->EU:Z
 
     if-ne v0, v1, :cond_0
 
@@ -279,26 +279,26 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/android/server/wm/les;->dU:Z
+    iput-boolean v0, p0, Lcom/android/server/wm/les;->EU:Z
 
-    iget-object p0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_1
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->kU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->LU:Z
 
     if-nez v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->dU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->EU:Z
 
     if-eqz v0, :cond_2
 
-    iput-boolean v2, p0, Lcom/android/server/wm/les;->dU:Z
+    iput-boolean v2, p0, Lcom/android/server/wm/les;->EU:Z
 
-    iget-object p0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     const/16 v0, 0x8
 
@@ -309,7 +309,7 @@
     return-void
 .end method
 
-.method private Xp()Landroid/view/WindowManager$LayoutParams;
+.method private jq()Landroid/view/WindowManager$LayoutParams;
     .locals 7
 
     new-instance v6, Landroid/view/WindowManager$LayoutParams;
@@ -334,7 +334,7 @@
 
     iput v0, v6, Landroid/view/WindowManager$LayoutParams;->privateFlags:I
 
-    sget-boolean v0, Lcom/android/server/wm/les;->mU:Z
+    sget-boolean v0, Lcom/android/server/wm/les;->NU:Z
 
     if-nez v0, :cond_0
 
@@ -399,24 +399,24 @@
     return-object v6
 .end method
 
-.method private Yp()V
+.method private kq()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Zp()V
+    invoke-direct {p0}, Lcom/android/server/wm/les;->lq()V
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->_p()V
+    invoke-direct {p0}, Lcom/android/server/wm/les;->mq()V
 
     return-void
 .end method
 
-.method private Zp()V
+.method private lq()V
     .locals 2
 
     iget-object v0, p0, Lcom/android/server/wm/les;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Xp()Landroid/view/WindowManager$LayoutParams;
+    invoke-direct {p0}, Lcom/android/server/wm/les;->jq()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object p0
 
@@ -425,7 +425,7 @@
     return-void
 .end method
 
-.method private _p()V
+.method private mq()V
     .locals 2
 
     iget v0, p0, Lcom/android/server/wm/les;->mRotation:I
@@ -434,9 +434,9 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->fU:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/server/wm/les;->GU:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/server/wm/les;->hU:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/android/server/wm/les;->IU:Landroid/graphics/Bitmap;
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -448,9 +448,9 @@
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->fU:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/server/wm/les;->GU:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/server/wm/les;->iU:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/android/server/wm/les;->JU:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
@@ -459,23 +459,23 @@
 
     if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->fU:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/server/wm/les;->GU:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/server/wm/les;->jU:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/android/server/wm/les;->KU:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/android/server/wm/les;->fU:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/android/server/wm/les;->GU:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/android/server/wm/les;->gU:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/android/server/wm/les;->HU:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
     :goto_1
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
-    iget-boolean p0, p0, Lcom/android/server/wm/les;->kU:Z
+    iget-boolean p0, p0, Lcom/android/server/wm/les;->LU:Z
 
     if-eqz p0, :cond_3
 
@@ -495,13 +495,13 @@
 .method private setup()V
     .locals 3
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Vp()Landroid/graphics/Bitmap;
+    invoke-direct {p0}, Lcom/android/server/wm/les;->hq()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/wm/les;->gU:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/server/wm/les;->HU:Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->gU:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/server/wm/les;->HU:Landroid/graphics/Bitmap;
 
     const/high16 v1, 0x42b40000    # 90.0f
 
@@ -509,9 +509,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/wm/les;->hU:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/server/wm/les;->IU:Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->gU:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/server/wm/les;->HU:Landroid/graphics/Bitmap;
 
     const/high16 v1, 0x43340000    # 180.0f
 
@@ -519,9 +519,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/wm/les;->iU:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/server/wm/les;->JU:Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->gU:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/android/server/wm/les;->HU:Landroid/graphics/Bitmap;
 
     const/high16 v1, 0x43870000    # 270.0f
 
@@ -529,7 +529,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/wm/les;->jU:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/android/server/wm/les;->KU:Landroid/graphics/Bitmap;
 
     iget-object v0, p0, Lcom/android/server/wm/les;->mContext:Landroid/content/Context;
 
@@ -545,9 +545,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iput-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     const v1, 0x507004a
 
@@ -557,33 +557,33 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/android/server/wm/les;->fU:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/android/server/wm/les;->GU:Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     const/16 v1, 0x100
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->_p()V
+    invoke-direct {p0}, Lcom/android/server/wm/les;->mq()V
 
     iget-object v0, p0, Lcom/android/server/wm/les;->mWindowManager:Landroid/view/WindowManager;
 
-    iget-object v1, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v1, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Xp()Landroid/view/WindowManager$LayoutParams;
+    invoke-direct {p0}, Lcom/android/server/wm/les;->jq()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     new-instance v1, Lcom/android/server/wm/bud;
 
@@ -597,7 +597,7 @@
 .method static synthetic sis(Lcom/android/server/wm/les;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Wp()V
+    invoke-direct {p0}, Lcom/android/server/wm/les;->iq()V
 
     return-void
 .end method
@@ -605,7 +605,7 @@
 .method static synthetic you(Lcom/android/server/wm/les;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Yp()V
+    invoke-direct {p0}, Lcom/android/server/wm/les;->kq()V
 
     return-void
 .end method
@@ -647,7 +647,7 @@
 .method static synthetic zta(Lcom/android/server/wm/les;)Landroid/view/View;
     .locals 0
 
-    iget-object p0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     return-object p0
 .end method
@@ -657,11 +657,11 @@
 .method protected onConfigurationChanged()V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->cU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->DU:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
@@ -694,15 +694,15 @@
 
     iput v0, p0, Lcom/android/server/wm/les;->mRotation:I
 
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->cU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->DU:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object v0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/android/server/wm/les;->Yp()V
+    invoke-direct {p0}, Lcom/android/server/wm/les;->kq()V
 
     :cond_0
     return-void
@@ -725,7 +725,7 @@
 
     move-result-object p1
 
-    iget-object p0, p0, Lcom/android/server/wm/les;->eU:Landroid/view/View;
+    iget-object p0, p0, Lcom/android/server/wm/les;->FU:Landroid/view/View;
 
     const v0, 0x507004a
 
@@ -743,18 +743,18 @@
 .method public z(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->cU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->DU:Z
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/android/server/wm/les;->kU:Z
+    iget-boolean v0, p0, Lcom/android/server/wm/les;->LU:Z
 
     if-ne p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iput-boolean p1, p0, Lcom/android/server/wm/les;->kU:Z
+    iput-boolean p1, p0, Lcom/android/server/wm/les;->LU:Z
 
     iget-object p0, p0, Lcom/android/server/wm/les;->mHandler:Lcom/android/server/wm/les$zta;
 

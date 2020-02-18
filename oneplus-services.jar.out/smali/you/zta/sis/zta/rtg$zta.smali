@@ -150,7 +150,7 @@
 
 
 # virtual methods
-.method declared-synchronized Jj()[Ljava/math/BigInteger;
+.method declared-synchronized Oj()[Ljava/math/BigInteger;
     .locals 1
 
     monitor-enter p0
@@ -183,20 +183,20 @@
     throw v0
 .end method
 
-.method public Kj()Z
+.method public Pj()Z
     .locals 1
 
     iget-object v0, p0, Lyou/zta/sis/zta/rtg;->order:Ljava/math/BigInteger;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->DCa:Ljava/math/BigInteger;
+    iget-object v0, p0, Lyou/zta/sis/zta/rtg;->fDa:Ljava/math/BigInteger;
 
     if-eqz v0, :cond_1
 
     iget-object v0, p0, Lyou/zta/sis/zta/rtg;->b:Lyou/zta/sis/zta/cno;
 
-    invoke-virtual {v0}, Lyou/zta/sis/zta/cno;->Rj()Z
+    invoke-virtual {v0}, Lyou/zta/sis/zta/cno;->Wj()Z
 
     move-result v0
 
@@ -212,7 +212,7 @@
 
     iget-object p0, p0, Lyou/zta/sis/zta/rtg;->a:Lyou/zta/sis/zta/cno;
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/cno;->Rj()Z
+    invoke-virtual {p0}, Lyou/zta/sis/zta/cno;->Wj()Z
 
     move-result p0
 
@@ -378,7 +378,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lyou/zta/sis/zta/cno;->Sj()Lyou/zta/sis/zta/cno;
+    invoke-virtual {p1}, Lyou/zta/sis/zta/cno;->Xj()Lyou/zta/sis/zta/cno;
 
     move-result-object p1
 
@@ -419,7 +419,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lyou/zta/sis/zta/cno;->Tj()Z
+    invoke-virtual {v0}, Lyou/zta/sis/zta/cno;->Yj()Z
 
     move-result v2
 
@@ -435,12 +435,12 @@
     :goto_0
     if-eq v2, p1, :cond_2
 
-    invoke-virtual {v0}, Lyou/zta/sis/zta/cno;->Pj()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v0}, Lyou/zta/sis/zta/cno;->Uj()Lyou/zta/sis/zta/cno;
 
     move-result-object v0
 
     :cond_2
-    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg;->Hj()I
+    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg;->Mj()I
 
     move-result p1
 
@@ -498,7 +498,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg;->Hj()I
+    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg;->Mj()I
 
     move-result v0
 

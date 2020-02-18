@@ -11,6 +11,10 @@
 
 
 # instance fields
+.field private Yta:[B
+
+.field private bua:Lorg/bouncycastle/asn1/ibl/vdw;
+
 .field private curve:Lyou/zta/sis/zta/rtg;
 
 .field private g:Lorg/bouncycastle/asn1/ibl/les;
@@ -18,10 +22,6 @@
 .field private h:Ljava/math/BigInteger;
 
 .field private n:Ljava/math/BigInteger;
-
-.field private uta:[B
-
-.field private yta:Lorg/bouncycastle/asn1/ibl/vdw;
 
 
 # direct methods
@@ -175,7 +175,7 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/vju;->uta:[B
+    iput-object p1, p0, Lorg/bouncycastle/asn1/ibl/vju;->Yta:[B
 
     return-void
 
@@ -226,7 +226,7 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->uta:[B
+    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->Yta:[B
 
     invoke-static {p1}, Lyou/zta/sis/zta/you;->tsu(Lyou/zta/sis/zta/rtg;)Z
 
@@ -247,7 +247,7 @@
     invoke-direct {p2, p1}, Lorg/bouncycastle/asn1/ibl/vdw;-><init>(Ljava/math/BigInteger;)V
 
     :goto_0
-    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->yta:Lorg/bouncycastle/asn1/ibl/vdw;
+    iput-object p2, p0, Lorg/bouncycastle/asn1/ibl/vju;->bua:Lorg/bouncycastle/asn1/ibl/vdw;
 
     goto :goto_1
 
@@ -431,6 +431,52 @@
 
 
 # virtual methods
+.method public Ai()Lorg/bouncycastle/asn1/ibl/les;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->g:Lorg/bouncycastle/asn1/ibl/les;
+
+    return-object p0
+.end method
+
+.method public Bi()Lorg/bouncycastle/asn1/ibl/cgv;
+    .locals 2
+
+    new-instance v0, Lorg/bouncycastle/asn1/ibl/cgv;
+
+    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->curve:Lyou/zta/sis/zta/rtg;
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Yta:[B
+
+    invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/ibl/cgv;-><init>(Lyou/zta/sis/zta/rtg;[B)V
+
+    return-object v0
+.end method
+
+.method public Ci()Lorg/bouncycastle/asn1/ibl/vdw;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->bua:Lorg/bouncycastle/asn1/ibl/vdw;
+
+    return-object p0
+.end method
+
+.method public Di()Ljava/math/BigInteger;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->h:Ljava/math/BigInteger;
+
+    return-object p0
+.end method
+
+.method public Ei()Ljava/math/BigInteger;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->n:Ljava/math/BigInteger;
+
+    return-object p0
+.end method
+
 .method public getCurve()Lyou/zta/sis/zta/rtg;
     .locals 0
 
@@ -444,7 +490,7 @@
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->g:Lorg/bouncycastle/asn1/ibl/les;
 
-    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ibl/les;->Ai()Lyou/zta/sis/zta/wtn;
+    invoke-virtual {p0}, Lorg/bouncycastle/asn1/ibl/les;->Fi()Lyou/zta/sis/zta/wtn;
 
     move-result-object p0
 
@@ -454,7 +500,7 @@
 .method public getSeed()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->uta:[B
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->Yta:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 
@@ -478,7 +524,7 @@
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
-    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->yta:Lorg/bouncycastle/asn1/ibl/vdw;
+    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->bua:Lorg/bouncycastle/asn1/ibl/vdw;
 
     invoke-virtual {v0, v1}, Lorg/bouncycastle/asn1/cno;->you(Lorg/bouncycastle/asn1/ssp;)V
 
@@ -486,7 +532,7 @@
 
     iget-object v2, p0, Lorg/bouncycastle/asn1/ibl/vju;->curve:Lyou/zta/sis/zta/rtg;
 
-    iget-object v3, p0, Lorg/bouncycastle/asn1/ibl/vju;->uta:[B
+    iget-object v3, p0, Lorg/bouncycastle/asn1/ibl/vju;->Yta:[B
 
     invoke-direct {v1, v2, v3}, Lorg/bouncycastle/asn1/ibl/cgv;-><init>(Lyou/zta/sis/zta/rtg;[B)V
 
@@ -518,52 +564,6 @@
     new-instance p0, Lorg/bouncycastle/asn1/G;
 
     invoke-direct {p0, v0}, Lorg/bouncycastle/asn1/G;-><init>(Lorg/bouncycastle/asn1/cno;)V
-
-    return-object p0
-.end method
-
-.method public vi()Lorg/bouncycastle/asn1/ibl/les;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->g:Lorg/bouncycastle/asn1/ibl/les;
-
-    return-object p0
-.end method
-
-.method public wi()Lorg/bouncycastle/asn1/ibl/cgv;
-    .locals 2
-
-    new-instance v0, Lorg/bouncycastle/asn1/ibl/cgv;
-
-    iget-object v1, p0, Lorg/bouncycastle/asn1/ibl/vju;->curve:Lyou/zta/sis/zta/rtg;
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->uta:[B
-
-    invoke-direct {v0, v1, p0}, Lorg/bouncycastle/asn1/ibl/cgv;-><init>(Lyou/zta/sis/zta/rtg;[B)V
-
-    return-object v0
-.end method
-
-.method public xi()Lorg/bouncycastle/asn1/ibl/vdw;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->yta:Lorg/bouncycastle/asn1/ibl/vdw;
-
-    return-object p0
-.end method
-
-.method public yi()Ljava/math/BigInteger;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->h:Ljava/math/BigInteger;
-
-    return-object p0
-.end method
-
-.method public zi()Ljava/math/BigInteger;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/vju;->n:Ljava/math/BigInteger;
 
     return-object p0
 .end method

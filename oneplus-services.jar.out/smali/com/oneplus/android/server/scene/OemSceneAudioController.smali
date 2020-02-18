@@ -20,11 +20,11 @@
 
 
 # instance fields
+.field private _da:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+
 .field private mAudioManager:Landroid/media/AudioManager;
 
 .field private mContext:Landroid/content/Context;
-
-.field private yda:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
 
 # direct methods
@@ -48,59 +48,56 @@
     return-void
 .end method
 
-.method private Sm()[Ljava/lang/String;
-    .locals 2
+.method private Jb(Ljava/lang/String;)[Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
+    sget-boolean p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->DEBUG:Z
 
-    if-nez v0, :cond_0
+    if-eqz p0, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mContext:Landroid/content/Context;
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    const-string v1, "audio"
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const-string v0, "parseActiveAudioUidsStr():uids="
 
-    move-result-object v0
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Landroid/media/AudioManager;
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "OemSceneAudioController"
+
+    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
+    if-eqz p1, :cond_2
 
-    if-eqz v0, :cond_1
+    const-string p0, ":"
 
-    const-string v1, "get_uid"
+    invoke-virtual {p1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-string v0, ""
-
-    :goto_0
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->zb(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
-.end method
 
-.method private Wr()V
-    .locals 1
+    :cond_2
+    :goto_0
+    const/4 p0, 0x0
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Sm()[Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->cno([Ljava/lang/String;)V
-
-    return-void
+    return-object p0
 .end method
 
 .method private cno([Ljava/lang/String;)V
@@ -195,6 +192,49 @@
     return-void
 .end method
 
+.method private en()[Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mContext:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
+
+    :cond_0
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->mAudioManager:Landroid/media/AudioManager;
+
+    if-eqz v0, :cond_1
+
+    const-string v1, "get_uid"
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getParameters(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, ""
+
+    :goto_0
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Jb(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static getInstance(Landroid/content/Context;)Lcom/oneplus/android/server/scene/OemSceneAudioController;
     .locals 1
 
@@ -214,72 +254,32 @@
     return-object p0
 .end method
 
-.method private zb(Ljava/lang/String;)[Ljava/lang/String;
+.method private gs()V
     .locals 1
 
-    sget-boolean p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->DEBUG:Z
+    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->en()[Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->cno([Ljava/lang/String;)V
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "parseActiveAudioUidsStr():uids="
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "OemSceneAudioController"
-
-    invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-string p0, ":"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
 .method static synthetic zta(Lcom/oneplus/android/server/scene/OemSceneAudioController;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->Wr()V
+    invoke-direct {p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController;->gs()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public We()Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+.method public af()Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
     .locals 1
 
-    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->yda:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    iget-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->_da:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     if-nez v0, :cond_0
 
@@ -287,10 +287,10 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;-><init>(Lcom/oneplus/android/server/scene/OemSceneAudioController;)V
 
-    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->yda:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    iput-object v0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->_da:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     :cond_0
-    iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->yda:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
+    iget-object p0, p0, Lcom/oneplus/android/server/scene/OemSceneAudioController;->_da:Lcom/oneplus/android/server/scene/OemSceneAudioController$AudioProcessesController;
 
     return-object p0
 .end method

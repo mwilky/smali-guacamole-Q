@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private Fna:Z
-
 .field private digest:I
+
+.field private hoa:Z
 
 .field private ivSize:I
 
@@ -32,7 +32,7 @@
 
     invoke-direct {p0, p1, p2}, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;-><init>(Ljava/lang/String;Lorg/bouncycastle/asn1/bvj;)V
 
-    iput-boolean p3, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->Fna:Z
+    iput-boolean p3, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->hoa:Z
 
     iput p4, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->scheme:I
 
@@ -71,9 +71,9 @@
 
     new-instance p1, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;
 
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->zna:Ljava/lang/String;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->boa:Ljava/lang/String;
 
-    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->Ena:Lorg/bouncycastle/asn1/bvj;
+    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->goa:Lorg/bouncycastle/asn1/bvj;
 
     iget v4, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->scheme:I
 
@@ -92,7 +92,7 @@
     return-object p1
 
     :cond_0
-    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->Fna:Z
+    iget-boolean p1, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->hoa:Z
 
     if-eqz p1, :cond_1
 
@@ -154,9 +154,9 @@
 
     new-instance p1, Lorg/bouncycastle/jcajce/provider/symmetric/util/BCPBEKey;
 
-    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->zna:Ljava/lang/String;
+    iget-object v2, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->boa:Ljava/lang/String;
 
-    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->Ena:Lorg/bouncycastle/asn1/bvj;
+    iget-object v3, p0, Lorg/bouncycastle/jcajce/provider/symmetric/util/ssp;->goa:Lorg/bouncycastle/asn1/bvj;
 
     iget v4, p0, Lorg/bouncycastle/jcajce/you/tsu/rtg$rtg;->scheme:I
 

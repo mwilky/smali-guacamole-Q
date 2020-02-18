@@ -16,7 +16,7 @@
     return-void
 .end method
 
-.method public static S(Ljava/lang/String;)[B
+.method public static U(Ljava/lang/String;)[B
     .locals 2
 
     :try_start_0
@@ -54,7 +54,7 @@
     return-object p0
 .end method
 
-.method static kd()V
+.method static pd()V
     .locals 5
 
     const-string v0, "RSA"

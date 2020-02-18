@@ -1,125 +1,88 @@
-.class Lcom/android/server/am/rtg;
-.super Landroid/content/BroadcastReceiver;
+.class public Lcom/android/server/am/rtg;
+.super Ljava/lang/Object;
 .source ""
 
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/am/AppRecordManagerService;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
-.end annotation
+# interfaces
+.implements Lcom/android/server/am/gwm;
 
 
-# instance fields
-.field final synthetic this$0:Lcom/android/server/am/AppRecordManagerService;
+# static fields
+.field private static final TAG:Ljava/lang/String; = "AppRecordListener"
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/am/AppRecordManagerService;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/android/server/am/rtg;->this$0:Lcom/android/server/am/AppRecordManagerService;
-
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "android.intent.action.PACKAGE_REPLACED"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
+.method public bio(IZ)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/rtg;->this$0:Lcom/android/server/am/AppRecordManagerService;
-
-    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$200(Lcom/android/server/am/AppRecordManagerService;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "android.intent.action.PACKAGE_REMOVED"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-nez p1, :cond_2
+.method public cno(IZ)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_2
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p0, p0, Lcom/android/server/am/rtg;->this$0:Lcom/android/server/am/AppRecordManagerService;
-
-    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$300(Lcom/android/server/am/AppRecordManagerService;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
-    const-string v0, "android.intent.action.PACKAGE_ADDED"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-nez p1, :cond_4
+.method public kth(IZ)V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_4
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
+.method public noteProcessStateChanged(IILjava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    move-result-object p1
+    return-void
+.end method
 
-    iget-object p0, p0, Lcom/android/server/am/rtg;->this$0:Lcom/android/server/am/AppRecordManagerService;
+.method public rtg(II)V
+    .locals 0
 
-    invoke-static {p0, p1}, Lcom/android/server/am/AppRecordManagerService;->access$400(Lcom/android/server/am/AppRecordManagerService;Ljava/lang/String;)V
+    return-void
+.end method
 
-    :cond_5
-    :goto_0
+.method public rtg(IZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public sis(IZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public ssp(IZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public tsu(II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public tsu(IZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public you(IZ)V
+    .locals 0
+
     return-void
 .end method

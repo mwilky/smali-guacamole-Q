@@ -1,80 +1,133 @@
-.class Lcom/android/server/ivd;
-.super Ljava/lang/Object;
+.class final Lcom/android/server/ivd;
+.super Ljava/lang/Thread;
 .source ""
-
-# interfaces
-.implements Landroid/app/AlarmManager$OnAlarmListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/android/server/OpPowerControllerService;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/server/OpPowerControllerService;->sendParallelHttpChinaH2Probes()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
-    name = null
+    accessFlags = 0x10
+    name = "ivd"
 .end annotation
 
 
+# static fields
+.field private static final nla:I = 0x0
+
+.field private static final ola:I = 0x1
+
+
 # instance fields
+.field private final lla:I
+
+.field private mla:Z
+
 .field final synthetic this$0:Lcom/android/server/OpPowerControllerService;
+
+.field final synthetic val$latch:Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/OpPowerControllerService;)V
+.method public constructor <init>(Lcom/android/server/OpPowerControllerService;ILjava/util/concurrent/CountDownLatch;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     iput-object p1, p0, Lcom/android/server/ivd;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lcom/android/server/ivd;->val$latch:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/android/server/ivd;->mla:Z
+
+    iput p2, p0, Lcom/android/server/ivd;->lla:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAlarm()V
+.method public Mf()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lcom/android/server/ivd;->mla:Z
+
+    return p0
+.end method
+
+.method public run()V
     .locals 4
 
-    invoke-static {}, Lcom/android/server/OpPowerControllerService;->access$000()Ljava/lang/Object;
+    iget v0, p0, Lcom/android/server/ivd;->lla:I
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    monitor-enter v0
+    iget-object v0, p0, Lcom/android/server/ivd;->this$0:Lcom/android/server/OpPowerControllerService;
 
-    :try_start_0
-    iget-object v1, p0, Lcom/android/server/ivd;->this$0:Lcom/android/server/OpPowerControllerService;
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$4900(Lcom/android/server/OpPowerControllerService;)Ljava/net/URL;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-static {v0, v1}, Lcom/android/server/OpPowerControllerService;->access$5000(Lcom/android/server/OpPowerControllerService;Ljava/net/URL;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/server/ivd;->mla:Z
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/android/server/ivd;->this$0:Lcom/android/server/OpPowerControllerService;
+
+    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$5100(Lcom/android/server/OpPowerControllerService;)Ljava/net/URL;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iget-boolean v0, p0, Lcom/android/server/ivd;->mla:Z
+
+    if-eqz v0, :cond_2
+
+    :goto_2
+    iget-object v0, p0, Lcom/android/server/ivd;->val$latch:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+
+    move-result-wide v0
 
     const-wide/16 v2, 0x0
 
-    invoke-static {v1, v2, v3}, Lcom/android/server/OpPowerControllerService;->access$102(Lcom/android/server/OpPowerControllerService;J)J
+    cmp-long v0, v0, v2
 
-    iget-object v1, p0, Lcom/android/server/ivd;->this$0:Lcom/android/server/OpPowerControllerService;
+    if-lez v0, :cond_2
 
-    invoke-static {v1}, Lcom/android/server/OpPowerControllerService;->access$200(Lcom/android/server/OpPowerControllerService;)Z
+    iget-object v0, p0, Lcom/android/server/ivd;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
-    move-result v1
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    const/4 v2, 0x1
+    goto :goto_2
 
-    if-ne v1, v2, :cond_0
+    :cond_2
+    iget-object p0, p0, Lcom/android/server/ivd;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
-    iget-object p0, p0, Lcom/android/server/ivd;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    invoke-virtual {p0}, Lcom/android/server/OpPowerControllerService;->restrictNetwork()V
-
-    :cond_0
-    monitor-exit v0
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method

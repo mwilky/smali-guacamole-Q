@@ -7,15 +7,15 @@
 
 
 # static fields
-.field static final uCa:Ljava/lang/String; = "bc_validity"
+.field static final XCa:Ljava/lang/String; = "bc_validity"
 
 
 # instance fields
-.field private DDa:Z
+.field private fEa:Z
 
-.field private EDa:Z
+.field private gEa:Z
 
-.field private FDa:Z
+.field private hEa:Z
 
 
 # direct methods
@@ -26,67 +26,67 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->DDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->fEa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->EDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->gEa:Z
 
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->FDa:Z
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->hEa:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method Ak()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->EDa:Z
-
-    return-void
-.end method
-
-.method Bk()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->DDa:Z
-
-    return-void
-.end method
-
-.method Ck()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->FDa:Z
-
-    return-void
-.end method
-
-.method xk()Z
+.method Ck()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->EDa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->gEa:Z
 
     return p0
 .end method
 
-.method yk()Z
+.method Dk()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->DDa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->fEa:Z
 
     return p0
 .end method
 
-.method zk()Z
+.method Ek()Z
     .locals 0
 
-    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->FDa:Z
+    iget-boolean p0, p0, Lyou/zta/sis/zta/oxb;->hEa:Z
 
     return p0
+.end method
+
+.method Fk()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->gEa:Z
+
+    return-void
+.end method
+
+.method Gk()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->fEa:Z
+
+    return-void
+.end method
+
+.method Hk()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lyou/zta/sis/zta/oxb;->hEa:Z
+
+    return-void
 .end method

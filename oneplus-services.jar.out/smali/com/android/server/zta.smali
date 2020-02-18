@@ -861,6 +861,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    sget-object v0, Lcom/android/server/zta;->Kb:Ljava/util/Set;
+
+    const-string v1, "com.oppo.instant.local.service"
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

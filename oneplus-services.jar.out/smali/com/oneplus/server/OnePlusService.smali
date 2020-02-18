@@ -26,7 +26,7 @@
 
 .field private mOpCommonFrontMonitor:Lcom/android/server/fto;
 
-.field private opams:Lcom/android/server/am/obl;
+.field private opams:Lcom/android/server/am/cjf;
 
 
 # direct methods
@@ -53,7 +53,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->opams:Lcom/android/server/am/obl;
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->opams:Lcom/android/server/am/cjf;
 
     sget-boolean p0, Lcom/oneplus/server/OnePlusService;->DEBUG:Z
 
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    invoke-static {p1}, Lcom/android/server/am/obl;->getAllAppControlModes(I)Ljava/util/List;
+    invoke-static {p1}, Lcom/android/server/am/cjf;->getAllAppControlModes(I)Ljava/util/List;
 
     move-result-object p0
 
@@ -126,7 +126,7 @@
 .method public getAppControlMode(Ljava/lang/String;I)I
     .locals 0
 
-    invoke-static {p1, p2}, Lcom/android/server/am/obl;->getAppControlMode(Ljava/lang/String;I)I
+    invoke-static {p1, p2}, Lcom/android/server/am/cjf;->getAppControlMode(Ljava/lang/String;I)I
 
     move-result p0
 
@@ -138,7 +138,7 @@
 
     iget-object p0, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-static {p0, p1}, Lcom/android/server/am/obl;->zta(Landroid/content/Context;I)I
+    invoke-static {p0, p1}, Lcom/android/server/am/cjf;->zta(Landroid/content/Context;I)I
 
     move-result p0
 
@@ -182,6 +182,24 @@
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object p0
+.end method
+
+.method public getGameMultiTouchList()Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/android/server/am/OnePlusGameShakeControllerInjector;->getGameMultiTouchList()Ljava/util/List;
+
+    move-result-object p0
 
     return-object p0
 .end method
@@ -353,7 +371,7 @@
 .method public setAppControlMode(Ljava/lang/String;II)I
     .locals 0
 
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/obl;->setAppControlMode(Ljava/lang/String;II)I
+    invoke-static {p1, p2, p3}, Lcom/android/server/am/cjf;->setAppControlMode(Ljava/lang/String;II)I
 
     move-result p0
 
@@ -365,7 +383,7 @@
 
     iget-object p0, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-static {p0, p1, p2}, Lcom/android/server/am/obl;->zta(Landroid/content/Context;II)I
+    invoke-static {p0, p1, p2}, Lcom/android/server/am/cjf;->zta(Landroid/content/Context;II)I
 
     move-result p0
 
@@ -402,11 +420,11 @@
 
     iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/android/server/am/obl;->getInstance(Landroid/content/Context;)Lcom/android/server/am/obl;
+    invoke-static {v0}, Lcom/android/server/am/cjf;->getInstance(Landroid/content/Context;)Lcom/android/server/am/cjf;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->opams:Lcom/android/server/am/obl;
+    iput-object v0, p0, Lcom/oneplus/server/OnePlusService;->opams:Lcom/android/server/am/cjf;
 
     iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mContext:Landroid/content/Context;
 
@@ -418,7 +436,7 @@
 
     iget-object v0, p0, Lcom/oneplus/server/OnePlusService;->mOnePlusThemeController:Lcom/oneplus/server/zta/sis;
 
-    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->yf()V
+    invoke-virtual {v0}, Lcom/oneplus/server/zta/sis;->Df()V
 
     invoke-static {}, Lcom/android/server/fto;->getInstance()Lcom/android/server/fto;
 

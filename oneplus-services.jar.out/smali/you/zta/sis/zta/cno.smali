@@ -28,13 +28,13 @@
 
 
 # virtual methods
-.method public abstract Pj()Lyou/zta/sis/zta/cno;
+.method public abstract Uj()Lyou/zta/sis/zta/cno;
 .end method
 
-.method public abstract Qj()Ljava/lang/String;
+.method public abstract Vj()Ljava/lang/String;
 .end method
 
-.method public Rj()Z
+.method public Wj()Z
     .locals 1
 
     invoke-virtual {p0}, Lyou/zta/sis/zta/cno;->bitLength()I
@@ -54,10 +54,10 @@
     return v0
 .end method
 
-.method public abstract Sj()Lyou/zta/sis/zta/cno;
+.method public abstract Xj()Lyou/zta/sis/zta/cno;
 .end method
 
-.method public Tj()Z
+.method public Yj()Z
     .locals 1
 
     invoke-virtual {p0}, Lyou/zta/sis/zta/cno;->toBigInteger()Ljava/math/BigInteger;

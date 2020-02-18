@@ -1,133 +1,76 @@
-.class final Lcom/android/server/qeg;
-.super Ljava/lang/Thread;
+.class Lcom/android/server/qeg;
+.super Landroid/util/Singleton;
 .source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/OpPowerControllerService;->sendParallelHttpChinaH2Probes()Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/server/OpPowerControllerService;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x10
-    name = "qeg"
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/util/Singleton<",
+        "Lcom/oneplus/android/power/IOpPowerController;",
+        ">;"
+    }
 .end annotation
 
 
-# static fields
-.field private static final Kka:I = 0x0
-
-.field private static final Lka:I = 0x1
-
-
-# instance fields
-.field private final Ika:I
-
-.field private Jka:Z
-
-.field final synthetic this$0:Lcom/android/server/OpPowerControllerService;
-
-.field final synthetic val$latch:Ljava/util/concurrent/CountDownLatch;
-
-
 # direct methods
-.method public constructor <init>(Lcom/android/server/OpPowerControllerService;ILjava/util/concurrent/CountDownLatch;)V
+.method constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
 
-    iput-object p1, p0, Lcom/android/server/qeg;->this$0:Lcom/android/server/OpPowerControllerService;
-
-    iput-object p3, p0, Lcom/android/server/qeg;->val$latch:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lcom/android/server/qeg;->Jka:Z
-
-    iput p2, p0, Lcom/android/server/qeg;->Ika:I
+    invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Hf()Z
-    .locals 0
+.method protected create()Lcom/oneplus/android/power/IOpPowerController;
+    .locals 2
 
-    iget-boolean p0, p0, Lcom/android/server/qeg;->Jka:Z
+    const-string p0, "powercontrol"
 
-    return p0
-.end method
+    invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
-.method public run()V
-    .locals 4
+    move-result-object p0
 
-    iget v0, p0, Lcom/android/server/qeg;->Ika:I
+    const-string v0, "OpPowerControllerService"
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    iget-object v0, p0, Lcom/android/server/qeg;->this$0:Lcom/android/server/OpPowerControllerService;
+    const-string v1, "can\'t get service binder: OpPowerController"
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$4800(Lcom/android/server/OpPowerControllerService;)Ljava/net/URL;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-static {v0, v1}, Lcom/android/server/OpPowerControllerService;->access$4900(Lcom/android/server/OpPowerControllerService;Ljava/net/URL;)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/android/server/qeg;->Jka:Z
-
-    goto :goto_1
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    const/4 v1, 0x1
+    invoke-static {p0}, Lcom/oneplus/android/power/IOpPowerController$Stub;->asInterface(Landroid/os/IBinder;)Lcom/oneplus/android/power/IOpPowerController;
 
-    if-ne v0, v1, :cond_1
+    move-result-object p0
 
-    iget-object v0, p0, Lcom/android/server/qeg;->this$0:Lcom/android/server/OpPowerControllerService;
+    if-nez p0, :cond_1
 
-    invoke-static {v0}, Lcom/android/server/OpPowerControllerService;->access$5000(Lcom/android/server/OpPowerControllerService;)Ljava/net/URL;
+    const-string v1, "can\'t get service interface: OpPowerController"
 
-    move-result-object v1
-
-    goto :goto_0
+    invoke-static {v0, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    :goto_1
-    iget-boolean v0, p0, Lcom/android/server/qeg;->Jka:Z
+    return-object p0
+.end method
 
-    if-eqz v0, :cond_2
+.method protected bridge synthetic create()Ljava/lang/Object;
+    .locals 0
 
-    :goto_2
-    iget-object v0, p0, Lcom/android/server/qeg;->val$latch:Ljava/util/concurrent/CountDownLatch;
+    invoke-virtual {p0}, Lcom/android/server/qeg;->create()Lcom/oneplus/android/power/IOpPowerController;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    move-result-object p0
 
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_2
-
-    iget-object v0, p0, Lcom/android/server/qeg;->val$latch:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    goto :goto_2
-
-    :cond_2
-    iget-object p0, p0, Lcom/android/server/qeg;->val$latch:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
+    return-object p0
 .end method

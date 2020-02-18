@@ -148,7 +148,7 @@
     return-object v0
 .end method
 
-.method private jl()Z
+.method private ol()Z
     .locals 11
 
     invoke-static {}, Lcom/android/server/OnePlusUtil;->access$000()Z
@@ -1183,7 +1183,7 @@
     monitor-enter v0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/android/server/OnePlusUtil$you;->jl()Z
+    invoke-direct {p0}, Lcom/android/server/OnePlusUtil$you;->ol()Z
 
     move-result p0
 

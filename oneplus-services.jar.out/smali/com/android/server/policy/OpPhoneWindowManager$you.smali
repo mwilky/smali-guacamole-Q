@@ -84,7 +84,7 @@
     :cond_1
     iget-object p1, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
 
     move-result-object p1
 
@@ -92,7 +92,7 @@
 
     iget-object p1, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
 
     move-result-object p1
 
@@ -100,7 +100,7 @@
 
     iget-object p1, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2100(Lcom/android/server/policy/OpPhoneWindowManager;)Z
 
     move-result p1
 
@@ -110,7 +110,7 @@
 
     iget-object v1, p1, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
 
     move-result-object p1
 
@@ -118,14 +118,14 @@
 
     iget-object p0, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p0, v0}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2002(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
+    invoke-static {p0, v0}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2102(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
 
     goto :goto_0
 
     :cond_2
     iget-object p1, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
 
     move-result-object p1
 
@@ -133,7 +133,7 @@
 
     iget-object p1, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Z
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2100(Lcom/android/server/policy/OpPhoneWindowManager;)Z
 
     move-result p1
 
@@ -143,7 +143,7 @@
 
     iget-object v2, p1, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Lcom/android/server/policy/WindowManagerPolicy$WindowManagerFuncs;
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    invoke-static {p1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
 
     move-result-object p1
 
@@ -151,12 +151,12 @@
 
     iget-object p1, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p1, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2002(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
+    invoke-static {p1, v1}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2102(Lcom/android/server/policy/OpPhoneWindowManager;Z)Z
 
     :cond_3
     iget-object p0, p0, Lcom/android/server/policy/OpPhoneWindowManager$you;->this$0:Lcom/android/server/policy/OpPhoneWindowManager;
 
-    invoke-static {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->access$1900(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
+    invoke-static {p0}, Lcom/android/server/policy/OpPhoneWindowManager;->access$2000(Lcom/android/server/policy/OpPhoneWindowManager;)Lcom/android/server/policy/vju;
 
     move-result-object p0
 

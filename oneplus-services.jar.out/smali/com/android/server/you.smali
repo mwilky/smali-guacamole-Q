@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method private Ua(Ljava/lang/String;)V
+.method private Ya(Ljava/lang/String;)V
     .locals 0
 
     iget-object p0, p0, Lcom/android/server/you;->mLocalLog:Landroid/util/LocalLog;

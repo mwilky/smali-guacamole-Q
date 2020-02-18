@@ -58,7 +58,56 @@
     return-void
 .end method
 
-.method private _k()Ljava/lang/String;
+.method static synthetic access$000()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/android/server/engineer/ywr;->TAG:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic access$202(Z)Z
+    .locals 0
+
+    sput-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
+
+    return p0
+.end method
+
+.method private bio(Ljava/io/PrintWriter;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    iget-object p1, p0, Lcom/android/server/engineer/ywr;->mContext:Landroid/content/Context;
+
+    const-string v0, "get_config_params"
+
+    invoke-direct {p0, p1, v0}, Lcom/android/server/engineer/ywr;->sis(Landroid/content/Context;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    sput-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
+
+    :goto_0
+    sget-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
+
+    if-eqz p0, :cond_0
+
+    const-wide/16 p0, 0x64
+
+    invoke-static {p0, p1}, Landroid/os/SystemClock;->sleep(J)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method private el()Ljava/lang/String;
     .locals 11
 
     new-instance v0, Ljava/io/File;
@@ -125,7 +174,7 @@
     move-object v2, v1
 
     :goto_1
-    invoke-static {}, Lcom/android/server/engineer/rtg;->sc()[B
+    invoke-static {}, Lcom/android/server/engineer/rtg;->xc()[B
 
     move-result-object v4
 
@@ -305,55 +354,6 @@
     return-object p0
 .end method
 
-.method static synthetic access$000()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/android/server/engineer/ywr;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$202(Z)Z
-    .locals 0
-
-    sput-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
-
-    return p0
-.end method
-
-.method private bio(Ljava/io/PrintWriter;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-
-    iget-object p1, p0, Lcom/android/server/engineer/ywr;->mContext:Landroid/content/Context;
-
-    const-string v0, "get_config_params"
-
-    invoke-direct {p0, p1, v0}, Lcom/android/server/engineer/ywr;->sis(Landroid/content/Context;Ljava/lang/String;)V
-
-    const/4 p0, 0x1
-
-    sput-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
-
-    :goto_0
-    sget-boolean p0, Lcom/android/server/engineer/ywr;->waitResult:Z
-
-    if-eqz p0, :cond_0
-
-    const-wide/16 p0, 0x64
-
-    invoke-static {p0, p1}, Landroid/os/SystemClock;->sleep(J)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
 .method private igw(Ljava/io/PrintWriter;)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
@@ -473,13 +473,13 @@
 
     invoke-direct {p0}, Lcom/android/server/engineer/zta;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/server/engineer/zta;->qc()V
+    invoke-virtual {p0}, Lcom/android/server/engineer/zta;->vc()V
 
     new-instance p0, Lcom/android/server/engineer/zta;
 
     invoke-direct {p0}, Lcom/android/server/engineer/zta;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/server/engineer/zta;->pc()V
+    invoke-virtual {p0}, Lcom/android/server/engineer/zta;->uc()V
 
     const-string p0, "OK"
 
@@ -689,7 +689,7 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p1
 
@@ -1224,13 +1224,13 @@
 
     aget-object v0, v0, v7
 
-    invoke-static {v1}, Lcom/android/server/engineer/qbh;->A(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/android/server/engineer/qbh;->C(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    invoke-static {v0}, Lcom/android/server/engineer/qbh;->C(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/android/server/engineer/qbh;->E(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -2572,7 +2572,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/engineer/qbh;->B(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/android/server/engineer/qbh;->D(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -2580,7 +2580,7 @@
 
     const-string p1, "/mnt/vendor/persist/engineermode/oem_serial_no"
 
-    invoke-static {p1, p0}, Lcom/android/server/engineer/qbh;->ssp(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p1, p0}, Lcom/android/server/engineer/qbh;->cno(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
 
@@ -2726,7 +2726,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/engineer/qbh;->z(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/android/server/engineer/qbh;->B(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -2782,7 +2782,7 @@
 
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->vc()Ljava/lang/Object;
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Ac()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3078,7 +3078,7 @@
     goto/16 :goto_9
 
     :pswitch_0
-    invoke-direct {p0}, Lcom/android/server/engineer/ywr;->_k()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/android/server/engineer/ywr;->el()Ljava/lang/String;
 
     move-result-object p0
 
@@ -3192,7 +3192,7 @@
     goto :goto_2
 
     :pswitch_3
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p0
 
@@ -3293,7 +3293,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/android/server/engineer/qbh;->B(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/android/server/engineer/qbh;->D(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -3425,7 +3425,7 @@
     goto/16 :goto_3
 
     :pswitch_c
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p0
 
@@ -3434,7 +3434,7 @@
     return-void
 
     :cond_a
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result p0
 
@@ -3648,7 +3648,7 @@
     goto/16 :goto_8
 
     :pswitch_0
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p0
 
@@ -4623,7 +4623,7 @@
     goto/16 :goto_7
 
     :cond_3
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p0
 
@@ -4659,7 +4659,7 @@
 
     invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lcom/android/server/engineer/qbh;->vc()Ljava/lang/Object;
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Ac()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -4765,7 +4765,7 @@
     goto/16 :goto_7
 
     :cond_6
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result p1
 
@@ -4837,7 +4837,7 @@
     goto :goto_5
 
     :cond_7
-    invoke-static {}, Lcom/android/server/engineer/qbh;->vc()Ljava/lang/Object;
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Ac()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -6422,7 +6422,7 @@
     goto/16 :goto_18
 
     :pswitch_6
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result v3
 
@@ -6441,7 +6441,7 @@
 
     :cond_18
     :try_start_8
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result v3
 
@@ -6732,7 +6732,7 @@
     goto/16 :goto_18
 
     :pswitch_9
-    invoke-static {}, Lcom/android/server/engineer/qbh;->xc()Z
+    invoke-static {}, Lcom/android/server/engineer/qbh;->Cc()Z
 
     move-result v2
     :try_end_f
@@ -6790,7 +6790,7 @@
 
     :catch_6
     :try_start_11
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result v2
 
@@ -6865,7 +6865,7 @@
 
     if-eqz v2, :cond_23
 
-    invoke-static {v2}, Lcom/android/server/engineer/qbh;->z(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/android/server/engineer/qbh;->B(Ljava/lang/String;)Z
 
     move-result v3
 

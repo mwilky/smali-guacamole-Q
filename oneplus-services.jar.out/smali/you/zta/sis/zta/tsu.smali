@@ -18,13 +18,13 @@
 
 
 # instance fields
+.field final synthetic YCa:I
+
+.field final synthetic ZCa:I
+
+.field final synthetic _Ca:[B
+
 .field final synthetic this$0:Lyou/zta/sis/zta/rtg;
-
-.field final synthetic vCa:I
-
-.field final synthetic wCa:I
-
-.field final synthetic xCa:[B
 
 
 # direct methods
@@ -33,11 +33,11 @@
 
     iput-object p1, p0, Lyou/zta/sis/zta/tsu;->this$0:Lyou/zta/sis/zta/rtg;
 
-    iput p2, p0, Lyou/zta/sis/zta/tsu;->vCa:I
+    iput p2, p0, Lyou/zta/sis/zta/tsu;->YCa:I
 
-    iput p3, p0, Lyou/zta/sis/zta/tsu;->wCa:I
+    iput p3, p0, Lyou/zta/sis/zta/tsu;->ZCa:I
 
-    iput-object p4, p0, Lyou/zta/sis/zta/tsu;->xCa:[B
+    iput-object p4, p0, Lyou/zta/sis/zta/tsu;->_Ca:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,7 +49,7 @@
 .method public getSize()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/tsu;->vCa:I
+    iget p0, p0, Lyou/zta/sis/zta/tsu;->YCa:I
 
     return p0
 .end method
@@ -57,7 +57,7 @@
 .method public rtg(I)Lyou/zta/sis/zta/wtn;
     .locals 11
 
-    iget v0, p0, Lyou/zta/sis/zta/tsu;->wCa:I
+    iget v0, p0, Lyou/zta/sis/zta/tsu;->ZCa:I
 
     new-array v1, v0, [B
 
@@ -70,7 +70,7 @@
     move v4, v3
 
     :goto_0
-    iget v5, p0, Lyou/zta/sis/zta/tsu;->vCa:I
+    iget v5, p0, Lyou/zta/sis/zta/tsu;->YCa:I
 
     const/4 v6, 0x1
 
@@ -85,13 +85,13 @@
     move v6, v2
 
     :goto_1
-    iget v7, p0, Lyou/zta/sis/zta/tsu;->wCa:I
+    iget v7, p0, Lyou/zta/sis/zta/tsu;->ZCa:I
 
     if-ge v6, v7, :cond_0
 
     aget-byte v8, v1, v6
 
-    iget-object v9, p0, Lyou/zta/sis/zta/tsu;->xCa:[B
+    iget-object v9, p0, Lyou/zta/sis/zta/tsu;->_Ca:[B
 
     add-int v10, v4, v6
 

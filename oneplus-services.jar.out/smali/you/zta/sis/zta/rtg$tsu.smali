@@ -15,19 +15,19 @@
 
 
 # static fields
-.field private static final QCa:I = 0x6
+.field private static final sDa:I = 0x6
 
 
 # instance fields
-.field private Jna:I
+.field private loa:I
 
-.field private MCa:I
+.field private oDa:I
 
-.field private NCa:I
+.field private pDa:I
 
-.field private OCa:I
+.field private qDa:I
 
-.field private PCa:Lyou/zta/sis/zta/wtn$sis;
+.field private rDa:Lyou/zta/sis/zta/wtn$sis;
 
 
 # direct methods
@@ -62,17 +62,17 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Lyou/zta/sis/zta/rtg$zta;-><init>(IIII)V
 
-    iput p1, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iput p1, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
-    iput p2, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iput p2, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
-    iput p3, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iput p3, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
-    iput p4, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iput p4, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     iput-object p7, p0, Lyou/zta/sis/zta/rtg;->order:Ljava/math/BigInteger;
 
-    iput-object p8, p0, Lyou/zta/sis/zta/rtg;->DCa:Ljava/math/BigInteger;
+    iput-object p8, p0, Lyou/zta/sis/zta/rtg;->fDa:Ljava/math/BigInteger;
 
     new-instance p1, Lyou/zta/sis/zta/wtn$sis;
 
@@ -82,7 +82,7 @@
 
     invoke-direct {p1, p0, p2, p2, p3}, Lyou/zta/sis/zta/wtn$sis;-><init>(Lyou/zta/sis/zta/rtg;Lyou/zta/sis/zta/cno;Lyou/zta/sis/zta/cno;Z)V
 
-    iput-object p1, p0, Lyou/zta/sis/zta/rtg$tsu;->PCa:Lyou/zta/sis/zta/wtn$sis;
+    iput-object p1, p0, Lyou/zta/sis/zta/rtg$tsu;->rDa:Lyou/zta/sis/zta/wtn$sis;
 
     invoke-virtual {p0, p5}, Lyou/zta/sis/zta/rtg$tsu;->dma(Ljava/math/BigInteger;)Lyou/zta/sis/zta/cno;
 
@@ -98,7 +98,7 @@
 
     const/4 p1, 0x6
 
-    iput p1, p0, Lyou/zta/sis/zta/rtg;->yCa:I
+    iput p1, p0, Lyou/zta/sis/zta/rtg;->aDa:I
 
     return-void
 .end method
@@ -108,17 +108,17 @@
 
     invoke-direct {p0, p1, p2, p3, p4}, Lyou/zta/sis/zta/rtg$zta;-><init>(IIII)V
 
-    iput p1, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iput p1, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
-    iput p2, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iput p2, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
-    iput p3, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iput p3, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
-    iput p4, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iput p4, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     iput-object p7, p0, Lyou/zta/sis/zta/rtg;->order:Ljava/math/BigInteger;
 
-    iput-object p8, p0, Lyou/zta/sis/zta/rtg;->DCa:Ljava/math/BigInteger;
+    iput-object p8, p0, Lyou/zta/sis/zta/rtg;->fDa:Ljava/math/BigInteger;
 
     new-instance p1, Lyou/zta/sis/zta/wtn$sis;
 
@@ -128,7 +128,7 @@
 
     invoke-direct {p1, p0, p2, p2, p3}, Lyou/zta/sis/zta/wtn$sis;-><init>(Lyou/zta/sis/zta/rtg;Lyou/zta/sis/zta/cno;Lyou/zta/sis/zta/cno;Z)V
 
-    iput-object p1, p0, Lyou/zta/sis/zta/rtg$tsu;->PCa:Lyou/zta/sis/zta/wtn$sis;
+    iput-object p1, p0, Lyou/zta/sis/zta/rtg$tsu;->rDa:Lyou/zta/sis/zta/wtn$sis;
 
     iput-object p5, p0, Lyou/zta/sis/zta/rtg;->a:Lyou/zta/sis/zta/cno;
 
@@ -136,7 +136,7 @@
 
     const/4 p1, 0x6
 
-    iput p1, p0, Lyou/zta/sis/zta/rtg;->yCa:I
+    iput p1, p0, Lyou/zta/sis/zta/rtg;->aDa:I
 
     return-void
 .end method
@@ -196,25 +196,25 @@
 .method static synthetic zta(Lyou/zta/sis/zta/rtg$tsu;)I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
     return p0
 .end method
 
 
 # virtual methods
-.method protected Dj()Lyou/zta/sis/zta/rtg;
+.method protected Ij()Lyou/zta/sis/zta/rtg;
     .locals 10
 
     new-instance v9, Lyou/zta/sis/zta/rtg$tsu;
 
-    iget v1, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iget v1, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
-    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
-    iget v3, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iget v3, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
-    iget v4, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iget v4, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     iget-object v5, p0, Lyou/zta/sis/zta/rtg;->a:Lyou/zta/sis/zta/cno;
 
@@ -222,7 +222,7 @@
 
     iget-object v7, p0, Lyou/zta/sis/zta/rtg;->order:Ljava/math/BigInteger;
 
-    iget-object v8, p0, Lyou/zta/sis/zta/rtg;->DCa:Ljava/math/BigInteger;
+    iget-object v8, p0, Lyou/zta/sis/zta/rtg;->fDa:Ljava/math/BigInteger;
 
     move-object v0, v9
 
@@ -231,10 +231,10 @@
     return-object v9
 .end method
 
-.method protected Fj()Lyou/zta/sis/zta/bio;
+.method protected Kj()Lyou/zta/sis/zta/bio;
     .locals 1
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg$zta;->Kj()Z
+    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg$zta;->Pj()Z
 
     move-result v0
 
@@ -247,45 +247,45 @@
     return-object p0
 
     :cond_0
-    invoke-super {p0}, Lyou/zta/sis/zta/rtg;->Fj()Lyou/zta/sis/zta/bio;
+    invoke-super {p0}, Lyou/zta/sis/zta/rtg;->Kj()Lyou/zta/sis/zta/bio;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public Lj()I
+.method public Qj()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
     return p0
 .end method
 
-.method public Mj()I
+.method public Rj()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
     return p0
 .end method
 
-.method public Nj()I
+.method public Sj()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     return p0
 .end method
 
-.method public Oj()Z
+.method public Tj()Z
     .locals 1
 
-    iget v0, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iget v0, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
     if-nez v0, :cond_0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     if-nez p0, :cond_0
 
@@ -305,13 +305,13 @@
 
     new-instance v6, Lyou/zta/sis/zta/cno$sis;
 
-    iget v1, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iget v1, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
-    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
-    iget v3, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iget v3, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
-    iget v4, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iget v4, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     move-object v0, v6
 
@@ -325,7 +325,7 @@
 .method public getFieldSize()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
     return p0
 .end method
@@ -333,7 +333,7 @@
 .method public getInfinity()Lyou/zta/sis/zta/wtn;
     .locals 0
 
-    iget-object p0, p0, Lyou/zta/sis/zta/rtg$tsu;->PCa:Lyou/zta/sis/zta/wtn$sis;
+    iget-object p0, p0, Lyou/zta/sis/zta/rtg$tsu;->rDa:Lyou/zta/sis/zta/wtn$sis;
 
     return-object p0
 .end method
@@ -341,7 +341,7 @@
 .method public getM()I
     .locals 0
 
-    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iget p0, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
     return p0
 .end method
@@ -368,13 +368,13 @@
 .method public you([Lyou/zta/sis/zta/wtn;II)Lyou/zta/sis/zta/kth;
     .locals 7
 
-    iget v0, p0, Lyou/zta/sis/zta/rtg$tsu;->Jna:I
+    iget v0, p0, Lyou/zta/sis/zta/rtg$tsu;->loa:I
 
     add-int/lit8 v0, v0, 0x3f
 
     ushr-int/lit8 v4, v0, 0x6
 
-    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg$tsu;->Oj()Z
+    invoke-virtual {p0}, Lyou/zta/sis/zta/rtg$tsu;->Tj()Z
 
     move-result v0
 
@@ -388,7 +388,7 @@
 
     new-array v0, v2, [I
 
-    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
     aput v2, v0, v3
 
@@ -399,15 +399,15 @@
 
     new-array v0, v0, [I
 
-    iget v5, p0, Lyou/zta/sis/zta/rtg$tsu;->MCa:I
+    iget v5, p0, Lyou/zta/sis/zta/rtg$tsu;->oDa:I
 
     aput v5, v0, v3
 
-    iget v5, p0, Lyou/zta/sis/zta/rtg$tsu;->NCa:I
+    iget v5, p0, Lyou/zta/sis/zta/rtg$tsu;->pDa:I
 
     aput v5, v0, v2
 
-    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->OCa:I
+    iget v2, p0, Lyou/zta/sis/zta/rtg$tsu;->qDa:I
 
     aput v2, v0, v1
 
@@ -429,7 +429,7 @@
 
     aget-object v1, p1, v1
 
-    invoke-virtual {v1}, Lyou/zta/sis/zta/wtn;->ck()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v1}, Lyou/zta/sis/zta/wtn;->hk()Lyou/zta/sis/zta/cno;
 
     move-result-object v2
 
@@ -441,7 +441,7 @@
 
     add-int/2addr v0, v4
 
-    invoke-virtual {v1}, Lyou/zta/sis/zta/wtn;->dk()Lyou/zta/sis/zta/cno;
+    invoke-virtual {v1}, Lyou/zta/sis/zta/wtn;->ik()Lyou/zta/sis/zta/cno;
 
     move-result-object v1
 

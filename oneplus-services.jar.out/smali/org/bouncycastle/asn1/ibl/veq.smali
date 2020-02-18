@@ -182,7 +182,15 @@
     return-object p0
 .end method
 
-.method public ti()Z
+.method public toASN1Primitive()Lorg/bouncycastle/asn1/vdb;
+    .locals 0
+
+    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/veq;->params:Lorg/bouncycastle/asn1/vdb;
+
+    return-object p0
+.end method
+
+.method public yi()Z
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/veq;->params:Lorg/bouncycastle/asn1/vdb;
@@ -192,15 +200,7 @@
     return p0
 .end method
 
-.method public toASN1Primitive()Lorg/bouncycastle/asn1/vdb;
-    .locals 0
-
-    iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/veq;->params:Lorg/bouncycastle/asn1/vdb;
-
-    return-object p0
-.end method
-
-.method public ui()Z
+.method public zi()Z
     .locals 0
 
     iget-object p0, p0, Lorg/bouncycastle/asn1/ibl/veq;->params:Lorg/bouncycastle/asn1/vdb;

@@ -182,11 +182,11 @@
 
     new-instance v0, Lcom/android/server/dma$zta;
 
-    invoke-static {}, Lcom/android/server/am/vju;->getInstance()Lcom/android/server/am/vju;
+    invoke-static {}, Lcom/android/server/am/vdw;->getInstance()Lcom/android/server/am/vdw;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/server/am/vju;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v1}, Lcom/android/server/am/vdw;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 

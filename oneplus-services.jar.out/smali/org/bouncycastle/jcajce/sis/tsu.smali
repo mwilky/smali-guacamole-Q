@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final sBa:[B
+.field private final VBa:[B
 
 
 # direct methods
@@ -20,17 +20,17 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/tsu;->sBa:[B
+    iput-object p1, p0, Lorg/bouncycastle/jcajce/sis/tsu;->VBa:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public tj()[B
+.method public yj()[B
     .locals 0
 
-    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/tsu;->sBa:[B
+    iget-object p0, p0, Lorg/bouncycastle/jcajce/sis/tsu;->VBa:[B
 
     invoke-static {p0}, Lorg/bouncycastle/util/zta;->vdb([B)[B
 

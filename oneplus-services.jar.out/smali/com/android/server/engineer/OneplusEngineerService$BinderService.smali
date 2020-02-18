@@ -589,7 +589,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/engineer/rtg;->x(Ljava/lang/String;)[B
+    invoke-static {p1}, Lcom/android/server/engineer/rtg;->z(Ljava/lang/String;)[B
 
     move-result-object p0
 
@@ -616,7 +616,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/engineer/rtg;->sc()[B
+    invoke-static {}, Lcom/android/server/engineer/rtg;->xc()[B
 
     move-result-object p0
 
@@ -863,7 +863,7 @@
     return p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/engineer/rtg;->rc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->wc()Z
 
     move-result p0
 
@@ -953,7 +953,7 @@
     return p0
 
     :cond_0
-    invoke-static {}, Lcom/android/server/engineer/rtg;->tc()Z
+    invoke-static {}, Lcom/android/server/engineer/rtg;->yc()Z
 
     move-result p0
 
@@ -1051,7 +1051,7 @@
     return p0
 
     :cond_0
-    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->rtg(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p1, p2}, Lcom/android/server/engineer/rtg;->ssp(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
