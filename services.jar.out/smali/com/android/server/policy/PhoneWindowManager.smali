@@ -5559,12 +5559,6 @@
 
     iput v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
 
-    invoke-static {p1}, Lcom/android/server/policy/OpPowerKeyLaunchInjector;->interceptPowerKeyDown(Landroid/view/KeyEvent;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_12
-
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -5615,19 +5609,13 @@
     :cond_b
     iget-boolean v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mSupportLongPressPowerWhenNonInteractive:Z
 
-    if-eqz v8, :cond_d
+    if-eqz v8, :cond_e
 
-    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getResolvedLongPressOnPowerBehavior()I
+    invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->hasLongPressOnPowerBehavior()Z
 
     move-result v8
 
-    iput v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    iget v8, p0, Lcom/android/server/policy/PhoneWindowManager;->mResolvedLongPressOnPowerBehavior:I
-
-    const/4 v3, 0x6
-
-    if-ne v8, v3, :cond_e
+    if-eqz v8, :cond_e
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getFlags()I
 
@@ -5660,7 +5648,7 @@
 
     invoke-direct {p0, v8, v9}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
 
-    :cond_mw2    
+    :cond_mw2
     iget-object v6, p0, Lcom/android/server/policy/PhoneWindowManager;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v6, v7}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -5719,18 +5707,7 @@
     move-result-wide v8
 
     invoke-direct {p0, v8, v9}, Lcom/android/server/policy/PhoneWindowManager;->wakeUpFromPowerKey(J)V
-
-    invoke-static {p1}, Lcom/android/server/policy/OpPowerKeyLaunchInjector;->interceptPowerKeyDown(Landroid/view/KeyEvent;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_f
-
-    iput-boolean v0, p0, Lcom/android/server/policy/PhoneWindowManager;->mBeganFromNonInteractive:Z
-
-    goto :goto_4
-
-    :cond_f
+    
     invoke-direct {p0}, Lcom/android/server/policy/PhoneWindowManager;->getMaxMultiPressPowerCount()I
 
     move-result v5
