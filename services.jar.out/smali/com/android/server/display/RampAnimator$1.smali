@@ -377,7 +377,7 @@
 
     move-result-object v5
 
-    invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    #invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_4
 
@@ -537,7 +537,7 @@
 
     move-result-object v5
 
-    invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    #invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_4
 
@@ -586,7 +586,7 @@
 
     move-result-object v5
 
-    invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    #invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_4
 
@@ -701,7 +701,7 @@
 
     move-result-object v5
 
-    invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    #invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
 
@@ -766,7 +766,7 @@
 
     move-result-object v5
 
-    invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    #invoke-static {v11, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_d
     :goto_4
