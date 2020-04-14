@@ -631,6 +631,8 @@
 
 .method public animateTo(II)Z
     .locals 5
+    
+    goto :goto_mw
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -655,7 +657,8 @@
     const-string v1, "RampAnimator"
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    
+    :goto_mw
     const/4 v0, -0x1
 
     const/4 v1, 0x0
