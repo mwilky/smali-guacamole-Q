@@ -1656,7 +1656,7 @@ Möchtest du die Seite schließen?"</string>
     <string name="wfcSpnFormat_wifi_calling">WLAN-Telefonie</string>
     <string name="wfcSpnFormat_wifi_calling_bar_spn">WLAN-Telefonie | %s</string>
     <string name="wfcSpnFormat_wifi_calling_wo_hyphen">WLAN-Telefonie</string>
-    <string name="wfcSpnFormat_wlan_call">WLAN-Anruf</string>
+    <string name="wfcSpnFormat_wlan_call">WLAN Call</string>
     <string name="wfc_mode_cellular_preferred_summary">Über Mobilfunknetz anrufen</string>
     <string name="wfc_mode_wifi_only_summary">Nur WLAN</string>
     <string name="wfc_mode_wifi_preferred_summary">Anruf über WLAN</string>

@@ -338,6 +338,7 @@
     <string name="config_carrierPackage_6">NOPACK</string>
     <string name="config_carrierPackage_7">NOPACK</string>
     <string name="config_carrierPackage_8">NOPACK</string>
+    <string name="config_chinadefaultAssistant">com.heytap.speechassist</string>
     <string name="config_chooseAccountActivity">android/android.accounts.ChooseAccountActivity</string>
     <string name="config_chooseTypeAndAccountActivity">android/android.accounts.ChooseTypeAndAccountActivity</string>
     <string name="config_chooserActivity">com.android.systemui/com.android.systemui.chooser.ChooserActivity</string>
@@ -1786,6 +1787,7 @@ Listening at high volume for long periods may damage your hearing."</string>
     <string name="status_bar_vowifi">vowifi</string>
     <string name="status_bar_vpn">vpn</string>
     <string name="status_bar_wifi">wifi</string>
+    <string name="status_bar_wlb">wlb</string>
     <string name="status_bar_zen">zen</string>
     <string name="stk_cc_ss_to_dial">SS request changed to regular call</string>
     <string name="stk_cc_ss_to_dial_video">SS request changed to video call</string>

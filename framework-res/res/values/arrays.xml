@@ -430,6 +430,7 @@
         <item>@string/status_bar_data_saver</item>
         <item>@string/status_bar_ime</item>
         <item>@string/status_bar_sync_failing</item>
+        <item>@string/status_bar_wlb</item>
         <item>@string/status_bar_sync_active</item>
         <item>@string/status_bar_nfc</item>
         <item>@string/status_bar_tty</item>
