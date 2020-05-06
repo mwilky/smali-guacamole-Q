@@ -2355,12 +2355,6 @@
     move-result v1
 
     if-eqz v1, :cond_f
-    
-    sget-boolean v1, Lcom/android/server/SystemServer;->mDisableHouston:Z
-    
-    if-nez v1, :cond_f
-    
-    invoke-static {}, Lcom/oneplus/android/server/context/OneplusContextStubImpl;->logHouston()V
 
     invoke-static {}, Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;->getInstance()Lcom/oneplus/houston/apkserver/bridge/HoustonProcessManager;
 
@@ -2443,19 +2437,5 @@
 
     :cond_12
     :goto_0
-    return-void
-.end method
-
-.method public static logHouston()V
-    .registers 2
-
-    .line 8
-    const-string v0, "mwilky"
-
-    const-string v1, "houston enabled"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 9
     return-void
 .end method
