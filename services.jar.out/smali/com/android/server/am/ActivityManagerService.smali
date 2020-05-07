@@ -2007,9 +2007,14 @@
     invoke-static {v0}, Lcom/android/internal/os/ExtProcessCpuTrackerInjector;->initInstance(Lcom/android/internal/os/ProcessCpuTracker;)V
 
     iget-object v0, v7, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
+    
+    sget-boolean v4, Lcom/android/server/SystemServer;->mDisableHouston:Z
+    
+    if-nez v4, :cond_disable
 
     invoke-static {v7, v0}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->initialize(Lcom/android/server/am/ActivityManagerService;Landroid/content/Context;)V
 
+    :cond_disable
     invoke-static {}, Lcom/android/server/am/ActivityManagerServiceInjector;->addRestartWhitelist()V
 
     new-instance v0, Lcom/android/server/am/ActivityManagerService$7;
@@ -75534,9 +75539,16 @@
     iget-object v4, v3, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
 
     invoke-static {v1, v4}, Lcom/android/server/am/EmbryoManagerInjector;->initiate(Landroid/content/Context;Landroid/os/Handler;)V
+    
+    sget-boolean v4, Lcom/android/server/SystemServer;->mDisableHouston:Z
+    
+    if-nez v4, :cond_disable
 
     invoke-static {}, Lcom/oneplus/houston/apkserver/bridge/HoustonInjector;->systemReady()V
+    
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->logHouston()V
 
+    :cond_disable
     invoke-direct/range {p0 .. p0}, Lcom/android/server/am/ActivityManagerService;->changedDefaultTime()V
 
     iget-object v1, v3, Lcom/android/server/am/ActivityManagerService;->mActivityTaskManager:Lcom/android/server/wm/ActivityTaskManagerService;
@@ -82168,5 +82180,19 @@
     move/from16 v12, v20
 
     :goto_1f
+    return-void
+.end method
+
+.method public static logHouston()V
+    .registers 2
+
+    .line 8
+    const-string v0, "mwilky"
+
+    const-string v1, "houston enabled"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 9
     return-void
 .end method

@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static mDisableHouston:Z
+
 .field private static final ACCESSIBILITY_MANAGER_SERVICE_CLASS:Ljava/lang/String; = "com.android.server.accessibility.AccessibilityManagerService$Lifecycle"
 
 .field private static final ACCOUNT_SERVICE_CLASS:Ljava/lang/String; = "com.android.server.accounts.AccountManagerService$Lifecycle"
@@ -2837,6 +2839,8 @@
     invoke-static {v0, v7, v6}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     :cond_7
+    invoke-direct {v5}, Lcom/android/server/SystemServer;->setDisableHouston()V
+    
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -7264,5 +7268,38 @@
     :goto_20
     invoke-static {}, Lcom/android/server/SystemServer;->traceEnd()V
 
+    return-void
+.end method
+
+.method private setDisableHouston()V
+    .registers 5
+
+    .line 14
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mSystemContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    .line 15
+    .local v0, "ContentResolver":Landroid/content/ContentResolver;
+    const/4 v1, 0x0
+
+    const-string v2, "tweaks_disable_houston"
+
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_11
+
+    move v1, v3
+
+    :cond_11
+    sput-boolean v1, Lcom/android/server/SystemServer;->mDisableHouston:Z
+
+    .line 16
     return-void
 .end method
