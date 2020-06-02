@@ -667,13 +667,13 @@
 
     if-eqz v14, :cond_2
 
-    const v15, 0x7f030142
+    const v15, 0x7f03009a
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mMenuLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f030143
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
@@ -682,15 +682,27 @@
 
     if-eqz v14, :cond_3
 
-    const v15, 0x7f030142
+    const-string v1, "navigation_bar_keys_recents_action_entries"
 
-    invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntries(I)V
+    const-string v2, "array"
+
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    
+    move-result v1
+
+    invoke-virtual {v14, v1}, Landroidx/preference/ListPreference;->setEntries(I)V
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mMenuDoubleTapAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f03009e
+    const-string v1, "navigation_bar_keys_recents_action_values"
 
-    invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
+    const-string v2, "array"
+
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    
+    move-result v1
+
+    invoke-virtual {v14, v1}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
     :cond_3
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mBackLongPressAction:Landroidx/preference/ListPreference;
@@ -703,7 +715,7 @@
 
     iget-object v14, v0, Lcom/oneplus/settings/OPButtonsSettings;->mBackLongPressAction:Landroidx/preference/ListPreference;
 
-    const v15, 0x7f030143
+    const v15, 0x7f03009e
 
     invoke-virtual {v14, v15}, Landroidx/preference/ListPreference;->setEntryValues(I)V
 
