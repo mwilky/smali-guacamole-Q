@@ -143,7 +143,13 @@
     
     iget-object v3, p0, Lcom/oneplus/settings/aboutphone/OPAboutPhoneHardWareController;->mHardWareInfoView:Landroid/view/View;
 
-    const v4, 0x7f0a07b1
+    const-string v4, "renovate_message"
+
+    const-string v2, "id"
+
+    invoke-static {v4, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    
+    move-result v4
 
     invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
