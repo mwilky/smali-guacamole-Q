@@ -2813,7 +2813,34 @@
 .end method
 
 .method public static is18857Project()Z
-    .locals 3
+    .registers 4
+
+    .line 28
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    sget-object v1, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
+
+    invoke-virtual {v1}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const-string v2, "string"
+
+    const-string v3, "oneplus_oneplus_model_18857_for_cn_guacamoleb"
+
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_65
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -2823,9 +2850,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f120e1d
+    const-string v3, "oneplus_oneplus_model_18857_for_in_guacamoleb"
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2833,7 +2864,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_65
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -2843,9 +2874,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f120e1f
+    const-string v3, "oneplus_oneplus_model_18857_for_eu_guacamoleb"
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2853,7 +2888,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_65
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
@@ -2863,7 +2898,11 @@
 
     move-result-object v1
 
-    const v2, 0x7f120e1e
+    const-string v3, "oneplus_oneplus_model_18857_for_us_guacamoleb"
+
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2873,37 +2912,19 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_63
 
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    goto :goto_65
 
-    sget-object v1, Lcom/oneplus/settings/SettingsBaseApplication;->mApplication:Landroid/app/Application;
-
-    invoke-virtual {v1}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f120e20
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
+    .line 31
+    :cond_63
     const/4 v0, 0x0
 
     return v0
 
-    :cond_1
-    :goto_0
+    .line 29
+    :cond_65
+    :goto_65
     const/4 v0, 0x1
 
     return v0

@@ -1649,6 +1649,10 @@
         <item>@string/oneplus_oneplus_model_18827_for_eu</item>
         <item>@string/oneplus_oneplus_model_18825_for_us</item>
         <item>@string/oneplus_oneplus_model_19803_for_cn</item>
+        <item>@string/oneplus_oneplus_model_18857_for_cn_guacamoleb</item>
+        <item>@string/oneplus_oneplus_model_18857_for_eu_guacamoleb</item>
+        <item>@string/oneplus_oneplus_model_18857_for_in_guacamoleb</item>
+        <item>@string/oneplus_oneplus_model_18857_for_us_guacamoleb</item>        
     </string-array>
     <string-array name="oneplus_h2_pre_installed_app_company">
         <item>高德软件有限公司</item>

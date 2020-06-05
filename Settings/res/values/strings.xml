@@ -7030,4 +7030,8 @@ Update settings to:
     <string name="hardware_keys_action_previous_app">Switch to previous app</string>
     <string name="hardware_keys_action_default_double_recents">Nothing (Switch to previous app)</string>
     <string name="renovate_version">RENOVATE ICE version</string>
+    <string name="oneplus_oneplus_model_18857_for_cn_guacamoleb">GM1900</string>
+    <string name="oneplus_oneplus_model_18857_for_eu_guacamoleb">GM1903</string>
+    <string name="oneplus_oneplus_model_18857_for_in_guacamoleb">GM1901</string>
+    <string name="oneplus_oneplus_model_18857_for_us_guacamoleb">GM1905</string>
 </resources>
