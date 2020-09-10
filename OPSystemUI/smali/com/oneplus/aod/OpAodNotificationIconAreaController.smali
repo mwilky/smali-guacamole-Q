@@ -285,16 +285,16 @@
 
     :cond_2
     if-nez v6, :cond_3
+    
+    const/4 v0, 0x0
+
+    sput-boolean v0,  Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mActiveNotifications:Z
 
     const-string/jumbo p1, "updateNotificationIcons: setVisibility to gone"
 
     invoke-static {v8, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object p0, p0, Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mNotificationIconArea:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    sput-boolean v0,  Lcom/oneplus/aod/OpAodNotificationIconAreaController;->mActiveNotifications:Z
 
     invoke-virtual {p0, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -600,18 +600,18 @@
 
     goto :goto_6
 
-    :cond_b
+    :cond_f
     sget v0, Lcom/oneplus/aod/OpAodDisplayViewManager;->mPulseStatus:I
     
     const v2, 0x2
     
-    if-ne v0, v2, :cond_f
+    if-ne v0, v2, :cond_mw
     
-    const/16 v1, 0x8
+    const/16 v3, 0x8
     
-    goto :goto_7
+    goto :goto_9
 
-    :cond_f
+    :cond_mw
     return-void
 
     :cond_10
