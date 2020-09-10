@@ -3167,7 +3167,7 @@
     :cond_5
     new-array v1, v1, [I
 
-    const/16 v3, 0xd6
+    const/16 v3, 0xd7
 
     aput v3, v1, v2
 
@@ -3492,7 +3492,7 @@
 
     new-array p2, p2, [I
 
-    const/16 v0, 0xde
+    const/16 v0, 0xdf
 
     aput v0, p2, v1
 
@@ -3795,7 +3795,7 @@
 
     if-eqz v3, :cond_11
 
-    sget-object v3, Lcom/android/server/policy/gck;->fG:[I
+    sget-object v3, Lcom/android/server/policy/gck;->eG:[I
 
     sget-object v21, Lcom/android/server/policy/OpPhoneWindowManager;->mKeyLockMode:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -5236,7 +5236,7 @@
 
     if-eqz v4, :cond_1d
 
-    sget-object v4, Lcom/android/server/policy/gck;->fG:[I
+    sget-object v4, Lcom/android/server/policy/gck;->eG:[I
 
     sget-object v5, Lcom/android/server/policy/OpPhoneWindowManager;->mKeyLockMode:Lcom/android/server/policy/OpPhoneWindowManager$KeyLockMode;
 
@@ -6690,7 +6690,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/policy/kth;->Tc()V
+    invoke-virtual {p0}, Lcom/android/server/policy/kth;->Sc()V
 
     :cond_0
     return-void

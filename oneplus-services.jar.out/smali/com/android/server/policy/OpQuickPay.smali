@@ -680,7 +680,7 @@
 
     check-cast v4, Ljava/lang/String;
 
-    iput-object v4, v3, Lcom/android/server/policy/OpQuickPay$zta;->SG:Ljava/lang/String;
+    iput-object v4, v3, Lcom/android/server/policy/OpQuickPay$zta;->RG:Ljava/lang/String;
 
     iget-object v4, v3, Lcom/android/server/policy/OpQuickPay$zta;->appIcon:Landroid/graphics/drawable/Drawable;
 
@@ -1381,7 +1381,7 @@
     invoke-virtual {p2, v1, v1, v0}, Lcom/android/server/policy/PhoneWindowManager;->performHapticFeedback(IZLjava/lang/String;)Z
 
     :cond_4
-    iget-boolean p2, p3, Lcom/android/server/policy/OpQuickPay$zta;->RG:Z
+    iget-boolean p2, p3, Lcom/android/server/policy/OpQuickPay$zta;->QG:Z
 
     const v0, 0x10008000
 
@@ -1438,7 +1438,7 @@
     goto :goto_3
 
     :cond_6
-    iget-object p1, p3, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
+    iget-object p1, p3, Lcom/android/server/policy/OpQuickPay$zta;->OG:Ljava/lang/String;
 
     if-eqz p1, :cond_8
 
@@ -1446,7 +1446,7 @@
 
     const-string p2, "android.intent.action.VIEW"
 
-    iget-object p3, p3, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
+    iget-object p3, p3, Lcom/android/server/policy/OpQuickPay$zta;->OG:Ljava/lang/String;
 
     invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1467,7 +1467,7 @@
     :cond_7
     iget-object p0, p0, Lcom/android/server/policy/OpQuickPay;->mContext:Landroid/content/Context;
 
-    const p1, 0x50d00b4
+    const p1, 0x50d00bc
 
     invoke-static {p0, p1, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1600,7 +1600,7 @@
 
     if-eqz v6, :cond_0
 
-    iput-boolean v5, v4, Lcom/android/server/policy/OpQuickPay$zta;->RG:Z
+    iput-boolean v5, v4, Lcom/android/server/policy/OpQuickPay$zta;->QG:Z
 
     goto :goto_1
 
@@ -1617,7 +1617,7 @@
 
     aget-object v6, v3, v5
 
-    iput-object v6, v4, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
+    iput-object v6, v4, Lcom/android/server/policy/OpQuickPay$zta;->OG:Ljava/lang/String;
 
     goto :goto_1
 
@@ -1646,7 +1646,7 @@
 
     move-result-object v6
 
-    iput-object v6, v4, Lcom/android/server/policy/OpQuickPay$zta;->QG:Ljava/lang/String;
+    iput-object v6, v4, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
 
     :goto_1
     const/4 v6, 0x2
@@ -1678,7 +1678,7 @@
 
     aget-object v3, v3, v5
 
-    iput-object v3, v4, Lcom/android/server/policy/OpQuickPay$zta;->QG:Ljava/lang/String;
+    iput-object v3, v4, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
 
     :cond_3
     iget-object v3, p0, Lcom/android/server/policy/OpQuickPay;->mPaymentApps:Ljava/util/ArrayList;
@@ -1793,7 +1793,7 @@
 
     check-cast v2, Lcom/android/server/policy/OpQuickPay$zta;
 
-    iget-object v2, v2, Lcom/android/server/policy/OpQuickPay$zta;->QG:Ljava/lang/String;
+    iget-object v2, v2, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -2107,7 +2107,7 @@
 
     if-eqz v3, :cond_0
 
-    iput-boolean v2, v1, Lcom/android/server/policy/OpQuickPay$zta;->RG:Z
+    iput-boolean v2, v1, Lcom/android/server/policy/OpQuickPay$zta;->QG:Z
 
     goto :goto_1
 
@@ -2124,7 +2124,7 @@
 
     aget-object v3, v0, v2
 
-    iput-object v3, v1, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
+    iput-object v3, v1, Lcom/android/server/policy/OpQuickPay$zta;->OG:Ljava/lang/String;
 
     goto :goto_1
 
@@ -2153,7 +2153,7 @@
 
     move-result-object v3
 
-    iput-object v3, v1, Lcom/android/server/policy/OpQuickPay$zta;->QG:Ljava/lang/String;
+    iput-object v3, v1, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
 
     :goto_1
     const/4 v3, 0x2
@@ -2185,7 +2185,7 @@
 
     aget-object v0, v0, v2
 
-    iput-object v0, v1, Lcom/android/server/policy/OpQuickPay$zta;->QG:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/server/policy/OpQuickPay$zta;->PG:Ljava/lang/String;
 
     :cond_3
     iget-object v0, p0, Lcom/android/server/policy/OpQuickPay;->mPaymentApps:Ljava/util/ArrayList;
