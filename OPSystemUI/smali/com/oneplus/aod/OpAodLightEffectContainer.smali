@@ -611,16 +611,15 @@
 .end method
 
 .method private loadResources()V
-    .registers 3
+    .locals 2
 
-    .line 130
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080226
+    sget v1, Lcom/android/systemui/R$drawable;->aod_notification_light_right:I
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -628,14 +627,13 @@
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimationBgRight:Landroid/graphics/Bitmap;
 
-    .line 131
-    iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Landroid/widget/FrameLayout;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f080225
+    sget v1, Lcom/android/systemui/R$drawable;->aod_notification_light_left:I
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -643,21 +641,18 @@
 
     iput-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimationBgLeft:Landroid/graphics/Bitmap;
 
-    .line 132
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mLeftView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimationBgLeft:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 133
     iget-object v0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mRightView:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimationBgRight:Landroid/graphics/Bitmap;
+    iget-object p0, p0, Lcom/oneplus/aod/OpAodLightEffectContainer;->mAnimationBgRight:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 134
     return-void
 .end method
 
