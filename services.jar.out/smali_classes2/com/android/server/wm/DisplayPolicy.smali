@@ -9127,7 +9127,7 @@
 .end method
 
 .method public layoutWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
-    .locals 54
+    .locals 53
 
     move-object/from16 v12, p0
 
@@ -9152,7 +9152,7 @@
     :cond_0
     move-object v0, v12
 
-    move-object v7, v13
+    move-object v1, v13
 
     goto/16 :goto_34
 
@@ -9172,7 +9172,7 @@
 
     move-object v0, v12
 
-    move-object v7, v13
+    move-object v1, v13
 
     goto/16 :goto_34
 
@@ -9463,7 +9463,7 @@
 
     iget-object v7, v5, Lcom/android/server/wm/WindowFrames;->mParentFrame:Landroid/graphics/Rect;
 
-    move-object/from16 v40, v5
+    move-object/from16 v39, v5
 
     iget-object v5, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
@@ -9560,7 +9560,7 @@
 
     move-result v7
 
-    move-object/from16 v41, v6
+    move-object/from16 v40, v6
 
     iget-object v6, v12, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
@@ -9576,7 +9576,7 @@
 
     const/16 v20, 0x0
 
-    move/from16 v42, v9
+    move/from16 v41, v9
 
     iget-object v9, v12, Lcom/android/server/wm/DisplayPolicy;->mContext:Landroid/content/Context;
 
@@ -9584,7 +9584,7 @@
 
     move-result-object v9
 
-    move/from16 v43, v13
+    move/from16 v42, v13
 
     const v13, 0x5050006
 
@@ -9610,12 +9610,12 @@
 
     move-result v20
 
-    move/from16 v44, v10
+    move/from16 v43, v10
 
     goto :goto_a
 
     :cond_f
-    move/from16 v44, v10
+    move/from16 v43, v10
 
     new-array v10, v13, [I
 
@@ -9636,7 +9636,7 @@
     goto :goto_a
 
     :cond_10
-    move/from16 v44, v10
+    move/from16 v43, v10
 
     const/4 v13, 0x1
 
@@ -9706,13 +9706,13 @@
     goto :goto_b
 
     :cond_13
-    move-object/from16 v41, v6
+    move-object/from16 v40, v6
 
-    move/from16 v42, v9
+    move/from16 v41, v9
 
-    move/from16 v44, v10
+    move/from16 v43, v10
 
-    move/from16 v43, v13
+    move/from16 v42, v13
 
     const/4 v6, 0x1
 
@@ -9849,11 +9849,11 @@
 
     iput v5, v11, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    move-object v7, v0
+    move-object v9, v1
 
-    move-object v9, v2
+    move-object v10, v2
 
-    move-object v10, v3
+    move-object v7, v4
 
     move-object/from16 v38, v11
 
@@ -9863,42 +9863,40 @@
 
     move/from16 v20, v27
 
+    move/from16 v4, v28
+
     move/from16 v23, v34
 
-    move-object/from16 v45, v40
+    move-object/from16 v44, v39
 
-    move-object/from16 v14, v41
+    move-object/from16 v14, v40
 
-    move/from16 v6, v42
+    move/from16 v6, v41
 
-    move/from16 v13, v43
+    move/from16 v13, v42
 
-    move/from16 v12, v44
+    move/from16 v12, v43
 
-    const/4 v0, 0x1
-
-    const/16 v31, 0x0
-
-    move-object v11, v4
+    move-object v11, v3
 
     move-object/from16 v27, v8
 
-    move/from16 v4, v28
+    move-object v8, v0
 
-    move-object v8, v1
+    const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_17
-    move-object/from16 v40, v5
+    move-object/from16 v39, v5
 
-    move-object/from16 v41, v6
+    move-object/from16 v40, v6
 
-    move/from16 v42, v9
+    move/from16 v41, v9
 
-    move/from16 v44, v10
+    move/from16 v43, v10
 
-    move/from16 v43, v13
+    move/from16 v42, v13
 
     const/16 v5, 0x7ef
 
@@ -9920,7 +9918,7 @@
 
     invoke-virtual {v3, v5}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v13, v43
+    move/from16 v13, v42
 
     if-eq v13, v7, :cond_18
 
@@ -9942,9 +9940,9 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move-object v7, v0
+    move-object v9, v1
 
-    move-object v9, v2
+    move-object v7, v4
 
     move-object/from16 v38, v11
 
@@ -9954,38 +9952,36 @@
 
     move/from16 v20, v27
 
+    move/from16 v4, v28
+
     move/from16 v23, v34
 
-    move-object/from16 v45, v40
+    move-object/from16 v44, v39
 
-    move-object/from16 v14, v41
+    move-object/from16 v14, v40
 
-    move/from16 v6, v42
+    move/from16 v6, v41
 
-    const/4 v0, 0x1
-
-    const/16 v31, 0x0
-
-    move-object v11, v4
+    move-object v11, v3
 
     move-object/from16 v27, v8
 
     move v12, v10
 
-    move/from16 v4, v28
+    move-object v8, v0
 
-    move-object v8, v1
+    move-object v10, v2
 
-    move-object v10, v3
+    const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_19
     invoke-virtual {v4, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move-object v7, v0
+    move-object v9, v1
 
-    move-object v9, v2
+    move-object v7, v4
 
     move-object/from16 v38, v11
 
@@ -9995,34 +9991,32 @@
 
     move/from16 v20, v27
 
+    move/from16 v4, v28
+
     move/from16 v23, v34
 
-    move-object/from16 v45, v40
+    move-object/from16 v44, v39
 
-    move-object/from16 v14, v41
+    move-object/from16 v14, v40
 
-    move/from16 v6, v42
+    move/from16 v6, v41
 
-    const/4 v0, 0x1
-
-    const/16 v31, 0x0
-
-    move-object v11, v4
+    move-object v11, v3
 
     move-object/from16 v27, v8
 
     move v12, v10
 
-    move/from16 v4, v28
+    move-object v8, v0
 
-    move-object v8, v1
+    move-object v10, v2
 
-    move-object v10, v3
+    const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_1a
-    move/from16 v13, v43
+    move/from16 v13, v42
 
     const/16 v5, 0x7dd
 
@@ -10052,7 +10046,7 @@
 
     move-object/from16 v20, v8
 
-    move-object/from16 v45, v40
+    move-object/from16 v44, v39
 
     move-object v8, v5
 
@@ -10070,31 +10064,27 @@
 
     move/from16 v23, v34
 
-    move-object/from16 v14, v41
+    move-object/from16 v14, v40
 
     const/4 v0, 0x1
 
-    const/16 v31, 0x0
+    move-object v11, v8
 
-    move-object v11, v7
-
-    move-object v7, v9
+    move-object v8, v9
 
     move v12, v10
 
-    move-object/from16 v9, v19
+    move-object/from16 v10, v19
 
-    move-object v10, v8
+    move-object v9, v6
 
-    move-object v8, v6
+    move/from16 v6, v41
 
-    move/from16 v6, v42
-
-    move/from16 v52, v27
+    move/from16 v51, v27
 
     move-object/from16 v27, v20
 
-    move/from16 v20, v52
+    move/from16 v20, v51
 
     goto/16 :goto_28
 
@@ -10107,7 +10097,7 @@
 
     move-object/from16 v20, v8
 
-    move-object/from16 v45, v40
+    move-object/from16 v44, v39
 
     move-object v8, v3
 
@@ -10159,27 +10149,25 @@
 
     move/from16 v23, v34
 
-    move-object/from16 v14, v41
+    move-object/from16 v14, v40
 
-    move/from16 v6, v42
+    move/from16 v6, v41
 
-    const/16 v31, 0x0
+    move-object v11, v8
 
-    move-object v11, v7
+    move-object v8, v9
 
-    move-object v7, v9
+    move-object v9, v4
 
-    move-object v9, v5
+    move/from16 v4, v28
+
+    move/from16 v51, v10
+
+    move-object v10, v5
 
     move-object v5, v12
 
-    move v12, v10
-
-    move-object v10, v8
-
-    move-object v8, v4
-
-    move/from16 v4, v28
+    move/from16 v12, v51
 
     move/from16 v52, v27
 
@@ -10210,27 +10198,25 @@
 
     move/from16 v23, v34
 
-    move-object/from16 v14, v41
+    move-object/from16 v14, v40
 
-    move/from16 v6, v42
+    move/from16 v6, v41
 
-    const/16 v31, 0x0
+    move-object v11, v8
 
-    move-object v11, v7
+    move-object v8, v9
 
-    move-object v7, v9
+    move-object v9, v4
 
-    move-object v9, v5
+    move/from16 v4, v28
+
+    move/from16 v51, v10
+
+    move-object v10, v5
 
     move-object v5, v12
 
-    move v12, v10
-
-    move-object v10, v8
-
-    move-object v8, v4
-
-    move/from16 v4, v28
+    move/from16 v12, v51
 
     move/from16 v52, v27
 
@@ -10307,7 +10293,7 @@
 
     if-nez v1, :cond_21
 
-    move/from16 v1, v42
+    move/from16 v1, v41
 
     and-int/lit16 v2, v1, 0x400
 
@@ -10340,7 +10326,7 @@
     goto :goto_11
 
     :cond_21
-    move/from16 v1, v42
+    move/from16 v1, v41
 
     :cond_22
     :goto_11
@@ -10386,7 +10372,7 @@
     goto :goto_12
 
     :cond_24
-    move/from16 v1, v42
+    move/from16 v1, v41
 
     const/high16 v23, -0x80000000
 
@@ -10424,14 +10410,14 @@
 
     move-result-object v0
 
-    move-object/from16 v6, v41
+    move-object/from16 v6, v40
 
     invoke-static {v6, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_13
 
     :cond_26
-    move-object/from16 v6, v41
+    move-object/from16 v6, v40
 
     :goto_13
     move-object/from16 v37, v14
@@ -10456,13 +10442,13 @@
 
     move-object/from16 v4, p2
 
-    move-object/from16 v40, v5
+    move-object/from16 v39, v5
 
     move/from16 v5, v24
 
-    move-object/from16 v47, v6
+    move-object/from16 v46, v6
 
-    move/from16 v46, v28
+    move/from16 v45, v28
 
     move-object v6, v8
 
@@ -10470,23 +10456,23 @@
 
     move/from16 v23, v34
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
-    move-object/from16 v48, v8
+    move-object/from16 v47, v8
 
-    move/from16 v52, v27
+    move/from16 v51, v27
 
     move-object/from16 v27, v20
 
-    move/from16 v20, v52
+    move/from16 v20, v51
 
     move-object/from16 v8, v31
 
     move-object/from16 v34, v9
 
-    move/from16 v49, v25
+    move/from16 v48, v25
 
-    move/from16 v50, v10
+    move/from16 v49, v10
 
     move-object/from16 v10, v28
 
@@ -10498,44 +10484,44 @@
 
     move-object v5, v12
 
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
-    move-object/from16 v7, v34
+    move-object/from16 v9, v31
 
-    move-object/from16 v9, v40
+    move-object/from16 v8, v34
 
-    move/from16 v4, v46
+    move-object/from16 v10, v39
 
-    move-object/from16 v14, v47
+    move/from16 v4, v45
 
-    move-object/from16 v10, v48
+    move-object/from16 v14, v46
 
-    move/from16 v6, v49
+    move-object/from16 v11, v47
 
-    move/from16 v12, v50
+    move/from16 v6, v48
+
+    move/from16 v12, v49
 
     const/4 v0, 0x1
-
-    const/16 v31, 0x0
 
     goto/16 :goto_28
 
     :cond_27
-    move/from16 v49, v1
+    move/from16 v48, v1
 
     move-object/from16 v31, v4
 
-    move-object/from16 v40, v5
+    move-object/from16 v39, v5
 
-    move-object/from16 v47, v6
+    move-object/from16 v46, v6
 
-    move-object/from16 v48, v8
+    move-object/from16 v47, v8
 
-    move/from16 v50, v10
+    move/from16 v49, v10
 
     move-object/from16 v38, v11
 
-    move/from16 v46, v28
+    move/from16 v45, v28
 
     move/from16 v23, v34
 
@@ -10543,13 +10529,13 @@
 
     move-object/from16 v34, v9
 
-    move/from16 v52, v27
+    move/from16 v51, v27
 
     move-object/from16 v27, v20
 
-    move/from16 v20, v52
+    move/from16 v20, v51
 
-    move/from16 v11, v50
+    move/from16 v11, v49
 
     if-eq v11, v2, :cond_2e
 
@@ -10559,13 +10545,13 @@
 
     move-object/from16 v8, v31
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
-    move/from16 v5, v46
+    move/from16 v5, v45
 
-    move-object/from16 v6, v48
+    move-object/from16 v6, v47
 
-    move/from16 v10, v49
+    move/from16 v10, v48
 
     const/4 v9, 0x1
 
@@ -10574,7 +10560,7 @@
     :cond_28
     const/high16 v0, 0x2000000
 
-    move/from16 v10, v49
+    move/from16 v10, v48
 
     and-int/2addr v0, v10
 
@@ -10596,42 +10582,42 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
     invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
 
-    move-object/from16 v6, v48
+    move-object/from16 v6, v47
 
     invoke-virtual {v6, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v5, v46
+    move/from16 v5, v45
 
-    move-object/from16 v4, v47
+    move-object/from16 v4, v46
 
     goto/16 :goto_19
 
     :cond_29
     move-object/from16 v8, v31
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
-    move-object/from16 v6, v48
+    move-object/from16 v6, v47
 
     goto :goto_14
 
     :cond_2a
     move-object/from16 v8, v31
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
-    move-object/from16 v6, v48
+    move-object/from16 v6, v47
 
     const/4 v9, 0x1
 
     :goto_14
-    move/from16 v5, v46
+    move/from16 v5, v45
 
     and-int/lit16 v0, v5, 0x200
 
@@ -10665,7 +10651,7 @@
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move-object/from16 v4, v47
+    move-object/from16 v4, v46
 
     goto/16 :goto_19
 
@@ -10682,20 +10668,20 @@
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move-object/from16 v4, v47
+    move-object/from16 v4, v46
 
     goto :goto_19
 
     :cond_2e
     move-object/from16 v8, v31
 
-    move-object/from16 v7, v40
+    move-object/from16 v7, v39
 
-    move/from16 v5, v46
+    move/from16 v5, v45
 
-    move-object/from16 v6, v48
+    move-object/from16 v6, v47
 
-    move/from16 v10, v49
+    move/from16 v10, v48
 
     const/4 v9, 0x1
 
@@ -10786,14 +10772,14 @@
 
     move-result-object v0
 
-    move-object/from16 v4, v47
+    move-object/from16 v4, v46
 
     invoke-static {v4, v0}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_19
 
     :cond_32
-    move-object/from16 v4, v47
+    move-object/from16 v4, v46
 
     :goto_19
     and-int/lit16 v0, v10, 0x400
@@ -10882,8 +10868,6 @@
 
     invoke-virtual {v2, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v31, v1
-
     move-object v14, v4
 
     move v4, v5
@@ -10892,19 +10876,19 @@
 
     move-object v5, v12
 
-    move-object v9, v7
+    move-object v9, v8
 
     move v12, v11
 
-    move-object v11, v2
+    move-object v8, v3
 
-    move-object v7, v3
+    move-object v11, v6
 
-    move/from16 v52, v10
+    move v6, v10
 
-    move-object v10, v6
+    move-object v10, v7
 
-    move/from16 v6, v52
+    move-object v7, v2
 
     goto/16 :goto_28
 
@@ -10913,8 +10897,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v31, v1
-
     move-object v14, v4
 
     move v4, v5
@@ -10923,19 +10905,19 @@
 
     move-object v5, v12
 
-    move-object v9, v7
+    move-object v9, v8
 
     move v12, v11
 
-    move-object v11, v2
+    move-object v8, v3
 
-    move-object v7, v3
+    move-object v11, v6
 
-    move/from16 v52, v10
+    move v6, v10
 
-    move-object v10, v6
+    move-object v10, v7
 
-    move/from16 v6, v52
+    move-object v7, v2
 
     goto/16 :goto_28
 
@@ -10958,25 +10940,25 @@
 
     move v11, v10
 
-    move-object/from16 v4, v41
+    move-object/from16 v4, v40
 
     move v10, v1
 
     const/4 v1, 0x0
 
-    move-object/from16 v52, v7
+    move-object/from16 v51, v7
 
     move-object v7, v5
 
     move/from16 v5, v28
 
-    move-object/from16 v28, v52
+    move-object/from16 v28, v51
 
-    move/from16 v53, v27
+    move/from16 v52, v27
 
     move-object/from16 v27, v20
 
-    move/from16 v20, v53
+    move/from16 v20, v52
 
     if-nez v35, :cond_46
 
@@ -10986,21 +10968,21 @@
 
     move-object v14, v4
 
-    move/from16 v46, v5
+    move/from16 v45, v5
 
-    move-object v9, v7
+    move-object v9, v8
 
-    move/from16 v51, v10
+    move/from16 v50, v10
 
     move v12, v11
 
-    move-object/from16 v11, v28
+    move-object v8, v3
 
-    const/16 v31, 0x0
+    move-object v11, v6
 
-    move-object v7, v3
+    move-object v10, v7
 
-    move-object v10, v6
+    move-object/from16 v7, v28
 
     goto/16 :goto_21
 
@@ -11040,7 +11022,7 @@
 
     move-object/from16 v0, p0
 
-    const/16 v31, 0x0
+    const/4 v2, 0x0
 
     move-object/from16 v1, p1
 
@@ -11058,19 +11040,19 @@
 
     move/from16 v5, v24
 
-    move-object/from16 v48, v6
+    move-object/from16 v47, v6
 
-    move-object/from16 v40, v7
+    move-object/from16 v39, v7
 
-    move-object/from16 v39, v8
+    move-object/from16 v31, v8
 
     move-object/from16 v9, v34
 
-    move/from16 v51, v10
+    move/from16 v50, v10
 
     move-object/from16 v10, v28
 
-    move/from16 v46, v12
+    move/from16 v45, v12
 
     move v12, v11
 
@@ -11080,17 +11062,19 @@
 
     move-object/from16 v5, p0
 
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
-    move-object/from16 v7, v34
+    move-object/from16 v9, v31
 
-    move-object/from16 v9, v40
+    move-object/from16 v8, v34
 
-    move/from16 v4, v46
+    move-object/from16 v10, v39
 
-    move-object/from16 v10, v48
+    move/from16 v4, v45
 
-    move/from16 v6, v51
+    move-object/from16 v11, v47
+
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
@@ -11101,19 +11085,17 @@
 
     move-object v14, v4
 
-    move/from16 v46, v5
+    move/from16 v45, v5
 
-    move-object/from16 v48, v6
+    move-object/from16 v47, v6
 
-    move-object/from16 v40, v7
+    move-object/from16 v39, v7
 
-    move-object/from16 v39, v8
+    move-object/from16 v31, v8
 
-    move/from16 v51, v10
+    move/from16 v50, v10
 
     move v12, v11
-
-    const/16 v31, 0x0
 
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
@@ -11146,48 +11128,48 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    move-object/from16 v7, v34
-
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
-    move-object/from16 v8, v39
+    move-object/from16 v8, v34
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    move-object/from16 v9, v40
+    move-object/from16 v9, v31
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    move-object/from16 v10, v48
+    move-object/from16 v10, v39
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    move-object/from16 v11, v47
+
+    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
     move-object/from16 v5, p0
 
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
-    move/from16 v4, v46
+    move/from16 v4, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_3f
-    move-object/from16 v7, v34
+    move-object/from16 v9, v31
 
-    move-object/from16 v8, v39
+    move-object/from16 v8, v34
 
-    move-object/from16 v9, v40
+    move-object/from16 v10, v39
 
-    move-object/from16 v10, v48
+    move-object/from16 v11, v47
 
     const/16 v0, 0x7d5
 
@@ -11197,7 +11179,7 @@
 
     if-ne v12, v0, :cond_40
 
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
     goto :goto_20
 
@@ -11209,7 +11191,7 @@
     :cond_41
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     :goto_1e
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isVoiceInteraction()Z
@@ -11220,15 +11202,15 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mVoiceContent:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mVoiceContent:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mVoiceContent:Landroid/graphics/Rect;
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mVoiceContent:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_1f
 
@@ -11239,30 +11221,30 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_1f
 
     :cond_43
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
     invoke-virtual {v9, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
+
+    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     :goto_1f
     const/16 v0, 0x30
@@ -11271,43 +11253,39 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
 
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
-    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     move-object/from16 v5, p0
 
-    move/from16 v4, v46
+    move/from16 v4, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_44
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
-    invoke-virtual {v11, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     move-object/from16 v5, p0
 
-    move/from16 v4, v46
+    move/from16 v4, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_45
-    move-object/from16 v11, v28
+    move-object/from16 v7, v28
 
     :goto_20
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
-
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -11320,34 +11298,38 @@
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mStable:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
     move-object/from16 v5, p0
 
-    move/from16 v4, v46
+    move/from16 v4, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
     goto/16 :goto_28
 
     :cond_46
-    move/from16 v31, v1
-
     move-object v14, v4
 
-    move/from16 v46, v5
+    move/from16 v45, v5
 
-    move-object v9, v7
+    move-object v9, v8
 
-    move/from16 v51, v10
+    move/from16 v50, v10
 
     move v12, v11
 
-    move-object/from16 v11, v28
+    move-object v8, v3
 
-    move-object v7, v3
+    move-object v11, v6
 
-    move-object v10, v6
+    move-object v10, v7
+
+    move-object/from16 v7, v28
 
     :goto_21
     sget-boolean v1, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
@@ -11383,9 +11365,9 @@
 
     if-ne v12, v0, :cond_48
 
-    move/from16 v1, v46
+    move/from16 v1, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
@@ -11400,9 +11382,9 @@
 
     if-ne v12, v0, :cond_49
 
-    move/from16 v1, v46
+    move/from16 v1, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
@@ -11442,21 +11424,17 @@
     goto :goto_22
 
     :cond_4a
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     goto :goto_23
 
     :cond_4b
     :goto_22
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     and-int/lit16 v0, v6, 0x400
 
     if-eqz v0, :cond_4c
-
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
-
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
 
@@ -11470,7 +11448,11 @@
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v1, v46
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move/from16 v1, v45
 
     const/4 v0, 0x1
 
@@ -11484,10 +11466,6 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
@@ -11498,7 +11476,11 @@
 
     invoke-virtual {v10, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v1, v46
+    iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move/from16 v1, v45
 
     const/4 v0, 0x1
 
@@ -11521,10 +11503,6 @@
 
     iget-object v1, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v1, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v1, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
@@ -11535,7 +11513,11 @@
 
     invoke-virtual {v10, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    move/from16 v1, v46
+    iget-object v1, v15, Lcom/android/server/wm/DisplayFrames;->mOverscan:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    move/from16 v1, v45
 
     goto/16 :goto_27
 
@@ -11543,7 +11525,7 @@
     const/4 v0, 0x1
 
     :cond_4f
-    move/from16 v1, v46
+    move/from16 v1, v45
 
     and-int/lit16 v2, v1, 0x200
 
@@ -11574,10 +11556,6 @@
     :cond_50
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
@@ -11587,6 +11565,10 @@
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto/16 :goto_27
 
@@ -11597,15 +11579,15 @@
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
     invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     sget v2, Landroid/view/ViewRootImpl;->sNewInsetsMode:I
 
@@ -11620,7 +11602,7 @@
     :cond_52
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mContent:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto/16 :goto_27
 
@@ -11628,7 +11610,7 @@
     :goto_24
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto/16 :goto_27
 
@@ -11677,10 +11659,6 @@
     :cond_56
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
@@ -11690,16 +11668,16 @@
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto/16 :goto_27
 
     :cond_57
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
-
     invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
@@ -11710,27 +11688,31 @@
 
     invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
     goto/16 :goto_27
 
     :cond_58
-    move/from16 v1, v46
+    move/from16 v1, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
     :goto_25
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
-    invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
-    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
     invoke-virtual {v9, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
+    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
@@ -11744,7 +11726,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -11755,17 +11737,13 @@
     goto :goto_27
 
     :cond_59
-    move/from16 v1, v46
+    move/from16 v1, v45
 
-    move/from16 v6, v51
+    move/from16 v6, v50
 
     const/4 v0, 0x1
 
     :goto_26
-    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
-
-    invoke-virtual {v7, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
-
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
 
     invoke-virtual {v8, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -11778,13 +11756,15 @@
 
     invoke-virtual {v10, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
+    iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mUnrestricted:Landroid/graphics/Rect;
+
+    invoke-virtual {v11, v2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+
     if-eqz v30, :cond_5a
 
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mDock:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
-
-    iput v2, v7, Landroid/graphics/Rect;->left:I
 
     iput v2, v8, Landroid/graphics/Rect;->left:I
 
@@ -11792,11 +11772,11 @@
 
     iput v2, v10, Landroid/graphics/Rect;->left:I
 
+    iput v2, v11, Landroid/graphics/Rect;->left:I
+
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->right:I
-
-    iput v2, v7, Landroid/graphics/Rect;->right:I
 
     iput v2, v8, Landroid/graphics/Rect;->right:I
 
@@ -11804,17 +11784,19 @@
 
     iput v2, v10, Landroid/graphics/Rect;->right:I
 
+    iput v2, v11, Landroid/graphics/Rect;->right:I
+
     iget-object v2, v15, Lcom/android/server/wm/DisplayFrames;->mRestricted:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->bottom:I
-
-    iput v2, v7, Landroid/graphics/Rect;->bottom:I
 
     iput v2, v8, Landroid/graphics/Rect;->bottom:I
 
     iput v2, v9, Landroid/graphics/Rect;->bottom:I
 
     iput v2, v10, Landroid/graphics/Rect;->bottom:I
+
+    iput v2, v11, Landroid/graphics/Rect;->bottom:I
 
     :cond_5a
     sget-boolean v2, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
@@ -11829,7 +11811,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -11843,7 +11825,7 @@
 
     move v4, v1
 
-    invoke-direct {v5, v4, v6, v7, v15}, Lcom/android/server/wm/DisplayPolicy;->applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
+    invoke-direct {v5, v4, v6, v8, v15}, Lcom/android/server/wm/DisplayPolicy;->applyStableConstraints(IILandroid/graphics/Rect;Lcom/android/server/wm/DisplayFrames;)V
 
     const/16 v1, 0x30
 
@@ -11851,12 +11833,12 @@
 
     iget-object v1, v15, Lcom/android/server/wm/DisplayFrames;->mCurrent:Landroid/graphics/Rect;
 
-    invoke-virtual {v11, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     goto :goto_28
 
     :cond_5c
-    invoke-virtual {v11, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v7, v8}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     :goto_28
     move-object/from16 v3, p1
@@ -11878,7 +11860,7 @@
     goto :goto_29
 
     :cond_5d
-    move/from16 v19, v31
+    const/16 v19, 0x0
 
     :goto_29
     and-int/lit8 v21, v17, 0x2
@@ -11890,7 +11872,7 @@
     goto :goto_2a
 
     :cond_5e
-    move/from16 v21, v31
+    const/16 v21, 0x0
 
     :goto_2a
     invoke-virtual/range {v38 .. v38}, Landroid/view/WindowManager$LayoutParams;->isFullscreen()Z
@@ -11908,14 +11890,14 @@
     goto :goto_2b
 
     :cond_5f
-    move/from16 v22, v31
+    const/16 v22, 0x0
 
     :goto_2b
     if-eq v2, v0, :cond_67
 
     sget-object v0, Lcom/android/server/wm/DisplayPolicy;->sTmpDisplayCutoutSafeExceptMaybeBarsRect:Landroid/graphics/Rect;
 
-    move/from16 v46, v4
+    move/from16 v45, v4
 
     iget-object v4, v15, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
@@ -12015,13 +11997,13 @@
 
     sget-object v4, Lcom/android/server/wm/DisplayPolicy;->sTmpRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v4, v10}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v4, v11}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
+    invoke-virtual {v11, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
     sget-object v4, Lcom/android/server/wm/DisplayPolicy;->sTmpRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v4, v10}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v11}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -12029,26 +12011,26 @@
 
     xor-int/lit8 v4, v4, 0x1
 
-    move-object/from16 v2, v45
+    move-object/from16 v2, v44
 
     invoke-virtual {v2, v4}, Lcom/android/server/wm/WindowFrames;->setParentFrameWasClippedByDisplayCutout(Z)V
 
     goto :goto_2e
 
     :cond_66
-    move-object/from16 v2, v45
+    move-object/from16 v2, v44
 
     :goto_2e
-    invoke-virtual {v9, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
+    invoke-virtual {v10, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
     goto :goto_2f
 
     :cond_67
     move/from16 v24, v2
 
-    move/from16 v46, v4
+    move/from16 v45, v4
 
-    move-object/from16 v2, v45
+    move-object/from16 v2, v44
 
     :goto_2f
     invoke-static/range {p1 .. p1}, Lcom/android/server/wm/OpScreenCompatInjector;->isNotchUnLimited(Lcom/android/server/wm/WindowState;)Z
@@ -12059,7 +12041,7 @@
 
     iget-object v0, v15, Lcom/android/server/wm/DisplayFrames;->mDisplayCutoutSafe:Landroid/graphics/Rect;
 
-    invoke-virtual {v7, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
+    invoke-virtual {v8, v0}, Landroid/graphics/Rect;->intersectUnchecked(Landroid/graphics/Rect;)V
 
     :cond_68
     and-int/lit16 v0, v6, 0x200
@@ -12078,25 +12060,21 @@
 
     const/16 v0, -0x2710
 
-    iput v0, v9, Landroid/graphics/Rect;->top:I
+    iput v0, v10, Landroid/graphics/Rect;->top:I
 
-    iput v0, v9, Landroid/graphics/Rect;->left:I
+    iput v0, v10, Landroid/graphics/Rect;->left:I
 
     const/16 v0, 0x2710
 
-    iput v0, v9, Landroid/graphics/Rect;->bottom:I
+    iput v0, v10, Landroid/graphics/Rect;->bottom:I
 
-    iput v0, v9, Landroid/graphics/Rect;->right:I
+    iput v0, v10, Landroid/graphics/Rect;->right:I
 
     const/16 v0, 0x7dd
 
     if-eq v12, v0, :cond_69
 
     const/16 v0, -0x2710
-
-    iput v0, v11, Landroid/graphics/Rect;->top:I
-
-    iput v0, v11, Landroid/graphics/Rect;->left:I
 
     iput v0, v7, Landroid/graphics/Rect;->top:I
 
@@ -12106,11 +12084,11 @@
 
     iput v0, v8, Landroid/graphics/Rect;->left:I
 
+    iput v0, v9, Landroid/graphics/Rect;->top:I
+
+    iput v0, v9, Landroid/graphics/Rect;->left:I
+
     const/16 v0, 0x2710
-
-    iput v0, v11, Landroid/graphics/Rect;->bottom:I
-
-    iput v0, v11, Landroid/graphics/Rect;->right:I
 
     iput v0, v7, Landroid/graphics/Rect;->bottom:I
 
@@ -12119,6 +12097,10 @@
     iput v0, v8, Landroid/graphics/Rect;->bottom:I
 
     iput v0, v8, Landroid/graphics/Rect;->right:I
+
+    iput v0, v9, Landroid/graphics/Rect;->bottom:I
+
+    iput v0, v9, Landroid/graphics/Rect;->right:I
 
     :cond_69
     move-object/from16 v4, v38
@@ -12133,21 +12115,21 @@
 
     iget-object v0, v2, Lcom/android/server/wm/WindowFrames;->mOutsetFrame:Landroid/graphics/Rect;
 
-    move/from16 v43, v13
+    move/from16 v42, v13
 
-    iget v13, v7, Landroid/graphics/Rect;->left:I
+    iget v13, v8, Landroid/graphics/Rect;->left:I
 
-    iget v3, v7, Landroid/graphics/Rect;->top:I
+    iget v3, v8, Landroid/graphics/Rect;->top:I
 
-    move-object/from16 v28, v11
+    move-object/from16 v28, v7
 
-    iget v11, v7, Landroid/graphics/Rect;->right:I
+    iget v7, v8, Landroid/graphics/Rect;->right:I
 
-    move-object/from16 v39, v8
+    move-object/from16 v26, v9
 
-    iget v8, v7, Landroid/graphics/Rect;->bottom:I
+    iget v9, v8, Landroid/graphics/Rect;->bottom:I
 
-    invoke-virtual {v0, v13, v3, v11, v8}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v0, v13, v3, v7, v9}, Landroid/graphics/Rect;->set(IIII)V
 
     const/4 v3, 0x1
 
@@ -12157,97 +12139,97 @@
 
     if-lez v3, :cond_6f
 
-    iget v8, v15, Lcom/android/server/wm/DisplayFrames;->mRotation:I
+    iget v7, v15, Lcom/android/server/wm/DisplayFrames;->mRotation:I
 
-    if-nez v8, :cond_6a
+    if-nez v7, :cond_6a
 
-    iget v11, v0, Landroid/graphics/Rect;->bottom:I
+    iget v9, v0, Landroid/graphics/Rect;->bottom:I
 
-    add-int/2addr v11, v3
+    add-int/2addr v9, v3
 
-    iput v11, v0, Landroid/graphics/Rect;->bottom:I
+    iput v9, v0, Landroid/graphics/Rect;->bottom:I
 
     goto :goto_30
 
     :cond_6a
-    const/4 v11, 0x1
+    const/4 v9, 0x1
 
-    if-ne v8, v11, :cond_6b
+    if-ne v7, v9, :cond_6b
 
-    iget v11, v0, Landroid/graphics/Rect;->right:I
+    iget v9, v0, Landroid/graphics/Rect;->right:I
 
-    add-int/2addr v11, v3
+    add-int/2addr v9, v3
 
-    iput v11, v0, Landroid/graphics/Rect;->right:I
+    iput v9, v0, Landroid/graphics/Rect;->right:I
 
     goto :goto_30
 
     :cond_6b
-    const/4 v11, 0x2
+    const/4 v9, 0x2
 
-    if-ne v8, v11, :cond_6c
+    if-ne v7, v9, :cond_6c
 
-    iget v11, v0, Landroid/graphics/Rect;->top:I
+    iget v9, v0, Landroid/graphics/Rect;->top:I
 
-    sub-int/2addr v11, v3
+    sub-int/2addr v9, v3
 
-    iput v11, v0, Landroid/graphics/Rect;->top:I
+    iput v9, v0, Landroid/graphics/Rect;->top:I
 
     goto :goto_30
 
     :cond_6c
-    const/4 v11, 0x3
+    const/4 v9, 0x3
 
-    if-ne v8, v11, :cond_6d
+    if-ne v7, v9, :cond_6d
 
-    iget v11, v0, Landroid/graphics/Rect;->left:I
+    iget v9, v0, Landroid/graphics/Rect;->left:I
 
-    sub-int/2addr v11, v3
+    sub-int/2addr v9, v3
 
-    iput v11, v0, Landroid/graphics/Rect;->left:I
+    iput v9, v0, Landroid/graphics/Rect;->left:I
 
     :cond_6d
     :goto_30
-    sget-boolean v11, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
+    sget-boolean v9, Lcom/android/server/wm/WindowManagerDebugConfig;->DEBUG_LAYOUT:Z
 
-    if-eqz v11, :cond_6f
+    if-eqz v9, :cond_6f
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v13, "applying bottom outset of "
 
-    invoke-virtual {v11, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v13, " with rotation "
 
-    invoke-virtual {v11, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v13, ", result: "
 
-    invoke-virtual {v11, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v9
 
-    invoke-static {v1, v11}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v9}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_31
 
     :cond_6e
-    move-object/from16 v39, v8
+    move-object/from16 v28, v7
 
-    move-object/from16 v28, v11
+    move-object/from16 v26, v9
 
-    move/from16 v43, v13
+    move/from16 v42, v13
 
     :cond_6f
     :goto_31
@@ -12293,17 +12275,19 @@
 
     const/4 v3, 0x1
 
-    new-array v8, v3, [Ljava/lang/Object;
+    new-array v7, v3, [Ljava/lang/Object;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v8, v31
+    const/4 v9, 0x0
+
+    aput-object v3, v7, v9
 
     const-string v3, " flags=0x%08x"
 
-    invoke-static {v3, v8}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v3, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -12313,7 +12297,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
+    invoke-virtual {v11}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -12323,7 +12307,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
+    invoke-virtual {v10}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -12333,7 +12317,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v39 .. v39}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
+    invoke-virtual/range {v26 .. v26}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -12343,7 +12327,7 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
+    invoke-virtual {v8}, Landroid/graphics/Rect;->toShortString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -12410,10 +12394,12 @@
     :cond_70
     move-object/from16 v3, p1
 
+    const/4 v9, 0x0
+
     :goto_32
     sget-object v0, Lcom/android/server/wm/DisplayPolicy;->sTmpLastParentFrame:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v10}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v11}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -12444,48 +12430,54 @@
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
 
-    iput v0, v7, Landroid/graphics/Rect;->bottom:I
+    iput v0, v8, Landroid/graphics/Rect;->bottom:I
 
     :cond_72
-    iget-object v8, v2, Lcom/android/server/wm/WindowFrames;->mOutsetFrame:Landroid/graphics/Rect;
+    iget-object v7, v2, Lcom/android/server/wm/WindowFrames;->mOutsetFrame:Landroid/graphics/Rect;
 
-    move-object v0, v10
+    iget v0, v15, Lcom/android/server/wm/DisplayFrames;->mRotation:I
 
-    move-object v1, v9
+    invoke-direct {v5, v0, v9}, Lcom/android/server/wm/DisplayPolicy;->getNavigationBarHeight(II)I
 
-    move-object v11, v2
+    move-result v9
 
-    move/from16 v13, v24
+    move-object v0, v11
 
-    move-object v2, v7
+    move-object v1, v10
 
-    move-object/from16 v34, v7
+    move-object v13, v2
 
-    move-object v7, v3
+    move-object v2, v8
+
+    move-object v14, v3
 
     move-object/from16 v3, v28
 
-    move-object/from16 v24, v4
+    move-object/from16 v31, v4
 
-    move-object/from16 v40, v9
+    move/from16 v34, v45
 
-    move/from16 v26, v46
-
-    const/16 v9, 0x7db
+    const/16 v14, 0x7db
 
     move-object/from16 v4, v27
 
-    move-object v5, v8
+    move-object v5, v7
 
-    move v8, v6
+    move/from16 v38, v6
 
     move-object/from16 v6, p1
+
+    move v7, v9
+
+    invoke-static/range {v0 .. v7}, Lcom/android/server/wm/OpWindowManagerServiceInjector;->reserFrameForNavGesture(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/android/server/wm/WindowState;I)V
+
+    iget-object v5, v13, Lcom/android/server/wm/WindowFrames;->mOutsetFrame:Landroid/graphics/Rect;
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/wm/OpScreenCompatInjector;->resetFrameForCompat(Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/android/server/wm/WindowState;)V
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->computeFrameLw()V
 
-    if-ne v12, v9, :cond_74
+    if-ne v12, v14, :cond_74
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
@@ -12501,36 +12493,42 @@
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v7, v15}, Lcom/android/server/wm/DisplayPolicy;->offsetInputMethodWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
+    move-object/from16 v1, p1
+
+    invoke-direct {v0, v1, v15}, Lcom/android/server/wm/DisplayPolicy;->offsetInputMethodWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
 
     goto :goto_33
 
     :cond_73
     move-object/from16 v0, p0
 
+    move-object/from16 v1, p1
+
     goto :goto_33
 
     :cond_74
     move-object/from16 v0, p0
 
-    :goto_33
-    const/16 v1, 0x7ef
+    move-object/from16 v1, p1
 
-    if-ne v12, v1, :cond_75
+    :goto_33
+    const/16 v2, 0x7ef
+
+    if-ne v12, v2, :cond_75
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->isVisibleLw()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_75
+    if-eqz v2, :cond_75
 
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/wm/WindowState;->getGivenInsetsPendingLw()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_75
+    if-nez v2, :cond_75
 
-    invoke-direct {v0, v7, v15}, Lcom/android/server/wm/DisplayPolicy;->offsetVoiceInputWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
+    invoke-direct {v0, v1, v15}, Lcom/android/server/wm/DisplayPolicy;->offsetVoiceInputWindowLw(Lcom/android/server/wm/WindowState;Lcom/android/server/wm/DisplayFrames;)V
 
     :cond_75
     return-void
@@ -12538,7 +12536,7 @@
     :cond_76
     move-object v0, v12
 
-    move-object v7, v13
+    move-object v1, v13
 
     :goto_34
     return-void
