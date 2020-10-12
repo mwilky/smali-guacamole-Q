@@ -30,7 +30,7 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const v0, 0x7f0d0235
+    const v0, 0x7f0d0239
 
     invoke-virtual {p0, v0}, Lcom/oneplus/settings/ui/OPThemeIconPreference;->setLayoutResource(I)V
 
@@ -86,62 +86,62 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const v1, 0x7f08009c
-
-    goto :goto_0
-
-    :pswitch_0
-    const v1, 0x7f0800a2
-
-    goto :goto_0
-
-    :pswitch_1
-    const v1, 0x7f0800a1
-
-    goto :goto_0
-
-    :pswitch_2
-    const v1, 0x7f08009a
-
-    goto :goto_0
-
-    :pswitch_3
-    const v1, 0x7f080099
-
-    goto :goto_0
-
-    :pswitch_4
-    const v1, 0x7f080098
-
-    goto :goto_0
-
-    :pswitch_5
-    const v1, 0x7f08009b
-
-    goto :goto_0
-
-    :pswitch_6
-    const v1, 0x7f0800a8
-
-    goto :goto_0
-
-    :pswitch_7
-    const v1, 0x7f08009e
-
-    goto :goto_0
-
-    :pswitch_8
     const v1, 0x7f08009d
 
     goto :goto_0
 
-    :pswitch_9
+    :pswitch_0
     const v1, 0x7f0800a3
 
     goto :goto_0
 
-    :pswitch_a
+    :pswitch_1
+    const v1, 0x7f0800a2
+
+    goto :goto_0
+
+    :pswitch_2
+    const v1, 0x7f08009b
+
+    goto :goto_0
+
+    :pswitch_3
+    const v1, 0x7f08009a
+
+    goto :goto_0
+
+    :pswitch_4
+    const v1, 0x7f080099
+
+    goto :goto_0
+
+    :pswitch_5
     const v1, 0x7f08009c
+
+    goto :goto_0
+
+    :pswitch_6
+    const v1, 0x7f0800a9
+
+    goto :goto_0
+
+    :pswitch_7
+    const v1, 0x7f08009f
+
+    goto :goto_0
+
+    :pswitch_8
+    const v1, 0x7f08009e
+
+    goto :goto_0
+
+    :pswitch_9
+    const v1, 0x7f0800a4
+
+    goto :goto_0
+
+    :pswitch_a
+    const v1, 0x7f08009d
 
     goto :goto_0
 
@@ -166,12 +166,12 @@
 
     if-nez v1, :cond_1
 
-    const v1, 0x7f08009f
+    const v1, 0x7f0800a0
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f080098
+    const v1, 0x7f080099
 
     nop
 
@@ -211,8 +211,10 @@
     const-string v1, "op_custom_unlock_animation_style"
 
     const/4 v2, 0x0
+    
+    const/4 v3, -0x2
 
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -352,32 +354,32 @@
 
     if-eq v0, v1, :cond_0
 
-    const v1, 0x7f080475
+    const v1, 0x7f0804a8
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080477
+    const v1, 0x7f0804aa
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f080478
+    const v1, 0x7f0804ab
 
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f080476
+    const v1, 0x7f0804a9
 
     goto :goto_0
 
     :cond_3
-    const v1, 0x7f080479
+    const v1, 0x7f0804ac
 
     goto :goto_0
 
     :cond_4
-    const v1, 0x7f080475
+    const v1, 0x7f0804a8
 
     nop
 
@@ -528,7 +530,7 @@
 
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    const v0, 0x7f0a06ed
+    const v0, 0x7f0a06fa
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -554,7 +556,7 @@
 
     invoke-virtual {v0, p0}, Lcom/oneplus/settings/ui/RadiusImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a06d9
+    const v0, 0x7f0a06e6
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -570,7 +572,7 @@
 
     nop
 
-    const v0, 0x7f0a06da
+    const v0, 0x7f0a06e7
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -592,7 +594,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0a06db
+    const v0, 0x7f0a06e8
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -601,7 +603,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    const v0, 0x7f0a06e6
+    const v0, 0x7f0a06f3
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -621,7 +623,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f0a048a
+    const v0, 0x7f0a0495
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -644,7 +646,7 @@
 
     const/high16 v1, 0x10000000
 
-    const v2, 0x7f0a06ed
+    const v2, 0x7f0a06fa
 
     if-ne v0, v2, :cond_0
 
@@ -669,7 +671,7 @@
     goto/16 :goto_4
 
     :cond_0
-    const v2, 0x7f0a06d9
+    const v2, 0x7f0a06e6
 
     const-string v3, "com.android.settings"
 
@@ -743,7 +745,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f120ffd
+    const v3, 0x7f121001
 
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -757,7 +759,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f120ffc
+    const v5, 0x7f121000
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -795,7 +797,7 @@
     goto/16 :goto_4
 
     :cond_4
-    const v2, 0x7f0a06da
+    const v2, 0x7f0a06e7
 
     if-ne v0, v2, :cond_6
 
@@ -811,7 +813,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f121005
+    const v2, 0x7f121009
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -825,7 +827,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f121004
+    const v3, 0x7f121008
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -861,7 +863,7 @@
     goto :goto_3
 
     :cond_6
-    const v2, 0x7f0a06e6
+    const v2, 0x7f0a06f3
 
     if-ne v0, v2, :cond_9
 

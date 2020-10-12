@@ -15,8 +15,6 @@
 
 
 # static fields
-.field public static final ANIM_STYLE_ENERGY:I = 0x4
-
 .field public static final ANIM_STYLE_0:I = 0x3
 
 .field public static final ANIM_STYLE_4:I = 0x9
@@ -199,7 +197,7 @@
 
     invoke-virtual {p0, v4}, Lcom/oneplus/settings/ui/OPCustomFingeprintAnimVideoPreference;->setVisible(Z)V
 
-    const v5, 0x7f0d0184
+    const v5, 0x7f0d0188
 
     sget-object v6, Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;->MCL:Lcom/oneplus/custom/utils/OpCustomizeSettings$CUSTOM_TYPE;
 
@@ -770,9 +768,7 @@
 
     const-string v8, "op_custom_unlock_animation_style"
 
-    const/4 v9, -0x2
-
-    invoke-static {v5, v8, v15, v9}, Landroid/provider/Settings$System;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
+    invoke-static {v5, v8, v15}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v5
 
@@ -1245,7 +1241,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a075c
+    const v0, 0x7f0a0769
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1257,7 +1253,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const v1, 0x7f0a075b
+    const v1, 0x7f0a0768
 
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1295,7 +1291,7 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     :goto_0
-    const v3, 0x7f0a0761
+    const v3, 0x7f0a076e
 
     invoke-virtual {p1, v3}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1303,7 +1299,7 @@
 
     check-cast v3, Landroid/view/TextureView;
 
-    const v4, 0x7f0a075e
+    const v4, 0x7f0a076b
 
     invoke-virtual {p1, v4}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1311,7 +1307,7 @@
 
     check-cast v4, Landroid/widget/ImageView;
 
-    const v5, 0x7f0a075d
+    const v5, 0x7f0a076a
 
     invoke-virtual {p1, v5}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
@@ -1319,7 +1315,7 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    const v6, 0x7f0a075a
+    const v6, 0x7f0a0767
 
     invoke-virtual {p1, v6}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 

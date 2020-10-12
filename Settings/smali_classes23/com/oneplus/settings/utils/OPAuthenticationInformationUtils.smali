@@ -37,7 +37,7 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const v1, 0x7f120e8f
+    const v1, 0x7f120e92
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -51,7 +51,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f120e1e
+    const v1, 0x7f120e21
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -63,7 +63,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f120e24
+    const v1, 0x7f120e27
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -75,7 +75,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f120e96
+    const v1, 0x7f120e99
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -95,30 +95,6 @@
     if-nez v1, :cond_9
 
     :cond_1
-    const v1, 0x7f120e90
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    const v1, 0x7f120e97
-
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
     const v1, 0x7f120e93
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -131,7 +107,31 @@
 
     if-nez v1, :cond_9
 
-    const v1, 0x7f120e98
+    const v1, 0x7f120e9a
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    const v1, 0x7f120e96
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    const v1, 0x7f120e9b
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -173,7 +173,7 @@
     goto :goto_0
 
     :cond_3
-    const v1, 0x7f120e25
+    const v1, 0x7f120e28
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -185,7 +185,7 @@
 
     if-nez v1, :cond_4
 
-    const v1, 0x7f120e1f
+    const v1, 0x7f120e22
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -250,23 +250,23 @@
     .line 24
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v1, "string"
+    const-string v1, "oneplus_oneplus_model_18821_for_cn"
 
-    const-string v2, "oneplus_oneplus_model_18821_for_cn"
+    const-string v2, "string"
 
-    invoke-static {v2, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     if-nez v0, :cond_88
 
@@ -274,7 +274,7 @@
 
     const-string v3, "oneplus_oneplus_model_18857_for_cn"
 
-    invoke-static {v3, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -292,7 +292,7 @@
 
     const-string v3, "oneplus_oneplus_model_18857_for_cn_guacamoleb"
 
-    invoke-static {v3, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -314,7 +314,7 @@
 
     const-string v3, "oneplus_oneplus_model_18825_for_us"
 
-    invoke-static {v3, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -335,7 +335,7 @@
     if-nez v0, :cond_53
 
     .line 28
-    return v2
+    return v1
 
     .line 30
     :cond_53
@@ -343,7 +343,7 @@
 
     const-string v3, "oneplus_model_19801_for_cn"
 
-    invoke-static {v3, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v3
 
@@ -364,7 +364,7 @@
     if-nez v0, :cond_6c
 
     .line 31
-    return v2
+    return v1
 
     .line 33
     :cond_6c
@@ -372,15 +372,15 @@
 
     const-string v3, "oneplus_model_18865_for_cn"
 
-    invoke-static {v3, v1}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v3, v2}, Lcom/android/wubydax/GearUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -396,7 +396,7 @@
 
     .line 36
     :cond_85
-    return v2
+    return v1
 
     .line 34
     :cond_86
@@ -408,7 +408,7 @@
     .line 25
     :cond_88
     :goto_88
-    return v2
+    return v1
 .end method
 
 .method public static isOlder6tProducts()Z
