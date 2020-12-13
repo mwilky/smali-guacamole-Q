@@ -4897,12 +4897,12 @@
     .registers 5
     .param p0, "Context"    # Landroid/content/Context;
 
-    .line 1612
+    .line 1619
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 1613
+    .line 1620
     .local v0, "ContentResolver":Landroid/content/ContentResolver;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4910,7 +4910,7 @@
 
     sget-object v2, Lcom/android/mwilky/Renovate;->mAlbumArtBlurAmountKey:Ljava/lang/String;
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -4918,13 +4918,9 @@
 
     int-to-float v1, v1
 
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    div-float/2addr v1, v2
-
     sput v1, Lcom/android/mwilky/Renovate;->mAlbumArtBlurAmount:F
 
-    .line 1614
+    .line 1621
     return-void
 .end method
 
